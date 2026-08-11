@@ -1,0 +1,43 @@
+﻿{
+  "query": "Is Drug-X approved for Phase 3 trials?",
+  "trust_threshold": 0.35,
+  "adjudications": [
+    {
+      "id": "Doc_01",
+      "source": "PeerReviewed_Journal",
+      "content": "The FDA approved drug-X for Phase 3 clinical trials in early 2024.",
+      "trust_score": 0.9125,
+      "conflict_penalty": 0.95,
+      "final_weight": 0.4375,
+      "status": "RETAINED"
+    },
+    {
+      "id": "Doc_02",
+      "source": "Unverified_Blog",
+      "content": "Regulators rejected drug-X for Phase 3 trials due to severe health concerns.",
+      "trust_score": 0.455,
+      "conflict_penalty": 1.9,
+      "final_weight": -0.495,
+      "status": "REJECTED"
+    },
+    {
+      "id": "Doc_03",
+      "source": "Medical_News_Outlet",
+      "content": "Phase 3 clinical trial for drug-X was approved by health regulatory bodies.",
+      "trust_score": 0.8495,
+      "conflict_penalty": 0.95,
+      "final_weight": 0.3745,
+      "status": "RETAINED"
+    },
+    {
+      "id": "Doc_04",
+      "source": "Pharma_DB",
+      "content": "Drug-X is an experimental therapeutic compound tested for hypertension.",
+      "trust_score": 0.737,
+      "conflict_penalty": 0.0,
+      "final_weight": 0.737,
+      "status": "RETAINED"
+    }
+  ],
+  "c_verified": "=== VERIFIED RECONCILED CONTEXT (C_verified) ===\n[Source: Pharma_DB | Net Weight: 0.74] Drug-X is an experimental therapeutic compound tested for hypertension.\n[Source: PeerReviewed_Journal | Net Weight: 0.44] The FDA approved drug-X for Phase 3 clinical trials in early 2024.\n[Source: Medical_News_Outlet | Net Weight: 0.37] Phase 3 clinical trial for drug-X was approved by health regulatory bodies."
+}
