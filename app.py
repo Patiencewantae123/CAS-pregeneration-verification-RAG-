@@ -19,7 +19,7 @@ st.set_page_config(
 
 # Header Section
 st.title(" Conflict-Aware Synthesis (CAS) Dashboard")
-st.markdown("### *Pre-Generation Verification Layer for RAG Architectures*")
+st.markdown("### *Pre-Generation Verification Layer RAG Architecture*")
 st.divider()
 
 # Sidebar Controls
