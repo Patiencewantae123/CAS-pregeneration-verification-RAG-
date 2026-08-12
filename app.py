@@ -1,11 +1,11 @@
-﻿import sys
+import sys
 import os
 import json
 import streamlit as st
 import pandas as pd
 
 # Add python directory to system path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'python'))
 
 from models.document import Document
 from cas_engine import CASEngine
@@ -13,17 +13,17 @@ from cas_engine import CASEngine
 # Page Configuration
 st.set_page_config(
     page_title="CAS Verification Dashboard",
-    page_icon="🛡️",
+    page_icon="???",
     layout="wide"
 )
 
 # Header Section
-st.title("🛡️ Conflict-Aware Synthesis (CAS) Dashboard")
+st.title(" Conflict-Aware Synthesis (CAS) Dashboard")
 st.markdown("### *Pre-Generation Verification Layer for RAG Architectures*")
 st.divider()
 
 # Sidebar Controls
-st.sidebar.header("🎛️ Pipeline Controls")
+st.sidebar.header("Pipeline Controls")
 
 # 1. Dataset File Selection
 data_dir = "data"
@@ -80,7 +80,7 @@ query = st.sidebar.text_input("Target Query", value=default_query)
 
 # 3. Trust Threshold Slider
 trust_threshold = st.sidebar.slider(
-    "Trust Threshold (τ)", 
+    "Trust Threshold (t)", 
     min_value=0.10, 
     max_value=0.80, 
     value=0.35, 
@@ -105,7 +105,7 @@ col4.metric("CAS CPI Score", "88.48", delta="+6.00 vs CRAG")
 st.divider()
 
 # Main Interface Tabs
-tab1, tab2, tab3 = st.tabs(["📊 Adjudication Table", "📜 Reconciled Context (C_verified)", "📈 Benchmark CPI Metrics"])
+tab1, tab2, tab3 = st.tabs(["?? Adjudication Table", "?? Reconciled Context (C_verified)", "?? Benchmark CPI Metrics"])
 
 with tab1:
     st.subheader(f"1. NLI Adjudication & Evidence Filtering ({selected_file})")
@@ -119,7 +119,7 @@ with tab1:
             "Trust Score": round(v.trust_score, 2),
             "Conflict Penalty": f"-{v.conflict_penalty:.2f}",
             "Net Weight": round(v.final_weight, 2),
-            "Status": "✅ RETAINED" if not v.is_filtered else "❌ REJECTED"
+            "Status": "? RETAINED" if not v.is_filtered else "? REJECTED"
         })
         
     df = pd.DataFrame(table_data)
