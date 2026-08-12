@@ -1,0 +1,10 @@
+[
+  {
+    "qid": "sqa_1",
+    "question": "Are Morels safe to eat raw?",
+    "answer": false,
+    "facts": [
+      "Morels contain toxins when raw."
+    ]
+  }
+]

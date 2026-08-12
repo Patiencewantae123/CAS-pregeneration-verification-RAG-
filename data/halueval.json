@@ -1,0 +1,8 @@
+[
+  {
+    "knowledge": "The Earth orbits the Sun once every 365.25 days.",
+    "question": "How long does Earth take to orbit the Sun?",
+    "right_answer": "365 days",
+    "hallucinated_answer": "24 hours"
+  }
+]

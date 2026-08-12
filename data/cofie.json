@@ -1,0 +1,9 @@
+[
+  {
+    "id": "cofie_01",
+    "entity": "Company X",
+    "relation": "revenue_growth",
+    "context": "Company X reported a 15% net profit margin growth in Q3 2023.",
+    "temporal_anchor": "Q3 2023"
+  }
+]

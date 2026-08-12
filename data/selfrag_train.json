@@ -1,0 +1,72 @@
+[
+  {
+    "instruction": "In this task, you are given a context paragraph of the tweet and question. Your task is to generate right answer of given question based on given context tweet paragraph.\n\nExample input: Context: Our prayers are with the students, educators & families at Independence High School & all the first responders on the scene. #PatriotPride\u2014 Doug Ducey (@dougducey) February 12, 2016 Question: at which school were first responders on the scene for?\nExample output: independence high school\nExample explanation: From the context tweet, we can see that independence high school is the right answer.\nQ: Context: BREAKING: ATF sending additional agents from Portland along with K9 team to #UCCShooting tragedy.\u2014 ATF HQ (@ATFHQ) October 1, 2015 Question: where are the agents from?\nA:",
+    "output": "[Retrieval]<paragraph>2017 Portland train attack\nin economics and worked for the Cadmus Group consulting firm. A passenger who helped him reported his last words: \"Tell everyone on this train I love them.\" Micah David-Cole Fletcher, 21, survived and was treated at Legacy Emanuel Medical Center for serious but not life-threatening wounds, specifically a knife injury to his throat. The attacker had narrowly missed Fletcher's jugular vein. Fletcher was released from the hospital in time to attend Christian's arraignment on May 30, 2017. Fletcher, a student at Portland State University, won a poetry contest in 2013 while he was a junior in high school with a</paragraph>[Irrelevant]portland[Utility:5]",
+    "input": "",
+    "id": "flan_v2_88425",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Question: Write a text based on \"rangers show some iron to tie the series\"\nText: along with being talented , self-assured and highly paid , these experienced rangers are also considerate .\n\nQuestion: Write a text based on \"union wo n't dismantle blockage of gm canada headquarters\"\nText: canadian auto workers officials friday refused to end a blockade of general motors canada headquarters despite an offer to potentially bring new car production to a complex where a truck plant is slated for closure .\n\nQuestion: Write a text based on \"six azerbaijan opposition parliamentary candidates declare hunger strike\"\nText:",
+    "output": "[No Retrieval]six opposition candidates in the upcoming parliamentary elections in azerbaijan declared a hunger strike friday to pressure the government into ensuring fair polls .[Utility:5]",
+    "input": "",
+    "id": "flan_v2_18667",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "You will be given a sentence. Check whether the sentence is grammatically correct and is meaningful. If the sentence is grammatically correct, then answer with '1', otherwise answer with '0'.\n\nQ: You are the only person that I can rely on.\n\nA: 0\n****\nQ: Fruit at once hit the roof from the tree.\n\nA: 1\n****\nQ: Students who fail the final exam or who do not do the reading will be executed.\n\nA:",
+    "output": "[No Retrieval]1\n****\n[Utility:5]",
+    "input": "",
+    "id": "flan_v2_87754",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Q:Is there a negative or positive tone to this product review? === Title: At the bottom of the River, a review by Dylan Review: At the Bottom of the river isn't, in my perspective, a very good book. I gave it one star. I gave it one star because there isn't really a plot, main character (at least with a name), and it is boring. The book is sort of written in a mix between the first person and third person perspectives. The book is hard to understand, especially with 2 two page long sentences! The book kind of seems like it is someone thinking, with no real reason. It skips from one place to another in one chapter. It is hard to get into the story, and since there is no plot, there is little suspense. All in all, it isn't a very good book, and I don't recommend it. Answer:\nA:",
+    "output": "[No Retrieval]Negative[Utility:5]",
+    "input": "",
+    "id": "flan_v2_47789",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Question: Fertility Clinics Vary on Embryo Disposal Techniques\n\nBy DAVID B. CARUSO    PHILADELPHIA (AP) -- The nation's fertility clinics vary widely when it comes to how they perform one of the most delicate aspects of their jobs: disposing of unused frozen human embryos that were created to help infertile women become pregnant...\n\nWhich topic is this article about?\nOPTIONS:\n- World\n- Sports\n- Business\n- Science/Tech\nAnswer: Science/Tech\n\nQuestion: Canada #39;s Inflation Rate Unexpectedly Picks Up to 2.4 (Update1)\n\nCanada #39;s inflation rate unexpectedly accelerated in November to a 2.4 percent rate, reflecting a jump in prices for new cars, gasoline and houses from a year earlier.\n\nWhich topic is this article about?\nOPTIONS:\n- World\n- Sports\n- Business\n- Science/Tech\nAnswer: Business\n\nQuestion: Paris bomb at Indonesia Embassy wounds 10\n\nPARIS A bomb rocked a quiet, elegant neighborhood of apartment buildings in the west of the city, slightly wounding at least 10 people, including 4 workers at the Indonesian Embassy, where a rigged package exploded below its crimson and white national flag \n\nWhich topic is this article about?\nOPTIONS:\n- World\n- Sports\n- Business\n- Science/Tech\nAnswer: World\n\nQuestion: UN Urged to Ignore Bush Plea for Human Cloning Ban\n\n LONDON (Reuters) - Britain's national academy of science  urged the United Nations on Monday to ignore a call by  President Bush to ban all forms of human cloning.\n\nWhich topic is this article about?\nOPTIONS:\n- World\n- Sports\n- Business\n- Science/Tech",
+    "output": "[No Retrieval]Answer: World[Utility:5]",
+    "input": "",
+    "id": "flan_v2_10803",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Teacher:In this task, you need to replace a letter in the sentence with another given letter.\nTeacher: Now, understand the problem? Solve this instance: Sentence: 'a weird yellow sign sitting on the side of a dirt road'. Replace the letter 'n' with 'v' in the sentence.\nStudent:",
+    "output": "[No Retrieval]a weird yellow sigv sittivg ov the side of a dirt road[Utility:5]",
+    "input": "",
+    "id": "flan_v2_76462",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Q:Title: BtlFan Review: Imagine having a tooth drilled without novocaine. Then add the sound of a massive auto wreck in which the brake shoes of all of the cars were worn to the point where bare metal was scraping against bare metal. Then imagine putting Tobasco sauce in your eyes and grating your knee with a cheese grater. Is the review positive or negative?\nA:",
+    "output": "[No Retrieval]Negative[Utility:5]",
+    "input": "",
+    "id": "flan_v2_59061",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Q: Write a positive tweet.\n\nA: Good night world. Great day with my sharly boo.  oh how I love her xxx @Sharlxo\n\n\nQ: Write a positive tweet.\n\nA: Scotland is hot hot hot!!! \n\n\nQ: Write a negative tweet.\n\nA: if a guy says &quot;i dont deserve you&quot; or &quot;i just need to get my ish together first&quot; then he's just not that into you \n\n\nQ: Write a positive tweet.\n\nA:",
+    "output": "[No Retrieval]need to get on the college work today, then gig later  ![Utility:1]",
+    "input": "",
+    "id": "flan_v2_31605",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Title: GREAT SHOW.....WHY IS PRICE HIGHER THAN OTHER CBS SHOWS ? Review: The series was a wonderful show and I would give it a five star. I agree it did not get a fair shake, just like SHARK of a few years ago. Same network. Now it appears that the boys at CBS are just as unfair to the fans regarding the DVD release. I guess CBS feels that it is only right to make the fans of this show suffer more by paying more for this series than other CBS releases on DVD. They are charging 30% for this release and for fewer episodes. I see that Blue Bloods and Hawaii ZERO (sorry Five O - I was thinking of quality) are priced at $ 38 while Defenders is $ 50. I am certain when it is all said and done the same network know nothings who said it was a ratings decision will somehow justify their lack of intelligence by saying \"you see...the DVDs did not sell either\". They will not mention that they overpriced the product to get that result. Is this product review negative?\nOptions: 1. Yes; 2. No;\nAnswer:",
+    "output": "[No Retrieval]1.[Utility:5]",
+    "input": "",
+    "id": "flan_v2_43592",
+    "dataset_name": "flan_v2"
+  },
+  {
+    "instruction": "Fill in the response. A 2 person conversation:\n + What is the main artistic work of  \u2047 lvaro Zardoni?\n + \u00c1lvaro Zardoni \u00c1lvaro Zardoni (born January 4, 1964) is a Mexican sculptor and architect who has been a member of the Sal\u00f3n de la Pl\u00e1stica Mexicana since 2006.\n + Did he formally train in any school or university?\n + Although he studied painting and drawing in the 1970s and 1980s, he is a self-taught sculptor who began showing his work regularly in 2000.\n + Are there any other interesting aspects about this article?\n + Since then, he has had over thirty individual exhibitions, twenty private showings and his work has appeared in over 100 collective exhibitions.\n + What are some of his paitings?\n + He specializes in small bronze sculptures which focus on the human face, which is almost always male, expressing something emotional and/or psychological.\n + What are some of his other pieces of art?\n + ",
+    "output": "[No Retrieval]Objects, often common, are added to the piece to reinforce the main theme of the work, for example the addition of coins on the foreheads of pieces of the Cyclops collection.[Utility:5]",
+    "input": "",
+    "id": "flan_v2_97616",
+    "dataset_name": "flan_v2"
+  }
+]

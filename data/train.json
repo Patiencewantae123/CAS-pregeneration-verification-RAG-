@@ -1,0 +1,384 @@
+[
+  {
+    "uuid": "MUSIQUE_00007",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What percentage was the country Tereke-yur\u00e9n-tepui is located in?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "5.1"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00001",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What is the country where Nissedal is located named after?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "north"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00002",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What is the highest point in the country where Bugabula is found?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "1,400 metres"
+    }
+  },
+  {
+    "uuid": "MNLI_00008",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Heterosexuals.",
+    "context_or_evidence": "Gays and lesbians.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 23505
+    }
+  },
+  {
+    "uuid": "MNLI_00019",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "He smiled at Vrenna who was walking slowly behind him with her mother.",
+    "context_or_evidence": "He turned and smiled at Vrenna.",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 62897
+    }
+  },
+  {
+    "uuid": "MNLI_00007",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Slate had an opinion on Jackson's findings.",
+    "context_or_evidence": "(Read for Slate 's take on Jackson's findings.)",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 1069
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00008",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What range is Garfield Peak in the state where Aims community College is located a part of?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Sawatch Range"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00017",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Where did the leader of the largest European country after the collapse of the country that denied anything more than an advisory role in the Korean war die?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Moscow"
+    }
+  },
+  {
+    "uuid": "MNLI_00010",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "I burst through the doors and fell down.",
+    "context_or_evidence": "I burst through a set of cabin doors, and fell to the ground-",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 55785
+    }
+  },
+  {
+    "uuid": "MNLI_00001",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "You lose the things to the following level if the people recall.",
+    "context_or_evidence": "you know during the season and i guess at at your level uh you lose them to the next level if if they decide to recall the the parent team the Braves decide to call to recall a guy from triple A then a double A guy goes up to replace him and a single A guy goes up to replace him",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 101457
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00013",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Where was the performer of Count 'Em 88 born?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Pittsburgh"
+    }
+  },
+  {
+    "uuid": "MNLI_00002",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "A member of my team will execute your orders with immense precision.",
+    "context_or_evidence": "One of our number will carry out your instructions minutely.",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 134793
+    }
+  },
+  {
+    "uuid": "COFIE_00000",
+    "dataset_source": "CoFiE",
+    "query_or_claim": "Company X - revenue_growth",
+    "context_or_evidence": "Company X reported a 15% net profit margin growth in Q3 2023.",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "temporal_anchor": "Q3 2023"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00004",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Who founded the publisher of Journal of Media Economics?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "George Routledge"
+    }
+  },
+  {
+    "uuid": "MNLI_00009",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Place des Vosges is constructed entirely of gray marble.",
+    "context_or_evidence": "At the end of Rue des Francs-Bourgeois is what many consider to be the city's most handsome residential square, the Place des Vosges, with its stone and red brick facades.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 60529
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00011",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Who helped resolve the dispute between Virginia and the US state donating Washington, D.C.?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "William R. Day"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00006",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What group of languages includes the old version of the language that the Quran was first translated in?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Iranian languages"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00019",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Who won Bigg Boss season 5, in the version of the show originally produced in the same language as the film Neelakanta?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Chandan Shetty"
+    }
+  },
+  {
+    "uuid": "MNLI_00016",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "You can see that on television, as well.",
+    "context_or_evidence": "well you see that on television also",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 16915
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00009",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What culture's arrival in the country where the person who paid for Chopin's funeral invited him is know as the \"Davidian Revolution?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Norman"
+    }
+  },
+  {
+    "uuid": "CAS_00001",
+    "dataset_source": "CAS_Pregeneration",
+    "query_or_claim": "Is Drug-X approved for Phase 3 trials?",
+    "context_or_evidence": "Regulators rejected drug-X for Phase 3 trials due to severe health concerns.",
+    "label": "REFUTES",
+    "metadata": {
+      "source": "Unverified_Blog",
+      "provenance_score": 0.25
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00010",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "When did the sports team that employed Glyn Pardoe get promoted to the Premier League?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "1992"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00014",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What was the first name at birth of the person who described the Anglican church as \"our beloved sister Church\"?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Giovanni"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00003",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Who from the state with the Routzahn-Miller Farmstead signed the declaration of independence?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "Charles Carroll"
+    }
+  },
+  {
+    "uuid": "MNLI_00018",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "The analysis proves that there is no link between PM and bronchitis.",
+    "context_or_evidence": "This analysis pooled estimates from these two studies to develop a C-R function linking PM to chronic bronchitis.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 101211
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00000",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What year did the writer of Crazy Little Thing Called Love die?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "1991"
+    }
+  },
+  {
+    "uuid": "CAS_00002",
+    "dataset_source": "CAS_Pregeneration",
+    "query_or_claim": "Is Drug-X approved for Phase 3 trials?",
+    "context_or_evidence": "Phase 3 clinical trial for drug-X was approved by health regulatory bodies.",
+    "label": "SUPPORTS",
+    "metadata": {
+      "source": "Medical_News_Outlet",
+      "provenance_score": 0.8
+    }
+  },
+  {
+    "uuid": "HALUEVAL_00000",
+    "dataset_source": "HaluEval",
+    "query_or_claim": "How long does Earth take to orbit the Sun?",
+    "context_or_evidence": "The Earth orbits the Sun once every 365.25 days.",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "right_answer": "365 days",
+      "hallucinated_answer": "24 hours"
+    }
+  },
+  {
+    "uuid": "FEVER_00000",
+    "dataset_source": "FEVER",
+    "query_or_claim": "Nikolaj Coster-Waldau played Jamie Lannister in Game of Thrones.",
+    "context_or_evidence": "",
+    "label": "SUPPORTS",
+    "metadata": {
+      "verifiable": ""
+    }
+  },
+  {
+    "uuid": "MNLI_00017",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Neither Vrenna nor myself have ever fought him.",
+    "context_or_evidence": "Vrenna and I both fought him and he nearly took us.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 56687
+    }
+  },
+  {
+    "uuid": "MNLI_00014",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "I am concerned more about your issues than the near-term rate implications.",
+    "context_or_evidence": "I don't mean to be glib about your concerns, but if I were you, I might be more concerned about the near-term rate implications of this $1.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 102489
+    }
+  },
+  {
+    "uuid": "STRATQA_00000",
+    "dataset_source": "StrategyQA",
+    "query_or_claim": "Are Morels safe to eat raw?",
+    "context_or_evidence": "Morels contain toxins when raw.",
+    "label": "REFUTES",
+    "metadata": {}
+  },
+  {
+    "uuid": "MNLI_00011",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Fun for only children.",
+    "context_or_evidence": "Fun for adults and children.",
+    "label": "REFUTES",
+    "metadata": {
+      "promptID": 11877
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00016",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "When did the first Walmart open in the state where Chautauqua Tower is located?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "1991"
+    }
+  },
+  {
+    "uuid": "CAS_00000",
+    "dataset_source": "CAS_Pregeneration",
+    "query_or_claim": "Is Drug-X approved for Phase 3 trials?",
+    "context_or_evidence": "The FDA approved drug-X for Phase 3 clinical trials in early 2024.",
+    "label": "SUPPORTS",
+    "metadata": {
+      "source": "PeerReviewed_Journal",
+      "provenance_score": 0.95
+    }
+  },
+  {
+    "uuid": "MNLI_00000",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Product and geography are what make cream skimming work.",
+    "context_or_evidence": "Conceptually cream skimming has two basic dimensions - product and geography.",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 31193
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00005",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "The athlete that became the highest-paid went to manchester United when?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "2003"
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00015",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "What major department store operates in the city where the creator of The Vegetative Sculpture I died?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "KaDeWe"
+    }
+  }
+]

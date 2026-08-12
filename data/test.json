@@ -1,0 +1,52 @@
+[
+  {
+    "uuid": "MNLI_00013",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "The capital near Memphis lasted only half a century before its inhabitants abandoned it for the next capital.",
+    "context_or_evidence": "Thebes held onto power until the 12th Dynasty, when its first king, Amenemhet Iwho reigned between 1980 1951 b.c. established a capital near Memphis.",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 52772
+    }
+  },
+  {
+    "uuid": "MNLI_00015",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Problems in data synthesis.",
+    "context_or_evidence": "Issues in Data Synthesis.",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 81785
+    }
+  },
+  {
+    "uuid": "FEVER_00001",
+    "dataset_source": "FEVER",
+    "query_or_claim": "The Great Wall of China is visible from space with naked eye.",
+    "context_or_evidence": "",
+    "label": "REFUTES",
+    "metadata": {
+      "verifiable": ""
+    }
+  },
+  {
+    "uuid": "MNLI_00005",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "I'm upset that my walkman broke and now I have to turn the stereo up really loud.",
+    "context_or_evidence": "my walkman broke so i'm upset now i just have to turn the stereo up real loud",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 110116
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00018",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "On what day did Alexander Graham Bell return to the city, that is the capital of the state where Wellesley College is in Mona Lisa Smile?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "March 7, 1876"
+    }
+  }
+]

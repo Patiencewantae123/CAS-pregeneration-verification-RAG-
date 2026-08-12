@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "claim": "Nikolaj Coster-Waldau played Jamie Lannister in Game of Thrones.",
+    "label": "SUPPORTS"
+  },
+  {
+    "id": 2,
+    "claim": "The Great Wall of China is visible from space with naked eye.",
+    "label": "REFUTES"
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "uuid": "MNLI_00003",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "This information belongs to them.",
+    "context_or_evidence": "How do you know? All this is their information again.",
+    "label": "SUPPORTS",
+    "metadata": {
+      "promptID": 37397
+    }
+  },
+  {
+    "uuid": "MUSIQUE_00012",
+    "dataset_source": "MuSiQue",
+    "query_or_claim": "Who does the person regarded as a feminist during her time play in A League of Their Own?",
+    "context_or_evidence": "                   ",
+    "label": "NOT_APPLICABLE",
+    "metadata": {
+      "answer": "taxi dancer ``All the Way ''Mae Mordabito"
+    }
+  },
+  {
+    "uuid": "MNLI_00004",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "The tennis shoes have a range of prices.",
+    "context_or_evidence": "yeah i tell you what though if you go price some of those tennis shoes i can see why now you know they're getting up in the hundred dollar range",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 50563
+    }
+  },
+  {
+    "uuid": "MNLI_00006",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "Most of the Christian mosaics were destroyed by Muslims.",
+    "context_or_evidence": "But a few Christian mosaics survive above the apse is the Virgin with the infant Jesus, with the Archangel Gabriel to the right (his companion Michael, to the left, has vanished save for a few feathers from his wings).",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 42487
+    }
+  },
+  {
+    "uuid": "MNLI_00012",
+    "dataset_source": "MultiNLI",
+    "query_or_claim": "All of the questions were interesting according to a focus group consulted on the subject.",
+    "context_or_evidence": "It's not that the questions they asked weren't interesting or legitimate (though most did fall under the category of already asked and answered).",
+    "label": "NEUTRAL",
+    "metadata": {
+      "promptID": 32819
+    }
+  }
+]
