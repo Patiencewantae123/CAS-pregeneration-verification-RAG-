@@ -1,191 +1,198 @@
-﻿import sys
-import os
-import json
+﻿import os
+import tempfile
+import numpy as np
 import streamlit as st
-import pandas as pd
 
-# Add python directory to system path
-# (models/, services/, cas_engine.py all live under the "python/" subdirectory)
-_PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(_PROJECT_ROOT)
-sys.path.append(os.path.join(_PROJECT_ROOT, "python"))
-
-from models.document import Document
-from cas_engine import CASEngine
-
-# Page Configuration
-st.set_page_config(
-    page_title="CAS Verification Dashboard",
-    page_icon="🛡️",
-    layout="wide"
-)
-
-# Header Section
-st.title("🛡️ Conflict-Aware Synthesis (CAS) Dashboard")
-st.markdown("### *Pre-Generation Verification Layer for RAG Architectures*")
-st.divider()
-
-# Sidebar Controls
-st.sidebar.header("🎛️ Pipeline Controls")
-
-# 1. Dataset File Selection
-data_dir = "data"
-available_files = []
-if os.path.exists(data_dir):
-    available_files = [f for f in os.listdir(data_dir) if f.endswith(".json")]
-
-selected_file = st.sidebar.selectbox(
-    "Select Context Dataset",
-    options=sorted(available_files) if available_files else ["No datasets found"],
-    index=0 if available_files else 0
-)
-
-# Function to safely load JSON into Document objects
-def load_docs_from_json(file_name):
-    filepath = os.path.join(data_dir, file_name)
-    if not os.path.exists(filepath):
-        return []
-    
-    with open(filepath, "r", encoding="utf-8") as f:
-        data = json.load(f)
-        
-    docs_list = []
-    for idx, item in enumerate(data):
-        doc_id = str(item.get("id") or item.get("uuid") or f"Doc_{idx+1:02d}")
-        content = item.get("content") or item.get("context_or_evidence") or item.get("claim") or item.get("query_or_claim") or ""
-        source = item.get("source") or item.get("dataset_source") or "Benchmark_DB"
-        
-        # Default scores if missing in specific dataset formats
-        retrieval_conf = float(item.get("retrieval_confidence", 0.85))
-        relevance_sc = float(item.get("relevance_score", 0.80))
-        provenance_sc = float(item.get("provenance_score", 0.85))
-        
-        if content:
-            docs_list.append(Document(doc_id, content, source, retrieval_conf, relevance_sc, provenance_sc))
-            
-    return docs_list
-
-# Load documents dynamically from selected dataset
-if available_files:
-    docs = load_docs_from_json(selected_file)
-else:
-    # Default fallback mock dataset if data folder is empty
-    docs = [
-        Document("Doc_01", "The FDA approved drug-X for Phase 3 clinical trials in early 2024.", "PeerReviewed_Journal", 0.92, 0.90, 0.95),
-        Document("Doc_02", "Regulators rejected drug-X for Phase 3 trials due to severe health concerns.", "Unverified_Blog", 0.65, 0.75, 0.25),
-        Document("Doc_03", "Phase 3 clinical trial for drug-X was approved by health regulatory bodies.", "Medical_News_Outlet", 0.88, 0.85, 0.80),
-        Document("Doc_04", "Drug-X is an experimental therapeutic compound tested for hypertension.", "Pharma_DB", 0.95, 0.92, 0.90)
-    ]
-
-# 2. Query Input
-default_query = "Is Drug-X approved for Phase 3 trials?"
-query = st.sidebar.text_input("Target Query", value=default_query)
-
-# 3. Trust Threshold Slider
-trust_threshold = st.sidebar.slider(
-    "Trust Threshold (τ)", 
-    min_value=0.10, 
-    max_value=0.80, 
-    value=0.35, 
-    step=0.05
-)
-
-st.sidebar.markdown("---")
-st.sidebar.info(f"Loaded **{len(docs)}** context passages from `{selected_file}`.")
-
-# Execute CAS Engine
-engine = CASEngine(trust_threshold=trust_threshold)
-results = engine.execute_pipeline(query, docs)
-
-# Layout Columns for Overview Metrics
-col1, col2, col3, col4 = st.columns(4)
-col1.metric("Retrieved Passages", len(docs))
-retained_count = sum(1 for v in results["verified_documents"] if not v.is_filtered)
-col2.metric("Retained Passages", retained_count)
-col3.metric("Rejected Passages", len(docs) - retained_count)
-col4.metric("CAS CPI Score", "88.48", delta="+6.00 vs CRAG")
-
-st.divider()
-
-# Main Interface Tabs
-tab1, tab2, tab3 = st.tabs(["📊 Adjudication Table", "📜 Reconciled Context (C_verified)", "📈 Benchmark CPI Metrics"])
-
-with tab1:
-    st.subheader(f"1. NLI Adjudication & Evidence Filtering ({selected_file})")
-    
-    table_data = []
-    for v in results["verified_documents"]:
-        table_data.append({
-            "Doc ID": v.doc.id,
-            "Source": v.doc.source,
-            "Content Passage": v.doc.content,
-            "Trust Score": round(v.trust_score, 2),
-            "Conflict Penalty": f"-{v.conflict_penalty:.2f}",
-            "Net Weight": round(v.final_weight, 2),
-            "Status": "✅ RETAINED" if not v.is_filtered else "❌ REJECTED"
-        })
-        
-    df = pd.DataFrame(table_data)
-
-    def color_status(val):
-        if "RETAINED" in str(val):
-            return "background-color: #064e3b; color: #86efac; font-weight: bold;"
-        return "background-color: #7f1d1d; color: #fca5a5; font-weight: bold;"
-
-    if not df.empty:
-        st.dataframe(
-            df.style.map(color_status, subset=["Status"]), 
-            use_container_width=True,
-            hide_index=True
-        )
-    else:
-        st.warning("No document records to display.")
-
-with tab2:
-    st.subheader("2. Reconciled Context ($C_{verified}$)")
-    st.caption("Sanitized context passed directly to the LLM generator:")
-    st.code(results["c_verified"], language="markdown")
-
-with tab3:
-    st.subheader("3. Benchmark Evaluation (Table 2 Comparison)")
-    
-    benchmark_df = pd.DataFrame([
-        {"Framework": "Baseline RAG", "Accuracy (%)": 72.1, "Hallucination (%)": 21.4, "Contradiction (%)": 18.9, "Consistency (%)": 70.3, "CPI Score": 75.48},
-        {"Framework": "Self-RAG", "Accuracy (%)": 76.8, "Hallucination (%)": 16.2, "Contradiction (%)": 14.1, "Consistency (%)": 77.5, "CPI Score": 81.00},
-        {"Framework": "CRAG", "Accuracy (%)": 78.4, "Hallucination (%)": 14.8, "Contradiction (%)": 12.9, "Consistency (%)": 79.2, "CPI Score": 82.48},
-        {"Framework": "CAS (Proposed)", "Accuracy (%)": 82.7, "Hallucination (%)": 9.5, "Contradiction (%)": 6.1, "Consistency (%)": 86.8, "CPI Score": 88.48},
-    ])
-    
-    st.dataframe(benchmark_df, use_container_width=True, hide_index=True)
-
-# --- Added Pre-Generation Verification & Evaluation Pipelines ---
-from rank_bm25 import BM25Okapi
+from langchain_community.document_loaders import PyPDFLoader, TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
-@st.cache_resource
-def load_nli_verifier():
+st.set_page_config(
+    page_title="Enterprise RAG Verification Studio",
+    page_icon="⚡",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
+st.markdown("""
+    <style>
+    .main { padding: 1rem 2rem; }
+    .stChatInput { position: fixed; bottom: 20px; }
+    .metric-card {
+        background-color: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+    .badge-retained {
+        background-color: #d4edda;
+        color: #155724;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.85rem;
+    }
+    .badge-rejected {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 4px 8px;
+        border-radius: 4px;
+        font-weight: bold;
+        font-size: 0.85rem;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+if "vector_store" not in st.session_state:
+    st.session_state.vector_store = None
+if "bm25_retriever" not in st.session_state:
+    st.session_state.bm25_retriever = None
+if "all_chunks" not in st.session_state:
+    st.session_state.all_chunks = []
+
+@st.cache_resource(show_spinner="Loading NLI Cross-Encoder Verifier...")
+def load_verification_model():
     return CrossEncoder('cross-encoder/nli-deberta-v3-base')
 
-def bm25_heuristic_check(query: str, passages: list[str]) -> list[str]:
-    tokenized_corpus = [p.lower().split(" ") for p in passages if p.strip()]
-    if not tokenized_corpus:
-        return passages
-    bm25 = BM25Okapi(tokenized_corpus)
-    scores = bm25.get_scores(query.lower().split(" "))
-    # Keep top scoring passages above 0
-    return [passages[i] for i, score in enumerate(scores) if score > 0]
+@st.cache_resource(show_spinner="Loading Embedding Model...")
+def load_embedding_model():
+    return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-def verify_nli_alignment(query: str, passage: str, verifier):
-    scores = verifier.predict([(query, passage)])[0]
-    import numpy as np
-    exp_scores = np.exp(scores)
-    probs = exp_scores / np.sum(exp_scores)
-    return {"contradiction": float(probs[0]), "entailment": float(probs[1])}
+verifier = load_verification_model()
+embeddings = load_embedding_model()
 
-# Streamlit evaluation UI snippet
-st.write("## Pre-Generation Verification & RAG Evaluation")
-eval_framework = st.selectbox("Select RAG Framework", ["None", "Ragas Metrics", "TruLens Feedback"])
-if eval_framework == "Ragas Metrics":
-    st.info("Ragas metrics (Context Precision, Recall, Faithfulness) active.")
-elif eval_framework == "TruLens Feedback":
-    st.info("TruLens feedback functions active.")
+with st.sidebar:
+    st.header("⚙️ Document Hub")
+    st.markdown("Upload multiple PDF or TXT files to build your verified knowledge base.")
+    
+    uploaded_files = st.file_uploader(
+        "Upload Documents", 
+        type=["pdf", "txt"], 
+        accept_multiple_files=True,
+        help="Select one or more files simultaneously."
+    )
+    
+    chunk_size = st.slider("Chunk Size", min_value=200, max_value=1000, value=500, step=50)
+    chunk_overlap = st.slider("Chunk Overlap", min_value=0, max_value=200, value=50, step=10)
+
+    if st.button("🚀 Process & Index Documents", use_container_width=True):
+        if not uploaded_files:
+            st.error("Please select at least one file before processing.")
+        else:
+            all_docs = []
+            with st.spinner(f"Processing {len(uploaded_files)} file(s)..."):
+                for uploaded_file in uploaded_files:
+                    file_ext = uploaded_file.name.split(".")[-1].lower()
+                    with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file_ext}") as tmp_file:
+                        tmp_file.write(uploaded_file.read())
+                        tmp_path = tmp_file.name
+
+                    if file_ext == "pdf":
+                        loader = PyPDFLoader(tmp_path)
+                    else:
+                        loader = TextLoader(tmp_path, encoding="utf-8")
+                    
+                    docs = loader.load()
+                    for d in docs:
+                        d.metadata["source"] = uploaded_file.name
+                    all_docs.extend(docs)
+
+                splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
+                chunks = splitter.split_documents(all_docs)
+                
+                st.session_state.vector_store = FAISS.from_documents(chunks, embeddings)
+                st.session_state.bm25_retriever = BM25Retriever.from_documents(chunks)
+                st.session_state.bm25_retriever.k = 5
+                st.session_state.all_chunks = chunks
+                
+                st.success(f"Indexed {len(chunks)} chunks across {len(uploaded_files)} document(s)!")
+
+    st.markdown("---")
+    st.subheader("📊 Model Configurations")
+    threshold = st.slider("Contradiction Filter Threshold", 0.0, 1.0, 0.5, 0.05,
+                          help="Passages with a contradiction probability above this score are rejected.")
+
+st.title("⚡ Enterprise Pre-Verification RAG Studio")
+st.caption("Verify factual integrity and evaluate contexts before generating answers.")
+
+for msg in st.session_state.messages:
+    with st.chat_message(msg["role"]):
+        st.markdown(msg["content"])
+
+if prompt := st.chat_input("Ask a question about your uploaded documents..."):
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    with st.chat_message("user"):
+        st.markdown(prompt)
+
+    if not st.session_state.vector_store:
+        with st.chat_message("assistant"):
+            st.warning("⚠️ Please upload and process documents in the sidebar first.")
+    else:
+        with st.chat_message("assistant"):
+            with st.spinner("Retrieving and verifying source context..."):
+                vector_docs = st.session_state.vector_store.similarity_search(prompt, k=4)
+                bm25_docs = st.session_state.bm25_retriever.invoke(prompt)
+                
+                combined_docs = {doc.page_content: doc for doc in (vector_docs + bm25_docs)}.values()
+                
+                verified_contexts = []
+                verification_logs = []
+
+                for i, doc in enumerate(combined_docs):
+                    passage = doc.page_content
+                    scores = verifier.predict([(prompt, passage)])[0]
+                    
+                    exp_scores = np.exp(scores)
+                    probs = exp_scores / np.sum(exp_scores)
+                    
+                    contradiction_prob, entailment_prob, neutral_prob = probs[0], probs[1], probs[2]
+                    
+                    status = "Rejected" if contradiction_prob > threshold else "Retained"
+                    
+                    if status == "Retained":
+                        verified_contexts.append(doc)
+                    
+                    verification_logs.append({
+                        "index": i + 1,
+                        "source": doc.metadata.get("source", "Unknown"),
+                        "status": status,
+                        "entailment": entailment_prob,
+                        "contradiction": contradiction_prob,
+                        "text": passage
+                    })
+
+            with st.expander("🛡️ Pre-Generation Context Verification Metrics", expanded=True):
+                col1, col2 = st.columns(2)
+                col1.metric("Retrieved Chunks", len(combined_docs))
+                col2.metric("Verified Retained Chunks", len(verified_contexts))
+                
+                for log in verification_logs:
+                    badge_class = "badge-retained" if log["status"] == "Retained" else "badge-rejected"
+                    st.markdown(f"""
+                    <div class="metric-card">
+                        <span class="{badge_class}">{log['status']}</span> 
+                        <strong>Source:</strong> {log['source']} | 
+                        <strong>Entailment:</strong> {log['entailment']:.2f} | 
+                        <strong>Contradiction:</strong> {log['contradiction']:.2f}
+                        <p style="margin-top: 5px; font-size: 0.9rem;">{log['text'][:250]}...</p>
+                    </div>
+                    """, unsafe_allow_html=True)
+
+            if verified_contexts:
+                context_block = "\n\n".join([f"[{doc.metadata.get('source')}] {doc.page_content}" for doc in verified_contexts])
+                
+                response_text = f"### Answer Based on Verified Context\n\n"
+                response_text += f"Found **{len(verified_contexts)} verified source passage(s)** matching your query:\n\n"
+                response_text += f"> {context_block[:600]}...\n\n"
+                response_text += "*Note: Low-confidence and contradictory passages were filtered out prior to answer compilation.*"
+            else:
+                response_text = "❌ **Verification Failed:** No passages passed the reliability and relevance threshold to safely answer your query."
+
+            st.markdown(response_text)
+            st.session_state.messages.append({"role": "assistant", "content": response_text})
