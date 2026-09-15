@@ -5,7 +5,10 @@ import streamlit as st
 import pandas as pd
 
 # Add python directory to system path
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# (models/, services/, cas_engine.py all live under the "python/" subdirectory)
+_PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(_PROJECT_ROOT)
+sys.path.append(os.path.join(_PROJECT_ROOT, "python"))
 
 from models.document import Document
 from cas_engine import CASEngine
