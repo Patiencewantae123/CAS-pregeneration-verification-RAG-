@@ -182,3 +182,27 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# --- Added Validation Logic ---
+from pydantic import BaseModel, ValidationError
+from typing import List, Optional
+
+class RAGEntry(BaseModel):
+    id: str
+    query: str
+    passages: List[str]
+    ground_truth_answer: Optional[str] = None
+    dataset_source: str
+
+def validate_entry(item: dict, source: str) -> Optional[dict]:
+    try:
+        entry = RAGEntry(
+            id=str(item.get("id", "")),
+            query=item.get("query", "").strip(),
+            passages=item.get("passages", []),
+            ground_truth_answer=item.get("ground_truth_answer"),
+            dataset_source=source
+        )
+        return entry.model_dump()
+    except ValidationError:
+        return None

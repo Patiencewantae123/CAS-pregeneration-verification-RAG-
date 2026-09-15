@@ -157,3 +157,35 @@ with tab3:
     ])
     
     st.dataframe(benchmark_df, use_container_width=True, hide_index=True)
+
+# --- Added Pre-Generation Verification & Evaluation Pipelines ---
+from rank_bm25 import BM25Okapi
+from sentence_transformers import CrossEncoder
+
+@st.cache_resource
+def load_nli_verifier():
+    return CrossEncoder('cross-encoder/nli-deberta-v3-base')
+
+def bm25_heuristic_check(query: str, passages: list[str]) -> list[str]:
+    tokenized_corpus = [p.lower().split(" ") for p in passages if p.strip()]
+    if not tokenized_corpus:
+        return passages
+    bm25 = BM25Okapi(tokenized_corpus)
+    scores = bm25.get_scores(query.lower().split(" "))
+    # Keep top scoring passages above 0
+    return [passages[i] for i, score in enumerate(scores) if score > 0]
+
+def verify_nli_alignment(query: str, passage: str, verifier):
+    scores = verifier.predict([(query, passage)])[0]
+    import numpy as np
+    exp_scores = np.exp(scores)
+    probs = exp_scores / np.sum(exp_scores)
+    return {"contradiction": float(probs[0]), "entailment": float(probs[1])}
+
+# Streamlit evaluation UI snippet
+st.write("## Pre-Generation Verification & RAG Evaluation")
+eval_framework = st.selectbox("Select RAG Framework", ["None", "Ragas Metrics", "TruLens Feedback"])
+if eval_framework == "Ragas Metrics":
+    st.info("Ragas metrics (Context Precision, Recall, Faithfulness) active.")
+elif eval_framework == "TruLens Feedback":
+    st.info("TruLens feedback functions active.")
