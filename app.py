@@ -11,7 +11,7 @@ from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
 st.set_page_config(
-    page_title="casv  RAG Verification Studio",
+    page_title="Enterprise RAG Verification Studio",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
