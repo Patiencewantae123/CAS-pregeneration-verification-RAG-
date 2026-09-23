@@ -11,38 +11,150 @@ from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
 st.set_page_config(
+<<<<<<< Updated upstream
     page_title="Enterprise RAG Verification Studio",
+=======
+    page_title="CAS-V RAG Verification Studio",
+>>>>>>> Stashed changes
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
+# Forceful CSS fix for text visibility, cursor, and placeholder contrast
 st.markdown("""
     <style>
-    .main { padding: 1rem 2rem; }
-    .stChatInput { position: fixed; bottom: 20px; }
-    .metric-card {
-        background-color: #f8f9fa;
-        border: 1px solid #e9ecef;
-        border-radius: 8px;
-        padding: 12px;
-        margin-bottom: 10px;
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif;
     }
+
+    /* Universal Light Background */
+    .stApp, 
+    [data-testid="stSidebar"], 
+    [data-testid="stHeader"], 
+    [data-testid="stMainBlockContainer"],
+    [data-testid="stBottom"],
+    [data-testid="stBottomBlockContainer"],
+    footer {
+        background-color: #ffffff !important;
+        color: #0f172a !important;
+    }
+
+    /* File Uploader Container & Inner Elements */
+    [data-testid="stFileUploader"],
+    [data-testid="stFileUploadDropzone"],
+    section[data-testid="stFileUploaderDropzone"] {
+        background-color: #f8fafc !important;
+        border: 1px dashed #cbd5e1 !important;
+        border-radius: 12px !important;
+    }
+
+    [data-testid="stFileUploader"] button,
+    [data-testid="stFileUploadDropzone"] button,
+    section[data-testid="stFileUploaderDropzone"] button {
+        background-color: #e2e8f0 !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+    }
+
+    [data-testid="stFileUploader"] *,
+    [data-testid="stFileUploadDropzone"] * {
+        color: #334155 !important;
+    }
+
+    /* Primary Sidebar Buttons */
+    .stButton > button {
+        background-color: #2563eb !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 8px !important;
+        font-weight: 600 !important;
+        padding: 0.6rem 1rem !important;
+    }
+
+    /* Bottom Chat Container */
+    div[data-testid="stBottom"],
+    div[data-testid="stBottomBlockContainer"] {
+        background-color: #ffffff !important;
+        border-top: 1px solid #e2e8f0 !important;
+    }
+
+    /* Chat Input Box Wrapper */
+    [data-testid="stChatInput"],
+    [data-testid="stChatInputContainer"],
+    div[data-baseweb="base-input"],
+    div[data-baseweb="input"] {
+        background-color: #f8fafc !important;
+        border: 1.5px solid #cbd5e1 !important;
+        border-radius: 12px !important;
+    }
+
+    /* CRITICAL FIX: Explicitly override webkit fill color, text color, and typing cursor */
+    textarea[data-testid="stChatInputTextArea"],
+    [data-testid="stChatInput"] textarea,
+    [data-testid="stChatInputContainer"] textarea,
+    div[data-baseweb="base-input"] textarea,
+    div[data-baseweb="input"] textarea {
+        color: #0f172a !important;
+        -webkit-text-fill-color: #0f172a !important;
+        caret-color: #2563eb !important;
+        background-color: transparent !important;
+        font-size: 0.95rem !important;
+        font-weight: 500 !important;
+        opacity: 1 !important;
+    }
+
+    /* Visible Placeholder Text */
+    [data-testid="stChatInput"] textarea::placeholder,
+    textarea[data-testid="stChatInputTextArea"]::placeholder {
+        color: #64748b !important;
+        -webkit-text-fill-color: #64748b !important;
+        opacity: 1 !important;
+    }
+
+    /* Visible Send Arrow Button */
+    [data-testid="stChatInput"] button,
+    [data-testid="stChatInputSubmitButton"] {
+        background-color: #2563eb !important;
+        border-radius: 8px !important;
+        border: none !important;
+        opacity: 1 !important;
+    }
+    
+    [data-testid="stChatInput"] button svg,
+    [data-testid="stChatInputSubmitButton"] svg {
+        fill: #ffffff !important;
+        color: #ffffff !important;
+        stroke: #ffffff !important;
+    }
+
+    /* Metrics & Cards */
+    .metric-card {
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 10px;
+        padding: 16px;
+        margin-bottom: 12px;
+    }
+
     .badge-retained {
-        background-color: #d4edda;
-        color: #155724;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 0.85rem;
+        background-color: #dcfce7;
+        color: #15803d;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.78rem;
     }
     .badge-rejected {
-        background-color: #f8d7da;
-        color: #721c24;
-        padding: 4px 8px;
-        border-radius: 4px;
-        font-weight: bold;
-        font-size: 0.85rem;
+        background-color: #fee2e2;
+        color: #b91c1c;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.78rem;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -118,7 +230,7 @@ with st.sidebar:
     threshold = st.slider("Contradiction Filter Threshold", 0.0, 1.0, 0.5, 0.05,
                           help="Passages with a contradiction probability above this score are rejected.")
 
-st.title("⚡ Enterprise Pre-Verification RAG Studio")
+st.title("⚡ CAS-V Pre-Verification RAG Studio")
 st.caption("Verify factual integrity and evaluate contexts before generating answers.")
 
 for msg in st.session_state.messages:
@@ -177,10 +289,10 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                     st.markdown(f"""
                     <div class="metric-card">
                         <span class="{badge_class}">{log['status']}</span> 
-                        <strong>Source:</strong> {log['source']} | 
-                        <strong>Entailment:</strong> {log['entailment']:.2f} | 
-                        <strong>Contradiction:</strong> {log['contradiction']:.2f}
-                        <p style="margin-top: 5px; font-size: 0.9rem;">{log['text'][:250]}...</p>
+                        <strong style="color: #0f172a;">Source:</strong> {log['source']} | 
+                        <strong style="color: #0f172a;">Entailment:</strong> {log['entailment']:.2f} | 
+                        <strong style="color: #0f172a;">Contradiction:</strong> {log['contradiction']:.2f}
+                        <p style="margin-top: 8px; font-size: 0.9rem; color: #475569;">{log['text'][:250]}...</p>
                     </div>
                     """, unsafe_allow_html=True)
 
