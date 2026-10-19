@@ -1,13 +1,10 @@
-import os
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
-# Set paper-ready publication aesthetic
 sns.set_theme(style="whitegrid", palette="muted")
 plt.rcParams.update({"font.size": 11, "figure.autolayout": True})
 
-# Datasets evaluated across the CAS framework paper
 datasets = [
     "Self-RAG\nTrain",
     "CAS Pregen\nTRAIN",
@@ -17,7 +14,6 @@ datasets = [
     "FEVER",
 ]
 
-# Metrics mapped across baseline and proposed models
 data_metrics = {
     "Accuracy (%)": {
         "Baseline RAG (Self-RAG Train Dataset)": [72.1, 64.2, 70.5, 68.4, 61.2, 75.0],
@@ -75,7 +71,6 @@ colors = {
 if __name__ == "__main__":
     for idx, (metric_name, models) in enumerate(data_metrics.items(), start=1):
         plt.figure(figsize=(10, 5))
-
         for model_name, values in models.items():
             is_cas = "CAS" in model_name or "Synthesis" in model_name
             plt.plot(
@@ -88,15 +83,13 @@ if __name__ == "__main__":
                 markersize=8 if is_cas else 6,
                 label=model_name,
             )
-
         plt.title(f"Cross-Dataset Performance Comparison: {metric_name}", fontsize=13, fontweight="bold")
         plt.xlabel("Evaluation Datasets", fontweight="bold")
         plt.ylabel(metric_name, fontweight="bold")
         plt.grid(True, linestyle="--", alpha=0.6)
         plt.legend(loc="best", frameon=True, fontsize=9)
         plt.tight_layout()
-
         filename = f"graph_{idx}_{metric_name.split()[0].lower()}_comparison.png"
         plt.savefig(filename, dpi=300)
         print(f"Successfully generated: {filename}")
-        plt.close()generate_graphs.py
+        plt.close()
