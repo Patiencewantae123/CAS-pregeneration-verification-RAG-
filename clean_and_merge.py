@@ -1,208 +1,108 @@
-﻿import os
+import glob
 import json
-import re
+import os
 
-data_dir = "data"
-output_file = os.path.join(data_dir, "merged_cleaned_dataset.json")
-
-def clean_text(text):
-    if not text or not isinstance(text, str):
-        return ""
-    text = re.sub(r'\s+', ' ', text)
-    return text.strip()
-
-def process_fever(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        claim = clean_text(item.get("claim", ""))
-        label = str(item.get("label", "UNKNOWN")).upper()
-        if claim:
-            cleaned.append({
-                "uuid": f"FEVER_{idx:05d}",
-                "dataset_source": "FEVER",
-                "query_or_claim": claim,
-                "context_or_evidence": "",
-                "label": label,
-                "metadata": {"verifiable": item.get("verifiable", "")}
-            })
-    return cleaned
-
-def process_multinli(items):
-    label_map = {0: "SUPPORTS", 1: "NEUTRAL", 2: "REFUTES"}
-    cleaned = []
-    for idx, item in enumerate(items):
-        premise = clean_text(item.get("premise", ""))
-        hypothesis = clean_text(item.get("hypothesis", ""))
-        raw_label = item.get("label", -1)
-        label = label_map.get(raw_label, "UNKNOWN")
-        if premise and hypothesis:
-            cleaned.append({
-                "uuid": f"MNLI_{idx:05d}",
-                "dataset_source": "MultiNLI",
-                "query_or_claim": hypothesis,
-                "context_or_evidence": premise,
-                "label": label,
-                "metadata": {"promptID": item.get("promptID", "")}
-            })
-    return cleaned
-
-def process_musique(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        question = clean_text(item.get("question", ""))
-        paragraphs = item.get("paragraphs", [])
-        combined_paragraphs = " ".join([clean_text(p.get("text", "")) for p in paragraphs if isinstance(p, dict)])
-        if question:
-            cleaned.append({
-                "uuid": f"MUSIQUE_{idx:05d}",
-                "dataset_source": "MuSiQue",
-                "query_or_claim": question,
-                "context_or_evidence": combined_paragraphs,
-                "label": "NOT_APPLICABLE",
-                "metadata": {"answer": item.get("answer", "")}
-            })
-    return cleaned
-
-def process_strategyqa(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        question = clean_text(item.get("question", ""))
-        facts = " ".join([clean_text(f) for f in item.get("facts", [])])
-        answer = item.get("answer")
-        label = "SUPPORTS" if answer is True else "REFUTES" if answer is False else "UNKNOWN"
-        if question:
-            cleaned.append({
-                "uuid": f"STRATQA_{idx:05d}",
-                "dataset_source": "StrategyQA",
-                "query_or_claim": question,
-                "context_or_evidence": facts,
-                "label": label,
-                "metadata": {}
-            })
-    return cleaned
-
-def process_cofie(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        context = clean_text(item.get("context", ""))
-        entity = clean_text(item.get("entity", ""))
-        relation = clean_text(item.get("relation", ""))
-        if context:
-            cleaned.append({
-                "uuid": f"COFIE_{idx:05d}",
-                "dataset_source": "CoFiE",
-                "query_or_claim": f"{entity} - {relation}".strip(" -"),
-                "context_or_evidence": context,
-                "label": "NOT_APPLICABLE",
-                "metadata": {"temporal_anchor": item.get("temporal_anchor", "")}
-            })
-    return cleaned
-
-def process_halueval(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        knowledge = clean_text(item.get("knowledge", ""))
-        question = clean_text(item.get("question", ""))
-        right_ans = clean_text(item.get("right_answer", ""))
-        if question or knowledge:
-            cleaned.append({
-                "uuid": f"HALUEVAL_{idx:05d}",
-                "dataset_source": "HaluEval",
-                "query_or_claim": question,
-                "context_or_evidence": knowledge,
-                "label": "NOT_APPLICABLE",
-                "metadata": {
-                    "right_answer": right_ans,
-                    "hallucinated_answer": clean_text(item.get("hallucinated_answer", ""))
-                }
-            })
-    return cleaned
-
-def process_cas(items):
-    cleaned = []
-    for idx, item in enumerate(items):
-        claim = clean_text(item.get("claim", ""))
-        content = clean_text(item.get("content", ""))
-        label = str(item.get("label", "UNKNOWN")).upper()
-        if claim:
-            cleaned.append({
-                "uuid": f"CAS_{idx:05d}",
-                "dataset_source": "CAS_Pregeneration",
-                "query_or_claim": claim,
-                "context_or_evidence": content,
-                "label": label,
-                "metadata": {
-                    "source": item.get("source", ""),
-                    "provenance_score": item.get("provenance_score", 1.0)
-                }
-            })
-    return cleaned
-
-def main():
-    print("🧹 Starting Data Cleaning and Unification Process...\n")
-    merged_records = []
+def normalize_sample(dataset_name, sample, idx):
+    # Standard schema definition
+    dataset_tag = dataset_name.replace('_hf_samples.json', '').replace('.json', '')
+    sample_id = sample.get('id') or sample.get('_id') or f'{dataset_tag}_{idx:04d}'
     
-    file_processors = {
-        "fever.json": process_fever,
-        "multinli.json": process_multinli,
-        "musique.json": process_musique,
-        "strategyqa.json": process_strategyqa,
-        "cofie.json": process_cofie,
-        "halueval.json": process_halueval,
-        "cas_pregeneration.json": process_cas
-    }
+    # 1. Normalize Query / Question / Claim
+    query = (
+        sample.get('query') or 
+        sample.get('question') or 
+        sample.get('ambiguous_question') or 
+        sample.get('instruction') or 
+        sample.get('claim') or 
+        sample.get('prompt') or ''
+    )
     
-    for fname, processor in file_processors.items():
-        fpath = os.path.join(data_dir, fname)
-        if os.path.exists(fpath):
-            try:
-                with open(fpath, "r", encoding="utf-8") as f:
-                    raw_data = json.load(f)
-                    processed = processor(raw_data)
-                    merged_records.extend(processed)
-                    print(f"  ✅ Processed {fname}: {len(processed)} cleaned entries.")
-            except Exception as e:
-                print(f"  ⚠️ Error processing {fname}: {e}")
-        else:
-            print(f"  ⏩ Skipped {fname} (file not found).")
-            
-    seen = set()
-    deduped_records = []
-    for rec in merged_records:
-        key = (rec["query_or_claim"], rec["context_or_evidence"])
-        if key not in seen:
-            seen.add(key)
-            deduped_records.append(rec)
-            
-    with open(output_file, "w", encoding="utf-8") as f:
-        json.dump(deduped_records, f, indent=2)
+    # 2. Normalize Contexts / Evidence / Retrieved Documents
+    raw_contexts = (
+        sample.get('retrieved_contexts') or 
+        sample.get('retrieved_passages') or 
+        sample.get('retrieved_documents') or 
+        sample.get('context') or 
+        sample.get('evidence') or 
+        sample.get('domain_documents') or 
+        sample.get('knowledge') or []
+    )
+    
+    contexts = []
+    if isinstance(raw_contexts, list):
+        for item in raw_contexts:
+            if isinstance(item, str):
+                contexts.append(item.strip())
+            elif isinstance(item, dict):
+                text = item.get('text') or item.get('snippet') or str(item)
+                contexts.append(text.strip())
+            else:
+                contexts.append(str(item))
+    elif isinstance(raw_contexts, str):
+        contexts = [raw_contexts.strip()]
         
-    print(f"\n🎉 Successfully merged and cleaned {len(deduped_records)} total unique entries!")
-    print(f"📁 Output saved to: '{output_file}'")
+    # 3. Normalize Ground Truth / Answer / Label
+    ground_truth = (
+        sample.get('ground_truth') or 
+        sample.get('synthesized_response') or 
+        sample.get('gold_answer') or 
+        sample.get('right_answer') or 
+        sample.get('disambiguated_answers') or 
+        sample.get('answer') or 
+        sample.get('label') or ''
+    )
+    
+    return {
+        'id': str(sample_id),
+        'dataset': dataset_tag,
+        'query': str(query).strip(),
+        'contexts': contexts,
+        'ground_truth': str(ground_truth).strip(),
+        'metadata': sample.get('metadata', {})
+    }
 
-if __name__ == "__main__":
-    main()
+def process_and_merge():
+    # Find all sample JSON files in current folder
+    json_files = sorted(glob.glob('*_samples.json') + glob.glob('*qa.json') + glob.glob('*rag*.json'))
+    # Filter out synthesized target outputs if re-running
+    json_files = [f for f in json_files if f not in ['unified_benchmark_dataset.json', 'cas_evaluation_datasets_all.json']]
+    
+    merged_data = []
+    seen_ids = set()
+    total_cleaned = 0
+    
+    print(f'Found {len(json_files)} dataset JSON files to process.')
+    
+    for file_path in json_files:
+        try:
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content = json.load(f)
+                
+            samples = content if isinstance(content, list) else [content]
+            file_count = 0
+            
+            for idx, raw_sample in enumerate(samples, start=1):
+                clean_record = normalize_sample(os.path.basename(file_path), raw_sample, idx)
+                
+                # Deduplication check
+                if clean_record['id'] in seen_ids:
+                    continue
+                seen_ids.add(clean_record['id'])
+                
+                merged_data.append(clean_record)
+                file_count += 1
+                
+            print(f'  [?] {file_path}: Processed {file_count} records')
+            total_cleaned += file_count
+        except Exception as e:
+            print(f'  [X] Could not process {file_path}: {e}')
 
-# --- Added Validation Logic ---
-from pydantic import BaseModel, ValidationError
-from typing import List, Optional
+    # Output unified dataset
+    output_filename = 'unified_benchmark_dataset.json'
+    with open(output_filename, 'w', encoding='utf-8') as f:
+        json.dump(merged_data, f, indent=2)
+        
+    print(f'\nSuccess! Merged {total_cleaned} clean samples across datasets into \"{output_filename}\".')
 
-class RAGEntry(BaseModel):
-    id: str
-    query: str
-    passages: List[str]
-    ground_truth_answer: Optional[str] = None
-    dataset_source: str
-
-def validate_entry(item: dict, source: str) -> Optional[dict]:
-    try:
-        entry = RAGEntry(
-            id=str(item.get("id", "")),
-            query=item.get("query", "").strip(),
-            passages=item.get("passages", []),
-            ground_truth_answer=item.get("ground_truth_answer"),
-            dataset_source=source
-        )
-        return entry.model_dump()
-    except ValidationError:
-        return None
+if __name__ == '__main__':
+    process_and_merge()
