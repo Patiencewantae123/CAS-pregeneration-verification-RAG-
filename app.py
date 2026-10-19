@@ -11,17 +11,13 @@ from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
 st.set_page_config(
-<<<<<<< Updated upstream
-    page_title="Enterprise RAG Verification Studio",
-=======
     page_title="CAS-V RAG Verification Studio",
->>>>>>> Stashed changes
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="expanded",
 )
 
-# Forceful CSS fix for text visibility, cursor, and placeholder contrast
+# Complete theme overrides
 st.markdown("""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -30,7 +26,7 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
 
-    /* Universal Light Background */
+    /* Force global light mode backgrounds */
     .stApp, 
     [data-testid="stSidebar"], 
     [data-testid="stHeader"], 
@@ -42,7 +38,7 @@ st.markdown("""
         color: #0f172a !important;
     }
 
-    /* File Uploader Container & Inner Elements */
+    /* Sidebar and File Uploader */
     [data-testid="stFileUploader"],
     [data-testid="stFileUploadDropzone"],
     section[data-testid="stFileUploaderDropzone"] {
@@ -57,7 +53,6 @@ st.markdown("""
         background-color: #e2e8f0 !important;
         color: #0f172a !important;
         border: 1px solid #cbd5e1 !important;
-        box-shadow: none !important;
     }
 
     [data-testid="stFileUploader"] *,
@@ -65,24 +60,23 @@ st.markdown("""
         color: #334155 !important;
     }
 
-    /* Primary Sidebar Buttons */
+    /* Action Buttons */
     .stButton > button {
         background-color: #2563eb !important;
         color: #ffffff !important;
         border: none !important;
         border-radius: 8px !important;
         font-weight: 600 !important;
-        padding: 0.6rem 1rem !important;
     }
 
-    /* Bottom Chat Container */
+    /* Sticky Bottom Input Bar */
     div[data-testid="stBottom"],
     div[data-testid="stBottomBlockContainer"] {
         background-color: #ffffff !important;
         border-top: 1px solid #e2e8f0 !important;
     }
 
-    /* Chat Input Box Wrapper */
+    /* Input Field Background and Dark Typing Text */
     [data-testid="stChatInput"],
     [data-testid="stChatInputContainer"],
     div[data-baseweb="base-input"],
@@ -92,12 +86,10 @@ st.markdown("""
         border-radius: 12px !important;
     }
 
-    /* CRITICAL FIX: Explicitly override webkit fill color, text color, and typing cursor */
     textarea[data-testid="stChatInputTextArea"],
     [data-testid="stChatInput"] textarea,
     [data-testid="stChatInputContainer"] textarea,
-    div[data-baseweb="base-input"] textarea,
-    div[data-baseweb="input"] textarea {
+    div[data-baseweb="base-input"] textarea {
         color: #0f172a !important;
         -webkit-text-fill-color: #0f172a !important;
         caret-color: #2563eb !important;
@@ -107,15 +99,7 @@ st.markdown("""
         opacity: 1 !important;
     }
 
-    /* Visible Placeholder Text */
-    [data-testid="stChatInput"] textarea::placeholder,
-    textarea[data-testid="stChatInputTextArea"]::placeholder {
-        color: #64748b !important;
-        -webkit-text-fill-color: #64748b !important;
-        opacity: 1 !important;
-    }
-
-    /* Visible Send Arrow Button */
+    /* Visible Arrow Submit Button */
     [data-testid="stChatInput"] button,
     [data-testid="stChatInputSubmitButton"] {
         background-color: #2563eb !important;
@@ -131,7 +115,7 @@ st.markdown("""
         stroke: #ffffff !important;
     }
 
-    /* Metrics & Cards */
+    /* Metric Cards */
     .metric-card {
         background-color: #f8fafc;
         border: 1px solid #e2e8f0;
