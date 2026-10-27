@@ -2,33 +2,38 @@
 
 ### Conflict-Aware Synthesis for Reliable Retrieval-Augmented Generation
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/fd77c821-e7f0-4f48-bc27-6b0bea272563" width="800" alt="CAS-RAG Architecture"/>
-</p>
+## 🎯 What Problem Does This Project Solve?
 
-## 📌 Overview
-**CAS-PreGeneration-Verification-RAG** proposes a conflict-aware verification layer that improves the reliability of Retrieval-Augmented Generation (RAG). It detects contradictions in retrieved evidence, evaluates source reliability, and prepares more consistent, evidence-grounded context before the LLM generates a response.
+Traditional Retrieval-Augmented Generation (RAG) systems retrieve documents relevant to a user's question and provide them to a Large Language Model (LLM) to generate an answer. However, the retrieved documents may contain **contradictory information, unreliable sources, or conflicting facts**.
 
-## 🎯 Key Features
-- **Conflict Detection:** Identifies contradictions among retrieved documents.
-- **Evidence Ranking:** Evaluates relevance, agreement, and source reliability.
-- **Conflict Graph:** Represents relationships between evidence passages.
-- **Reliable Generation:** Supports more consistent, evidence-grounded responses.
+For example, when a user asks, *"What is the recommended treatment for a particular condition?"*, one retrieved document may provide outdated information while another provides updated guidance. A conventional RAG system may combine these sources and generate a misleading or contradictory answer.
 
-## ⚙️ Methodology
-1. User Query
-2. Document Retrieval
-3. Conflict Detection using NLI
-4. Conflict Graph Construction
-5. Trust-Aware Evidence Ranking
-6. Conflict-Aware Synthesis
-7. LLM Response Generation
+**CAS-PreGeneration-Verification-RAG addresses this problem by introducing a verification layer before answer generation.** It analyzes retrieved evidence, detects contradictions, evaluates source reliability, and prioritizes consistent, relevant evidence before passing the refined context to the LLM.
 
-## 🛠️ Technologies
-Python · Retrieval-Augmented Generation · Large Language Models · Natural Language Inference · Knowledge Graphs
+## 🔍 The Specific Problems It Addresses
 
-## 🔬 Research Goal
-To investigate whether pre-generation evidence verification can reduce hallucinations and contradictions while improving the factual reliability of RAG systems.
+1. **Contradictory evidence:** Identifies when retrieved documents disagree with one another.
+2. **Unreliable information:** Evaluates evidence using factors such as source reliability and agreement between documents.
+3. **Hallucinations:** Aims to reduce unsupported statements by providing the LLM with better-verified evidence.
+4. **Inconsistent answers:** Reduces the risk of generating answers that combine incompatible facts.
+5. **Poor evidence selection:** Ranks retrieved passages so that more relevant and trustworthy evidence can receive greater priority.
 
+## ⚙️ How Does It Solve These Problems?
 
-**Research Focus:** Trustworthy AI | LLM Reliability | RAG | Evidence Verification
+1. **User Query:** Receives a question from the user.
+2. **Document Retrieval:** Retrieves relevant documents from a knowledge source.
+3. **Conflict Detection:** Uses Natural Language Inference (NLI) to identify potential contradictions between evidence passages.
+4. **Conflict Graph Construction:** Represents relationships between passages, including supporting and contradicting evidence.
+5. **Trust-Aware Evidence Ranking:** Evaluates evidence based on relevance, agreement, and source reliability.
+6. **Conflict-Aware Synthesis:** Constructs a refined context that prioritizes reliable evidence and handles detected conflicts.
+7. **LLM Generation:** Sends the refined context to the LLM to generate an evidence-grounded response.
+
+## 🧪 Research Objective
+
+The objective is to investigate whether verifying and synthesizing retrieved evidence before generation can reduce hallucinations and contradictions while improving factual consistency and reliability compared with conventional RAG and other relevant baselines.
+
+## 💡 Expected Contribution
+
+The proposed framework introduces a pre-generation verification approach that integrates contradiction detection, evidence relationship modeling, trust-aware ranking, and conflict-aware synthesis into the RAG pipeline.
+
+**Research Focus:** Trustworthy AI · LLM Reliability · Retrieval-Augmented Generation · Evidence Verification
