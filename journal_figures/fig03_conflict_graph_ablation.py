@@ -22,15 +22,14 @@ for i, d in enumerate(diag):
         rows.append({"panel": "a", "dataset": d["dataset"], "series": name, "count": d[key],
                      "pairs": d["pairs"], "value": share})
         left += share
-    ax.text(1.01, i, f"{d['entailment_edges']} / {d['contradiction_edges']} / {d['neutral_edges']}",
-            va="center", fontsize=6.5, color=INK2, clip_on=False)
+    ax.text(1.02, i, f"E {d['entailment_edges']}\nC {d['contradiction_edges']}\nN {d['neutral_edges']}",
+            va="center", fontsize=6.3, color=INK2, clip_on=False, linespacing=1.15)
 ax.set_yticks(range(len(diag)), [f"{d['dataset']}\n({d['pairs']} pairs)" for d in diag])
 ax.set_xlim(0, 1)
 ax.set_xticks(np.arange(0, 1.01, 0.25), ["0%", "25%", "50%", "75%", "100%"])
 ax.set_xlabel("Share of passage pairs")
 ax.invert_yaxis()
 ax.tick_params(axis="y", length=0)
-ax.text(1.01, -0.62, "E / C / N", fontsize=6.5, color=INK2, clip_on=False)
 ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.32), ncol=3)
 panel_title(ax, "a", "Relations emitted by the CAS verifier")
 

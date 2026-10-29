@@ -1,0 +1,9 @@
+task,dataset,item,model,method,n_passages,gold_in_context,prompt_tokens,wall_s,pred,em,f1,accuracy,abstain,ungrounded,gold
+qa,HotpotQA,0,llama3.2:latest,Vanilla RAG (no filter),10,1.0,1287,13.536451199997828,First for Women,0.0,0.0,0.0,0.0,0.0,Arthur's Magazine
+qa,MuSiQue,0,llama3.2:latest,Vanilla RAG (no filter),20,1.0,1578,10.939954900000885,Norway.,0.0,0.0,1.0,0.0,0.0,north
+qa,HotpotQA,0,llama3.2:latest,Relevance top-3 (BM25),3,1.0,357,2.3492786999995587,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,MuSiQue,0,llama3.2:latest,Relevance top-3 (BM25),3,1.0,337,1.9492504999980156,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,HotpotQA,0,llama3.2:latest,CAS w/o conflict graph,2,1.0,236,1.3586509000015212,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,MuSiQue,0,llama3.2:latest,CAS w/o conflict graph,4,1.0,404,0.8129453999972611,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,HotpotQA,0,llama3.2:latest,CAS (full pipeline),2,1.0,236,1.3586509000015212,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,MuSiQue,0,llama3.2:latest,CAS (full pipeline),4,1.0,404,0.8129453999972611,Norway,0.0,0.0,1.0,0.0,0.0,north

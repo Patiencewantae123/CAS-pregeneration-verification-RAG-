@@ -1,0 +1,9 @@
+task,dataset,item,model,method,contradict_type,n_passages,response,wall_s,outcome,conflict_flagged,both
+conflict,WikiContradict,0,llama3.2:latest,Vanilla RAG (no filter),Implicit,2,"Passage [1] is incorrect, as it states apomorphine is the main psychoactive compound, but passage [2] states aporphine is present.
+
+Answer: aporphine, neither.",3.575851000001421,both answers,1.0,1.0
+conflict,WikiContradict,0,llama3.2:latest,Relevance top-3 (BM25),Implicit,2,"Passage [1] is incorrect, as it states apomorphine is the main psychoactive compound, but passage [2] states aporphine is present.
+
+Answer: aporphine, neither.",3.575851000001421,both answers,1.0,1.0
+conflict,WikiContradict,0,llama3.2:latest,CAS w/o conflict graph,Implicit,1,"The passage does not provide information on apomorphine. It only mentions aporphine, stating it is present in Nymphaea nouchali var. caerulea.",2.9820378000003984,both answers,0.0,1.0
+conflict,WikiContradict,0,llama3.2:latest,CAS (full pipeline),Implicit,1,"The passage does not provide information on apomorphine. It only mentions aporphine, stating it is present in Nymphaea nouchali var. caerulea.",2.9820378000003984,both answers,0.0,1.0

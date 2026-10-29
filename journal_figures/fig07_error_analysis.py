@@ -27,10 +27,10 @@ for ax, (letter, title, cats) in zip(axes, [("a", "Gold evidence passages", GOLD
             share = n / total
             ax.barh(i, share, left=left, height=0.55, color=color, hatch=hatch, edgecolor="white",
                     linewidth=0.8, label=name if i == 0 else None)
-            if share >= 0.06:
+            if share >= 0.05:
                 txt = INK if color in ("#eda100", "#d9d8d2") else "white"
                 ax.text(left + share / 2, i, str(n), ha="center", va="center", fontsize=6.5, color=txt,
-                        bbox=dict(boxstyle="square,pad=0.1", fc=color, ec="none"))
+                        bbox=dict(boxstyle="round,pad=0.25,rounding_size=0.15", fc=color, ec="none"))
             rows.append({"panel": letter, "dataset": ds, "category": key, "count": n, "total": total, "share": share})
             left += share
     ax.set_yticks(range(len(datasets)),

@@ -1,0 +1,741 @@
+{
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 96
+  },
+  "models": [
+    "llama3.2:latest"
+  ],
+  "qa": [
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "latency_s",
+      "mean": 13.536451199997828,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "em",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "latency_s",
+      "mean": 2.3492786999995587,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "em",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "latency_s",
+      "mean": 1.3586509000015212,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "em",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "f1",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "latency_s",
+      "mean": 1.3586509000015212,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "latency_s",
+      "mean": 10.939954900000885,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "latency_s",
+      "mean": 1.9492504999980156,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "latency_s",
+      "mean": 0.8129453999972611,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "accuracy",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "latency_s",
+      "mean": 0.8129453999972611,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 1
+    }
+  ],
+  "paired_tests": [
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    }
+  ],
+  "conflict": [
+    {
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 1
+      },
+      "n": 1,
+      "mean_passages_kept": 2.0
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "both",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "conflict_flagged",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 1
+      },
+      "n": 1,
+      "mean_passages_kept": 2.0
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "both",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "conflict_flagged",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 1
+      },
+      "n": 1,
+      "mean_passages_kept": 1.0
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "both",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "conflict_flagged",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 1
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 1
+      },
+      "n": 1,
+      "mean_passages_kept": 1.0
+    }
+  ]
+}
