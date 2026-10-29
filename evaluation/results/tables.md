@@ -41,43 +41,43 @@
 | numpy | 2.5.1 |
 | platform | Windows-11-10.0.26300-SP0 |
 | processor | Intel64 Family 6 Model 198 Stepping 2, GenuineIntel |
-| total_runtime_s | 4.95 |
+| total_runtime_s | 4.98 |
 
 ## Table 3. Evidence selection (mean [95% bootstrap CI])
 
 | Dataset | Method | Precision | Recall | F1 | Answer coverage | Retained | ms/query |
 |---|---|---|---|---|---|---|---:|
-| HotpotQA | Vanilla RAG (no filter) | 0.200 [0.200, 0.200] | 1.000 [1.000, 1.000] | 0.333 [0.333, 0.333] | 1.000 [1.000, 1.000] | 1.000 | 0.13 |
-| HotpotQA | Relevance top-3 (BM25) | 0.493 [0.440, 0.547] | 0.740 [0.660, 0.820] | 0.592 [0.528, 0.656] | 0.761 [0.630, 0.870] | 0.300 | 0.31 |
-| HotpotQA | CAS w/o conflict graph | 0.752 [0.657, 0.835] | 0.630 [0.550, 0.710] | 0.657 [0.582, 0.725] | 0.609 [0.457, 0.761] | 0.196 | 0.31 |
-| HotpotQA | CAS (full pipeline) | 0.589 [0.502, 0.672] | 0.660 [0.580, 0.740] | 0.580 [0.516, 0.646] | 0.652 [0.500, 0.783] | 0.276 | 1.31 |
-| MuSiQue | Vanilla RAG (no filter) | 0.100 [0.083, 0.120] | 1.000 [1.000, 1.000] | 0.180 [0.152, 0.211] | 0.733 [0.467, 0.933] | 1.000 | 0.37 |
-| MuSiQue | Relevance top-3 (BM25) | 0.333 [0.222, 0.444] | 0.506 [0.322, 0.689] | 0.395 [0.262, 0.527] | 0.267 [0.067, 0.533] | 0.150 | 0.51 |
-| MuSiQue | CAS w/o conflict graph | 0.351 [0.273, 0.430] | 0.639 [0.483, 0.789] | 0.417 [0.334, 0.503] | 0.333 [0.133, 0.600] | 0.187 | 0.55 |
-| MuSiQue | CAS (full pipeline) | 0.300 [0.220, 0.385] | 0.639 [0.483, 0.789] | 0.369 [0.285, 0.458] | 0.333 [0.133, 0.600] | 0.240 | 4.37 |
+| HotpotQA | Vanilla RAG (no filter) | 0.200 [0.200, 0.200] | 1.000 [1.000, 1.000] | 0.333 [0.333, 0.333] | 1.000 [1.000, 1.000] | 1.000 | 0.15 |
+| HotpotQA | Relevance top-3 (BM25) | 0.493 [0.440, 0.547] | 0.740 [0.660, 0.820] | 0.592 [0.528, 0.656] | 0.761 [0.630, 0.870] | 0.300 | 0.36 |
+| HotpotQA | CAS w/o conflict graph | 0.752 [0.657, 0.835] | 0.630 [0.550, 0.710] | 0.657 [0.582, 0.725] | 0.609 [0.457, 0.761] | 0.196 | 0.29 |
+| HotpotQA | CAS (full pipeline) | 0.589 [0.502, 0.672] | 0.660 [0.580, 0.740] | 0.580 [0.516, 0.646] | 0.652 [0.500, 0.783] | 0.276 | 1.35 |
+| MuSiQue | Vanilla RAG (no filter) | 0.100 [0.083, 0.120] | 1.000 [1.000, 1.000] | 0.180 [0.152, 0.211] | 0.733 [0.467, 0.933] | 1.000 | 0.27 |
+| MuSiQue | Relevance top-3 (BM25) | 0.333 [0.222, 0.444] | 0.506 [0.322, 0.689] | 0.395 [0.262, 0.527] | 0.267 [0.067, 0.533] | 0.150 | 0.55 |
+| MuSiQue | CAS w/o conflict graph | 0.351 [0.273, 0.430] | 0.639 [0.483, 0.789] | 0.417 [0.334, 0.503] | 0.333 [0.133, 0.600] | 0.187 | 0.54 |
+| MuSiQue | CAS (full pipeline) | 0.300 [0.220, 0.385] | 0.639 [0.483, 0.789] | 0.369 [0.285, 0.458] | 0.333 [0.133, 0.600] | 0.240 | 4.49 |
 
 ## Table 4. Paired differences, CAS (full) minus comparator
 
-| Dataset | Comparator | Metric | Δ mean [95% CI] | p (permutation) |
-|---|---|---|---|---:|
-| HotpotQA | Vanilla RAG (no filter) | precision | +0.389 [+0.302, +0.472] | 0.0001 |
-| HotpotQA | Vanilla RAG (no filter) | recall | -0.340 [-0.420, -0.260] | 0.0001 |
-| HotpotQA | Vanilla RAG (no filter) | f1 | +0.247 [+0.182, +0.313] | 0.0001 |
-| HotpotQA | Relevance top-3 (BM25) | precision | +0.095 [+0.021, +0.172] | 0.0194 |
-| HotpotQA | Relevance top-3 (BM25) | recall | -0.080 [-0.140, -0.020] | 0.0196 |
-| HotpotQA | Relevance top-3 (BM25) | f1 | -0.012 [-0.062, +0.040] | 0.6715 |
-| HotpotQA | CAS w/o conflict graph | precision | -0.163 [-0.235, -0.095] | 0.0001 |
-| HotpotQA | CAS w/o conflict graph | recall | +0.030 [+0.000, +0.070] | 0.2476 |
-| HotpotQA | CAS w/o conflict graph | f1 | -0.076 [-0.123, -0.033] | 0.0014 |
-| MuSiQue | Vanilla RAG (no filter) | precision | +0.200 [+0.127, +0.278] | 0.0001 |
-| MuSiQue | Vanilla RAG (no filter) | recall | -0.361 [-0.517, -0.211] | 0.0039 |
-| MuSiQue | Vanilla RAG (no filter) | f1 | +0.189 [+0.111, +0.276] | 0.0010 |
-| MuSiQue | Relevance top-3 (BM25) | precision | -0.034 [-0.115, +0.050] | 0.4587 |
-| MuSiQue | Relevance top-3 (BM25) | recall | +0.133 [-0.033, +0.333] | 0.3766 |
-| MuSiQue | Relevance top-3 (BM25) | f1 | -0.025 [-0.121, +0.074] | 0.6329 |
-| MuSiQue | CAS w/o conflict graph | precision | -0.052 [-0.098, -0.014] | 0.0640 |
-| MuSiQue | CAS w/o conflict graph | recall | +0.000 [+0.000, +0.000] | 1.0000 |
-| MuSiQue | CAS w/o conflict graph | f1 | -0.048 [-0.090, -0.013] | 0.0640 |
+| Dataset | Comparator | Metric | Δ mean [95% CI] | p (permutation) | p (Holm) |
+|---|---|---|---|---:|---:|
+| HotpotQA | Vanilla RAG (no filter) | precision | +0.389 [+0.302, +0.472] | 0.0001 | 0.0018 |
+| HotpotQA | Vanilla RAG (no filter) | recall | -0.340 [-0.420, -0.260] | 0.0001 | 0.0018 |
+| HotpotQA | Vanilla RAG (no filter) | f1 | +0.247 [+0.182, +0.313] | 0.0001 | 0.0018 |
+| HotpotQA | Relevance top-3 (BM25) | precision | +0.095 [+0.021, +0.172] | 0.0194 | 0.1940 |
+| HotpotQA | Relevance top-3 (BM25) | recall | -0.080 [-0.140, -0.020] | 0.0196 | 0.1940 |
+| HotpotQA | Relevance top-3 (BM25) | f1 | -0.012 [-0.062, +0.040] | 0.6715 | 1.0000 |
+| HotpotQA | CAS w/o conflict graph | precision | -0.163 [-0.235, -0.095] | 0.0001 | 0.0018 |
+| HotpotQA | CAS w/o conflict graph | recall | +0.030 [+0.000, +0.070] | 0.2476 | 1.0000 |
+| HotpotQA | CAS w/o conflict graph | f1 | -0.076 [-0.123, -0.033] | 0.0014 | 0.0168 |
+| MuSiQue | Vanilla RAG (no filter) | precision | +0.200 [+0.127, +0.278] | 0.0001 | 0.0018 |
+| MuSiQue | Vanilla RAG (no filter) | recall | -0.361 [-0.517, -0.211] | 0.0039 | 0.0429 |
+| MuSiQue | Vanilla RAG (no filter) | f1 | +0.189 [+0.111, +0.276] | 0.0010 | 0.0130 |
+| MuSiQue | Relevance top-3 (BM25) | precision | -0.034 [-0.115, +0.050] | 0.4587 | 1.0000 |
+| MuSiQue | Relevance top-3 (BM25) | recall | +0.133 [-0.033, +0.333] | 0.3766 | 1.0000 |
+| MuSiQue | Relevance top-3 (BM25) | f1 | -0.025 [-0.121, +0.074] | 0.6329 | 1.0000 |
+| MuSiQue | CAS w/o conflict graph | precision | -0.052 [-0.098, -0.014] | 0.0640 | 0.5119 |
+| MuSiQue | CAS w/o conflict graph | recall | +0.000 [+0.000, +0.000] | 1.0000 | 1.0000 |
+| MuSiQue | CAS w/o conflict graph | f1 | -0.048 [-0.090, -0.013] | 0.0640 | 0.5119 |
 
 ## Table 5. Conflict-graph diagnostics
 

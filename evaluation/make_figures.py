@@ -233,10 +233,11 @@ def write_tables(R, methods, look):
             out.append(f"| {ds} | {m} | {fmt(g('precision'))} | {fmt(g('recall'))} | {fmt(g('f1'))} | "
                        f"{fmt(g('answer_coverage'))} | {g('retention')['mean']:.3f} | {g('f1')['ms_per_query']:.2f} |")
     out.append("\n## Table 4. Paired differences, CAS (full) minus comparator\n")
-    out.append("| Dataset | Comparator | Metric | Δ mean [95% CI] | p (permutation) |\n|---|---|---|---|---:|")
+    out.append("| Dataset | Comparator | Metric | Δ mean [95% CI] | p (permutation) | p (Holm) |\n|---|---|---|---|---:|---:|")
     for r in R["paired_tests"]:
         out.append(f"| {r['dataset']} | {r['comparison'].replace('CAS (full) - ', '')} | {r['metric']} | "
-                   f"{r['mean_diff']:+.3f} [{r['ci_low']:+.3f}, {r['ci_high']:+.3f}] | {r['p_value']:.4f} |")
+                   f"{r['mean_diff']:+.3f} [{r['ci_low']:+.3f}, {r['ci_high']:+.3f}] | {r['p_value']:.4f} | "
+                   f"{r['p_holm']:.4f} |")
     out.append("\n## Table 5. Conflict-graph diagnostics\n")
     out.append("| Dataset | Pairs | Entailment | Contradiction | Neutral | Mean agreement (gold) | Mean agreement (distractor) |")
     out.append("|---|---:|---:|---:|---:|---:|---:|")

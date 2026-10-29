@@ -295,6 +295,12 @@ def run_paired_tests(per_item):
                 m, lo, hi, p = paired_test(per_item[(ds, cas)][metric], per_item[(ds, other)][metric])
                 rows.append({"dataset": ds, "comparison": f"CAS (full) - {other}", "metric": metric,
                              "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
+    # Holm-Bonferroni step-down adjustment across the whole family of tests
+    order = sorted(range(len(rows)), key=lambda i: rows[i]["p_value"])
+    running = 0.0
+    for rank, i in enumerate(order):
+        running = max(running, min(1.0, (len(rows) - rank) * rows[i]["p_value"]))
+        rows[i]["p_holm"] = running
     return rows
 
 
