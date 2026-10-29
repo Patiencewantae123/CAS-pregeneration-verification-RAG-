@@ -21,7 +21,8 @@ from collections import Counter
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from run_evaluation import METHODS, OUT_RESULTS, boot_ci, evidence_items, load, paired_test, tokens  # noqa: E402
+from run_evaluation import (METHODS, OUT_RESULTS, REFERENCES, boot_ci, cas_preserving, evidence_items,  # noqa: E402
+                            load, paired_test, tokens)
 
 OLLAMA = "http://localhost:11434/api/generate"
 OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 96}
@@ -77,8 +78,20 @@ def generate(model, prompt, cache):
     return rec
 
 
-def format_passages(passages, selected):
-    return "\n\n".join(f"[{k + 1}] {passages[i]}" for k, i in enumerate(sorted(selected)))
+def format_passages(passages, selected, conflicts=()):
+    order = sorted(selected)
+    text = "\n\n".join(f"[{k + 1}] {passages[i]}" for k, i in enumerate(order))
+    label = {i: k + 1 for k, i in enumerate(order)}
+    notes = [f"Note: passages [{label[a]}] and [{label[b]}] contradict each other."
+             for a, b in conflicts if a in label and b in label]
+    return text + ("\n\n" + "\n".join(notes) if notes else "")
+
+
+def select_with_notes(method, select, q, passages):
+    """Selected passage ids plus, for the conflict-preserving method, the contradicting pairs to annotate."""
+    if method == "CAS-NLI conflict-preserving":
+        return cas_preserving(q, passages)
+    return select(q, passages) or set(), []
 
 # ============================================================
 # 2. ANSWER SCORING (SQuAD-style normalisation)
@@ -188,8 +201,8 @@ def main():
     for model in args.models:
         for method, select in METHODS.items():
             for ds, k, q, passages, gold, golds in qa:
-                sel = select(q, passages)
-                ctx = format_passages(passages, sel)
+                sel, notes = select_with_notes(method, select, q, passages)
+                ctx = format_passages(passages, sel, notes)
                 rec = generate(model, QA_PROMPT.format(passages=ctx, question=q), cache)
                 s = score_qa(rec["response"], golds, ctx)
                 rows.append({"task": "qa", "dataset": ds, "item": k, "model": model, "method": method,
@@ -198,12 +211,13 @@ def main():
                              "gold": golds[0]})
                 done += 1
             for k, q, passages, a1, a2, ctype in cf:
-                sel = select(q, passages) or set()
-                ctx = format_passages(passages, sel)
+                sel, notes = select_with_notes(method, select, q, passages)
+                ctx = format_passages(passages, sel, notes)
                 rec = generate(model, CONFLICT_PROMPT.format(passages=ctx, question=q), cache)
                 s = score_conflict(rec["response"], a1, a2)
                 conflict_rows.append({"task": "conflict", "dataset": "WikiContradict", "item": k, "model": model,
                                       "method": method, "contradict_type": ctype, "n_passages": len(sel),
+                                      "conflict_notes": len(notes),
                                       "response": rec["response"], "wall_s": rec["wall_s"], **s})
                 done += 1
             el = time.perf_counter() - t0
@@ -236,26 +250,28 @@ def summarize(rows, conflict_rows, models):
                 qa_summary.append({"dataset": ds, "model": model, "method": method, "metric": "latency_s",
                                    "mean": float(np.mean([r["wall_s"] for r in sub])), "ci_low": None,
                                    "ci_high": None, "n": len(sub)})
-            cas = sorted((r for r in rows if r["dataset"] == ds and r["model"] == model
-                          and r["method"] == "CAS (full pipeline)"), key=lambda r: r["item"])
-            for other in METHODS:
-                if other == "CAS (full pipeline)":
-                    continue
-                base = sorted((r for r in rows if r["dataset"] == ds and r["model"] == model
-                               and r["method"] == other), key=lambda r: r["item"])
-                for metric in ("f1", "accuracy"):
-                    m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
-                    tests.append({"dataset": ds, "model": model, "comparator": other, "metric": metric,
-                                  "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
+            # Each CAS variant against the three non-CAS-variant baselines
+            for ref in REFERENCES:
+                cas = sorted((r for r in rows if r["dataset"] == ds and r["model"] == model
+                              and r["method"] == ref), key=lambda r: r["item"])
+                for other in [m for m in METHODS if m not in REFERENCES]:
+                    base = sorted((r for r in rows if r["dataset"] == ds and r["model"] == model
+                                   and r["method"] == other), key=lambda r: r["item"])
+                    for metric in ("f1", "accuracy"):
+                        m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
+                        tests.append({"dataset": ds, "model": model, "reference": ref, "comparator": other,
+                                      "metric": metric, "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
     for model in models:
-        cas = sorted((r for r in conflict_rows if r["model"] == model and r["method"] == "CAS (full pipeline)"),
-                     key=lambda r: r["item"])
         base = sorted((r for r in conflict_rows if r["model"] == model and r["method"] == "Vanilla RAG (no filter)"),
                       key=lambda r: r["item"])
-        for metric in ("conflict_flagged", "both"):
-            m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
-            tests.append({"dataset": "WikiContradict", "model": model, "comparator": "Vanilla RAG (no filter)",
-                          "metric": metric, "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
+        for ref in REFERENCES:
+            cas = sorted((r for r in conflict_rows if r["model"] == model and r["method"] == ref),
+                         key=lambda r: r["item"])
+            for metric in ("conflict_flagged", "both"):
+                m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
+                tests.append({"dataset": "WikiContradict", "model": model, "reference": ref,
+                              "comparator": "Vanilla RAG (no filter)", "metric": metric,
+                              "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
     order = sorted(range(len(tests)), key=lambda i: tests[i]["p_value"])
     running = 0.0
     for rank, i in enumerate(order):
@@ -283,9 +299,9 @@ def summarize(rows, conflict_rows, models):
         if r["metric"] in ("f1", "accuracy", "abstain", "ungrounded"):
             print(f"  {r['dataset']:<9} {r['model']:<16} {r['method']:<26} {r['metric']:<10} "
                   f"{r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}] n={r['n']}")
-    print("\nPaired tests CAS (full) minus comparator")
+    print("\nPaired tests (reference minus comparator)")
     for t in tests:
-        print(f"  {t['dataset']:<9} {t['model']:<16} {t['comparator']:<26} {t['metric']:<9} "
+        print(f"  {t['dataset']:<9} {t['model']:<16} {t['reference']:<28} - {t['comparator']:<26} {t['metric']:<9} "
               f"{t['mean_diff']:+.3f} [{t['ci_low']:+.3f}, {t['ci_high']:+.3f}] p={t['p_value']:.4f} holm={t['p_holm']:.4f}")
     print("\nWikiContradict conflict handling")
     for r in conflict_summary:

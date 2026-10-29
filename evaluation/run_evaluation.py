@@ -98,10 +98,14 @@ def bm25_scores(query, passages, k1=1.5, b=0.75):
 # ============================================================
 
 def to_documents(query, passages):
-    """Map raw passages onto the CAS Document schema."""
+    """Map raw passages onto the CAS Document schema.
+
+    Relevance is BM25 divided by the pool maximum. (An earlier version min-max normalised, which
+    forced the weakest passage to 0 and, for two-passage pools, always discarded one of them.)
+    """
     raw = bm25_scores(query, passages)
-    lo, hi = min(raw), max(raw)
-    rel = [(s - lo) / (hi - lo) if hi > lo else 0.5 for s in raw]
+    hi = max(raw)
+    rel = [s / hi if hi > 0 else 0.5 for s in raw]
     order = sorted(range(len(passages)), key=lambda i: -raw[i])
     rank = {i: r for r, i in enumerate(order)}
     n = len(passages)
@@ -122,12 +126,41 @@ def select_topk(query, passages, k=TOP_K, **_):
     return set(sorted(range(len(passages)), key=lambda i: -raw[i])[:k])
 
 
-def select_cas(query, passages, tau=DEFAULT_TAU, use_graph=True, **_):
+_NLI = None
+
+
+def nli_verifier():
+    """Shared DeBERTa-v3 NLI cross-encoder with an on-disk prediction cache."""
+    global _NLI
+    if _NLI is None:
+        from services.nli_model_verifier import NLIModelVerifier
+        os.makedirs(OUT_RESULTS, exist_ok=True)
+        _NLI = NLIModelVerifier(cache_path=os.path.join(OUT_RESULTS, "nli_cache.jsonl"))
+    return _NLI
+
+
+def verifier_for(kind):
+    return nli_verifier() if kind == "nli" else NLIVerifier()
+
+
+def select_cas(query, passages, tau=DEFAULT_TAU, use_graph=True, verifier="keyword", **_):
     docs, _ = to_documents(query, passages)
-    edges = NLIVerifier().build_pairwise_matrix(docs) if use_graph else []
+    edges = verifier_for(verifier).build_pairwise_matrix(docs) if use_graph else []
     graph = ConflictGraph(docs, edges)
     verified = TrustAwareSynthesizer(tau).filter_and_weight(graph)
     return {int(v.doc.id) for v in verified if not v.is_filtered}
+
+
+def cas_preserving(query, passages, tau=DEFAULT_TAU):
+    """Conflict-preserving CAS with the NLI model: returns (selected ids, contradicting id pairs)."""
+    docs, _ = to_documents(query, passages)
+    graph = ConflictGraph(docs, nli_verifier().build_pairwise_matrix(docs))
+    verified, conflicts = TrustAwareSynthesizer(tau).filter_preserving_conflicts(graph)
+    return {int(v.doc.id) for v in verified if not v.is_filtered}, [(int(a), int(b)) for a, b in conflicts]
+
+
+def select_cas_preserving(query, passages, tau=DEFAULT_TAU, **_):
+    return cas_preserving(query, passages, tau)[0]
 
 
 METHODS = {
@@ -135,7 +168,10 @@ METHODS = {
     f"Relevance top-{TOP_K} (BM25)": select_topk,
     "CAS w/o conflict graph": lambda q, p, **kw: select_cas(q, p, use_graph=False, **kw),
     "CAS (full pipeline)": select_cas,
+    "CAS-NLI (full pipeline)": lambda q, p, **kw: select_cas(q, p, verifier="nli", **kw),
+    "CAS-NLI conflict-preserving": select_cas_preserving,
 }
+NLI_METHODS = {"CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"}
 
 # ============================================================
 # 4. STATISTICS
@@ -240,22 +276,25 @@ def paired_test(a, b, n=10000, seed=SEED):
 def graph_diagnostics(items):
     """How often the conflict graph emits each relation, and who receives agreement credit."""
     rows = []
-    for ds, data in items.items():
-        rel, gold_agree, distractor_agree = Counter(), [], []
-        for q, passages, gold, _ in data:
-            docs, _ = to_documents(q, passages)
-            edges = NLIVerifier().build_pairwise_matrix(docs)
-            rel.update(e.relation.value for e in edges)
-            graph = ConflictGraph(docs, edges)
-            for d in docs:
-                (gold_agree if int(d.id) in gold else distractor_agree).append(
-                    min(1.0, graph.get_agreement_score(d.id)))
-        total = sum(rel.values())
-        rows.append({"dataset": ds, "pairs": total,
-                     "entailment_edges": rel["Entailment"], "contradiction_edges": rel["Contradiction"],
-                     "neutral_edges": rel["Neutral"],
-                     "mean_agreement_gold": float(np.mean(gold_agree)),
-                     "mean_agreement_distractor": float(np.mean(distractor_agree))})
+    for verifier in ("keyword", "nli"):
+        for ds, data in items.items():
+            rel, agree, penalty = Counter(), {"gold": [], "distractor": []}, {"gold": [], "distractor": []}
+            for q, passages, gold, _ in data:
+                docs, _ = to_documents(q, passages)
+                edges = verifier_for(verifier).build_pairwise_matrix(docs)
+                rel.update(e.relation.value for e in edges)
+                graph = ConflictGraph(docs, edges)
+                for d in docs:
+                    kind = "gold" if int(d.id) in gold else "distractor"
+                    agree[kind].append(min(1.0, graph.get_agreement_score(d.id)))
+                    penalty[kind].append(graph.get_contradiction_penalty(d.id))
+            rows.append({"verifier": verifier, "dataset": ds, "pairs": sum(rel.values()),
+                         "entailment_edges": rel["Entailment"], "contradiction_edges": rel["Contradiction"],
+                         "neutral_edges": rel["Neutral"],
+                         "mean_agreement_gold": float(np.mean(agree["gold"])),
+                         "mean_agreement_distractor": float(np.mean(agree["distractor"])),
+                         "mean_penalty_gold": float(np.mean(penalty["gold"])),
+                         "mean_penalty_distractor": float(np.mean(penalty["distractor"]))})
     return rows
 
 
@@ -295,51 +334,69 @@ def run_timing(items, repeats=20):
                 for q, passages, _, _ in data:
                     fn(q, passages)
                 runs.append(1000 * (time.perf_counter() - start) / len(data))
+            # Repeats of NLI methods hit the prediction cache, so add the model time measured at first computation
+            model_ms = 0.0
+            if method in NLI_METHODS:
+                model_ms = 1000 * float(np.mean([
+                    nli_verifier().inference_seconds(nli_verifier().document_pairs(to_documents(q, p)[0]))
+                    for q, p, _, _ in data]))
             rows.append({"dataset": ds, "method": method, "repeats": repeats,
-                         "ms_per_query_mean": float(np.mean(runs)), "ms_per_query_sd": float(np.std(runs, ddof=1)),
+                         "ms_per_query_mean": float(np.mean(runs)) + model_ms,
+                         "ms_per_query_sd": float(np.std(runs, ddof=1)),
+                         "nli_model_ms_per_query": model_ms,
                          "candidates_per_query": len(data[0][1])})
     return rows
 
 
 def run_error_analysis(items, tau=DEFAULT_TAU):
-    """Attribute every CAS (full) decision on a passage to a cause, using the pipeline's own outputs."""
+    """Attribute every full-pipeline decision on a passage to a cause, using the pipeline's own outputs."""
     rows = []
-    for ds, data in items.items():
-        c = Counter()
-        for q, passages, gold, _ in data:
-            full = select_cas(q, passages, tau=tau)
-            no_graph = select_cas(q, passages, tau=tau, use_graph=False)
-            top3 = select_topk(q, passages)
-            for i in range(len(passages)):
-                if i in gold:
-                    if i in full:
-                        c["gold: retained"] += 1
-                    elif i in top3:
-                        c["gold: missed, in BM25 top-3 but trust < tau"] += 1
+    for verifier, name in (("keyword", "CAS (full pipeline)"), ("nli", "CAS-NLI (full pipeline)")):
+        for ds, data in items.items():
+            c = Counter()
+            for q, passages, gold, _ in data:
+                full = select_cas(q, passages, tau=tau, verifier=verifier)
+                no_graph = select_cas(q, passages, tau=tau, use_graph=False)
+                top3 = select_topk(q, passages)
+                for i in range(len(passages)):
+                    if i in gold:
+                        if i in full:
+                            c["gold: retained"] += 1
+                        elif i in no_graph:
+                            c["gold: removed by contradiction penalty"] += 1
+                        elif i in top3:
+                            c["gold: missed, in BM25 top-3 but trust < tau"] += 1
+                        else:
+                            c["gold: missed, low lexical relevance (BM25 rank > 3)"] += 1
+                    elif i in full:
+                        key = "distractor: retained by relevance alone" if i in no_graph \
+                            else "distractor: retained only via agreement bonus"
+                        c[key] += 1
+                    elif i in no_graph:
+                        c["distractor: removed by contradiction penalty"] += 1
                     else:
-                        c["gold: missed, low lexical relevance (BM25 rank > 3)"] += 1
-                elif i in full:
-                    key = "distractor: retained by relevance alone" if i in no_graph \
-                        else "distractor: retained only via agreement bonus"
-                    c[key] += 1
-                else:
-                    c["distractor: filtered"] += 1
-        for cat, n in sorted(c.items()):
-            rows.append({"dataset": ds, "category": cat, "count": n})
+                        c["distractor: filtered"] += 1
+            for cat, n in sorted(c.items()):
+                rows.append({"pipeline": name, "dataset": ds, "category": cat, "count": n})
     return rows
 
 
+REFERENCES = ["CAS (full pipeline)", "CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"]
+
+
 def run_paired_tests(per_item):
-    cas = "CAS (full pipeline)"
-    rows = []
+    """Each CAS variant against every other method; one Holm family over all tests."""
+    rows, seen = [], set()
     for ds in ("HotpotQA", "MuSiQue"):
-        for other in METHODS:
-            if other == cas:
-                continue
-            for metric in ("precision", "recall", "f1"):
-                m, lo, hi, p = paired_test(per_item[(ds, cas)][metric], per_item[(ds, other)][metric])
-                rows.append({"dataset": ds, "comparison": f"CAS (full) - {other}", "metric": metric,
-                             "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
+        for ref in REFERENCES:
+            for other in METHODS:
+                if other == ref or (ds, frozenset((ref, other))) in seen:
+                    continue
+                seen.add((ds, frozenset((ref, other))))
+                for metric in ("precision", "recall", "f1"):
+                    m, lo, hi, p = paired_test(per_item[(ds, ref)][metric], per_item[(ds, other)][metric])
+                    rows.append({"dataset": ds, "reference": ref, "comparator": other, "metric": metric,
+                                 "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
     # Holm-Bonferroni step-down adjustment across the whole family of tests
     order = sorted(range(len(rows)), key=lambda i: rows[i]["p_value"])
     running = 0.0
@@ -353,16 +410,17 @@ def run_threshold_sweep(items):
     taus = np.round(np.arange(0.10, 0.81, 0.05), 2)
     pooled = items["HotpotQA"] + items["MuSiQue"]
     rows = []
-    for tau in taus:
-        per = {"precision": [], "recall": [], "f1": [], "retention": []}
-        for q, passages, gold, _ in pooled:
-            sel = select_cas(q, passages, tau=float(tau))
-            p, r, f = prf(sel, gold)
-            per["precision"].append(p)
-            per["recall"].append(r)
-            per["f1"].append(f)
-            per["retention"].append(len(sel) / len(passages))
-        rows.append({"tau": float(tau), **{k: float(np.mean(v)) for k, v in per.items()}})
+    for method in ("CAS (full pipeline)", "CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"):
+        for tau in taus:
+            per = {"precision": [], "recall": [], "f1": [], "retention": []}
+            for q, passages, gold, _ in pooled:
+                sel = METHODS[method](q, passages, tau=float(tau))
+                p, r, f = prf(sel, gold)
+                per["precision"].append(p)
+                per["recall"].append(r)
+                per["f1"].append(f)
+                per["retention"].append(len(sel) / len(passages))
+            rows.append({"method": method, "tau": float(tau), **{k: float(np.mean(v)) for k, v in per.items()}})
     return rows
 
 # ============================================================
@@ -379,8 +437,8 @@ def negation_baseline(a, b):
     return int(bool(ta & NEGATIONS) != bool(tb & NEGATIONS) and overlap >= 0.2)
 
 
-def cas_relation(a, b):
-    return NLIVerifier().compare_documents(
+def cas_relation(a, b, verifier="keyword"):
+    return verifier_for(verifier).compare_documents(
         Document("a", a, "", 0, 0, 0), Document("b", b, "", 0, 0, 0)).relation
 
 
@@ -404,6 +462,8 @@ def run_contradiction(pairs):
         "Negation-cue baseline": [negation_baseline(a, b) for a, b, _, _ in pairs],
         "CAS NLIVerifier (as implemented)": [int(cas_relation(a, b) == NLIRelation.CONTRADICTION)
                                              for a, b, _, _ in pairs],
+        "DeBERTa-v3 NLI (CAS-NLI)": [int(cas_relation(a, b, "nli") == NLIRelation.CONTRADICTION)
+                                     for a, b, _, _ in pairs],
     }
     rows, by_group = [], []
     for name, pred in detectors.items():
@@ -423,7 +483,17 @@ def run_nli():
     names = {0: "entailment", 1: "neutral", 2: "contradiction"}
     to_label = {NLIRelation.ENTAILMENT: 0, NLIRelation.NEUTRAL: 1, NLIRelation.CONTRADICTION: 2}
     y = [r["label"] for r in data]
-    pred = [to_label[cas_relation(r["premise"], r["hypothesis"])] for r in data]
+    out = {}
+    keyword = [to_label[cas_relation(r["premise"], r["hypothesis"])] for r in data]
+    # Standard single-direction NLI (premise -> hypothesis) for the model
+    probs = nli_verifier().probabilities([(r["premise"], r["hypothesis"]) for r in data])
+    model = [{"entailment": 0, "neutral": 1, "contradiction": 2}[max(p, key=p.get)] for p in probs]
+    for name, pred in (("CAS NLIVerifier (as implemented)", keyword), ("DeBERTa-v3 NLI (CAS-NLI)", model)):
+        out[name] = _nli_scores(y, pred, names)
+    return out
+
+
+def _nli_scores(y, pred, names):
     majority = Counter(y).most_common(1)[0][0]
     cm = np.zeros((3, 3), dtype=int)
     for t, p in zip(y, pred):
@@ -442,9 +512,24 @@ def run_nli():
 # 7. TASK 4 - HALLUCINATION DETECTION (RAGTruth)
 # ============================================================
 
+def sentences(text):
+    return [s.strip() for s in re.split(r"(?<=[.!?])\s+", text) if len(s.strip()) > 3]
+
+
+def nli_unsupported_score(context, output, window=3):
+    """1 - support of the least-supported output sentence, where support is the max entailment
+    probability over 3-sentence context windows (the context is too long for one 512-token pass)."""
+    ctx = sentences(context)
+    chunks = [" ".join(ctx[i:i + window]) for i in range(0, max(1, len(ctx)), window)] or [context]
+    outs = sentences(output) or [output]
+    probs = nli_verifier().probabilities([(c, s) for s in outs for c in chunks])
+    support = [max(p["entailment"] for p in probs[k * len(chunks):(k + 1) * len(chunks)]) for k in range(len(outs))]
+    return 1 - min(support)
+
+
 def run_hallucination():
     data = load("ragtruth_hf_samples.json")
-    labels, unsupported, cas_flag = [], [], []
+    labels, unsupported, cas_flag, nli_score = [], [], [], []
     for r in data:
         hl = r["hallucination_labels_processed"]
         labels.append(int(sum(hl.values()) > 0))
@@ -453,13 +538,15 @@ def run_hallucination():
         rel = cas_relation(r["context"], r["output"])
         cas_flag.append({NLIRelation.CONTRADICTION: 1.0, NLIRelation.NEUTRAL: 0.5,
                          NLIRelation.ENTAILMENT: 0.0}[rel])
+        nli_score.append(nli_unsupported_score(r["context"], r["output"]))
     return {
         "n": len(labels), "n_hallucinated": sum(labels),
         "unsupported_token_rate_auroc": boot_auroc(unsupported, labels),
         "cas_verifier_auroc": boot_auroc(cas_flag, labels),
+        "nli_model_auroc": boot_auroc(nli_score, labels),
         "cas_relation_counts": dict(Counter(cas_flag)),
-        "scores": [{"label": l, "unsupported_token_rate": u, "cas_score": c}
-                   for l, u, c in zip(labels, unsupported, cas_flag)],
+        "scores": [{"label": l, "unsupported_token_rate": u, "cas_score": c, "nli_score": s}
+                   for l, u, c, s in zip(labels, unsupported, cas_flag, nli_score)],
     }
 
 # ============================================================
@@ -543,10 +630,10 @@ def main():
         if r["metric"] in ("precision", "recall", "f1", "retention"):
             print(f"  {r['dataset']:<9} {r['method']:<28} {r['metric']:<10} "
                   f"{r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")
-    print("\nPaired tests (CAS full minus baseline)")
+    print("\nPaired tests (reference minus comparator)")
     for r in paired:
-        print(f"  {r['dataset']:<9} {r['comparison']:<48} {r['metric']:<9} "
-              f"{r['mean_diff']:+.3f} [{r['ci_low']:+.3f}, {r['ci_high']:+.3f}] p={r['p_value']:.4f}")
+        print(f"  {r['dataset']:<9} {r['reference']:<28} - {r['comparator']:<28} {r['metric']:<9} "
+              f"{r['mean_diff']:+.3f} [{r['ci_low']:+.3f}, {r['ci_high']:+.3f}] p={r['p_value']:.4f} holm={r['p_holm']:.4f}")
     print("\nConflict-graph diagnostics")
     for r in diagnostics:
         print("  ", r)
@@ -560,13 +647,18 @@ def main():
         print(f"  {r['detector']:<34} {r['metric']:<9} {r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")
     for r in contra_groups:
         print(f"  {r['detector']:<34} {r['group']:<26} flag-rate {r['flag_rate']:.3f} (n={r['n']})")
-    print(f"\nMultiNLI 3-way: acc {nli['accuracy'][0]:.3f}, macro-F1 {nli['macro_f1']:.3f}, "
-          f"majority {nli['majority_baseline_accuracy'][0]:.3f}; confusion {nli['confusion']}")
-    print(f"RAGTruth AUROC unsupported-token {halluc['unsupported_token_rate_auroc']}, "
-          f"CAS verifier {halluc['cas_verifier_auroc']}, relations {halluc['cas_relation_counts']}")
+    for name, s in nli.items():
+        print(f"\nMultiNLI 3-way [{name}]: acc {s['accuracy'][0]:.3f} [{s['accuracy'][1]:.3f}, {s['accuracy'][2]:.3f}], "
+              f"macro-F1 {s['macro_f1']:.3f}, majority {s['majority_baseline_accuracy'][0]:.3f}; confusion {s['confusion']}")
+    print(f"\nRAGTruth AUROC unsupported-token {halluc['unsupported_token_rate_auroc']}, "
+          f"CAS verifier {halluc['cas_verifier_auroc']}, NLI model {halluc['nli_model_auroc']}")
     print("\nThreshold sweep")
     for r in sweep:
-        print(f"  tau={r['tau']:.2f} P={r['precision']:.3f} R={r['recall']:.3f} F1={r['f1']:.3f} keep={r['retention']:.3f}")
+        print(f"  {r['method']:<28} tau={r['tau']:.2f} P={r['precision']:.3f} R={r['recall']:.3f} "
+              f"F1={r['f1']:.3f} keep={r['retention']:.3f}")
+    print("\nError analysis")
+    for r in errors:
+        print("  ", r)
 
 
 if __name__ == "__main__":

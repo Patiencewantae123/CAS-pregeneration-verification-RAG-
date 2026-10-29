@@ -1,5 +1,6 @@
 import sys
 import os
+import json
 import streamlit as st
 import pandas as pd
 
@@ -8,6 +9,10 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from models.document import Document
 from cas_engine import CASEngine
+from services.nli_verifier import NLIVerifier
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RESULTS_DIR = os.path.join(ROOT, "evaluation", "results")
 
 # Page Configuration
 st.set_page_config(
@@ -15,6 +20,24 @@ st.set_page_config(
     page_icon="🛡️",
     layout="wide"
 )
+
+
+@st.cache_resource(show_spinner="Loading DeBERTa-v3 NLI cross-encoder...")
+def load_nli_verifier():
+    from services.nli_model_verifier import NLIModelVerifier
+    verifier = NLIModelVerifier()
+    verifier._load()
+    return verifier
+
+
+@st.cache_data
+def load_json(name):
+    path = os.path.join(RESULTS_DIR, name)
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
 
 # Header Section
 st.title("🛡️ Conflict-Aware Synthesis (CAS) Dashboard")
@@ -25,20 +48,34 @@ st.divider()
 st.sidebar.header("🎛️ Pipeline Controls")
 
 query = st.sidebar.text_input(
-    "Target Query", 
+    "Target Query",
     value="Is Drug-X approved for Phase 3 trials?"
 )
 
+verifier_name = st.sidebar.radio(
+    "Contradiction verifier",
+    ["DeBERTa-v3 NLI model", "Keyword heuristic (original)"],
+    help="The NLI model (cross-encoder/nli-deberta-v3-base) runs on CPU; the keyword heuristic "
+         "only matches approved/rejected-style word pairs."
+)
+
+synthesis_mode = st.sidebar.radio(
+    "Conflict handling",
+    ["Conflict-preserving", "Contradiction penalty"],
+    help="Conflict-preserving keeps both sides of an on-topic contradiction and labels it for the LLM. "
+         "Contradiction penalty subtracts 0.5 x contradiction confidence from each document's weight."
+)
+
 trust_threshold = st.sidebar.slider(
-    "Trust Threshold (τ)", 
-    min_value=0.10, 
-    max_value=0.80, 
-    value=0.35, 
+    "Trust Threshold (τ)",
+    min_value=0.10,
+    max_value=0.80,
+    value=0.45,
     step=0.05
 )
 
 st.sidebar.markdown("---")
-st.sidebar.info("Adjust the threshold slider to see real-time filtering of conflicting context nodes.")
+st.sidebar.info("Adjust the controls to see real-time filtering of conflicting context nodes.")
 
 # Load Test Dataset
 docs = [
@@ -49,7 +86,9 @@ docs = [
 ]
 
 # Execute CAS Engine
-engine = CASEngine(trust_threshold=trust_threshold)
+verifier = load_nli_verifier() if verifier_name.startswith("DeBERTa") else NLIVerifier()
+engine = CASEngine(trust_threshold=trust_threshold, verifier=verifier,
+                   preserve_conflicts=synthesis_mode == "Conflict-preserving")
 results = engine.execute_pipeline(query, docs)
 
 # Layout Columns for Overview Metrics
@@ -58,22 +97,21 @@ col1.metric("Retrieved Passages", len(docs))
 retained_count = sum(1 for v in results["verified_documents"] if not v.is_filtered)
 col2.metric("Retained Passages", retained_count)
 col3.metric("Rejected Passages", len(docs) - retained_count)
-col4.metric("CAS CPI Score", "88.48", delta="+6.00 vs CRAG")
+contradictions = sum(1 for e in results["graph"].edges if e.relation.value == "Contradiction")
+col4.metric("Contradictions Detected", contradictions)
 
 st.divider()
 
-
-
 # Main Interface Tabs
-tab1, tab2, tab3 = st.tabs(["📊 Adjudication Table", "📜 Reconciled Context (C_verified)", "📈 Benchmark CPI Metrics"])
+tab1, tab2, tab3 = st.tabs(["📊 Adjudication Table", "📜 Reconciled Context (C_verified)", "📈 Measured Benchmark Results"])
 
 with tab1:
     st.subheader("1. NLI Adjudication & Evidence Filtering")
-    
+
     table_data = []
     for v in results["verified_documents"]:
         table_data.append({
-        
+            "Doc": v.doc.id,
             "Source": v.doc.source,
             "Content Passage": v.doc.content,
             "Trust Score": round(v.trust_score, 2),
@@ -81,7 +119,7 @@ with tab1:
             "Net Weight": round(v.final_weight, 2),
             "Status": "✅ RETAINED" if not v.is_filtered else "❌ REJECTED"
         })
-        
+
     df = pd.DataFrame(table_data)
 
     def color_status(val):
@@ -90,10 +128,17 @@ with tab1:
         return "background-color: #7f1d1d; color: #fca5a5; font-weight: bold;"
 
     st.dataframe(
-        df.style.map(color_status, subset=["Status"]), 
-        use_container_width=True,
+        df.style.map(color_status, subset=["Status"]),
+        width="stretch",
         hide_index=True
     )
+
+    st.markdown("**Pairwise NLI relations (conflict graph edges)**")
+    st.dataframe(pd.DataFrame([{
+        "Pair": f"{e.source_doc_id} ↔ {e.target_doc_id}",
+        "Relation": e.relation.value,
+        "Confidence": round(e.confidence, 3)
+    } for e in results["graph"].edges]), width="stretch", hide_index=True)
 
 with tab2:
     st.subheader("2. Reconciled Context ($C_{verified}$)")
@@ -101,13 +146,32 @@ with tab2:
     st.code(results["c_verified"], language="markdown")
 
 with tab3:
-    st.subheader("3. Benchmark Evaluation (Table 2 Comparison)")
-    
-    benchmark_df = pd.DataFrame([
-        {"Framework": "Baseline RAG", "Accuracy (%)": 72.1, "Hallucination (%)": 21.4, "Contradiction (%)": 18.9, "Consistency (%)": 70.3, "CPI Score": 75.48},
-        {"Framework": "Self-RAG", "Accuracy (%)": 76.8, "Hallucination (%)": 16.2, "Contradiction (%)": 14.1, "Consistency (%)": 77.5, "CPI Score": 81.00},
-        {"Framework": "CRAG", "Accuracy (%)": 78.4, "Hallucination (%)": 14.8, "Contradiction (%)": 12.9, "Consistency (%)": 79.2, "CPI Score": 82.48},
-        {"Framework": "CAS (Proposed)", "Accuracy (%)": 82.7, "Hallucination (%)": 9.5, "Contradiction (%)": 6.1, "Consistency (%)": 86.8, "CPI Score": 88.48},
-    ])
-    
-    st.dataframe(benchmark_df, use_container_width=True, hide_index=True)
+    st.subheader("3. Measured Benchmark Results")
+    st.caption("Read from evaluation/results/, produced by evaluation/run_evaluation.py and "
+               "evaluation/run_llm_generation.py. Means with 95% bootstrap confidence intervals.")
+
+    evaluation = load_json("results.json")
+    if evaluation is None:
+        st.info("No results yet. Run `py evaluation/run_evaluation.py` from the project root.")
+    else:
+        rows = {}
+        for r in evaluation["evidence_selection"]:
+            if r["metric"] in ("precision", "recall", "f1"):
+                key = (r["dataset"], r["method"])
+                rows.setdefault(key, {"Dataset": r["dataset"], "Method": r["method"]})
+                rows[key][r["metric"].capitalize() if r["metric"] != "f1" else "F1"] = (
+                    f"{r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")
+        st.markdown("**Evidence selection** (HotpotQA n = 50, MuSiQue n = 15)")
+        st.dataframe(pd.DataFrame(rows.values()), width="stretch", hide_index=True)
+
+    llm = load_json("llm_summary.json")
+    if llm is not None:
+        rows = {}
+        for r in llm["qa"]:
+            if r["metric"] in ("accuracy", "f1"):
+                key = (r["dataset"], r["model"], r["method"])
+                rows.setdefault(key, {"Dataset": r["dataset"], "Model": r["model"], "Method": r["method"]})
+                rows[key]["Answer accuracy" if r["metric"] == "accuracy" else "Token F1"] = (
+                    f"{r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")
+        st.markdown("**End-to-end answers from local LLMs**")
+        st.dataframe(pd.DataFrame(rows.values()), width="stretch", hide_index=True)

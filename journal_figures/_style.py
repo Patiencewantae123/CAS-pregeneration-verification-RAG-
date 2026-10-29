@@ -26,6 +26,8 @@ METHOD_COLOR = {
     "Relevance top-3 (BM25)": "#eb6834",
     "CAS w/o conflict graph": "#1baf7a",
     "CAS (full pipeline)": "#eda100",
+    "CAS-NLI (full pipeline)": "#e87ba4",
+    "CAS-NLI conflict-preserving": "#008300",
 }
 # Redundant shape encoding so the figures survive grayscale printing
 METHOD_MARKER = {
@@ -33,12 +35,16 @@ METHOD_MARKER = {
     "Relevance top-3 (BM25)": "s",
     "CAS w/o conflict graph": "^",
     "CAS (full pipeline)": "D",
+    "CAS-NLI (full pipeline)": "v",
+    "CAS-NLI conflict-preserving": "P",
 }
 METHOD_SHORT = {
     "Vanilla RAG (no filter)": "Vanilla RAG",
     "Relevance top-3 (BM25)": "BM25 top-3",
     "CAS w/o conflict graph": "CAS w/o graph",
-    "CAS (full pipeline)": "CAS (full)",
+    "CAS (full pipeline)": "CAS-keyword",
+    "CAS-NLI (full pipeline)": "CAS-NLI",
+    "CAS-NLI conflict-preserving": "CAS-NLI preserve",
 }
 DATASET_MARKER = {"HotpotQA": "o", "MuSiQue": "D"}
 
