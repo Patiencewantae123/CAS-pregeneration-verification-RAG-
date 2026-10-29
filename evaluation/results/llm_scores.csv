@@ -389,6 +389,136 @@ qa,MuSiQue,11,llama3.2:latest,CAS-NLI conflict-preserving,12,1.0,1388,9.60107499
 qa,MuSiQue,12,llama3.2:latest,CAS-NLI conflict-preserving,4,1.0,760,4.876768199999788,unknown,0.0,0.0,0.0,1.0,,Moscow
 qa,MuSiQue,13,llama3.2:latest,CAS-NLI conflict-preserving,8,1.0,1302,5.738423499999044,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
 qa,MuSiQue,14,llama3.2:latest,CAS-NLI conflict-preserving,5,1.0,656,4.325603900000715,Sudeep,0.0,0.0,0.0,0.0,0.0,Chandan Shetty
+qa,HotpotQA,0,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,236,1.3586509000015212,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,HotpotQA,1,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,271,1.8243700999992143,Delhi,1.0,1.0,1.0,0.0,0.0,Delhi
+qa,HotpotQA,2,llama3.2:latest,CAS-NLI θ-CV (penalty),4,1.0,738,9.330121300001338,President Richard Nixon,1.0,1.0,1.0,0.0,0.0,President Richard Nixon
+qa,HotpotQA,3,llama3.2:latest,CAS-NLI θ-CV (penalty),2,0.0,303,1.7121898000004876,Unknown,0.0,0.0,0.0,1.0,,American
+qa,HotpotQA,4,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,377,1.861832200000208,Gold(III) chloride,0.0,0.0,0.0,0.0,0.0,alcohol
+qa,HotpotQA,5,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,361,2.5042318000014347,Henri Leconte,0.0,0.0,0.0,0.0,0.0,Jonathan Stark
+qa,HotpotQA,6,llama3.2:latest,CAS-NLI θ-CV (penalty),5,1.0,609,3.9172515999998723,Eutrapela,0.0,0.0,0.0,0.0,0.0,Crambidae
+qa,HotpotQA,7,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,269,0.6654964000008476,Badr Hari,1.0,1.0,1.0,0.0,0.0,Badr Hari
+qa,HotpotQA,8,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,481,3.2969653999971342,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,9,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,218,1.3398966000022483,6.213 km,0.0,0.8,0.0,0.0,0.0,6.213 km long
+qa,HotpotQA,10,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,85,0.34173329999975977,Unknown,0.0,0.0,0.0,1.0,,Jaime Meline
+qa,HotpotQA,11,llama3.2:latest,CAS-NLI θ-CV (penalty),5,1.0,550,3.4799610000009125,Unknown,0.0,0.0,0.0,1.0,,Walter Darwin Coy
+qa,HotpotQA,12,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,201,1.2647806999993918,Skiffle,0.0,0.0,0.0,0.0,0.0,United States
+qa,HotpotQA,13,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,672,4.960187000000587,Super Bowl XLVIII.,1.0,1.0,1.0,0.0,0.0,Super Bowl XLVIII
+qa,HotpotQA,14,llama3.2:latest,CAS-NLI θ-CV (penalty),6,1.0,774,5.716211799997836,U.S. 60,1.0,1.0,1.0,0.0,0.0,US 60
+qa,HotpotQA,15,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,432,2.8579608000000007,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,16,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,516,3.7494192000012845,Stephen R. Schwartz,0.0,0.0,0.0,0.0,0.0,"Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo."
+qa,HotpotQA,17,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,87,0.3626285000027565,unknown,0.0,0.0,0.0,1.0,,Fox
+qa,HotpotQA,18,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,382,1.3250110000008135,2017,1.0,1.0,1.0,0.0,0.0,2017
+qa,HotpotQA,19,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,95,0.5151225000008708,Nevada,1.0,1.0,1.0,0.0,1.0,Nevada
+qa,HotpotQA,20,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,204,1.0866497000024538,California,0.0,0.0,0.0,0.0,0.0,Hawaii
+qa,HotpotQA,21,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,76,0.22678070000256412,unknown,0.0,0.0,0.0,1.0,,Kelli Ward
+qa,HotpotQA,22,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,302,1.9562384999990172,The Wolfhounds.,1.0,1.0,1.0,0.0,0.0,The Wolfhounds
+qa,HotpotQA,23,llama3.2:latest,CAS-NLI θ-CV (penalty),4,1.0,692,4.276611699999194,16,0.0,0.0,0.0,0.0,0.0,16-year-old
+qa,HotpotQA,24,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,257,1.522259599998506,World War II,1.0,1.0,1.0,0.0,0.0,World War II
+qa,HotpotQA,25,llama3.2:latest,CAS-NLI θ-CV (penalty),4,1.0,543,3.304362699997,Todd Phillips,1.0,1.0,1.0,0.0,0.0,Todd Phillips
+qa,HotpotQA,26,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,207,0.5806569999986095,Eartha Kitt,0.0,0.0,0.0,0.0,0.0,Carol Lawrence
+qa,HotpotQA,27,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,246,1.35667100000137,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,28,llama3.2:latest,CAS-NLI θ-CV (penalty),1,0.0,282,1.5670955000023241,No,1.0,1.0,1.0,0.0,,no
+qa,HotpotQA,29,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,84,0.36746599999969476,New York,0.0,0.8,0.0,0.0,1.0,New York City
+qa,HotpotQA,30,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,402,1.5974281000017072,Amy Jo Johnson.,1.0,1.0,1.0,0.0,0.0,Amy Jo Johnson
+qa,HotpotQA,31,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,79,0.24343690000023344,Unknown,0.0,0.0,0.0,1.0,,Aleksander Ford
+qa,HotpotQA,32,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,448,2.75541130000056,unknown,0.0,0.0,0.0,1.0,,yes
+qa,HotpotQA,33,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,131,0.6713166000008641,Film direction,0.0,0.0,0.0,0.0,0.0,director
+qa,HotpotQA,34,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,78,0.26110999999946216,France,0.0,0.0,0.0,0.0,1.0,"Roseau, Minnesota, USA"
+qa,HotpotQA,35,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,84,0.5180428999992728,The Saimaa Gesture,1.0,1.0,1.0,0.0,1.0,The Saimaa Gesture
+qa,HotpotQA,36,llama3.2:latest,CAS-NLI θ-CV (penalty),4,1.0,723,5.079251099999965,David Lee Roth,1.0,1.0,1.0,0.0,0.0,David Lee Roth
+qa,HotpotQA,37,llama3.2:latest,CAS-NLI θ-CV (penalty),1,0.0,145,0.6883502999990014,unknown,0.0,0.0,0.0,1.0,,Nassau County
+qa,HotpotQA,38,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,326,0.7971164999980829,Australia,1.0,1.0,1.0,0.0,0.0,Australia
+qa,HotpotQA,39,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,122,0.5637838000002375,California,1.0,1.0,1.0,0.0,1.0,California
+qa,HotpotQA,40,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,91,0.4055240000016056,Leipzig,0.0,0.0,0.0,0.0,1.0,Dessau
+qa,HotpotQA,41,llama3.2:latest,CAS-NLI θ-CV (penalty),5,1.0,862,5.532986599999276,Roman Catholic,1.0,1.0,1.0,0.0,0.0,Roman Catholic
+qa,HotpotQA,42,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,383,2.5361037000002398,The Chimes (album),0.0,0.0,0.0,0.0,0.0,The Joshua Tree
+qa,HotpotQA,43,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,366,0.6085872000003292,New Paltz,0.0,0.0,0.0,0.0,0.0,Ulster County
+qa,HotpotQA,44,llama3.2:latest,CAS-NLI θ-CV (penalty),1,0.0,262,1.4695919000005233,unknown,0.0,0.0,0.0,1.0,,Tammy Wynette
+qa,HotpotQA,45,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,287,1.6486167999973986,Elizabeth Stuart,0.0,0.0,0.0,0.0,0.0,Sir Francis Nethersole
+qa,HotpotQA,46,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,325,1.908627199998591,Purity,0.0,0.0,0.0,0.0,0.0,ingredients in beer
+qa,HotpotQA,47,llama3.2:latest,CAS-NLI θ-CV (penalty),1,1.0,239,1.4672473999999056,Paul Flynn MP,0.0,0.0,0.0,0.0,0.0,Dennis Howard Marks
+qa,HotpotQA,48,llama3.2:latest,CAS-NLI θ-CV (penalty),0,0.0,74,0.3709328999975696,Ben Foster,0.0,0.0,0.0,0.0,1.0,Robert Sheehan
+qa,HotpotQA,49,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,384,1.3060518000020238,Yes,0.0,0.0,0.0,0.0,,no
+qa,MuSiQue,0,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,337,1.9492504999980156,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,MuSiQue,1,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,297,1.657499499997357,unknown,0.0,0.0,0.0,1.0,,"1,400 metres"
+qa,MuSiQue,2,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,316,0.3683453000012378,unknown,0.0,0.0,0.0,1.0,,Charles Carroll
+qa,MuSiQue,3,llama3.2:latest,CAS-NLI θ-CV (penalty),2,0.0,214,1.4772436000021116,Springer Science+Business Media,0.0,0.0,0.0,0.0,0.0,George Routledge
+qa,MuSiQue,4,llama3.2:latest,CAS-NLI θ-CV (penalty),5,0.0,1189,8.017625399999815,2003,1.0,1.0,1.0,0.0,0.0,2003
+qa,MuSiQue,5,llama3.2:latest,CAS-NLI θ-CV (penalty),7,1.0,971,6.61338319999777,Persian,0.0,0.0,0.0,0.0,0.0,Iranian languages
+qa,MuSiQue,6,llama3.2:latest,CAS-NLI θ-CV (penalty),2,0.0,311,1.7706001999977161,unknown,0.0,0.0,0.0,1.0,,Sawatch Range
+qa,MuSiQue,7,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,740,5.1245706000008795,unknown,0.0,0.0,0.0,1.0,,Norman
+qa,MuSiQue,8,llama3.2:latest,CAS-NLI θ-CV (penalty),1,0.0,172,0.8693199000008462,unknown,0.0,0.0,0.0,1.0,,Pittsburgh
+qa,MuSiQue,9,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,506,3.4281513999994786,Paul,0.0,0.0,0.0,0.0,0.0,Giovanni
+qa,MuSiQue,10,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,320,0.6955464000020584,unknown,0.0,0.0,0.0,1.0,,KaDeWe
+qa,MuSiQue,11,llama3.2:latest,CAS-NLI θ-CV (penalty),5,1.0,523,3.134591800000635,unknown,0.0,0.0,0.0,1.0,,1991
+qa,MuSiQue,12,llama3.2:latest,CAS-NLI θ-CV (penalty),3,1.0,686,4.455208800001856,unknown,0.0,0.0,0.0,1.0,,Moscow
+qa,MuSiQue,13,llama3.2:latest,CAS-NLI θ-CV (penalty),8,1.0,1288,6.23094669999773,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
+qa,MuSiQue,14,llama3.2:latest,CAS-NLI θ-CV (penalty),2,1.0,350,2.2418279999983497,Shilpa Shetty,0.0,0.5,0.0,0.0,0.0,Chandan Shetty
+qa,HotpotQA,0,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,236,1.3586509000015212,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,HotpotQA,1,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,271,1.8243700999992143,Delhi,1.0,1.0,1.0,0.0,0.0,Delhi
+qa,HotpotQA,2,llama3.2:latest,CAS-NLI θ-CV preserving,6,1.0,1133,6.533318400001008,President Richard Nixon,1.0,1.0,1.0,0.0,0.0,President Richard Nixon
+qa,HotpotQA,3,llama3.2:latest,CAS-NLI θ-CV preserving,5,0.0,626,4.2301415000001725,Unknown,0.0,0.0,0.0,1.0,,American
+qa,HotpotQA,4,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,377,1.861832200000208,Gold(III) chloride,0.0,0.0,0.0,0.0,0.0,alcohol
+qa,HotpotQA,5,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,361,2.5042318000014347,Henri Leconte,0.0,0.0,0.0,0.0,0.0,Jonathan Stark
+qa,HotpotQA,6,llama3.2:latest,CAS-NLI θ-CV preserving,5,1.0,609,3.9172515999998723,Eutrapela,0.0,0.0,0.0,0.0,0.0,Crambidae
+qa,HotpotQA,7,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,269,0.6654964000008476,Badr Hari,1.0,1.0,1.0,0.0,0.0,Badr Hari
+qa,HotpotQA,8,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,481,3.2969653999971342,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,9,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,386,0.5889704000001075,6.213 km,0.0,0.8,0.0,0.0,0.0,6.213 km long
+qa,HotpotQA,10,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,220,1.2497520999968401,El-P,0.0,0.0,0.0,0.0,0.0,Jaime Meline
+qa,HotpotQA,11,llama3.2:latest,CAS-NLI θ-CV preserving,5,1.0,550,3.4799610000009125,Unknown,0.0,0.0,0.0,1.0,,Walter Darwin Coy
+qa,HotpotQA,12,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,201,1.2647806999993918,Skiffle,0.0,0.0,0.0,0.0,0.0,United States
+qa,HotpotQA,13,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,672,4.960187000000587,Super Bowl XLVIII.,1.0,1.0,1.0,0.0,0.0,Super Bowl XLVIII
+qa,HotpotQA,14,llama3.2:latest,CAS-NLI θ-CV preserving,6,1.0,774,5.716211799997836,U.S. 60,1.0,1.0,1.0,0.0,0.0,US 60
+qa,HotpotQA,15,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,432,2.8579608000000007,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,16,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,516,3.7494192000012845,Stephen R. Schwartz,0.0,0.0,0.0,0.0,0.0,"Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo."
+qa,HotpotQA,17,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,494,3.137584100000822,Fox,1.0,1.0,1.0,0.0,0.0,Fox
+qa,HotpotQA,18,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,382,1.3250110000008135,2017,1.0,1.0,1.0,0.0,0.0,2017
+qa,HotpotQA,19,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,316,0.6426621999999043,Nevada.,1.0,1.0,1.0,0.0,0.0,Nevada
+qa,HotpotQA,20,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,204,1.0866497000024538,California,0.0,0.0,0.0,0.0,0.0,Hawaii
+qa,HotpotQA,21,llama3.2:latest,CAS-NLI θ-CV preserving,4,1.0,362,2.3066833000011684,Kelli Ward,1.0,1.0,1.0,0.0,0.0,Kelli Ward
+qa,HotpotQA,22,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,369,2.3318159999980708,The Wolfhounds,1.0,1.0,1.0,0.0,0.0,The Wolfhounds
+qa,HotpotQA,23,llama3.2:latest,CAS-NLI θ-CV preserving,4,1.0,692,4.276611699999194,16,0.0,0.0,0.0,0.0,0.0,16-year-old
+qa,HotpotQA,24,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,348,1.2499438999984704,World War II.,1.0,1.0,1.0,0.0,0.0,World War II
+qa,HotpotQA,25,llama3.2:latest,CAS-NLI θ-CV preserving,6,1.0,1188,6.6579309000007925,Todd Phillips,1.0,1.0,1.0,0.0,0.0,Todd Phillips
+qa,HotpotQA,26,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,207,0.5806569999986095,Eartha Kitt,0.0,0.0,0.0,0.0,0.0,Carol Lawrence
+qa,HotpotQA,27,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,246,1.35667100000137,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,28,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,401,2.390910800000711,Yes,0.0,0.0,0.0,0.0,,no
+qa,HotpotQA,29,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,440,3.0560571999994863,New York City.,1.0,1.0,1.0,0.0,0.0,New York City
+qa,HotpotQA,30,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,402,1.5974281000017072,Amy Jo Johnson.,1.0,1.0,1.0,0.0,0.0,Amy Jo Johnson
+qa,HotpotQA,31,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,169,1.029877299999498,Aleksander Ford,1.0,1.0,1.0,0.0,0.0,Aleksander Ford
+qa,HotpotQA,32,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,448,2.75541130000056,unknown,0.0,0.0,0.0,1.0,,yes
+qa,HotpotQA,33,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,202,0.8450566999999864,Film direction,0.0,0.0,0.0,0.0,0.0,director
+qa,HotpotQA,34,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,216,0.3059614000012516,US,0.0,0.0,0.0,0.0,0.0,"Roseau, Minnesota, USA"
+qa,HotpotQA,35,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,160,1.0696652000005997,The Saimaa Gesture,1.0,1.0,1.0,0.0,0.0,The Saimaa Gesture
+qa,HotpotQA,36,llama3.2:latest,CAS-NLI θ-CV preserving,4,1.0,723,5.079251099999965,David Lee Roth,1.0,1.0,1.0,0.0,0.0,David Lee Roth
+qa,HotpotQA,37,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,179,0.48960100000113016,Nassau,0.0,0.6666666666666666,0.0,0.0,1.0,Nassau County
+qa,HotpotQA,38,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,326,0.7971164999980829,Australia,1.0,1.0,1.0,0.0,0.0,Australia
+qa,HotpotQA,39,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,248,1.500188400001207,California.,1.0,1.0,1.0,0.0,0.0,California
+qa,HotpotQA,40,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,161,0.8798917999993137,Dresden,0.0,0.0,0.0,0.0,1.0,Dessau
+qa,HotpotQA,41,llama3.2:latest,CAS-NLI θ-CV preserving,5,1.0,862,5.532986599999276,Roman Catholic,1.0,1.0,1.0,0.0,0.0,Roman Catholic
+qa,HotpotQA,42,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,383,2.5361037000002398,The Chimes (album),0.0,0.0,0.0,0.0,0.0,The Joshua Tree
+qa,HotpotQA,43,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,366,0.6085872000003292,New Paltz,0.0,0.0,0.0,0.0,0.0,Ulster County
+qa,HotpotQA,44,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,509,3.58636590000242,Tammy Wynette,1.0,1.0,1.0,0.0,0.0,Tammy Wynette
+qa,HotpotQA,45,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,429,2.585737800000061,Elizabeth Stuart,0.0,0.0,0.0,0.0,0.0,Sir Francis Nethersole
+qa,HotpotQA,46,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,325,1.908627199998591,Purity,0.0,0.0,0.0,0.0,0.0,ingredients in beer
+qa,HotpotQA,47,llama3.2:latest,CAS-NLI θ-CV preserving,1,1.0,239,1.4672473999999056,Paul Flynn MP,0.0,0.0,0.0,0.0,0.0,Dennis Howard Marks
+qa,HotpotQA,48,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,338,2.3461893999992753,Robert Sheehan,1.0,1.0,1.0,0.0,0.0,Robert Sheehan
+qa,HotpotQA,49,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,384,1.3060518000020238,Yes,0.0,0.0,0.0,0.0,,no
+qa,MuSiQue,0,llama3.2:latest,CAS-NLI θ-CV preserving,4,1.0,404,0.8129453999972611,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,MuSiQue,1,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,333,2.2986509000002115,Pico da Neblina,0.0,0.0,0.0,0.0,0.0,"1,400 metres"
+qa,MuSiQue,2,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,316,0.3683453000012378,unknown,0.0,0.0,0.0,1.0,,Charles Carroll
+qa,MuSiQue,3,llama3.2:latest,CAS-NLI θ-CV preserving,3,0.0,293,1.6569048000019393,unknown,0.0,0.0,0.0,1.0,,George Routledge
+qa,MuSiQue,4,llama3.2:latest,CAS-NLI θ-CV preserving,9,1.0,1955,11.59301300000152,2009,0.0,0.0,0.0,0.0,0.0,2003
+qa,MuSiQue,5,llama3.2:latest,CAS-NLI θ-CV preserving,7,1.0,971,6.61338319999777,Persian,0.0,0.0,0.0,0.0,0.0,Iranian languages
+qa,MuSiQue,6,llama3.2:latest,CAS-NLI θ-CV preserving,5,1.0,589,3.6118225999998685,Unknown,0.0,0.0,0.0,1.0,,Sawatch Range
+qa,MuSiQue,7,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,740,5.1245706000008795,unknown,0.0,0.0,0.0,1.0,,Norman
+qa,MuSiQue,8,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,211,1.2574595999976736,unknown,0.0,0.0,0.0,1.0,,Pittsburgh
+qa,MuSiQue,9,llama3.2:latest,CAS-NLI θ-CV preserving,3,1.0,506,3.4281513999994786,Paul,0.0,0.0,0.0,0.0,0.0,Giovanni
+qa,MuSiQue,10,llama3.2:latest,CAS-NLI θ-CV preserving,2,1.0,320,0.6955464000020584,unknown,0.0,0.0,0.0,1.0,,KaDeWe
+qa,MuSiQue,11,llama3.2:latest,CAS-NLI θ-CV preserving,12,1.0,1332,9.270093400002224,unknown,0.0,0.0,0.0,1.0,,1991
+qa,MuSiQue,12,llama3.2:latest,CAS-NLI θ-CV preserving,4,1.0,760,4.876768199999788,unknown,0.0,0.0,0.0,1.0,,Moscow
+qa,MuSiQue,13,llama3.2:latest,CAS-NLI θ-CV preserving,8,1.0,1288,6.23094669999773,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
+qa,MuSiQue,14,llama3.2:latest,CAS-NLI θ-CV preserving,5,1.0,642,3.933334499997727,Chandan Shetty,1.0,1.0,1.0,0.0,0.0,Chandan Shetty
 qa,HotpotQA,0,gemma3:latest,Vanilla RAG (no filter),10,1.0,1361,21.800886499997432,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
 qa,HotpotQA,1,gemma3:latest,Vanilla RAG (no filter),10,1.0,1250,10.784669000000576,New Delhi,0.0,0.6666666666666666,1.0,0.0,0.0,Delhi
 qa,HotpotQA,2,gemma3:latest,Vanilla RAG (no filter),10,1.0,2222,19.420875499999966,Richard Nixon,0.0,0.8,0.0,0.0,0.0,President Richard Nixon
@@ -779,3 +909,133 @@ qa,MuSiQue,11,gemma3:latest,CAS-NLI conflict-preserving,12,1.0,1445,11.773914400
 qa,MuSiQue,12,gemma3:latest,CAS-NLI conflict-preserving,4,1.0,775,6.347782600001665,unknown,0.0,0.0,0.0,1.0,,Moscow
 qa,MuSiQue,13,gemma3:latest,CAS-NLI conflict-preserving,8,1.0,1304,10.950150000000576,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
 qa,MuSiQue,14,gemma3:latest,CAS-NLI conflict-preserving,5,1.0,637,5.533260500000324,Chandan Shetty,1.0,1.0,1.0,0.0,0.0,Chandan Shetty
+qa,HotpotQA,0,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,244,2.3767909000016516,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,HotpotQA,1,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,266,2.485097200002201,New Delhi,0.0,0.6666666666666666,1.0,0.0,0.0,Delhi
+qa,HotpotQA,2,gemma3:latest,CAS-NLI θ-CV (penalty),4,1.0,729,14.069181699996989,Richard Nixon,0.0,0.8,0.0,0.0,0.0,President Richard Nixon
+qa,HotpotQA,3,gemma3:latest,CAS-NLI θ-CV (penalty),2,0.0,300,2.426790199999232,unknown,0.0,0.0,0.0,1.0,,American
+qa,HotpotQA,4,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,354,3.1751961000009032,Alcohol,1.0,1.0,1.0,0.0,0.0,alcohol
+qa,HotpotQA,5,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,385,3.3822768999998516,Henri Leconte,0.0,0.0,0.0,0.0,0.0,Jonathan Stark
+qa,HotpotQA,6,gemma3:latest,CAS-NLI θ-CV (penalty),5,1.0,614,4.964277999999467,Eutrapela,0.0,0.0,0.0,0.0,0.0,Crambidae
+qa,HotpotQA,7,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,268,3.3699903000015183,Badr Hari,1.0,1.0,1.0,0.0,0.0,Badr Hari
+qa,HotpotQA,8,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,477,4.305232999999134,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,9,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,208,2.158400599997549,6.213 km,0.0,0.8,0.0,0.0,0.0,6.213 km long
+qa,HotpotQA,10,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,73,0.8354580000013812,Rick Ross,0.0,0.0,0.0,0.0,1.0,Jaime Meline
+qa,HotpotQA,11,gemma3:latest,CAS-NLI θ-CV (penalty),5,1.0,536,4.311066000002029,Walter Coy,0.0,0.8,0.0,0.0,0.0,Walter Darwin Coy
+qa,HotpotQA,12,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,174,1.9587477999994007,Skiffle-Blues,0.0,0.0,0.0,0.0,0.0,United States
+qa,HotpotQA,13,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,670,5.9810705999989295,Super Bowl XLVIII,1.0,1.0,1.0,0.0,0.0,Super Bowl XLVIII
+qa,HotpotQA,14,gemma3:latest,CAS-NLI θ-CV (penalty),6,1.0,793,6.773804300002666,U.S. Highway 60,0.0,0.8,0.0,0.0,0.0,US 60
+qa,HotpotQA,15,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,437,3.719318799998291,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,16,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,497,4.01877980000063,unknown,0.0,0.0,0.0,1.0,,"Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo."
+qa,HotpotQA,17,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,75,0.7850177000000258,ABC,0.0,0.0,0.0,0.0,1.0,Fox
+qa,HotpotQA,18,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,386,3.683548000000883,2017,1.0,1.0,1.0,0.0,0.0,2017
+qa,HotpotQA,19,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,83,1.0004508000019996,Nevada,1.0,1.0,1.0,0.0,1.0,Nevada
+qa,HotpotQA,20,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,202,1.7492457000007562,California,0.0,0.0,0.0,0.0,0.0,Hawaii
+qa,HotpotQA,21,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,63,0.6661354999996547,unknown,0.0,0.0,0.0,1.0,,Kelli Ward
+qa,HotpotQA,22,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,300,2.5734780999991926,The Wolfhounds,1.0,1.0,1.0,0.0,0.0,The Wolfhounds
+qa,HotpotQA,23,gemma3:latest,CAS-NLI θ-CV (penalty),4,1.0,698,5.591840600001888,Sixteen,0.0,0.0,0.0,0.0,1.0,16-year-old
+qa,HotpotQA,24,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,250,2.3416252999995777,World War II,1.0,1.0,1.0,0.0,0.0,World War II
+qa,HotpotQA,25,gemma3:latest,CAS-NLI θ-CV (penalty),4,1.0,550,5.313079399998969,Todd Phillips,1.0,1.0,1.0,0.0,0.0,Todd Phillips
+qa,HotpotQA,26,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,202,2.4121973999972397,Alice Ghostley,0.0,0.0,0.0,0.0,0.0,Carol Lawrence
+qa,HotpotQA,27,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,226,2.1246686999984377,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,28,gemma3:latest,CAS-NLI θ-CV (penalty),1,0.0,269,2.361842999998771,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,29,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,76,0.840903200001776,New York,0.0,0.8,0.0,0.0,1.0,New York City
+qa,HotpotQA,30,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,393,3.641151300002093,Amy Jo Johnson,1.0,1.0,1.0,0.0,0.0,Amy Jo Johnson
+qa,HotpotQA,31,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,67,0.7038681999983964,unknown,0.0,0.0,0.0,1.0,,Aleksander Ford
+qa,HotpotQA,32,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,464,3.8276440000008733,unknown,0.0,0.0,0.0,1.0,,yes
+qa,HotpotQA,33,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,123,1.7867894000009983,Film directors,0.0,0.0,1.0,0.0,0.0,director
+qa,HotpotQA,34,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,65,0.6560392999999749,France,0.0,0.0,0.0,0.0,1.0,"Roseau, Minnesota, USA"
+qa,HotpotQA,35,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,72,1.0366606999996293,The Saimaa Gesture,1.0,1.0,1.0,0.0,1.0,The Saimaa Gesture
+qa,HotpotQA,36,gemma3:latest,CAS-NLI θ-CV (penalty),4,1.0,773,6.6167299000007915,David Lee Roth,1.0,1.0,1.0,0.0,0.0,David Lee Roth
+qa,HotpotQA,37,gemma3:latest,CAS-NLI θ-CV (penalty),1,0.0,133,1.339487299999746,unknown,0.0,0.0,0.0,1.0,,Nassau County
+qa,HotpotQA,38,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,322,2.796303800001624,Australia,1.0,1.0,1.0,0.0,0.0,Australia
+qa,HotpotQA,39,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,112,1.0457028999990143,California,1.0,1.0,1.0,0.0,1.0,California
+qa,HotpotQA,40,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,81,0.8863640000017767,Hanover,0.0,0.0,0.0,0.0,1.0,Dessau
+qa,HotpotQA,41,gemma3:latest,CAS-NLI θ-CV (penalty),5,1.0,892,7.195634299998346,Roman Catholic,1.0,1.0,1.0,0.0,0.0,Roman Catholic
+qa,HotpotQA,42,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,393,3.6862114000032307,The Chimes,0.0,0.0,0.0,0.0,0.0,The Joshua Tree
+qa,HotpotQA,43,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,344,3.266791699999885,New Paltz,0.0,0.0,0.0,0.0,0.0,Ulster County
+qa,HotpotQA,44,gemma3:latest,CAS-NLI θ-CV (penalty),1,0.0,262,2.2060827999994217,unknown,0.0,0.0,0.0,1.0,,Tammy Wynette
+qa,HotpotQA,45,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,273,2.4056560000026366,unknown,0.0,0.0,0.0,1.0,,Sir Francis Nethersole
+qa,HotpotQA,46,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,327,2.7484466999994766,unknown,0.0,0.0,0.0,1.0,,ingredients in beer
+qa,HotpotQA,47,gemma3:latest,CAS-NLI θ-CV (penalty),1,1.0,230,2.2390994999987015,Richard Rudgley,0.0,0.0,0.0,0.0,0.0,Dennis Howard Marks
+qa,HotpotQA,48,gemma3:latest,CAS-NLI θ-CV (penalty),0,0.0,62,0.8628911999985576,Dennis Quaid,0.0,0.0,0.0,0.0,1.0,Robert Sheehan
+qa,HotpotQA,49,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,366,3.2095159999989846,unknown,0.0,0.0,1.0,1.0,,no
+qa,MuSiQue,0,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,323,3.187232899999799,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,MuSiQue,1,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,306,2.9324526999989757,unknown,0.0,0.0,0.0,1.0,,"1,400 metres"
+qa,MuSiQue,2,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,309,3.0213742000014463,unknown,0.0,0.0,0.0,1.0,,Charles Carroll
+qa,MuSiQue,3,gemma3:latest,CAS-NLI θ-CV (penalty),2,0.0,198,2.1644402999991144,unknown,0.0,0.0,0.0,1.0,,George Routledge
+qa,MuSiQue,4,gemma3:latest,CAS-NLI θ-CV (penalty),5,0.0,1243,10.527088099999673,unknown,0.0,0.0,0.0,1.0,,2003
+qa,MuSiQue,5,gemma3:latest,CAS-NLI θ-CV (penalty),7,1.0,968,8.513898199998948,Western Iranian languages,0.0,0.8,1.0,0.0,0.0,Iranian languages
+qa,MuSiQue,6,gemma3:latest,CAS-NLI θ-CV (penalty),2,0.0,308,2.6648930000010296,unknown,0.0,0.0,0.0,1.0,,Sawatch Range
+qa,MuSiQue,7,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,711,6.678384800001368,unknown,0.0,0.0,0.0,1.0,,Norman
+qa,MuSiQue,8,gemma3:latest,CAS-NLI θ-CV (penalty),1,0.0,162,1.5616222999997262,Unknown,0.0,0.0,0.0,1.0,,Pittsburgh
+qa,MuSiQue,9,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,471,4.502875300000596,Paul,0.0,0.0,0.0,0.0,0.0,Giovanni
+qa,MuSiQue,10,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,311,2.815113000000565,unknown,0.0,0.0,0.0,1.0,,KaDeWe
+qa,MuSiQue,11,gemma3:latest,CAS-NLI θ-CV (penalty),5,1.0,533,4.47194429999945,unknown,0.0,0.0,0.0,1.0,,1991
+qa,MuSiQue,12,gemma3:latest,CAS-NLI θ-CV (penalty),3,1.0,699,6.249057400000311,unknown,0.0,0.0,0.0,1.0,,Moscow
+qa,MuSiQue,13,gemma3:latest,CAS-NLI θ-CV (penalty),8,1.0,1289,11.633583599999838,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
+qa,MuSiQue,14,gemma3:latest,CAS-NLI θ-CV (penalty),2,1.0,327,3.401103600001079,Shilpa Shetty,0.0,0.5,0.0,0.0,0.0,Chandan Shetty
+qa,HotpotQA,0,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,244,2.3767909000016516,Arthur's Magazine,1.0,1.0,1.0,0.0,0.0,Arthur's Magazine
+qa,HotpotQA,1,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,266,2.485097200002201,New Delhi,0.0,0.6666666666666666,1.0,0.0,0.0,Delhi
+qa,HotpotQA,2,gemma3:latest,CAS-NLI θ-CV preserving,6,1.0,1122,9.760576500000752,Richard Nixon,0.0,0.8,0.0,0.0,0.0,President Richard Nixon
+qa,HotpotQA,3,gemma3:latest,CAS-NLI θ-CV preserving,5,0.0,650,5.738311500001146,Unknown,0.0,0.0,0.0,1.0,,American
+qa,HotpotQA,4,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,354,3.1751961000009032,Alcohol,1.0,1.0,1.0,0.0,0.0,alcohol
+qa,HotpotQA,5,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,385,3.3822768999998516,Henri Leconte,0.0,0.0,0.0,0.0,0.0,Jonathan Stark
+qa,HotpotQA,6,gemma3:latest,CAS-NLI θ-CV preserving,5,1.0,614,4.964277999999467,Eutrapela,0.0,0.0,0.0,0.0,0.0,Crambidae
+qa,HotpotQA,7,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,268,3.3699903000015183,Badr Hari,1.0,1.0,1.0,0.0,0.0,Badr Hari
+qa,HotpotQA,8,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,477,4.305232999999134,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,9,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,385,3.817308800000319,6.213 km,0.0,0.8,0.0,0.0,0.0,6.213 km long
+qa,HotpotQA,10,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,208,2.0254114999988815,El-P,0.0,0.0,0.0,0.0,0.0,Jaime Meline
+qa,HotpotQA,11,gemma3:latest,CAS-NLI θ-CV preserving,5,1.0,536,4.311066000002029,Walter Coy,0.0,0.8,0.0,0.0,0.0,Walter Darwin Coy
+qa,HotpotQA,12,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,174,1.9587477999994007,Skiffle-Blues,0.0,0.0,0.0,0.0,0.0,United States
+qa,HotpotQA,13,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,670,5.9810705999989295,Super Bowl XLVIII,1.0,1.0,1.0,0.0,0.0,Super Bowl XLVIII
+qa,HotpotQA,14,gemma3:latest,CAS-NLI θ-CV preserving,6,1.0,793,6.773804300002666,U.S. Highway 60,0.0,0.8,0.0,0.0,0.0,US 60
+qa,HotpotQA,15,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,437,3.719318799998291,2006,1.0,1.0,1.0,0.0,0.0,2006
+qa,HotpotQA,16,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,497,4.01877980000063,unknown,0.0,0.0,0.0,1.0,,"Hetfield and Ulrich, longtime lead guitarist Kirk Hammett, and bassist Robert Trujillo."
+qa,HotpotQA,17,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,491,4.335632700000133,USA Network,0.0,0.0,0.0,0.0,0.0,Fox
+qa,HotpotQA,18,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,386,3.683548000000883,2017,1.0,1.0,1.0,0.0,0.0,2017
+qa,HotpotQA,19,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,326,3.0070212999999058,Nevada,1.0,1.0,1.0,0.0,0.0,Nevada
+qa,HotpotQA,20,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,202,1.7492457000007562,California,0.0,0.0,0.0,0.0,0.0,Hawaii
+qa,HotpotQA,21,gemma3:latest,CAS-NLI θ-CV preserving,4,1.0,364,3.2553864999972575,Kelli Ward,1.0,1.0,1.0,0.0,0.0,Kelli Ward
+qa,HotpotQA,22,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,371,3.2383374000019103,The Wolfhounds,1.0,1.0,1.0,0.0,0.0,The Wolfhounds
+qa,HotpotQA,23,gemma3:latest,CAS-NLI θ-CV preserving,4,1.0,698,5.591840600001888,Sixteen,0.0,0.0,0.0,0.0,1.0,16-year-old
+qa,HotpotQA,24,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,352,3.2799150999999256,World War II,1.0,1.0,1.0,0.0,0.0,World War II
+qa,HotpotQA,25,gemma3:latest,CAS-NLI θ-CV preserving,6,1.0,1205,10.750338099998771,Todd Phillips,1.0,1.0,1.0,0.0,0.0,Todd Phillips
+qa,HotpotQA,26,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,202,2.4121973999972397,Alice Ghostley,0.0,0.0,0.0,0.0,0.0,Carol Lawrence
+qa,HotpotQA,27,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,226,2.1246686999984377,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,28,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,403,3.3569997000013245,unknown,0.0,0.0,1.0,1.0,,no
+qa,HotpotQA,29,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,462,4.143965399998706,New York City,1.0,1.0,1.0,0.0,0.0,New York City
+qa,HotpotQA,30,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,393,3.641151300002093,Amy Jo Johnson,1.0,1.0,1.0,0.0,0.0,Amy Jo Johnson
+qa,HotpotQA,31,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,163,1.4847719999997935,unknown,0.0,0.0,0.0,1.0,,Aleksander Ford
+qa,HotpotQA,32,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,464,3.8276440000008733,unknown,0.0,0.0,0.0,1.0,,yes
+qa,HotpotQA,33,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,199,1.9822729000006802,Film director,0.0,0.6666666666666666,1.0,0.0,0.0,director
+qa,HotpotQA,34,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,202,1.9726162000006298,United States,0.0,0.0,0.0,0.0,1.0,"Roseau, Minnesota, USA"
+qa,HotpotQA,35,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,148,1.730966899998748,The Saimaa Gesture,1.0,1.0,1.0,0.0,0.0,The Saimaa Gesture
+qa,HotpotQA,36,gemma3:latest,CAS-NLI θ-CV preserving,4,1.0,773,6.6167299000007915,David Lee Roth,1.0,1.0,1.0,0.0,0.0,David Lee Roth
+qa,HotpotQA,37,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,168,1.7145081999988179,New York,0.0,0.0,0.0,0.0,0.0,Nassau County
+qa,HotpotQA,38,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,322,2.796303800001624,Australia,1.0,1.0,1.0,0.0,0.0,Australia
+qa,HotpotQA,39,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,240,2.0729802999994718,California,1.0,1.0,1.0,0.0,0.0,California
+qa,HotpotQA,40,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,158,1.5415770999970846,Junkers,0.0,0.0,0.0,0.0,0.0,Dessau
+qa,HotpotQA,41,gemma3:latest,CAS-NLI θ-CV preserving,5,1.0,892,7.195634299998346,Roman Catholic,1.0,1.0,1.0,0.0,0.0,Roman Catholic
+qa,HotpotQA,42,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,393,3.6862114000032307,The Chimes,0.0,0.0,0.0,0.0,0.0,The Joshua Tree
+qa,HotpotQA,43,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,344,3.266791699999885,New Paltz,0.0,0.0,0.0,0.0,0.0,Ulster County
+qa,HotpotQA,44,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,513,4.656028499997774,Tammy Wynette,1.0,1.0,1.0,0.0,0.0,Tammy Wynette
+qa,HotpotQA,45,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,422,3.4046405000008235,unknown,0.0,0.0,0.0,1.0,,Sir Francis Nethersole
+qa,HotpotQA,46,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,327,2.7484466999994766,unknown,0.0,0.0,0.0,1.0,,ingredients in beer
+qa,HotpotQA,47,gemma3:latest,CAS-NLI θ-CV preserving,1,1.0,230,2.2390994999987015,Richard Rudgley,0.0,0.0,0.0,0.0,0.0,Dennis Howard Marks
+qa,HotpotQA,48,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,334,3.084087499999441,Robert Sheehan,1.0,1.0,1.0,0.0,0.0,Robert Sheehan
+qa,HotpotQA,49,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,366,3.2095159999989846,unknown,0.0,0.0,1.0,1.0,,no
+qa,MuSiQue,0,gemma3:latest,CAS-NLI θ-CV preserving,4,1.0,394,3.4071829999993497,Norway,0.0,0.0,1.0,0.0,0.0,north
+qa,MuSiQue,1,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,343,2.903170300000056,unknown,0.0,0.0,0.0,1.0,,"1,400 metres"
+qa,MuSiQue,2,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,309,3.0213742000014463,unknown,0.0,0.0,0.0,1.0,,Charles Carroll
+qa,MuSiQue,3,gemma3:latest,CAS-NLI θ-CV preserving,3,0.0,277,2.496160400001827,unknown,0.0,0.0,0.0,1.0,,George Routledge
+qa,MuSiQue,4,gemma3:latest,CAS-NLI θ-CV preserving,9,1.0,2086,16.47707040000023,2008,0.0,0.0,0.0,0.0,0.0,2003
+qa,MuSiQue,5,gemma3:latest,CAS-NLI θ-CV preserving,7,1.0,968,8.513898199998948,Western Iranian languages,0.0,0.8,1.0,0.0,0.0,Iranian languages
+qa,MuSiQue,6,gemma3:latest,CAS-NLI θ-CV preserving,5,1.0,596,4.842371599999751,unknown,0.0,0.0,0.0,1.0,,Sawatch Range
+qa,MuSiQue,7,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,711,6.678384800001368,unknown,0.0,0.0,0.0,1.0,,Norman
+qa,MuSiQue,8,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,204,1.86392110000088,unknown,0.0,0.0,0.0,1.0,,Pittsburgh
+qa,MuSiQue,9,gemma3:latest,CAS-NLI θ-CV preserving,3,1.0,471,4.502875300000596,Paul,0.0,0.0,0.0,0.0,0.0,Giovanni
+qa,MuSiQue,10,gemma3:latest,CAS-NLI θ-CV preserving,2,1.0,311,2.815113000000565,unknown,0.0,0.0,0.0,1.0,,KaDeWe
+qa,MuSiQue,11,gemma3:latest,CAS-NLI θ-CV preserving,12,1.0,1385,11.470100899998215,unknown,0.0,0.0,0.0,1.0,,1991
+qa,MuSiQue,12,gemma3:latest,CAS-NLI θ-CV preserving,4,1.0,775,6.347782600001665,unknown,0.0,0.0,0.0,1.0,,Moscow
+qa,MuSiQue,13,gemma3:latest,CAS-NLI θ-CV preserving,8,1.0,1289,11.633583599999838,unknown,0.0,0.0,0.0,1.0,,"March 7, 1876"
+qa,MuSiQue,14,gemma3:latest,CAS-NLI θ-CV preserving,5,1.0,622,5.606784100000368,Chandan Shetty,1.0,1.0,1.0,0.0,0.0,Chandan Shetty

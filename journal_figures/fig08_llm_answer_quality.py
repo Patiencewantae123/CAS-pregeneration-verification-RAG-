@@ -1,17 +1,17 @@
 """Fig. 8 - End-to-end answer quality: each LLM answering from each method's selected evidence."""
-from _style import (DOUBLE, GRID, METHOD_COLOR, METHOD_MARKER, METHOD_SHORT, MODEL_LABEL,
+from _style import (DOUBLE, GRID, LLM_METHODS, METHOD_COLOR, METHOD_MARKER, METHOD_SHORT, MODEL_LABEL,
                     load_llm, panel_title, plt, save)
 
 qa, _, summary = load_llm()
 look = {(r["dataset"], r["model"], r["method"], r["metric"]): r for r in summary["qa"]}
 holm = {(t["dataset"], t["model"], t["reference"], t["comparator"], t["metric"]): t["p_holm"]
         for t in summary["paired_tests"]}
-models, methods = summary["models"], list(METHOD_COLOR)
+models, methods = summary["models"], LLM_METHODS
 panels = [("HotpotQA", "accuracy", "Answer accuracy"), ("HotpotQA", "f1", "Token F1"),
           ("MuSiQue", "accuracy", "Answer accuracy"), ("MuSiQue", "f1", "Token F1")]
 rows = []
 
-fig, axes = plt.subplots(1, 4, figsize=(DOUBLE, 3.6), sharey=True)
+fig, axes = plt.subplots(1, 4, figsize=(DOUBLE, 0.21 * len(models) * len(methods) + 1.0), sharey=True)
 for ax, (letter, (ds, metric, xlabel)) in zip(axes, zip("abcd", panels)):
     y, ticks, labels = 0, [], []
     for model in models:
@@ -22,13 +22,14 @@ for ax, (letter, (ds, metric, xlabel)) in zip(axes, zip("abcd", panels)):
                         markeredgewidth=0.5, elinewidth=0.9, capsize=1.3, zorder=3)
             rows.append({"dataset": ds, "model": model, "method": m, "metric": metric, "mean": r["mean"],
                          "ci_low": r["ci_low"], "ci_high": r["ci_high"], "n": r["n"],
-                         "p_holm_cas_nli_preserving_vs_this": holm.get(
-                             (ds, model, "CAS-NLI conflict-preserving", m, metric))})
+                         "p_holm_cv_preserving_vs_this": holm.get(
+                             (ds, model, "CAS-NLI θ-CV preserving", m, metric))})
             ticks.append(y)
             labels.append(f"{MODEL_LABEL.get(model, model)} · {METHOD_SHORT[m]}")
             y += 1
+        if model != models[-1]:
+            ax.axhline(y - 0.15, color=GRID, linewidth=0.5)
         y += 0.7
-    ax.axhline(len(methods) - 0.15, color=GRID, linewidth=0.5)
     ax.set_xlim(0, 1)
     ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0], ["0", ".25", ".5", ".75", "1"])
     n = look[(ds, models[0], methods[0], metric)]["n"]

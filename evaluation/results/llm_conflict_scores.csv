@@ -504,6 +504,159 @@ conflict,WikiContradict,48,llama3.2:latest,CAS-NLI conflict-preserving,Explicit,
 [1]: 1746
 [2]: 8th of January 1747",2.5898659999984375,both answers,1.0,1.0
 conflict,WikiContradict,49,llama3.2:latest,CAS-NLI conflict-preserving,Explicit,1,0,Answer: 40.4%.,1.0304178999977012,one answer,0.0,0.0
+conflict,WikiContradict,0,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,"I don't see the passages. Please provide the relevant text, and I'll be happy to assist you.",1.8065435999997135,neither,0.0,0.0
+conflict,WikiContradict,1,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"No, the passage only mentions the P-500 Bazalt as the source of the P-700's design.",1.8539663000010478,neither,0.0,0.0
+conflict,WikiContradict,2,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Passage [1] does not provide information on whether the formation of the grooves occurred as a single event.,2.034061499998643,neither,1.0,0.0
+conflict,WikiContradict,3,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Answer: Yes.,0.7054962000001979,neither,0.0,0.0
+conflict,WikiContradict,4,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,Both passages agree: President Wesley M. Oler took the stand in court in 1911.,5.356082700000115,both answers,0.0,1.0
+conflict,WikiContradict,5,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Passage [1] and [2] disagree. 
+
+[1]: Fishing-related jobs are the most common occupation.
+[2]: There is no noticeable local industry except for fishing, but many residents work in other fields.",3.7440165000007255,one answer,1.0,0.0
+conflict,WikiContradict,6,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] The overall salinity of Lake Maracaibo is between 1.5 and 3.8%.
+
+[2] The salinity of the bottom lake water is 0.2-0.3%, but the surface lake water has a salinity of 0.13%.",5.200245500000165,both answers,0.0,1.0
+conflict,WikiContradict,7,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,The passage does not provide specific examples of defunct newspapers in the United States.,1.2133447999985947,neither,0.0,0.0
+conflict,WikiContradict,8,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Answer: 1934.,0.5907903000006627,one answer,0.0,0.0
+conflict,WikiContradict,9,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Passage [1] states Moxonidine as a nonselective agonist.,2.2025948999980756,neither,1.0,0.0
+conflict,WikiContradict,10,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,I couldn't find any information on Paul Fraisse becoming a director of the Institute of Psychology of the University of Paris.,1.6981943000027968,neither,0.0,0.0
+conflict,WikiContradict,11,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,There is no information about Julian Lewis Jones' birthdate in the provided passages.,1.1390132999986236,neither,0.0,0.0
+conflict,WikiContradict,12,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Passage [1] states: 15 January 1971.,1.1838576000009198,one answer,1.0,0.0
+conflict,WikiContradict,13,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"The Loretto Chapel staircase is held together by wooden pegs, with no glue, nails, or other hardware used.",2.6926461000002746,one answer,0.0,0.0
+conflict,WikiContradict,14,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] Four people survived: Dorantes de Carranza, Castillo, Estevanico, and two others (not specified).
+
+[2] Four people survived: Álvar Núñez Cabeza de Vaca, Andrés Dorantes de Carranza, Estevanico, and Alonso del Castillo Maldonado.",6.215860699998302,both answers,0.0,1.0
+conflict,WikiContradict,15,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: 6 ft 9 in (2.06 m).,1.1716343000007328,both answers,0.0,1.0
+conflict,WikiContradict,16,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: Herschel Levi.,0.980851199998142,both answers,0.0,1.0
+conflict,WikiContradict,17,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Answer: Yes. Passage [1] states that if sleep were not essential, complex animals would suffer serious consequences, implying that sleep is essential for all complex animals.",2.682464900000923,neither,1.0,0.0
+conflict,WikiContradict,18,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Passage [2] states that the managers of St Eunan's GAA in 2017 were Barry Meehan and Eddie Brennan, but Passage [1] only mentions Maxi Curran as the manager from c2014-c.2018, without specifying 2017.",4.501182500000141,both answers,1.0,1.0
+conflict,WikiContradict,19,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: Yes.,0.5419906000024639,neither,0.0,0.0
+conflict,WikiContradict,20,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"Answer: In September 2011, in Augusta, Georgia, United States.",1.3681533000017225,neither,0.0,0.0
+conflict,WikiContradict,21,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Passage [1] disagrees. Passage [2] states that some synthetic chords, like the Prometheus chord, can be analyzed as traditional chords.",2.7785320000002685,neither,1.0,0.0
+conflict,WikiContradict,22,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Answer: Joseph Greenwood of Purau.,0.9305252999984077,one answer,0.0,0.0
+conflict,WikiContradict,23,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,Passage [1] and [2] agree. The answer is 9 cities.,2.084943800000474,neither,1.0,0.0
+conflict,WikiContradict,24,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,"I couldn't find any information on the ""Whitehead Torpedo"" in the provided passages.",1.3088458999991417,neither,0.0,0.0
+conflict,WikiContradict,25,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"The passage only provides the year, but not the month. Answer: 1993 (year only).",1.585537299997668,both answers,0.0,1.0
+conflict,WikiContradict,26,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Passage [2] states the Penny Black was issued first on 1 May 1840, while Passage [1] does not provide a specific date for the Two Penny Blue's initial printing.",3.695604500000627,both answers,1.0,1.0
+conflict,WikiContradict,27,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] 1855, February (at the Battle of Dioubouldy) and 1855, February (after the battle, when Ndaté Yalla Mbodj's followers deserted).
+
+[2] 1855, January 31.",5.123830000000453,both answers,0.0,1.0
+conflict,WikiContradict,28,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"Passage [1] does not mention the Queen of Waalo, Ndaté Yalla Mbodj, being defeated. It only mentions that Maroso Tassé and his warriors refused to submit, and Ndaté Yalla Mbodj remained defiant.",3.908701199998177,neither,1.0,0.0
+conflict,WikiContradict,29,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"[1] Cayor
+[2] Dagana",3.043171999997867,both answers,0.0,1.0
+conflict,WikiContradict,30,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Answer 1: Yes, according to passage [1].
+
+Answer 2: No, according to the question itself.",1.810779300001741,neither,1.0,0.0
+conflict,WikiContradict,31,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,There is no information about Paul McCole's birthdate in the provided passages.,1.1365608999985852,neither,0.0,0.0
+conflict,WikiContradict,32,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,There is no passage providing information on Paul McCole's birthdate.,1.0461150000010093,neither,0.0,0.0
+conflict,WikiContradict,33,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] No, the passage does not consider the Baltic Sea a Mediterranean sea, but rather a dilution basin.
+
+[2] No, the passage states the Baltic Sea is not a Mediterranean sea.",4.094437700001436,neither,0.0,0.0
+conflict,WikiContradict,34,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Passage [1] and [2] disagree. 
+
+[1]: No, Microsoft Office 2013 does not work on Windows Server 2022.
+[2]: Yes, Microsoft Office 2013 is available for Windows Server 2022.",4.5832073999990826,neither,1.0,0.0
+conflict,WikiContradict,35,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"[1] Yes, a mint stamp is always unused.
+
+[2] No, a mint stamp can be unused or previously hinged, depending on the term used (e.g. Mint hinged, Mint never hinged).",5.642859100000351,neither,0.0,0.0
+conflict,WikiContradict,36,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"No, a mint stamp is not necessarily hinged. The term ""mint hinged"" specifically refers to a stamp that is unused but has been previously hinged, with visible remains of the hinge or gum disturbance.",2.8581763000001956,neither,0.0,0.0
+conflict,WikiContradict,37,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Both passages agree: Yes, the valley in which the Mitta Mitta river flows contains four small towns: Mitta Mitta, Eskdale, and Dartmouth.",2.8915046000001894,neither,0.0,0.0
+conflict,WikiContradict,38,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Both passages agree: the valley contains 4 small towns: Mitta Mitta, Eskdale, and Dartmouth.",1.7314323000027798,neither,0.0,0.0
+conflict,WikiContradict,39,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: Yes.,0.5050071000005119,neither,0.0,0.0
+conflict,WikiContradict,40,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] 2 March 1881
+[2] 3 March 1881",1.3379849000011745,both answers,0.0,1.0
+conflict,WikiContradict,41,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Both passages agree: Yes, Scout Skunk is a skunk.",1.3258055000005697,neither,0.0,0.0
+conflict,WikiContradict,42,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,Both passages agree: Scout Skunk is a skunk.,0.926941199999419,one answer,0.0,0.0
+conflict,WikiContradict,43,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,Passage [1] does not provide a direct comparison between Finland's timezone and all of Russia's timezones. It only mentions the time difference between Moscow and Helsinki.,2.7661120999982813,neither,1.0,0.0
+conflict,WikiContradict,44,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,"I don't see any passages provided. Please share the passages, and I'll be happy to help.",1.4225001000013435,neither,0.0,0.0
+conflict,WikiContradict,45,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] Answer: 2
+[2] Answer: 8",2.17720719999852,neither,0.0,0.0
+conflict,WikiContradict,46,llama3.2:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,No answer provided in the passage.,0.9412497000012081,neither,0.0,0.0
+conflict,WikiContradict,47,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: Apomorphine.,0.9504550999990897,one answer,0.0,0.0
+conflict,WikiContradict,48,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"[1] 1746
+[2] January 8, 1747",1.6650334000005387,both answers,0.0,1.0
+conflict,WikiContradict,49,llama3.2:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,Answer: 40.4%.,1.0304178999977012,one answer,0.0,0.0
+conflict,WikiContradict,0,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"The passage does not provide information on apomorphine. It only mentions aporphine, stating it is present in Nymphaea nouchali var. caerulea.",2.9820378000003984,both answers,0.0,1.0
+conflict,WikiContradict,1,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"No, the passage only mentions the P-500 Bazalt as the source of the P-700's design.",1.8539663000010478,neither,0.0,0.0
+conflict,WikiContradict,2,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Passage [1] does not provide information on whether the formation of the grooves occurred as a single event.,2.034061499998643,neither,1.0,0.0
+conflict,WikiContradict,3,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Answer: Yes.,0.7054962000001979,neither,0.0,0.0
+conflict,WikiContradict,4,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,Both passages agree: President Wesley M. Oler took the stand in court in 1911.,5.356082700000115,both answers,0.0,1.0
+conflict,WikiContradict,5,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Passage [1] and [2] disagree. 
+
+[1]: Fishing-related jobs are the most common occupation.
+[2]: There is no noticeable local industry except for fishing, but many residents work in other fields.",3.7440165000007255,one answer,1.0,0.0
+conflict,WikiContradict,6,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] The overall salinity of Lake Maracaibo is between 1.5 and 3.8%.
+
+[2] The salinity of the bottom lake water is 0.2-0.3%, but the surface lake water has a salinity of 0.13%.",5.200245500000165,both answers,0.0,1.0
+conflict,WikiContradict,7,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,The passage does not provide specific examples of defunct newspapers in the United States.,1.2133447999985947,neither,0.0,0.0
+conflict,WikiContradict,8,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Answer: 1934.,0.5907903000006627,one answer,0.0,0.0
+conflict,WikiContradict,9,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Passage [1] states Moxonidine as a nonselective agonist.,2.2025948999980756,neither,1.0,0.0
+conflict,WikiContradict,10,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,1,"Passage [1] and [2] contradict each other. 
+
+[1]: 1965
+[2]: 1961",2.859760899998946,one answer,1.0,0.0
+conflict,WikiContradict,11,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"Passages [1] and [2] contradict each other. 
+
+[1]: 21 August 1968
+[2]: 27 August 1968",2.4490814000018872,both answers,1.0,1.0
+conflict,WikiContradict,12,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Passage [1] states: 15 January 1971.,1.1838576000009198,one answer,1.0,0.0
+conflict,WikiContradict,13,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"The Loretto Chapel staircase is held together by wooden pegs, with no glue, nails, or other hardware used.",2.6926461000002746,one answer,0.0,0.0
+conflict,WikiContradict,14,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] Four people survived: Dorantes de Carranza, Castillo, Estevanico, and two others (not specified).
+
+[2] Four people survived: Álvar Núñez Cabeza de Vaca, Andrés Dorantes de Carranza, Estevanico, and Alonso del Castillo Maldonado.",6.215860699998302,both answers,0.0,1.0
+conflict,WikiContradict,15,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: 6 ft 9 in (2.06 m).,1.1716343000007328,both answers,0.0,1.0
+conflict,WikiContradict,16,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: Herschel Levi.,0.980851199998142,both answers,0.0,1.0
+conflict,WikiContradict,17,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Answer: Yes. Passage [1] states that if sleep were not essential, complex animals would suffer serious consequences, implying that sleep is essential for all complex animals.",2.682464900000923,neither,1.0,0.0
+conflict,WikiContradict,18,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Passage [2] states that the managers of St Eunan's GAA in 2017 were Barry Meehan and Eddie Brennan, but Passage [1] only mentions Maxi Curran as the manager from c2014-c.2018, without specifying 2017.",4.501182500000141,both answers,1.0,1.0
+conflict,WikiContradict,19,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: Yes.,0.5419906000024639,neither,0.0,0.0
+conflict,WikiContradict,20,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"Answer: In September 2011, in Augusta, Georgia, United States.",1.3681533000017225,neither,0.0,0.0
+conflict,WikiContradict,21,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Passage [1] disagrees. Passage [2] states that some synthetic chords, like the Prometheus chord, can be analyzed as traditional chords.",2.7785320000002685,neither,1.0,0.0
+conflict,WikiContradict,22,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Answer: Joseph Greenwood of Purau.,0.9305252999984077,one answer,0.0,0.0
+conflict,WikiContradict,23,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,Passage [1] and [2] agree. The answer is 9 cities.,2.084943800000474,neither,1.0,0.0
+conflict,WikiContradict,24,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,The passage states that the Whitehead Torpedo entered service in 1894.,1.5643371000005573,one answer,0.0,0.0
+conflict,WikiContradict,25,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"The passage only provides the year, but not the month. Answer: 1993 (year only).",1.585537299997668,both answers,0.0,1.0
+conflict,WikiContradict,26,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Passage [2] states the Penny Black was issued first on 1 May 1840, while Passage [1] does not provide a specific date for the Two Penny Blue's initial printing.",3.695604500000627,both answers,1.0,1.0
+conflict,WikiContradict,27,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] 1855, February (at the Battle of Dioubouldy) and 1855, February (after the battle, when Ndaté Yalla Mbodj's followers deserted).
+
+[2] 1855, January 31.",5.123830000000453,both answers,0.0,1.0
+conflict,WikiContradict,28,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"Passage [1] does not mention the Queen of Waalo, Ndaté Yalla Mbodj, being defeated. It only mentions that Maroso Tassé and his warriors refused to submit, and Ndaté Yalla Mbodj remained defiant.",3.908701199998177,neither,1.0,0.0
+conflict,WikiContradict,29,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"[1] Cayor
+[2] Dagana",3.043171999997867,both answers,0.0,1.0
+conflict,WikiContradict,30,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Answer 1: Yes, according to passage [1].
+
+Answer 2: No, according to the question itself.",1.810779300001741,neither,1.0,0.0
+conflict,WikiContradict,31,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"Passages [1] and [2] contradict each other. 
+
+[1] says 1 February, while [2] says 10 February.",3.32282540000233,neither,1.0,0.0
+conflict,WikiContradict,32,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"[1] 1 February 1972
+[2] 10 February 1972",1.3810162000008859,both answers,0.0,1.0
+conflict,WikiContradict,33,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] No, the passage does not consider the Baltic Sea a Mediterranean sea, but rather a dilution basin.
+
+[2] No, the passage states the Baltic Sea is not a Mediterranean sea.",4.094437700001436,neither,0.0,0.0
+conflict,WikiContradict,34,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Passage [1] and [2] disagree. 
+
+[1]: No, Microsoft Office 2013 does not work on Windows Server 2022.
+[2]: Yes, Microsoft Office 2013 is available for Windows Server 2022.",4.5832073999990826,neither,1.0,0.0
+conflict,WikiContradict,35,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"[1] Yes, a mint stamp is always unused.
+
+[2] No, a mint stamp can be unused or previously hinged, depending on the term used (e.g. Mint hinged, Mint never hinged).",5.642859100000351,neither,0.0,0.0
+conflict,WikiContradict,36,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"No, a mint stamp is not necessarily hinged. The term ""mint hinged"" specifically refers to a stamp that is unused but has been previously hinged, with visible remains of the hinge or gum disturbance.",2.8581763000001956,neither,0.0,0.0
+conflict,WikiContradict,37,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Both passages agree: Yes, the valley in which the Mitta Mitta river flows contains four small towns: Mitta Mitta, Eskdale, and Dartmouth.",2.8915046000001894,neither,0.0,0.0
+conflict,WikiContradict,38,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Both passages agree: the valley contains 4 small towns: Mitta Mitta, Eskdale, and Dartmouth.",1.7314323000027798,neither,0.0,0.0
+conflict,WikiContradict,39,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: Yes.,0.5050071000005119,neither,0.0,0.0
+conflict,WikiContradict,40,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] 2 March 1881
+[2] 3 March 1881",1.3379849000011745,both answers,0.0,1.0
+conflict,WikiContradict,41,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Both passages agree: Yes, Scout Skunk is a skunk.",1.3258055000005697,neither,0.0,0.0
+conflict,WikiContradict,42,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,2,0,Both passages agree: Scout Skunk is a skunk.,0.926941199999419,one answer,0.0,0.0
+conflict,WikiContradict,43,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Passage [1] does not provide a direct comparison between Finland's timezone and all of Russia's timezones. It only mentions the time difference between Moscow and Helsinki.,2.7661120999982813,neither,1.0,0.0
+conflict,WikiContradict,44,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,Answer: No.,0.6312004000028537,neither,0.0,0.0
+conflict,WikiContradict,45,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] Answer: 2
+[2] Answer: 8",2.17720719999852,neither,0.0,0.0
+conflict,WikiContradict,46,llama3.2:latest,CAS-NLI θ-CV preserving,Implicit,1,0,No answer provided in the passage.,0.9412497000012081,neither,0.0,0.0
+conflict,WikiContradict,47,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: Apomorphine.,0.9504550999990897,one answer,0.0,0.0
+conflict,WikiContradict,48,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"[1] 1746
+[2] January 8, 1747",1.6650334000005387,both answers,0.0,1.0
+conflict,WikiContradict,49,llama3.2:latest,CAS-NLI θ-CV preserving,Explicit,1,0,Answer: 40.4%.,1.0304178999977012,one answer,0.0,0.0
 conflict,WikiContradict,0,gemma3:latest,Vanilla RAG (no filter),Implicit,2,0,"Both apomorphine and aporphine are present in *Nymphaea nouchali var. caerulea*. Passage 1 states apomorphine is a main psychoactive compound, while passage 2 identifies aporphine as a psychoactive alkaloid within the species.",6.247284600001876,both answers,1.0,1.0
 conflict,WikiContradict,1,gemma3:latest,Vanilla RAG (no filter),Explicit,2,0,"Both passages state the P-700 was derived from the P-500 Bazalt missile. However, neither passage indicates any other missiles influenced the P-700’s design.",4.120763499999157,neither,1.0,0.0
 conflict,WikiContradict,2,gemma3:latest,Vanilla RAG (no filter),Implicit,2,0,"The passages disagree. [1] suggests the groove formation is ongoing, while [2] states they were caused by a single, predictable boulder ejection from an asteroid impact.",3.9551615999989735,neither,1.0,0.0
@@ -820,3 +973,103 @@ conflict,WikiContradict,46,gemma3:latest,CAS-NLI conflict-preserving,Implicit,1,
 conflict,WikiContradict,47,gemma3:latest,CAS-NLI conflict-preserving,Explicit,1,0,"According to the passage, apomorphine is the main psychoactive compound found in *Nymphaea nouchali var. caerulea*. Other compounds present include nuciferine.",4.02946719999818,one answer,0.0,0.0
 conflict,WikiContradict,48,gemma3:latest,CAS-NLI conflict-preserving,Explicit,2,1,"Passages [1] and [2] contradict each other. Passage [1] states it was laid down in 1746, while passage [2] specifies January 8th, 1747.",4.721644199998991,both answers,1.0,1.0
 conflict,WikiContradict,49,gemma3:latest,CAS-NLI conflict-preserving,Explicit,1,0,"According to the passage, the Socialist Revolutionaries (SRs) received 40.4% of the votes in the election results on 12/25 November 1917.",4.356573099998059,one answer,0.0,0.0
+conflict,WikiContradict,0,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,"The passages state that *Nymphaea nouchali var. caerulea* contains apomorphine and aporphine. Therefore, the answer is **both**.",3.3887873999992735,both answers,0.0,1.0
+conflict,WikiContradict,1,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,The passage states the P-700 was derived from the P-500 Bazalt missile. It does not mention any other missiles influencing the P-700’s design.,4.124405800001114,neither,0.0,0.0
+conflict,WikiContradict,2,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"No, the passages disagree. One states grooves were caused by a single impact event, while the other describes them as resulting from a “predictable pattern” of rolling boulders.",4.054787199998827,neither,1.0,0.0
+conflict,WikiContradict,3,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Yes, according to the passage, Bishop Heber met Charles D’Oyly in Patna in the 1840s. He described D’Oyly as the “best gentleman artist” he ever encountered.",4.883876100000634,neither,0.0,0.0
+conflict,WikiContradict,4,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,Both passages state that President Oler took the stand in court in 1911.,6.4459962000000814,both answers,0.0,1.0
+conflict,WikiContradict,5,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"The passages disagree. [1] states fishing is a significant occupation, encompassing various methods. [2] notes other fields like IT and medicine are prevalent, but fishing is not a local industry.",4.813266299999668,one answer,1.0,0.0
+conflict,WikiContradict,6,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"The passages state Lake Maracaibo’s overall salinity is between 1.5 and 3.8%, with localized areas reaching 0.2-0.3% due to river intrusion.",5.237820199999987,both answers,0.0,1.0
+conflict,WikiContradict,7,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"The passage lists defunct newspapers of the United States, primarily major metropolitan dailies that published for ten years or more. It doesn’t provide specific examples beyond stating they are “defunct.”",3.855620300000737,neither,0.0,0.0
+conflict,WikiContradict,8,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Little America II was established in 1934. The passage states it was “established in 1934, some thirty feet above the site of the original base.”",4.033617900000536,one answer,0.0,0.0
+conflict,WikiContradict,9,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"The passage states Moxonidine is listed as an I1 agonist, also an α2 adrenoceptor agonist. Therefore, it is a non-selective agonist.",4.30254369999966,both answers,0.0,1.0
+conflict,WikiContradict,10,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,"The passages disagree. Passage 1 states he became a director in 1933, while passage 2 indicates 1938.",2.857714500001748,neither,1.0,0.0
+conflict,WikiContradict,11,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,"The passages disagree. Passage 1 states he was born on December 25, 1883, while passage 2 indicates his birth occurred on December 25, 1883.",3.75294859999849,neither,1.0,0.0
+conflict,WikiContradict,12,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, Liu Zhi died on January 15, 1971, at the age of 78, in Taichung, Taiwan.",3.37162779999926,both answers,0.0,1.0
+conflict,WikiContradict,13,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"The staircase is held together by wooden pegs within seven inner and nine outer wooden segments. There was no glue, nails, or central pole used in its construction.",4.372129399998812,both answers,0.0,1.0
+conflict,WikiContradict,14,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Passages 1 and 2 disagree. Passage 1 states thirteen initially survived, with only three ultimately surviving. Passage 2 indicates four survivors: Castillo, Cabeza de Vaca, Dorantes, and Estevanico.",5.76973320000252,both answers,1.0,1.0
+conflict,WikiContradict,15,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, Tyler Mane is 6 ft 9 in (2.06 m) tall.",2.4749613999993016,both answers,0.0,1.0
+conflict,WikiContradict,16,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"Heinrich Marx was born with the name Herschel Levi. The passage states, “Heinrich Marx was born in Saarlouis into an Ashkenazi Jewish family with the name Herschel Levi…”",4.044493199999124,both answers,0.0,1.0
+conflict,WikiContradict,17,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"According to the passage, sleep is essential for all complex animals because “one would expect to find…Animal species that do not sleep at all - Animals that do not need recovery sleep after staying awake longer than usual - Animals that suffer no serious consequences as a result of lack of sleep.”",5.896772500000225,one answer,0.0,0.0
+conflict,WikiContradict,18,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,Both passages state that Barry Meehan and Eddie Brennan were managers of St Eunan’s GAA in 2017.,2.9674147000005178,both answers,0.0,1.0
+conflict,WikiContradict,19,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"Yes, according to the passage, Maria Stevens “was executed for witchcraft.”",1.875816700001451,one answer,0.0,0.0
+conflict,WikiContradict,20,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, the first walk of Stop Child Trafficking Now took place in September 2011 in Augusta, Georgia, United States.",3.4427224999999453,one answer,0.0,0.0
+conflict,WikiContradict,21,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"No, according to passage [1], synthetic chords “cannot be analyzed in terms of traditional harmonic structures.” However, passage [2] states that *some* synthetic chords, like the Prometheus chord, *can* be analyzed as altered dominant chords.",4.983787100001791,neither,1.0,0.0
+conflict,WikiContradict,22,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"According to the passage, Joseph Greenwood of Purau built the stockman’s hut near the peak of Mount Pleasant in 1846.",3.2311509999999544,one answer,0.0,0.0
+conflict,WikiContradict,23,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"According to passage [1], general city dumas were organized in nine cities of the Tobolsk Viceroyalty. Passage [2] lists those cities as Tobolsk, Tomsk, Tyumen, Tara, Turukhansk, Yeniseisk, Narym, and Omsk.",6.153428699999495,one answer,1.0,0.0
+conflict,WikiContradict,24,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,"The passages disagree. One states the Whitehead torpedo entered service in 1901, while the other indicates it was first deployed in 1903.",3.0275344000001496,neither,1.0,0.0
+conflict,WikiContradict,25,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, mass production of the Fourth Generation (A80) Toyota Supra began in April 1993.",2.9271667000029993,both answers,0.0,1.0
+conflict,WikiContradict,26,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Both the “Two Penny Blue” and “Penny Black” were issued on 1 May 1840. However, the “Penny Black” was valid for use from 6 May, while the “Two Penny Blue” became valid on 6 May as well.",5.72814649999782,one answer,1.0,0.0
+conflict,WikiContradict,27,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,Both passages state that France defeated Ndaté Yalla Mbodj in **January 1855**. Passage 2 specifically states the defeat occurred on 31 January.,4.987541100003,both answers,1.0,1.0
+conflict,WikiContradict,28,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"The passage states that in February 1855, General Faidherbe defeated Ndaté Yalla Mbodj at the Battle of Dioubouldy.",4.888546000001952,both answers,0.0,1.0
+conflict,WikiContradict,29,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Both passages state Ndaté Yalla Mbodj died in Dagana, Wolof Kingdom of Waalo. [1] and [2]",5.21678520000205,one answer,0.0,0.0
+conflict,WikiContradict,30,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Yes, according to the passage, Ndaté Yalla Mbodj remained in Cayor until her death in 1860.",4.243749699999171,neither,0.0,0.0
+conflict,WikiContradict,31,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,"The passages disagree. One states Paul McCole was born in 1932, while the other indicates he was born on February 1st.",2.845362500000192,neither,1.0,0.0
+conflict,WikiContradict,32,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,0,0,"The passages disagree. One states Paul McCarty was born in 1949, while the other states he was born in 1947.",2.9663564000002225,neither,1.0,0.0
+conflict,WikiContradict,33,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"The passages disagree. Passage 1 states the Baltic Sea is a ""mediterranean sea"" and a ""dilution basin."" Passage 2 asserts it’s a “brackish inland sea” formed by glacial erosion, not a mediterranean sea.",5.505549699999392,neither,1.0,0.0
+conflict,WikiContradict,34,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"The passages disagree. [1] states Office 2013 does not work on Windows Server 2022, while [2] claims it still runs on that operating system.",4.592483799999172,neither,1.0,0.0
+conflict,WikiContradict,35,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Yes, according to both passages, a mint stamp is defined as “unused.” However, the passage clarifies that a mint stamp can include those without gum or previously hinged, as long as they appear unused.",6.096533699997963,neither,1.0,0.0
+conflict,WikiContradict,36,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"Yes, a mint stamp can be hinged. The passages define “Mint hinged (MH)” as a stamp that is unused but has been previously hinged, with visible hinge remains.",5.3330841999995755,neither,0.0,0.0
+conflict,WikiContradict,37,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Both passages state that the Mitta Mitta River flows through a valley containing the towns of Mitta Mitta, Eskdale, and Dartmouth.",3.589680599998246,neither,0.0,0.0
+conflict,WikiContradict,38,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"Both passages state the valley contains four small towns: Mitta Mitta, Eskdale, and Dartmouth.",2.6103745000000345,one answer,0.0,0.0
+conflict,WikiContradict,39,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"Yes, according to the passage, Karl Weyprecht died on 2 March 1881.",2.595253600000433,neither,0.0,0.0
+conflict,WikiContradict,40,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"According to passage [1], Karl Weyprecht died on 2 March 1881. Passage [2] states he died on 3 March 1881, indicating a discrepancy in the date.",4.601121600000624,both answers,1.0,1.0
+conflict,WikiContradict,41,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Yes, according to both passages, Scout Skunk is a skunk. Both passages state “Scout Skunk, a 34-year-old skunk who is a badger.”",3.903781100001652,neither,0.0,0.0
+conflict,WikiContradict,42,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,2,0,"Both passages state that Scout Skunk is a 34-year-old skunk who is a badger. Therefore, Scout Skunk is a skunk and a badger.",3.690253100001428,both answers,0.0,1.0
+conflict,WikiContradict,43,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,"The passage states that the Moscow Peace Treaty was signed on 12 March, Moscow Time, which is 1 hour later on 13 March, Finnish time. Therefore, Finland’s timezone is later than Russia’s.",4.612843599999906,neither,0.0,0.0
+conflict,WikiContradict,44,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,0,0,Please provide the passages! I need the text to determine if the list contains churches and to address any disagreements.,2.2745761000005587,neither,1.0,0.0
+conflict,WikiContradict,45,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"The passages disagree. [1] states two elderly individuals speak Munsee, while [2] lists eight native speakers with varying dialects.",3.7451684000006935,both answers,1.0,1.0
+conflict,WikiContradict,46,gemma3:latest,CAS-NLI θ-CV (penalty),Implicit,1,0,The passages do not state when the Hungarian Handball League started. They only list the duration of participation for various clubs in the first division.,3.0600146999968274,neither,0.0,0.0
+conflict,WikiContradict,47,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, apomorphine is the main psychoactive compound found in *Nymphaea nouchali var. caerulea*. Other compounds present include nuciferine.",4.02946719999818,one answer,0.0,0.0
+conflict,WikiContradict,48,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,2,0,"The passages disagree. [1] states it was laid down in 1746, while [2] specifies January 8th, 1747.",3.7226261000032537,both answers,1.0,1.0
+conflict,WikiContradict,49,gemma3:latest,CAS-NLI θ-CV (penalty),Explicit,1,0,"According to the passage, the Socialist Revolutionaries (SRs) received 40.4% of the votes in the election results on 12/25 November 1917.",4.356573099998059,one answer,0.0,0.0
+conflict,WikiContradict,0,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"The passage states that *Nymphaea nouchali var. caerulea* contains the psychoactive alkaloid aporphine. It does not mention apomorphine. Therefore, the answer is aporphine and neither.",4.777549599999475,both answers,0.0,1.0
+conflict,WikiContradict,1,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,The passage states the P-700 was derived from the P-500 Bazalt missile. It does not mention any other missiles influencing the P-700’s design.,4.124405800001114,neither,0.0,0.0
+conflict,WikiContradict,2,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"No, the passages disagree. One states grooves were caused by a single impact event, while the other describes them as resulting from a “predictable pattern” of rolling boulders.",4.054787199998827,neither,1.0,0.0
+conflict,WikiContradict,3,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Yes, according to the passage, Bishop Heber met Charles D’Oyly in Patna in the 1840s. He described D’Oyly as the “best gentleman artist” he ever encountered.",4.883876100000634,neither,0.0,0.0
+conflict,WikiContradict,4,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,Both passages state that President Oler took the stand in court in 1911.,6.4459962000000814,both answers,0.0,1.0
+conflict,WikiContradict,5,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"The passages disagree. [1] states fishing is a significant occupation, encompassing various methods. [2] notes other fields like IT and medicine are prevalent, but fishing is not a local industry.",4.813266299999668,one answer,1.0,0.0
+conflict,WikiContradict,6,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"The passages state Lake Maracaibo’s overall salinity is between 1.5 and 3.8%, with localized areas reaching 0.2-0.3% due to river intrusion.",5.237820199999987,both answers,0.0,1.0
+conflict,WikiContradict,7,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"The passage lists defunct newspapers of the United States, primarily major metropolitan dailies that published for ten years or more. It doesn’t provide specific examples beyond stating they are “defunct.”",3.855620300000737,neither,0.0,0.0
+conflict,WikiContradict,8,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Little America II was established in 1934. The passage states it was “established in 1934, some thirty feet above the site of the original base.”",4.033617900000536,one answer,0.0,0.0
+conflict,WikiContradict,9,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"The passage states Moxonidine is listed as an I1 agonist, also an α2 adrenoceptor agonist. Therefore, it is a non-selective agonist.",4.30254369999966,both answers,0.0,1.0
+conflict,WikiContradict,10,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,1,"Passages [1] and [2] contradict. Passage [1] states 1965, while passage [2] indicates he became the sole director in 1961 and was initially replaced in 1952.",5.679821400000947,both answers,1.0,1.0
+conflict,WikiContradict,11,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"Passages [1] and [2] contradict each other. Passage [1] states he was born on August 21, 1968, while passage [2] states he was born on August 27, 1968.",4.967181899999559,both answers,1.0,1.0
+conflict,WikiContradict,12,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, Liu Zhi died on January 15, 1971, at the age of 78, in Taichung, Taiwan.",3.37162779999926,both answers,0.0,1.0
+conflict,WikiContradict,13,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"The staircase is held together by wooden pegs within seven inner and nine outer wooden segments. There was no glue, nails, or central pole used in its construction.",4.372129399998812,both answers,0.0,1.0
+conflict,WikiContradict,14,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Passages 1 and 2 disagree. Passage 1 states thirteen initially survived, with only three ultimately surviving. Passage 2 indicates four survivors: Castillo, Cabeza de Vaca, Dorantes, and Estevanico.",5.76973320000252,both answers,1.0,1.0
+conflict,WikiContradict,15,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, Tyler Mane is 6 ft 9 in (2.06 m) tall.",2.4749613999993016,both answers,0.0,1.0
+conflict,WikiContradict,16,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"Heinrich Marx was born with the name Herschel Levi. The passage states, “Heinrich Marx was born in Saarlouis into an Ashkenazi Jewish family with the name Herschel Levi…”",4.044493199999124,both answers,0.0,1.0
+conflict,WikiContradict,17,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"According to the passage, sleep is essential for all complex animals because “one would expect to find…Animal species that do not sleep at all - Animals that do not need recovery sleep after staying awake longer than usual - Animals that suffer no serious consequences as a result of lack of sleep.”",5.896772500000225,one answer,0.0,0.0
+conflict,WikiContradict,18,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,Both passages state that Barry Meehan and Eddie Brennan were managers of St Eunan’s GAA in 2017.,2.9674147000005178,both answers,0.0,1.0
+conflict,WikiContradict,19,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"Yes, according to the passage, Maria Stevens “was executed for witchcraft.”",1.875816700001451,one answer,0.0,0.0
+conflict,WikiContradict,20,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, the first walk of Stop Child Trafficking Now took place in September 2011 in Augusta, Georgia, United States.",3.4427224999999453,one answer,0.0,0.0
+conflict,WikiContradict,21,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"No, according to passage [1], synthetic chords “cannot be analyzed in terms of traditional harmonic structures.” However, passage [2] states that *some* synthetic chords, like the Prometheus chord, *can* be analyzed as altered dominant chords.",4.983787100001791,neither,1.0,0.0
+conflict,WikiContradict,22,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"According to the passage, Joseph Greenwood of Purau built the stockman’s hut near the peak of Mount Pleasant in 1846.",3.2311509999999544,one answer,0.0,0.0
+conflict,WikiContradict,23,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"According to passage [1], general city dumas were organized in nine cities of the Tobolsk Viceroyalty. Passage [2] lists those cities as Tobolsk, Tomsk, Tyumen, Tara, Turukhansk, Yeniseisk, Narym, and Omsk.",6.153428699999495,one answer,1.0,0.0
+conflict,WikiContradict,24,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, Whitehead torpedoes entered service in 1894.",2.1340271000008215,one answer,0.0,0.0
+conflict,WikiContradict,25,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, mass production of the Fourth Generation (A80) Toyota Supra began in April 1993.",2.9271667000029993,both answers,0.0,1.0
+conflict,WikiContradict,26,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Both the “Two Penny Blue” and “Penny Black” were issued on 1 May 1840. However, the “Penny Black” was valid for use from 6 May, while the “Two Penny Blue” became valid on 6 May as well.",5.72814649999782,one answer,1.0,0.0
+conflict,WikiContradict,27,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,Both passages state that France defeated Ndaté Yalla Mbodj in **January 1855**. Passage 2 specifically states the defeat occurred on 31 January.,4.987541100003,both answers,1.0,1.0
+conflict,WikiContradict,28,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"The passage states that in February 1855, General Faidherbe defeated Ndaté Yalla Mbodj at the Battle of Dioubouldy.",4.888546000001952,both answers,0.0,1.0
+conflict,WikiContradict,29,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Both passages state Ndaté Yalla Mbodj died in Dagana, Wolof Kingdom of Waalo. [1] and [2]",5.21678520000205,one answer,0.0,0.0
+conflict,WikiContradict,30,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Yes, according to the passage, Ndaté Yalla Mbodj remained in Cayor until her death in 1860.",4.243749699999171,neither,0.0,0.0
+conflict,WikiContradict,31,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"No, the passages contradict each other. Passage [1] states he was born on February 1st, 1972, while passage [2] states he was born on February 10th, 1972.",5.759246599998733,neither,1.0,0.0
+conflict,WikiContradict,32,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,1,"Passages [1] and [2] contradict. Passage [1] states Paul McCole was born on 1 February 1972, while passage [2] states he was born on 10 February 1972.",5.803319499998906,both answers,1.0,1.0
+conflict,WikiContradict,33,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"The passages disagree. Passage 1 states the Baltic Sea is a ""mediterranean sea"" and a ""dilution basin."" Passage 2 asserts it’s a “brackish inland sea” formed by glacial erosion, not a mediterranean sea.",5.505549699999392,neither,1.0,0.0
+conflict,WikiContradict,34,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"The passages disagree. [1] states Office 2013 does not work on Windows Server 2022, while [2] claims it still runs on that operating system.",4.592483799999172,neither,1.0,0.0
+conflict,WikiContradict,35,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Yes, according to both passages, a mint stamp is defined as “unused.” However, the passage clarifies that a mint stamp can include those without gum or previously hinged, as long as they appear unused.",6.096533699997963,neither,1.0,0.0
+conflict,WikiContradict,36,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"Yes, a mint stamp can be hinged. The passages define “Mint hinged (MH)” as a stamp that is unused but has been previously hinged, with visible hinge remains.",5.3330841999995755,neither,0.0,0.0
+conflict,WikiContradict,37,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Both passages state that the Mitta Mitta River flows through a valley containing the towns of Mitta Mitta, Eskdale, and Dartmouth.",3.589680599998246,neither,0.0,0.0
+conflict,WikiContradict,38,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"Both passages state the valley contains four small towns: Mitta Mitta, Eskdale, and Dartmouth.",2.6103745000000345,one answer,0.0,0.0
+conflict,WikiContradict,39,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"Yes, according to the passage, Karl Weyprecht died on 2 March 1881.",2.595253600000433,neither,0.0,0.0
+conflict,WikiContradict,40,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"According to passage [1], Karl Weyprecht died on 2 March 1881. Passage [2] states he died on 3 March 1881, indicating a discrepancy in the date.",4.601121600000624,both answers,1.0,1.0
+conflict,WikiContradict,41,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Yes, according to both passages, Scout Skunk is a skunk. Both passages state “Scout Skunk, a 34-year-old skunk who is a badger.”",3.903781100001652,neither,0.0,0.0
+conflict,WikiContradict,42,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,2,0,"Both passages state that Scout Skunk is a 34-year-old skunk who is a badger. Therefore, Scout Skunk is a skunk and a badger.",3.690253100001428,both answers,0.0,1.0
+conflict,WikiContradict,43,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"The passage states that the Moscow Peace Treaty was signed on 12 March, Moscow Time, which is 1 hour later on 13 March, Finnish time. Therefore, Finland’s timezone is later than Russia’s.",4.612843599999906,neither,0.0,0.0
+conflict,WikiContradict,44,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,"No, the list does not contain churches. The passage states, “This article does not include churches, religious shrines and pilgrimage sites.”",2.7341931000009936,neither,0.0,0.0
+conflict,WikiContradict,45,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"The passages disagree. [1] states two elderly individuals speak Munsee, while [2] lists eight native speakers with varying dialects.",3.7451684000006935,both answers,1.0,1.0
+conflict,WikiContradict,46,gemma3:latest,CAS-NLI θ-CV preserving,Implicit,1,0,The passages do not state when the Hungarian Handball League started. They only list the duration of participation for various clubs in the first division.,3.0600146999968274,neither,0.0,0.0
+conflict,WikiContradict,47,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, apomorphine is the main psychoactive compound found in *Nymphaea nouchali var. caerulea*. Other compounds present include nuciferine.",4.02946719999818,one answer,0.0,0.0
+conflict,WikiContradict,48,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,2,0,"The passages disagree. [1] states it was laid down in 1746, while [2] specifies January 8th, 1747.",3.7226261000032537,both answers,1.0,1.0
+conflict,WikiContradict,49,gemma3:latest,CAS-NLI θ-CV preserving,Explicit,1,0,"According to the passage, the Socialist Revolutionaries (SRs) received 40.4% of the votes in the election results on 12/25 November 1917.",4.356573099998059,one answer,0.0,0.0

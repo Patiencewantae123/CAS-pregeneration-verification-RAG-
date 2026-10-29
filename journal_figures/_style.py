@@ -53,6 +53,10 @@ METHOD_SHORT = {
     "CAS-NLI θ-CV preserving": "CAS-NLI θ-CV preserve",
 }
 DATASET_MARKER = {"HotpotQA": "o", "MuSiQue": "D"}
+# Methods shown in the LLM figures (all methods are in tables.md); the untuned conflict-preserving variant
+# is omitted because it is numerically almost identical to its θ-CV version.
+LLM_METHODS = ["Vanilla RAG (no filter)", "Relevance top-3 (BM25)", "CAS (full pipeline)",
+               "CAS-NLI (full pipeline)", "CAS-NLI θ-CV (penalty)", "CAS-NLI θ-CV preserving"]
 
 INK, INK2, MUTED, GRID, AXIS = "#0b0b0b", "#52514e", "#898781", "#e1e0d9", "#9a9890"
 
