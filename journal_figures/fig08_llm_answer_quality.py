@@ -33,7 +33,7 @@ for ax, (letter, (ds, metric, xlabel)) in zip(axes, zip("abcd", panels)):
     ax.set_xlabel(xlabel)
     ax.grid(axis="x")
     n = look[(ds, models[0], methods[0], metric)]["n"]
-    panel_title(ax, letter, f"{ds} (n = {n})")
+    panel_title(ax, letter, f"{ds}, {'accuracy' if metric == 'accuracy' else 'F1'} (n = {n})")
 axes[0].set_yticks(ticks, labels)
 axes[0].invert_yaxis()
 axes[0].tick_params(axis="y", length=0)

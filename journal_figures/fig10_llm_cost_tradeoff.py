@@ -1,5 +1,6 @@
 """Fig. 10 - Answer accuracy vs generation cost (prompt tokens, wall-clock latency) per model and method."""
 from matplotlib.lines import Line2D
+from matplotlib.ticker import FuncFormatter
 
 from _style import (DOUBLE, INK2, METHOD_COLOR, METHOD_MARKER, METHOD_SHORT, MODEL_LABEL, boot_mean,
                     load_llm, panel_title, plt, save)
@@ -24,6 +25,8 @@ for model in models:
 for ax, letter, xlabel, title in [(axes[0], "a", "Mean prompt length (tokens)", "Accuracy vs context size"),
                                   (axes[1], "b", "Mean generation latency (s, CPU)", "Accuracy vs latency")]:
     ax.set_xscale("log")
+    ax.xaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:g}"))
+    ax.xaxis.set_minor_formatter(FuncFormatter(lambda v, _: f"{v:g}" if str(f"{v:g}")[0] in "25" else ""))
     ax.set_xlabel(xlabel)
     ax.grid(axis="both")
     panel_title(ax, letter, title)

@@ -247,6 +247,15 @@ def summarize(rows, conflict_rows, models):
                     m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
                     tests.append({"dataset": ds, "model": model, "comparator": other, "metric": metric,
                                   "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
+    for model in models:
+        cas = sorted((r for r in conflict_rows if r["model"] == model and r["method"] == "CAS (full pipeline)"),
+                     key=lambda r: r["item"])
+        base = sorted((r for r in conflict_rows if r["model"] == model and r["method"] == "Vanilla RAG (no filter)"),
+                      key=lambda r: r["item"])
+        for metric in ("conflict_flagged", "both"):
+            m, lo, hi, p = paired_test([r[metric] for r in cas], [r[metric] for r in base])
+            tests.append({"dataset": "WikiContradict", "model": model, "comparator": "Vanilla RAG (no filter)",
+                          "metric": metric, "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
     order = sorted(range(len(tests)), key=lambda i: tests[i]["p_value"])
     running = 0.0
     for rank, i in enumerate(order):

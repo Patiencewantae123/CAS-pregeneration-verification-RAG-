@@ -1,0 +1,126 @@
+﻿[115/920] llama3.2:latest | Vanilla RAG (no filter) done, elapsed 16.6 min
+[230/920] llama3.2:latest | Relevance top-3 (BM25) done, elapsed 19.8 min
+[345/920] llama3.2:latest | CAS w/o conflict graph done, elapsed 22.5 min
+[460/920] llama3.2:latest | CAS (full pipeline) done, elapsed 23.9 min
+[575/920] gemma3:latest | Vanilla RAG (no filter) done, elapsed 45.2 min
+[690/920] gemma3:latest | Relevance top-3 (BM25) done, elapsed 49.5 min
+[805/920] gemma3:latest | CAS w/o conflict graph done, elapsed 55.4 min
+[920/920] gemma3:latest | CAS (full pipeline) done, elapsed 57.7 min
+
+QA results (mean [95% CI])
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    f1         0.657 [0.526, 0.778] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    accuracy   0.600 [0.460, 0.740] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    abstain    0.060 [0.000, 0.140] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=44
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     f1         0.583 [0.449, 0.709] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     accuracy   0.540 [0.400, 0.680] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     ungrounded 0.047 [0.000, 0.116] n=43
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     f1         0.509 [0.372, 0.648] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     abstain    0.180 [0.080, 0.280] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     ungrounded 0.077 [0.000, 0.179] n=39
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        f1         0.493 [0.353, 0.633] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        abstain    0.120 [0.040, 0.220] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        ungrounded 0.048 [0.000, 0.119] n=42
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    f1         0.619 [0.487, 0.743] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    accuracy   0.560 [0.420, 0.700] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=44
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     f1         0.515 [0.380, 0.647] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     accuracy   0.540 [0.400, 0.680] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     abstain    0.260 [0.140, 0.380] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     ungrounded 0.028 [0.000, 0.083] n=36
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     f1         0.455 [0.325, 0.579] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     accuracy   0.480 [0.340, 0.620] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     abstain    0.280 [0.160, 0.400] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     ungrounded 0.028 [0.000, 0.083] n=36
+  HotpotQA  gemma3:latest    CAS (full pipeline)        f1         0.495 [0.365, 0.625] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        accuracy   0.520 [0.380, 0.660] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        abstain    0.240 [0.120, 0.360] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        ungrounded 0.026 [0.000, 0.079] n=38
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    f1         0.300 [0.100, 0.533] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    accuracy   0.333 [0.133, 0.600] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    abstain    0.333 [0.133, 0.600] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=10
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        f1         0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        accuracy   0.200 [0.000, 0.400] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    f1         0.164 [0.000, 0.351] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    accuracy   0.200 [0.000, 0.400] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     accuracy   0.200 [0.000, 0.400] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     abstain    0.667 [0.400, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     ungrounded 0.000 [0.000, 0.000] n=5
+  MuSiQue   gemma3:latest    CAS (full pipeline)        f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        accuracy   0.200 [0.000, 0.400] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        ungrounded 0.000 [0.000, 0.000] n=6
+
+Paired tests CAS (full) minus comparator
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    f1        -0.164 [-0.282, -0.050] p=0.0092 holm=0.2208
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    accuracy  -0.100 [-0.220, +0.000] p=0.1825 holm=1.0000
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     f1        -0.089 [-0.184, +0.000] p=0.1290 holm=1.0000
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     accuracy  -0.040 [-0.120, +0.040] p=0.6189 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     f1        -0.016 [-0.048, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    f1        -0.124 [-0.264, +0.016] p=0.1281 holm=1.0000
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    accuracy  -0.040 [-0.160, +0.080] p=0.7565 holm=1.0000
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     f1        -0.021 [-0.113, +0.061] p=0.6536 holm=1.0000
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     accuracy  -0.020 [-0.100, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     f1        +0.040 [+0.000, +0.100] p=0.5028 holm=1.0000
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     accuracy  +0.040 [+0.000, +0.100] p=0.5028 holm=1.0000
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    f1        -0.167 [-0.367, +0.000] p=0.2493 holm=1.0000
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    accuracy  -0.133 [-0.333, +0.000] p=0.4985 holm=1.0000
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     f1        +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     f1        +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    f1        -0.044 [-0.133, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+
+WikiContradict conflict handling
+  llama3.2:latest  Vanilla RAG (no filter)    both              0.480 [0.340, 0.620]
+  llama3.2:latest  Vanilla RAG (no filter)    conflict_flagged  0.480 [0.340, 0.620]
+  llama3.2:latest  Vanilla RAG (no filter)    {'both answers': 24, 'neither': 19, 'one answer': 7} kept=2.00
+  llama3.2:latest  Relevance top-3 (BM25)     both              0.480 [0.340, 0.620]
+  llama3.2:latest  Relevance top-3 (BM25)     conflict_flagged  0.480 [0.340, 0.620]
+  llama3.2:latest  Relevance top-3 (BM25)     {'both answers': 24, 'neither': 19, 'one answer': 7} kept=2.00
+  llama3.2:latest  CAS w/o conflict graph     both              0.180 [0.080, 0.300]
+  llama3.2:latest  CAS w/o conflict graph     conflict_flagged  0.320 [0.200, 0.460]
+  llama3.2:latest  CAS w/o conflict graph     {'both answers': 9, 'neither': 28, 'one answer': 13} kept=1.00
+  llama3.2:latest  CAS (full pipeline)        both              0.180 [0.080, 0.300]
+  llama3.2:latest  CAS (full pipeline)        conflict_flagged  0.260 [0.140, 0.400]
+  llama3.2:latest  CAS (full pipeline)        {'both answers': 9, 'neither': 27, 'one answer': 14} kept=1.14
+  gemma3:latest    Vanilla RAG (no filter)    both              0.480 [0.340, 0.620]
+  gemma3:latest    Vanilla RAG (no filter)    conflict_flagged  0.700 [0.580, 0.820]
+  gemma3:latest    Vanilla RAG (no filter)    {'both answers': 24, 'neither': 16, 'one answer': 10} kept=2.00
+  gemma3:latest    Relevance top-3 (BM25)     both              0.480 [0.340, 0.620]
+  gemma3:latest    Relevance top-3 (BM25)     conflict_flagged  0.700 [0.580, 0.820]
+  gemma3:latest    Relevance top-3 (BM25)     {'both answers': 24, 'neither': 16, 'one answer': 10} kept=2.00
+  gemma3:latest    CAS w/o conflict graph     both              0.340 [0.220, 0.480]
+  gemma3:latest    CAS w/o conflict graph     conflict_flagged  0.100 [0.020, 0.200]
+  gemma3:latest    CAS w/o conflict graph     {'both answers': 17, 'neither': 17, 'one answer': 16} kept=1.00
+  gemma3:latest    CAS (full pipeline)        both              0.360 [0.240, 0.500]
+  gemma3:latest    CAS (full pipeline)        conflict_flagged  0.120 [0.040, 0.220]
+  gemma3:latest    CAS (full pipeline)        {'both answers': 18, 'neither': 17, 'one answer': 15} kept=1.14

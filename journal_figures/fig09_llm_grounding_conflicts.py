@@ -9,9 +9,9 @@ models, methods = summary["models"], list(METHOD_COLOR)
 HATCH = {"Vanilla RAG (no filter)": "", "Relevance top-3 (BM25)": "////",
          "CAS w/o conflict graph": "....", "CAS (full pipeline)": "xxxx"}
 panels = [
-    ("a", "Ungrounded answers (QA, pooled)", qa, "ungrounded", "Share of non-abstaining answers"),
-    ("b", "Abstentions (QA, pooled)", qa, "abstain", "Share of answers"),
-    ("c", "Conflict flagged (WikiContradict)", conflict, "conflict_flagged", "Share of answers"),
+    ("a", "Ungrounded answers (QA)", qa, "ungrounded", "Share of non-abstaining answers"),
+    ("b", "Abstentions (QA)", qa, "abstain", "Share of answers"),
+    ("c", "Conflict flagged (WikiContr.)", conflict, "conflict_flagged", "Share of answers"),
 ]
 rows = []
 
@@ -35,6 +35,9 @@ for ax, (letter, title, df, metric, ylabel) in zip(axes, panels):
         ax.bar(pos, means, w * 0.9, color=METHOD_COLOR[m], hatch=HATCH[m], edgecolor="white", linewidth=0.6,
                label=METHOD_SHORT[m], zorder=2)
         ax.errorbar(pos, means, yerr=[lo, hi], fmt="none", ecolor="#52514e", elinewidth=0.7, capsize=1.2, zorder=3)
+        for p, mu in zip(pos, means):
+            if mu == 0:
+                ax.text(p, 0.004, "0", ha="center", va="bottom", fontsize=6.5, color="#52514e")
     ax.set_xticks(x, [MODEL_LABEL.get(mo, mo) for mo in models])
     ax.tick_params(axis="x", length=0)
     ax.set_ylim(0, min(1.0, max(0.25, top * 1.15)))
