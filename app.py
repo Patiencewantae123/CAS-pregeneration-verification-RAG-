@@ -291,16 +291,4 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                 response_text = "❌ **Verification Failed:** No passages passed the reliability and relevance threshold to safely answer your query."
 
             st.markdown(response_text)
-            st.session_state.messages.append({"role": "assistant", "content": response_text})$cores = (Get-CimInstance Win32_Processor).NumberOfLogicalProcessors
-1..$cores | ForEach-Object { Start-Job { while ($true) { [math]::Sqrt(123456789) } } }
-
-while ($true) { 1..1000000 | % { [math]::Sqrt($_) } }$cores = (Get-CimInstance Win32_Processor).NumberOfLogicalProcessors
-1..$cores | ForEach-Object { Start-Job { while ($true) { [math]::Sqrt(123456789) } } }
-
-while ($true) { 1..1000000 | % { [math]::Sqrt($_) } }$cores = (Get-CimInstance Win32_Processor).NumberOfLogicalProcessors
-1..$cores | ForEach-Object { Start-Job { while ($true) { [math]::Sqrt(123456789) } } }
-
-while ($true) { 1..1000000 | % { [math]::Sqrt($_) } }$cores = (Get-CimInstance Win32_Processor).NumberOfLogicalProcessors
-1..$cores | ForEach-Object { Start-Job { while ($true) { [math]::Sqrt(123456789) } } }
-
-while ($true) { 1..1000000 | % { [math]::Sqrt($_) } }
+            st.session_state.messages.append({"role": "assistant", "content": response_text})

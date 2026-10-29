@@ -1,4 +1,4 @@
-﻿import sys
+import sys
 import os
 import streamlit as st
 import pandas as pd
@@ -86,7 +86,8 @@ with tab1:
 
     def color_status(val):
         if "RETAINED" in str(val):
-            return "background-color: #064e3b; color: #86efac; font x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccght: bold;"
+            return "background-color: #064e3b; color: #86efac; font-weight: bold;"
+        return "background-color: #7f1d1d; color: #fca5a5; font-weight: bold;"
 
     st.dataframe(
         df.style.map(color_status, subset=["Status"]), 

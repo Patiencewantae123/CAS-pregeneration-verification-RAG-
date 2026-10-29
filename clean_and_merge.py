@@ -61,11 +61,20 @@ def normalize_sample(dataset_name, sample, idx):
         'metadata': sample.get('metadata', {})
     }
 
+def load_records(file_path):
+    # The *_hf_samples.json files are JSON Lines, the others are JSON arrays
+    with open(file_path, 'r', encoding='utf-8-sig') as f:
+        text = f.read()
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        return [json.loads(line) for line in text.splitlines() if line.strip()]
+
 def process_and_merge():
-    # Find all sample JSON files in current folder
-    json_files = sorted(glob.glob('*_samples.json') + glob.glob('*qa.json') + glob.glob('*rag*.json'))
-    # Filter out synthesized target outputs if re-running
-    json_files = [f for f in json_files if f not in ['unified_benchmark_dataset.json', 'cas_evaluation_datasets_all.json']]
+    # Find all sample JSON files in the data folder
+    data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
+    patterns = ['*_samples.json', '*qa.json', '*rag*.json']
+    json_files = sorted({f for p in patterns for f in glob.glob(os.path.join(data_dir, p))})
     
     merged_data = []
     seen_ids = set()
@@ -75,19 +84,19 @@ def process_and_merge():
     
     for file_path in json_files:
         try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = json.load(f)
-                
+            content = load_records(file_path)
             samples = content if isinstance(content, list) else [content]
             file_count = 0
             
             for idx, raw_sample in enumerate(samples, start=1):
                 clean_record = normalize_sample(os.path.basename(file_path), raw_sample, idx)
                 
-                # Deduplication check
-                if clean_record['id'] in seen_ids:
+                # Deduplication check: ids alone are not unique (ConflictBank ids are
+                # Wikidata relation ids shared by many claims), so key on id + query
+                key = (clean_record['id'], clean_record['query'])
+                if key in seen_ids:
                     continue
-                seen_ids.add(clean_record['id'])
+                seen_ids.add(key)
                 
                 merged_data.append(clean_record)
                 file_count += 1
@@ -98,7 +107,7 @@ def process_and_merge():
             print(f'  [X] Could not process {file_path}: {e}')
 
     # Output unified dataset
-    output_filename = 'unified_benchmark_dataset.json'
+    output_filename = os.path.join(os.path.dirname(data_dir), 'unified_benchmark_dataset.json')
     with open(output_filename, 'w', encoding='utf-8') as f:
         json.dump(merged_data, f, indent=2)
         

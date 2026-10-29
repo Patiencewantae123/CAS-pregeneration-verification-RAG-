@@ -31,7 +31,7 @@ def load_dataset(filepath: str):
     ]
 
 def run_verification():
-    dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "synthetic_passages.json")
+    dataset_path = os.path.join(os.path.dirname(__file__), "..", "data", "cas_pregeneration.json")
     output_path = os.path.join(os.path.dirname(__file__), "..", "data", "verified_output.json")
 
     docs = load_dataset(dataset_path)

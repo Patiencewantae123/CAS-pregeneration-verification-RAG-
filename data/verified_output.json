@@ -28,16 +28,7 @@
       "conflict_penalty": 0.95,
       "final_weight": 0.3745,
       "status": "RETAINED"
-    },
-    {
-      "id": "Doc_04",
-      "source": "Pharma_DB",
-      "content": "Drug-X is an experimental therapeutic compound tested for hypertension.",
-      "trust_score": 0.737,
-      "conflict_penalty": 0.0,
-      "final_weight": 0.737,
-      "status": "RETAINED"
     }
   ],
-  "c_verified": "=== VERIFIED RECONCILED CONTEXT (C_verified) ===\n[Source: Pharma_DB | Net Weight: 0.74] Drug-X is an experimental therapeutic compound tested for hypertension.\n[Source: PeerReviewed_Journal | Net Weight: 0.44] The FDA approved drug-X for Phase 3 clinical trials in early 2024.\n[Source: Medical_News_Outlet | Net Weight: 0.37] Phase 3 clinical trial for drug-X was approved by health regulatory bodies."
+  "c_verified": "=== VERIFIED RECONCILED CONTEXT (C_verified) ===\n[Source: PeerReviewed_Journal | Net Weight: 0.44] The FDA approved drug-X for Phase 3 clinical trials in early 2024.\n[Source: Medical_News_Outlet | Net Weight: 0.37] Phase 3 clinical trial for drug-X was approved by health regulatory bodies."
 }
