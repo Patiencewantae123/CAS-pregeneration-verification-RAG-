@@ -21,8 +21,8 @@ from collections import Counter
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from run_evaluation import (METHODS, OUT_RESULTS, REFERENCES, boot_ci, cas_preserving, evidence_items,  # noqa: E402
-                            load, paired_test, tokens)
+from run_evaluation import (METHODS, OUT_RESULTS, REFERENCES, boot_ci, cas_preserving,  # noqa: E402
+                            cas_preserving_cv, evidence_items, load, paired_test, tokens)
 
 OLLAMA = "http://localhost:11434/api/generate"
 OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 96}
@@ -91,6 +91,8 @@ def select_with_notes(method, select, q, passages):
     """Selected passage ids plus, for the conflict-preserving method, the contradicting pairs to annotate."""
     if method == "CAS-NLI conflict-preserving":
         return cas_preserving(q, passages)
+    if method == "CAS-NLI θ-CV preserving":
+        return cas_preserving_cv(q, passages)
     return select(q, passages) or set(), []
 
 # ============================================================

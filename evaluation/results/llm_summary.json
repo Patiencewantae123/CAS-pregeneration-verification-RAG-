@@ -135,26 +135,6 @@
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "em",
-      "mean": 0.48,
-      "ci_low": 0.34,
-      "ci_high": 0.62,
-      "n": 50
-    },
-    {
-      "dataset": "HotpotQA",
-      "model": "llama3.2:latest",
-      "method": "CAS w/o conflict graph",
-      "metric": "f1",
-      "mean": 0.5093333333333334,
-      "ci_low": 0.3719333333333333,
-      "ci_high": 0.6480333333333332,
-      "n": 50
-    },
-    {
-      "dataset": "HotpotQA",
-      "model": "llama3.2:latest",
-      "method": "CAS w/o conflict graph",
-      "metric": "accuracy",
       "mean": 0.5,
       "ci_low": 0.36,
       "ci_high": 0.64,
@@ -164,10 +144,30 @@
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean": 0.5293333333333333,
+      "ci_low": 0.3933333333333333,
+      "ci_high": 0.6693333333333333,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean": 0.52,
+      "ci_low": 0.38,
+      "ci_high": 0.66,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS w/o conflict graph",
       "metric": "abstain",
-      "mean": 0.18,
-      "ci_low": 0.08,
-      "ci_high": 0.28,
+      "mean": 0.08,
+      "ci_low": 0.02,
+      "ci_high": 0.16,
       "n": 50
     },
     {
@@ -175,17 +175,17 @@
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "ungrounded",
-      "mean": 0.07692307692307693,
+      "mean": 0.045454545454545456,
       "ci_low": 0.0,
-      "ci_high": 0.1794871794871795,
-      "n": 39
+      "ci_high": 0.11363636363636363,
+      "n": 44
     },
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "latency_s",
-      "mean": 1.3633109860000696,
+      "mean": 2.2660036840000974,
       "ci_low": null,
       "ci_high": null,
       "n": 50
@@ -235,9 +235,9 @@
       "model": "llama3.2:latest",
       "method": "CAS (full pipeline)",
       "metric": "ungrounded",
-      "mean": 0.047619047619047616,
+      "mean": 0.023809523809523808,
       "ci_low": 0.0,
-      "ci_high": 0.11904761904761904,
+      "ci_high": 0.07202380952380627,
       "n": 42
     },
     {
@@ -245,7 +245,127 @@
       "model": "llama3.2:latest",
       "method": "CAS (full pipeline)",
       "metric": "latency_s",
-      "mean": 2.113548798000047,
+      "mean": 3.018406146000125,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "em",
+      "mean": 0.34,
+      "ci_low": 0.2,
+      "ci_high": 0.48,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.4,
+      "ci_low": 0.264,
+      "ci_high": 0.5319999999999999,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "accuracy",
+      "mean": 0.38,
+      "ci_low": 0.24,
+      "ci_high": 0.52,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.28,
+      "ci_low": 0.16,
+      "ci_high": 0.42,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.38235294117647056,
+      "ci_low": 0.23529411764705882,
+      "ci_high": 0.5301470588235254,
+      "n": 34
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "latency_s",
+      "mean": 1.4133533760000137,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "em",
+      "mean": 0.5,
+      "ci_low": 0.36,
+      "ci_high": 0.64,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.5293333333333333,
+      "ci_low": 0.3933333333333333,
+      "ci_high": 0.6693333333333333,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "accuracy",
+      "mean": 0.52,
+      "ci_low": 0.38,
+      "ci_high": 0.66,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "abstain",
+      "mean": 0.1,
+      "ci_low": 0.02,
+      "ci_high": 0.18,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "ungrounded",
+      "mean": 0.046511627906976744,
+      "ci_low": 0.0,
+      "ci_high": 0.11627906976744186,
+      "n": 43
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "latency_s",
+      "mean": 2.0918505900001763,
       "ci_low": null,
       "ci_high": null,
       "n": 50
@@ -375,9 +495,9 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "em",
-      "mean": 0.38,
-      "ci_low": 0.26,
-      "ci_high": 0.52,
+      "mean": 0.44,
+      "ci_low": 0.3,
+      "ci_high": 0.58,
       "n": 50
     },
     {
@@ -385,9 +505,9 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean": 0.45466666666666666,
-      "ci_low": 0.3253,
-      "ci_high": 0.5786666666666666,
+      "mean": 0.5306666666666666,
+      "ci_low": 0.39866666666666667,
+      "ci_high": 0.6613333333333332,
       "n": 50
     },
     {
@@ -395,9 +515,9 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "accuracy",
-      "mean": 0.48,
-      "ci_low": 0.34,
-      "ci_high": 0.62,
+      "mean": 0.54,
+      "ci_low": 0.4,
+      "ci_high": 0.68,
       "n": 50
     },
     {
@@ -405,9 +525,9 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "abstain",
-      "mean": 0.28,
-      "ci_low": 0.16,
-      "ci_high": 0.4,
+      "mean": 0.18,
+      "ci_low": 0.08,
+      "ci_high": 0.28,
       "n": 50
     },
     {
@@ -415,17 +535,17 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "ungrounded",
-      "mean": 0.027777777777777776,
+      "mean": 0.04878048780487805,
       "ci_low": 0.0,
-      "ci_high": 0.08333333333333333,
-      "n": 36
+      "ci_high": 0.12195121951219512,
+      "n": 41
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "latency_s",
-      "mean": 2.9119357820000733,
+      "mean": 3.61625331600022,
       "ci_low": null,
       "ci_high": null,
       "n": 50
@@ -435,9 +555,9 @@
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "em",
-      "mean": 0.42,
-      "ci_low": 0.28,
-      "ci_high": 0.56,
+      "mean": 0.44,
+      "ci_low": 0.3,
+      "ci_high": 0.58,
       "n": 50
     },
     {
@@ -445,9 +565,9 @@
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "f1",
-      "mean": 0.4946666666666667,
-      "ci_low": 0.3653333333333333,
-      "ci_high": 0.6253333333333333,
+      "mean": 0.5306666666666666,
+      "ci_low": 0.39866666666666667,
+      "ci_high": 0.6573666666666663,
       "n": 50
     },
     {
@@ -465,9 +585,9 @@
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "abstain",
-      "mean": 0.24,
-      "ci_low": 0.12,
-      "ci_high": 0.36,
+      "mean": 0.18,
+      "ci_low": 0.08,
+      "ci_high": 0.3,
       "n": 50
     },
     {
@@ -475,17 +595,137 @@
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "ungrounded",
-      "mean": 0.02631578947368421,
+      "mean": 0.025,
       "ci_low": 0.0,
-      "ci_high": 0.07894736842105263,
-      "n": 38
+      "ci_high": 0.075,
+      "n": 40
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "latency_s",
-      "mean": 3.6198388200002953,
+      "mean": 4.399028519999993,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "em",
+      "mean": 0.26,
+      "ci_low": 0.14,
+      "ci_high": 0.4,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.33599999999999997,
+      "ci_low": 0.21195,
+      "ci_high": 0.46799999999999997,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "accuracy",
+      "mean": 0.34,
+      "ci_low": 0.2,
+      "ci_high": 0.48,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.3,
+      "ci_low": 0.18,
+      "ci_high": 0.44,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.4,
+      "ci_low": 0.2571428571428571,
+      "ci_high": 0.5714285714285714,
+      "n": 35
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "latency_s",
+      "mean": 2.3049911560000327,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "em",
+      "mean": 0.46,
+      "ci_low": 0.32,
+      "ci_high": 0.6,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.5346666666666667,
+      "ci_low": 0.40526666666666666,
+      "ci_high": 0.6653333333333333,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "accuracy",
+      "mean": 0.56,
+      "ci_low": 0.42,
+      "ci_high": 0.7,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "abstain",
+      "mean": 0.18,
+      "ci_low": 0.08,
+      "ci_high": 0.28,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "ungrounded",
+      "mean": 0.04878048780487805,
+      "ci_low": 0.0,
+      "ci_high": 0.12195121951219512,
+      "n": 41
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "latency_s",
+      "mean": 3.743588398000211,
       "ci_low": null,
       "ci_high": null,
       "n": 50
@@ -645,9 +885,9 @@
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "abstain",
-      "mean": 0.7333333333333333,
-      "ci_low": 0.4666666666666667,
-      "ci_high": 0.9333333333333333,
+      "mean": 0.6,
+      "ci_low": 0.3333333333333333,
+      "ci_high": 0.8666666666666667,
       "n": 15
     },
     {
@@ -658,14 +898,14 @@
       "mean": 0.0,
       "ci_low": 0.0,
       "ci_high": 0.0,
-      "n": 4
+      "n": 6
     },
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "latency_s",
-      "mean": 3.010017819999969,
+      "mean": 3.3512316266666553,
       "ci_low": null,
       "ci_high": null,
       "n": 15
@@ -685,9 +925,9 @@
       "model": "llama3.2:latest",
       "method": "CAS (full pipeline)",
       "metric": "f1",
-      "mean": 0.13333333333333333,
+      "mean": 0.16666666666666666,
       "ci_low": 0.0,
-      "ci_high": 0.3333333333333333,
+      "ci_high": 0.36666666666666664,
       "n": 15
     },
     {
@@ -705,6 +945,126 @@
       "model": "llama3.2:latest",
       "method": "CAS (full pipeline)",
       "metric": "abstain",
+      "mean": 0.4666666666666667,
+      "ci_low": 0.2,
+      "ci_high": 0.7333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.125,
+      "ci_low": 0.0,
+      "ci_high": 0.375,
+      "n": 8
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "latency_s",
+      "mean": 4.629971846665527,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "em",
+      "mean": 0.06666666666666667,
+      "ci_low": 0.0,
+      "ci_high": 0.2,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.06666666666666667,
+      "ci_low": 0.0,
+      "ci_high": 0.2,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "accuracy",
+      "mean": 0.13333333333333333,
+      "ci_low": 0.0,
+      "ci_high": 0.3333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.8,
+      "ci_low": 0.6,
+      "ci_high": 1.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 3
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "latency_s",
+      "mean": 2.255031393333532,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "accuracy",
+      "mean": 0.06666666666666667,
+      "ci_low": 0.0,
+      "ci_high": 0.2,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "abstain",
       "mean": 0.6,
       "ci_low": 0.3333333333333333,
       "ci_high": 0.8666666666666667,
@@ -713,7 +1073,7 @@
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
-      "method": "CAS (full pipeline)",
+      "method": "CAS-NLI conflict-preserving",
       "metric": "ungrounded",
       "mean": 0.0,
       "ci_low": 0.0,
@@ -723,9 +1083,9 @@
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
-      "method": "CAS (full pipeline)",
+      "method": "CAS-NLI conflict-preserving",
       "metric": "latency_s",
-      "mean": 4.22939423999948,
+      "mean": 4.142170313332948,
       "ci_low": null,
       "ci_high": null,
       "n": 15
@@ -905,7 +1265,7 @@
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "latency_s",
-      "mean": 4.840961893333588,
+      "mean": 5.096178760000233,
       "ci_low": null,
       "ci_high": null,
       "n": 15
@@ -965,7 +1325,127 @@
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "latency_s",
-      "mean": 6.259759933333408,
+      "mean": 6.54280166000026,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "em",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.05333333333333334,
+      "ci_low": 0.0,
+      "ci_high": 0.16000000000000003,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "accuracy",
+      "mean": 0.13333333333333333,
+      "ci_low": 0.0,
+      "ci_high": 0.3333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "abstain",
+      "mean": 0.8666666666666667,
+      "ci_low": 0.6666666666666666,
+      "ci_high": 1.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 2
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "latency_s",
+      "mean": 3.269396920000145,
+      "ci_low": null,
+      "ci_high": null,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "em",
+      "mean": 0.06666666666666667,
+      "ci_low": 0.0,
+      "ci_high": 0.2,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.12000000000000001,
+      "ci_low": 0.0,
+      "ci_high": 0.29333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "accuracy",
+      "mean": 0.2,
+      "ci_low": 0.0,
+      "ci_high": 0.4,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "abstain",
+      "mean": 0.6666666666666666,
+      "ci_low": 0.4,
+      "ci_high": 0.8666666666666667,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "ungrounded",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 5
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "latency_s",
+      "mean": 6.3040753866669546,
       "ci_low": null,
       "ci_high": null,
       "n": 15
@@ -975,54 +1455,71 @@
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
       "mean_diff": -0.16378151260504203,
-      "ci_low": -0.2823743697478992,
-      "ci_high": -0.05035126050420169,
-      "p_value": 0.0091990800919908,
-      "p_holm": 0.2391760823917608
+      "ci_low": -0.2823529411764706,
+      "ci_high": -0.05032983193277323,
+      "p_value": 0.0084991500849915,
+      "p_holm": 0.611938806119388
     },
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "accuracy",
       "mean_diff": -0.1,
       "ci_low": -0.22,
       "ci_high": 0.0,
-      "p_value": 0.18248175182481752,
+      "p_value": 0.1815818418158184,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "f1",
       "mean_diff": -0.08933333333333333,
-      "ci_low": -0.184,
+      "ci_low": -0.18533333333333332,
       "ci_high": 0.0,
-      "p_value": 0.128987101289871,
+      "p_value": 0.1257874212578742,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "accuracy",
       "mean_diff": -0.04,
       "ci_low": -0.12,
       "ci_high": 0.04,
-      "p_value": 0.618938106189381,
+      "p_value": 0.6276372362763724,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean_diff": -0.016,
-      "ci_low": -0.04800000000000001,
+      "mean_diff": -0.036000000000000004,
+      "ci_low": -0.092,
+      "ci_high": 0.0,
+      "p_value": 0.49825017498250174,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": -0.02,
+      "ci_low": -0.06,
       "ci_high": 0.0,
       "p_value": 1.0,
       "p_holm": 1.0
@@ -1030,6 +1527,139 @@
     {
       "dataset": "HotpotQA",
       "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.2571148459383754,
+      "ci_low": -0.391786974789916,
+      "ci_high": -0.11966176470588248,
+      "p_value": 0.0014998500149985001,
+      "p_holm": 0.11848815118488151
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.22,
+      "ci_low": -0.36,
+      "ci_high": -0.08,
+      "p_value": 0.007399260073992601,
+      "p_holm": 0.5401459854014599
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.18266666666666664,
+      "ci_low": -0.3173666666666667,
+      "ci_high": -0.05199999999999999,
+      "p_value": 0.010998900109989001,
+      "p_holm": 0.7809219078092191
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": -0.16,
+      "ci_low": -0.3,
+      "ci_high": -0.02,
+      "p_value": 0.05779422057794221,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.12933333333333333,
+      "ci_low": -0.25603333333333333,
+      "ci_high": -0.01330000000000018,
+      "p_value": 0.048295170482951705,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": -0.14,
+      "ci_low": -0.28,
+      "ci_high": -0.02,
+      "p_value": 0.09159084091590841,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.12778151260504203,
+      "ci_low": -0.25676302521008404,
+      "ci_high": 0.0011554621848738854,
+      "p_value": 0.06619338066193381,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.08,
+      "ci_low": -0.2,
+      "ci_high": 0.04,
+      "p_value": 0.3437656234376562,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.05333333333333333,
+      "ci_low": -0.13333333333333333,
+      "ci_high": 0.020166666666665757,
+      "p_value": 0.38046195380461956,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": -0.02,
+      "ci_low": -0.08,
+      "ci_high": 0.04,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
       "comparator": "CAS w/o conflict graph",
       "metric": "accuracy",
       "mean_diff": 0.0,
@@ -1041,39 +1671,43 @@
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
-      "mean_diff": -0.12399999999999999,
-      "ci_low": -0.264,
-      "ci_high": 0.01609999999999946,
-      "p_value": 0.12808719128087193,
+      "mean_diff": -0.08800000000000001,
+      "ci_low": -0.22,
+      "ci_high": 0.048,
+      "p_value": 0.27677232276772323,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "accuracy",
       "mean_diff": -0.04,
       "ci_low": -0.16,
       "ci_high": 0.08,
-      "p_value": 0.7565243475652434,
+      "p_value": 0.7562243775622438,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "f1",
-      "mean_diff": -0.020666666666666663,
-      "ci_low": -0.11335000000000002,
-      "ci_high": 0.06134999999999991,
-      "p_value": 0.6536346365363463,
+      "mean_diff": 0.015333333333333332,
+      "ci_low": -0.09001666666666666,
+      "ci_high": 0.11468333333333325,
+      "p_value": 0.826017398260174,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "accuracy",
       "mean_diff": -0.02,
@@ -1085,39 +1719,187 @@
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean_diff": 0.04,
-      "ci_low": 0.0,
-      "ci_high": 0.1,
-      "p_value": 0.5028497150284972,
+      "mean_diff": 0.0,
+      "ci_low": -0.06,
+      "ci_high": 0.06,
+      "p_value": 1.0,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "accuracy",
-      "mean_diff": 0.04,
-      "ci_low": 0.0,
-      "ci_high": 0.1,
-      "p_value": 0.5028497150284972,
+      "mean_diff": -0.02,
+      "ci_low": -0.1,
+      "ci_high": 0.04,
+      "p_value": 1.0,
       "p_holm": 1.0
     },
     {
-      "dataset": "MuSiQue",
-      "model": "llama3.2:latest",
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
-      "mean_diff": -0.16666666666666666,
-      "ci_low": -0.36666666666666664,
-      "ci_high": 0.0,
-      "p_value": 0.24927507249275072,
+      "mean_diff": -0.2826666666666667,
+      "ci_low": -0.40404999999999996,
+      "ci_high": -0.1653333333333333,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.008399160083991601
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.22,
+      "ci_low": -0.34,
+      "ci_high": -0.12,
+      "p_value": 0.0007999200079992001,
+      "p_holm": 0.06479352064793521
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.1793333333333333,
+      "ci_low": -0.322,
+      "ci_high": -0.04195000000000027,
+      "p_value": 0.014998500149985002,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": -0.2,
+      "ci_low": -0.34,
+      "ci_high": -0.06,
+      "p_value": 0.020597940205979402,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.19466666666666668,
+      "ci_low": -0.31270000000000003,
+      "ci_high": -0.08199999999999999,
+      "p_value": 0.0028997100289971,
+      "p_holm": 0.2232776722327767
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": -0.2,
+      "ci_low": -0.32,
+      "ci_high": -0.08,
+      "p_value": 0.006199380061993801,
+      "p_holm": 0.4587541245875413
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.084,
+      "ci_low": -0.23199999999999998,
+      "ci_high": 0.055999999999999994,
+      "p_value": 0.3116688331166883,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": -0.12,
+      "ci_high": 0.12,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.019333333333333334,
+      "ci_low": -0.084,
+      "ci_high": 0.12266666666666666,
+      "p_value": 0.7841215878412159,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.02,
+      "ci_low": -0.08,
+      "ci_high": 0.12,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.003999999999999999,
+      "ci_low": -0.04800000000000001,
+      "ci_high": 0.06,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": 0.02,
+      "ci_low": 0.0,
+      "ci_high": 0.06,
+      "p_value": 1.0,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.13333333333333333,
+      "ci_low": -0.3333333333333333,
+      "ci_high": 0.03333333333333333,
+      "p_value": 0.37606239376062395,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "accuracy",
       "mean_diff": -0.13333333333333333,
@@ -1129,17 +1911,19 @@
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "f1",
-      "mean_diff": 0.06666666666666667,
+      "mean_diff": 0.1,
       "ci_low": 0.0,
-      "ci_high": 0.2,
-      "p_value": 1.0,
+      "ci_high": 0.26666666666666666,
+      "p_value": 0.5022497750224978,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "accuracy",
       "mean_diff": 0.06666666666666667,
@@ -1151,8 +1935,21 @@
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "f1",
+      "mean_diff": 0.1,
+      "ci_low": 0.0,
+      "ci_high": 0.26666666666666666,
+      "p_value": 0.5022497750224978,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
       "mean_diff": 0.06666666666666667,
       "ci_low": 0.0,
       "ci_high": 0.2,
@@ -1162,17 +1959,151 @@
     {
       "dataset": "MuSiQue",
       "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.23333333333333334,
+      "ci_low": -0.5,
+      "ci_high": 0.03333333333333333,
+      "p_value": 0.22317768223177684,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.2,
+      "ci_low": -0.4666666666666667,
+      "ci_high": 0.06666666666666667,
+      "p_value": 0.37866213378662134,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": -0.2,
+      "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": -0.2,
+      "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": -0.2,
+      "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "accuracy",
-      "mean_diff": 0.06666666666666667,
-      "ci_low": 0.0,
+      "mean_diff": 0.0,
+      "ci_low": -0.2,
       "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.3,
+      "ci_low": -0.5333333333333333,
+      "ci_high": -0.1,
+      "p_value": 0.0653934606539346,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.26666666666666666,
+      "ci_low": -0.4666666666666667,
+      "ci_high": -0.06666666666666667,
+      "p_value": 0.13018698130186981,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
       "p_value": 1.0,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
       "mean_diff": -0.04444444444444444,
@@ -1184,6 +2115,7 @@
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "accuracy",
       "mean_diff": 0.0,
@@ -1195,6 +2127,7 @@
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "f1",
       "mean_diff": 0.05333333333333334,
@@ -1206,6 +2139,7 @@
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Relevance top-3 (BM25)",
       "metric": "accuracy",
       "mean_diff": 0.06666666666666667,
@@ -1217,6 +2151,7 @@
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "CAS w/o conflict graph",
       "metric": "f1",
       "mean_diff": 0.0,
@@ -1228,6 +2163,151 @@
     {
       "dataset": "MuSiQue",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.1111111111111111,
+      "ci_low": -0.26666666666666666,
+      "ci_high": 0.0,
+      "p_value": 0.5032496750324967,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.01333333333333333,
+      "ci_low": -0.2,
+      "ci_high": 0.16000000000000003,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": -0.2,
+      "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "accuracy",
+      "mean_diff": -0.06666666666666667,
+      "ci_low": -0.2,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": -0.04444444444444444,
+      "ci_low": -0.13333333333333333,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "accuracy",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.05333333333333334,
+      "ci_low": 0.0,
+      "ci_high": 0.16000000000000003,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "accuracy",
+      "mean_diff": 0.06666666666666667,
+      "ci_low": 0.0,
+      "ci_high": 0.2,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
       "comparator": "CAS w/o conflict graph",
       "metric": "accuracy",
       "mean_diff": 0.0,
@@ -1239,45 +2319,145 @@
     {
       "dataset": "WikiContradict",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "conflict_flagged",
-      "mean_diff": -0.22,
-      "ci_low": -0.4,
-      "ci_high": -0.04,
-      "p_value": 0.0331966803319668,
-      "p_holm": 0.82991700829917
+      "mean_diff": -0.18,
+      "ci_low": -0.3,
+      "ci_high": -0.06,
+      "p_value": 0.011398860113988602,
+      "p_holm": 0.7979202079792022
     },
     {
       "dataset": "WikiContradict",
       "model": "llama3.2:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "both",
-      "mean_diff": -0.3,
-      "ci_low": -0.42,
-      "ci_high": -0.18,
-      "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0027997200279972004
+      "mean_diff": -0.14,
+      "ci_low": -0.24,
+      "ci_high": -0.06,
+      "p_value": 0.015898410158984102,
+      "p_holm": 1.0
     },
     {
       "dataset": "WikiContradict",
-      "model": "gemma3:latest",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "conflict_flagged",
-      "mean_diff": -0.58,
-      "ci_low": -0.72,
-      "ci_high": -0.44,
+      "mean_diff": -0.28,
+      "ci_low": -0.44,
+      "ci_high": -0.12,
+      "p_value": 0.0015998400159984002,
+      "p_holm": 0.12478752124787522
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean_diff": -0.32,
+      "ci_low": -0.46,
+      "ci_high": -0.2,
       "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0027997200279972004
+      "p_holm": 0.008399160083991601
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean_diff": -0.04,
+      "ci_low": -0.22,
+      "ci_high": 0.14,
+      "p_value": 0.8196180381961804,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "llama3.2:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean_diff": -0.18,
+      "ci_low": -0.28,
+      "ci_high": -0.08,
+      "p_value": 0.003999600039996,
+      "p_holm": 0.303969603039696
     },
     {
       "dataset": "WikiContradict",
       "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean_diff": -0.28,
+      "ci_low": -0.42,
+      "ci_high": -0.16,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.008399160083991601
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "gemma3:latest",
+      "reference": "CAS (full pipeline)",
       "comparator": "Vanilla RAG (no filter)",
       "metric": "both",
-      "mean_diff": -0.12,
-      "ci_low": -0.22,
+      "mean_diff": -0.06,
+      "ci_low": -0.14,
+      "ci_high": 0.0,
+      "p_value": 0.25937406259374063,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean_diff": -0.1,
+      "ci_low": -0.26,
+      "ci_high": 0.06,
+      "p_value": 0.32836716328367166,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean_diff": -0.22,
+      "ci_low": -0.34,
+      "ci_high": -0.12,
+      "p_value": 0.0013998600139986002,
+      "p_holm": 0.11198880111988802
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean_diff": -0.26,
+      "ci_low": -0.44,
+      "ci_high": -0.1,
+      "p_value": 0.0057994200579942,
+      "p_holm": 0.434956504349565
+    },
+    {
+      "dataset": "WikiContradict",
+      "model": "gemma3:latest",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean_diff": -0.08,
+      "ci_low": -0.16,
       "ci_high": -0.02,
-      "p_value": 0.0755924407559244,
+      "p_value": 0.1284871512848715,
       "p_holm": 1.0
     }
   ],
@@ -1346,125 +2526,35 @@
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "both",
-      "mean": 0.18,
-      "ci_low": 0.08,
-      "ci_high": 0.3,
+      "mean": 0.3,
+      "ci_low": 0.18,
+      "ci_high": 0.42,
       "n": 50
     },
     {
       "model": "llama3.2:latest",
       "method": "CAS w/o conflict graph",
       "metric": "conflict_flagged",
-      "mean": 0.32,
-      "ci_low": 0.2,
-      "ci_high": 0.46,
-      "n": 50
-    },
-    {
-      "model": "llama3.2:latest",
-      "method": "CAS w/o conflict graph",
-      "metric": "outcomes",
-      "counts": {
-        "both answers": 9,
-        "neither": 28,
-        "one answer": 13
-      },
-      "n": 50,
-      "mean_passages_kept": 1.0
-    },
-    {
-      "model": "llama3.2:latest",
-      "method": "CAS (full pipeline)",
-      "metric": "both",
-      "mean": 0.18,
-      "ci_low": 0.08,
-      "ci_high": 0.3,
-      "n": 50
-    },
-    {
-      "model": "llama3.2:latest",
-      "method": "CAS (full pipeline)",
-      "metric": "conflict_flagged",
-      "mean": 0.26,
-      "ci_low": 0.14,
+      "mean": 0.28,
+      "ci_low": 0.16,
       "ci_high": 0.4,
       "n": 50
     },
     {
       "model": "llama3.2:latest",
-      "method": "CAS (full pipeline)",
-      "metric": "outcomes",
-      "counts": {
-        "both answers": 9,
-        "neither": 27,
-        "one answer": 14
-      },
-      "n": 50,
-      "mean_passages_kept": 1.14
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Vanilla RAG (no filter)",
-      "metric": "both",
-      "mean": 0.48,
-      "ci_low": 0.34,
-      "ci_high": 0.62,
-      "n": 50
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Vanilla RAG (no filter)",
-      "metric": "conflict_flagged",
-      "mean": 0.7,
-      "ci_low": 0.58,
-      "ci_high": 0.82,
-      "n": 50
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Vanilla RAG (no filter)",
-      "metric": "outcomes",
-      "counts": {
-        "both answers": 24,
-        "neither": 16,
-        "one answer": 10
-      },
-      "n": 50,
-      "mean_passages_kept": 2.0
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Relevance top-3 (BM25)",
-      "metric": "both",
-      "mean": 0.48,
-      "ci_low": 0.34,
-      "ci_high": 0.62,
-      "n": 50
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Relevance top-3 (BM25)",
-      "metric": "conflict_flagged",
-      "mean": 0.7,
-      "ci_low": 0.58,
-      "ci_high": 0.82,
-      "n": 50
-    },
-    {
-      "model": "gemma3:latest",
-      "method": "Relevance top-3 (BM25)",
-      "metric": "outcomes",
-      "counts": {
-        "both answers": 24,
-        "neither": 16,
-        "one answer": 10
-      },
-      "n": 50,
-      "mean_passages_kept": 2.0
-    },
-    {
-      "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 15,
+        "neither": 25,
+        "one answer": 10
+      },
+      "n": 50,
+      "mean_passages_kept": 1.44
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
       "metric": "both",
       "mean": 0.34,
       "ci_low": 0.22,
@@ -1472,12 +2562,162 @@
       "n": 50
     },
     {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "conflict_flagged",
+      "mean": 0.3,
+      "ci_low": 0.18,
+      "ci_high": 0.44,
+      "n": 50
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS (full pipeline)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 17,
+        "neither": 23,
+        "one answer": 10
+      },
+      "n": 50,
+      "mean_passages_kept": 1.62
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "both",
+      "mean": 0.16,
+      "ci_low": 0.06,
+      "ci_high": 0.26,
+      "n": 50
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "conflict_flagged",
+      "mean": 0.2,
+      "ci_low": 0.1,
+      "ci_high": 0.32,
+      "n": 50
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "outcomes",
+      "counts": {
+        "neither": 37,
+        "both answers": 8,
+        "one answer": 5
+      },
+      "n": 50,
+      "mean_passages_kept": 0.78
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "both",
+      "mean": 0.3,
+      "ci_low": 0.18,
+      "ci_high": 0.42,
+      "n": 50
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "conflict_flagged",
+      "mean": 0.44,
+      "ci_low": 0.3,
+      "ci_high": 0.58,
+      "n": 50
+    },
+    {
+      "model": "llama3.2:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 15,
+        "neither": 25,
+        "one answer": 10
+      },
+      "n": 50,
+      "mean_passages_kept": 1.56
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "both",
+      "mean": 0.48,
+      "ci_low": 0.34,
+      "ci_high": 0.62,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "conflict_flagged",
+      "mean": 0.7,
+      "ci_low": 0.58,
+      "ci_high": 0.82,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 24,
+        "neither": 16,
+        "one answer": 10
+      },
+      "n": 50,
+      "mean_passages_kept": 2.0
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "both",
+      "mean": 0.48,
+      "ci_low": 0.34,
+      "ci_high": 0.62,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "conflict_flagged",
+      "mean": 0.7,
+      "ci_low": 0.58,
+      "ci_high": 0.82,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 24,
+        "neither": 16,
+        "one answer": 10
+      },
+      "n": 50,
+      "mean_passages_kept": 2.0
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS w/o conflict graph",
+      "metric": "both",
+      "mean": 0.4,
+      "ci_low": 0.26,
+      "ci_high": 0.54,
+      "n": 50
+    },
+    {
       "model": "gemma3:latest",
       "method": "CAS w/o conflict graph",
       "metric": "conflict_flagged",
-      "mean": 0.1,
-      "ci_low": 0.02,
-      "ci_high": 0.2,
+      "mean": 0.32,
+      "ci_low": 0.18,
+      "ci_high": 0.46,
       "n": 50
     },
     {
@@ -1485,29 +2725,29 @@
       "method": "CAS w/o conflict graph",
       "metric": "outcomes",
       "counts": {
-        "both answers": 17,
+        "both answers": 20,
         "neither": 17,
-        "one answer": 16
+        "one answer": 13
       },
       "n": 50,
-      "mean_passages_kept": 1.0
+      "mean_passages_kept": 1.44
     },
     {
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "both",
-      "mean": 0.36,
-      "ci_low": 0.24,
-      "ci_high": 0.5,
+      "mean": 0.42,
+      "ci_low": 0.28,
+      "ci_high": 0.56,
       "n": 50
     },
     {
       "model": "gemma3:latest",
       "method": "CAS (full pipeline)",
       "metric": "conflict_flagged",
-      "mean": 0.12,
-      "ci_low": 0.04,
-      "ci_high": 0.22,
+      "mean": 0.42,
+      "ci_low": 0.28,
+      "ci_high": 0.56,
       "n": 50
     },
     {
@@ -1515,12 +2755,72 @@
       "method": "CAS (full pipeline)",
       "metric": "outcomes",
       "counts": {
-        "both answers": 18,
+        "both answers": 21,
         "neither": 17,
-        "one answer": 15
+        "one answer": 12
       },
       "n": 50,
-      "mean_passages_kept": 1.14
+      "mean_passages_kept": 1.62
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "both",
+      "mean": 0.26,
+      "ci_low": 0.14,
+      "ci_high": 0.38,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "conflict_flagged",
+      "mean": 0.6,
+      "ci_low": 0.46,
+      "ci_high": 0.74,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 13,
+        "neither": 29,
+        "one answer": 8
+      },
+      "n": 50,
+      "mean_passages_kept": 0.78
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "both",
+      "mean": 0.4,
+      "ci_low": 0.26,
+      "ci_high": 0.54,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "conflict_flagged",
+      "mean": 0.44,
+      "ci_low": 0.3,
+      "ci_high": 0.6,
+      "n": 50
+    },
+    {
+      "model": "gemma3:latest",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "outcomes",
+      "counts": {
+        "both answers": 20,
+        "neither": 17,
+        "one answer": 13
+      },
+      "n": 50,
+      "mean_passages_kept": 1.56
     }
   ]
 }

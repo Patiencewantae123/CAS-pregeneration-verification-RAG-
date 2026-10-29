@@ -11,6 +11,7 @@ os.chdir(HERE)
 scripts = sorted(f for f in os.listdir(HERE) if f.startswith("fig") and f.endswith(".py"))
 for s in scripts:
     runpy.run_path(os.path.join(HERE, s), run_name="__main__")
+runpy.run_path(os.path.join(HERE, "make_tables.py"), run_name="__main__")
 
 # Traceability check: every evidence-selection value in Fig. 1 and Fig. 5 must equal results.json
 import pandas as pd  # noqa: E402

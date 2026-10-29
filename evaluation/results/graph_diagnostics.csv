@@ -1,3 +1,5 @@
-dataset,pairs,entailment_edges,contradiction_edges,neutral_edges,mean_agreement_gold,mean_agreement_distractor
-HotpotQA,2250,111,0,2139,0.2168,0.21369999999999997
-MuSiQue,2850,46,0,2804,0.08800000000000001,0.17881481481481482
+verifier,dataset,pairs,entailment_edges,contradiction_edges,neutral_edges,mean_agreement_gold,mean_agreement_distractor,mean_penalty_gold,mean_penalty_distractor
+keyword,HotpotQA,2250,111,0,2139,0.2168,0.21369999999999997,0.0,0.0
+keyword,MuSiQue,2850,46,0,2804,0.08800000000000001,0.17881481481481482,0.0,0.0
+nli,HotpotQA,2250,8,340,1902,0.005460722297430038,0.018755843862891197,1.0727714009804186,1.1686497350988794
+nli,MuSiQue,2850,24,273,2553,0.06666666666666667,0.06092445058249588,1.5146927830792265,1.4161294049952562

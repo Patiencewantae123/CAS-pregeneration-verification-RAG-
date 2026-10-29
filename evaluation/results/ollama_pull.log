@@ -1,0 +1,2129 @@
+﻿ollama : [?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠧ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠇ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠏ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠧ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠇ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠏ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ 
+[K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+At line:1 char:302
++ ... tch {} } }; ollama pull llama3.1:8b *> evaluation/results/ollama_pull ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([?2026h[?25l...ng manifest [K:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+pulling 667b0c1932bc:   0% ▕                  ▏ 183 KB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 822 KB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 1.4 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 1.8 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 2.4 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 3.0 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 3.3 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 3.9 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 4.5 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 4.9 MB/4.9 GB                  
+[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 5.6 MB/4.9 GB  5.4 MB/s  
+15m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 6.1 MB/4.9 GB  5.4 MB/s  
+15m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 6.4 MB/4.9 GB  5.4 MB/s  
+15m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 7.0 MB/4.9 GB  5.4 MB/s  
+15m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 7.5 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 7.8 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 8.7 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 9.5 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏ 9.9 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  10 MB/4.9 GB  5.4 MB/s  
+15m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  11 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  11 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  12 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  13 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  13 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  14 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  15 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  15 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  16 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  16 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  16 MB/4.9 GB  5.6 MB/s  
+14m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  17 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  17 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  17 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  18 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  19 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  19 MB/4.9 GB  5.6 MB/s  
+14m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  20 MB/4.9 GB  5.6 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  20 MB/4.9 GB  5.6 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  21 MB/4.9 GB  5.6 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  21 MB/4.9 GB  5.6 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  22 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  22 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  23 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   0% ▕                  ▏  24 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  24 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  25 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  26 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  26 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  27 MB/4.9 GB  5.5 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  28 MB/4.9 GB  5.5 MB/s  
+14m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  28 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  29 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  29 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  29 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  30 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  31 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  31 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  31 MB/4.9 GB  5.7 MB/s  
+14m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  32 MB/4.9 GB  5.7 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  32 MB/4.9 GB  5.7 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  33 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  34 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  34 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  35 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  35 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  36 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  36 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  37 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  37 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  38 MB/4.9 GB  5.5 MB/s  
+14m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  39 MB/4.9 GB  5.6 MB/s  
+14m34s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  39 MB/4.9 GB  5.6 MB/s  
+14m34s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  40 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  40 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  41 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  42 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  42 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  42 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  43 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  43 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  43 MB/4.9 GB  5.6 MB/s  
+14m33s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  44 MB/4.9 GB  5.5 MB/s  
+14m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  44 MB/4.9 GB  5.5 MB/s  
+14m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  45 MB/4.9 GB  5.5 MB/s  
+14m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  45 MB/4.9 GB  5.5 MB/s  
+14m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  46 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  46 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  47 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  47 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  48 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  48 MB/4.9 GB  5.5 MB/s  
+14m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  49 MB/4.9 GB  5.4 MB/s  
+14m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  49 MB/4.9 GB  5.4 MB/s  
+14m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  50 MB/4.9 GB  5.4 MB/s  
+14m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  51 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  52 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  52 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  53 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  53 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  54 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  55 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  55 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  55 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  56 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  56 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  57 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  58 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  58 MB/4.9 GB  5.5 MB/s  
+14m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  58 MB/4.9 GB  5.5 MB/s  
+14m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  59 MB/4.9 GB  5.5 MB/s  
+14m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  59 MB/4.9 GB  5.5 MB/s  
+14m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  60 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  61 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  61 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  62 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  62 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  63 MB/4.9 GB  5.4 MB/s  
+14m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  63 MB/4.9 GB  5.4 MB/s  
+14m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  64 MB/4.9 GB  5.4 MB/s  
+14m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  64 MB/4.9 GB  5.4 MB/s  
+14m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  64 MB/4.9 GB  5.4 MB/s  
+14m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  65 MB/4.9 GB  5.4 MB/s   
+15m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  65 MB/4.9 GB  5.4 MB/s   
+15m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  66 MB/4.9 GB  5.4 MB/s   
+15m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  66 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  66 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  66 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.4 MB/s   
+15m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  67 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  68 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  68 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  68 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  69 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  69 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  69 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  70 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  70 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  70 MB/4.9 GB  5.1 MB/s  
+15m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  71 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  71 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  72 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  72 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  72 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  72 MB/4.9 GB  4.7 MB/s   
+17m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  73 MB/4.9 GB  4.7 MB/s   
+17m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  73 MB/4.9 GB  4.7 MB/s   
+17m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   1% ▕                  ▏  73 MB/4.9 GB  4.7 MB/s   
+17m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  73 MB/4.9 GB  4.7 MB/s   
+17m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  74 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  74 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  74 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  74 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  75 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  75 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  75 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  75 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  76 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  76 MB/4.9 GB  4.5 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  76 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  76 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  76 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  77 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  77 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  77 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  77 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  77 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  78 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  78 MB/4.9 GB  4.1 MB/s  
+19m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  78 MB/4.9 GB  3.8 MB/s   
+21m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  78 MB/4.9 GB  3.8 MB/s   
+21m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  79 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  80 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  80 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  80 MB/4.9 GB  3.8 MB/s   
+21m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  80 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  81 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.5 MB/s  
+22m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  82 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  83 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  83 MB/4.9 GB  3.0 MB/s  
+26m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  83 MB/4.9 GB  3.0 MB/s  
+26m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  84 MB/4.9 GB  3.0 MB/s  
+26m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  84 MB/4.9 GB  3.0 MB/s  
+26m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  84 MB/4.9 GB  2.7 MB/s  
+29m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  85 MB/4.9 GB  2.7 MB/s  
+29m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  85 MB/4.9 GB  2.7 MB/s  
+29m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  86 MB/4.9 GB  2.7 MB/s  
+29m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  86 MB/4.9 GB  2.7 MB/s  
+29m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  87 MB/4.9 GB  2.7 MB/s  
+29m43s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  87 MB/4.9 GB  2.7 MB/s  
+29m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  88 MB/4.9 GB  2.7 MB/s  
+29m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  89 MB/4.9 GB  2.7 MB/s  
+29m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  89 MB/4.9 GB  2.7 MB/s  
+29m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  90 MB/4.9 GB  2.8 MB/s  
+28m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  90 MB/4.9 GB  2.8 MB/s  
+28m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  91 MB/4.9 GB  2.8 MB/s  
+28m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  92 MB/4.9 GB  2.8 MB/s  
+28m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  92 MB/4.9 GB  2.8 MB/s  
+28m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  93 MB/4.9 GB  2.8 MB/s  
+28m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  93 MB/4.9 GB  2.8 MB/s  
+28m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  94 MB/4.9 GB  2.8 MB/s  
+28m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  94 MB/4.9 GB  2.8 MB/s  
+28m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  95 MB/4.9 GB  2.8 MB/s  
+28m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  96 MB/4.9 GB  3.2 MB/s  
+25m19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  96 MB/4.9 GB  3.2 MB/s  
+25m19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  97 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  97 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  97 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  98 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  98 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  98 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  99 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  99 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏  99 MB/4.9 GB  3.2 MB/s  
+25m18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 100 MB/4.9 GB  3.2 MB/s   
+25m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 100 MB/4.9 GB  3.2 MB/s   
+25m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 100 MB/4.9 GB  3.2 MB/s   
+25m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 101 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 101 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 102 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 102 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 103 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 103 MB/4.9 GB  3.2 MB/s   
+25m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 104 MB/4.9 GB  3.2 MB/s   
+25m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 104 MB/4.9 GB  3.4 MB/s  
+23m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 105 MB/4.9 GB  3.4 MB/s  
+23m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 105 MB/4.9 GB  3.4 MB/s  
+23m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 106 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 106 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 107 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 107 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 108 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 108 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 109 MB/4.9 GB  3.4 MB/s  
+23m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 109 MB/4.9 GB  3.7 MB/s  
+21m47s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 110 MB/4.9 GB  3.7 MB/s  
+21m47s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 110 MB/4.9 GB  3.7 MB/s  
+21m47s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 110 MB/4.9 GB  3.7 MB/s  
+21m47s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 111 MB/4.9 GB  3.7 MB/s  
+21m47s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 112 MB/4.9 GB  3.7 MB/s  
+21m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 112 MB/4.9 GB  3.7 MB/s  
+21m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 113 MB/4.9 GB  3.7 MB/s  
+21m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 113 MB/4.9 GB  3.7 MB/s  
+21m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 114 MB/4.9 GB  3.7 MB/s  
+21m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 114 MB/4.9 GB  4.0 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 115 MB/4.9 GB  4.0 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 115 MB/4.9 GB  4.0 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 116 MB/4.9 GB  4.0 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 116 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 117 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 117 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 118 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 118 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 119 MB/4.9 GB  4.0 MB/s  
+19m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 119 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 120 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 120 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 121 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 121 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 121 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 122 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 122 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   2% ▕                  ▏ 122 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 123 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 123 MB/4.9 GB  4.3 MB/s  
+18m23s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 124 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 124 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 125 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 125 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 126 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 126 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 127 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 127 MB/4.9 GB  4.6 MB/s  
+17m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 128 MB/4.9 GB  4.6 MB/s  
+17m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 128 MB/4.9 GB  4.6 MB/s  
+17m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 128 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 129 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 129 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 130 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 131 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 132 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 132 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 133 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 133 MB/4.9 GB  4.9 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 134 MB/4.9 GB  4.9 MB/s  
+16m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 134 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 135 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 135 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 136 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 137 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 137 MB/4.9 GB  4.9 MB/s  
+16m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 138 MB/4.9 GB  4.9 MB/s  
+16m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 139 MB/4.9 GB  4.9 MB/s  
+16m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 139 MB/4.9 GB  4.9 MB/s  
+16m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 140 MB/4.9 GB  4.9 MB/s  
+16m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 141 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 142 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 142 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 143 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 143 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 144 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 145 MB/4.9 GB  5.0 MB/s  
+15m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 145 MB/4.9 GB  5.0 MB/s  
+15m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 146 MB/4.9 GB  5.0 MB/s  
+15m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 147 MB/4.9 GB  5.0 MB/s  
+15m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 147 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 147 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 148 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 148 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 149 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 149 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 149 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 150 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 150 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 150 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 151 MB/4.9 GB  5.3 MB/s  
+14m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 152 MB/4.9 GB  5.2 MB/s   
+15m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 152 MB/4.9 GB  5.2 MB/s   
+15m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 153 MB/4.9 GB  5.2 MB/s   
+15m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 154 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 155 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 155 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 156 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 157 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 157 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 158 MB/4.9 GB  5.2 MB/s   
+15m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 159 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 159 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 160 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 161 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 161 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 162 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 162 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 163 MB/4.9 GB  5.5 MB/s  
+14m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 163 MB/4.9 GB  5.5 MB/s  
+14m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 164 MB/4.9 GB  5.5 MB/s  
+14m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 165 MB/4.9 GB  5.6 MB/s  
+14m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 165 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 166 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 166 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 167 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 168 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 168 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 169 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 170 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 170 MB/4.9 GB  5.6 MB/s  
+14m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 171 MB/4.9 GB  5.7 MB/s  
+13m55s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 171 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   3% ▕                  ▏ 172 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 172 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 173 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 174 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 174 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 175 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 176 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 177 MB/4.9 GB  5.7 MB/s  
+13m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 177 MB/4.9 GB  6.0 MB/s  
+13m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 177 MB/4.9 GB  6.0 MB/s  
+13m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 178 MB/4.9 GB  6.0 MB/s  
+13m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 178 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 179 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 179 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 179 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 180 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 180 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 181 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 181 MB/4.9 GB  6.0 MB/s  
+13m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 182 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 183 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 183 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 184 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 184 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 185 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 185 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 186 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 187 MB/4.9 GB  5.9 MB/s  
+13m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 187 MB/4.9 GB  5.9 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 188 MB/4.9 GB  6.0 MB/s  
+13m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 189 MB/4.9 GB  6.0 MB/s  
+13m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 189 MB/4.9 GB  6.0 MB/s  
+13m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 190 MB/4.9 GB  6.0 MB/s  
+13m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 190 MB/4.9 GB  6.0 MB/s  
+13m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 191 MB/4.9 GB  6.0 MB/s  
+13m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 192 MB/4.9 GB  6.0 MB/s  
+13m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 193 MB/4.9 GB  6.0 MB/s  
+13m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 194 MB/4.9 GB  6.0 MB/s  
+13m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 194 MB/4.9 GB  6.0 MB/s  
+13m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 195 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 195 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 196 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 196 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 197 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 198 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 198 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 199 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 199 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 199 MB/4.9 GB  6.0 MB/s   
+13m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 200 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 200 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 201 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 201 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 202 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 202 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 202 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 203 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 203 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 204 MB/4.9 GB  5.8 MB/s  
+13m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 204 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 204 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 204 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 204 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 205 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 205 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 205 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 206 MB/4.9 GB  5.9 MB/s  
+13m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 206 MB/4.9 GB  5.9 MB/s  
+13m24s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 207 MB/4.9 GB  5.9 MB/s  
+13m24s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 207 MB/4.9 GB  5.9 MB/s  
+13m24s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 208 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 208 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 208 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 209 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 209 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 209 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.5 MB/s  
+14m22s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.1 MB/s  
+15m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 210 MB/4.9 GB  5.1 MB/s  
+15m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 211 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 211 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 211 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 211 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 212 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 212 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 212 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 212 MB/4.9 GB  5.1 MB/s  
+15m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 213 MB/4.9 GB  4.7 MB/s  
+16m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 213 MB/4.9 GB  4.7 MB/s  
+16m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 213 MB/4.9 GB  4.7 MB/s  
+16m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 213 MB/4.9 GB  4.7 MB/s  
+16m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 213 MB/4.9 GB  4.7 MB/s  
+16m50s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.7 MB/s  
+16m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.7 MB/s  
+16m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.7 MB/s  
+16m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.7 MB/s  
+16m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.7 MB/s  
+16m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 214 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 215 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 215 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 215 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 215 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 215 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 216 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 216 MB/4.9 GB  4.1 MB/s   
+19m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 216 MB/4.9 GB  4.1 MB/s  
+18m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  4.1 MB/s  
+18m59s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 217 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 218 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 218 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 218 MB/4.9 GB  3.9 MB/s  
+19m52s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 219 MB/4.9 GB  3.9 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 219 MB/4.9 GB  3.9 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 219 MB/4.9 GB  3.9 MB/s  
+19m51s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 220 MB/4.9 GB  3.5 MB/s   
+22m5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 220 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   4% ▕                  ▏ 221 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 221 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 222 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 222 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 222 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 223 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 223 MB/4.9 GB  3.5 MB/s   
+22m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 224 MB/4.9 GB  3.5 MB/s   
+22m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 224 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 224 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 225 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 225 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 225 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 226 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 227 MB/4.9 GB  3.2 MB/s   
+24m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 227 MB/4.9 GB  3.2 MB/s   
+24m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 228 MB/4.9 GB  3.2 MB/s   
+24m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 228 MB/4.9 GB  3.2 MB/s   
+24m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 228 MB/4.9 GB  3.2 MB/s  
+24m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 229 MB/4.9 GB  3.2 MB/s  
+24m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 229 MB/4.9 GB  3.2 MB/s  
+24m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 230 MB/4.9 GB  3.2 MB/s  
+24m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 230 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 231 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 231 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 231 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 232 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 232 MB/4.9 GB  3.2 MB/s  
+24m44s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 232 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 233 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 233 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 234 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 234 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 234 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 235 MB/4.9 GB  3.2 MB/s  
+24m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 235 MB/4.9 GB  3.2 MB/s  
+24m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 235 MB/4.9 GB  3.2 MB/s  
+24m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 235 MB/4.9 GB  3.2 MB/s  
+24m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 236 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 236 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 237 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 238 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 238 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 238 MB/4.9 GB  3.2 MB/s  
+24m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 239 MB/4.9 GB  3.2 MB/s  
+24m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 239 MB/4.9 GB  3.2 MB/s  
+24m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 240 MB/4.9 GB  3.2 MB/s  
+24m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 241 MB/4.9 GB  3.2 MB/s  
+24m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 241 MB/4.9 GB  3.2 MB/s  
+24m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 242 MB/4.9 GB  3.5 MB/s  
+22m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 243 MB/4.9 GB  3.5 MB/s  
+22m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 243 MB/4.9 GB  3.5 MB/s  
+22m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 243 MB/4.9 GB  3.5 MB/s  
+22m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 244 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 244 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 245 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 246 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 246 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 247 MB/4.9 GB  3.5 MB/s  
+22m25s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 248 MB/4.9 GB  3.9 MB/s  
+20m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 248 MB/4.9 GB  3.9 MB/s  
+20m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 249 MB/4.9 GB  3.9 MB/s  
+20m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 249 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 250 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 251 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 251 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 252 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 253 MB/4.9 GB  3.9 MB/s  
+20m12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 254 MB/4.9 GB  3.9 MB/s  
+20m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 254 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 255 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 256 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 256 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 257 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 257 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 257 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 258 MB/4.9 GB  4.4 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 259 MB/4.9 GB  4.4 MB/s  
+17m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 259 MB/4.9 GB  4.4 MB/s  
+17m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 260 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 261 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 261 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 262 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 262 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 263 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 263 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 264 MB/4.9 GB  4.7 MB/s  
+16m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 264 MB/4.9 GB  4.7 MB/s  
+16m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 265 MB/4.9 GB  4.7 MB/s  
+16m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 266 MB/4.9 GB  5.1 MB/s   
+15m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 266 MB/4.9 GB  5.1 MB/s   
+15m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 267 MB/4.9 GB  5.1 MB/s   
+15m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 268 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 268 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 269 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   5% ▕                  ▏ 270 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕                  ▏ 270 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕                  ▏ 271 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕                  ▏ 272 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕                  ▏ 272 MB/4.9 GB  5.1 MB/s   
+15m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 273 MB/4.9 GB  5.4 MB/s  
+14m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 274 MB/4.9 GB  5.4 MB/s  
+14m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 274 MB/4.9 GB  5.4 MB/s  
+14m16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 275 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 276 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 276 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 277 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 278 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 278 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 279 MB/4.9 GB  5.4 MB/s  
+14m15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 280 MB/4.9 GB  5.7 MB/s  
+13m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 280 MB/4.9 GB  5.7 MB/s  
+13m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 281 MB/4.9 GB  5.7 MB/s  
+13m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 282 MB/4.9 GB  5.7 MB/s  
+13m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 282 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 283 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 284 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 284 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 285 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 286 MB/4.9 GB  5.7 MB/s  
+13m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 286 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 287 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 287 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 288 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 288 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 289 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 289 MB/4.9 GB  6.0 MB/s  
+12m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 289 MB/4.9 GB  6.0 MB/s  
+12m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 290 MB/4.9 GB  6.0 MB/s  
+12m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 290 MB/4.9 GB  6.0 MB/s  
+12m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 291 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 292 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 292 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 293 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 293 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 293 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 294 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 294 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 294 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 295 MB/4.9 GB  6.1 MB/s  
+12m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 295 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 295 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 296 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 296 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 297 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 297 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 298 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 298 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 298 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 299 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 299 MB/4.9 GB  6.0 MB/s  
+12m56s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 299 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 300 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 300 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 301 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 301 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 301 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 302 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 302 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 302 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 303 MB/4.9 GB  5.8 MB/s  
+13m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 303 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 303 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 304 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 304 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 305 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 305 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 305 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 305 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 306 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 306 MB/4.9 GB  5.4 MB/s   
+14m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 306 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 307 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 307 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 308 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 308 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 309 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 309 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 309 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 310 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 310 MB/4.9 GB  5.2 MB/s  
+14m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 310 MB/4.9 GB  4.9 MB/s  
+15m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 311 MB/4.9 GB  4.9 MB/s  
+15m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 311 MB/4.9 GB  4.9 MB/s  
+15m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 311 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 311 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 311 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 312 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 312 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 312 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 313 MB/4.9 GB  4.9 MB/s  
+15m40s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 313 MB/4.9 GB  4.5 MB/s   
+17m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 313 MB/4.9 GB  4.5 MB/s   
+17m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 314 MB/4.9 GB  4.5 MB/s   
+17m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 315 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 315 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 316 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 316 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 317 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 317 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 318 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 318 MB/4.9 GB  4.5 MB/s   
+17m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   6% ▕█                 ▏ 319 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 320 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 320 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 321 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 322 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 322 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 323 MB/4.9 GB  4.3 MB/s  
+17m39s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 324 MB/4.9 GB  4.3 MB/s  
+17m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 324 MB/4.9 GB  4.3 MB/s  
+17m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 325 MB/4.9 GB  4.3 MB/s  
+17m38s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 325 MB/4.9 GB  4.3 MB/s  
+17m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 325 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 326 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 327 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 327 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 327 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 328 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 328 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 328 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 329 MB/4.9 GB  4.3 MB/s  
+17m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 329 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 329 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 330 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 330 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 331 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 331 MB/4.9 GB  4.2 MB/s   
+18m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 331 MB/4.9 GB  4.2 MB/s   
+18m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 332 MB/4.9 GB  4.2 MB/s   
+18m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 333 MB/4.9 GB  4.2 MB/s   
+18m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 333 MB/4.9 GB  4.2 MB/s   
+18m6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 333 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 334 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 334 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 334 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 334 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 335 MB/4.9 GB  4.2 MB/s   
+18m1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 335 MB/4.9 GB  4.2 MB/s   
+18m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 335 MB/4.9 GB  4.2 MB/s   
+18m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 335 MB/4.9 GB  4.2 MB/s   
+18m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 336 MB/4.9 GB  4.2 MB/s   
+18m0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 336 MB/4.9 GB  4.1 MB/s  
+18m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 336 MB/4.9 GB  4.1 MB/s  
+18m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 336 MB/4.9 GB  4.1 MB/s  
+18m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 336 MB/4.9 GB  4.1 MB/s  
+18m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m36s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 337 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  4.1 MB/s  
+18m35s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 338 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.8 MB/s  
+19m53s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.6 MB/s   
+21m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 339 MB/4.9 GB  3.6 MB/s   
+21m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 340 MB/4.9 GB  3.6 MB/s   
+21m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 340 MB/4.9 GB  3.6 MB/s   
+21m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 340 MB/4.9 GB  3.6 MB/s   
+21m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 341 MB/4.9 GB  3.6 MB/s   
+21m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 341 MB/4.9 GB  3.6 MB/s   
+21m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 342 MB/4.9 GB  3.6 MB/s   
+21m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 342 MB/4.9 GB  3.6 MB/s   
+21m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 343 MB/4.9 GB  3.6 MB/s   
+21m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 343 MB/4.9 GB  3.7 MB/s  
+20m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 344 MB/4.9 GB  3.7 MB/s  
+20m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 344 MB/4.9 GB  3.7 MB/s  
+20m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 344 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 345 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 345 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 346 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 346 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 346 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.7 MB/s  
+20m48s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 347 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 348 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 348 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 348 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 348 MB/4.9 GB  3.8 MB/s  
+20m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 348 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 349 MB/4.9 GB  3.3 MB/s   
+23m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 350 MB/4.9 GB  3.3 MB/s   
+23m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 350 MB/4.9 GB  3.3 MB/s   
+23m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 350 MB/4.9 GB  3.3 MB/s   
+23m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 350 MB/4.9 GB  3.3 MB/s   
+23m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 351 MB/4.9 GB  2.9 MB/s  
+26m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 351 MB/4.9 GB  2.9 MB/s  
+26m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 351 MB/4.9 GB  2.9 MB/s  
+26m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 352 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 352 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 352 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 352 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 353 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 353 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 353 MB/4.9 GB  2.9 MB/s  
+26m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 353 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 354 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.7 MB/s   
+28m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 355 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.4 MB/s   
+32m2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 356 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 357 MB/4.9 GB  2.2 MB/s  
+35m13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 357 MB/4.9 GB  2.1 MB/s  
+35m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 357 MB/4.9 GB  2.1 MB/s  
+35m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 358 MB/4.9 GB  2.1 MB/s  
+35m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 358 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 358 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 358 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.1 MB/s  
+35m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 359 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  2.2 MB/s  
+34m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 360 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 361 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 361 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 361 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 361 MB/4.9 GB  1.9 MB/s  
+39m58s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 362 MB/4.9 GB  1.9 MB/s  
+39m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 362 MB/4.9 GB  1.9 MB/s  
+39m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 362 MB/4.9 GB  1.9 MB/s  
+39m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 363 MB/4.9 GB  1.9 MB/s  
+39m57s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 363 MB/4.9 GB  1.8 MB/s  
+42m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 364 MB/4.9 GB  1.8 MB/s  
+42m21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 364 MB/4.9 GB  1.8 MB/s  
+42m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 364 MB/4.9 GB  1.8 MB/s  
+42m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 365 MB/4.9 GB  1.8 MB/s  
+42m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 365 MB/4.9 GB  1.8 MB/s  
+42m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 365 MB/4.9 GB  1.8 MB/s  
+42m20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 366 MB/4.9 GB  1.8 MB/s  
+42m19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 366 MB/4.9 GB  1.8 MB/s  
+42m19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 366 MB/4.9 GB  1.8 MB/s  
+42m19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 367 MB/4.9 GB  2.0 MB/s  
+37m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 367 MB/4.9 GB  2.0 MB/s  
+37m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 367 MB/4.9 GB  2.0 MB/s  
+37m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 367 MB/4.9 GB  2.0 MB/s  
+37m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 367 MB/4.9 GB  2.0 MB/s  
+37m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 368 MB/4.9 GB  2.0 MB/s  
+37m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 368 MB/4.9 GB  2.0 MB/s  
+37m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 368 MB/4.9 GB  2.0 MB/s  
+37m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   7% ▕█                 ▏ 369 MB/4.9 GB  2.0 MB/s  
+37m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 369 MB/4.9 GB  2.0 MB/s  
+37m26s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 369 MB/4.9 GB  2.1 MB/s  
+36m29s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 369 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 370 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 370 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 371 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 371 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 371 MB/4.9 GB  2.1 MB/s  
+36m28s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 372 MB/4.9 GB  2.1 MB/s  
+36m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 372 MB/4.9 GB  2.1 MB/s  
+36m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 373 MB/4.9 GB  2.1 MB/s  
+36m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 373 MB/4.9 GB  2.1 MB/s  
+36m27s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 373 MB/4.9 GB  2.2 MB/s  
+34m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 374 MB/4.9 GB  2.2 MB/s  
+34m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 374 MB/4.9 GB  2.2 MB/s  
+34m42s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 374 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 375 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 375 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 375 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 376 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 376 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 376 MB/4.9 GB  2.2 MB/s  
+34m41s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 376 MB/4.9 GB  2.4 MB/s  
+31m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 376 MB/4.9 GB  2.4 MB/s  
+31m32s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 377 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 377 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 377 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 377 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 377 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 378 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 378 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 378 MB/4.9 GB  2.4 MB/s  
+31m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 378 MB/4.9 GB  2.5 MB/s   
+30m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 379 MB/4.9 GB  2.5 MB/s   
+30m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 379 MB/4.9 GB  2.5 MB/s   
+30m8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 379 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 379 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 380 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 380 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 380 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 381 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 381 MB/4.9 GB  2.5 MB/s   
+30m7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 381 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 382 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 382 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 382 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 383 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 383 MB/4.9 GB  2.7 MB/s  
+28m10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 384 MB/4.9 GB  2.7 MB/s   
+28m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 384 MB/4.9 GB  2.7 MB/s   
+28m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 384 MB/4.9 GB  2.7 MB/s   
+28m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 385 MB/4.9 GB  2.7 MB/s   
+28m9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 385 MB/4.9 GB  2.9 MB/s   
+26m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 385 MB/4.9 GB  2.9 MB/s   
+26m4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 386 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 386 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 386 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 386 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  2.9 MB/s   
+26m3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 387 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 388 MB/4.9 GB  3.0 MB/s  
+25m11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 389 MB/4.9 GB  2.8 MB/s  
+26m49s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 390 MB/4.9 GB  2.6 MB/s  
+29m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 390 MB/4.9 GB  2.6 MB/s  
+29m31s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 390 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 390 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 390 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.6 MB/s  
+29m30s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 391 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.5 MB/s  
+30m45s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  2.1 MB/s  
+35m37s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.8 MB/s  
+42m54s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.5 MB/s  
+48m46s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  1.2 MB/s    
+1h1m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  788 KB/s   
+1h35m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  557 KB/s   
+2h15m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  433 KB/s   
+2h54m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  433 KB/s   
+2h54m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  433 KB/s   
+2h54m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling 667b0c1932bc:   8% ▕█                 ▏ 392 MB/4.9 GB  433 KB/s   
+2h54m[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K

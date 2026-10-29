@@ -140,7 +140,11 @@ def nli_verifier():
 
 
 def verifier_for(kind):
-    return nli_verifier() if kind == "nli" else NLIVerifier()
+    if kind == "nli":
+        return nli_verifier()
+    if kind == "nli_cv":
+        return nli_verifier().with_threshold(CV_THETA["penalty"]["__all__"])
+    return NLIVerifier()
 
 
 def select_cas(query, passages, tau=DEFAULT_TAU, use_graph=True, verifier="keyword", **_):
@@ -162,6 +166,47 @@ def cas_preserving(query, passages, tau=DEFAULT_TAU):
 def select_cas_preserving(query, passages, tau=DEFAULT_TAU, **_):
     return cas_preserving(query, passages, tau)[0]
 
+# ------------------------------------------------------------
+# Contradiction threshold theta, chosen by 5-fold cross-validation (see run_cv)
+# ------------------------------------------------------------
+
+THETA_GRID = [0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
+N_FOLDS = 5
+CV_PATH = os.path.join(OUT_RESULTS, "cv_thresholds.json")
+CV_THETA = {}   # kind -> {question: theta chosen on the other folds, "__all__": theta fit on all questions}
+if os.path.exists(CV_PATH):
+    with open(CV_PATH, encoding="utf-8") as _f:
+        CV_THETA = json.load(_f)
+
+
+def cas_nli_theta(query, passages, theta, preserve, tau=DEFAULT_TAU):
+    docs, _ = to_documents(query, passages)
+    graph = ConflictGraph(docs, nli_verifier().with_threshold(theta).build_pairwise_matrix(docs))
+    synthesizer = TrustAwareSynthesizer(tau)
+    if preserve:
+        verified, conflicts = synthesizer.filter_preserving_conflicts(graph)
+    else:
+        verified, conflicts = synthesizer.filter_and_weight(graph), []
+    return {int(v.doc.id) for v in verified if not v.is_filtered}, [(int(a), int(b)) for a, b in conflicts]
+
+
+def theta_for(kind, query):
+    """Held-out theta for a tuning question; the all-data theta for questions never used in tuning."""
+    table = CV_THETA.get(kind, {})
+    return table.get(query, table.get("__all__", 0.5))
+
+
+def select_cas_nli_cv(query, passages, tau=DEFAULT_TAU, **_):
+    return cas_nli_theta(query, passages, theta_for("penalty", query), False, tau)[0]
+
+
+def select_cas_preserving_cv(query, passages, tau=DEFAULT_TAU, **_):
+    return cas_nli_theta(query, passages, theta_for("preserve", query), True, tau)[0]
+
+
+def cas_preserving_cv(query, passages, tau=DEFAULT_TAU):
+    return cas_nli_theta(query, passages, theta_for("preserve", query), True, tau)
+
 
 METHODS = {
     "Vanilla RAG (no filter)": select_vanilla,
@@ -170,8 +215,11 @@ METHODS = {
     "CAS (full pipeline)": select_cas,
     "CAS-NLI (full pipeline)": lambda q, p, **kw: select_cas(q, p, verifier="nli", **kw),
     "CAS-NLI conflict-preserving": select_cas_preserving,
+    "CAS-NLI θ-CV (penalty)": select_cas_nli_cv,
+    "CAS-NLI θ-CV preserving": select_cas_preserving_cv,
 }
-NLI_METHODS = {"CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"}
+NLI_METHODS = {"CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving",
+               "CAS-NLI θ-CV (penalty)", "CAS-NLI θ-CV preserving"}
 
 # ============================================================
 # 4. STATISTICS
@@ -276,7 +324,7 @@ def paired_test(a, b, n=10000, seed=SEED):
 def graph_diagnostics(items):
     """How often the conflict graph emits each relation, and who receives agreement credit."""
     rows = []
-    for verifier in ("keyword", "nli"):
+    for verifier in ("keyword", "nli", "nli_cv"):
         for ds, data in items.items():
             rel, agree, penalty = Counter(), {"gold": [], "distractor": []}, {"gold": [], "distractor": []}
             for q, passages, gold, _ in data:
@@ -381,7 +429,45 @@ def run_error_analysis(items, tau=DEFAULT_TAU):
     return rows
 
 
-REFERENCES = ["CAS (full pipeline)", "CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"]
+REFERENCES = ["CAS (full pipeline)", "CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving",
+              "CAS-NLI θ-CV (penalty)", "CAS-NLI θ-CV preserving"]
+
+
+def run_cv(items):
+    """5-fold CV for theta: each question's theta is chosen on the other folds (mean evidence F1).
+
+    Folds are stratified by dataset (seeded shuffle). Ties go to the larger (stricter) theta.
+    "__all__" is theta fit on every question; it is used only for data never seen in tuning (WikiContradict).
+    """
+    pooled = [(ds, q, p, g) for ds, data in items.items() for q, p, g, _ in data]
+    rng = random.Random(SEED)
+    fold = {}
+    for ds in items:
+        idx = [i for i, row in enumerate(pooled) if row[0] == ds]
+        rng.shuffle(idx)
+        for k, i in enumerate(idx):
+            fold[i] = k % N_FOLDS
+    rows, table = [], {}
+    for kind, preserve in (("penalty", False), ("preserve", True)):
+        f1 = {th: [prf(cas_nli_theta(q, p, th, preserve)[0], g)[2] for _, q, p, g in pooled] for th in THETA_GRID}
+        for th in THETA_GRID:
+            rows.append({"kind": kind, "fold": "all", "theta": th, "mean_f1": float(np.mean(f1[th]))})
+        best = lambda ids: max(THETA_GRID, key=lambda th: (round(float(np.mean([f1[th][i] for i in ids])), 12), th))
+        table[kind] = {"__all__": best(range(len(pooled)))}
+        for k in range(N_FOLDS):
+            train = [i for i in range(len(pooled)) if fold[i] != k]
+            test = [i for i in range(len(pooled)) if fold[i] == k]
+            th = best(train)
+            for i in test:
+                table[kind][pooled[i][1]] = th
+            rows.append({"kind": kind, "fold": k, "theta": th,
+                         "train_f1": float(np.mean([f1[th][i] for i in train])),
+                         "heldout_f1": float(np.mean([f1[th][i] for i in test])), "n_test": len(test)})
+    CV_THETA.clear()
+    CV_THETA.update(table)
+    with open(CV_PATH, "w", encoding="utf-8") as f:
+        json.dump(table, f, indent=1, ensure_ascii=False)
+    return rows
 
 
 def run_paired_tests(per_item):
@@ -456,6 +542,37 @@ def contradiction_pairs():
     return pairs
 
 
+CV_DETECTOR = []
+
+
+def cv_detector(pairs):
+    """Contradiction predictions with theta chosen by 5-fold CV (label-stratified) on pooled-pair F1."""
+    def predict(th, a, b):
+        doc_a, doc_b = Document("a", a, "", 0, 0, 0), Document("b", b, "", 0, 0, 0)
+        return int(nli_verifier().with_threshold(th).compare_documents(doc_a, doc_b).relation
+                   == NLIRelation.CONTRADICTION)
+    preds = {th: [predict(th, a, b) for a, b, _, _ in pairs] for th in THETA_GRID}
+    y = [p[2] for p in pairs]
+    rng = random.Random(SEED)
+    fold = {}
+    for label in (0, 1):
+        idx = [i for i, v in enumerate(y) if v == label]
+        rng.shuffle(idx)
+        for k, i in enumerate(idx):
+            fold[i] = k % N_FOLDS
+    out = [0] * len(pairs)
+    CV_DETECTOR.clear()
+    for k in range(N_FOLDS):
+        train = [i for i in fold if fold[i] != k]
+        th = max(THETA_GRID, key=lambda t: (round(binary_prf([y[i] for i in train],
+                                                             [preds[t][i] for i in train])[2], 12), t))
+        CV_DETECTOR.append({"fold": k, "theta": th})
+        for i in fold:
+            if fold[i] == k:
+                out[i] = preds[th][i]
+    return out
+
+
 def run_contradiction(pairs):
     y = [p[2] for p in pairs]
     detectors = {
@@ -464,6 +581,7 @@ def run_contradiction(pairs):
                                              for a, b, _, _ in pairs],
         "DeBERTa-v3 NLI (CAS-NLI)": [int(cas_relation(a, b, "nli") == NLIRelation.CONTRADICTION)
                                      for a, b, _, _ in pairs],
+        "DeBERTa-v3 NLI θ-CV": cv_detector(pairs),
     }
     rows, by_group = [], []
     for name, pred in detectors.items():
@@ -592,6 +710,7 @@ def main():
 
     t0 = time.perf_counter()
     items = evidence_items()
+    cv = run_cv(items)            # must run first: the θ-CV methods read the thresholds it stores
     evidence, per_item = run_evidence_selection(items)
     paired = run_paired_tests(per_item)
     diagnostics = graph_diagnostics(items)
@@ -613,6 +732,7 @@ def main():
     write_csv(os.path.join(OUT_RESULTS, "contradiction_detection.csv"), contra)
     write_csv(os.path.join(OUT_RESULTS, "contradiction_by_group.csv"), contra_groups)
     write_csv(os.path.join(OUT_RESULTS, "dataset_inventory.csv"), inv)
+    write_csv(os.path.join(OUT_RESULTS, "cv_threshold.csv"), cv)
     with open(os.path.join(OUT_RESULTS, "results.json"), "w", encoding="utf-8") as f:
         json.dump({"config": {"seed": SEED, "bootstrap": N_BOOT, "permutations": 10000, "tau": DEFAULT_TAU,
                               "top_k": TOP_K, "provenance_prior": PROVENANCE,
@@ -623,8 +743,15 @@ def main():
                    "graph_diagnostics": diagnostics, "timing": timing, "error_analysis": errors,
                    "threshold_sweep": sweep,
                    "contradiction_detection": contra, "contradiction_by_group": contra_groups,
-                   "nli": nli, "hallucination": halluc, "inventory": inv}, f, indent=2)
+                   "nli": nli, "hallucination": halluc, "inventory": inv,
+                   "cv_threshold": {"grid": THETA_GRID, "folds": N_FOLDS, "rows": cv,
+                                    "theta_all": {k: v["__all__"] for k, v in CV_THETA.items()},
+                                    "detector_folds": CV_DETECTOR}}, f, indent=2)
 
+    print("Cross-validated contradiction threshold")
+    for r in cv:
+        print("  ", r)
+    print("  detector folds:", CV_DETECTOR)
     print("Evidence selection (mean [95% CI])")
     for r in evidence:
         if r["metric"] in ("precision", "recall", "f1", "retention"):

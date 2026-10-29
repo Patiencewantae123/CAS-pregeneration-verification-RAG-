@@ -19,7 +19,8 @@ for (ds, m), t in timing.items():
                  "candidates_per_query": t["candidates_per_query"],
                  "f1": f["mean"], "f1_ci_low": f["ci_low"], "f1_ci_high": f["ci_high"]})
 ax.set_xscale("log")
-ax.set_xlim(1e-4, 20)
+ax.set_xlim(1e-4, 5e5)
+ax.set_xticks([1e-4, 1e-2, 1, 1e2, 1e4], ["0.0001", "0.01", "1", "100", "10,000"])
 ax.set_ylim(0, 0.8)
 ax.set_xlabel("Selection latency per query (ms, log scale)")
 ax.set_ylabel("Evidence F1")

@@ -31,10 +31,10 @@ for ax, (letter, (ds, metric, xlabel)) in zip(axes, zip("abcd", panels)):
     ax.axhline(len(methods) - 0.15, color=GRID, linewidth=0.5)
     ax.set_xlim(0, 1)
     ax.set_xticks([0, 0.25, 0.5, 0.75, 1.0], ["0", ".25", ".5", ".75", "1"])
-    ax.set_xlabel(xlabel)
-    ax.grid(axis="x")
     n = look[(ds, models[0], methods[0], metric)]["n"]
-    panel_title(ax, letter, f"{ds}, {'accuracy' if metric == 'accuracy' else 'F1'} (n = {n})")
+    ax.set_xlabel(f"{xlabel} (n = {n})")
+    ax.grid(axis="x")
+    panel_title(ax, letter, f"{ds} {'acc.' if metric == 'accuracy' else 'F1'}")
 axes[0].set_yticks(ticks, labels, fontsize=6.3)
 axes[0].invert_yaxis()
 axes[0].tick_params(axis="y", length=0)

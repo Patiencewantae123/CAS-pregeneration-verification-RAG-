@@ -1,33 +1,49 @@
-dataset,model,method,metric,mean,ci_low,ci_high,n,p_holm_cas_full_vs_this
+dataset,model,method,metric,mean,ci_low,ci_high,n,p_holm_cas_nli_preserving_vs_this
 HotpotQA,llama3.2:latest,Vanilla RAG (no filter),accuracy,0.6,0.46,0.74,50,1.0
 HotpotQA,llama3.2:latest,Relevance top-3 (BM25),accuracy,0.54,0.4,0.68,50,1.0
-HotpotQA,llama3.2:latest,CAS w/o conflict graph,accuracy,0.5,0.36,0.64,50,1.0
+HotpotQA,llama3.2:latest,CAS w/o conflict graph,accuracy,0.52,0.38,0.66,50,1.0
 HotpotQA,llama3.2:latest,CAS (full pipeline),accuracy,0.5,0.36,0.64,50,
+HotpotQA,llama3.2:latest,CAS-NLI (full pipeline),accuracy,0.38,0.24,0.52,50,
+HotpotQA,llama3.2:latest,CAS-NLI conflict-preserving,accuracy,0.52,0.38,0.66,50,
 HotpotQA,gemma3:latest,Vanilla RAG (no filter),accuracy,0.56,0.42,0.7,50,1.0
 HotpotQA,gemma3:latest,Relevance top-3 (BM25),accuracy,0.54,0.4,0.68,50,1.0
-HotpotQA,gemma3:latest,CAS w/o conflict graph,accuracy,0.48,0.34,0.62,50,1.0
+HotpotQA,gemma3:latest,CAS w/o conflict graph,accuracy,0.54,0.4,0.68,50,1.0
 HotpotQA,gemma3:latest,CAS (full pipeline),accuracy,0.52,0.38,0.66,50,
-HotpotQA,llama3.2:latest,Vanilla RAG (no filter),f1,0.6571148459383752,0.5260049019607843,0.7783964985994396,50,0.2391760823917608
+HotpotQA,gemma3:latest,CAS-NLI (full pipeline),accuracy,0.34,0.2,0.48,50,
+HotpotQA,gemma3:latest,CAS-NLI conflict-preserving,accuracy,0.56,0.42,0.7,50,
+HotpotQA,llama3.2:latest,Vanilla RAG (no filter),f1,0.6571148459383752,0.5260049019607843,0.7783964985994396,50,1.0
 HotpotQA,llama3.2:latest,Relevance top-3 (BM25),f1,0.5826666666666667,0.44926666666666665,0.7093333333333334,50,1.0
-HotpotQA,llama3.2:latest,CAS w/o conflict graph,f1,0.5093333333333334,0.3719333333333333,0.6480333333333332,50,1.0
+HotpotQA,llama3.2:latest,CAS w/o conflict graph,f1,0.5293333333333333,0.3933333333333333,0.6693333333333333,50,1.0
 HotpotQA,llama3.2:latest,CAS (full pipeline),f1,0.4933333333333333,0.3533333333333333,0.6333333333333333,50,
+HotpotQA,llama3.2:latest,CAS-NLI (full pipeline),f1,0.4,0.264,0.5319999999999999,50,
+HotpotQA,llama3.2:latest,CAS-NLI conflict-preserving,f1,0.5293333333333333,0.3933333333333333,0.6693333333333333,50,
 HotpotQA,gemma3:latest,Vanilla RAG (no filter),f1,0.6186666666666666,0.48666666666666664,0.7426666666666667,50,1.0
 HotpotQA,gemma3:latest,Relevance top-3 (BM25),f1,0.5153333333333333,0.37998333333333334,0.6473499999999999,50,1.0
-HotpotQA,gemma3:latest,CAS w/o conflict graph,f1,0.45466666666666666,0.3253,0.5786666666666666,50,1.0
-HotpotQA,gemma3:latest,CAS (full pipeline),f1,0.4946666666666667,0.3653333333333333,0.6253333333333333,50,
+HotpotQA,gemma3:latest,CAS w/o conflict graph,f1,0.5306666666666666,0.39866666666666667,0.6613333333333332,50,1.0
+HotpotQA,gemma3:latest,CAS (full pipeline),f1,0.5306666666666666,0.39866666666666667,0.6573666666666663,50,
+HotpotQA,gemma3:latest,CAS-NLI (full pipeline),f1,0.33599999999999997,0.21195,0.46799999999999997,50,
+HotpotQA,gemma3:latest,CAS-NLI conflict-preserving,f1,0.5346666666666667,0.40526666666666666,0.6653333333333333,50,
 MuSiQue,llama3.2:latest,Vanilla RAG (no filter),accuracy,0.3333333333333333,0.13333333333333333,0.6,15,1.0
 MuSiQue,llama3.2:latest,Relevance top-3 (BM25),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,1.0
 MuSiQue,llama3.2:latest,CAS w/o conflict graph,accuracy,0.13333333333333333,0.0,0.3333333333333333,15,1.0
 MuSiQue,llama3.2:latest,CAS (full pipeline),accuracy,0.2,0.0,0.4,15,
+MuSiQue,llama3.2:latest,CAS-NLI (full pipeline),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,
+MuSiQue,llama3.2:latest,CAS-NLI conflict-preserving,accuracy,0.06666666666666667,0.0,0.2,15,
 MuSiQue,gemma3:latest,Vanilla RAG (no filter),accuracy,0.2,0.0,0.4,15,1.0
 MuSiQue,gemma3:latest,Relevance top-3 (BM25),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,1.0
 MuSiQue,gemma3:latest,CAS w/o conflict graph,accuracy,0.2,0.0,0.4,15,1.0
 MuSiQue,gemma3:latest,CAS (full pipeline),accuracy,0.2,0.0,0.4,15,
+MuSiQue,gemma3:latest,CAS-NLI (full pipeline),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,
+MuSiQue,gemma3:latest,CAS-NLI conflict-preserving,accuracy,0.2,0.0,0.4,15,
 MuSiQue,llama3.2:latest,Vanilla RAG (no filter),f1,0.3,0.1,0.5333333333333333,15,1.0
 MuSiQue,llama3.2:latest,Relevance top-3 (BM25),f1,0.06666666666666667,0.0,0.2,15,1.0
 MuSiQue,llama3.2:latest,CAS w/o conflict graph,f1,0.06666666666666667,0.0,0.2,15,1.0
-MuSiQue,llama3.2:latest,CAS (full pipeline),f1,0.13333333333333333,0.0,0.3333333333333333,15,
+MuSiQue,llama3.2:latest,CAS (full pipeline),f1,0.16666666666666666,0.0,0.36666666666666664,15,
+MuSiQue,llama3.2:latest,CAS-NLI (full pipeline),f1,0.06666666666666667,0.0,0.2,15,
+MuSiQue,llama3.2:latest,CAS-NLI conflict-preserving,f1,0.0,0.0,0.0,15,
 MuSiQue,gemma3:latest,Vanilla RAG (no filter),f1,0.16444444444444445,0.0,0.3511111111111111,15,1.0
 MuSiQue,gemma3:latest,Relevance top-3 (BM25),f1,0.06666666666666667,0.0,0.2,15,1.0
 MuSiQue,gemma3:latest,CAS w/o conflict graph,f1,0.12000000000000001,0.0,0.29333333333333333,15,1.0
 MuSiQue,gemma3:latest,CAS (full pipeline),f1,0.12000000000000001,0.0,0.29333333333333333,15,
+MuSiQue,gemma3:latest,CAS-NLI (full pipeline),f1,0.05333333333333334,0.0,0.16000000000000003,15,
+MuSiQue,gemma3:latest,CAS-NLI conflict-preserving,f1,0.12000000000000001,0.0,0.29333333333333333,15,

@@ -10,7 +10,7 @@
     "numpy": "2.5.1",
     "platform": "Windows-11-10.0.26300-SP0",
     "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
-    "total_runtime_s": 8.393617599998834
+    "total_runtime_s": 2715.794144700001
   },
   "evidence_selection": [
     {
@@ -21,7 +21,7 @@
       "ci_low": 0.19999999999999996,
       "ci_high": 0.19999999999999996,
       "n": 50,
-      "ms_per_query": 0.13151599996490404
+      "ms_per_query": 0.14805799997702707
     },
     {
       "dataset": "HotpotQA",
@@ -31,7 +31,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 50,
-      "ms_per_query": 0.13151599996490404
+      "ms_per_query": 0.14805799997702707
     },
     {
       "dataset": "HotpotQA",
@@ -41,7 +41,7 @@
       "ci_low": 0.33333333333333337,
       "ci_high": 0.33333333333333337,
       "n": 50,
-      "ms_per_query": 0.13151599996490404
+      "ms_per_query": 0.14805799997702707
     },
     {
       "dataset": "HotpotQA",
@@ -51,7 +51,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 50,
-      "ms_per_query": 0.13151599996490404
+      "ms_per_query": 0.14805799997702707
     },
     {
       "dataset": "HotpotQA",
@@ -61,7 +61,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 46,
-      "ms_per_query": 0.13151599996490404
+      "ms_per_query": 0.14805799997702707
     },
     {
       "dataset": "HotpotQA",
@@ -71,7 +71,7 @@
       "ci_low": 0.44,
       "ci_high": 0.5466666666666666,
       "n": 50,
-      "ms_per_query": 0.307122000012896
+      "ms_per_query": 0.29610800003865734
     },
     {
       "dataset": "HotpotQA",
@@ -81,7 +81,7 @@
       "ci_low": 0.66,
       "ci_high": 0.82,
       "n": 50,
-      "ms_per_query": 0.307122000012896
+      "ms_per_query": 0.29610800003865734
     },
     {
       "dataset": "HotpotQA",
@@ -91,7 +91,7 @@
       "ci_low": 0.528,
       "ci_high": 0.6559999999999999,
       "n": 50,
-      "ms_per_query": 0.307122000012896
+      "ms_per_query": 0.29610800003865734
     },
     {
       "dataset": "HotpotQA",
@@ -101,7 +101,7 @@
       "ci_low": 0.30000000000000004,
       "ci_high": 0.30000000000000004,
       "n": 50,
-      "ms_per_query": 0.307122000012896
+      "ms_per_query": 0.29610800003865734
     },
     {
       "dataset": "HotpotQA",
@@ -111,107 +111,207 @@
       "ci_low": 0.6304347826086957,
       "ci_high": 0.8695652173913043,
       "n": 46,
-      "ms_per_query": 0.307122000012896
+      "ms_per_query": 0.29610800003865734
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "metric": "precision",
-      "mean": 0.7516666666666666,
-      "ci_low": 0.6566666666666667,
-      "ci_high": 0.835,
+      "mean": 0.6803333333333333,
+      "ci_low": 0.5953333333333333,
+      "ci_high": 0.7613333333333333,
       "n": 50,
-      "ms_per_query": 0.3096419999928912
+      "ms_per_query": 0.33499199998914264
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "metric": "recall",
-      "mean": 0.63,
-      "ci_low": 0.55,
-      "ci_high": 0.71,
+      "mean": 0.7,
+      "ci_low": 0.63,
+      "ci_high": 0.77,
       "n": 50,
-      "ms_per_query": 0.3096419999928912
+      "ms_per_query": 0.33499199998914264
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean": 0.6566666666666667,
-      "ci_low": 0.5819833333333332,
-      "ci_high": 0.7253499999999998,
+      "mean": 0.6494761904761904,
+      "ci_low": 0.5851261904761904,
+      "ci_high": 0.7126690476190475,
       "n": 50,
-      "ms_per_query": 0.3096419999928912
+      "ms_per_query": 0.33499199998914264
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "metric": "retention",
-      "mean": 0.19599999999999998,
-      "ci_low": 0.172,
-      "ci_high": 0.222,
+      "mean": 0.25000000000000006,
+      "ci_low": 0.21600000000000003,
+      "ci_high": 0.28800000000000003,
       "n": 50,
-      "ms_per_query": 0.3096419999928912
+      "ms_per_query": 0.33499199998914264
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "metric": "answer_coverage",
-      "mean": 0.6086956521739131,
-      "ci_low": 0.45652173913043476,
-      "ci_high": 0.7608695652173914,
+      "mean": 0.6956521739130435,
+      "ci_low": 0.5652173913043478,
+      "ci_high": 0.8260869565217391,
       "n": 46,
-      "ms_per_query": 0.3096419999928912
+      "ms_per_query": 0.33499199998914264
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "metric": "precision",
-      "mean": 0.5886666666666666,
-      "ci_low": 0.502325,
-      "ci_high": 0.6720333333333331,
+      "mean": 0.5178730158730158,
+      "ci_low": 0.44374047619047624,
+      "ci_high": 0.5947087301587302,
       "n": 50,
-      "ms_per_query": 1.3952379999682307
+      "ms_per_query": 1.3200700000015786
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "metric": "recall",
-      "mean": 0.66,
-      "ci_low": 0.58,
-      "ci_high": 0.74,
+      "mean": 0.72,
+      "ci_low": 0.65,
+      "ci_high": 0.79,
       "n": 50,
-      "ms_per_query": 1.3952379999682307
+      "ms_per_query": 1.3200700000015786
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "metric": "f1",
-      "mean": 0.5804761904761904,
-      "ci_low": 0.5158095238095238,
-      "ci_high": 0.6464761904761904,
+      "mean": 0.5517647907647907,
+      "ci_low": 0.4989660894660894,
+      "ci_high": 0.609030303030303,
       "n": 50,
-      "ms_per_query": 1.3952379999682307
+      "ms_per_query": 1.3200700000015786
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "metric": "retention",
-      "mean": 0.276,
-      "ci_low": 0.23600000000000002,
-      "ci_high": 0.3180499999999997,
+      "mean": 0.3520000000000001,
+      "ci_low": 0.30195,
+      "ci_high": 0.40800000000000003,
       "n": 50,
-      "ms_per_query": 1.3952379999682307
+      "ms_per_query": 1.3200700000015786
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "metric": "answer_coverage",
-      "mean": 0.6521739130434783,
-      "ci_low": 0.5,
-      "ci_high": 0.782608695652174,
+      "mean": 0.717391304347826,
+      "ci_low": 0.5869565217391305,
+      "ci_high": 0.8478260869565217,
       "n": 46,
-      "ms_per_query": 1.3952379999682307
+      "ms_per_query": 1.3200700000015786
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "precision",
+      "mean": 0.42133333333333334,
+      "ci_low": 0.3013,
+      "ci_high": 0.5413666666666664,
+      "n": 50,
+      "ms_per_query": 23203.714765999975
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "recall",
+      "mean": 0.33,
+      "ci_low": 0.24,
+      "ci_high": 0.42,
+      "n": 50,
+      "ms_per_query": 23203.714765999975
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.3487619047619047,
+      "ci_low": 0.257302380952381,
+      "ci_high": 0.4460952380952381,
+      "n": 50,
+      "ms_per_query": 23203.714765999975
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "retention",
+      "mean": 0.124,
+      "ci_low": 0.092,
+      "ci_high": 0.158,
+      "n": 50,
+      "ms_per_query": 23203.714765999975
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "answer_coverage",
+      "mean": 0.32608695652173914,
+      "ci_low": 0.1956521739130435,
+      "ci_high": 0.45652173913043476,
+      "n": 46,
+      "ms_per_query": 23203.714765999975
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean": 0.6496666666666667,
+      "ci_low": 0.5616583333333334,
+      "ci_high": 0.7310083333333333,
+      "n": 50,
+      "ms_per_query": 0.6172100000549108
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean": 0.7,
+      "ci_low": 0.63,
+      "ci_high": 0.77,
+      "n": 50,
+      "ms_per_query": 0.6172100000549108
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.6304285714285713,
+      "ci_low": 0.5644035714285713,
+      "ci_high": 0.6922107142857141,
+      "n": 50,
+      "ms_per_query": 0.6172100000549108
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "retention",
+      "mean": 0.272,
+      "ci_low": 0.23200000000000004,
+      "ci_high": 0.314,
+      "n": 50,
+      "ms_per_query": 0.6172100000549108
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "answer_coverage",
+      "mean": 0.717391304347826,
+      "ci_low": 0.5869565217391305,
+      "ci_high": 0.8478260869565217,
+      "n": 46,
+      "ms_per_query": 0.6172100000549108
     },
     {
       "dataset": "MuSiQue",
@@ -221,7 +321,7 @@
       "ci_low": 0.08333333333333334,
       "ci_high": 0.12000000000000002,
       "n": 15,
-      "ms_per_query": 0.26461333327461034
+      "ms_per_query": 0.47169999985878047
     },
     {
       "dataset": "MuSiQue",
@@ -231,7 +331,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 15,
-      "ms_per_query": 0.26461333327461034
+      "ms_per_query": 0.47169999985878047
     },
     {
       "dataset": "MuSiQue",
@@ -241,7 +341,7 @@
       "ci_low": 0.15245623941276115,
       "ci_high": 0.2111173850304285,
       "n": 15,
-      "ms_per_query": 0.26461333327461034
+      "ms_per_query": 0.47169999985878047
     },
     {
       "dataset": "MuSiQue",
@@ -251,7 +351,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 15,
-      "ms_per_query": 0.26461333327461034
+      "ms_per_query": 0.47169999985878047
     },
     {
       "dataset": "MuSiQue",
@@ -261,7 +361,7 @@
       "ci_low": 0.4666666666666667,
       "ci_high": 0.9333333333333333,
       "n": 15,
-      "ms_per_query": 0.26461333327461034
+      "ms_per_query": 0.47169999985878047
     },
     {
       "dataset": "MuSiQue",
@@ -271,7 +371,7 @@
       "ci_low": 0.22222222222222224,
       "ci_high": 0.4444444444444444,
       "n": 15,
-      "ms_per_query": 0.5077466666989494
+      "ms_per_query": 0.5210066667738525
     },
     {
       "dataset": "MuSiQue",
@@ -281,7 +381,7 @@
       "ci_low": 0.3222222222222222,
       "ci_high": 0.6888888888888888,
       "n": 15,
-      "ms_per_query": 0.5077466666989494
+      "ms_per_query": 0.5210066667738525
     },
     {
       "dataset": "MuSiQue",
@@ -291,7 +391,7 @@
       "ci_low": 0.2622222222222222,
       "ci_high": 0.5266666666666666,
       "n": 15,
-      "ms_per_query": 0.5077466666989494
+      "ms_per_query": 0.5210066667738525
     },
     {
       "dataset": "MuSiQue",
@@ -301,7 +401,7 @@
       "ci_low": 0.14999999999999997,
       "ci_high": 0.14999999999999997,
       "n": 15,
-      "ms_per_query": 0.5077466666989494
+      "ms_per_query": 0.5210066667738525
     },
     {
       "dataset": "MuSiQue",
@@ -311,273 +411,687 @@
       "ci_low": 0.06666666666666667,
       "ci_high": 0.5333333333333333,
       "n": 15,
-      "ms_per_query": 0.5077466666989494
+      "ms_per_query": 0.5210066667738525
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "metric": "precision",
-      "mean": 0.3512698412698413,
-      "ci_low": 0.27349206349206345,
-      "ci_high": 0.4301587301587302,
+      "mean": 0.35005291005291006,
+      "ci_low": 0.2578280423280423,
+      "ci_high": 0.4429113756613756,
       "n": 15,
-      "ms_per_query": 0.5316199999166807
+      "ms_per_query": 0.566906666548069
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "metric": "recall",
-      "mean": 0.6388888888888888,
-      "ci_low": 0.4831944444444444,
-      "ci_high": 0.7890277777777771,
+      "mean": 0.6722222222222222,
+      "ci_low": 0.5055555555555555,
+      "ci_high": 0.8333333333333334,
       "n": 15,
-      "ms_per_query": 0.5316199999166807
+      "ms_per_query": 0.566906666548069
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean": 0.416931216931217,
-      "ci_low": 0.33425396825396825,
-      "ci_high": 0.5026507936507937,
+      "mean": 0.421014911014911,
+      "ci_low": 0.32612590187590185,
+      "ci_high": 0.5231261423761424,
       "n": 15,
-      "ms_per_query": 0.5316199999166807
+      "ms_per_query": 0.566906666548069
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "metric": "retention",
-      "mean": 0.18666666666666665,
-      "ci_low": 0.14333333333333334,
-      "ci_high": 0.23666666666666666,
+      "mean": 0.20666666666666667,
+      "ci_low": 0.16324999999999998,
+      "ci_high": 0.26,
       "n": 15,
-      "ms_per_query": 0.5316199999166807
+      "ms_per_query": 0.566906666548069
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "metric": "answer_coverage",
-      "mean": 0.3333333333333333,
-      "ci_low": 0.13333333333333333,
-      "ci_high": 0.6,
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6666666666666666,
       "n": 15,
-      "ms_per_query": 0.5316199999166807
+      "ms_per_query": 0.566906666548069
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "metric": "precision",
-      "mean": 0.2996825396825397,
-      "ci_low": 0.21950396825396826,
-      "ci_high": 0.3845238095238095,
+      "mean": 0.30339105339105343,
+      "ci_low": 0.21434343434343436,
+      "ci_high": 0.39722222222222214,
       "n": 15,
-      "ms_per_query": 4.410246666763366
+      "ms_per_query": 4.623613333387766
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "metric": "recall",
-      "mean": 0.6388888888888888,
-      "ci_low": 0.4831944444444444,
-      "ci_high": 0.7890277777777771,
+      "mean": 0.6722222222222222,
+      "ci_low": 0.5055555555555555,
+      "ci_high": 0.8333333333333334,
       "n": 15,
-      "ms_per_query": 4.410246666763366
+      "ms_per_query": 4.623613333387766
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "metric": "f1",
-      "mean": 0.36936507936507934,
-      "ci_low": 0.28468915343915346,
-      "ci_high": 0.45846693121693116,
+      "mean": 0.37644355644355637,
+      "ci_low": 0.27765712065712067,
+      "ci_high": 0.4738480038480038,
       "n": 15,
-      "ms_per_query": 4.410246666763366
+      "ms_per_query": 4.623613333387766
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "metric": "retention",
-      "mean": 0.23999999999999996,
-      "ci_low": 0.18666666666666668,
-      "ci_high": 0.2966666666666667,
+      "mean": 0.26333333333333336,
+      "ci_low": 0.2,
+      "ci_high": 0.33674999999999966,
       "n": 15,
-      "ms_per_query": 4.410246666763366
+      "ms_per_query": 4.623613333387766
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "metric": "answer_coverage",
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6666666666666666,
+      "n": 15,
+      "ms_per_query": 4.623613333387766
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "precision",
+      "mean": 0.24126984126984127,
+      "ci_low": 0.11111111111111112,
+      "ci_high": 0.3968253968253968,
+      "n": 15,
+      "ms_per_query": 84490.52283333318
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "recall",
+      "mean": 0.31666666666666665,
+      "ci_low": 0.15,
+      "ci_high": 0.5,
+      "n": 15,
+      "ms_per_query": 84490.52283333318
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean": 0.2388359788359788,
+      "ci_low": 0.12380158730158727,
+      "ci_high": 0.36371164021164015,
+      "n": 15,
+      "ms_per_query": 84490.52283333318
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "retention",
+      "mean": 0.10333333333333333,
+      "ci_low": 0.060000000000000005,
+      "ci_high": 0.15341666666666623,
+      "n": 15,
+      "ms_per_query": 84490.52283333318
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "metric": "answer_coverage",
       "mean": 0.3333333333333333,
       "ci_low": 0.13333333333333333,
       "ci_high": 0.6,
       "n": 15,
-      "ms_per_query": 4.410246666763366
+      "ms_per_query": 84490.52283333318
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean": 0.3303439153439154,
+      "ci_low": 0.230369708994709,
+      "ci_high": 0.43104298941798935,
+      "n": 15,
+      "ms_per_query": 1.648113333552222
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean": 0.6722222222222222,
+      "ci_low": 0.5055555555555555,
+      "ci_high": 0.8333333333333334,
+      "n": 15,
+      "ms_per_query": 1.648113333552222
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean": 0.4014862914862915,
+      "ci_low": 0.2997520442520442,
+      "ci_high": 0.5092288359788358,
+      "n": 15,
+      "ms_per_query": 1.648113333552222
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "retention",
+      "mean": 0.24000000000000005,
+      "ci_low": 0.17666666666666667,
+      "ci_high": 0.3166666666666667,
+      "n": 15,
+      "ms_per_query": 1.648113333552222
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "metric": "answer_coverage",
+      "mean": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6666666666666666,
+      "n": 15,
+      "ms_per_query": 1.648113333552222
     }
   ],
   "paired_tests": [
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
       "metric": "precision",
-      "mean_diff": 0.38866666666666666,
-      "ci_low": 0.30232499999999995,
-      "ci_high": 0.4720333333333332,
+      "mean_diff": 0.31787301587301586,
+      "ci_low": 0.24374047619047617,
+      "ci_high": 0.3947087301587301,
       "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0017998200179982003
+      "p_holm": 0.007199280071992801
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
       "metric": "recall",
-      "mean_diff": -0.34,
-      "ci_low": -0.42,
-      "ci_high": -0.26,
+      "mean_diff": -0.28,
+      "ci_low": -0.35,
+      "ci_high": -0.21,
       "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0017998200179982003
+      "p_holm": 0.007199280071992801
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
-      "mean_diff": 0.24714285714285708,
-      "ci_low": 0.18247619047619046,
-      "ci_high": 0.3131428571428571,
+      "mean_diff": 0.21843145743145737,
+      "ci_low": 0.1656327561327561,
+      "ci_high": 0.2756969696969696,
       "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0017998200179982003
+      "p_holm": 0.007199280071992801
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
       "metric": "precision",
-      "mean_diff": 0.09533333333333337,
-      "ci_low": 0.021325000000000018,
-      "ci_high": 0.17201666666666657,
-      "p_value": 0.0193980601939806,
-      "p_holm": 0.193980601939806
-    },
-    {
-      "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
-      "metric": "recall",
-      "mean_diff": -0.08,
-      "ci_low": -0.14,
-      "ci_high": -0.02,
-      "p_value": 0.019598040195980403,
-      "p_holm": 0.193980601939806
-    },
-    {
-      "dataset": "HotpotQA",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
-      "metric": "f1",
-      "mean_diff": -0.011523809523809556,
-      "ci_low": -0.062495238095238125,
-      "ci_high": 0.039811904761904715,
-      "p_value": 0.6715328467153284,
+      "mean_diff": 0.024539682539682573,
+      "ci_low": -0.04539682539682536,
+      "ci_high": 0.10438095238095238,
+      "p_value": 0.5421457854214579,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
-      "metric": "precision",
-      "mean_diff": -0.163,
-      "ci_low": -0.23500833333333337,
-      "ci_high": -0.09466666666666669,
-      "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0017998200179982003
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean_diff": -0.02,
+      "ci_low": -0.09,
+      "ci_high": 0.05,
+      "p_value": 0.7825217478252174,
+      "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.04023520923520927,
+      "ci_low": -0.09053513708513712,
+      "ci_high": 0.011621428571428526,
+      "p_value": 0.12998700129987,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean_diff": -0.16246031746031747,
+      "ci_low": -0.23190912698412702,
+      "ci_high": -0.09691865079365079,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
       "metric": "recall",
-      "mean_diff": 0.03,
+      "mean_diff": 0.02,
       "ci_low": 0.0,
-      "ci_high": 0.07,
-      "p_value": 0.24757524247575244,
+      "ci_high": 0.05,
+      "p_value": 0.49505049495050496,
       "p_holm": 1.0
     },
     {
       "dataset": "HotpotQA",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean_diff": -0.07619047619047618,
-      "ci_low": -0.12285714285714285,
-      "ci_high": -0.03275952380952382,
-      "p_value": 0.0013998600139986002,
-      "p_holm": 0.016798320167983202
-    },
-    {
-      "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
-      "metric": "precision",
-      "mean_diff": 0.19968253968253968,
-      "ci_low": 0.12698412698412698,
-      "ci_high": 0.2779484126984127,
+      "mean_diff": -0.09771139971139972,
+      "ci_low": -0.1451797258297258,
+      "ci_high": -0.05250461760461761,
       "p_value": 9.999000099990002e-05,
-      "p_holm": 0.0017998200179982003
+      "p_holm": 0.007199280071992801
     },
     {
-      "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
+      "metric": "precision",
+      "mean_diff": 0.09653968253968252,
+      "ci_low": -0.02576269841269844,
+      "ci_high": 0.21628492063492044,
+      "p_value": 0.13258674132586742,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
       "metric": "recall",
-      "mean_diff": -0.3611111111111111,
-      "ci_low": -0.5168055555555556,
-      "ci_high": -0.210972222222223,
-      "p_value": 0.0038996100389961006,
-      "p_holm": 0.04289571042895711
+      "mean_diff": 0.39,
+      "ci_low": 0.29,
+      "ci_high": 0.49,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean_diff": 0.203002886002886,
+      "ci_low": 0.1050595598845599,
+      "ci_high": 0.2953734848484848,
+      "p_value": 0.00029997000299970003,
+      "p_holm": 0.014998500149985002
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean_diff": -0.1317936507936508,
+      "ci_low": -0.19746190476190478,
+      "ci_high": -0.0724940476190477,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean_diff": 0.02,
+      "ci_low": 0.0,
+      "ci_high": 0.05,
+      "p_value": 0.49505049495050496,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean_diff": -0.07866378066378067,
+      "ci_low": -0.12264603174603174,
+      "ci_high": -0.03935696248196251,
+      "p_value": 0.00019998000199980003,
+      "p_holm": 0.010198980101989802
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean_diff": 0.22133333333333335,
+      "ci_low": 0.1013,
+      "ci_high": 0.34136666666666654,
+      "p_value": 0.0005999400059994001,
+      "p_holm": 0.028197180281971802
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean_diff": -0.67,
+      "ci_low": -0.76,
+      "ci_high": -0.58,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 0.015428571428571397,
+      "ci_low": -0.07603095238095244,
+      "ci_high": 0.11276190476190472,
+      "p_value": 0.7443255674432556,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean_diff": -0.07199999999999997,
+      "ci_low": -0.19534999999999997,
+      "ci_high": 0.05401666666666662,
+      "p_value": 0.28857114288571145,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean_diff": -0.41,
+      "ci_low": -0.52,
+      "ci_high": -0.29,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.2432380952380953,
+      "ci_low": -0.3506666666666667,
+      "ci_high": -0.13370238095238104,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean_diff": -0.25899999999999995,
+      "ci_low": -0.37666666666666665,
+      "ci_high": -0.1389833333333334,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean_diff": -0.37,
+      "ci_low": -0.47,
+      "ci_high": -0.27,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.3007142857142857,
+      "ci_low": -0.3963904761904761,
+      "ci_high": -0.2050380952380953,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean_diff": -0.22833333333333333,
+      "ci_low": -0.3466666666666666,
+      "ci_high": -0.10333333333333332,
+      "p_value": 0.0004999500049995,
+      "p_holm": 0.023997600239976002
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean_diff": -0.37,
+      "ci_low": -0.47,
+      "ci_high": -0.27,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean_diff": -0.2816666666666667,
+      "ci_low": -0.37799999999999995,
+      "ci_high": -0.18200000000000002,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean_diff": 0.4496666666666666,
+      "ci_low": 0.36165833333333336,
+      "ci_high": 0.5310083333333332,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean_diff": -0.3,
+      "ci_low": -0.37,
+      "ci_high": -0.23,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 0.2970952380952381,
+      "ci_low": 0.23107023809523805,
+      "ci_high": 0.35887738095238075,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean_diff": 0.15633333333333338,
+      "ci_low": 0.08265833333333335,
+      "ci_high": 0.22833333333333336,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean_diff": -0.04,
+      "ci_low": -0.11,
+      "ci_high": 0.03,
+      "p_value": 0.3962603739626037,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.038428571428571395,
+      "ci_low": -0.01138809523809526,
+      "ci_high": 0.08610119047619041,
+      "p_value": 0.1274872512748725,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean_diff": -0.03066666666666667,
+      "ci_low": -0.07133333333333335,
+      "ci_high": -0.0016666666666666668,
+      "p_value": 0.06319368063193681,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "HotpotQA",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.01904761904761905,
+      "ci_low": -0.044382142857142856,
+      "ci_high": -0.0016666666666666663,
+      "p_value": 0.06319368063193681,
+      "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Vanilla RAG (no filter)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean_diff": 0.2033910533910534,
+      "ci_low": 0.1238829365079365,
+      "ci_high": 0.2881011904761905,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean_diff": -0.3277777777777778,
+      "ci_low": -0.49444444444444446,
+      "ci_high": -0.16666666666666666,
+      "p_value": 0.008999100089991,
+      "p_holm": 0.36896310368963103
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
       "metric": "f1",
-      "mean_diff": 0.18949181253529082,
-      "ci_low": 0.1107500052282661,
-      "ci_high": 0.27635142836229787,
+      "mean_diff": 0.19657028961376788,
+      "ci_low": 0.10568995416821503,
+      "ci_high": 0.2943086253521035,
       "p_value": 0.000999900009999,
-      "p_holm": 0.012998700129987
+      "p_holm": 0.045995400459954004
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
       "metric": "precision",
-      "mean_diff": -0.03365079365079363,
-      "ci_low": -0.11542261904761901,
-      "ci_high": 0.049605158730158735,
-      "p_value": 0.45865413458654136,
+      "mean_diff": -0.02994227994227993,
+      "ci_low": -0.10150793650793648,
+      "ci_high": 0.04091305916305915,
+      "p_value": 0.43775622437756223,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
       "metric": "recall",
-      "mean_diff": 0.13333333333333333,
-      "ci_low": -0.03333333333333333,
-      "ci_high": 0.3333333333333333,
-      "p_value": 0.3765623437656234,
+      "mean_diff": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.36666666666666664,
+      "p_value": 0.24957504249575044,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - Relevance top-3 (BM25)",
+      "reference": "CAS (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
       "metric": "f1",
-      "mean_diff": -0.025238095238095243,
-      "ci_low": -0.12117328042328042,
-      "ci_high": 0.0743915343915344,
-      "p_value": 0.632936706329367,
+      "mean_diff": -0.018159618159618165,
+      "ci_low": -0.09587253487253489,
+      "ci_high": 0.061861619861619824,
+      "p_value": 0.6827317268273173,
       "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
       "metric": "precision",
-      "mean_diff": -0.05158730158730159,
-      "ci_low": -0.09761904761904763,
-      "ci_high": -0.013888888888888888,
-      "p_value": 0.063993600639936,
-      "p_holm": 0.511948805119488
+      "mean_diff": -0.046661856661856654,
+      "ci_low": -0.08969047619047617,
+      "ci_high": -0.01291594516594525,
+      "p_value": 0.0321967803219678,
+      "p_holm": 1.0
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
       "metric": "recall",
       "mean_diff": 0.0,
       "ci_low": 0.0,
@@ -587,33 +1101,361 @@
     },
     {
       "dataset": "MuSiQue",
-      "comparison": "CAS (full) - CAS w/o conflict graph",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
       "metric": "f1",
-      "mean_diff": -0.04756613756613756,
-      "ci_low": -0.09,
-      "ci_high": -0.012698412698412698,
-      "p_value": 0.063993600639936,
-      "p_holm": 0.511948805119488
+      "mean_diff": -0.04457135457135457,
+      "ci_low": -0.07929020979020981,
+      "ci_high": -0.014470344470344473,
+      "p_value": 0.0321967803219678,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
+      "metric": "precision",
+      "mean_diff": 0.062121212121212126,
+      "ci_low": -0.07743308080808081,
+      "ci_high": 0.20058080808080794,
+      "p_value": 0.41515848415158485,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
+      "metric": "recall",
+      "mean_diff": 0.35555555555555557,
+      "ci_low": 0.18888888888888886,
+      "ci_high": 0.5333333333333333,
+      "p_value": 0.0037996200379962005,
+      "p_holm": 0.16718328167183283
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI (full pipeline)",
+      "metric": "f1",
+      "mean_diff": 0.13760757760757764,
+      "ci_low": 0.02306676656676657,
+      "ci_high": 0.2572470677470677,
+      "p_value": 0.046295370462953706,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean_diff": -0.026952861952861954,
+      "ci_low": -0.07242424242424242,
+      "ci_high": 0.008333333333333333,
+      "p_value": 0.2790720927907209,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean_diff": -0.025042735042735045,
+      "ci_low": -0.059500166500166506,
+      "ci_high": 0.0047619047619047675,
+      "p_value": 0.24887511248875113,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean_diff": 0.14126984126984127,
+      "ci_low": 0.01602777777777777,
+      "ci_high": 0.2936984126984125,
+      "p_value": 0.07239276072392761,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean_diff": -0.6833333333333333,
+      "ci_low": -0.85,
+      "ci_high": -0.5,
+      "p_value": 0.00029997000299970003,
+      "p_holm": 0.014998500149985002
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 0.058962712006190264,
+      "ci_low": -0.05696154087458436,
+      "ci_high": 0.18241821946169756,
+      "p_value": 0.3675632436756324,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean_diff": -0.09206349206349204,
+      "ci_low": -0.2365079365079365,
+      "ci_high": 0.06031746031746032,
+      "p_value": 0.2840715928407159,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean_diff": -0.1888888888888889,
+      "ci_low": -0.45555555555555555,
+      "ci_high": 0.1,
+      "p_value": 0.2733726627337266,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": -0.1557671957671958,
+      "ci_low": -0.31503968253968256,
+      "ci_high": 0.006486772486772306,
+      "p_value": 0.09629037096290372,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean_diff": -0.10878306878306879,
+      "ci_low": -0.23323015873015873,
+      "ci_high": 0.01074999999999996,
+      "p_value": 0.11078892110788921,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean_diff": -0.35555555555555557,
+      "ci_low": -0.5333333333333333,
+      "ci_high": -0.18888888888888886,
+      "p_value": 0.0037996200379962005,
+      "p_holm": 0.16718328167183283
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.18217893217893222,
+      "ci_low": -0.29159126984126993,
+      "ci_high": -0.07038455988455991,
+      "p_value": 0.011498850114988501,
+      "p_holm": 0.44845515448455153
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "precision",
+      "mean_diff": -0.08907407407407407,
+      "ci_low": -0.21463888888888888,
+      "ci_high": 0.0325972222222222,
+      "p_value": 0.2064793520647935,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "recall",
+      "mean_diff": -0.35555555555555557,
+      "ci_low": -0.5333333333333333,
+      "ci_high": -0.18888888888888886,
+      "p_value": 0.0037996200379962005,
+      "p_holm": 0.16718328167183283
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI (full pipeline)",
+      "comparator": "CAS-NLI conflict-preserving",
+      "metric": "f1",
+      "mean_diff": -0.16265031265031266,
+      "ci_low": -0.2751402116402117,
+      "ci_high": -0.04974422799422803,
+      "p_value": 0.017198280171982803,
+      "p_holm": 0.6535346465353465
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean_diff": 0.23034391534391532,
+      "ci_low": 0.13592129629629632,
+      "ci_high": 0.3257242063492063,
+      "p_value": 9.999000099990002e-05,
+      "p_holm": 0.007199280071992801
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean_diff": -0.3277777777777778,
+      "ci_low": -0.49444444444444446,
+      "ci_high": -0.16666666666666666,
+      "p_value": 0.008999100089991,
+      "p_holm": 0.36896310368963103
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean_diff": 0.22161302465650293,
+      "ci_low": 0.12045301357257879,
+      "ci_high": 0.32947270322270317,
+      "p_value": 0.0016998300169983002,
+      "p_holm": 0.07649235076492351
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean_diff": -0.002989417989417977,
+      "ci_low": -0.06816269841269838,
+      "ci_high": 0.06204563492063489,
+      "p_value": 0.9404059594040596,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean_diff": 0.16666666666666666,
+      "ci_low": 0.0,
+      "ci_high": 0.36666666666666664,
+      "p_value": 0.24957504249575044,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean_diff": 0.00688311688311688,
+      "ci_low": -0.05923569023569026,
+      "ci_high": 0.07551539201539197,
+      "p_value": 0.8521147885211479,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean_diff": -0.01970899470899471,
+      "ci_low": -0.04193121693121693,
+      "ci_high": -0.00238095238095238,
+      "p_value": 0.12988701129887012,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean_diff": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "p_value": 1.0,
+      "p_holm": 1.0
+    },
+    {
+      "dataset": "MuSiQue",
+      "reference": "CAS-NLI conflict-preserving",
+      "comparator": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean_diff": -0.019528619528619527,
+      "ci_low": -0.0443987493987494,
+      "ci_high": -0.0023809523809523838,
+      "p_value": 0.12988701129887012,
+      "p_holm": 1.0
     }
   ],
   "graph_diagnostics": [
     {
+      "verifier": "keyword",
       "dataset": "HotpotQA",
       "pairs": 2250,
       "entailment_edges": 111,
       "contradiction_edges": 0,
       "neutral_edges": 2139,
       "mean_agreement_gold": 0.2168,
-      "mean_agreement_distractor": 0.21369999999999997
+      "mean_agreement_distractor": 0.21369999999999997,
+      "mean_penalty_gold": 0.0,
+      "mean_penalty_distractor": 0.0
     },
     {
+      "verifier": "keyword",
       "dataset": "MuSiQue",
       "pairs": 2850,
       "entailment_edges": 46,
       "contradiction_edges": 0,
       "neutral_edges": 2804,
       "mean_agreement_gold": 0.08800000000000001,
-      "mean_agreement_distractor": 0.17881481481481482
+      "mean_agreement_distractor": 0.17881481481481482,
+      "mean_penalty_gold": 0.0,
+      "mean_penalty_distractor": 0.0
+    },
+    {
+      "verifier": "nli",
+      "dataset": "HotpotQA",
+      "pairs": 2250,
+      "entailment_edges": 8,
+      "contradiction_edges": 340,
+      "neutral_edges": 1902,
+      "mean_agreement_gold": 0.005460722297430038,
+      "mean_agreement_distractor": 0.018755843862891197,
+      "mean_penalty_gold": 1.0727714009804186,
+      "mean_penalty_distractor": 1.1686497350988794
+    },
+    {
+      "verifier": "nli",
+      "dataset": "MuSiQue",
+      "pairs": 2850,
+      "entailment_edges": 24,
+      "contradiction_edges": 273,
+      "neutral_edges": 2553,
+      "mean_agreement_gold": 0.06666666666666667,
+      "mean_agreement_distractor": 0.06092445058249588,
+      "mean_penalty_gold": 1.5146927830792265,
+      "mean_penalty_distractor": 1.4161294049952562
     }
   ],
   "timing": [
@@ -621,131 +1463,272 @@
       "dataset": "HotpotQA",
       "method": "Vanilla RAG (no filter)",
       "repeats": 20,
-      "ms_per_query_mean": 0.00017069999375962652,
-      "ms_per_query_sd": 4.281307451723007e-05,
+      "ms_per_query_mean": 0.00016060000416473486,
+      "ms_per_query_sd": 3.911709831126724e-05,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 10
     },
     {
       "dataset": "HotpotQA",
       "method": "Relevance top-3 (BM25)",
       "repeats": 20,
-      "ms_per_query_mean": 0.2641143999826454,
-      "ms_per_query_sd": 0.013392357164862386,
+      "ms_per_query_mean": 0.2517961000012292,
+      "ms_per_query_sd": 0.011535354628337331,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 10
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS w/o conflict graph",
       "repeats": 20,
-      "ms_per_query_mean": 0.2776415999796882,
-      "ms_per_query_sd": 0.018847124042692696,
+      "ms_per_query_mean": 0.2687644000070577,
+      "ms_per_query_sd": 0.013390199619127354,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 10
     },
     {
       "dataset": "HotpotQA",
       "method": "CAS (full pipeline)",
       "repeats": 20,
-      "ms_per_query_mean": 1.24429980000059,
-      "ms_per_query_sd": 0.0573314623522626,
+      "ms_per_query_mean": 1.2429050999999163,
+      "ms_per_query_sd": 0.030504054768253252,
+      "nli_model_ms_per_query": 0.0,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI (full pipeline)",
+      "repeats": 20,
+      "ms_per_query_mean": 23355.50807819962,
+      "ms_per_query_sd": 0.02476212565589639,
+      "nli_model_ms_per_query": 23355.025673999626,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS-NLI conflict-preserving",
+      "repeats": 20,
+      "ms_per_query_mean": 23355.49263049962,
+      "ms_per_query_sd": 0.015363807760603863,
+      "nli_model_ms_per_query": 23355.025673999626,
       "candidates_per_query": 10
     },
     {
       "dataset": "MuSiQue",
       "method": "Vanilla RAG (no filter)",
       "repeats": 20,
-      "ms_per_query_mean": 0.0003139999777583095,
-      "ms_per_query_sd": 7.855117301617749e-05,
+      "ms_per_query_mean": 0.0003106666796763117,
+      "ms_per_query_sd": 5.6086825493468874e-05,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 20
     },
     {
       "dataset": "MuSiQue",
       "method": "Relevance top-3 (BM25)",
       "repeats": 20,
-      "ms_per_query_mean": 0.46398066662125836,
-      "ms_per_query_sd": 0.05864189834946699,
+      "ms_per_query_mean": 0.44002933334316674,
+      "ms_per_query_sd": 0.004259625424801098,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 20
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS w/o conflict graph",
       "repeats": 20,
-      "ms_per_query_mean": 0.4838456666887699,
-      "ms_per_query_sd": 0.034652952345026085,
+      "ms_per_query_mean": 0.475934000023699,
+      "ms_per_query_sd": 0.02379096306347894,
+      "nli_model_ms_per_query": 0.0,
       "candidates_per_query": 20
     },
     {
       "dataset": "MuSiQue",
       "method": "CAS (full pipeline)",
       "repeats": 20,
-      "ms_per_query_mean": 4.172880000005534,
-      "ms_per_query_sd": 0.10815688948821615,
+      "ms_per_query_mean": 4.032912000002399,
+      "ms_per_query_sd": 0.08240281889353239,
+      "nli_model_ms_per_query": 0.0,
+      "candidates_per_query": 20
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI (full pipeline)",
+      "repeats": 20,
+      "ms_per_query_mean": 84486.53304733326,
+      "ms_per_query_sd": 0.06262121189783927,
+      "nli_model_ms_per_query": 84485.18789999993,
+      "candidates_per_query": 20
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS-NLI conflict-preserving",
+      "repeats": 20,
+      "ms_per_query_mean": 84486.53387099996,
+      "ms_per_query_sd": 0.05474575674844599,
+      "nli_model_ms_per_query": 84485.18789999993,
       "candidates_per_query": 20
     }
   ],
   "error_analysis": [
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "distractor: filtered",
-      "count": 328
+      "count": 296
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "distractor: retained by relevance alone",
-      "count": 35
+      "count": 55
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "distractor: retained only via agreement bonus",
-      "count": 37
+      "count": 49
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "gold: missed, in BM25 top-3 but trust < tau",
-      "count": 9
+      "count": 6
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
-      "count": 25
+      "count": 22
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "HotpotQA",
       "category": "gold: retained",
-      "count": 66
+      "count": 72
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "MuSiQue",
       "category": "distractor: filtered",
-      "count": 216
+      "count": 210
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "MuSiQue",
       "category": "distractor: retained by relevance alone",
-      "count": 38
+      "count": 43
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "MuSiQue",
       "category": "distractor: retained only via agreement bonus",
-      "count": 16
+      "count": 17
     },
     {
-      "dataset": "MuSiQue",
-      "category": "gold: missed, in BM25 top-3 but trust < tau",
-      "count": 1
-    },
-    {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "MuSiQue",
       "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
       "count": 11
     },
     {
+      "pipeline": "CAS (full pipeline)",
       "dataset": "MuSiQue",
       "category": "gold: retained",
-      "count": 18
+      "count": 19
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "distractor: filtered",
+      "count": 344
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "distractor: removed by contradiction penalty",
+      "count": 27
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "distractor: retained by relevance alone",
+      "count": 28
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "distractor: retained only via agreement bonus",
+      "count": 1
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "gold: missed, in BM25 top-3 but trust < tau",
+      "count": 7
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
+      "count": 23
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "gold: removed by contradiction penalty",
+      "count": 37
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "HotpotQA",
+      "category": "gold: retained",
+      "count": 33
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "distractor: filtered",
+      "count": 226
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "distractor: removed by contradiction penalty",
+      "count": 22
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "distractor: retained by relevance alone",
+      "count": 21
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "distractor: retained only via agreement bonus",
+      "count": 1
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
+      "count": 11
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "gold: removed by contradiction penalty",
+      "count": 10
+    },
+    {
+      "pipeline": "CAS-NLI (full pipeline)",
+      "dataset": "MuSiQue",
+      "category": "gold: retained",
+      "count": 9
     }
   ],
   "threshold_sweep": [
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.1,
       "precision": 0.17692307692307693,
       "recall": 1.0,
@@ -753,90 +1736,103 @@
       "retention": 1.0
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.15,
-      "precision": 0.17911830859199276,
-      "recall": 0.9294871794871795,
-      "f1": 0.2972734511864946,
-      "retention": 0.9215384615384616
+      "precision": 0.17352676563202876,
+      "recall": 0.9679487179487181,
+      "f1": 0.29183222574526935,
+      "retention": 0.9884615384615385
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.2,
-      "precision": 0.19179074193780077,
-      "recall": 0.8910256410256411,
-      "f1": 0.3114800713562323,
-      "retention": 0.8269230769230768
+      "precision": 0.18294395490989918,
+      "recall": 0.9525641025641026,
+      "f1": 0.3040499851026167,
+      "retention": 0.9215384615384615
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.25,
-      "precision": 0.2196825949314637,
-      "recall": 0.8589743589743589,
-      "f1": 0.34243726345893527,
-      "retention": 0.7153846153846154
+      "precision": 0.19782294377317003,
+      "recall": 0.8974358974358974,
+      "f1": 0.31957709129535755,
+      "retention": 0.8099999999999999
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.3,
-      "precision": 0.25400017211758097,
-      "recall": 0.8282051282051281,
-      "f1": 0.37806697575928344,
-      "retention": 0.6030769230769231
+      "precision": 0.23494701879317262,
+      "recall": 0.8743589743589743,
+      "f1": 0.3619733685118301,
+      "retention": 0.6869230769230769
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.35,
-      "precision": 0.32271151924998076,
-      "recall": 0.8012820512820512,
-      "f1": 0.4374475951399028,
-      "retention": 0.4807692307692307
+      "precision": 0.2701795482969572,
+      "recall": 0.8166666666666665,
+      "f1": 0.391622309314617,
+      "retention": 0.5723076923076924
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.4,
-      "precision": 0.4138167388167388,
-      "recall": 0.7089743589743589,
-      "f1": 0.47393230700923006,
-      "retention": 0.36
+      "precision": 0.3571335200746965,
+      "recall": 0.7705128205128204,
+      "f1": 0.4511857058820622,
+      "retention": 0.4515384615384615
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.45,
-      "precision": 0.5219780219780219,
-      "recall": 0.655128205128205,
-      "f1": 0.5317582417582418,
-      "retention": 0.2676923076923077
+      "precision": 0.46837717837717835,
+      "recall": 0.7089743589743589,
+      "f1": 0.5113060443829673,
+      "retention": 0.33153846153846156
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.5,
-      "precision": 0.6337362637362638,
-      "recall": 0.6089743589743589,
-      "f1": 0.5655311355311354,
-      "retention": 0.20846153846153848
+      "precision": 0.5800793650793651,
+      "recall": 0.632051282051282,
+      "f1": 0.5402930402930401,
+      "retention": 0.2553846153846154
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.55,
-      "precision": 0.703076923076923,
-      "recall": 0.5705128205128205,
-      "f1": 0.593113553113553,
-      "retention": 0.16692307692307695
+      "precision": 0.641025641025641,
+      "recall": 0.5858974358974358,
+      "f1": 0.5655677655677656,
+      "retention": 0.1976923076923077
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.6,
-      "precision": 0.764102564102564,
-      "recall": 0.5243589743589744,
-      "f1": 0.5882051282051282,
-      "retention": 0.1430769230769231
+      "precision": 0.7556410256410256,
+      "recall": 0.5474358974358975,
+      "f1": 0.5977289377289376,
+      "retention": 0.15461538461538463
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.65,
-      "precision": 0.8128205128205127,
-      "recall": 0.4935897435897436,
-      "f1": 0.5943589743589743,
-      "retention": 0.11538461538461539
+      "precision": 0.7948717948717948,
+      "recall": 0.5012820512820513,
+      "f1": 0.5897435897435896,
+      "retention": 0.12461538461538464
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.7,
-      "precision": 0.2230769230769231,
+      "precision": 0.2153846153846154,
       "recall": 0.13846153846153847,
-      "f1": 0.16666666666666666,
-      "retention": 0.03538461538461539
+      "f1": 0.16410256410256407,
+      "retention": 0.036923076923076927
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.75,
       "precision": 0.19230769230769232,
       "recall": 0.11538461538461539,
@@ -844,11 +1840,252 @@
       "retention": 0.029230769230769234
     },
     {
+      "method": "CAS (full pipeline)",
       "tau": 0.8,
       "precision": 0.17692307692307693,
       "recall": 0.1,
       "f1": 0.12564102564102564,
-      "retention": 0.024615384615384612
+      "retention": 0.026153846153846153
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.1,
+      "precision": 0.17184426684426685,
+      "recall": 0.5346153846153846,
+      "f1": 0.23888030270383212,
+      "retention": 0.5069230769230768
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.15,
+      "precision": 0.17222937946919845,
+      "recall": 0.5102564102564103,
+      "f1": 0.23729042886937624,
+      "retention": 0.48538461538461547
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.2,
+      "precision": 0.15884632461555537,
+      "recall": 0.46410256410256406,
+      "f1": 0.2204972804972805,
+      "retention": 0.4353846153846153
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.25,
+      "precision": 0.16957875457875457,
+      "recall": 0.41282051282051285,
+      "f1": 0.22438740746433056,
+      "retention": 0.3592307692307692
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.3,
+      "precision": 0.1962271062271062,
+      "recall": 0.38461538461538464,
+      "f1": 0.24188034188034188,
+      "retention": 0.28846153846153844
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.35,
+      "precision": 0.23478021978021976,
+      "recall": 0.35,
+      "f1": 0.2603785103785104,
+      "retention": 0.22
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.4,
+      "precision": 0.2990964590964591,
+      "recall": 0.3346153846153846,
+      "f1": 0.2882195582195582,
+      "retention": 0.16615384615384615
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.45,
+      "precision": 0.37978021978021975,
+      "recall": 0.3269230769230769,
+      "f1": 0.32339438339438337,
+      "retention": 0.11923076923076924
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.5,
+      "precision": 0.4064102564102564,
+      "recall": 0.29615384615384616,
+      "f1": 0.31999999999999995,
+      "retention": 0.08692307692307692
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.55,
+      "precision": 0.4115384615384615,
+      "recall": 0.25769230769230766,
+      "f1": 0.30564102564102563,
+      "retention": 0.06307692307692307
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.6,
+      "precision": 0.4051282051282052,
+      "recall": 0.22692307692307692,
+      "f1": 0.28410256410256407,
+      "retention": 0.05230769230769231
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.65,
+      "precision": 0.4076923076923077,
+      "recall": 0.20384615384615384,
+      "f1": 0.2702564102564102,
+      "retention": 0.045384615384615384
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.7,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "retention": 0.0
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.75,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "retention": 0.0
+    },
+    {
+      "method": "CAS-NLI (full pipeline)",
+      "tau": 0.8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "retention": 0.0
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.1,
+      "precision": 0.17692307692307693,
+      "recall": 1.0,
+      "f1": 0.2979194718325154,
+      "retention": 1.0
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.15,
+      "precision": 0.17361673414304993,
+      "recall": 0.9679487179487181,
+      "f1": 0.29197874589178946,
+      "retention": 0.9876923076923078
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.2,
+      "precision": 0.1828561505573889,
+      "recall": 0.9294871794871795,
+      "f1": 0.30268126782058674,
+      "retention": 0.9046153846153847
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.25,
+      "precision": 0.2096709562433544,
+      "recall": 0.8782051282051281,
+      "f1": 0.3333514843231442,
+      "retention": 0.7592307692307693
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.3,
+      "precision": 0.2695020577712886,
+      "recall": 0.8551282051282051,
+      "f1": 0.39582237772283024,
+      "retention": 0.6153846153846154
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.35,
+      "precision": 0.328938070476532,
+      "recall": 0.7974358974358974,
+      "f1": 0.4463625263625263,
+      "retention": 0.4792307692307692
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.4,
+      "precision": 0.4472325537710153,
+      "recall": 0.7666666666666666,
+      "f1": 0.5281913812683043,
+      "retention": 0.3607692307692308
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.45,
+      "precision": 0.5759768009768008,
+      "recall": 0.6935897435897436,
+      "f1": 0.5775957375957376,
+      "retention": 0.2646153846153846
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.5,
+      "precision": 0.6825407925407926,
+      "recall": 0.6166666666666666,
+      "f1": 0.5901916032685263,
+      "retention": 0.20538461538461542
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.55,
+      "precision": 0.7425641025641025,
+      "recall": 0.5628205128205127,
+      "f1": 0.5969963369963369,
+      "retention": 0.16692307692307695
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.6,
+      "precision": 0.7835042735042735,
+      "recall": 0.508974358974359,
+      "f1": 0.5844089244089243,
+      "retention": 0.1476923076923077
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.65,
+      "precision": 0.7829914529914529,
+      "recall": 0.47051282051282056,
+      "f1": 0.5610389610389609,
+      "retention": 0.1307692307692308
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.7,
+      "precision": 0.015384615384615385,
+      "recall": 0.007692307692307693,
+      "f1": 0.010256410256410256,
+      "retention": 0.0015384615384615385
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.75,
+      "precision": 0.015384615384615385,
+      "recall": 0.007692307692307693,
+      "f1": 0.010256410256410256,
+      "retention": 0.0015384615384615385
+    },
+    {
+      "method": "CAS-NLI conflict-preserving",
+      "tau": 0.8,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "retention": 0.0
     }
   ],
   "contradiction_detection": [
@@ -915,6 +2152,38 @@
       "ci_low": 0.44166666666666665,
       "ci_high": 0.6166666666666667,
       "n": 120
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "metric": "precision",
+      "mean": 0.8333333333333334,
+      "ci_low": 0.7,
+      "ci_high": 0.9459459459459459,
+      "n": 120
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "metric": "recall",
+      "mean": 0.5357142857142857,
+      "ci_low": 0.4106737012987013,
+      "ci_high": 0.6730867346938776,
+      "n": 120
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "metric": "f1",
+      "mean": 0.6521739130434783,
+      "ci_low": 0.5384146341463415,
+      "ci_high": 0.7599999999999999,
+      "n": 120
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "metric": "accuracy",
+      "mean": 0.7333333333333333,
+      "ci_low": 0.6583333333333333,
+      "ci_high": 0.8083333333333333,
+      "n": 120
     }
   ],
   "contradiction_by_group": [
@@ -973,49 +2242,121 @@
       "n": 22,
       "flag_rate": 0.0,
       "all_label": 1
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "group": "HotpotQA gold pair",
+      "n": 50,
+      "flag_rate": 0.12,
+      "all_label": 0
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "group": "MultiNLI",
+      "n": 20,
+      "flag_rate": 0.3,
+      "all_label": null
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "group": "WikiContradict: Explicit",
+      "n": 28,
+      "flag_rate": 0.6071428571428571,
+      "all_label": 1
+    },
+    {
+      "detector": "DeBERTa-v3 NLI (CAS-NLI)",
+      "group": "WikiContradict: Implicit",
+      "n": 22,
+      "flag_rate": 0.3181818181818182,
+      "all_label": 1
     }
   ],
   "nli": {
-    "labels": [
-      "entailment",
-      "neutral",
-      "contradiction"
-    ],
-    "confusion": [
-      [
-        5,
-        3,
-        0
+    "CAS NLIVerifier (as implemented)": {
+      "labels": [
+        "entailment",
+        "neutral",
+        "contradiction"
       ],
-      [
-        1,
-        5,
-        0
+      "confusion": [
+        [
+          5,
+          3,
+          0
+        ],
+        [
+          1,
+          5,
+          0
+        ],
+        [
+          3,
+          3,
+          0
+        ]
       ],
-      [
-        3,
-        3,
-        0
-      ]
-    ],
-    "accuracy": [
-      0.5,
-      0.3,
-      0.7
-    ],
-    "macro_f1": 0.39215686274509803,
-    "per_class_f1": [
-      0.5882352941176471,
-      0.5882352941176471,
-      0.0
-    ],
-    "majority_baseline_accuracy": [
-      0.4,
-      0.2,
-      0.6
-    ],
-    "majority_class": "entailment",
-    "n": 20
+      "accuracy": [
+        0.5,
+        0.3,
+        0.7
+      ],
+      "macro_f1": 0.39215686274509803,
+      "per_class_f1": [
+        0.5882352941176471,
+        0.5882352941176471,
+        0.0
+      ],
+      "majority_baseline_accuracy": [
+        0.4,
+        0.2,
+        0.6
+      ],
+      "majority_class": "entailment",
+      "n": 20
+    },
+    "DeBERTa-v3 NLI (CAS-NLI)": {
+      "labels": [
+        "entailment",
+        "neutral",
+        "contradiction"
+      ],
+      "confusion": [
+        [
+          8,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "accuracy": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "macro_f1": 1.0,
+      "per_class_f1": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "majority_baseline_accuracy": [
+        0.4,
+        0.2,
+        0.6
+      ],
+      "majority_class": "entailment",
+      "n": 20
+    }
   },
   "hallucination": {
     "n": 50,
@@ -1030,6 +2371,11 @@
       0.5,
       0.5
     ],
+    "nli_model_auroc": [
+      0.5548245614035088,
+      0.3674616841491841,
+      0.735982485982486
+    ],
     "cas_relation_counts": {
       "0.5": 50
     },
@@ -1037,252 +2383,302 @@
       {
         "label": 0,
         "unsupported_token_rate": 0.15714285714285714,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9982830001972616
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.25882352941176473,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9995446522079874
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.2903225806451613,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997856840054737
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.30952380952380953,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9994572889409028
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.22807017543859648,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9993535164976493
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.34177215189873417,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997219824581407
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.043478260869565216,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.998982013319619
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.08108108108108109,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.4816904067993164
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.04878048780487805,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9955784864723682
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.22857142857142856,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9995760965393856
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.21052631578947367,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.0377160906791687
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.21951219512195122,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9992532383766957
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.078125,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.08799922466278076
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.1323529411764706,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.7883348017930984
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.16494845360824742,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9998133516783128
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.2857142857142857,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9980669772485271
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.2857142857142857,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997301998664625
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.25806451612903225,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9987875963561237
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.14728682170542637,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997193241142668
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.2814070351758794,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9998267808550736
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.41509433962264153,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9990016402443871
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.2186046511627907,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9995934670150746
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.2916666666666667,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.999525659106439
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.3543307086614173,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9991581423091702
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.04838709677419355,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997111756529193
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.16901408450704225,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9992932740133256
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.16417910447761194,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997955927246949
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.30303030303030304,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997824137972202
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.31666666666666665,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997918485023547
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.32727272727272727,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.999791453461512
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.16129032258064516,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9996833516343031
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.17777777777777778,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9977789758704603
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.30612244897959184,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9987432433990762
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.3333333333333333,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997554419678636
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.22807017543859648,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9976690150797367
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.2653061224489796,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9992975061759353
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.09401709401709402,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9996610582165886
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.08737864077669903,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9998074577597436
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.1875,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9994405596517026
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.28169014084507044,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9992442086804658
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.10666666666666667,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9997108271636534
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.08602150537634409,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9992088031140156
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.07894736842105263,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.99941726855468
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.14893617021276595,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.35286855697631836
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.15384615384615385,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9999106607428985
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.3142857142857143,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.999559790128842
       },
       {
         "label": 1,
         "unsupported_token_rate": 0.25,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9998565967398463
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.23404255319148937,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9998830673575867
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.06557377049180328,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9860214358195662
       },
       {
         "label": 0,
         "unsupported_token_rate": 0.21518987341772153,
-        "cas_score": 0.5
+        "cas_score": 0.5,
+        "nli_score": 0.9995031830039807
       }
     ]
   },

@@ -22,8 +22,12 @@ class NLIModelVerifier:
     """
 
     def __init__(self, model_name: str = "cross-encoder/nli-deberta-v3-base",
-                 cache_path: str = None, batch_size: int = 16, model=None):
+                 cache_path: str = None, batch_size: int = 16, model=None,
+                 contradiction_threshold: float = None):
         # `model`: an already-loaded sentence_transformers.CrossEncoder to reuse (e.g. from a Streamlit cache)
+        # `contradiction_threshold`: if set, a pair is a contradiction only when its averaged contradiction
+        # probability reaches this value; otherwise the argmax of entailment/neutral is used.
+        self.contradiction_threshold = contradiction_threshold
         self.model_name = model_name
         self.cache_path = cache_path
         self.batch_size = batch_size
@@ -79,11 +83,20 @@ class NLIModelVerifier:
         """Model time measured when these pairs were first computed (0 for pairs never computed)."""
         return sum(self.cache.get(self._key(p, h), {}).get("seconds", 0.0) for p, h in pairs)
 
-    @staticmethod
-    def _symmetric(p_ab: Dict[str, float], p_ba: Dict[str, float]) -> Tuple[NLIRelation, float]:
+    def _symmetric(self, p_ab: Dict[str, float], p_ba: Dict[str, float]) -> Tuple[NLIRelation, float]:
         avg = {lab: (p_ab[lab] + p_ba[lab]) / 2 for lab in p_ab}
         label = max(avg, key=avg.get)
+        theta = self.contradiction_threshold
+        if label == "contradiction" and theta is not None and avg["contradiction"] < theta:
+            label = max(("entailment", "neutral"), key=avg.get)
         return LABEL_TO_RELATION[label], avg[label]
+
+    def with_threshold(self, contradiction_threshold: float) -> "NLIModelVerifier":
+        """A view of this verifier that shares its model and prediction cache but uses another threshold."""
+        view = NLIModelVerifier.__new__(NLIModelVerifier)
+        view.__dict__.update(self.__dict__)
+        view.contradiction_threshold = contradiction_threshold
+        return view
 
     def compare_documents(self, doc_a: Document, doc_b: Document) -> NLIEdge:
         return self.build_pairwise_matrix([doc_a, doc_b])[0]

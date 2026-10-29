@@ -49,16 +49,17 @@ for k, (key, name) in enumerate(metrics):
         rows.append({"metric": key, "reference": ref, "comparator": comp, "dataset": ds, "mean_diff": m,
                      "ci_low": lo, "ci_high": hi, "p_perm": p, "p_holm": ph, "significant_holm_0.05": sig})
         y += 1
-    ax.set_xlim(-0.75, 0.75)
-    ax.set_xticks([-0.5, -0.25, 0, 0.25, 0.5])
-    ax.set_xlabel(f"Δ {name} (CAS-NLI variant − comparator)")
+    ax.set_xlim(-0.8, 0.8)
+    ax.set_xticks([-0.5, 0, 0.5], ["−0.5", "0", "+0.5"])
+    ax.set_xlabel(f"Δ {name}")
     ax.grid(axis="x")
     panel_title(ax, "abc"[k], name)
 axes[0].set_yticks(ticks, labels, fontsize=6.3)
 axes[0].invert_yaxis()
 axes[0].tick_params(axis="y", length=0)
 n_tests = len(tests)
-fig.text(0.99, -0.01, f"Filled marker: Holm-adjusted p < 0.05 (paired sign-flip permutation; Holm family of "
-         f"{n_tests} tests). Hollow: not significant.", ha="right", fontsize=6.5, color=INK)
+fig.text(0.99, -0.01, f"Δ = CAS-NLI variant − comparator, per question. Filled marker: Holm-adjusted p < 0.05 "
+         f"(paired sign-flip permutation; family of {n_tests} tests). Hollow: not significant.",
+         ha="right", fontsize=6.5, color=INK)
 fig.tight_layout(rect=(0, 0.02, 1, 1), w_pad=0.8)
 save(fig, "fig02_paired_differences", rows)

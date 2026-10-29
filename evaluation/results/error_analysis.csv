@@ -1,13 +1,27 @@
-dataset,category,count
-HotpotQA,distractor: filtered,328
-HotpotQA,distractor: retained by relevance alone,35
-HotpotQA,distractor: retained only via agreement bonus,37
-HotpotQA,"gold: missed, in BM25 top-3 but trust < tau",9
-HotpotQA,"gold: missed, low lexical relevance (BM25 rank > 3)",25
-HotpotQA,gold: retained,66
-MuSiQue,distractor: filtered,216
-MuSiQue,distractor: retained by relevance alone,38
-MuSiQue,distractor: retained only via agreement bonus,16
-MuSiQue,"gold: missed, in BM25 top-3 but trust < tau",1
-MuSiQue,"gold: missed, low lexical relevance (BM25 rank > 3)",11
-MuSiQue,gold: retained,18
+pipeline,dataset,category,count
+CAS (full pipeline),HotpotQA,distractor: filtered,296
+CAS (full pipeline),HotpotQA,distractor: retained by relevance alone,55
+CAS (full pipeline),HotpotQA,distractor: retained only via agreement bonus,49
+CAS (full pipeline),HotpotQA,"gold: missed, in BM25 top-3 but trust < tau",6
+CAS (full pipeline),HotpotQA,"gold: missed, low lexical relevance (BM25 rank > 3)",22
+CAS (full pipeline),HotpotQA,gold: retained,72
+CAS (full pipeline),MuSiQue,distractor: filtered,210
+CAS (full pipeline),MuSiQue,distractor: retained by relevance alone,43
+CAS (full pipeline),MuSiQue,distractor: retained only via agreement bonus,17
+CAS (full pipeline),MuSiQue,"gold: missed, low lexical relevance (BM25 rank > 3)",11
+CAS (full pipeline),MuSiQue,gold: retained,19
+CAS-NLI (full pipeline),HotpotQA,distractor: filtered,344
+CAS-NLI (full pipeline),HotpotQA,distractor: removed by contradiction penalty,27
+CAS-NLI (full pipeline),HotpotQA,distractor: retained by relevance alone,28
+CAS-NLI (full pipeline),HotpotQA,distractor: retained only via agreement bonus,1
+CAS-NLI (full pipeline),HotpotQA,"gold: missed, in BM25 top-3 but trust < tau",7
+CAS-NLI (full pipeline),HotpotQA,"gold: missed, low lexical relevance (BM25 rank > 3)",23
+CAS-NLI (full pipeline),HotpotQA,gold: removed by contradiction penalty,37
+CAS-NLI (full pipeline),HotpotQA,gold: retained,33
+CAS-NLI (full pipeline),MuSiQue,distractor: filtered,226
+CAS-NLI (full pipeline),MuSiQue,distractor: removed by contradiction penalty,22
+CAS-NLI (full pipeline),MuSiQue,distractor: retained by relevance alone,21
+CAS-NLI (full pipeline),MuSiQue,distractor: retained only via agreement bonus,1
+CAS-NLI (full pipeline),MuSiQue,"gold: missed, low lexical relevance (BM25 rank > 3)",11
+CAS-NLI (full pipeline),MuSiQue,gold: removed by contradiction penalty,10
+CAS-NLI (full pipeline),MuSiQue,gold: retained,9
