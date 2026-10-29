@@ -3,7 +3,7 @@ import math
 
 import numpy as np
 
-from _style import DOUBLE, GRID, INK2, MUTED, load_results, panel_title, plt, save
+from _style import DOUBLE, GRID, MUTED, load_results, panel_title, plt, save
 
 R = load_results()
 rows = []
@@ -34,7 +34,8 @@ for j, (det, (color, marker, short)) in enumerate(DET.items()):
         k = round(r["flag_rate"] * r["n"])
         lo, hi = wilson(k, r["n"])
         y = i + (j - 0.5) * 0.28
-        ax.errorbar(r["flag_rate"], y, xerr=[[r["flag_rate"] - lo], [hi - r["flag_rate"]]], fmt=marker,
+        err = [[max(0.0, r["flag_rate"] - lo)], [max(0.0, hi - r["flag_rate"])]]
+        ax.errorbar(r["flag_rate"], y, xerr=err, fmt=marker,
                     color=color, markersize=4.5, markeredgecolor="white", markeredgewidth=0.5,
                     elinewidth=0.9, capsize=1.5, label=short if i == 0 else None, zorder=3)
         rows.append({"panel": "a", "detector": det, "group": g, "n": r["n"], "flagged": k,
@@ -75,10 +76,12 @@ def roc(key):
 
 for key, res_key, name, color, ls in [("unsupported_token_rate", "unsupported_token_rate_auroc",
                                        "Unsupported-token rate", "#2a78d6", "-"),
-                                      ("cas_score", "cas_verifier_auroc", "CAS NLIVerifier", "#eda100", (0, (4, 2)))]:
+                                      ("cas_score", "cas_verifier_auroc", "CAS NLIVerifier (all Neutral)",
+                                       "#eda100", (0, (4, 2)))]:
     f, t = roc(key)
     a = h[res_key]
-    ax.step(f, t, where="post", color=color, linestyle=ls, linewidth=1.2,
+    # Points are grouped by tied score, so linear interpolation between them is the correct ROC
+    ax.plot(f, t, color=color, linestyle=ls, linewidth=1.2,
             label=f"{name}\nAUROC {a[0]:.2f} [{a[1]:.2f}, {a[2]:.2f}]")
     rows += [{"panel": "b", "detector": name, "fpr": x, "tpr": y, "auroc": a[0], "auroc_ci_low": a[1],
               "auroc_ci_high": a[2]} for x, y in zip(f, t)]
@@ -90,8 +93,6 @@ ax.set_xlabel("False positive rate")
 ax.set_ylabel("True positive rate")
 ax.legend(loc="lower right", fontsize=6.3, handlelength=1.8)
 panel_title(ax, "b", f"RAGTruth ({h['n_hallucinated']}/{h['n']} hallucinated)")
-ax.text(0.03, 0.97, "CAS verifier labels all 50\noutputs Neutral (no ranking)", transform=ax.transAxes,
-        fontsize=6, color=INK2, va="top")
 
 fig.tight_layout(w_pad=2.0)
 save(fig, "fig04_conflict_hallucination_detection", rows)

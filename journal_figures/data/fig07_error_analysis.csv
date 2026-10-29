@@ -1,0 +1,13 @@
+panel,dataset,category,count,total,share
+a,HotpotQA,gold: retained,66,100,0.66
+a,HotpotQA,"gold: missed, in BM25 top-3 but trust < tau",9,100,0.09
+a,HotpotQA,"gold: missed, low lexical relevance (BM25 rank > 3)",25,100,0.25
+a,MuSiQue,gold: retained,18,30,0.6
+a,MuSiQue,"gold: missed, in BM25 top-3 but trust < tau",1,30,0.03333333333333333
+a,MuSiQue,"gold: missed, low lexical relevance (BM25 rank > 3)",11,30,0.36666666666666664
+b,HotpotQA,distractor: filtered,328,400,0.82
+b,HotpotQA,distractor: retained by relevance alone,35,400,0.0875
+b,HotpotQA,distractor: retained only via agreement bonus,37,400,0.0925
+b,MuSiQue,distractor: filtered,216,270,0.8
+b,MuSiQue,distractor: retained by relevance alone,38,270,0.14074074074074075
+b,MuSiQue,distractor: retained only via agreement bonus,16,270,0.05925925925925926

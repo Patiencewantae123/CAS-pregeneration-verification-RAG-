@@ -1,0 +1,11 @@
+panel,dataset,series,count,pairs,value
+a,HotpotQA,Entailment,111.0,2250.0,0.04933333333333333
+a,HotpotQA,Contradiction,0.0,2250.0,0.0
+a,HotpotQA,Neutral,2139.0,2250.0,0.9506666666666667
+a,MuSiQue,Entailment,46.0,2850.0,0.016140350877192983
+a,MuSiQue,Contradiction,0.0,2850.0,0.0
+a,MuSiQue,Neutral,2804.0,2850.0,0.983859649122807
+b,HotpotQA,Gold evidence,,,0.2168
+b,MuSiQue,Gold evidence,,,0.08800000000000001
+b,HotpotQA,Distractor,,,0.21369999999999997
+b,MuSiQue,Distractor,,,0.17881481481481482
