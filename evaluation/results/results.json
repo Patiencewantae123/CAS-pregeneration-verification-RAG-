@@ -1,0 +1,1047 @@
+{
+  "config": {
+    "seed": 42,
+    "bootstrap": 2000,
+    "tau": 0.45,
+    "top_k": 3,
+    "provenance_prior": 0.5
+  },
+  "evidence_selection": [
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean": 0.19999999999999996,
+      "ci_low": 0.19999999999999996,
+      "ci_high": 0.19999999999999996,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean": 0.33333333333333337,
+      "ci_low": 0.33333333333333337,
+      "ci_high": 0.33333333333333337,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "retention",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "answer_coverage",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 46
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean": 0.49333333333333335,
+      "ci_low": 0.44,
+      "ci_high": 0.5466666666666666,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean": 0.74,
+      "ci_low": 0.66,
+      "ci_high": 0.82,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean": 0.592,
+      "ci_low": 0.528,
+      "ci_high": 0.6559999999999999,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "retention",
+      "mean": 0.30000000000000004,
+      "ci_low": 0.30000000000000004,
+      "ci_high": 0.30000000000000004,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "answer_coverage",
+      "mean": 0.7608695652173914,
+      "ci_low": 0.6304347826086957,
+      "ci_high": 0.8695652173913043,
+      "n": 46
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean": 0.7516666666666666,
+      "ci_low": 0.6566666666666667,
+      "ci_high": 0.835,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean": 0.63,
+      "ci_low": 0.55,
+      "ci_high": 0.71,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean": 0.6566666666666667,
+      "ci_low": 0.5819833333333332,
+      "ci_high": 0.7253499999999998,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "metric": "retention",
+      "mean": 0.19599999999999998,
+      "ci_low": 0.172,
+      "ci_high": 0.222,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "metric": "answer_coverage",
+      "mean": 0.6086956521739131,
+      "ci_low": 0.45652173913043476,
+      "ci_high": 0.7608695652173914,
+      "n": 46
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "metric": "precision",
+      "mean": 0.5886666666666666,
+      "ci_low": 0.502325,
+      "ci_high": 0.6720333333333331,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "metric": "recall",
+      "mean": 0.66,
+      "ci_low": 0.58,
+      "ci_high": 0.74,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "metric": "f1",
+      "mean": 0.5804761904761904,
+      "ci_low": 0.5158095238095238,
+      "ci_high": 0.6464761904761904,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "metric": "retention",
+      "mean": 0.276,
+      "ci_low": 0.23600000000000002,
+      "ci_high": 0.3180499999999997,
+      "n": 50
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "metric": "answer_coverage",
+      "mean": 0.6521739130434783,
+      "ci_low": 0.5,
+      "ci_high": 0.782608695652174,
+      "n": 46
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "precision",
+      "mean": 0.10000000000000002,
+      "ci_low": 0.08333333333333334,
+      "ci_high": 0.12000000000000002,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "recall",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "f1",
+      "mean": 0.1798732668297886,
+      "ci_low": 0.15245623941276115,
+      "ci_high": 0.2111173850304285,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "retention",
+      "mean": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "metric": "answer_coverage",
+      "mean": 0.7333333333333333,
+      "ci_low": 0.4666666666666667,
+      "ci_high": 0.9333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "precision",
+      "mean": 0.3333333333333333,
+      "ci_low": 0.22222222222222224,
+      "ci_high": 0.4444444444444444,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "recall",
+      "mean": 0.5055555555555555,
+      "ci_low": 0.3222222222222222,
+      "ci_high": 0.6888888888888888,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "f1",
+      "mean": 0.3946031746031746,
+      "ci_low": 0.2622222222222222,
+      "ci_high": 0.5266666666666666,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "retention",
+      "mean": 0.14999999999999997,
+      "ci_low": 0.14999999999999997,
+      "ci_high": 0.14999999999999997,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "metric": "answer_coverage",
+      "mean": 0.26666666666666666,
+      "ci_low": 0.06666666666666667,
+      "ci_high": 0.5333333333333333,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "metric": "precision",
+      "mean": 0.3512698412698413,
+      "ci_low": 0.27349206349206345,
+      "ci_high": 0.4301587301587302,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "metric": "recall",
+      "mean": 0.6388888888888888,
+      "ci_low": 0.4831944444444444,
+      "ci_high": 0.7890277777777771,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "metric": "f1",
+      "mean": 0.416931216931217,
+      "ci_low": 0.33425396825396825,
+      "ci_high": 0.5026507936507937,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "metric": "retention",
+      "mean": 0.18666666666666665,
+      "ci_low": 0.14333333333333334,
+      "ci_high": 0.23666666666666666,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "metric": "answer_coverage",
+      "mean": 0.3333333333333333,
+      "ci_low": 0.13333333333333333,
+      "ci_high": 0.6,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "metric": "precision",
+      "mean": 0.2996825396825397,
+      "ci_low": 0.21950396825396826,
+      "ci_high": 0.3845238095238095,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "metric": "recall",
+      "mean": 0.6388888888888888,
+      "ci_low": 0.4831944444444444,
+      "ci_high": 0.7890277777777771,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "metric": "f1",
+      "mean": 0.36936507936507934,
+      "ci_low": 0.28468915343915346,
+      "ci_high": 0.45846693121693116,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "metric": "retention",
+      "mean": 0.23999999999999996,
+      "ci_low": 0.18666666666666668,
+      "ci_high": 0.2966666666666667,
+      "n": 15
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "metric": "answer_coverage",
+      "mean": 0.3333333333333333,
+      "ci_low": 0.13333333333333333,
+      "ci_high": 0.6,
+      "n": 15
+    }
+  ],
+  "threshold_sweep": [
+    {
+      "tau": 0.1,
+      "precision": 0.17692307692307693,
+      "recall": 1.0,
+      "f1": 0.2979194718325154,
+      "retention": 1.0
+    },
+    {
+      "tau": 0.15,
+      "precision": 0.17911830859199276,
+      "recall": 0.9294871794871795,
+      "f1": 0.2972734511864946,
+      "retention": 0.9215384615384616
+    },
+    {
+      "tau": 0.2,
+      "precision": 0.19179074193780077,
+      "recall": 0.8910256410256411,
+      "f1": 0.3114800713562323,
+      "retention": 0.8269230769230768
+    },
+    {
+      "tau": 0.25,
+      "precision": 0.2196825949314637,
+      "recall": 0.8589743589743589,
+      "f1": 0.34243726345893527,
+      "retention": 0.7153846153846154
+    },
+    {
+      "tau": 0.3,
+      "precision": 0.25400017211758097,
+      "recall": 0.8282051282051281,
+      "f1": 0.37806697575928344,
+      "retention": 0.6030769230769231
+    },
+    {
+      "tau": 0.35,
+      "precision": 0.32271151924998076,
+      "recall": 0.8012820512820512,
+      "f1": 0.4374475951399028,
+      "retention": 0.4807692307692307
+    },
+    {
+      "tau": 0.4,
+      "precision": 0.4138167388167388,
+      "recall": 0.7089743589743589,
+      "f1": 0.47393230700923006,
+      "retention": 0.36
+    },
+    {
+      "tau": 0.45,
+      "precision": 0.5219780219780219,
+      "recall": 0.655128205128205,
+      "f1": 0.5317582417582418,
+      "retention": 0.2676923076923077
+    },
+    {
+      "tau": 0.5,
+      "precision": 0.6337362637362638,
+      "recall": 0.6089743589743589,
+      "f1": 0.5655311355311354,
+      "retention": 0.20846153846153848
+    },
+    {
+      "tau": 0.55,
+      "precision": 0.703076923076923,
+      "recall": 0.5705128205128205,
+      "f1": 0.593113553113553,
+      "retention": 0.16692307692307695
+    },
+    {
+      "tau": 0.6,
+      "precision": 0.764102564102564,
+      "recall": 0.5243589743589744,
+      "f1": 0.5882051282051282,
+      "retention": 0.1430769230769231
+    },
+    {
+      "tau": 0.65,
+      "precision": 0.8128205128205127,
+      "recall": 0.4935897435897436,
+      "f1": 0.5943589743589743,
+      "retention": 0.11538461538461539
+    },
+    {
+      "tau": 0.7,
+      "precision": 0.2230769230769231,
+      "recall": 0.13846153846153847,
+      "f1": 0.16666666666666666,
+      "retention": 0.03538461538461539
+    },
+    {
+      "tau": 0.75,
+      "precision": 0.19230769230769232,
+      "recall": 0.11538461538461539,
+      "f1": 0.14102564102564102,
+      "retention": 0.029230769230769234
+    },
+    {
+      "tau": 0.8,
+      "precision": 0.17692307692307693,
+      "recall": 0.1,
+      "f1": 0.12564102564102564,
+      "retention": 0.024615384615384612
+    }
+  ],
+  "contradiction_detection": [
+    {
+      "detector": "Negation-cue baseline",
+      "metric": "precision",
+      "mean": 0.6428571428571429,
+      "ci_low": 0.35714285714285715,
+      "ci_high": 0.8890350877192974,
+      "n": 120
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "metric": "recall",
+      "mean": 0.16071428571428573,
+      "ci_low": 0.06896551724137931,
+      "ci_high": 0.26867106773823185,
+      "n": 120
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "metric": "f1",
+      "mean": 0.2571428571428572,
+      "ci_low": 0.11940298507462686,
+      "ci_high": 0.39135780470420495,
+      "n": 120
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "metric": "accuracy",
+      "mean": 0.5666666666666667,
+      "ci_low": 0.475,
+      "ci_high": 0.65,
+      "n": 120
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "metric": "precision",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 120
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "metric": "recall",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 120
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "metric": "f1",
+      "mean": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "n": 120
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "metric": "accuracy",
+      "mean": 0.5333333333333333,
+      "ci_low": 0.44166666666666665,
+      "ci_high": 0.6166666666666667,
+      "n": 120
+    }
+  ],
+  "contradiction_by_group": [
+    {
+      "detector": "Negation-cue baseline",
+      "group": "HotpotQA gold pair",
+      "n": 50,
+      "flag_rate": 0.08,
+      "all_label": 0
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "group": "MultiNLI",
+      "n": 20,
+      "flag_rate": 0.15,
+      "all_label": null
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "group": "WikiContradict: Explicit",
+      "n": 28,
+      "flag_rate": 0.14285714285714285,
+      "all_label": 1
+    },
+    {
+      "detector": "Negation-cue baseline",
+      "group": "WikiContradict: Implicit",
+      "n": 22,
+      "flag_rate": 0.13636363636363635,
+      "all_label": 1
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "group": "HotpotQA gold pair",
+      "n": 50,
+      "flag_rate": 0.0,
+      "all_label": 0
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "group": "MultiNLI",
+      "n": 20,
+      "flag_rate": 0.0,
+      "all_label": null
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "group": "WikiContradict: Explicit",
+      "n": 28,
+      "flag_rate": 0.0,
+      "all_label": 1
+    },
+    {
+      "detector": "CAS NLIVerifier (as implemented)",
+      "group": "WikiContradict: Implicit",
+      "n": 22,
+      "flag_rate": 0.0,
+      "all_label": 1
+    }
+  ],
+  "nli": {
+    "labels": [
+      "entailment",
+      "neutral",
+      "contradiction"
+    ],
+    "confusion": [
+      [
+        5,
+        3,
+        0
+      ],
+      [
+        1,
+        5,
+        0
+      ],
+      [
+        3,
+        3,
+        0
+      ]
+    ],
+    "accuracy": [
+      0.5,
+      0.3,
+      0.7
+    ],
+    "macro_f1": 0.39215686274509803,
+    "per_class_f1": [
+      0.5882352941176471,
+      0.5882352941176471,
+      0.0
+    ],
+    "majority_baseline_accuracy": [
+      0.4,
+      0.2,
+      0.6
+    ],
+    "majority_class": "entailment",
+    "n": 20
+  },
+  "hallucination": {
+    "n": 50,
+    "n_hallucinated": 12,
+    "unsupported_token_rate_auroc": [
+      0.8146929824561403,
+      0.6864750445632799,
+      0.9235908713379644
+    ],
+    "cas_verifier_auroc": [
+      0.5,
+      0.5,
+      0.5
+    ],
+    "cas_relation_counts": {
+      "0.5": 50
+    },
+    "scores": [
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.15714285714285714,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.25882352941176473,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.2903225806451613,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.30952380952380953,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.22807017543859648,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.34177215189873417,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.043478260869565216,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.08108108108108109,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.04878048780487805,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.22857142857142856,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.21052631578947367,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.21951219512195122,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.078125,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.1323529411764706,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.16494845360824742,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.2857142857142857,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.2857142857142857,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.25806451612903225,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.14728682170542637,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.2814070351758794,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.41509433962264153,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.2186046511627907,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.2916666666666667,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.3543307086614173,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.04838709677419355,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.16901408450704225,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.16417910447761194,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.30303030303030304,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.31666666666666665,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.32727272727272727,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.16129032258064516,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.17777777777777778,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.30612244897959184,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.3333333333333333,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.22807017543859648,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.2653061224489796,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.09401709401709402,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.08737864077669903,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.1875,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.28169014084507044,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.10666666666666667,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.08602150537634409,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.07894736842105263,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.14893617021276595,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.15384615384615385,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.3142857142857143,
+        "cas_score": 0.5
+      },
+      {
+        "label": 1,
+        "unsupported_token_rate": 0.25,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.23404255319148937,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.06557377049180328,
+        "cas_score": 0.5
+      },
+      {
+        "label": 0,
+        "unsupported_token_rate": 0.21518987341772153,
+        "cas_score": 0.5
+      }
+    ]
+  },
+  "inventory": [
+    {
+      "file": "asqa_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "cas_pregeneration.json",
+      "format": "JSON",
+      "records": 3,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "cofie.json",
+      "format": "JSON",
+      "records": 1,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "conflictbank_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "fever.json",
+      "format": "JSON",
+      "records": 2,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "halueval.json",
+      "format": "JSON",
+      "records": 1,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "hotpotqa.json",
+      "format": "JSON",
+      "records": 10,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "hotpotqa_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Evidence selection; consistent-pair negatives"
+    },
+    {
+      "file": "merged_cleaned_dataset.json",
+      "format": "JSON",
+      "records": 48,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "multinli.json",
+      "format": "JSON",
+      "records": 20,
+      "used_for": "3-way NLI; contradiction detection"
+    },
+    {
+      "file": "musique.json",
+      "format": "JSON",
+      "records": 20,
+      "used_for": "Evidence selection"
+    },
+    {
+      "file": "ragtruth_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Hallucination detection"
+    },
+    {
+      "file": "selfrag_train.json",
+      "format": "JSON",
+      "records": 10,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "strategyqa.json",
+      "format": "JSON",
+      "records": 1,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "strategyqa_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "test.json",
+      "format": "JSON",
+      "records": 5,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "train.json",
+      "format": "JSON",
+      "records": 38,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "truthful_qa_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "truthfulqa.json",
+      "format": "JSON",
+      "records": 10,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "val.json",
+      "format": "JSON",
+      "records": 5,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "verified_output.json",
+      "format": "JSON",
+      "records": 1,
+      "used_for": "Not used (see notes)"
+    },
+    {
+      "file": "wikicontradict_hf_samples.json",
+      "format": "JSONL",
+      "records": 50,
+      "used_for": "Contradiction detection (positives)"
+    }
+  ]
+}

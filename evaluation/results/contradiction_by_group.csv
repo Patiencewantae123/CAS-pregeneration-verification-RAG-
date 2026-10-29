@@ -1,0 +1,9 @@
+detector,group,n,flag_rate,all_label
+Negation-cue baseline,HotpotQA gold pair,50,0.08,0
+Negation-cue baseline,MultiNLI,20,0.15,
+Negation-cue baseline,WikiContradict: Explicit,28,0.14285714285714285,1
+Negation-cue baseline,WikiContradict: Implicit,22,0.13636363636363635,1
+CAS NLIVerifier (as implemented),HotpotQA gold pair,50,0.0,0
+CAS NLIVerifier (as implemented),MultiNLI,20,0.0,
+CAS NLIVerifier (as implemented),WikiContradict: Explicit,28,0.0,1
+CAS NLIVerifier (as implemented),WikiContradict: Implicit,22,0.0,1

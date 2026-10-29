@@ -1,0 +1,9 @@
+detector,metric,mean,ci_low,ci_high,n
+Negation-cue baseline,precision,0.6428571428571429,0.35714285714285715,0.8890350877192974,120
+Negation-cue baseline,recall,0.16071428571428573,0.06896551724137931,0.26867106773823185,120
+Negation-cue baseline,f1,0.2571428571428572,0.11940298507462686,0.39135780470420495,120
+Negation-cue baseline,accuracy,0.5666666666666667,0.475,0.65,120
+CAS NLIVerifier (as implemented),precision,0.0,0.0,0.0,120
+CAS NLIVerifier (as implemented),recall,0.0,0.0,0.0,120
+CAS NLIVerifier (as implemented),f1,0.0,0.0,0.0,120
+CAS NLIVerifier (as implemented),accuracy,0.5333333333333333,0.44166666666666665,0.6166666666666667,120

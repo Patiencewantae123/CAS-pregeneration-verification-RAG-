@@ -1,0 +1,23 @@
+file,format,records,used_for
+asqa_hf_samples.json,JSONL,50,Not used (see notes)
+cas_pregeneration.json,JSON,3,Not used (see notes)
+cofie.json,JSON,1,Not used (see notes)
+conflictbank_hf_samples.json,JSONL,50,Not used (see notes)
+fever.json,JSON,2,Not used (see notes)
+halueval.json,JSON,1,Not used (see notes)
+hotpotqa.json,JSON,10,Not used (see notes)
+hotpotqa_hf_samples.json,JSONL,50,Evidence selection; consistent-pair negatives
+merged_cleaned_dataset.json,JSON,48,Not used (see notes)
+multinli.json,JSON,20,3-way NLI; contradiction detection
+musique.json,JSON,20,Evidence selection
+ragtruth_hf_samples.json,JSONL,50,Hallucination detection
+selfrag_train.json,JSON,10,Not used (see notes)
+strategyqa.json,JSON,1,Not used (see notes)
+strategyqa_hf_samples.json,JSONL,50,Not used (see notes)
+test.json,JSON,5,Not used (see notes)
+train.json,JSON,38,Not used (see notes)
+truthful_qa_hf_samples.json,JSONL,50,Not used (see notes)
+truthfulqa.json,JSON,10,Not used (see notes)
+val.json,JSON,5,Not used (see notes)
+verified_output.json,JSON,1,Not used (see notes)
+wikicontradict_hf_samples.json,JSONL,50,Contradiction detection (positives)
