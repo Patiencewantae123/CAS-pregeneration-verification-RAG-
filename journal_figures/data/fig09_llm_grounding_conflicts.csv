@@ -1,0 +1,13 @@
+panel,metric,model,method,mean,ci_low,ci_high,n
+a,ungrounded,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,0.0,2
+a,ungrounded,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,0.0,2
+a,ungrounded,llama3.2:latest,CAS w/o conflict graph,0.0,0.0,0.0,2
+a,ungrounded,llama3.2:latest,CAS (full pipeline),0.0,0.0,0.0,2
+b,abstain,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,0.0,2
+b,abstain,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,0.0,2
+b,abstain,llama3.2:latest,CAS w/o conflict graph,0.0,0.0,0.0,2
+b,abstain,llama3.2:latest,CAS (full pipeline),0.0,0.0,0.0,2
+c,conflict_flagged,llama3.2:latest,Vanilla RAG (no filter),1.0,1.0,1.0,1
+c,conflict_flagged,llama3.2:latest,Relevance top-3 (BM25),1.0,1.0,1.0,1
+c,conflict_flagged,llama3.2:latest,CAS w/o conflict graph,0.0,0.0,0.0,1
+c,conflict_flagged,llama3.2:latest,CAS (full pipeline),0.0,0.0,0.0,1

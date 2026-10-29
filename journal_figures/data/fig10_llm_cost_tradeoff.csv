@@ -1,0 +1,5 @@
+model,method,n,accuracy,acc_ci_low,acc_ci_high,mean_prompt_tokens,mean_latency_s
+llama3.2:latest,Vanilla RAG (no filter),2,0.5,0.0,1.0,1432.5,12.238203049999356
+llama3.2:latest,Relevance top-3 (BM25),2,1.0,1.0,1.0,347.0,2.149264599998787
+llama3.2:latest,CAS w/o conflict graph,2,1.0,1.0,1.0,320.0,1.0857981499993912
+llama3.2:latest,CAS (full pipeline),2,1.0,1.0,1.0,320.0,1.0857981499993912

@@ -65,6 +65,28 @@ def load_results():
         return json.load(f)
 
 
+LLM_DIR = os.path.join(ROOT, "evaluation", "results")
+MODEL_LABEL = {"llama3.2:latest": "Llama 3.2 3B", "gemma3:latest": "Gemma 3 4B"}
+
+
+def load_llm():
+    """Per-response scores from evaluation/run_llm_generation.py plus its summary."""
+    qa = pd.read_csv(os.path.join(LLM_DIR, "llm_scores.csv"))
+    conflict = pd.read_csv(os.path.join(LLM_DIR, "llm_conflict_scores.csv"))
+    with open(os.path.join(LLM_DIR, "llm_summary.json"), encoding="utf-8") as f:
+        summary = json.load(f)
+    return qa, conflict, summary
+
+
+def boot_mean(values, n=2000, seed=42):
+    """Mean and percentile-bootstrap 95% CI (same procedure as evaluation/run_evaluation.py)."""
+    import numpy as np
+    v = np.asarray(values, dtype=float)
+    rng = np.random.default_rng(seed)
+    stats = v[rng.integers(0, len(v), size=(n, len(v)))].mean(axis=1)
+    return float(v.mean()), float(np.percentile(stats, 2.5)), float(np.percentile(stats, 97.5))
+
+
 def panel_title(ax, letter, text):
     ax.set_title(f"({letter}) {text}", loc="left", fontweight="bold", pad=4)
 

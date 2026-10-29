@@ -1,0 +1,17 @@
+dataset,model,method,metric,mean,ci_low,ci_high,n,p_holm_cas_full_vs_this
+HotpotQA,llama3.2:latest,Vanilla RAG (no filter),accuracy,0.0,0.0,0.0,1,1.0
+HotpotQA,llama3.2:latest,Relevance top-3 (BM25),accuracy,1.0,1.0,1.0,1,1.0
+HotpotQA,llama3.2:latest,CAS w/o conflict graph,accuracy,1.0,1.0,1.0,1,1.0
+HotpotQA,llama3.2:latest,CAS (full pipeline),accuracy,1.0,1.0,1.0,1,
+HotpotQA,llama3.2:latest,Vanilla RAG (no filter),f1,0.0,0.0,0.0,1,1.0
+HotpotQA,llama3.2:latest,Relevance top-3 (BM25),f1,1.0,1.0,1.0,1,1.0
+HotpotQA,llama3.2:latest,CAS w/o conflict graph,f1,1.0,1.0,1.0,1,1.0
+HotpotQA,llama3.2:latest,CAS (full pipeline),f1,1.0,1.0,1.0,1,
+MuSiQue,llama3.2:latest,Vanilla RAG (no filter),accuracy,1.0,1.0,1.0,1,1.0
+MuSiQue,llama3.2:latest,Relevance top-3 (BM25),accuracy,1.0,1.0,1.0,1,1.0
+MuSiQue,llama3.2:latest,CAS w/o conflict graph,accuracy,1.0,1.0,1.0,1,1.0
+MuSiQue,llama3.2:latest,CAS (full pipeline),accuracy,1.0,1.0,1.0,1,
+MuSiQue,llama3.2:latest,Vanilla RAG (no filter),f1,0.0,0.0,0.0,1,1.0
+MuSiQue,llama3.2:latest,Relevance top-3 (BM25),f1,0.0,0.0,0.0,1,1.0
+MuSiQue,llama3.2:latest,CAS w/o conflict graph,f1,0.0,0.0,0.0,1,1.0
+MuSiQue,llama3.2:latest,CAS (full pipeline),f1,0.0,0.0,0.0,1,

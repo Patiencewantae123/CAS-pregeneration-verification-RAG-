@@ -1,0 +1,47 @@
+"""Fig. 9 - Ungrounded answers, abstentions (HotpotQA + MuSiQue pooled) and conflict flagging (WikiContradict)."""
+import numpy as np
+
+from _style import (DOUBLE, METHOD_COLOR, METHOD_SHORT, MODEL_LABEL, boot_mean, load_llm,
+                    panel_title, plt, save)
+
+qa, conflict, summary = load_llm()
+models, methods = summary["models"], list(METHOD_COLOR)
+HATCH = {"Vanilla RAG (no filter)": "", "Relevance top-3 (BM25)": "////",
+         "CAS w/o conflict graph": "....", "CAS (full pipeline)": "xxxx"}
+panels = [
+    ("a", "Ungrounded answers (QA, pooled)", qa, "ungrounded", "Share of non-abstaining answers"),
+    ("b", "Abstentions (QA, pooled)", qa, "abstain", "Share of answers"),
+    ("c", "Conflict flagged (WikiContradict)", conflict, "conflict_flagged", "Share of answers"),
+]
+rows = []
+
+fig, axes = plt.subplots(1, 3, figsize=(DOUBLE, 2.5))
+x = np.arange(len(models))
+w = 0.8 / len(methods)
+for ax, (letter, title, df, metric, ylabel) in zip(axes, panels):
+    top = 0
+    for j, m in enumerate(methods):
+        means, lo, hi = [], [], []
+        for model in models:
+            vals = df[(df["model"] == model) & (df["method"] == m)][metric].dropna()
+            mu, l, h = boot_mean(vals)
+            means.append(mu)
+            lo.append(mu - l)
+            hi.append(h - mu)
+            top = max(top, h)
+            rows.append({"panel": letter, "metric": metric, "model": model, "method": m, "mean": mu,
+                         "ci_low": l, "ci_high": h, "n": len(vals)})
+        pos = x - 0.4 + w * (j + 0.5)
+        ax.bar(pos, means, w * 0.9, color=METHOD_COLOR[m], hatch=HATCH[m], edgecolor="white", linewidth=0.6,
+               label=METHOD_SHORT[m], zorder=2)
+        ax.errorbar(pos, means, yerr=[lo, hi], fmt="none", ecolor="#52514e", elinewidth=0.7, capsize=1.2, zorder=3)
+    ax.set_xticks(x, [MODEL_LABEL.get(mo, mo) for mo in models])
+    ax.tick_params(axis="x", length=0)
+    ax.set_ylim(0, min(1.0, max(0.25, top * 1.15)))
+    ax.set_ylabel(ylabel)
+    ax.grid(axis="y")
+    panel_title(ax, letter, title)
+handles, labels = axes[0].get_legend_handles_labels()
+fig.legend(handles, labels, loc="lower center", ncol=4, bbox_to_anchor=(0.5, -0.06))
+fig.tight_layout(rect=(0, 0.07, 1, 1), w_pad=1.5)
+save(fig, "fig09_llm_grounding_conflicts", rows)
