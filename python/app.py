@@ -62,6 +62,8 @@ col4.metric("CAS CPI Score", "88.48", delta="+6.00 vs CRAG")
 
 st.divider()
 
+
+
 # Main Interface Tabs
 tab1, tab2, tab3 = st.tabs(["📊 Adjudication Table", "📜 Reconciled Context (C_verified)", "📈 Benchmark CPI Metrics"])
 
@@ -71,7 +73,7 @@ with tab1:
     table_data = []
     for v in results["verified_documents"]:
         table_data.append({
-            "Doc ID": v.doc.id,
+        
             "Source": v.doc.source,
             "Content Passage": v.doc.content,
             "Trust Score": round(v.trust_score, 2),
@@ -84,8 +86,7 @@ with tab1:
 
     def color_status(val):
         if "RETAINED" in str(val):
-            return "background-color: #064e3b; color: #86efac; font-weight: bold;"
-        return "background-color: #7f1d1d; color: #fca5a5; font-weight: bold;"
+            return "background-color: #064e3b; color: #86efac; font x                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccght: bold;"
 
     st.dataframe(
         df.style.map(color_status, subset=["Status"]), 
