@@ -25,11 +25,13 @@ for name, cols in [("fig01_precision_recall_tradeoff", ("precision", "recall", "
             if abs(row[c] - ev[(row["dataset"], row["method"], c)]) > 1e-12:
                 bad += 1
                 print("MISMATCH", name, row["dataset"], row["method"], c)
-pt = {(t["dataset"], t["comparison"].replace("CAS (full) - ", ""), t["metric"]): t["mean_diff"]
-      for t in R["paired_tests"]}
+pt = {}
+for t in R["paired_tests"]:
+    pt[(t["dataset"], t["reference"], t["comparator"], t["metric"])] = t["mean_diff"]
+    pt[(t["dataset"], t["comparator"], t["reference"], t["metric"])] = -t["mean_diff"]
 df = pd.read_csv(os.path.join(HERE, "data", "fig02_paired_differences.csv"))
 for _, row in df.iterrows():
-    if abs(row["mean_diff"] - pt[(row["dataset"], row["comparator"], row["metric"])]) > 1e-12:
+    if abs(row["mean_diff"] - pt[(row["dataset"], row["reference"], row["comparator"], row["metric"])]) > 1e-12:
         bad += 1
         print("MISMATCH fig02", row.to_dict())
 for f in [f"{s[:-3]}.{ext}" for s in scripts for ext in ("png", "pdf")]:

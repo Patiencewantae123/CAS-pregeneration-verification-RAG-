@@ -40,6 +40,6 @@ for ax, (letter, ds) in zip(axes, [("a", "HotpotQA"), ("b", "MuSiQue")]):
     panel_title(ax, letter, f"{ds} (n = {look[(ds, methods[0], 'f1')]['n']} questions)")
 axes[0].set_ylabel("Evidence recall")
 handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, loc="lower center", ncol=4, bbox_to_anchor=(0.5, -0.04), columnspacing=1.8)
+fig.legend(handles, labels, loc="lower center", ncol=6, bbox_to_anchor=(0.5, -0.04), columnspacing=1.2)
 fig.tight_layout(rect=(0, 0.06, 1, 1), w_pad=1.0)
 save(fig, "fig01_precision_recall_tradeoff", rows)

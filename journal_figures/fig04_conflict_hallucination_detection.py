@@ -8,7 +8,8 @@ from _style import DOUBLE, GRID, MUTED, load_results, panel_title, plt, save
 R = load_results()
 rows = []
 DET = {"Negation-cue baseline": ("#2a78d6", "o", "Negation-cue baseline"),
-       "CAS NLIVerifier (as implemented)": ("#eda100", "D", "CAS NLIVerifier")}
+       "CAS NLIVerifier (as implemented)": ("#eda100", "D", "CAS keyword verifier"),
+       "DeBERTa-v3 NLI (CAS-NLI)": ("#e87ba4", "v", "DeBERTa-v3 NLI")}
 
 
 def wilson(k, n, z=1.96):
@@ -19,7 +20,7 @@ def wilson(k, n, z=1.96):
     return max(0.0, centre - half), min(1.0, centre + half)
 
 
-fig, axes = plt.subplots(1, 2, figsize=(DOUBLE, 2.7), gridspec_kw={"width_ratios": [1.4, 1]})
+fig, axes = plt.subplots(1, 2, figsize=(DOUBLE, 3.0), gridspec_kw={"width_ratios": [1.4, 1]})
 
 # (a) Flag rate by pair source
 ax = axes[0]
@@ -33,7 +34,7 @@ for j, (det, (color, marker, short)) in enumerate(DET.items()):
         r = grp[(det, g)]
         k = round(r["flag_rate"] * r["n"])
         lo, hi = wilson(k, r["n"])
-        y = i + (j - 0.5) * 0.28
+        y = i + (j - 1) * 0.24
         err = [[max(0.0, r["flag_rate"] - lo)], [max(0.0, hi - r["flag_rate"])]]
         ax.errorbar(r["flag_rate"], y, xerr=err, fmt=marker,
                     color=color, markersize=4.5, markeredgecolor="white", markeredgewidth=0.5,
@@ -76,8 +77,10 @@ def roc(key):
 
 for key, res_key, name, color, ls in [("unsupported_token_rate", "unsupported_token_rate_auroc",
                                        "Unsupported-token rate", "#2a78d6", "-"),
-                                      ("cas_score", "cas_verifier_auroc", "CAS NLIVerifier (all Neutral)",
-                                       "#eda100", (0, (4, 2)))]:
+                                      ("cas_score", "cas_verifier_auroc", "CAS keyword (all Neutral)",
+                                       "#eda100", (0, (4, 2))),
+                                      ("nli_score", "nli_model_auroc", "DeBERTa-v3 NLI",
+                                       "#e87ba4", (0, (1.5, 1)))]:
     f, t = roc(key)
     a = h[res_key]
     # Points are grouped by tied score, so linear interpolation between them is the correct ROC
@@ -91,7 +94,7 @@ ax.set_ylim(0, 1.01)
 ax.set_aspect("equal")
 ax.set_xlabel("False positive rate")
 ax.set_ylabel("True positive rate")
-ax.legend(loc="lower right", fontsize=6.3, handlelength=1.8)
+ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.2), fontsize=6.2, handlelength=1.8)
 panel_title(ax, "b", f"RAGTruth ({h['n_hallucinated']}/{h['n']} hallucinated)")
 
 fig.tight_layout(w_pad=2.0)

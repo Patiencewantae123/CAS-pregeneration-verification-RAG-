@@ -7,7 +7,8 @@ from _style import (DOUBLE, METHOD_COLOR, METHOD_SHORT, MODEL_LABEL, boot_mean, 
 qa, conflict, summary = load_llm()
 models, methods = summary["models"], list(METHOD_COLOR)
 HATCH = {"Vanilla RAG (no filter)": "", "Relevance top-3 (BM25)": "////",
-         "CAS w/o conflict graph": "....", "CAS (full pipeline)": "xxxx"}
+         "CAS w/o conflict graph": "....", "CAS (full pipeline)": "xxxx",
+         "CAS-NLI (full pipeline)": "\\\\\\\\", "CAS-NLI conflict-preserving": "++++"}
 panels = [
     ("a", "Ungrounded answers (QA)", qa, "ungrounded", "Share of non-abstaining answers"),
     ("b", "Abstentions (QA)", qa, "abstain", "Share of answers"),
@@ -45,6 +46,6 @@ for ax, (letter, title, df, metric, ylabel) in zip(axes, panels):
     ax.grid(axis="y")
     panel_title(ax, letter, title)
 handles, labels = axes[0].get_legend_handles_labels()
-fig.legend(handles, labels, loc="lower center", ncol=4, bbox_to_anchor=(0.5, -0.06))
+fig.legend(handles, labels, loc="lower center", ncol=6, bbox_to_anchor=(0.5, -0.06), columnspacing=1.0)
 fig.tight_layout(rect=(0, 0.07, 1, 1), w_pad=1.5)
 save(fig, "fig09_llm_grounding_conflicts", rows)
