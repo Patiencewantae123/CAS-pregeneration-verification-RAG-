@@ -11,6 +11,12 @@ HotpotQA,gemma3:latest,CAS (full pipeline),accuracy,0.52,0.38,0.66,50,
 HotpotQA,gemma3:latest,CAS-NLI (full pipeline),accuracy,0.34,0.2,0.48,50,
 HotpotQA,gemma3:latest,CAS-NLI θ-CV (penalty),accuracy,0.44,0.3,0.58,50,
 HotpotQA,gemma3:latest,CAS-NLI θ-CV preserving,accuracy,0.52,0.38,0.66,50,
+HotpotQA,llama3.1:8b,Vanilla RAG (no filter),accuracy,0.68,0.56,0.8,50,1.0
+HotpotQA,llama3.1:8b,Relevance top-3 (BM25),accuracy,0.68,0.54,0.8,50,1.0
+HotpotQA,llama3.1:8b,CAS (full pipeline),accuracy,0.6,0.46,0.74,50,
+HotpotQA,llama3.1:8b,CAS-NLI (full pipeline),accuracy,0.36,0.24,0.5,50,
+HotpotQA,llama3.1:8b,CAS-NLI θ-CV (penalty),accuracy,0.5,0.36,0.64,50,
+HotpotQA,llama3.1:8b,CAS-NLI θ-CV preserving,accuracy,0.6,0.46,0.74,50,
 HotpotQA,llama3.2:latest,Vanilla RAG (no filter),f1,0.6571148459383752,0.5260049019607843,0.7783964985994396,50,1.0
 HotpotQA,llama3.2:latest,Relevance top-3 (BM25),f1,0.5826666666666667,0.44926666666666665,0.7093333333333334,50,1.0
 HotpotQA,llama3.2:latest,CAS (full pipeline),f1,0.4933333333333333,0.3533333333333333,0.6333333333333333,50,
@@ -23,6 +29,12 @@ HotpotQA,gemma3:latest,CAS (full pipeline),f1,0.5306666666666666,0.3986666666666
 HotpotQA,gemma3:latest,CAS-NLI (full pipeline),f1,0.33599999999999997,0.21195,0.46799999999999997,50,
 HotpotQA,gemma3:latest,CAS-NLI θ-CV (penalty),f1,0.4333333333333333,0.30529999999999996,0.5613666666666665,50,
 HotpotQA,gemma3:latest,CAS-NLI θ-CV preserving,f1,0.5106666666666666,0.38,0.6453333333333333,50,
+HotpotQA,llama3.1:8b,Vanilla RAG (no filter),f1,0.7146666666666667,0.592,0.8293333333333334,50,1.0
+HotpotQA,llama3.1:8b,Relevance top-3 (BM25),f1,0.682,0.5519833333333333,0.7993499999999999,50,1.0
+HotpotQA,llama3.1:8b,CAS (full pipeline),f1,0.6093333333333334,0.4785999999999999,0.74,50,
+HotpotQA,llama3.1:8b,CAS-NLI (full pipeline),f1,0.3486666666666667,0.2259833333333333,0.4786666666666666,50,
+HotpotQA,llama3.1:8b,CAS-NLI θ-CV (penalty),f1,0.524,0.384,0.6533333333333333,50,
+HotpotQA,llama3.1:8b,CAS-NLI θ-CV preserving,f1,0.5993333333333334,0.47258333333333336,0.7293333333333333,50,
 MuSiQue,llama3.2:latest,Vanilla RAG (no filter),accuracy,0.3333333333333333,0.13333333333333333,0.6,15,1.0
 MuSiQue,llama3.2:latest,Relevance top-3 (BM25),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,1.0
 MuSiQue,llama3.2:latest,CAS (full pipeline),accuracy,0.2,0.0,0.4,15,
@@ -35,6 +47,12 @@ MuSiQue,gemma3:latest,CAS (full pipeline),accuracy,0.2,0.0,0.4,15,
 MuSiQue,gemma3:latest,CAS-NLI (full pipeline),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,
 MuSiQue,gemma3:latest,CAS-NLI θ-CV (penalty),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,
 MuSiQue,gemma3:latest,CAS-NLI θ-CV preserving,accuracy,0.2,0.0,0.4,15,
+MuSiQue,llama3.1:8b,Vanilla RAG (no filter),accuracy,0.3333333333333333,0.13333333333333333,0.6,15,1.0
+MuSiQue,llama3.1:8b,Relevance top-3 (BM25),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,1.0
+MuSiQue,llama3.1:8b,CAS (full pipeline),accuracy,0.2,0.0,0.4,15,
+MuSiQue,llama3.1:8b,CAS-NLI (full pipeline),accuracy,0.2,0.0,0.4,15,
+MuSiQue,llama3.1:8b,CAS-NLI θ-CV (penalty),accuracy,0.13333333333333333,0.0,0.3333333333333333,15,
+MuSiQue,llama3.1:8b,CAS-NLI θ-CV preserving,accuracy,0.2,0.0,0.4,15,
 MuSiQue,llama3.2:latest,Vanilla RAG (no filter),f1,0.3,0.1,0.5333333333333333,15,1.0
 MuSiQue,llama3.2:latest,Relevance top-3 (BM25),f1,0.06666666666666667,0.0,0.2,15,1.0
 MuSiQue,llama3.2:latest,CAS (full pipeline),f1,0.16666666666666666,0.0,0.36666666666666664,15,
@@ -47,3 +65,9 @@ MuSiQue,gemma3:latest,CAS (full pipeline),f1,0.12000000000000001,0.0,0.293333333
 MuSiQue,gemma3:latest,CAS-NLI (full pipeline),f1,0.05333333333333334,0.0,0.16000000000000003,15,
 MuSiQue,gemma3:latest,CAS-NLI θ-CV (penalty),f1,0.08666666666666667,0.0,0.21366666666666487,15,
 MuSiQue,gemma3:latest,CAS-NLI θ-CV preserving,f1,0.12000000000000001,0.0,0.29333333333333333,15,
+MuSiQue,llama3.1:8b,Vanilla RAG (no filter),f1,0.2533333333333333,0.06666666666666667,0.4666666666666667,15,1.0
+MuSiQue,llama3.1:8b,Relevance top-3 (BM25),f1,0.06666666666666667,0.0,0.2,15,1.0
+MuSiQue,llama3.1:8b,CAS (full pipeline),f1,0.12000000000000001,0.0,0.29333333333333333,15,
+MuSiQue,llama3.1:8b,CAS-NLI (full pipeline),f1,0.12000000000000001,0.0,0.29333333333333333,15,
+MuSiQue,llama3.1:8b,CAS-NLI θ-CV (penalty),f1,0.08666666666666667,0.0,0.21366666666666487,15,
+MuSiQue,llama3.1:8b,CAS-NLI θ-CV preserving,f1,0.12000000000000001,0.0,0.29333333333333333,15,

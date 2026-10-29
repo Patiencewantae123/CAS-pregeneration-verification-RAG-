@@ -18,7 +18,8 @@ for ax, (letter, (ds, metric, xlabel)) in zip(axes, zip("abcd", panels)):
         for m in methods:
             r = look[(ds, model, m, metric)]
             ax.errorbar(r["mean"], y, xerr=[[r["mean"] - r["ci_low"]], [r["ci_high"] - r["mean"]]],
-                        fmt=METHOD_MARKER[m], color=METHOD_COLOR[m], markersize=4.2, markeredgecolor="white",
+                        fmt=METHOD_MARKER[m], color=METHOD_COLOR[m],
+                        markersize=7 if METHOD_MARKER[m] == "*" else 4.2, markeredgecolor="white",
                         markeredgewidth=0.5, elinewidth=0.9, capsize=1.3, zorder=3)
             rows.append({"dataset": ds, "model": model, "method": m, "metric": metric, "mean": r["mean"],
                          "ci_low": r["ci_low"], "ci_high": r["ci_high"], "n": r["n"],

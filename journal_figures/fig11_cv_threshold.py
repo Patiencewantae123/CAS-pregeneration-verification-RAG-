@@ -21,7 +21,7 @@ for kind, (label, method) in KIND.items():
     picks = [r["theta"] for r in rows if r["kind"] == kind and r["fold"] != "all"]
     for t, c in zip(*np.unique(picks, return_counts=True)):
         y = next(r["mean_f1"] for r in curve if r["theta"] == t)
-        ax.annotate(f"{c}/5 folds", (t, y), xytext=(0, 7 if kind == "preserve" else -11),
+        ax.annotate(f"{c}/5 folds", (t, y), xytext=(0, 7) if kind == "preserve" else (-16, 6),
                     textcoords="offset points", ha="center", fontsize=6, color=INK2)
 ax.set_xticks(cv["grid"], [f"{t:g}" for t in cv["grid"]])
 ax.set_xlabel("Contradiction threshold θ (pair is a contradiction if p ≥ θ)")
@@ -38,7 +38,7 @@ for j, (kind, (label, method)) in enumerate(KIND.items()):
     x = np.arange(len(folds)) + (j - 0.5) * 0.3
     ax.scatter(x, [r["train_f1"] for r in folds], marker="_", s=60, color=METHOD_COLOR[method], linewidths=1.6,
                zorder=3)
-    ax.scatter(x, [r["heldout_f1"] for r in folds], marker=METHOD_MARKER[method], s=26,
+    ax.scatter(x, [r["heldout_f1"] for r in folds], marker=METHOD_MARKER[method], s=60 if METHOD_MARKER[method] == "*" else 26,
                color=METHOD_COLOR[method], edgecolor="white", linewidth=0.5, zorder=4, label=label)
     for xi, r in zip(x, folds):
         ax.plot([xi, xi], [r["train_f1"], r["heldout_f1"]], color=METHOD_COLOR[method], linewidth=0.7, zorder=2)

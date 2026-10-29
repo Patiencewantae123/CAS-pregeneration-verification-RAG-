@@ -1,0 +1,1066 @@
+{
+ "preregistration_sha256": "47224db4fde3d1e553bc4e46df97850e49cf9075c83739d2069e46519657fd4f",
+ "n_questions": 2,
+ "models": [
+  "llama3.2:latest"
+ ],
+ "theta": 0.99,
+ "tau": 0.45,
+ "descriptive": [
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "accuracy",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "abstain",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "accuracy",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "f1",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "abstain",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.3333333333333333,
+   "ci_low": 0.0,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "poison_in_context",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "answer_in_context",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "accuracy",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.3333333333333333,
+   "ci_low": 0.0,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "accuracy",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "accuracy",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "f1",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "adoption",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "adoption",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "abstain",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "poison_in_context",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "answer_in_context",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "adoption",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  }
+ ],
+ "confirmatory": [
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": -1.0,
+   "ci_low": -1.0,
+   "ci_high": -1.0,
+   "p_value": 0.5078492150784921,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Provenance + BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Provenance + BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  }
+ ],
+ "exploratory": [
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "accuracy",
+   "mean_diff": -1.0,
+   "ci_low": -1.0,
+   "ci_high": -1.0,
+   "p_value": 0.5078492150784921,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "adoption",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "adoption",
+   "mean_diff": -0.5,
+   "ci_low": -1.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "accuracy",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  }
+ ],
+ "decisions": {
+  "A: CAS-NLI preserve vs Vanilla RAG": "not supported",
+  "A: CAS-NLI preserve vs BM25 top-3": "not supported",
+  "B: CAS-NLI preserve vs Vanilla RAG": "not supported",
+  "B: CAS-NLI preserve vs BM25 top-3": "not supported",
+  "B: CAS-NLI preserve vs Provenance + BM25 top-3": "not supported"
+ }
+}
