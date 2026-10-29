@@ -1,0 +1,13 @@
+dataset,category,count
+HotpotQA,distractor: filtered,328
+HotpotQA,distractor: retained by relevance alone,35
+HotpotQA,distractor: retained only via agreement bonus,37
+HotpotQA,"gold: missed, in BM25 top-3 but trust < tau",9
+HotpotQA,"gold: missed, low lexical relevance (BM25 rank > 3)",25
+HotpotQA,gold: retained,66
+MuSiQue,distractor: filtered,216
+MuSiQue,distractor: retained by relevance alone,38
+MuSiQue,distractor: retained only via agreement bonus,16
+MuSiQue,"gold: missed, in BM25 top-3 but trust < tau",1
+MuSiQue,"gold: missed, low lexical relevance (BM25 rank > 3)",11
+MuSiQue,gold: retained,18

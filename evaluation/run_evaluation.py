@@ -284,6 +284,51 @@ def run_evidence_selection(items):
     return rows, per_item
 
 
+def run_timing(items, repeats=20):
+    """Wall-clock latency of each selection method, repeated to estimate run-to-run variability."""
+    rows = []
+    for ds, data in items.items():
+        for method, fn in METHODS.items():
+            runs = []
+            for _ in range(repeats):
+                start = time.perf_counter()
+                for q, passages, _, _ in data:
+                    fn(q, passages)
+                runs.append(1000 * (time.perf_counter() - start) / len(data))
+            rows.append({"dataset": ds, "method": method, "repeats": repeats,
+                         "ms_per_query_mean": float(np.mean(runs)), "ms_per_query_sd": float(np.std(runs, ddof=1)),
+                         "candidates_per_query": len(data[0][1])})
+    return rows
+
+
+def run_error_analysis(items, tau=DEFAULT_TAU):
+    """Attribute every CAS (full) decision on a passage to a cause, using the pipeline's own outputs."""
+    rows = []
+    for ds, data in items.items():
+        c = Counter()
+        for q, passages, gold, _ in data:
+            full = select_cas(q, passages, tau=tau)
+            no_graph = select_cas(q, passages, tau=tau, use_graph=False)
+            top3 = select_topk(q, passages)
+            for i in range(len(passages)):
+                if i in gold:
+                    if i in full:
+                        c["gold: retained"] += 1
+                    elif i in top3:
+                        c["gold: missed, in BM25 top-3 but trust < tau"] += 1
+                    else:
+                        c["gold: missed, low lexical relevance (BM25 rank > 3)"] += 1
+                elif i in full:
+                    key = "distractor: retained by relevance alone" if i in no_graph \
+                        else "distractor: retained only via agreement bonus"
+                    c[key] += 1
+                else:
+                    c["distractor: filtered"] += 1
+        for cat, n in sorted(c.items()):
+            rows.append({"dataset": ds, "category": cat, "count": n})
+    return rows
+
+
 def run_paired_tests(per_item):
     cas = "CAS (full pipeline)"
     rows = []
@@ -463,6 +508,8 @@ def main():
     evidence, per_item = run_evidence_selection(items)
     paired = run_paired_tests(per_item)
     diagnostics = graph_diagnostics(items)
+    timing = run_timing(items)
+    errors = run_error_analysis(items)
     sweep = run_threshold_sweep(items)
     contra, contra_groups = run_contradiction(contradiction_pairs())
     nli = run_nli()
@@ -473,6 +520,8 @@ def main():
     write_csv(os.path.join(OUT_RESULTS, "evidence_selection.csv"), evidence)
     write_csv(os.path.join(OUT_RESULTS, "paired_tests.csv"), paired)
     write_csv(os.path.join(OUT_RESULTS, "graph_diagnostics.csv"), diagnostics)
+    write_csv(os.path.join(OUT_RESULTS, "timing.csv"), timing)
+    write_csv(os.path.join(OUT_RESULTS, "error_analysis.csv"), errors)
     write_csv(os.path.join(OUT_RESULTS, "threshold_sweep.csv"), sweep)
     write_csv(os.path.join(OUT_RESULTS, "contradiction_detection.csv"), contra)
     write_csv(os.path.join(OUT_RESULTS, "contradiction_by_group.csv"), contra_groups)
@@ -484,7 +533,8 @@ def main():
                               "platform": platform.platform(), "processor": platform.processor(),
                               "total_runtime_s": runtime_s},
                    "evidence_selection": evidence, "paired_tests": paired,
-                   "graph_diagnostics": diagnostics, "threshold_sweep": sweep,
+                   "graph_diagnostics": diagnostics, "timing": timing, "error_analysis": errors,
+                   "threshold_sweep": sweep,
                    "contradiction_detection": contra, "contradiction_by_group": contra_groups,
                    "nli": nli, "hallucination": halluc, "inventory": inv}, f, indent=2)
 

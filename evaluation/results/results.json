@@ -10,7 +10,7 @@
     "numpy": "2.5.1",
     "platform": "Windows-11-10.0.26300-SP0",
     "processor": "Intel64 Family 6 Model 198 Stepping 2, GenuineIntel",
-    "total_runtime_s": 4.975469699998939
+    "total_runtime_s": 8.393617599998834
   },
   "evidence_selection": [
     {
@@ -21,7 +21,7 @@
       "ci_low": 0.19999999999999996,
       "ci_high": 0.19999999999999996,
       "n": 50,
-      "ms_per_query": 0.1463579999835929
+      "ms_per_query": 0.13151599996490404
     },
     {
       "dataset": "HotpotQA",
@@ -31,7 +31,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 50,
-      "ms_per_query": 0.1463579999835929
+      "ms_per_query": 0.13151599996490404
     },
     {
       "dataset": "HotpotQA",
@@ -41,7 +41,7 @@
       "ci_low": 0.33333333333333337,
       "ci_high": 0.33333333333333337,
       "n": 50,
-      "ms_per_query": 0.1463579999835929
+      "ms_per_query": 0.13151599996490404
     },
     {
       "dataset": "HotpotQA",
@@ -51,7 +51,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 50,
-      "ms_per_query": 0.1463579999835929
+      "ms_per_query": 0.13151599996490404
     },
     {
       "dataset": "HotpotQA",
@@ -61,7 +61,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 46,
-      "ms_per_query": 0.1463579999835929
+      "ms_per_query": 0.13151599996490404
     },
     {
       "dataset": "HotpotQA",
@@ -71,7 +71,7 @@
       "ci_low": 0.44,
       "ci_high": 0.5466666666666666,
       "n": 50,
-      "ms_per_query": 0.36007200003950857
+      "ms_per_query": 0.307122000012896
     },
     {
       "dataset": "HotpotQA",
@@ -81,7 +81,7 @@
       "ci_low": 0.66,
       "ci_high": 0.82,
       "n": 50,
-      "ms_per_query": 0.36007200003950857
+      "ms_per_query": 0.307122000012896
     },
     {
       "dataset": "HotpotQA",
@@ -91,7 +91,7 @@
       "ci_low": 0.528,
       "ci_high": 0.6559999999999999,
       "n": 50,
-      "ms_per_query": 0.36007200003950857
+      "ms_per_query": 0.307122000012896
     },
     {
       "dataset": "HotpotQA",
@@ -101,7 +101,7 @@
       "ci_low": 0.30000000000000004,
       "ci_high": 0.30000000000000004,
       "n": 50,
-      "ms_per_query": 0.36007200003950857
+      "ms_per_query": 0.307122000012896
     },
     {
       "dataset": "HotpotQA",
@@ -111,7 +111,7 @@
       "ci_low": 0.6304347826086957,
       "ci_high": 0.8695652173913043,
       "n": 46,
-      "ms_per_query": 0.36007200003950857
+      "ms_per_query": 0.307122000012896
     },
     {
       "dataset": "HotpotQA",
@@ -121,7 +121,7 @@
       "ci_low": 0.6566666666666667,
       "ci_high": 0.835,
       "n": 50,
-      "ms_per_query": 0.29373200006375555
+      "ms_per_query": 0.3096419999928912
     },
     {
       "dataset": "HotpotQA",
@@ -131,7 +131,7 @@
       "ci_low": 0.55,
       "ci_high": 0.71,
       "n": 50,
-      "ms_per_query": 0.29373200006375555
+      "ms_per_query": 0.3096419999928912
     },
     {
       "dataset": "HotpotQA",
@@ -141,7 +141,7 @@
       "ci_low": 0.5819833333333332,
       "ci_high": 0.7253499999999998,
       "n": 50,
-      "ms_per_query": 0.29373200006375555
+      "ms_per_query": 0.3096419999928912
     },
     {
       "dataset": "HotpotQA",
@@ -151,7 +151,7 @@
       "ci_low": 0.172,
       "ci_high": 0.222,
       "n": 50,
-      "ms_per_query": 0.29373200006375555
+      "ms_per_query": 0.3096419999928912
     },
     {
       "dataset": "HotpotQA",
@@ -161,7 +161,7 @@
       "ci_low": 0.45652173913043476,
       "ci_high": 0.7608695652173914,
       "n": 46,
-      "ms_per_query": 0.29373200006375555
+      "ms_per_query": 0.3096419999928912
     },
     {
       "dataset": "HotpotQA",
@@ -171,7 +171,7 @@
       "ci_low": 0.502325,
       "ci_high": 0.6720333333333331,
       "n": 50,
-      "ms_per_query": 1.3510840000526514
+      "ms_per_query": 1.3952379999682307
     },
     {
       "dataset": "HotpotQA",
@@ -181,7 +181,7 @@
       "ci_low": 0.58,
       "ci_high": 0.74,
       "n": 50,
-      "ms_per_query": 1.3510840000526514
+      "ms_per_query": 1.3952379999682307
     },
     {
       "dataset": "HotpotQA",
@@ -191,7 +191,7 @@
       "ci_low": 0.5158095238095238,
       "ci_high": 0.6464761904761904,
       "n": 50,
-      "ms_per_query": 1.3510840000526514
+      "ms_per_query": 1.3952379999682307
     },
     {
       "dataset": "HotpotQA",
@@ -201,7 +201,7 @@
       "ci_low": 0.23600000000000002,
       "ci_high": 0.3180499999999997,
       "n": 50,
-      "ms_per_query": 1.3510840000526514
+      "ms_per_query": 1.3952379999682307
     },
     {
       "dataset": "HotpotQA",
@@ -211,7 +211,7 @@
       "ci_low": 0.5,
       "ci_high": 0.782608695652174,
       "n": 46,
-      "ms_per_query": 1.3510840000526514
+      "ms_per_query": 1.3952379999682307
     },
     {
       "dataset": "MuSiQue",
@@ -221,7 +221,7 @@
       "ci_low": 0.08333333333333334,
       "ci_high": 0.12000000000000002,
       "n": 15,
-      "ms_per_query": 0.26859999998123385
+      "ms_per_query": 0.26461333327461034
     },
     {
       "dataset": "MuSiQue",
@@ -231,7 +231,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 15,
-      "ms_per_query": 0.26859999998123385
+      "ms_per_query": 0.26461333327461034
     },
     {
       "dataset": "MuSiQue",
@@ -241,7 +241,7 @@
       "ci_low": 0.15245623941276115,
       "ci_high": 0.2111173850304285,
       "n": 15,
-      "ms_per_query": 0.26859999998123385
+      "ms_per_query": 0.26461333327461034
     },
     {
       "dataset": "MuSiQue",
@@ -251,7 +251,7 @@
       "ci_low": 1.0,
       "ci_high": 1.0,
       "n": 15,
-      "ms_per_query": 0.26859999998123385
+      "ms_per_query": 0.26461333327461034
     },
     {
       "dataset": "MuSiQue",
@@ -261,7 +261,7 @@
       "ci_low": 0.4666666666666667,
       "ci_high": 0.9333333333333333,
       "n": 15,
-      "ms_per_query": 0.26859999998123385
+      "ms_per_query": 0.26461333327461034
     },
     {
       "dataset": "MuSiQue",
@@ -271,7 +271,7 @@
       "ci_low": 0.22222222222222224,
       "ci_high": 0.4444444444444444,
       "n": 15,
-      "ms_per_query": 0.5542333334839592
+      "ms_per_query": 0.5077466666989494
     },
     {
       "dataset": "MuSiQue",
@@ -281,7 +281,7 @@
       "ci_low": 0.3222222222222222,
       "ci_high": 0.6888888888888888,
       "n": 15,
-      "ms_per_query": 0.5542333334839592
+      "ms_per_query": 0.5077466666989494
     },
     {
       "dataset": "MuSiQue",
@@ -291,7 +291,7 @@
       "ci_low": 0.2622222222222222,
       "ci_high": 0.5266666666666666,
       "n": 15,
-      "ms_per_query": 0.5542333334839592
+      "ms_per_query": 0.5077466666989494
     },
     {
       "dataset": "MuSiQue",
@@ -301,7 +301,7 @@
       "ci_low": 0.14999999999999997,
       "ci_high": 0.14999999999999997,
       "n": 15,
-      "ms_per_query": 0.5542333334839592
+      "ms_per_query": 0.5077466666989494
     },
     {
       "dataset": "MuSiQue",
@@ -311,7 +311,7 @@
       "ci_low": 0.06666666666666667,
       "ci_high": 0.5333333333333333,
       "n": 15,
-      "ms_per_query": 0.5542333334839592
+      "ms_per_query": 0.5077466666989494
     },
     {
       "dataset": "MuSiQue",
@@ -321,7 +321,7 @@
       "ci_low": 0.27349206349206345,
       "ci_high": 0.4301587301587302,
       "n": 15,
-      "ms_per_query": 0.5367333333803496
+      "ms_per_query": 0.5316199999166807
     },
     {
       "dataset": "MuSiQue",
@@ -331,7 +331,7 @@
       "ci_low": 0.4831944444444444,
       "ci_high": 0.7890277777777771,
       "n": 15,
-      "ms_per_query": 0.5367333333803496
+      "ms_per_query": 0.5316199999166807
     },
     {
       "dataset": "MuSiQue",
@@ -341,7 +341,7 @@
       "ci_low": 0.33425396825396825,
       "ci_high": 0.5026507936507937,
       "n": 15,
-      "ms_per_query": 0.5367333333803496
+      "ms_per_query": 0.5316199999166807
     },
     {
       "dataset": "MuSiQue",
@@ -351,7 +351,7 @@
       "ci_low": 0.14333333333333334,
       "ci_high": 0.23666666666666666,
       "n": 15,
-      "ms_per_query": 0.5367333333803496
+      "ms_per_query": 0.5316199999166807
     },
     {
       "dataset": "MuSiQue",
@@ -361,7 +361,7 @@
       "ci_low": 0.13333333333333333,
       "ci_high": 0.6,
       "n": 15,
-      "ms_per_query": 0.5367333333803496
+      "ms_per_query": 0.5316199999166807
     },
     {
       "dataset": "MuSiQue",
@@ -371,7 +371,7 @@
       "ci_low": 0.21950396825396826,
       "ci_high": 0.3845238095238095,
       "n": 15,
-      "ms_per_query": 4.494526666530874
+      "ms_per_query": 4.410246666763366
     },
     {
       "dataset": "MuSiQue",
@@ -381,7 +381,7 @@
       "ci_low": 0.4831944444444444,
       "ci_high": 0.7890277777777771,
       "n": 15,
-      "ms_per_query": 4.494526666530874
+      "ms_per_query": 4.410246666763366
     },
     {
       "dataset": "MuSiQue",
@@ -391,7 +391,7 @@
       "ci_low": 0.28468915343915346,
       "ci_high": 0.45846693121693116,
       "n": 15,
-      "ms_per_query": 4.494526666530874
+      "ms_per_query": 4.410246666763366
     },
     {
       "dataset": "MuSiQue",
@@ -401,7 +401,7 @@
       "ci_low": 0.18666666666666668,
       "ci_high": 0.2966666666666667,
       "n": 15,
-      "ms_per_query": 4.494526666530874
+      "ms_per_query": 4.410246666763366
     },
     {
       "dataset": "MuSiQue",
@@ -411,7 +411,7 @@
       "ci_low": 0.13333333333333333,
       "ci_high": 0.6,
       "n": 15,
-      "ms_per_query": 4.494526666530874
+      "ms_per_query": 4.410246666763366
     }
   ],
   "paired_tests": [
@@ -614,6 +614,134 @@
       "neutral_edges": 2804,
       "mean_agreement_gold": 0.08800000000000001,
       "mean_agreement_distractor": 0.17881481481481482
+    }
+  ],
+  "timing": [
+    {
+      "dataset": "HotpotQA",
+      "method": "Vanilla RAG (no filter)",
+      "repeats": 20,
+      "ms_per_query_mean": 0.00017069999375962652,
+      "ms_per_query_sd": 4.281307451723007e-05,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "Relevance top-3 (BM25)",
+      "repeats": 20,
+      "ms_per_query_mean": 0.2641143999826454,
+      "ms_per_query_sd": 0.013392357164862386,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS w/o conflict graph",
+      "repeats": 20,
+      "ms_per_query_mean": 0.2776415999796882,
+      "ms_per_query_sd": 0.018847124042692696,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "HotpotQA",
+      "method": "CAS (full pipeline)",
+      "repeats": 20,
+      "ms_per_query_mean": 1.24429980000059,
+      "ms_per_query_sd": 0.0573314623522626,
+      "candidates_per_query": 10
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Vanilla RAG (no filter)",
+      "repeats": 20,
+      "ms_per_query_mean": 0.0003139999777583095,
+      "ms_per_query_sd": 7.855117301617749e-05,
+      "candidates_per_query": 20
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "Relevance top-3 (BM25)",
+      "repeats": 20,
+      "ms_per_query_mean": 0.46398066662125836,
+      "ms_per_query_sd": 0.05864189834946699,
+      "candidates_per_query": 20
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS w/o conflict graph",
+      "repeats": 20,
+      "ms_per_query_mean": 0.4838456666887699,
+      "ms_per_query_sd": 0.034652952345026085,
+      "candidates_per_query": 20
+    },
+    {
+      "dataset": "MuSiQue",
+      "method": "CAS (full pipeline)",
+      "repeats": 20,
+      "ms_per_query_mean": 4.172880000005534,
+      "ms_per_query_sd": 0.10815688948821615,
+      "candidates_per_query": 20
+    }
+  ],
+  "error_analysis": [
+    {
+      "dataset": "HotpotQA",
+      "category": "distractor: filtered",
+      "count": 328
+    },
+    {
+      "dataset": "HotpotQA",
+      "category": "distractor: retained by relevance alone",
+      "count": 35
+    },
+    {
+      "dataset": "HotpotQA",
+      "category": "distractor: retained only via agreement bonus",
+      "count": 37
+    },
+    {
+      "dataset": "HotpotQA",
+      "category": "gold: missed, in BM25 top-3 but trust < tau",
+      "count": 9
+    },
+    {
+      "dataset": "HotpotQA",
+      "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
+      "count": 25
+    },
+    {
+      "dataset": "HotpotQA",
+      "category": "gold: retained",
+      "count": 66
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "distractor: filtered",
+      "count": 216
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "distractor: retained by relevance alone",
+      "count": 38
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "distractor: retained only via agreement bonus",
+      "count": 16
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "gold: missed, in BM25 top-3 but trust < tau",
+      "count": 1
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "gold: missed, low lexical relevance (BM25 rank > 3)",
+      "count": 11
+    },
+    {
+      "dataset": "MuSiQue",
+      "category": "gold: retained",
+      "count": 18
     }
   ],
   "threshold_sweep": [
