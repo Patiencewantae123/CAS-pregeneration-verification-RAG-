@@ -6,7 +6,9 @@ R = load_results()
 tests = R["paired_tests"]
 metrics = [("precision", "Precision"), ("recall", "Recall"), ("f1", "F1")]
 datasets = ["HotpotQA", "MuSiQue"]
-references = ["CAS-NLI (full pipeline)", "CAS-NLI conflict-preserving"]
+references = ["CAS-NLI θ-CV (penalty)", "CAS-NLI θ-CV preserving"]
+comparators = ["Vanilla RAG (no filter)", "Relevance top-3 (BM25)", "CAS w/o conflict graph", "CAS (full pipeline)",
+               "CAS-NLI (full pipeline)"]
 
 
 def find(ds, ref, comp, metric):
@@ -22,9 +24,7 @@ def find(ds, ref, comp, metric):
 
 plan = []
 for ref in references:
-    for comp in METHOD_COLOR:
-        if comp in references and references.index(comp) <= references.index(ref):
-            continue
+    for comp in comparators:
         for ds in datasets:
             plan.append((ref, comp, ds))
 rows = []
@@ -58,7 +58,8 @@ axes[0].set_yticks(ticks, labels, fontsize=6.3)
 axes[0].invert_yaxis()
 axes[0].tick_params(axis="y", length=0)
 n_tests = len(tests)
-fig.text(0.99, -0.01, f"Δ = CAS-NLI variant − comparator, per question. Filled marker: Holm-adjusted p < 0.05 "
+fig.text(0.99, -0.01, f"Δ = θ-CV variant − comparator, per question (θ chosen by 5-fold CV on other questions). "
+         f"Filled: Holm-adjusted p < 0.05 "
          f"(paired sign-flip permutation; family of {n_tests} tests). Hollow: not significant.",
          ha="right", fontsize=6.5, color=INK)
 fig.tight_layout(rect=(0, 0.02, 1, 1), w_pad=0.8)

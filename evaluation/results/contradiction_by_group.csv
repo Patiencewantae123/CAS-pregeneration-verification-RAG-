@@ -11,3 +11,7 @@ DeBERTa-v3 NLI (CAS-NLI),HotpotQA gold pair,50,0.12,0
 DeBERTa-v3 NLI (CAS-NLI),MultiNLI,20,0.3,
 DeBERTa-v3 NLI (CAS-NLI),WikiContradict: Explicit,28,0.6071428571428571,1
 DeBERTa-v3 NLI (CAS-NLI),WikiContradict: Implicit,22,0.3181818181818182,1
+DeBERTa-v3 NLI θ-CV,HotpotQA gold pair,50,0.12,0
+DeBERTa-v3 NLI θ-CV,MultiNLI,20,0.3,
+DeBERTa-v3 NLI θ-CV,WikiContradict: Explicit,28,0.6071428571428571,1
+DeBERTa-v3 NLI θ-CV,WikiContradict: Implicit,22,0.3181818181818182,1

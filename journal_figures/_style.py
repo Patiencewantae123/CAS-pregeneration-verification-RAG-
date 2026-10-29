@@ -28,6 +28,8 @@ METHOD_COLOR = {
     "CAS (full pipeline)": "#eda100",
     "CAS-NLI (full pipeline)": "#e87ba4",
     "CAS-NLI conflict-preserving": "#008300",
+    "CAS-NLI θ-CV (penalty)": "#6250d6",
+    "CAS-NLI θ-CV preserving": "#e34948",
 }
 # Redundant shape encoding so the figures survive grayscale printing
 METHOD_MARKER = {
@@ -37,6 +39,8 @@ METHOD_MARKER = {
     "CAS (full pipeline)": "D",
     "CAS-NLI (full pipeline)": "v",
     "CAS-NLI conflict-preserving": "P",
+    "CAS-NLI θ-CV (penalty)": "X",
+    "CAS-NLI θ-CV preserving": "*",
 }
 METHOD_SHORT = {
     "Vanilla RAG (no filter)": "Vanilla RAG",
@@ -45,6 +49,8 @@ METHOD_SHORT = {
     "CAS (full pipeline)": "CAS-keyword",
     "CAS-NLI (full pipeline)": "CAS-NLI",
     "CAS-NLI conflict-preserving": "CAS-NLI preserve",
+    "CAS-NLI θ-CV (penalty)": "CAS-NLI θ-CV",
+    "CAS-NLI θ-CV preserving": "CAS-NLI θ-CV preserve",
 }
 DATASET_MARKER = {"HotpotQA": "o", "MuSiQue": "D"}
 
@@ -72,7 +78,7 @@ def load_results():
 
 
 LLM_DIR = os.path.join(ROOT, "evaluation", "results")
-MODEL_LABEL = {"llama3.2:latest": "Llama 3.2 3B", "gemma3:latest": "Gemma 3 4B"}
+MODEL_LABEL = {"llama3.2:latest": "Llama 3.2 3B", "gemma3:latest": "Gemma 3 4B", "llama3.1:8b": "Llama 3.1 8B"}
 
 
 def load_llm():

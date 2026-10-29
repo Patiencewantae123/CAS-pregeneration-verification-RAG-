@@ -1,0 +1,15 @@
+﻿[115/1840] llama3.2:latest | Vanilla RAG (no filter) done, elapsed 0.0 min
+[230/1840] llama3.2:latest | Relevance top-3 (BM25) done, elapsed 0.0 min
+[345/1840] llama3.2:latest | CAS w/o conflict graph done, elapsed 0.0 min
+[460/1840] llama3.2:latest | CAS (full pipeline) done, elapsed 0.0 min
+[575/1840] llama3.2:latest | CAS-NLI (full pipeline) done, elapsed 0.0 min
+[690/1840] llama3.2:latest | CAS-NLI conflict-preserving done, elapsed 0.0 min
+[805/1840] llama3.2:latest | CAS-NLI θ-CV (penalty) done, elapsed 0.7 min
+[920/1840] llama3.2:latest | CAS-NLI θ-CV preserving done, elapsed 1.5 min
+[1035/1840] gemma3:latest | Vanilla RAG (no filter) done, elapsed 1.5 min
+[1150/1840] gemma3:latest | Relevance top-3 (BM25) done, elapsed 1.5 min
+[1265/1840] gemma3:latest | CAS w/o conflict graph done, elapsed 1.5 min
+[1380/1840] gemma3:latest | CAS (full pipeline) done, elapsed 1.5 min
+[1495/1840] gemma3:latest | CAS-NLI (full pipeline) done, elapsed 1.5 min
+[1610/1840] gemma3:latest | CAS-NLI conflict-preserving done, elapsed 1.5 min
+[1725/1840] gemma3:latest | CAS-NLI θ-CV (penalty) done, elapsed 2.5 min

@@ -1,0 +1,386 @@
+﻿Cross-validated contradiction threshold
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.5, 'mean_f1': 0.31980463980463975}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.6, 'mean_f1': 0.32442002442002443}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.7, 'mean_f1': 0.3218559218559219}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.8, 'mean_f1': 0.34211233211233205}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.9, 'mean_f1': 0.3564713064713064}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.95, 'mean_f1': 0.3734310134310134}
+   {'kind': 'penalty', 'fold': 'all', 'theta': 0.99, 'mean_f1': 0.41637362637362635}
+   {'kind': 'penalty', 'fold': 0, 'theta': 0.99, 'train_f1': 0.37174908424908415, 'heldout_f1': 0.594871794871795, 'n_test': 13}
+   {'kind': 'penalty', 'fold': 1, 'theta': 0.99, 'train_f1': 0.43029609279609277, 'heldout_f1': 0.3606837606837607, 'n_test': 13}
+   {'kind': 'penalty', 'fold': 2, 'theta': 0.99, 'train_f1': 0.399587912087912, 'heldout_f1': 0.4835164835164836, 'n_test': 13}
+   {'kind': 'penalty', 'fold': 3, 'theta': 0.99, 'train_f1': 0.4406746031746031, 'heldout_f1': 0.3191697191697192, 'n_test': 13}
+   {'kind': 'penalty', 'fold': 4, 'theta': 0.99, 'train_f1': 0.4395604395604395, 'heldout_f1': 0.32362637362637364, 'n_test': 13}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.5, 'mean_f1': 0.5771683871683871}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.6, 'mean_f1': 0.5781451881451881}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.7, 'mean_f1': 0.5781451881451881}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.8, 'mean_f1': 0.5781451881451881}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.9, 'mean_f1': 0.5781451881451881}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.95, 'mean_f1': 0.5786946386946387}
+   {'kind': 'preserve', 'fold': 'all', 'theta': 0.99, 'mean_f1': 0.5786946386946387}
+   {'kind': 'preserve', 'fold': 0, 'theta': 0.99, 'train_f1': 0.5668664668664668, 'heldout_f1': 0.6260073260073261, 'n_test': 13}
+   {'kind': 'preserve', 'fold': 1, 'theta': 0.99, 'train_f1': 0.587043512043512, 'heldout_f1': 0.5452991452991454, 'n_test': 13}
+   {'kind': 'preserve', 'fold': 2, 'theta': 0.99, 'train_f1': 0.5704378954378955, 'heldout_f1': 0.6117216117216118, 'n_test': 13}
+   {'kind': 'preserve', 'fold': 3, 'theta': 0.99, 'train_f1': 0.5807553557553556, 'heldout_f1': 0.5704517704517704, 'n_test': 13}
+   {'kind': 'preserve', 'fold': 4, 'theta': 0.99, 'train_f1': 0.5883699633699633, 'heldout_f1': 0.53999333999334, 'n_test': 13}
+  detector folds: [{'fold': 0, 'theta': 0.5}, {'fold': 1, 'theta': 0.5}, {'fold': 2, 'theta': 0.5}, {'fold': 3, 'theta': 0.5}, {'fold': 4, 'theta': 0.5}]
+Evidence selection (mean [95% CI])
+  HotpotQA  Vanilla RAG (no filter)      precision  0.200 [0.200, 0.200]
+  HotpotQA  Vanilla RAG (no filter)      recall     1.000 [1.000, 1.000]
+  HotpotQA  Vanilla RAG (no filter)      f1         0.333 [0.333, 0.333]
+  HotpotQA  Vanilla RAG (no filter)      retention  1.000 [1.000, 1.000]
+  HotpotQA  Relevance top-3 (BM25)       precision  0.493 [0.440, 0.547]
+  HotpotQA  Relevance top-3 (BM25)       recall     0.740 [0.660, 0.820]
+  HotpotQA  Relevance top-3 (BM25)       f1         0.592 [0.528, 0.656]
+  HotpotQA  Relevance top-3 (BM25)       retention  0.300 [0.300, 0.300]
+  HotpotQA  CAS w/o conflict graph       precision  0.680 [0.595, 0.761]
+  HotpotQA  CAS w/o conflict graph       recall     0.700 [0.630, 0.770]
+  HotpotQA  CAS w/o conflict graph       f1         0.649 [0.585, 0.713]
+  HotpotQA  CAS w/o conflict graph       retention  0.250 [0.216, 0.288]
+  HotpotQA  CAS (full pipeline)          precision  0.518 [0.444, 0.595]
+  HotpotQA  CAS (full pipeline)          recall     0.720 [0.650, 0.790]
+  HotpotQA  CAS (full pipeline)          f1         0.552 [0.499, 0.609]
+  HotpotQA  CAS (full pipeline)          retention  0.352 [0.302, 0.408]
+  HotpotQA  CAS-NLI (full pipeline)      precision  0.421 [0.301, 0.541]
+  HotpotQA  CAS-NLI (full pipeline)      recall     0.330 [0.240, 0.420]
+  HotpotQA  CAS-NLI (full pipeline)      f1         0.349 [0.257, 0.446]
+  HotpotQA  CAS-NLI (full pipeline)      retention  0.124 [0.092, 0.158]
+  HotpotQA  CAS-NLI conflict-preserving  precision  0.650 [0.562, 0.731]
+  HotpotQA  CAS-NLI conflict-preserving  recall     0.700 [0.630, 0.770]
+  HotpotQA  CAS-NLI conflict-preserving  f1         0.630 [0.564, 0.692]
+  HotpotQA  CAS-NLI conflict-preserving  retention  0.272 [0.232, 0.314]
+  HotpotQA  CAS-NLI θ-CV (penalty)       precision  0.473 [0.366, 0.579]
+  HotpotQA  CAS-NLI θ-CV (penalty)       recall     0.490 [0.390, 0.600]
+  HotpotQA  CAS-NLI θ-CV (penalty)       f1         0.447 [0.355, 0.537]
+  HotpotQA  CAS-NLI θ-CV (penalty)       retention  0.190 [0.148, 0.234]
+  HotpotQA  CAS-NLI θ-CV preserving      precision  0.651 [0.564, 0.731]
+  HotpotQA  CAS-NLI θ-CV preserving      recall     0.700 [0.630, 0.770]
+  HotpotQA  CAS-NLI θ-CV preserving      f1         0.632 [0.567, 0.694]
+  HotpotQA  CAS-NLI θ-CV preserving      retention  0.268 [0.230, 0.308]
+  MuSiQue   Vanilla RAG (no filter)      precision  0.100 [0.083, 0.120]
+  MuSiQue   Vanilla RAG (no filter)      recall     1.000 [1.000, 1.000]
+  MuSiQue   Vanilla RAG (no filter)      f1         0.180 [0.152, 0.211]
+  MuSiQue   Vanilla RAG (no filter)      retention  1.000 [1.000, 1.000]
+  MuSiQue   Relevance top-3 (BM25)       precision  0.333 [0.222, 0.444]
+  MuSiQue   Relevance top-3 (BM25)       recall     0.506 [0.322, 0.689]
+  MuSiQue   Relevance top-3 (BM25)       f1         0.395 [0.262, 0.527]
+  MuSiQue   Relevance top-3 (BM25)       retention  0.150 [0.150, 0.150]
+  MuSiQue   CAS w/o conflict graph       precision  0.350 [0.258, 0.443]
+  MuSiQue   CAS w/o conflict graph       recall     0.672 [0.506, 0.833]
+  MuSiQue   CAS w/o conflict graph       f1         0.421 [0.326, 0.523]
+  MuSiQue   CAS w/o conflict graph       retention  0.207 [0.163, 0.260]
+  MuSiQue   CAS (full pipeline)          precision  0.303 [0.214, 0.397]
+  MuSiQue   CAS (full pipeline)          recall     0.672 [0.506, 0.833]
+  MuSiQue   CAS (full pipeline)          f1         0.376 [0.278, 0.474]
+  MuSiQue   CAS (full pipeline)          retention  0.263 [0.200, 0.337]
+  MuSiQue   CAS-NLI (full pipeline)      precision  0.241 [0.111, 0.397]
+  MuSiQue   CAS-NLI (full pipeline)      recall     0.317 [0.150, 0.500]
+  MuSiQue   CAS-NLI (full pipeline)      f1         0.239 [0.124, 0.364]
+  MuSiQue   CAS-NLI (full pipeline)      retention  0.103 [0.060, 0.153]
+  MuSiQue   CAS-NLI conflict-preserving  precision  0.330 [0.230, 0.431]
+  MuSiQue   CAS-NLI conflict-preserving  recall     0.672 [0.506, 0.833]
+  MuSiQue   CAS-NLI conflict-preserving  f1         0.401 [0.300, 0.509]
+  MuSiQue   CAS-NLI conflict-preserving  retention  0.240 [0.177, 0.317]
+  MuSiQue   CAS-NLI θ-CV (penalty)       precision  0.285 [0.175, 0.393]
+  MuSiQue   CAS-NLI θ-CV (penalty)       recall     0.439 [0.272, 0.606]
+  MuSiQue   CAS-NLI θ-CV (penalty)       f1         0.316 [0.198, 0.430]
+  MuSiQue   CAS-NLI θ-CV (penalty)       retention  0.167 [0.123, 0.220]
+  MuSiQue   CAS-NLI θ-CV preserving      precision  0.330 [0.230, 0.431]
+  MuSiQue   CAS-NLI θ-CV preserving      recall     0.672 [0.506, 0.833]
+  MuSiQue   CAS-NLI θ-CV preserving      f1         0.401 [0.300, 0.509]
+  MuSiQue   CAS-NLI θ-CV preserving      retention  0.240 [0.177, 0.317]
+
+Paired tests (reference minus comparator)
+  HotpotQA  CAS (full pipeline)          - Vanilla RAG (no filter)      precision +0.318 [+0.244, +0.395] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - Vanilla RAG (no filter)      recall    -0.280 [-0.350, -0.210] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - Vanilla RAG (no filter)      f1        +0.218 [+0.166, +0.276] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - Relevance top-3 (BM25)       precision +0.025 [-0.045, +0.104] p=0.5421 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - Relevance top-3 (BM25)       recall    -0.020 [-0.090, +0.050] p=0.7825 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - Relevance top-3 (BM25)       f1        -0.040 [-0.091, +0.012] p=0.1300 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS w/o conflict graph       precision -0.162 [-0.232, -0.097] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - CAS w/o conflict graph       recall    +0.020 [+0.000, +0.050] p=0.4951 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS w/o conflict graph       f1        -0.098 [-0.145, -0.053] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - CAS-NLI (full pipeline)      precision +0.097 [-0.026, +0.216] p=0.1326 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS-NLI (full pipeline)      recall    +0.390 [+0.290, +0.490] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - CAS-NLI (full pipeline)      f1        +0.203 [+0.105, +0.295] p=0.0003 holm=0.0330
+  HotpotQA  CAS (full pipeline)          - CAS-NLI conflict-preserving  precision -0.132 [-0.197, -0.072] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - CAS-NLI conflict-preserving  recall    +0.020 [+0.000, +0.050] p=0.4951 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS-NLI conflict-preserving  f1        -0.079 [-0.123, -0.039] p=0.0002 holm=0.0238
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       precision +0.045 [-0.049, +0.138] p=0.3686 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       recall    +0.230 [+0.140, +0.330] p=0.0002 holm=0.0238
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       f1        +0.105 [+0.017, +0.191] p=0.0238 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV preserving      precision -0.133 [-0.198, -0.074] p=0.0001 holm=0.0150
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV preserving      recall    +0.020 [+0.000, +0.050] p=0.4951 holm=1.0000
+  HotpotQA  CAS (full pipeline)          - CAS-NLI θ-CV preserving      f1        -0.080 [-0.124, -0.041] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      precision +0.221 [+0.101, +0.341] p=0.0006 holm=0.0612
+  HotpotQA  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      recall    -0.670 [-0.760, -0.580] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      f1        +0.015 [-0.076, +0.113] p=0.7443 holm=1.0000
+  HotpotQA  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       precision -0.072 [-0.195, +0.054] p=0.2886 holm=1.0000
+  HotpotQA  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       recall    -0.410 [-0.520, -0.290] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       f1        -0.243 [-0.351, -0.134] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS w/o conflict graph       precision -0.259 [-0.377, -0.139] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS w/o conflict graph       recall    -0.370 [-0.470, -0.270] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS w/o conflict graph       f1        -0.301 [-0.396, -0.205] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  precision -0.228 [-0.347, -0.103] p=0.0005 holm=0.0525
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  recall    -0.370 [-0.470, -0.270] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  f1        -0.282 [-0.378, -0.182] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       precision -0.051 [-0.141, +0.027] p=0.2536 holm=1.0000
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       recall    -0.160 [-0.240, -0.090] p=0.0003 holm=0.0330
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       f1        -0.098 [-0.166, -0.040] p=0.0035 holm=0.3360
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      precision -0.230 [-0.348, -0.106] p=0.0005 holm=0.0525
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      recall    -0.370 [-0.470, -0.270] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      f1        -0.283 [-0.379, -0.184] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      precision +0.450 [+0.362, +0.531] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      recall    -0.300 [-0.370, -0.230] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      f1        +0.297 [+0.231, +0.359] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       precision +0.156 [+0.083, +0.228] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       recall    -0.040 [-0.110, +0.030] p=0.3963 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       f1        +0.038 [-0.011, +0.086] p=0.1275 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS w/o conflict graph       precision -0.031 [-0.071, -0.002] p=0.0632 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS w/o conflict graph       recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS w/o conflict graph       f1        -0.019 [-0.044, -0.002] p=0.0632 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       precision +0.177 [+0.080, +0.278] p=0.0017 holm=0.1700
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       recall    +0.210 [+0.120, +0.310] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       f1        +0.184 [+0.096, +0.275] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      precision -0.001 [-0.003, +0.000] p=0.5004 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      f1        -0.001 [-0.004, +0.000] p=0.5004 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      precision +0.273 [+0.166, +0.379] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      recall    -0.510 [-0.610, -0.400] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      f1        +0.113 [+0.022, +0.204] p=0.0231 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       precision -0.021 [-0.133, +0.091] p=0.7364 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       recall    -0.250 [-0.370, -0.130] p=0.0004 holm=0.0424
+  HotpotQA  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       f1        -0.145 [-0.250, -0.043] p=0.0087 holm=0.7829
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       precision -0.208 [-0.309, -0.110] p=0.0005 holm=0.0525
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       recall    -0.210 [-0.310, -0.120] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       f1        -0.203 [-0.295, -0.117] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      precision -0.178 [-0.280, -0.082] p=0.0017 holm=0.1700
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      recall    -0.210 [-0.310, -0.120] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      f1        -0.185 [-0.276, -0.097] p=0.0002 holm=0.0238
+  HotpotQA  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      precision +0.451 [+0.364, +0.531] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      recall    -0.300 [-0.370, -0.230] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      f1        +0.299 [+0.233, +0.360] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       precision +0.158 [+0.085, +0.229] p=0.0001 holm=0.0150
+  HotpotQA  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       recall    -0.040 [-0.110, +0.030] p=0.3963 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       f1        +0.040 [-0.009, +0.087] p=0.1110 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV preserving      - CAS w/o conflict graph       precision -0.029 [-0.069, -0.001] p=0.1248 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV preserving      - CAS w/o conflict graph       recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  CAS-NLI θ-CV preserving      - CAS w/o conflict graph       f1        -0.018 [-0.043, -0.001] p=0.1248 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - Vanilla RAG (no filter)      precision +0.203 [+0.124, +0.288] p=0.0001 holm=0.0150
+  MuSiQue   CAS (full pipeline)          - Vanilla RAG (no filter)      recall    -0.328 [-0.494, -0.167] p=0.0090 holm=0.8009
+  MuSiQue   CAS (full pipeline)          - Vanilla RAG (no filter)      f1        +0.197 [+0.106, +0.294] p=0.0010 holm=0.1010
+  MuSiQue   CAS (full pipeline)          - Relevance top-3 (BM25)       precision -0.030 [-0.102, +0.041] p=0.4378 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - Relevance top-3 (BM25)       recall    +0.167 [+0.000, +0.367] p=0.2496 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - Relevance top-3 (BM25)       f1        -0.018 [-0.096, +0.062] p=0.6827 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS w/o conflict graph       precision -0.047 [-0.090, -0.013] p=0.0322 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS w/o conflict graph       recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS w/o conflict graph       f1        -0.045 [-0.079, -0.014] p=0.0322 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI (full pipeline)      precision +0.062 [-0.077, +0.201] p=0.4152 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI (full pipeline)      recall    +0.356 [+0.189, +0.533] p=0.0038 holm=0.3610
+  MuSiQue   CAS (full pipeline)          - CAS-NLI (full pipeline)      f1        +0.138 [+0.023, +0.257] p=0.0463 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI conflict-preserving  precision -0.027 [-0.072, +0.008] p=0.2791 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI conflict-preserving  recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI conflict-preserving  f1        -0.025 [-0.060, +0.005] p=0.2489 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       precision +0.018 [-0.051, +0.102] p=0.7342 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       recall    +0.233 [+0.100, +0.400] p=0.0323 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV (penalty)       f1        +0.061 [-0.009, +0.141] p=0.1394 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV preserving      precision -0.027 [-0.072, +0.008] p=0.2791 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV preserving      recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS (full pipeline)          - CAS-NLI θ-CV preserving      f1        -0.025 [-0.060, +0.005] p=0.2489 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      precision +0.141 [+0.016, +0.294] p=0.0724 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      recall    -0.683 [-0.850, -0.500] p=0.0003 holm=0.0330
+  MuSiQue   CAS-NLI (full pipeline)      - Vanilla RAG (no filter)      f1        +0.059 [-0.057, +0.182] p=0.3676 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       precision -0.092 [-0.237, +0.060] p=0.2841 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       recall    -0.189 [-0.456, +0.100] p=0.2734 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - Relevance top-3 (BM25)       f1        -0.156 [-0.315, +0.006] p=0.0963 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS w/o conflict graph       precision -0.109 [-0.233, +0.011] p=0.1108 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS w/o conflict graph       recall    -0.356 [-0.533, -0.189] p=0.0038 holm=0.3610
+  MuSiQue   CAS-NLI (full pipeline)      - CAS w/o conflict graph       f1        -0.182 [-0.292, -0.070] p=0.0115 holm=0.9889
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  precision -0.089 [-0.215, +0.033] p=0.2065 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  recall    -0.356 [-0.533, -0.189] p=0.0038 holm=0.3610
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI conflict-preserving  f1        -0.163 [-0.275, -0.050] p=0.0172 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       precision -0.044 [-0.167, +0.076] p=0.5751 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       recall    -0.122 [-0.233, -0.033] p=0.1297 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV (penalty)       f1        -0.077 [-0.182, +0.018] p=0.1904 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      precision -0.089 [-0.215, +0.033] p=0.2065 holm=1.0000
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      recall    -0.356 [-0.533, -0.189] p=0.0038 holm=0.3610
+  MuSiQue   CAS-NLI (full pipeline)      - CAS-NLI θ-CV preserving      f1        -0.163 [-0.275, -0.050] p=0.0172 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      precision +0.230 [+0.136, +0.326] p=0.0001 holm=0.0150
+  MuSiQue   CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      recall    -0.328 [-0.494, -0.167] p=0.0090 holm=0.8009
+  MuSiQue   CAS-NLI conflict-preserving  - Vanilla RAG (no filter)      f1        +0.222 [+0.120, +0.329] p=0.0017 holm=0.1700
+  MuSiQue   CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       precision -0.003 [-0.068, +0.062] p=0.9404 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       recall    +0.167 [+0.000, +0.367] p=0.2496 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - Relevance top-3 (BM25)       f1        +0.007 [-0.059, +0.076] p=0.8521 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS w/o conflict graph       precision -0.020 [-0.042, -0.002] p=0.1299 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS w/o conflict graph       recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS w/o conflict graph       f1        -0.020 [-0.044, -0.002] p=0.1299 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       precision +0.045 [-0.018, +0.128] p=0.3111 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       recall    +0.233 [+0.100, +0.400] p=0.0323 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV (penalty)       f1        +0.086 [+0.011, +0.172] p=0.0777 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      precision +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS-NLI conflict-preserving  - CAS-NLI θ-CV preserving      f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      precision +0.185 [+0.082, +0.288] p=0.0041 holm=0.3731
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      recall    -0.561 [-0.728, -0.394] p=0.0003 holm=0.0330
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)      f1        +0.136 [+0.025, +0.248] p=0.0340 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       precision -0.048 [-0.142, +0.042] p=0.2836 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       recall    -0.067 [-0.300, +0.167] p=0.8009 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)       f1        -0.079 [-0.202, +0.038] p=0.2145 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       precision -0.065 [-0.152, +0.001] p=0.1095 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       recall    -0.233 [-0.400, -0.100] p=0.0323 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph       f1        -0.105 [-0.196, -0.027] p=0.0244 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      precision -0.045 [-0.128, +0.018] p=0.3111 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      recall    -0.233 [-0.400, -0.100] p=0.0323 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV (penalty)       - CAS-NLI θ-CV preserving      f1        -0.086 [-0.172, -0.011] p=0.0777 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      precision +0.230 [+0.136, +0.326] p=0.0001 holm=0.0150
+  MuSiQue   CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      recall    -0.328 [-0.494, -0.167] p=0.0090 holm=0.8009
+  MuSiQue   CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)      f1        +0.222 [+0.120, +0.329] p=0.0017 holm=0.1700
+  MuSiQue   CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       precision -0.003 [-0.068, +0.062] p=0.9404 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       recall    +0.167 [+0.000, +0.367] p=0.2496 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)       f1        +0.007 [-0.059, +0.076] p=0.8521 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - CAS w/o conflict graph       precision -0.020 [-0.042, -0.002] p=0.1299 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - CAS w/o conflict graph       recall    +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   CAS-NLI θ-CV preserving      - CAS w/o conflict graph       f1        -0.020 [-0.044, -0.002] p=0.1299 holm=1.0000
+
+Conflict-graph diagnostics
+   {'verifier': 'keyword', 'dataset': 'HotpotQA', 'pairs': 2250, 'entailment_edges': 111, 'contradiction_edges': 0, 'neutral_edges': 2139, 'mean_agreement_gold': 0.2168, 'mean_agreement_distractor': 0.21369999999999997, 'mean_penalty_gold': 0.0, 'mean_penalty_distractor': 0.0}
+   {'verifier': 'keyword', 'dataset': 'MuSiQue', 'pairs': 2850, 'entailment_edges': 46, 'contradiction_edges': 0, 'neutral_edges': 2804, 'mean_agreement_gold': 0.08800000000000001, 'mean_agreement_distractor': 0.17881481481481482, 'mean_penalty_gold': 0.0, 'mean_penalty_distractor': 0.0}
+   {'verifier': 'nli', 'dataset': 'HotpotQA', 'pairs': 2250, 'entailment_edges': 8, 'contradiction_edges': 340, 'neutral_edges': 1902, 'mean_agreement_gold': 0.005460722297430038, 'mean_agreement_distractor': 0.018755843862891197, 'mean_penalty_gold': 1.0727714009804186, 'mean_penalty_distractor': 1.1686497350988794}
+   {'verifier': 'nli', 'dataset': 'MuSiQue', 'pairs': 2850, 'entailment_edges': 24, 'contradiction_edges': 273, 'neutral_edges': 2553, 'mean_agreement_gold': 0.06666666666666667, 'mean_agreement_distractor': 0.06092445058249588, 'mean_penalty_gold': 1.5146927830792265, 'mean_penalty_distractor': 1.4161294049952562}
+   {'verifier': 'nli_cv', 'dataset': 'HotpotQA', 'pairs': 2250, 'entailment_edges': 12, 'contradiction_edges': 135, 'neutral_edges': 2103, 'mean_agreement_gold': 0.008024656404741108, 'mean_agreement_distractor': 0.026618218928081205, 'mean_penalty_gold': 0.4590727365016937, 'mean_penalty_distractor': 0.5585068939626217}
+   {'verifier': 'nli_cv', 'dataset': 'MuSiQue', 'pairs': 2850, 'entailment_edges': 34, 'contradiction_edges': 80, 'neutral_edges': 2736, 'mean_agreement_gold': 0.09272020227023556, 'mean_agreement_distractor': 0.0677977517077293, 'mean_penalty_gold': 0.43277651568253833, 'mean_penalty_distractor': 0.5430366896920734}
+
+Runtime ms/query
+  HotpotQA  Vanilla RAG (no filter)      0.13
+  HotpotQA  Relevance top-3 (BM25)       0.29
+  HotpotQA  CAS w/o conflict graph       0.30
+  HotpotQA  CAS (full pipeline)          1.30
+  HotpotQA  CAS-NLI (full pipeline)      0.59
+  HotpotQA  CAS-NLI conflict-preserving  0.51
+  HotpotQA  CAS-NLI θ-CV (penalty)       0.52
+  HotpotQA  CAS-NLI θ-CV preserving      0.55
+  MuSiQue   Vanilla RAG (no filter)      0.26
+  MuSiQue   Relevance top-3 (BM25)       0.61
+  MuSiQue   CAS w/o conflict graph       0.54
+  MuSiQue   CAS (full pipeline)          4.23
+  MuSiQue   CAS-NLI (full pipeline)      1.42
+  MuSiQue   CAS-NLI conflict-preserving  1.45
+  MuSiQue   CAS-NLI θ-CV (penalty)       1.64
+  MuSiQue   CAS-NLI θ-CV preserving      1.57
+
+Total runtime 17.6s
+
+Contradiction detection
+  Negation-cue baseline              precision 0.643 [0.357, 0.889]
+  Negation-cue baseline              recall    0.161 [0.069, 0.269]
+  Negation-cue baseline              f1        0.257 [0.119, 0.391]
+  Negation-cue baseline              accuracy  0.567 [0.475, 0.650]
+  CAS NLIVerifier (as implemented)   precision 0.000 [0.000, 0.000]
+  CAS NLIVerifier (as implemented)   recall    0.000 [0.000, 0.000]
+  CAS NLIVerifier (as implemented)   f1        0.000 [0.000, 0.000]
+  CAS NLIVerifier (as implemented)   accuracy  0.533 [0.442, 0.617]
+  DeBERTa-v3 NLI (CAS-NLI)           precision 0.833 [0.700, 0.946]
+  DeBERTa-v3 NLI (CAS-NLI)           recall    0.536 [0.411, 0.673]
+  DeBERTa-v3 NLI (CAS-NLI)           f1        0.652 [0.538, 0.760]
+  DeBERTa-v3 NLI (CAS-NLI)           accuracy  0.733 [0.658, 0.808]
+  DeBERTa-v3 NLI θ-CV                precision 0.833 [0.700, 0.946]
+  DeBERTa-v3 NLI θ-CV                recall    0.536 [0.411, 0.673]
+  DeBERTa-v3 NLI θ-CV                f1        0.652 [0.538, 0.760]
+  DeBERTa-v3 NLI θ-CV                accuracy  0.733 [0.658, 0.808]
+  Negation-cue baseline              HotpotQA gold pair         flag-rate 0.080 (n=50)
+  Negation-cue baseline              MultiNLI                   flag-rate 0.150 (n=20)
+  Negation-cue baseline              WikiContradict: Explicit   flag-rate 0.143 (n=28)
+  Negation-cue baseline              WikiContradict: Implicit   flag-rate 0.136 (n=22)
+  CAS NLIVerifier (as implemented)   HotpotQA gold pair         flag-rate 0.000 (n=50)
+  CAS NLIVerifier (as implemented)   MultiNLI                   flag-rate 0.000 (n=20)
+  CAS NLIVerifier (as implemented)   WikiContradict: Explicit   flag-rate 0.000 (n=28)
+  CAS NLIVerifier (as implemented)   WikiContradict: Implicit   flag-rate 0.000 (n=22)
+  DeBERTa-v3 NLI (CAS-NLI)           HotpotQA gold pair         flag-rate 0.120 (n=50)
+  DeBERTa-v3 NLI (CAS-NLI)           MultiNLI                   flag-rate 0.300 (n=20)
+  DeBERTa-v3 NLI (CAS-NLI)           WikiContradict: Explicit   flag-rate 0.607 (n=28)
+  DeBERTa-v3 NLI (CAS-NLI)           WikiContradict: Implicit   flag-rate 0.318 (n=22)
+  DeBERTa-v3 NLI θ-CV                HotpotQA gold pair         flag-rate 0.120 (n=50)
+  DeBERTa-v3 NLI θ-CV                MultiNLI                   flag-rate 0.300 (n=20)
+  DeBERTa-v3 NLI θ-CV                WikiContradict: Explicit   flag-rate 0.607 (n=28)
+  DeBERTa-v3 NLI θ-CV                WikiContradict: Implicit   flag-rate 0.318 (n=22)
+
+MultiNLI 3-way [CAS NLIVerifier (as implemented)]: acc 0.500 [0.300, 0.700], macro-F1 0.392, majority 0.400; confusion [[5, 3, 0], [1, 5, 0], [3, 3, 0]]
+
+MultiNLI 3-way [DeBERTa-v3 NLI (CAS-NLI)]: acc 1.000 [1.000, 1.000], macro-F1 1.000, majority 0.400; confusion [[8, 0, 0], [0, 6, 0], [0, 0, 6]]
+
+RAGTruth AUROC unsupported-token (0.8146929824561403, 0.6864750445632799, 0.9235908713379644), CAS verifier (0.5, 0.5, 0.5), NLI model (0.5548245614035088, 0.3674616841491841, 0.735982485982486)
+
+Threshold sweep
+  CAS (full pipeline)          tau=0.10 P=0.177 R=1.000 F1=0.298 keep=1.000
+  CAS (full pipeline)          tau=0.15 P=0.174 R=0.968 F1=0.292 keep=0.988
+  CAS (full pipeline)          tau=0.20 P=0.183 R=0.953 F1=0.304 keep=0.922
+  CAS (full pipeline)          tau=0.25 P=0.198 R=0.897 F1=0.320 keep=0.810
+  CAS (full pipeline)          tau=0.30 P=0.235 R=0.874 F1=0.362 keep=0.687
+  CAS (full pipeline)          tau=0.35 P=0.270 R=0.817 F1=0.392 keep=0.572
+  CAS (full pipeline)          tau=0.40 P=0.357 R=0.771 F1=0.451 keep=0.452
+  CAS (full pipeline)          tau=0.45 P=0.468 R=0.709 F1=0.511 keep=0.332
+  CAS (full pipeline)          tau=0.50 P=0.580 R=0.632 F1=0.540 keep=0.255
+  CAS (full pipeline)          tau=0.55 P=0.641 R=0.586 F1=0.566 keep=0.198
+  CAS (full pipeline)          tau=0.60 P=0.756 R=0.547 F1=0.598 keep=0.155
+  CAS (full pipeline)          tau=0.65 P=0.795 R=0.501 F1=0.590 keep=0.125
+  CAS (full pipeline)          tau=0.70 P=0.215 R=0.138 F1=0.164 keep=0.037
+  CAS (full pipeline)          tau=0.75 P=0.192 R=0.115 F1=0.141 keep=0.029
+  CAS (full pipeline)          tau=0.80 P=0.177 R=0.100 F1=0.126 keep=0.026
+  CAS-NLI (full pipeline)      tau=0.10 P=0.172 R=0.535 F1=0.239 keep=0.507
+  CAS-NLI (full pipeline)      tau=0.15 P=0.172 R=0.510 F1=0.237 keep=0.485
+  CAS-NLI (full pipeline)      tau=0.20 P=0.159 R=0.464 F1=0.220 keep=0.435
+  CAS-NLI (full pipeline)      tau=0.25 P=0.170 R=0.413 F1=0.224 keep=0.359
+  CAS-NLI (full pipeline)      tau=0.30 P=0.196 R=0.385 F1=0.242 keep=0.288
+  CAS-NLI (full pipeline)      tau=0.35 P=0.235 R=0.350 F1=0.260 keep=0.220
+  CAS-NLI (full pipeline)      tau=0.40 P=0.299 R=0.335 F1=0.288 keep=0.166
+  CAS-NLI (full pipeline)      tau=0.45 P=0.380 R=0.327 F1=0.323 keep=0.119
+  CAS-NLI (full pipeline)      tau=0.50 P=0.406 R=0.296 F1=0.320 keep=0.087
+  CAS-NLI (full pipeline)      tau=0.55 P=0.412 R=0.258 F1=0.306 keep=0.063
+  CAS-NLI (full pipeline)      tau=0.60 P=0.405 R=0.227 F1=0.284 keep=0.052
+  CAS-NLI (full pipeline)      tau=0.65 P=0.408 R=0.204 F1=0.270 keep=0.045
+  CAS-NLI (full pipeline)      tau=0.70 P=0.000 R=0.000 F1=0.000 keep=0.000
+  CAS-NLI (full pipeline)      tau=0.75 P=0.000 R=0.000 F1=0.000 keep=0.000
+  CAS-NLI (full pipeline)      tau=0.80 P=0.000 R=0.000 F1=0.000 keep=0.000
+  CAS-NLI conflict-preserving  tau=0.10 P=0.177 R=1.000 F1=0.298 keep=1.000
+  CAS-NLI conflict-preserving  tau=0.15 P=0.174 R=0.968 F1=0.292 keep=0.988
+  CAS-NLI conflict-preserving  tau=0.20 P=0.183 R=0.929 F1=0.303 keep=0.905
+  CAS-NLI conflict-preserving  tau=0.25 P=0.210 R=0.878 F1=0.333 keep=0.759
+  CAS-NLI conflict-preserving  tau=0.30 P=0.270 R=0.855 F1=0.396 keep=0.615
+  CAS-NLI conflict-preserving  tau=0.35 P=0.329 R=0.797 F1=0.446 keep=0.479
+  CAS-NLI conflict-preserving  tau=0.40 P=0.447 R=0.767 F1=0.528 keep=0.361
+  CAS-NLI conflict-preserving  tau=0.45 P=0.576 R=0.694 F1=0.578 keep=0.265
+  CAS-NLI conflict-preserving  tau=0.50 P=0.683 R=0.617 F1=0.590 keep=0.205
+  CAS-NLI conflict-preserving  tau=0.55 P=0.743 R=0.563 F1=0.597 keep=0.167
+  CAS-NLI conflict-preserving  tau=0.60 P=0.784 R=0.509 F1=0.584 keep=0.148
+  CAS-NLI conflict-preserving  tau=0.65 P=0.783 R=0.471 F1=0.561 keep=0.131
+  CAS-NLI conflict-preserving  tau=0.70 P=0.015 R=0.008 F1=0.010 keep=0.002
+  CAS-NLI conflict-preserving  tau=0.75 P=0.015 R=0.008 F1=0.010 keep=0.002
+  CAS-NLI conflict-preserving  tau=0.80 P=0.000 R=0.000 F1=0.000 keep=0.000
+
+Error analysis
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: filtered', 'count': 296}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: retained by relevance alone', 'count': 55}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: retained only via agreement bonus', 'count': 49}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: missed, in BM25 top-3 but trust < tau', 'count': 6}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: missed, low lexical relevance (BM25 rank > 3)', 'count': 22}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: retained', 'count': 72}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: filtered', 'count': 210}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: retained by relevance alone', 'count': 43}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: retained only via agreement bonus', 'count': 17}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'MuSiQue', 'category': 'gold: missed, low lexical relevance (BM25 rank > 3)', 'count': 11}
+   {'pipeline': 'CAS (full pipeline)', 'dataset': 'MuSiQue', 'category': 'gold: retained', 'count': 19}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: filtered', 'count': 344}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: removed by contradiction penalty', 'count': 27}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: retained by relevance alone', 'count': 28}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'distractor: retained only via agreement bonus', 'count': 1}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: missed, in BM25 top-3 but trust < tau', 'count': 7}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: missed, low lexical relevance (BM25 rank > 3)', 'count': 23}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: removed by contradiction penalty', 'count': 37}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'HotpotQA', 'category': 'gold: retained', 'count': 33}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: filtered', 'count': 226}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: removed by contradiction penalty', 'count': 22}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: retained by relevance alone', 'count': 21}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'distractor: retained only via agreement bonus', 'count': 1}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'gold: missed, low lexical relevance (BM25 rank > 3)', 'count': 11}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'gold: removed by contradiction penalty', 'count': 10}
+   {'pipeline': 'CAS-NLI (full pipeline)', 'dataset': 'MuSiQue', 'category': 'gold: retained', 'count': 9}

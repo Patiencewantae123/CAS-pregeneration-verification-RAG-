@@ -5,11 +5,12 @@ from _style import DOUBLE, INK, INK2, load_results, panel_title, plt, save
 
 R = load_results()
 diag = R["graph_diagnostics"]
-VER = {"keyword": "Keyword", "nli": "DeBERTa NLI"}
+R_theta = R["cv_threshold"]["theta_all"]["penalty"]
+VER = {"keyword": "Keyword", "nli": "DeBERTa NLI", "nli_cv": f"DeBERTa θ={R_theta:g}"}
 y = np.arange(len(diag))
 rows = []
 
-fig, axes = plt.subplots(1, 3, figsize=(DOUBLE, 2.6), sharey=True, gridspec_kw={"width_ratios": [1.4, 1, 1]})
+fig, axes = plt.subplots(1, 3, figsize=(DOUBLE, 3.3), sharey=True, gridspec_kw={"width_ratios": [1.4, 1, 1]})
 
 # (a) Share of pairwise relations, per verifier x dataset
 ax = axes[0]

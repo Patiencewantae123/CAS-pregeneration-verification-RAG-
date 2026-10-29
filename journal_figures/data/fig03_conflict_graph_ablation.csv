@@ -11,19 +11,33 @@ a,nli,HotpotQA,Neutral,1902.0,2250.0,0.8453333333333334
 a,nli,MuSiQue,Entailment,24.0,2850.0,0.008421052631578947
 a,nli,MuSiQue,Contradiction,273.0,2850.0,0.09578947368421052
 a,nli,MuSiQue,Neutral,2553.0,2850.0,0.8957894736842106
+a,nli_cv,HotpotQA,Entailment,12.0,2250.0,0.005333333333333333
+a,nli_cv,HotpotQA,Contradiction,135.0,2250.0,0.06
+a,nli_cv,HotpotQA,Neutral,2103.0,2250.0,0.9346666666666666
+a,nli_cv,MuSiQue,Entailment,34.0,2850.0,0.011929824561403509
+a,nli_cv,MuSiQue,Contradiction,80.0,2850.0,0.028070175438596492
+a,nli_cv,MuSiQue,Neutral,2736.0,2850.0,0.96
 b,keyword,HotpotQA,Gold evidence,,,0.2168
 b,keyword,MuSiQue,Gold evidence,,,0.08800000000000001
 b,nli,HotpotQA,Gold evidence,,,0.005460722297430038
 b,nli,MuSiQue,Gold evidence,,,0.06666666666666667
+b,nli_cv,HotpotQA,Gold evidence,,,0.008024656404741108
+b,nli_cv,MuSiQue,Gold evidence,,,0.09272020227023556
 b,keyword,HotpotQA,Distractor,,,0.21369999999999997
 b,keyword,MuSiQue,Distractor,,,0.17881481481481482
 b,nli,HotpotQA,Distractor,,,0.018755843862891197
 b,nli,MuSiQue,Distractor,,,0.06092445058249588
+b,nli_cv,HotpotQA,Distractor,,,0.026618218928081205
+b,nli_cv,MuSiQue,Distractor,,,0.0677977517077293
 c,keyword,HotpotQA,Gold evidence,,,0.0
 c,keyword,MuSiQue,Gold evidence,,,0.0
 c,nli,HotpotQA,Gold evidence,,,1.0727714009804186
 c,nli,MuSiQue,Gold evidence,,,1.5146927830792265
+c,nli_cv,HotpotQA,Gold evidence,,,0.4590727365016937
+c,nli_cv,MuSiQue,Gold evidence,,,0.43277651568253833
 c,keyword,HotpotQA,Distractor,,,0.0
 c,keyword,MuSiQue,Distractor,,,0.0
 c,nli,HotpotQA,Distractor,,,1.1686497350988794
 c,nli,MuSiQue,Distractor,,,1.4161294049952562
+c,nli_cv,HotpotQA,Distractor,,,0.5585068939626217
+c,nli_cv,MuSiQue,Distractor,,,0.5430366896920734

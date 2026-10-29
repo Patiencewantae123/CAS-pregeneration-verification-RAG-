@@ -699,7 +699,7 @@ def inventory():
 
 def write_csv(path, rows):
     with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
+        w = csv.DictWriter(f, fieldnames=list(dict.fromkeys(k for r in rows for k in r)))
         w.writeheader()
         w.writerows(rows)
 
