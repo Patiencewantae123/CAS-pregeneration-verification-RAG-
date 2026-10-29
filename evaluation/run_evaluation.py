@@ -19,8 +19,10 @@ import json
 import math
 import os
 import random
+import platform
 import re
 import sys
+import time
 from collections import Counter
 
 import numpy as np
@@ -196,7 +198,7 @@ def boot_auroc(scores, labels, n=N_BOOT, seed=SEED):
         i = rng.integers(0, len(scores), len(scores))
         if 0 < labels[i].sum() < len(i):
             vals.append(auroc(scores[i], labels[i]))
-    return auroc(scores, labels), float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))
+    return float(auroc(scores, labels)), float(np.percentile(vals, 2.5)), float(np.percentile(vals, 97.5))
 
 # ============================================================
 # 5. TASK 1 - EVIDENCE SELECTION
@@ -224,11 +226,45 @@ def answer_covered(selected, passages, answers):
     return float(any(norm_answer(a) and norm_answer(a) in text for a in answers))
 
 
-def run_evidence_selection(items):
+def paired_test(a, b, n=10000, seed=SEED):
+    """Mean of (a - b), bootstrap 95% CI, and two-sided paired sign-flip permutation p-value."""
+    d = np.asarray(a, dtype=float) - np.asarray(b, dtype=float)
+    rng = np.random.default_rng(seed)
+    mean, lo, hi = boot_ci(d)
+    flips = rng.choice([-1.0, 1.0], size=(n, len(d)))
+    null = np.abs((flips * d).mean(axis=1))
+    p = float((np.sum(null >= abs(d.mean()) - 1e-12) + 1) / (n + 1))
+    return mean, lo, hi, p
+
+
+def graph_diagnostics(items):
+    """How often the conflict graph emits each relation, and who receives agreement credit."""
     rows = []
+    for ds, data in items.items():
+        rel, gold_agree, distractor_agree = Counter(), [], []
+        for q, passages, gold, _ in data:
+            docs, _ = to_documents(q, passages)
+            edges = NLIVerifier().build_pairwise_matrix(docs)
+            rel.update(e.relation.value for e in edges)
+            graph = ConflictGraph(docs, edges)
+            for d in docs:
+                (gold_agree if int(d.id) in gold else distractor_agree).append(
+                    min(1.0, graph.get_agreement_score(d.id)))
+        total = sum(rel.values())
+        rows.append({"dataset": ds, "pairs": total,
+                     "entailment_edges": rel["Entailment"], "contradiction_edges": rel["Contradiction"],
+                     "neutral_edges": rel["Neutral"],
+                     "mean_agreement_gold": float(np.mean(gold_agree)),
+                     "mean_agreement_distractor": float(np.mean(distractor_agree))})
+    return rows
+
+
+def run_evidence_selection(items):
+    rows, per_item = [], {}
     for ds, data in items.items():
         for method, fn in METHODS.items():
             per = {"precision": [], "recall": [], "f1": [], "retention": [], "answer_coverage": []}
+            start = time.perf_counter()
             for q, passages, gold, answers in data:
                 sel = fn(q, passages)
                 p, r, f = prf(sel, gold)
@@ -238,10 +274,27 @@ def run_evidence_selection(items):
                 per["retention"].append(len(sel) / len(passages))
                 if answers:
                     per["answer_coverage"].append(answer_covered(sel, passages, answers))
+            ms_per_query = 1000 * (time.perf_counter() - start) / len(data)
+            per_item[(ds, method)] = per
             for metric, vals in per.items():
                 m, lo, hi = boot_ci(vals)
                 rows.append({"dataset": ds, "method": method, "metric": metric,
-                             "mean": m, "ci_low": lo, "ci_high": hi, "n": len(vals)})
+                             "mean": m, "ci_low": lo, "ci_high": hi, "n": len(vals),
+                             "ms_per_query": ms_per_query})
+    return rows, per_item
+
+
+def run_paired_tests(per_item):
+    cas = "CAS (full pipeline)"
+    rows = []
+    for ds in ("HotpotQA", "MuSiQue"):
+        for other in METHODS:
+            if other == cas:
+                continue
+            for metric in ("precision", "recall", "f1"):
+                m, lo, hi, p = paired_test(per_item[(ds, cas)][metric], per_item[(ds, other)][metric])
+                rows.append({"dataset": ds, "comparison": f"CAS (full) - {other}", "metric": metric,
+                             "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
     return rows
 
 
@@ -399,23 +452,33 @@ def main():
     random.seed(SEED)
     os.makedirs(OUT_RESULTS, exist_ok=True)
 
+    t0 = time.perf_counter()
     items = evidence_items()
-    evidence = run_evidence_selection(items)
+    evidence, per_item = run_evidence_selection(items)
+    paired = run_paired_tests(per_item)
+    diagnostics = graph_diagnostics(items)
     sweep = run_threshold_sweep(items)
     contra, contra_groups = run_contradiction(contradiction_pairs())
     nli = run_nli()
     halluc = run_hallucination()
     inv = inventory()
 
+    runtime_s = time.perf_counter() - t0
     write_csv(os.path.join(OUT_RESULTS, "evidence_selection.csv"), evidence)
+    write_csv(os.path.join(OUT_RESULTS, "paired_tests.csv"), paired)
+    write_csv(os.path.join(OUT_RESULTS, "graph_diagnostics.csv"), diagnostics)
     write_csv(os.path.join(OUT_RESULTS, "threshold_sweep.csv"), sweep)
     write_csv(os.path.join(OUT_RESULTS, "contradiction_detection.csv"), contra)
     write_csv(os.path.join(OUT_RESULTS, "contradiction_by_group.csv"), contra_groups)
     write_csv(os.path.join(OUT_RESULTS, "dataset_inventory.csv"), inv)
     with open(os.path.join(OUT_RESULTS, "results.json"), "w", encoding="utf-8") as f:
-        json.dump({"config": {"seed": SEED, "bootstrap": N_BOOT, "tau": DEFAULT_TAU, "top_k": TOP_K,
-                              "provenance_prior": PROVENANCE},
-                   "evidence_selection": evidence, "threshold_sweep": sweep,
+        json.dump({"config": {"seed": SEED, "bootstrap": N_BOOT, "permutations": 10000, "tau": DEFAULT_TAU,
+                              "top_k": TOP_K, "provenance_prior": PROVENANCE,
+                              "python": platform.python_version(), "numpy": np.__version__,
+                              "platform": platform.platform(), "processor": platform.processor(),
+                              "total_runtime_s": runtime_s},
+                   "evidence_selection": evidence, "paired_tests": paired,
+                   "graph_diagnostics": diagnostics, "threshold_sweep": sweep,
                    "contradiction_detection": contra, "contradiction_by_group": contra_groups,
                    "nli": nli, "hallucination": halluc, "inventory": inv}, f, indent=2)
 
@@ -424,6 +487,18 @@ def main():
         if r["metric"] in ("precision", "recall", "f1", "retention"):
             print(f"  {r['dataset']:<9} {r['method']:<28} {r['metric']:<10} "
                   f"{r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")
+    print("\nPaired tests (CAS full minus baseline)")
+    for r in paired:
+        print(f"  {r['dataset']:<9} {r['comparison']:<48} {r['metric']:<9} "
+              f"{r['mean_diff']:+.3f} [{r['ci_low']:+.3f}, {r['ci_high']:+.3f}] p={r['p_value']:.4f}")
+    print("\nConflict-graph diagnostics")
+    for r in diagnostics:
+        print("  ", r)
+    print("\nRuntime ms/query")
+    for r in evidence:
+        if r["metric"] == "f1":
+            print(f"  {r['dataset']:<9} {r['method']:<28} {r['ms_per_query']:.2f}")
+    print(f"\nTotal runtime {runtime_s:.1f}s")
     print("\nContradiction detection")
     for r in contra:
         print(f"  {r['detector']:<34} {r['metric']:<9} {r['mean']:.3f} [{r['ci_low']:.3f}, {r['ci_high']:.3f}]")

@@ -1,0 +1,3 @@
+dataset,pairs,entailment_edges,contradiction_edges,neutral_edges,mean_agreement_gold,mean_agreement_distractor
+HotpotQA,2250,111,0,2139,0.2168,0.21369999999999997
+MuSiQue,2850,46,0,2804,0.08800000000000001,0.17881481481481482
