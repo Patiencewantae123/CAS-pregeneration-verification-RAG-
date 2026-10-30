@@ -60,21 +60,25 @@ def type_matched_substitute(rng, q):
     """Study 2: a plausible substitute of the same type (PREREGISTRATION_poison2.md)."""
     ans = q["answer"]
     gold_text = " ".join(q["passages"][i] for i in q["gold"])
+    months = r"(January|February|March|April|May|June|July|August|September|October|November|December)"
     for _ in range(100):
         if re.fullmatch(r"(1\d|20)\d\d", ans):
             sub = str(int(ans) + rng.choice([-1, 1]) * rng.randint(3, 15))
+        elif re.search(months, ans) and re.search(r"\b(1\d|20)\d\d\b", ans):
+            shift = rng.choice([-1, 1]) * rng.randint(3, 15)
+            sub = re.sub(r"\b((1\d|20)\d\d)\b", lambda m: str(int(m.group(1)) + shift), ans)
+            sub = re.sub(r"\b([1-9]|[12]\d|3[01])\b(?!\d)", lambda m: str(rng.randint(1, 28)), sub)
         elif any(ch.isdigit() for ch in ans):
-            first = [True]
-
-            def digit(_m):
-                d = str(rng.randint(1, 9) if first[0] else rng.randint(0, 9))
-                first[0] = False
-                return d
-            sub = re.sub(r"\d", digit, ans)
+            def scale(m):
+                v = max(1, round(float(m.group(0).replace(",", "")) * rng.uniform(0.5, 1.8)))
+                return f"{v:,}" if "," in m.group(0) else str(v)
+            sub = re.sub(r"\d[\d,]*(\.\d+)?", scale, ans, count=1)
         else:
             titles = [re.sub(r"\s*\([^)]*\)$", "", t) for i, t in enumerate(q["titles"]) if i not in q["gold"]]
+            last = ans.split()[-1].lower()
+            same_kind = [t for t in titles if t.split() and t.split()[-1].lower() == last]
             close = [t for t in titles if abs(len(t.split()) - len(ans.split())) <= 1]
-            sub = rng.choice(close or titles)
+            sub = rng.choice(same_kind or close or titles)
         if norm_answer(sub) != norm_answer(ans) and not contains(gold_text, sub):
             return sub
     return None

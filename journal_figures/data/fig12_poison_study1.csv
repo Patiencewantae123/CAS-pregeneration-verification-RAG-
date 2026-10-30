@@ -1,0 +1,53 @@
+metric,condition,model,method,mean,ci_low,ci_high,n
+accuracy,A,llama3.2:latest,Vanilla RAG,0.515,0.45,0.58,200
+accuracy,A,gemma3:latest,Vanilla RAG,0.395,0.325,0.46,200
+accuracy,A,llama3.2:latest,BM25 top-3,0.355,0.285,0.425,200
+accuracy,A,gemma3:latest,BM25 top-3,0.295,0.235,0.36,200
+accuracy,A,llama3.2:latest,CAS w/o graph,0.355,0.29,0.425,200
+accuracy,A,gemma3:latest,CAS w/o graph,0.26,0.2,0.32,200
+accuracy,A,llama3.2:latest,CAS-keyword,0.465,0.395,0.535,200
+accuracy,A,gemma3:latest,CAS-keyword,0.375,0.31,0.445,200
+accuracy,A,llama3.2:latest,CAS-NLI penalty,0.33,0.26987500000000003,0.395,200
+accuracy,A,gemma3:latest,CAS-NLI penalty,0.28,0.22,0.345,200
+accuracy,A,llama3.2:latest,CAS-NLI preserve,0.4,0.335,0.47,200
+accuracy,A,gemma3:latest,CAS-NLI preserve,0.345,0.28,0.4101249999999993,200
+accuracy,B,llama3.2:latest,Vanilla RAG,0.515,0.45,0.58,200
+accuracy,B,gemma3:latest,Vanilla RAG,0.395,0.325,0.46,200
+accuracy,B,llama3.2:latest,BM25 top-3,0.355,0.285,0.425,200
+accuracy,B,gemma3:latest,BM25 top-3,0.295,0.235,0.36,200
+accuracy,B,llama3.2:latest,Provenance + BM25 top-3,0.35,0.285,0.42,200
+accuracy,B,gemma3:latest,Provenance + BM25 top-3,0.345,0.28,0.41,200
+accuracy,B,llama3.2:latest,CAS w/o graph,0.385,0.32,0.455,200
+accuracy,B,gemma3:latest,CAS w/o graph,0.305,0.24,0.3651249999999993,200
+accuracy,B,llama3.2:latest,CAS-keyword,0.46,0.39,0.53,200
+accuracy,B,gemma3:latest,CAS-keyword,0.375,0.31,0.445,200
+accuracy,B,llama3.2:latest,CAS-NLI penalty,0.375,0.305,0.445,200
+accuracy,B,gemma3:latest,CAS-NLI penalty,0.3,0.235,0.365,200
+accuracy,B,llama3.2:latest,CAS-NLI preserve,0.44,0.37,0.51,200
+accuracy,B,gemma3:latest,CAS-NLI preserve,0.365,0.3,0.435,200
+adoption,A,llama3.2:latest,Vanilla RAG,0.035,0.01,0.06,200
+adoption,A,gemma3:latest,Vanilla RAG,0.065,0.035,0.1,200
+adoption,A,llama3.2:latest,BM25 top-3,0.05,0.025,0.08,200
+adoption,A,gemma3:latest,BM25 top-3,0.045,0.02,0.075,200
+adoption,A,llama3.2:latest,CAS w/o graph,0.04,0.015,0.07,200
+adoption,A,gemma3:latest,CAS w/o graph,0.06,0.03,0.095,200
+adoption,A,llama3.2:latest,CAS-keyword,0.035,0.01,0.065,200
+adoption,A,gemma3:latest,CAS-keyword,0.07,0.035,0.11,200
+adoption,A,llama3.2:latest,CAS-NLI penalty,0.03,0.01,0.055,200
+adoption,A,gemma3:latest,CAS-NLI penalty,0.065,0.03487500000000001,0.1,200
+adoption,A,llama3.2:latest,CAS-NLI preserve,0.035,0.01,0.065,200
+adoption,A,gemma3:latest,CAS-NLI preserve,0.085,0.05,0.13,200
+adoption,B,llama3.2:latest,Vanilla RAG,0.035,0.01,0.06,200
+adoption,B,gemma3:latest,Vanilla RAG,0.065,0.035,0.1,200
+adoption,B,llama3.2:latest,BM25 top-3,0.05,0.025,0.08,200
+adoption,B,gemma3:latest,BM25 top-3,0.045,0.02,0.075,200
+adoption,B,llama3.2:latest,Provenance + BM25 top-3,0.025,0.005,0.05,200
+adoption,B,gemma3:latest,Provenance + BM25 top-3,0.01,0.0,0.025,200
+adoption,B,llama3.2:latest,CAS w/o graph,0.035,0.01,0.065,200
+adoption,B,gemma3:latest,CAS w/o graph,0.07,0.035,0.11,200
+adoption,B,llama3.2:latest,CAS-keyword,0.035,0.01,0.06,200
+adoption,B,gemma3:latest,CAS-keyword,0.075,0.04,0.115,200
+adoption,B,llama3.2:latest,CAS-NLI penalty,0.04,0.015,0.07,200
+adoption,B,gemma3:latest,CAS-NLI penalty,0.065,0.03,0.1,200
+adoption,B,llama3.2:latest,CAS-NLI preserve,0.03,0.01,0.055,200
+adoption,B,gemma3:latest,CAS-NLI preserve,0.08,0.045,0.12,200

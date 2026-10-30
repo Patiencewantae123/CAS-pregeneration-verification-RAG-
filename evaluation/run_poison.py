@@ -195,15 +195,20 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--models", nargs="+", default=["llama3.2:latest", "gemma3:latest"])
     ap.add_argument("--limit", type=int, default=None)
+    ap.add_argument("--study", default="1", choices=["1", "2"])
     args = ap.parse_args()
-    with open(os.path.join(DATA, "hotpotqa_poison.json"), encoding="utf-8") as f:
+    global SEL_PATH, PREREG
+    tag = "poison" if args.study == "1" else "poison2"
+    SEL_PATH = os.path.join(OUT_RESULTS, f"{tag}_selections.json")
+    PREREG = os.path.join(HERE, f"PREREGISTRATION_{tag}.md")
+    with open(os.path.join(DATA, f"hotpotqa_{tag}.json"), encoding="utf-8") as f:
         items = json.load(f)[:args.limit]
 
     sel = run_selection(items)
     rows = run_generation(items, sel, args.models)
-    write_csv(os.path.join(OUT_RESULTS, "poison_rows.csv"), rows)
+    write_csv(os.path.join(OUT_RESULTS, f"{tag}_rows.csv"), rows)
     summary = summarize(rows, args.models, len(items))
-    with open(os.path.join(OUT_RESULTS, "poison_summary.json"), "w", encoding="utf-8") as f:
+    with open(os.path.join(OUT_RESULTS, f"{tag}_summary.json"), "w", encoding="utf-8") as f:
         json.dump(summary, f, ensure_ascii=False, indent=1)
 
     print("\nDescriptive (mean [95% CI])")

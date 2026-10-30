@@ -29,6 +29,18 @@ PoisonedRAG black-box design (Zou et al. 2024), in which the poison text is pref
 
 ## Conditions, methods, models, endpoints, test, decision rule
 
+## Amendment 1 (2026-10-30, after inspecting built items, before any method was run)
+
+I inspected the first six built items. Two of the substitute rules produced implausible text: dates came out as
+"January 37, 8376", and a stadium was replaced by a person's name. The rules are changed to the following:
+- **Dates** (a month name with a four-digit year): the year is shifted by 3–15 years, and any day number is replaced by a random day from 1 to 28.
+- **Other numbers:** the first number is multiplied by a seeded random factor between 0.5 and 1.8, and its comma format is kept.
+- **Entity titles:** prefer distractor titles that share the answer's last word, for example "Stadium" or "Battle". If there are none, apply the word-count rule above.
+
+Nothing else changes.
+
+## Conditions, methods, models, endpoints, test, decision rule
+
 All are identical to study 1:
 - Conditions: A (no metadata) and B (noisy provenance, same ranges, 0.2 flip probability).
 - Methods: the same seven, with τ = 0.45 and θ = 0.99. Nothing is tuned.

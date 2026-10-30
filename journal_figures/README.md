@@ -61,6 +61,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 9 | `fig09_llm_grounding_conflicts.py` | `data/fig09_*.csv` | `llm_scores.csv`, `llm_conflict_scores.csv` |
 | 10 | `fig10_llm_cost_tradeoff.py` | `data/fig10_*.csv` | `llm_scores.csv` |
 | 11 | `fig11_cv_threshold.py` | `data/fig11_*.csv` | `results.json` → `cv_threshold` (also `cv_thresholds.json`) |
+| 12 | `fig12_poison_study1.py` (uses `_poison.py`) | `data/fig12_*.csv` | `poison_summary.json` → `descriptive` |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -163,6 +164,16 @@ Every table cell is in `tables.md` (Tables 1–10).
   - All five folds chose θ = 0.99, the edge of the grid, for both modes.
 - (b) F1 on the four training folds (bar) vs the held-out fold (marker), per fold. The held-out F1 of the penalty varies between 0.32 and 0.60 across folds.
 
+**Fig. 12. Pre-registered study 1: CAS under poisoned retrieval** (HotpotQA-Poison, 200 new dev questions; `evaluation/PREREGISTRATION_poison.md`).
+- **Setup.** Each question gets one or two copies of its gold passage with the answer replaced by another question's answer. Condition B adds noisy source-reliability scores, which every method can use. Nothing was tuned (τ = 0.45, θ = 0.99).
+- **(a, b) Accuracy.** Vanilla RAG is the most accurate (Llama 0.515, Gemma 0.395). CAS-NLI preserve is significantly less accurate than Vanilla for Llama in condition A (−0.115 [−0.170, −0.060], Holm p = 0.004). Among the methods that filter the context, it is the strongest after CAS-keyword:
+  - vs BM25 top-3: +0.045 to +0.085.
+  - vs Provenance + BM25 top-3: +0.020 to +0.090.
+  - These differences are significant before but not after Holm correction.
+  - vs CAS-NLI penalty: +0.065 to +0.070 (exploratory family, Holm p ≈ 0.03).
+- **(c, d) Poison adoption.** The models seldom gave the fake answer even with no filtering (Vanilla RAG: 3.5% and 6.5%), because many substitutes were implausible. This floor left no room to show a reduction. In condition B the source filter did best: for Gemma it cut adoption to 1.0%, against 8.0% for CAS-NLI preserve (Holm p = 0.030).
+- **Pre-registered decisions:** all five are "not supported".
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -175,6 +186,8 @@ Every table cell is in `tables.md` (Tables 1–10).
 | CAS improves LLM answer accuracy | **No** significant improvement with 3B, 4B or 8B models (Fig. 8) |
 | CAS reduces prompt size and generation latency | **Yes**, about 3.5× shorter prompts (Fig. 10), but the NLI step itself costs 23–84 s per query on CPU (Fig. 5) |
 | CAS improves conflict surfacing | **No**: showing both passages (Vanilla) does as well or significantly better (Fig. 9c) |
+| CAS reduces adoption of poisoned passages (pre-registered study 1) | **Not supported**; adoption was near floor for every method (Fig. 12) |
+| Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2) |
 
 ## Limitations
 
