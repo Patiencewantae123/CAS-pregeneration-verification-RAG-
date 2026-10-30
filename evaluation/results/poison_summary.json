@@ -1,8 +1,9 @@
 {
  "preregistration_sha256": "47224db4fde3d1e553bc4e46df97850e49cf9075c83739d2069e46519657fd4f",
- "n_questions": 2,
+ "n_questions": 200,
  "models": [
-  "llama3.2:latest"
+  "llama3.2:latest",
+  "gemma3:latest"
  ],
  "theta": 0.99,
  "tau": 0.45,
@@ -12,40 +13,40 @@
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.06,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.515,
+   "ci_low": 0.45,
+   "ci_high": 0.58,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.03,
+   "ci_low": 0.01,
+   "ci_high": 0.055,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.5987136752136751,
+   "ci_low": 0.5392597069597069,
+   "ci_high": 0.6597630952380952,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
@@ -55,7 +56,7 @@
    "mean": 1.0,
    "ci_low": 1.0,
    "ci_high": 1.0,
-   "n": 2
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
@@ -65,347 +66,347 @@
    "mean": 1.0,
    "ci_low": 1.0,
    "ci_high": 1.0,
-   "n": 2
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.05,
+   "ci_low": 0.025,
+   "ci_high": 0.08,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.355,
+   "ci_low": 0.285,
+   "ci_high": 0.425,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.145,
+   "ci_low": 0.1,
+   "ci_high": 0.195,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "f1",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.4527301587301587,
+   "ci_low": 0.38971815476190474,
+   "ci_high": 0.5169905753968254,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.52,
+   "ci_low": 0.455,
+   "ci_high": 0.59,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.67,
+   "ci_low": 0.6,
+   "ci_high": 0.735,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.04,
+   "ci_low": 0.015,
+   "ci_high": 0.07,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.355,
+   "ci_low": 0.29,
+   "ci_high": 0.425,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "abstain",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.19,
+   "ci_low": 0.135,
+   "ci_high": 0.245,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.43938888888888883,
+   "ci_low": 0.3774801587301587,
+   "ci_high": 0.5053439484126984,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.535,
+   "ci_low": 0.465,
+   "ci_high": 0.605,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.63,
+   "ci_low": 0.56,
+   "ci_high": 0.695,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.065,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "accuracy",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.465,
+   "ci_low": 0.395,
+   "ci_high": 0.535,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.08,
+   "ci_low": 0.045,
+   "ci_high": 0.12,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "f1",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.567,
+   "ci_low": 0.5036118055555556,
+   "ci_high": 0.6282559523809524,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.755,
+   "ci_low": 0.695,
+   "ci_high": 0.815,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.86,
+   "ci_low": 0.81,
+   "ci_high": 0.905,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.03,
+   "ci_low": 0.01,
+   "ci_high": 0.055,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.33,
+   "ci_low": 0.26987500000000003,
+   "ci_high": 0.395,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "abstain",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.26,
+   "ci_low": 0.205,
+   "ci_high": 0.325,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "f1",
-   "mean": 0.3333333333333333,
-   "ci_low": 0.0,
-   "ci_high": 0.6666666666666666,
-   "n": 2
+   "mean": 0.43424603174603177,
+   "ci_low": 0.3721143849206349,
+   "ci_high": 0.4987978174603174,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "poison_in_context",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.575,
+   "ci_low": 0.505,
+   "ci_high": 0.6401249999999993,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "answer_in_context",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.675,
+   "ci_low": 0.61,
+   "ci_high": 0.74,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.065,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.4,
+   "ci_low": 0.335,
+   "ci_high": 0.47,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.125,
+   "ci_low": 0.08,
+   "ci_high": 0.175,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "f1",
-   "mean": 0.3333333333333333,
-   "ci_low": 0.0,
-   "ci_high": 0.6666666666666666,
-   "n": 2
+   "mean": 0.5050555555555555,
+   "ci_low": 0.4459575396825397,
+   "ci_high": 0.568634623015873,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.685,
+   "ci_low": 0.62,
+   "ci_high": 0.75,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.78,
+   "ci_low": 0.72,
+   "ci_high": 0.84,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.06,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.515,
+   "ci_low": 0.45,
+   "ci_high": 0.58,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.03,
+   "ci_low": 0.01,
+   "ci_high": 0.055,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.5987136752136751,
+   "ci_low": 0.5392597069597069,
+   "ci_high": 0.6597630952380952,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
@@ -415,7 +416,7 @@
    "mean": 1.0,
    "ci_low": 1.0,
    "ci_high": 1.0,
-   "n": 2
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
@@ -425,367 +426,1147 @@
    "mean": 1.0,
    "ci_low": 1.0,
    "ci_high": 1.0,
-   "n": 2
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.05,
+   "ci_low": 0.025,
+   "ci_high": 0.08,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.355,
+   "ci_low": 0.285,
+   "ci_high": 0.425,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.145,
+   "ci_low": 0.1,
+   "ci_high": 0.195,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "f1",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.4527301587301587,
+   "ci_low": 0.38971815476190474,
+   "ci_high": 0.5169905753968254,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.52,
+   "ci_low": 0.455,
+   "ci_high": 0.59,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.67,
+   "ci_low": 0.6,
+   "ci_high": 0.735,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.025,
+   "ci_low": 0.005,
+   "ci_high": 0.05,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.35,
+   "ci_low": 0.285,
+   "ci_high": 0.42,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.185,
+   "ci_low": 0.13,
+   "ci_high": 0.24,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "f1",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.433515873015873,
+   "ci_low": 0.3679670634920635,
+   "ci_high": 0.49505625000000003,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "poison_in_context",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.14,
+   "ci_low": 0.09,
+   "ci_high": 0.19,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.64,
+   "ci_low": 0.565,
+   "ci_high": 0.705,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.065,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.385,
+   "ci_low": 0.32,
+   "ci_high": 0.455,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.115,
+   "ci_low": 0.075,
+   "ci_high": 0.16,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.47754761904761905,
+   "ci_low": 0.41682638888888884,
+   "ci_high": 0.5420597222222222,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.495,
+   "ci_low": 0.425,
+   "ci_high": 0.565,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.685,
+   "ci_low": 0.62,
+   "ci_high": 0.745,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "adoption",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.035,
+   "ci_low": 0.01,
+   "ci_high": 0.06,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.46,
+   "ci_low": 0.39,
+   "ci_high": 0.53,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.055,
+   "ci_low": 0.025,
+   "ci_high": 0.09,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.559952380952381,
+   "ci_low": 0.4967121031746032,
+   "ci_high": 0.6231339285714285,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.725,
+   "ci_low": 0.66,
+   "ci_high": 0.78,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "answer_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.89,
+   "ci_low": 0.845,
+   "ci_high": 0.93,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.04,
+   "ci_low": 0.015,
+   "ci_high": 0.07,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.375,
+   "ci_low": 0.305,
+   "ci_high": 0.445,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "abstain",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.24,
+   "ci_low": 0.184875,
+   "ci_high": 0.305,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.4650674603174603,
+   "ci_low": 0.4024361111111111,
+   "ci_high": 0.5312628968253968,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "poison_in_context",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.53,
+   "ci_low": 0.46,
+   "ci_high": 0.6,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "answer_in_context",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.69,
+   "ci_low": 0.625,
+   "ci_high": 0.755,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "adoption",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.03,
+   "ci_low": 0.01,
+   "ci_high": 0.055,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.44,
+   "ci_low": 0.37,
+   "ci_high": 0.51,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "abstain",
-   "mean": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "n": 2
+   "mean": 0.095,
+   "ci_low": 0.055,
+   "ci_high": 0.14,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "f1",
-   "mean": 0.5,
-   "ci_low": 0.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.5413531746031746,
+   "ci_low": 0.4804435515873016,
+   "ci_high": 0.606378869047619,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "poison_in_context",
-   "mean": 1.0,
-   "ci_low": 1.0,
-   "ci_high": 1.0,
-   "n": 2
+   "mean": 0.635,
+   "ci_low": 0.57,
+   "ci_high": 0.7,
+   "n": 200
   },
   {
    "model": "llama3.2:latest",
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "answer_in_context",
+   "mean": 0.81,
+   "ci_low": 0.755,
+   "ci_high": 0.8601249999999993,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "adoption",
+   "mean": 0.065,
+   "ci_low": 0.035,
+   "ci_high": 0.1,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean": 0.395,
+   "ci_low": 0.325,
+   "ci_high": 0.46,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "abstain",
+   "mean": 0.04,
+   "ci_low": 0.015,
+   "ci_high": 0.07,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.48316666666666663,
+   "ci_low": 0.41498988095238093,
+   "ci_high": 0.5439324404761905,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "poison_in_context",
    "mean": 1.0,
    "ci_low": 1.0,
    "ci_high": 1.0,
-   "n": 2
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.045,
+   "ci_low": 0.02,
+   "ci_high": 0.075,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "accuracy",
+   "mean": 0.295,
+   "ci_low": 0.235,
+   "ci_high": 0.36,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.21,
+   "ci_low": 0.155,
+   "ci_high": 0.27,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 0.3776825396825397,
+   "ci_low": 0.3163190476190476,
+   "ci_high": 0.4418112103174603,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 0.52,
+   "ci_low": 0.455,
+   "ci_high": 0.59,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 0.67,
+   "ci_low": 0.6,
+   "ci_high": 0.735,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "adoption",
+   "mean": 0.06,
+   "ci_low": 0.03,
+   "ci_high": 0.095,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean": 0.26,
+   "ci_low": 0.2,
+   "ci_high": 0.32,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "abstain",
+   "mean": 0.255,
+   "ci_low": 0.2,
+   "ci_high": 0.315,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.32273809523809516,
+   "ci_low": 0.26337261904761905,
+   "ci_high": 0.38368184523809523,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "poison_in_context",
+   "mean": 0.535,
+   "ci_low": 0.465,
+   "ci_high": 0.605,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS w/o graph",
+   "metric": "answer_in_context",
+   "mean": 0.63,
+   "ci_low": 0.56,
+   "ci_high": 0.695,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "adoption",
+   "mean": 0.07,
+   "ci_low": 0.035,
+   "ci_high": 0.11,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "accuracy",
+   "mean": 0.375,
+   "ci_low": 0.31,
+   "ci_high": 0.445,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "abstain",
+   "mean": 0.135,
+   "ci_low": 0.09,
+   "ci_high": 0.185,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "f1",
+   "mean": 0.4601785714285714,
+   "ci_low": 0.395102380952381,
+   "ci_high": 0.5216211309523809,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "poison_in_context",
+   "mean": 0.755,
+   "ci_low": 0.695,
+   "ci_high": 0.815,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-keyword",
+   "metric": "answer_in_context",
+   "mean": 0.86,
+   "ci_low": 0.81,
+   "ci_high": 0.905,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean": 0.065,
+   "ci_low": 0.03487500000000001,
+   "ci_high": 0.1,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean": 0.28,
+   "ci_low": 0.22,
+   "ci_high": 0.345,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "abstain",
+   "mean": 0.285,
+   "ci_low": 0.225,
+   "ci_high": 0.35,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.34911904761904766,
+   "ci_low": 0.2910758928571428,
+   "ci_high": 0.4102666666666666,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "poison_in_context",
+   "mean": 0.575,
+   "ci_low": 0.505,
+   "ci_high": 0.6401249999999993,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI penalty",
+   "metric": "answer_in_context",
+   "mean": 0.675,
+   "ci_low": 0.61,
+   "ci_high": 0.74,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "adoption",
+   "mean": 0.085,
+   "ci_low": 0.05,
+   "ci_high": 0.13,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "accuracy",
+   "mean": 0.345,
+   "ci_low": 0.28,
+   "ci_high": 0.4101249999999993,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "abstain",
+   "mean": 0.18,
+   "ci_low": 0.13,
+   "ci_high": 0.23,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.40985714285714286,
+   "ci_low": 0.3469747023809524,
+   "ci_high": 0.4746979166666666,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "poison_in_context",
+   "mean": 0.685,
+   "ci_low": 0.62,
+   "ci_high": 0.75,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "method": "CAS-NLI preserve",
+   "metric": "answer_in_context",
+   "mean": 0.78,
+   "ci_low": 0.72,
+   "ci_high": 0.84,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "adoption",
+   "mean": 0.065,
+   "ci_low": 0.035,
+   "ci_high": 0.1,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean": 0.395,
+   "ci_low": 0.325,
+   "ci_high": 0.46,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "abstain",
+   "mean": 0.04,
+   "ci_low": 0.015,
+   "ci_high": 0.07,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.48316666666666663,
+   "ci_low": 0.41498988095238093,
+   "ci_high": 0.5439324404761905,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "poison_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "metric": "answer_in_context",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.045,
+   "ci_low": 0.02,
+   "ci_high": 0.075,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "accuracy",
+   "mean": 0.295,
+   "ci_low": 0.235,
+   "ci_high": 0.36,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.21,
+   "ci_low": 0.155,
+   "ci_high": 0.27,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 0.3776825396825397,
+   "ci_low": 0.3163190476190476,
+   "ci_high": 0.4418112103174603,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 0.52,
+   "ci_low": 0.455,
+   "ci_high": 0.59,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 0.67,
+   "ci_low": 0.6,
+   "ci_high": 0.735,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "adoption",
+   "mean": 0.01,
+   "ci_low": 0.0,
+   "ci_high": 0.025,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "accuracy",
+   "mean": 0.345,
+   "ci_low": 0.28,
+   "ci_high": 0.41,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.275,
+   "ci_low": 0.215,
+   "ci_high": 0.34,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "f1",
+   "mean": 0.4114682539682539,
+   "ci_low": 0.3494542658730158,
+   "ci_high": 0.4761121031746032,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "poison_in_context",
+   "mean": 0.14,
+   "ci_low": 0.09,
+   "ci_high": 0.19,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "metric": "answer_in_context",
+   "mean": 0.64,
+   "ci_low": 0.565,
+   "ci_high": 0.705,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "adoption",
+   "mean": 0.07,
+   "ci_low": 0.035,
+   "ci_high": 0.11,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean": 0.305,
+   "ci_low": 0.24,
+   "ci_high": 0.3651249999999993,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "abstain",
+   "mean": 0.19,
+   "ci_low": 0.14,
+   "ci_high": 0.245,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.38211904761904764,
+   "ci_low": 0.3207086309523809,
+   "ci_high": 0.4396241071428571,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "poison_in_context",
+   "mean": 0.495,
+   "ci_low": 0.425,
+   "ci_high": 0.565,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS w/o graph",
+   "metric": "answer_in_context",
+   "mean": 0.685,
+   "ci_low": 0.62,
+   "ci_high": 0.745,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "adoption",
+   "mean": 0.075,
+   "ci_low": 0.04,
+   "ci_high": 0.115,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "accuracy",
+   "mean": 0.375,
+   "ci_low": 0.31,
+   "ci_high": 0.445,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "abstain",
+   "mean": 0.09,
+   "ci_low": 0.055,
+   "ci_high": 0.13,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "f1",
+   "mean": 0.4678928571428571,
+   "ci_low": 0.4060113095238095,
+   "ci_high": 0.5342440476190476,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "poison_in_context",
+   "mean": 0.725,
+   "ci_low": 0.66,
+   "ci_high": 0.78,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-keyword",
+   "metric": "answer_in_context",
+   "mean": 0.89,
+   "ci_low": 0.845,
+   "ci_high": 0.93,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean": 0.065,
+   "ci_low": 0.03,
+   "ci_high": 0.1,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean": 0.3,
+   "ci_low": 0.235,
+   "ci_high": 0.365,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "abstain",
+   "mean": 0.29,
+   "ci_low": 0.23,
+   "ci_high": 0.355,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.36998809523809517,
+   "ci_low": 0.3058306547619048,
+   "ci_high": 0.4323973214285714,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "poison_in_context",
+   "mean": 0.53,
+   "ci_low": 0.46,
+   "ci_high": 0.6,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI penalty",
+   "metric": "answer_in_context",
+   "mean": 0.69,
+   "ci_low": 0.625,
+   "ci_high": 0.755,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "adoption",
+   "mean": 0.08,
+   "ci_low": 0.045,
+   "ci_high": 0.12,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "accuracy",
+   "mean": 0.365,
+   "ci_low": 0.3,
+   "ci_high": 0.435,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "abstain",
+   "mean": 0.135,
+   "ci_low": 0.09,
+   "ci_high": 0.185,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.4485595238095239,
+   "ci_low": 0.3858758928571428,
+   "ci_high": 0.5122154761904762,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "poison_in_context",
+   "mean": 0.635,
+   "ci_low": 0.57,
+   "ci_high": 0.7,
+   "n": 200
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "method": "CAS-NLI preserve",
+   "metric": "answer_in_context",
+   "mean": 0.81,
+   "ci_low": 0.755,
+   "ci_high": 0.8601249999999993,
+   "n": 200
   }
  ],
  "confirmatory": [
@@ -796,8 +1577,8 @@
    "comparator": "Vanilla RAG",
    "metric": "adoption",
    "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
+   "ci_low": -0.03,
+   "ci_high": 0.03,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -807,11 +1588,11 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
-   "p_holm": 1.0
+   "mean_diff": -0.115,
+   "ci_low": -0.17,
+   "ci_high": -0.06,
+   "p_value": 0.00019998000199980003,
+   "p_holm": 0.003999600039996
   },
   {
    "model": "llama3.2:latest",
@@ -819,10 +1600,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "adoption",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": -0.015,
+   "ci_low": -0.045,
+   "ci_high": 0.015,
+   "p_value": 0.5478452154784521,
    "p_holm": 1.0
   },
   {
@@ -831,10 +1612,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": -1.0,
-   "ci_low": -1.0,
-   "ci_high": -1.0,
-   "p_value": 0.5078492150784921,
+   "mean_diff": 0.045,
+   "ci_low": -0.015,
+   "ci_high": 0.105,
+   "p_value": 0.19158084191580843,
    "p_holm": 1.0
   },
   {
@@ -843,9 +1624,9 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "adoption",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
+   "mean_diff": -0.005,
+   "ci_low": -0.03,
+   "ci_high": 0.02,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -855,11 +1636,11 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
-   "p_holm": 1.0
+   "mean_diff": -0.075,
+   "ci_low": -0.135,
+   "ci_high": -0.015,
+   "p_value": 0.0183981601839816,
+   "p_holm": 0.2943705629437056
   },
   {
    "model": "llama3.2:latest",
@@ -867,10 +1648,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "adoption",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": -0.02,
+   "ci_low": -0.055,
+   "ci_high": 0.01,
+   "p_value": 0.39266073392660733,
    "p_holm": 1.0
   },
   {
@@ -879,9 +1660,21 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
+   "mean_diff": 0.085,
+   "ci_low": 0.015,
+   "ci_high": 0.15,
+   "p_value": 0.015298470152984701,
+   "p_holm": 0.2753724627537246
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Provenance + BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.005,
+   "ci_low": -0.025,
+   "ci_high": 0.035,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -890,23 +1683,131 @@
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "Provenance + BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": 0.09,
+   "ci_low": 0.02,
+   "ci_high": 0.16,
+   "p_value": 0.015398460153984602,
+   "p_holm": 0.2753724627537246
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
    "metric": "adoption",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": 0.02,
+   "ci_low": -0.02,
+   "ci_high": 0.065,
+   "p_value": 0.48255174482551744,
    "p_holm": 1.0
   },
   {
-   "model": "llama3.2:latest",
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean_diff": -0.05,
+   "ci_low": -0.12,
+   "ci_high": 0.020124999999999317,
+   "p_value": 0.21447855214478553,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.04,
+   "ci_low": 0.01,
+   "ci_high": 0.075,
+   "p_value": 0.020997900209979003,
+   "p_holm": 0.31496850314968505
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": 0.05,
+   "ci_low": -0.005,
+   "ci_high": 0.105,
+   "p_value": 0.11968803119688032,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "adoption",
+   "mean_diff": 0.015,
+   "ci_low": -0.025,
+   "ci_high": 0.055,
+   "p_value": 0.6304369563043696,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean_diff": -0.03,
+   "ci_low": -0.1,
+   "ci_high": 0.035,
+   "p_value": 0.45315468453154684,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.035,
+   "ci_low": 0.005,
+   "ci_high": 0.07,
+   "p_value": 0.06679332066793321,
+   "p_holm": 0.8683131686831318
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "BM25 top-3",
+   "metric": "accuracy",
+   "mean_diff": 0.07,
+   "ci_low": 0.01,
+   "ci_high": 0.125,
+   "p_value": 0.033096690330966905,
+   "p_holm": 0.46335366463353667
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "Provenance + BM25 top-3",
+   "metric": "adoption",
+   "mean_diff": 0.07,
+   "ci_low": 0.03,
+   "ci_high": 0.11,
+   "p_value": 0.0015998400159984002,
+   "p_holm": 0.030396960303969604
+  },
+  {
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": 0.02,
+   "ci_low": -0.045,
+   "ci_high": 0.085,
+   "p_value": 0.6591340865913409,
    "p_holm": 1.0
   }
  ],
@@ -917,9 +1818,9 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS w/o graph",
    "metric": "adoption",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
+   "mean_diff": -0.005,
+   "ci_low": -0.025,
+   "ci_high": 0.01,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -929,10 +1830,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS w/o graph",
    "metric": "accuracy",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": 0.045,
+   "ci_low": 0.005,
+   "ci_high": 0.09,
+   "p_value": 0.06879312068793121,
    "p_holm": 1.0
   },
   {
@@ -942,8 +1843,8 @@
    "comparator": "CAS-keyword",
    "metric": "adoption",
    "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
+   "ci_low": -0.015,
+   "ci_high": 0.015,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -953,11 +1854,11 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-keyword",
    "metric": "accuracy",
-   "mean_diff": -1.0,
-   "ci_low": -1.0,
-   "ci_high": -1.0,
-   "p_value": 0.5078492150784921,
-   "p_holm": 1.0
+   "mean_diff": -0.065,
+   "ci_low": -0.105,
+   "ci_high": -0.025,
+   "p_value": 0.006099390060993901,
+   "p_holm": 0.12198780121987801
   },
   {
    "model": "llama3.2:latest",
@@ -965,9 +1866,9 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean_diff": 0.0,
+   "mean_diff": 0.005,
    "ci_low": 0.0,
-   "ci_high": 0.0,
+   "ci_high": 0.015,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -977,9 +1878,21 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
+   "mean_diff": 0.07,
+   "ci_low": 0.035,
+   "ci_high": 0.11,
+   "p_value": 0.0010998900109989002,
+   "p_holm": 0.026397360263973605
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "adoption",
+   "mean_diff": -0.005,
+   "ci_low": -0.02,
+   "ci_high": 0.01,
    "p_value": 1.0,
    "p_holm": 1.0
   },
@@ -988,72 +1901,204 @@
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean_diff": 0.055,
+   "ci_low": 0.015,
+   "ci_high": 0.1,
+   "p_value": 0.012398760123987601,
+   "p_holm": 0.21077892210778923
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
    "metric": "adoption",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
+   "mean_diff": -0.005,
+   "ci_low": -0.025,
+   "ci_high": 0.015,
    "p_value": 1.0,
    "p_holm": 1.0
   },
   {
    "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "accuracy",
+   "mean_diff": -0.02,
+   "ci_low": -0.06,
+   "ci_high": 0.025,
+   "p_value": 0.47935206479352066,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean_diff": -0.01,
+   "ci_low": -0.03,
+   "ci_high": 0.01,
+   "p_value": 0.6253374662533746,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean_diff": 0.065,
+   "ci_low": 0.025,
+   "ci_high": 0.11,
+   "p_value": 0.007599240075992401,
+   "p_holm": 0.14438556144385561
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "adoption",
+   "mean_diff": 0.025,
+   "ci_low": 0.005,
+   "ci_high": 0.05,
+   "p_value": 0.060193980601939805,
+   "p_holm": 0.9631036896310369
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean_diff": 0.085,
+   "ci_low": 0.04,
+   "ci_high": 0.135,
+   "p_value": 0.0015998400159984002,
+   "p_holm": 0.033596640335966405
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "adoption",
+   "mean_diff": 0.015,
+   "ci_low": -0.005,
+   "ci_high": 0.04,
+   "p_value": 0.37496250374962503,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-keyword",
+   "metric": "accuracy",
+   "mean_diff": -0.03,
+   "ci_low": -0.075,
+   "ci_high": 0.015,
+   "p_value": 0.28917108289171084,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "adoption",
+   "mean_diff": 0.02,
+   "ci_low": 0.005,
+   "ci_high": 0.04,
+   "p_value": 0.12428757124287572,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "A",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean_diff": 0.065,
+   "ci_low": 0.03,
+   "ci_high": 0.105,
+   "p_value": 0.0011998800119988001,
+   "p_holm": 0.027597240275972403
+  },
+  {
+   "model": "gemma3:latest",
+   "condition": "B",
+   "reference": "CAS-NLI preserve",
+   "comparator": "CAS w/o graph",
+   "metric": "adoption",
+   "mean_diff": 0.01,
+   "ci_low": -0.01,
+   "ci_high": 0.03,
+   "p_value": 0.6228377162283771,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS w/o graph",
    "metric": "accuracy",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
-   "p_holm": 1.0
+   "mean_diff": 0.06,
+   "ci_low": 0.02,
+   "ci_high": 0.105,
+   "p_value": 0.010698930106989302,
+   "p_holm": 0.19258074192580743
   },
   {
-   "model": "llama3.2:latest",
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-keyword",
    "metric": "adoption",
-   "mean_diff": -0.5,
-   "ci_low": -1.0,
-   "ci_high": 0.0,
+   "mean_diff": 0.005,
+   "ci_low": -0.02,
+   "ci_high": 0.03,
    "p_value": 1.0,
    "p_holm": 1.0
   },
   {
-   "model": "llama3.2:latest",
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-keyword",
    "metric": "accuracy",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "mean_diff": -0.01,
+   "ci_low": -0.06,
+   "ci_high": 0.04,
+   "p_value": 0.8384161583841616,
    "p_holm": 1.0
   },
   {
-   "model": "llama3.2:latest",
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean_diff": 0.0,
+   "mean_diff": 0.015,
    "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
+   "ci_high": 0.035,
+   "p_value": 0.25047495250474955,
    "p_holm": 1.0
   },
   {
-   "model": "llama3.2:latest",
+   "model": "gemma3:latest",
    "condition": "B",
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean_diff": 0.0,
-   "ci_low": 0.0,
-   "ci_high": 0.0,
-   "p_value": 1.0,
-   "p_holm": 1.0
+   "mean_diff": 0.065,
+   "ci_low": 0.03,
+   "ci_high": 0.105,
+   "p_value": 0.0012998700129987,
+   "p_holm": 0.0285971402859714
   }
  ],
  "decisions": {
