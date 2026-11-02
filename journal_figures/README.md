@@ -62,6 +62,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 10 | `fig10_llm_cost_tradeoff.py` | `data/fig10_*.csv` | `llm_scores.csv` |
 | 11 | `fig11_cv_threshold.py` | `data/fig11_*.csv` | `results.json` → `cv_threshold` (also `cv_thresholds.json`) |
 | 12 | `fig12_poison_study1.py` (uses `_poison.py`) | `data/fig12_*.csv` | `poison_summary.json` → `descriptive` |
+| 13 | `fig13_poison_study2.py` (uses `_poison.py`) | `data/fig13_*.csv` | `poison2_summary.json` → `descriptive` |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -174,6 +175,17 @@ Every table cell is in `tables.md` (Tables 1–10).
 - **(c, d) Poison adoption.** The models seldom gave the fake answer even with no filtering (Vanilla RAG: 3.5% and 6.5%), because many substitutes were implausible. This floor left no room to show a reduction. In condition B the source filter did best: for Gemma it cut adoption to 1.0%, against 8.0% for CAS-NLI preserve (Holm p = 0.030).
 - **Pre-registered decisions:** all five are "not supported".
 
+**Fig. 13. Pre-registered study 2: a stronger attack** (HotpotQA-Poison-2, 200 further dev questions; `evaluation/PREREGISTRATION_poison2.md`, including its one amendment, made before any method ran).
+- **Setup.** Three type-matched poison passages per question, which agree with each other and outnumber the true passage, following the PoisonedRAG black-box design. Conditions, methods and tests are the same as in study 1.
+- **The attack worked.** With no filtering, both models gave the fake answer in 28.5% of answers, and accuracy fell to 0.235 (Llama) and 0.220 (Gemma).
+- **(a, c) Condition A, no source metadata.** CAS-NLI preserve does not differ from Vanilla RAG or BM25 top-3 on either endpoint (all Holm p = 1.0). The poison reaches its context for every question.
+- **(b, d) Condition B, noisy source metadata.**
+  - Provenance + BM25 top-3 cuts adoption to 3.5% (Llama) and 4.0% (Gemma), and its accuracy is not significantly different from CAS-NLI preserve.
+  - CAS-NLI preserve stays at 23.0% and 28.0%, significantly worse (+0.195 and +0.240, both Holm p = 0.002).
+  - The poison still reaches the CAS-NLI preserve context for every question. The trust score does not remove a highly relevant passage on provenance alone (CAS w/o graph: 99.5%), and conflict preservation adds contradicted passages back.
+- **CAS-NLI penalty** removes poison from about a quarter of contexts and gives the lowest CAS adoption (18.5–21.5%), with abstention up to 20.5–28.5% and no accuracy gain. Its adoption is significantly lower than CAS-NLI preserve in three of four cases (exploratory family).
+- **Pre-registered decisions:** all five are "not supported".
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -187,6 +199,7 @@ Every table cell is in `tables.md` (Tables 1–10).
 | CAS reduces prompt size and generation latency | **Yes**, about 3.5× shorter prompts (Fig. 10), but the NLI step itself costs 23–84 s per query on CPU (Fig. 5) |
 | CAS improves conflict surfacing | **No**: showing both passages (Vanilla) does as well or significantly better (Fig. 9c) |
 | CAS reduces adoption of poisoned passages (pre-registered study 1) | **Not supported**; adoption was near floor for every method (Fig. 12) |
+| CAS reduces adoption under a stronger attack (pre-registered study 2) | **Not supported**: no difference from Vanilla RAG, and a simple source filter is significantly better (Fig. 13) |
 | Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2) |
 
 ## Limitations
