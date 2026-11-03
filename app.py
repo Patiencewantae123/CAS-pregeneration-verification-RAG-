@@ -1,11 +1,14 @@
-﻿import json
+﻿import html
+import json
 import os
 import sys
 import tempfile
+import time
 import urllib.request
 import streamlit as st
 
-from langchain_community.document_loaders import PyPDFLoader, TextLoader
+from langchain_community.document_loaders import PyPDFLoader
+from langchain_core.documents import Document as LCDocument
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -32,6 +35,63 @@ If the passages do not contain the answer, reply exactly: unknown
 Question: {question}
 Answer:"""
 OLLAMA_URL = "http://localhost:11434"
+NLI_CACHE = os.path.join(ROOT, ".cas_cache", "app_nli_cache.jsonl")   # kept apart from the experiments' cache
+
+
+def load_file(uploaded_file):
+    """Pages of an uploaded PDF, or the text of a TXT file (UTF-8, then CP949, then Latin-1)."""
+    data = uploaded_file.getvalue()
+    if uploaded_file.name.lower().endswith(".pdf"):
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+            tmp.write(data)
+        try:
+            docs = PyPDFLoader(tmp.name).load()
+        finally:
+            try:
+                os.remove(tmp.name)
+            except OSError:
+                pass
+    else:
+        for encoding in ("utf-8", "cp949", "latin-1"):
+            try:
+                docs = [LCDocument(page_content=data.decode(encoding))]
+                break
+            except UnicodeDecodeError:
+                continue
+    for d in docs:
+        d.metadata["source"] = uploaded_file.name
+    return docs
+
+
+def chunk_card(c, text_chars=250):
+    """HTML card for one chunk; document text is escaped so it cannot break the page."""
+    badge = (f'<span class="badge-{"rejected" if c["status"] == "Rejected" else "retained"}">{c["status"]}</span> '
+             if c.get("status") else "")
+    scores = (f' | <strong>Trust:</strong> {c["trust"]:.2f} | <strong>Agreement:</strong> {c["agreement"]:.2f}'
+              f' | <strong>Contradiction:</strong> {c["contradiction"]:.2f}' if "trust" in c else "")
+    text = html.escape(c["text"][:text_chars]) + ("..." if len(c["text"]) > text_chars else "")
+    return (f'<div class="metric-card">{badge}<strong>{c["id"]}</strong> | <strong>Source:</strong> '
+            f'{html.escape(c["source"])}{scores}'
+            f'<p style="margin-top: 8px; font-size: 0.9rem; color: #475569;">{text}</p></div>')
+
+
+def show_details(d, expanded):
+    """Verification panel for one answer: contradictions side by side, every chunk's decision, timings."""
+    with st.expander("🛡️ Pre-Generation Context Verification", expanded=expanded):
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Retrieved Chunks", d["retrieved"])
+        col2.metric("Passed to the LLM", d["kept"])
+        col3.metric("Contradicting Pairs", len(d["conflicts"]))
+        col4.metric("Verification Time", f'{d["timings"]["Retrieval"] + d["timings"]["Conflict check"]:.1f} s')
+        st.caption(" · ".join(f"{k}: {v:.1f} s" for k, v in d["timings"].items()))
+        for c in d["conflicts"]:
+            st.markdown(f"**⚔️ {c['a']['id']} contradicts {c['b']['id']}** (confidence {c['confidence']:.2f}) · "
+                        + ("both passed to the LLM with a conflict note" if c["passed"] else "not passed to the LLM together"))
+            left, right = st.columns(2)
+            left.markdown(chunk_card(c["a"], 600), unsafe_allow_html=True)
+            right.markdown(chunk_card(c["b"], 600), unsafe_allow_html=True)
+        for c in d["cards"]:
+            st.markdown(chunk_card(c), unsafe_allow_html=True)
 
 
 def ollama_models():
@@ -198,14 +258,17 @@ if "all_chunks" not in st.session_state:
     st.session_state.all_chunks = []
 
 @st.cache_resource(show_spinner="Loading NLI Cross-Encoder Verifier...")
-def load_verification_model():
-    return CrossEncoder('cross-encoder/nli-deberta-v3-base')
+def load_verifier():
+    """DeBERTa-v3 NLI at θ = 0.99. Predictions are cached on disk, so chunk pairs seen before cost nothing."""
+    os.makedirs(os.path.dirname(NLI_CACHE), exist_ok=True)
+    return NLIModelVerifier(model=CrossEncoder("cross-encoder/nli-deberta-v3-base"), contradiction_threshold=THETA,
+                            cache_path=NLI_CACHE)
 
 @st.cache_resource(show_spinner="Loading Embedding Model...")
 def load_embedding_model():
     return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-verifier = load_verification_model()
+verifier = load_verifier()
 embeddings = load_embedding_model()
 
 with st.sidebar:
@@ -229,30 +292,27 @@ with st.sidebar:
             all_docs = []
             with st.spinner(f"Processing {len(uploaded_files)} file(s)..."):
                 for uploaded_file in uploaded_files:
-                    file_ext = uploaded_file.name.split(".")[-1].lower()
-                    with tempfile.NamedTemporaryFile(delete=False, suffix=f".{file_ext}") as tmp_file:
-                        tmp_file.write(uploaded_file.read())
-                        tmp_path = tmp_file.name
-
-                    if file_ext == "pdf":
-                        loader = PyPDFLoader(tmp_path)
-                    else:
-                        loader = TextLoader(tmp_path, encoding="utf-8")
-                    
-                    docs = loader.load()
-                    for d in docs:
-                        d.metadata["source"] = uploaded_file.name
+                    try:
+                        docs = load_file(uploaded_file)
+                    except Exception as e:
+                        st.warning(f"Skipped {uploaded_file.name}: {e}")
+                        continue
+                    if not any(d.page_content.strip() for d in docs):
+                        st.warning(f"Skipped {uploaded_file.name}: no extractable text (a scanned PDF needs OCR first).")
+                        continue
                     all_docs.extend(docs)
 
                 splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size, chunk_overlap=chunk_overlap)
-                chunks = splitter.split_documents(all_docs)
-                
-                st.session_state.vector_store = FAISS.from_documents(chunks, embeddings)
-                st.session_state.bm25_retriever = BM25Retriever.from_documents(chunks)
-                st.session_state.bm25_retriever.k = 5
-                st.session_state.all_chunks = chunks
-                
-                st.success(f"Indexed {len(chunks)} chunks across {len(uploaded_files)} document(s)!")
+                chunks = [c for c in splitter.split_documents(all_docs) if c.page_content.strip()]
+                if chunks:
+                    st.session_state.vector_store = FAISS.from_documents(chunks, embeddings)
+                    st.session_state.bm25_retriever = BM25Retriever.from_documents(chunks)
+                    st.session_state.bm25_retriever.k = 5
+                    st.session_state.all_chunks = chunks
+                    n_files = len({c.metadata["source"] for c in chunks})
+                    st.success(f"Indexed {len(chunks)} chunks across {n_files} document(s)!")
+                else:
+                    st.error("No text could be indexed from these files.")
 
     st.markdown("---")
     st.subheader("📊 Model Configurations")
@@ -276,11 +336,18 @@ with st.sidebar:
         "Answer style", ["Short (as in the experiments)", "Explained, with citations"],
         help="Short uses the exact prompt and settings of the evaluation; Explained allows a longer, cited answer.")
 
+    st.markdown("---")
+    if st.button("🧹 Clear Chat", use_container_width=True):
+        st.session_state.messages = []
+        st.rerun()
+
 st.title("⚡ CAS-V Pre-Verification RAG Studio")
 st.caption("Verify factual integrity and evaluate contexts before generating answers.")
 
 for msg in st.session_state.messages:
     with st.chat_message(msg["role"]):
+        if msg.get("details"):
+            show_details(msg["details"], expanded=False)
         st.markdown(msg["content"])
 
 if prompt := st.chat_input("Ask a question about your uploaded documents..."):
@@ -293,12 +360,15 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
             st.warning("⚠️ Please upload and process documents in the sidebar first.")
     else:
         with st.chat_message("assistant"):
+            timings = {}
             with st.spinner("Retrieving and verifying source context..."):
+                start = time.perf_counter()
                 vector_docs = st.session_state.vector_store.similarity_search(prompt, k=4)
                 bm25_docs = st.session_state.bm25_retriever.invoke(prompt)
-                
                 combined_docs = list({doc.page_content: doc for doc in (vector_docs + bm25_docs)}.values())
+                timings["Retrieval"] = time.perf_counter() - start
 
+                start = time.perf_counter()
                 # CAS pipeline: pairwise passage NLI -> conflict graph -> trust scoring -> synthesis.
                 # Scored as in the experiments: relevance = BM25 / pool maximum, confidence from the BM25 rank.
                 # Uploaded files carry no provenance metadata (prior 0.5).
@@ -313,33 +383,27 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                              provenance_score=0.5)
                     for i, (text, doc) in enumerate(zip(texts, combined_docs))
                 ]
-                engine = CASEngine(trust_threshold=threshold,
-                                   verifier=NLIModelVerifier(model=verifier, contradiction_threshold=THETA),
+                engine = CASEngine(trust_threshold=threshold, verifier=verifier,
                                    preserve_conflicts=conflict_mode == "Conflict-preserving")
                 result = engine.execute_pipeline(prompt, cas_docs)
                 graph = result["graph"]
                 verified_contexts = [v for v in result["verified_documents"] if not v.is_filtered]
+                timings["Conflict check"] = time.perf_counter() - start
 
-            with st.expander("🛡️ Pre-Generation Context Verification Metrics", expanded=True):
-                col1, col2, col3 = st.columns(3)
-                col1.metric("Retrieved Chunks", len(combined_docs))
-                col2.metric("Verified Retained Chunks", len(verified_contexts))
-                col3.metric("Contradicting Pairs", sum(e.relation.value == "Contradiction" for e in graph.edges))
-
-                for v in result["verified_documents"]:
-                    status = "Rejected" if v.is_filtered else "Retained"
-                    badge_class = "badge-retained" if status == "Retained" else "badge-rejected"
-                    st.markdown(f"""
-                    <div class="metric-card">
-                        <span class="{badge_class}">{status}</span>
-                        <strong style="color: #0f172a;">{v.doc.id}</strong> |
-                        <strong style="color: #0f172a;">Source:</strong> {v.doc.source} |
-                        <strong style="color: #0f172a;">Trust:</strong> {v.trust_score:.2f} |
-                        <strong style="color: #0f172a;">Agreement:</strong> {graph.get_agreement_score(v.doc.id):.2f} |
-                        <strong style="color: #0f172a;">Contradiction:</strong> {v.conflict_penalty:.2f}
-                        <p style="margin-top: 8px; font-size: 0.9rem; color: #475569;">{v.doc.content[:250]}...</p>
-                    </div>
-                    """, unsafe_allow_html=True)
+            def side(doc):
+                return {"id": doc.id, "source": doc.source, "text": doc.content}
+            passed = {frozenset(p) for p in result["conflicts"]}
+            details = {
+                "retrieved": len(combined_docs), "kept": len(verified_contexts), "timings": timings,
+                "cards": [{**side(v.doc), "status": "Rejected" if v.is_filtered else "Retained", "trust": v.trust_score,
+                           "agreement": graph.get_agreement_score(v.doc.id), "contradiction": v.conflict_penalty}
+                          for v in result["verified_documents"]],
+                "conflicts": [{"a": side(graph.nodes[e.source_doc_id]), "b": side(graph.nodes[e.target_doc_id]),
+                               "confidence": e.confidence,
+                               "passed": frozenset((e.source_doc_id, e.target_doc_id)) in passed}
+                              for e in graph.edges if e.relation.value == "Contradiction"],
+            }
+            show_details(details, expanded=True)
 
             if not verified_contexts:
                 response_text = "❌ **Verification Failed:** No passages passed the reliability and relevance threshold to safely answer your query."
@@ -356,17 +420,20 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                 short = answer_style.startswith("Short")
                 llm_prompt = (QA_PROMPT if short else EXPLAINED_PROMPT).format(passages=context, question=prompt)
                 options = OPTIONS if short else {**OPTIONS, "num_predict": 512}
+                start = time.perf_counter()
                 try:
                     answer = st.write_stream(ollama_stream(llm_model, llm_prompt, options)).strip()
                 except Exception as e:
                     answer = f"⚠️ **{llm_model} failed:** {e}"
                     st.markdown(answer)
+                timings["Answer"] = time.perf_counter() - start
                 legend = " · ".join(f"[{k + 1}] {cas_docs[i].id} ({cas_docs[i].source})" for k, i in enumerate(kept))
                 notes = ""
                 if result["conflicts"]:
                     pairs = ", ".join(f"{a} ↔ {b}" for a, b in result["conflicts"])
                     notes = f"⚠️ **Contradicting passages passed to the model:** {pairs}\n\n"
-                footer = f"{notes}*{llm_model} answered from {len(kept)} verified passage(s): {legend}*"
+                footer = (f"{notes}*{llm_model} answered in {timings['Answer']:.1f} s from {len(kept)} "
+                          f"verified passage(s): {legend}*")
                 st.markdown(footer)
                 response_text = f"{answer}\n\n{footer}"
-            st.session_state.messages.append({"role": "assistant", "content": response_text})
+            st.session_state.messages.append({"role": "assistant", "content": response_text, "details": details})
