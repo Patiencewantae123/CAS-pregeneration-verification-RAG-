@@ -19,6 +19,15 @@
   0.2,
   0.2
  ],
+ "real_detector": {
+  "pair_recall": 0.07928994082840236,
+  "question_recall": 0.0975,
+  "question_false_alarm": 0.5375,
+  "A | CAS-NLI penalty | silent_exposure": 0.6625,
+  "A | CAS-NLI preserve | silent_exposure": 0.7875,
+  "B | CAS-NLI penalty | silent_exposure": 0.6475,
+  "B | CAS-NLI preserve | silent_exposure": 0.745
+ },
  "E1_parameter_robustness": [
   {
    "study": "1",
@@ -797,9 +806,12 @@
    "false_alarm": 0.0,
    "comparator": "BM25 top-3",
    "min_recall_cas_no_worse": 0.3,
+   "comparator_silent_exposure": 0.76,
    "penalty_answer_available_r0": 0.7175,
    "penalty_answer_available_r1": 0.115,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7175,
+   "preserve_answer_available_r1": 0.4525,
+   "realised_question_recall_at_min_r": 0.50375,
    "realised_false_alarm": 0.0
   },
   {
@@ -807,9 +819,12 @@
    "false_alarm": 0.1,
    "comparator": "BM25 top-3",
    "min_recall_cas_no_worse": 0.3,
+   "comparator_silent_exposure": 0.76,
    "penalty_answer_available_r0": 0.7070000000000002,
    "penalty_answer_available_r1": 0.11283333333333335,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7175,
+   "preserve_answer_available_r1": 0.4525,
+   "realised_question_recall_at_min_r": 0.5016666666666666,
    "realised_false_alarm": 0.10033333333333332
   },
   {
@@ -817,9 +832,12 @@
    "false_alarm": 0.25,
    "comparator": "BM25 top-3",
    "min_recall_cas_no_worse": 0.3,
+   "comparator_silent_exposure": 0.76,
    "penalty_answer_available_r0": 0.6871666666666667,
    "penalty_answer_available_r1": 0.10858333333333334,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7175,
+   "preserve_answer_available_r1": 0.45275,
+   "realised_question_recall_at_min_r": 0.5011666666666666,
    "realised_false_alarm": 0.24241666666666667
   },
   {
@@ -827,9 +845,12 @@
    "false_alarm": 0.5,
    "comparator": "BM25 top-3",
    "min_recall_cas_no_worse": 0.3,
+   "comparator_silent_exposure": 0.76,
    "penalty_answer_available_r0": 0.6406666666666667,
    "penalty_answer_available_r1": 0.10149999999999998,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7175,
+   "preserve_answer_available_r1": 0.4530833333333333,
+   "realised_question_recall_at_min_r": 0.5041666666666667,
    "realised_false_alarm": 0.5053333333333333
   },
   {
@@ -837,9 +858,12 @@
    "false_alarm": 0.0,
    "comparator": "Provenance + BM25 top-3",
    "min_recall_cas_no_worse": null,
+   "comparator_silent_exposure": 0.22775,
    "penalty_answer_available_r0": 0.7805000000000001,
    "penalty_answer_available_r1": 0.17125,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7805000000000001,
+   "preserve_answer_available_r1": 0.5753333333333334,
+   "realised_question_recall_at_min_r": null,
    "realised_false_alarm": 0.0
   },
   {
@@ -847,9 +871,12 @@
    "false_alarm": 0.1,
    "comparator": "Provenance + BM25 top-3",
    "min_recall_cas_no_worse": null,
+   "comparator_silent_exposure": 0.2371666666666667,
    "penalty_answer_available_r0": 0.7713333333333334,
    "penalty_answer_available_r1": 0.16816666666666666,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7830000000000001,
+   "preserve_answer_available_r1": 0.5791666666666667,
+   "realised_question_recall_at_min_r": null,
    "realised_false_alarm": 0.10258333333333333
   },
   {
@@ -857,9 +884,12 @@
    "false_alarm": 0.25,
    "comparator": "Provenance + BM25 top-3",
    "min_recall_cas_no_worse": null,
+   "comparator_silent_exposure": 0.23575,
    "penalty_answer_available_r0": 0.7470833333333334,
    "penalty_answer_available_r1": 0.16133333333333333,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7804166666666665,
+   "preserve_answer_available_r1": 0.5758333333333333,
+   "realised_question_recall_at_min_r": null,
    "realised_false_alarm": 0.25066666666666665
   },
   {
@@ -867,9 +897,12 @@
    "false_alarm": 0.5,
    "comparator": "Provenance + BM25 top-3",
    "min_recall_cas_no_worse": null,
+   "comparator_silent_exposure": 0.23391666666666666,
    "penalty_answer_available_r0": 0.7071666666666667,
    "penalty_answer_available_r1": 0.15158333333333332,
-   "realised_recall_at_r1": 1.0,
+   "preserve_answer_available_r0": 0.7835833333333335,
+   "preserve_answer_available_r1": 0.57475,
+   "realised_question_recall_at_min_r": null,
    "realised_false_alarm": 0.4988333333333334
   }
  ],
@@ -907,5 +940,5 @@
    "ci_high": 0.24285714285714285
   }
  ],
- "seconds": 55.66375970840454
+ "seconds": 55.41668725013733
 }

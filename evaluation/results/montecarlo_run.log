@@ -7,3 +7,46 @@
 [simulation] 300/400 questions  elapsed 0.1 min
 [simulation] 350/400 questions  elapsed 0.1 min
 [simulation] 400/400 questions  elapsed 0.1 min
+
+3,064,800 question-level runs ({'E1': 1000800, 'E2': 1008000, 'E3': 1056000}) in 0.9 min
+
+E1: CAS-NLI preserve minus comparator over 1,250 random weight/tau settings (pooled, 400 questions)
+  A vs Vanilla RAG              silent_exposure   default -0.213  median -0.225 [p5 -0.285, p95 -0.137]  CAS better in 100.0%  robust=True
+  A vs Vanilla RAG              exposure          default -0.157  median -0.150 [p5 -0.243, p95 -0.052]  CAS better in 98.6%  robust=True
+  A vs Vanilla RAG              answer_available  default -0.282  median -0.262 [p5 -0.532, p95 -0.085]  CAS better in 0.0%  robust=True
+  A vs BM25 top-3               silent_exposure   default +0.027  median +0.015 [p5 -0.045, p95 +0.103]  CAS better in 36.2%  robust=False
+  A vs BM25 top-3               exposure          default +0.083  median +0.090 [p5 -0.003, p95 +0.188]  CAS better in 5.2%  robust=True
+  A vs BM25 top-3               answer_available  default +0.177  median +0.198 [p5 -0.073, p95 +0.375]  CAS better in 89.8%  robust=False
+  B vs Vanilla RAG              silent_exposure   default -0.255  median -0.257 [p5 -0.421, p95 -0.162]  CAS better in 100.0%  robust=True
+  B vs Vanilla RAG              exposure          default -0.180  median -0.170 [p5 -0.302, p95 -0.085]  CAS better in 100.0%  robust=True
+  B vs Vanilla RAG              answer_available  default -0.208  median -0.226 [p5 -0.445, p95 -0.062]  CAS better in 0.0%  robust=True
+  B vs BM25 top-3               silent_exposure   default -0.015  median -0.017 [p5 -0.181, p95 +0.078]  CAS better in 62.3%  robust=False
+  B vs BM25 top-3               exposure          default +0.060  median +0.070 [p5 -0.062, p95 +0.155]  CAS better in 14.4%  robust=False
+  B vs BM25 top-3               answer_available  default +0.252  median +0.234 [p5 +0.015, p95 +0.397]  CAS better in 95.7%  robust=True
+  B vs Provenance + BM25 top-3  silent_exposure   default +0.512  median +0.510 [p5 +0.339, p95 +0.605]  CAS better in 0.0%  robust=True
+  B vs Provenance + BM25 top-3  exposure          default +0.587  median +0.593 [p5 +0.452, p95 +0.682]  CAS better in 0.0%  robust=True
+  B vs Provenance + BM25 top-3  answer_available  default +0.188  median +0.179 [p5 -0.041, p95 +0.345]  CAS better in 91.2%  robust=True
+
+E2:
+  {'flip': 0.0, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': 0.4, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.1, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.2, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.3, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.4, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.5, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+
+E3:
+  {'condition': 'A', 'false_alarm': 0.0, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.7175, 'penalty_answer_available_r1': 0.115, 'preserve_answer_available_r0': 0.7175, 'preserve_answer_available_r1': 0.4525, 'realised_question_recall_at_min_r': 0.50375, 'realised_false_alarm': 0.0}
+  {'condition': 'A', 'false_alarm': 0.1, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.7070000000000002, 'penalty_answer_available_r1': 0.11283333333333335, 'preserve_answer_available_r0': 0.7175, 'preserve_answer_available_r1': 0.4525, 'realised_question_recall_at_min_r': 0.5016666666666666, 'realised_false_alarm': 0.10033333333333332}
+  {'condition': 'A', 'false_alarm': 0.25, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.6871666666666667, 'penalty_answer_available_r1': 0.10858333333333334, 'preserve_answer_available_r0': 0.7175, 'preserve_answer_available_r1': 0.45275, 'realised_question_recall_at_min_r': 0.5011666666666666, 'realised_false_alarm': 0.24241666666666667}
+  {'condition': 'A', 'false_alarm': 0.5, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.6406666666666667, 'penalty_answer_available_r1': 0.10149999999999998, 'preserve_answer_available_r0': 0.7175, 'preserve_answer_available_r1': 0.4530833333333333, 'realised_question_recall_at_min_r': 0.5041666666666667, 'realised_false_alarm': 0.5053333333333333}
+  {'condition': 'B', 'false_alarm': 0.0, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.22775, 'penalty_answer_available_r0': 0.7805000000000001, 'penalty_answer_available_r1': 0.17125, 'preserve_answer_available_r0': 0.7805000000000001, 'preserve_answer_available_r1': 0.5753333333333334, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.0}
+  {'condition': 'B', 'false_alarm': 0.1, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.2371666666666667, 'penalty_answer_available_r0': 0.7713333333333334, 'penalty_answer_available_r1': 0.16816666666666666, 'preserve_answer_available_r0': 0.7830000000000001, 'preserve_answer_available_r1': 0.5791666666666667, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.10258333333333333}
+  {'condition': 'B', 'false_alarm': 0.25, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.23575, 'penalty_answer_available_r0': 0.7470833333333334, 'penalty_answer_available_r1': 0.16133333333333333, 'preserve_answer_available_r0': 0.7804166666666665, 'preserve_answer_available_r1': 0.5758333333333333, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.25066666666666665}
+  {'condition': 'B', 'false_alarm': 0.5, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.23391666666666666, 'penalty_answer_available_r0': 0.7071666666666667, 'penalty_answer_available_r1': 0.15158333333333332, 'preserve_answer_available_r0': 0.7835833333333335, 'preserve_answer_available_r1': 0.57475, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.4988333333333334}
+
+E4:
+  {'model': 'gemma3:latest', 'poison_marked_by_note': False, 'n': 594, 'adoption': 0.2239057239057239, 'ci_low': 0.1919191919191919, 'ci_high': 0.25925925925925924}
+  {'model': 'gemma3:latest', 'poison_marked_by_note': True, 'n': 70, 'adoption': 0.2857142857142857, 'ci_low': 0.18571428571428572, 'ci_high': 0.4}
+  {'model': 'llama3.2:latest', 'poison_marked_by_note': False, 'n': 594, 'adoption': 0.1717171717171717, 'ci_low': 0.1414141414141414, 'ci_high': 0.20202020202020202}
+  {'model': 'llama3.2:latest', 'poison_marked_by_note': True, 'n': 70, 'adoption': 0.15714285714285714, 'ci_low': 0.07142857142857142, 'ci_high': 0.24285714285714285}

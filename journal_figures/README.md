@@ -1,6 +1,6 @@
 # Journal figures: CAS pre-generation verification
 
-Every number in this folder is measured. The figures are drawn from `evaluation/results/results.json`, `cv_thresholds.json` and `llm_summary.json`, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all eleven figures and `tables.md`, then checks the plotted values against the results files (last run: **PASS, 11 figures**).
+Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all fifteen figures and `tables.md`, then checks the plotted values against the results files (last run: **PASS, 15 figures**).
 
 ## Reproduce
 
@@ -8,6 +8,7 @@ Every number in this folder is measured. The figures are drawn from `evaluation/
 py evaluation/run_evaluation.py         # ~45 min on CPU (DeBERTa NLI); predictions cached in nli_cache.jsonl
 py evaluation/run_llm_generation.py --models llama3.2:latest gemma3:latest llama3.1:8b
                                         # Ollama, CPU only; ~3.5 h for the 8B model; responses cached
+py evaluation/run_montecarlo.py         # study 4: 3,064,800 simulated selections in ~1 min; no model inference
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 
@@ -64,6 +65,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 12 | `fig12_poison_study1.py` (uses `_poison.py`) | `data/fig12_*.csv` | `poison_summary.json` → `descriptive` |
 | 13 | `fig13_poison_study2.py` (uses `_poison.py`) | `data/fig13_*.csv` | `poison2_summary.json` → `descriptive` |
 | 14 | `fig14_detector_tradeoff.py` | `data/fig14_*.csv` | `detector_probe.json` (from `evaluation/run_detector_probe.py`) |
+| 15 | `fig15_montecarlo.py` | `data/fig15_*.csv` | `montecarlo_summary.json`, `montecarlo_e1/e2/e3.csv` (from `evaluation/run_montecarlo.py`) |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -209,6 +211,39 @@ Every table cell is in `tables.md` (Tables 1–10).
   - But those settings warn on about a third of normal questions.
 - **Conclusion.** The binding constraint is detection quality, not speed.
 
+**Fig. 15. Pre-registered Monte Carlo study of the CAS selection layer (study 4; 3,064,800 question-level runs).** The script is `evaluation/run_montecarlo.py`; the plan is in `evaluation/PREREGISTRATION_montecarlo.md`.
+- **What is simulated.**
+  - Only which passages reach the prompt. No LLM is run.
+  - BM25 scores and DeBERTa-v3 predictions are the real ones for the 400 questions of studies 1–2.
+  - Before anything was simulated, the re-implementation reproduced all 4,400 stored study 1–2 selections exactly.
+- **Primary endpoint: silent poison exposure.** A poisoned passage reaches the prompt without a conflict note.
+- **The unit of inference is the question (n = 400).** The run count removes simulation noise; it is not sample size, so no p-values are computed over runs.
+- **(a) Trust weights and τ (E1).**
+  - Settings: 1,250 random ones (weights ~ Dirichlet(1, 1, 1, 1), τ ~ U(0.30, 0.60)) plus the default.
+  - **Against Vanilla RAG:** CAS-NLI preserve has less silent exposure in 100% of settings (pooled mean difference −0.22 without metadata, −0.27 with noisy metadata). It keeps the answer passage less often in every setting, because Vanilla RAG keeps everything.
+  - **Against the source filter (Provenance + BM25 top-3):** CAS has more silent exposure in 100% of settings (+0.50, 95% CI [+0.47, +0.52]). It keeps the answer passage more often in 91% of settings (+0.17 [+0.15, +0.20]).
+  - **Against BM25 top-3:** the silent-exposure difference is not robust to the parameters (CAS is better in 36% of settings without metadata and 62% with noisy metadata). CAS keeps the answer passage more often (+0.19 and +0.23).
+  - **Conclusion:** study 2's finding that the source filter beats CAS is not an artefact of the hand-set weights.
+  - **Note:** at the low end of its range (5th percentile), CAS w/o graph keeps no passage at all, so its exposure is 0 there.
+- **(b) Source-metadata quality (E2).**
+  - Axes: the separation between trusted and untrusted scores (x) and the share of mislabelled sources (y). The boxed cell is condition B of studies 1–2.
+  - The source filter reaches ≤ 5% silent exposure only when no source is mislabelled and the separation is ≥ 0.4. With 10% mislabelled sources it bottoms out at 12%.
+  - CAS-NLI preserve barely responds to metadata quality (0.72–0.79 across the whole grid). It lets more poison through silently than the source filter in every cell. Provenance enters as one weight of 0.25, so even perfect metadata does not outweigh relevance and agreement.
+- **(c, d) Detector quality (E3).**
+  - Setup: a synthetic detector flags each true conflict with probability r (x axis) and adds false alarms on 0–50% of normal questions (line styles). The lines overlap, so false alarms barely change this endpoint.
+  - ★ marks the current DeBERTa detector (r = 0.08 on these pairs). It sits below the curves because it also flags poison against passages other than its source (359 flags in 126 of 400 questions), which the synthetic detector never does.
+  - **Without metadata (c):** CAS-NLI preserve matches BM25 top-3 from r = 0.3. That corresponds to a question-level recall of about 50%, about five times the current detector's 9.75%.
+  - **With noisy metadata (d):** CAS-NLI preserve never reaches the source filter, even with a perfect detector (0.33 vs 0.23). CAS-NLI penalty crosses it between r = 0.8 and 0.9, but by then it keeps the answer passage in at most 25% of questions (e).
+- **(e) The cost, at 10% false alarms.**
+  - Penalty mode penalises both sides of a detected conflict. Going from no detection to a perfect detector cuts how often the answer passage is kept from 71–77% to 11–17%.
+  - Preserve mode also drops, from 72–78% to 45–58%. Reason: the real model labels 470 of 845 gold–poison pairs (56%) as *agreement*, and only 67 (8%) as contradiction. Flagging a pair removes that agreement bonus from both passages.
+  - The same agreement bonus explains why, with no contradiction flags at all, CAS-NLI lets more poison through silently than CAS w/o graph (0.84 vs 0.77 without metadata): a poisoned copy "agrees" with its source, and the trust score rewards it.
+- **E4 (exploratory, real LLM outputs; not plotted; numbers in `montecarlo_summary.json`).**
+  - When poison reached the CAS-NLI preserve prompt, a conflict note did not lower adoption.
+    - Llama 3.2: 15.7% with a note (n = 70) vs 17.2% without (n = 594).
+    - Gemma 3: 28.6% vs 22.4%.
+  - For these small models, a better detector would not help unless the generator acts on the notes.
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -225,7 +260,12 @@ Every table cell is in `tables.md` (Tables 1–10).
 | CAS reduces adoption under a stronger attack (pre-registered study 2) | **Not supported**: no difference from Vanilla RAG, and a simple source filter is significantly better (Fig. 13) |
 | The conflict check can run cheaply on CPU | **Yes**: 0.04 s per query, about 500× faster than now (Fig. 14b) |
 | The conflict check is reliable enough for day-to-day use | **No**: at most 14% of conflicts caught at ≤ 10% false warnings; the current detector warns falsely on about half of normal questions (Fig. 14a) |
-| Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2) |
+| Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2). At the selection level, penalties also discard the answer passage as detection improves (Fig. 15e) |
+| CAS's selection-level results are an artefact of the hand-set weights and τ | **No**: the direction against Vanilla RAG and against the source filter holds in 100% of 1,250 random settings (Fig. 15a) |
+| CAS uses source metadata as well as a simple source filter | **No**: at every metadata quality tested, the filter lets less poison through silently (Fig. 15b) |
+| A better conflict detector would make CAS competitive | **Partly**: without metadata, CAS matches BM25 top-3 once it catches about half of conflicts, about 5× today's detector, whatever the false-alarm rate. With noisy metadata it never matches the source filter (Fig. 15c–d) |
+| The agreement term in the trust score helps against poisoning | **No**: the NLI model calls 56% of gold–poison pairs "agreement", so the bonus raises poison exposure (Fig. 15, E3 at r = 0) |
+| A conflict note stops small LLMs adopting poison | **No evidence**: 15.7–28.6% adoption with a note vs 17.2–22.4% without (exploratory, E4) |
 
 ## Limitations
 
@@ -233,7 +273,8 @@ Every table cell is in `tables.md` (Tables 1–10).
 - **Model size.** The largest LLM tested is an 8B model on CPU. Larger models (≥ 70B), or API models, may use conflict notes differently.
 - **θ at the grid edge.** CV chose θ = 0.99 every time, so the optimum may lie above the grid. That would mean an even weaker contradiction signal, which is consistent with the penalty being harmful.
 - **Automatic answer metrics.** These are string match and keyword cues. A human-annotated sample of `llm_generations.jsonl` is needed to validate them.
-- **No source metadata.** Provenance is a constant prior (0.5), because the benchmarks carry no source reliability. CAS's trust component is therefore only partly exercised.
+- **No source metadata.** Provenance is a constant prior (0.5), because the benchmarks carry no source reliability. CAS's trust component is therefore only partly exercised. Studies 1–2 (condition B) and the Fig. 15b simulation add synthetic metadata, but no real source-reliability labels.
+- **The Monte Carlo study simulates selection only.** Its endpoints are what reaches the prompt, not answers. Its detector and metadata generators are synthetic, and its conclusions hold only within those models.
 - **Self-RAG and CRAG are not implemented.** The comparison numbers previously in `results_cas.py` and the dashboards were not measured, and must not be cited.
 
 ## Audit of figures previously in the repository
