@@ -1,6 +1,7 @@
 ﻿import os
 import sys
 import tempfile
+import ollama
 import streamlit as st
 
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
@@ -10,10 +11,24 @@ from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.retrievers import BM25Retriever
 from sentence_transformers import CrossEncoder
 
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), "python"))
+ROOT = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.join(ROOT, "python"))
+sys.path.append(os.path.join(ROOT, "evaluation"))
 from models.document import Document  # noqa: E402
 from cas_engine import CASEngine  # noqa: E402
 from services.nli_model_verifier import NLIModelVerifier  # noqa: E402
+# Same prompt, decoding settings and passage format as the experiments
+from run_llm_generation import OPTIONS, QA_PROMPT, format_passages  # noqa: E402
+
+THETA = 0.99   # contradiction threshold chosen by cross-validation and used in every experiment
+EXPLAINED_PROMPT = """Answer the question using only the passages below, citing the passages you use, e.g. [2].
+If the passages contradict each other, say so and give each position with its citation.
+If the passages do not contain the answer, reply exactly: unknown
+
+{passages}
+
+Question: {question}
+Answer:"""
 
 st.set_page_config(
     page_title="CAS-V RAG Verification Studio",
@@ -223,6 +238,22 @@ with st.sidebar:
         help="Conflict-preserving keeps both sides of an on-topic contradiction and labels it; "
              "Contradiction penalty down-weights chunks that contradict others.")
 
+    st.markdown("---")
+    st.subheader("🤖 Answer Generation (Ollama)")
+    try:
+        installed = [m.model for m in ollama.list().models]
+    except Exception:
+        installed = []
+    if installed:
+        llm_model = st.selectbox("LLM", installed,
+                                 index=installed.index("llama3.2:latest") if "llama3.2:latest" in installed else 0)
+    else:
+        llm_model = None
+        st.error("Ollama is not running. Start it with `ollama serve`, then reload this page.")
+    answer_style = st.radio(
+        "Answer style", ["Short (as in the experiments)", "Explained, with citations"],
+        help="Short uses the exact prompt and settings of the evaluation; Explained allows a longer, cited answer.")
+
 st.title("⚡ CAS-V Pre-Verification RAG Studio")
 st.caption("Verify factual integrity and evaluate contexts before generating answers.")
 
@@ -255,7 +286,8 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                              retrieval_confidence=1 - i / n, relevance_score=1 - i / n, provenance_score=0.5)
                     for i, doc in enumerate(combined_docs)
                 ]
-                engine = CASEngine(trust_threshold=threshold, verifier=NLIModelVerifier(model=verifier),
+                engine = CASEngine(trust_threshold=threshold,
+                                   verifier=NLIModelVerifier(model=verifier, contradiction_threshold=THETA),
                                    preserve_conflicts=conflict_mode == "Conflict-preserving")
                 result = engine.execute_pipeline(prompt, cas_docs)
                 graph = result["graph"]
@@ -282,19 +314,33 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                     </div>
                     """, unsafe_allow_html=True)
 
-            if verified_contexts:
-                verified_contexts.sort(key=lambda v: v.final_weight, reverse=True)
-                context_block = "\n\n".join(f"[{v.doc.id} · {v.doc.source}] {v.doc.content}" for v in verified_contexts)
-
-                response_text = f"### Answer Based on Verified Context\n\n"
-                response_text += f"Found **{len(verified_contexts)} verified source passage(s)** matching your query:\n\n"
-                response_text += f"> {context_block[:600]}...\n\n"
+            if not verified_contexts:
+                response_text = "❌ **Verification Failed:** No passages passed the reliability and relevance threshold to safely answer your query."
+                st.markdown(response_text)
+            elif llm_model is None:
+                response_text = "⚠️ **No answer generated:** Ollama is not running. Start it with `ollama serve`."
+                st.markdown(response_text)
+            else:
+                # The LLM sees the kept chunks in retrieval order plus a note per kept contradiction, as in the experiments
+                index = {d.id: i for i, d in enumerate(cas_docs)}
+                kept = sorted(index[v.doc.id] for v in verified_contexts)
+                conflicts = [(index[a], index[b]) for a, b in result["conflicts"]]
+                context = format_passages([d.content for d in cas_docs], kept, conflicts)
+                short = answer_style.startswith("Short")
+                llm_prompt = (QA_PROMPT if short else EXPLAINED_PROMPT).format(passages=context, question=prompt)
+                options = OPTIONS if short else {**OPTIONS, "num_predict": 512}
+                try:
+                    stream = ollama.generate(model=llm_model, prompt=llm_prompt, options=options, stream=True)
+                    answer = st.write_stream(chunk.response for chunk in stream).strip()
+                except Exception as e:
+                    answer = f"⚠️ **{llm_model} failed:** {e}"
+                    st.markdown(answer)
+                legend = " · ".join(f"[{k + 1}] {cas_docs[i].id} ({cas_docs[i].source})" for k, i in enumerate(kept))
+                notes = ""
                 if result["conflicts"]:
                     pairs = ", ".join(f"{a} ↔ {b}" for a, b in result["conflicts"])
-                    response_text += f"⚠️ **Conflicting evidence kept for review:** {pairs}\n\n"
-                response_text += "*Note: Chunks were verified with pairwise NLI (DeBERTa-v3) before answer compilation.*"
-            else:
-                response_text = "❌ **Verification Failed:** No passages passed the reliability and relevance threshold to safely answer your query."
-
-            st.markdown(response_text)
+                    notes = f"⚠️ **Contradicting passages passed to the model:** {pairs}\n\n"
+                footer = f"{notes}*{llm_model} answered from {len(kept)} verified passage(s): {legend}*"
+                st.markdown(footer)
+                response_text = f"{answer}\n\n{footer}"
             st.session_state.messages.append({"role": "assistant", "content": response_text})
