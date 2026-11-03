@@ -20,6 +20,7 @@ from cas_engine import CASEngine  # noqa: E402
 from services.nli_model_verifier import NLIModelVerifier  # noqa: E402
 # Same prompt, decoding settings and passage format as the experiments
 from run_llm_generation import OPTIONS, QA_PROMPT, format_passages  # noqa: E402
+from run_evaluation import bm25_scores  # noqa: E402
 
 THETA = 0.99   # contradiction threshold chosen by cross-validation and used in every experiment
 EXPLAINED_PROMPT = """Answer the question using only the passages below, citing the passages you use, e.g. [2].
@@ -299,13 +300,18 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                 combined_docs = list({doc.page_content: doc for doc in (vector_docs + bm25_docs)}.values())
 
                 # CAS pipeline: pairwise passage NLI -> conflict graph -> trust scoring -> synthesis.
-                # Retrieval order stands in for relevance; uploaded files carry no provenance metadata (prior 0.5).
-                n = len(combined_docs)
+                # Scored as in the experiments: relevance = BM25 / pool maximum, confidence from the BM25 rank.
+                # Uploaded files carry no provenance metadata (prior 0.5).
+                texts = [doc.page_content for doc in combined_docs]
+                raw = bm25_scores(prompt, texts)
+                hi = max(raw)
+                rank = {i: r for r, i in enumerate(sorted(range(len(texts)), key=lambda i: -raw[i]))}
+                n = len(texts)
                 cas_docs = [
-                    Document(id=f"C{i + 1}", content=doc.page_content,
-                             source=doc.metadata.get("source", "Unknown"),
-                             retrieval_confidence=1 - i / n, relevance_score=1 - i / n, provenance_score=0.5)
-                    for i, doc in enumerate(combined_docs)
+                    Document(id=f"C{i + 1}", content=text, source=doc.metadata.get("source", "Unknown"),
+                             retrieval_confidence=1 - rank[i] / n, relevance_score=raw[i] / hi if hi > 0 else 0.5,
+                             provenance_score=0.5)
+                    for i, (text, doc) in enumerate(zip(texts, combined_docs))
                 ]
                 engine = CASEngine(trust_threshold=threshold,
                                    verifier=NLIModelVerifier(model=verifier, contradiction_threshold=THETA),
