@@ -1,0 +1,1101 @@
+=== evaluation/run_llm_generation.py
+[115/2760] llama3.2:latest | Vanilla RAG (no filter) done, elapsed 0.0 min
+[230/2760] llama3.2:latest | Relevance top-3 (BM25) done, elapsed 0.0 min
+[345/2760] llama3.2:latest | CAS w/o conflict graph done, elapsed 0.0 min
+[460/2760] llama3.2:latest | CAS (full pipeline) done, elapsed 0.0 min
+[575/2760] llama3.2:latest | CAS-NLI (full pipeline) done, elapsed 0.0 min
+[690/2760] llama3.2:latest | CAS-NLI conflict-preserving done, elapsed 0.0 min
+[805/2760] llama3.2:latest | CAS-NLI θ-CV (penalty) done, elapsed 0.0 min
+[920/2760] llama3.2:latest | CAS-NLI θ-CV preserving done, elapsed 0.0 min
+[1035/2760] gemma3:latest | Vanilla RAG (no filter) done, elapsed 0.0 min
+[1150/2760] gemma3:latest | Relevance top-3 (BM25) done, elapsed 0.0 min
+[1265/2760] gemma3:latest | CAS w/o conflict graph done, elapsed 0.0 min
+[1380/2760] gemma3:latest | CAS (full pipeline) done, elapsed 0.0 min
+[1495/2760] gemma3:latest | CAS-NLI (full pipeline) done, elapsed 0.0 min
+[1610/2760] gemma3:latest | CAS-NLI conflict-preserving done, elapsed 0.0 min
+[1725/2760] gemma3:latest | CAS-NLI θ-CV (penalty) done, elapsed 0.0 min
+[1840/2760] gemma3:latest | CAS-NLI θ-CV preserving done, elapsed 0.0 min
+[1955/2760] llama3.1:8b | Vanilla RAG (no filter) done, elapsed 0.0 min
+[2070/2760] llama3.1:8b | Relevance top-3 (BM25) done, elapsed 0.0 min
+[2185/2760] llama3.1:8b | CAS w/o conflict graph done, elapsed 0.0 min
+[2300/2760] llama3.1:8b | CAS (full pipeline) done, elapsed 0.0 min
+[2415/2760] llama3.1:8b | CAS-NLI (full pipeline) done, elapsed 0.0 min
+[2530/2760] llama3.1:8b | CAS-NLI conflict-preserving done, elapsed 0.0 min
+[2645/2760] llama3.1:8b | CAS-NLI θ-CV (penalty) done, elapsed 0.0 min
+[2760/2760] llama3.1:8b | CAS-NLI θ-CV preserving done, elapsed 0.0 min
+
+QA results (mean [95% CI])
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    f1         0.657 [0.526, 0.778] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    accuracy   0.560 [0.420, 0.700] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    abstain    0.060 [0.000, 0.140] n=50
+  HotpotQA  llama3.2:latest  Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=44
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     f1         0.583 [0.449, 0.709] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     accuracy   0.540 [0.400, 0.680] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  llama3.2:latest  Relevance top-3 (BM25)     ungrounded 0.047 [0.000, 0.116] n=43
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     f1         0.529 [0.393, 0.669] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  llama3.2:latest  CAS w/o conflict graph     ungrounded 0.045 [0.000, 0.114] n=44
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        f1         0.493 [0.353, 0.633] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        accuracy   0.480 [0.340, 0.620] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        abstain    0.120 [0.040, 0.220] n=50
+  HotpotQA  llama3.2:latest  CAS (full pipeline)        ungrounded 0.024 [0.000, 0.072] n=42
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)    f1         0.400 [0.264, 0.532] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)    accuracy   0.340 [0.200, 0.480] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)    abstain    0.280 [0.160, 0.420] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)    ungrounded 0.382 [0.235, 0.530] n=34
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving f1         0.529 [0.393, 0.669] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving abstain    0.100 [0.020, 0.180] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving ungrounded 0.047 [0.000, 0.116] n=43
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)     f1         0.432 [0.292, 0.564] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)     accuracy   0.400 [0.260, 0.540] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)     abstain    0.200 [0.100, 0.320] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)     ungrounded 0.184 [0.079, 0.316] n=38
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving    f1         0.529 [0.393, 0.669] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving    accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving    abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving    ungrounded 0.045 [0.000, 0.114] n=44
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    f1         0.619 [0.487, 0.743] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    accuracy   0.520 [0.380, 0.660] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  gemma3:latest    Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=44
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     f1         0.515 [0.380, 0.647] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     accuracy   0.480 [0.340, 0.620] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     abstain    0.260 [0.140, 0.380] n=50
+  HotpotQA  gemma3:latest    Relevance top-3 (BM25)     ungrounded 0.028 [0.000, 0.083] n=36
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     f1         0.531 [0.399, 0.661] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     accuracy   0.480 [0.340, 0.620] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     abstain    0.180 [0.080, 0.280] n=50
+  HotpotQA  gemma3:latest    CAS w/o conflict graph     ungrounded 0.049 [0.000, 0.122] n=41
+  HotpotQA  gemma3:latest    CAS (full pipeline)        f1         0.531 [0.399, 0.657] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        accuracy   0.480 [0.340, 0.620] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        abstain    0.180 [0.080, 0.300] n=50
+  HotpotQA  gemma3:latest    CAS (full pipeline)        ungrounded 0.025 [0.000, 0.075] n=40
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)    f1         0.336 [0.212, 0.468] n=50
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)    accuracy   0.280 [0.160, 0.420] n=50
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)    abstain    0.300 [0.180, 0.440] n=50
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)    ungrounded 0.400 [0.257, 0.571] n=35
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving f1         0.535 [0.405, 0.665] n=50
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving accuracy   0.500 [0.360, 0.640] n=50
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving abstain    0.180 [0.080, 0.280] n=50
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving ungrounded 0.049 [0.000, 0.122] n=41
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)     f1         0.433 [0.305, 0.561] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)     accuracy   0.360 [0.240, 0.500] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)     abstain    0.240 [0.120, 0.360] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)     ungrounded 0.263 [0.132, 0.395] n=38
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving    f1         0.511 [0.380, 0.645] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving    accuracy   0.460 [0.320, 0.600] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving    abstain    0.180 [0.080, 0.280] n=50
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving    ungrounded 0.049 [0.000, 0.122] n=41
+  HotpotQA  llama3.1:8b      Vanilla RAG (no filter)    f1         0.715 [0.592, 0.829] n=50
+  HotpotQA  llama3.1:8b      Vanilla RAG (no filter)    accuracy   0.680 [0.560, 0.800] n=50
+  HotpotQA  llama3.1:8b      Vanilla RAG (no filter)    abstain    0.080 [0.020, 0.160] n=50
+  HotpotQA  llama3.1:8b      Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=42
+  HotpotQA  llama3.1:8b      Relevance top-3 (BM25)     f1         0.682 [0.552, 0.799] n=50
+  HotpotQA  llama3.1:8b      Relevance top-3 (BM25)     accuracy   0.660 [0.520, 0.780] n=50
+  HotpotQA  llama3.1:8b      Relevance top-3 (BM25)     abstain    0.160 [0.060, 0.260] n=50
+  HotpotQA  llama3.1:8b      Relevance top-3 (BM25)     ungrounded 0.026 [0.000, 0.077] n=39
+  HotpotQA  llama3.1:8b      CAS w/o conflict graph     f1         0.599 [0.473, 0.729] n=50
+  HotpotQA  llama3.1:8b      CAS w/o conflict graph     accuracy   0.560 [0.420, 0.700] n=50
+  HotpotQA  llama3.1:8b      CAS w/o conflict graph     abstain    0.140 [0.060, 0.240] n=50
+  HotpotQA  llama3.1:8b      CAS w/o conflict graph     ungrounded 0.073 [0.000, 0.171] n=41
+  HotpotQA  llama3.1:8b      CAS (full pipeline)        f1         0.609 [0.479, 0.740] n=50
+  HotpotQA  llama3.1:8b      CAS (full pipeline)        accuracy   0.580 [0.440, 0.720] n=50
+  HotpotQA  llama3.1:8b      CAS (full pipeline)        abstain    0.220 [0.100, 0.340] n=50
+  HotpotQA  llama3.1:8b      CAS (full pipeline)        ungrounded 0.054 [0.000, 0.135] n=37
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)    f1         0.349 [0.226, 0.479] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)    accuracy   0.300 [0.180, 0.440] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)    abstain    0.460 [0.320, 0.600] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)    ungrounded 0.423 [0.231, 0.615] n=26
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving f1         0.599 [0.473, 0.729] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving accuracy   0.560 [0.420, 0.700] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving abstain    0.160 [0.060, 0.260] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving ungrounded 0.075 [0.000, 0.175] n=40
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)     f1         0.524 [0.384, 0.653] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)     accuracy   0.460 [0.320, 0.600] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)     abstain    0.260 [0.140, 0.380] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)     ungrounded 0.222 [0.083, 0.361] n=36
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving    f1         0.599 [0.473, 0.729] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving    accuracy   0.560 [0.420, 0.700] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving    abstain    0.160 [0.060, 0.260] n=50
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving    ungrounded 0.075 [0.000, 0.175] n=40
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    f1         0.300 [0.100, 0.533] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    accuracy   0.267 [0.067, 0.467] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    abstain    0.333 [0.133, 0.600] n=15
+  MuSiQue   llama3.2:latest  Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=10
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  Relevance top-3 (BM25)     ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  CAS w/o conflict graph     ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        f1         0.167 [0.000, 0.367] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        abstain    0.467 [0.200, 0.733] n=15
+  MuSiQue   llama3.2:latest  CAS (full pipeline)        ungrounded 0.125 [0.000, 0.375] n=8
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)    f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)    accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)    abstain    0.800 [0.600, 1.000] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)    ungrounded 0.000 [0.000, 0.000] n=3
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving f1         0.000 [0.000, 0.000] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving accuracy   0.000 [0.000, 0.000] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)     f1         0.100 [0.000, 0.267] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)     abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)     ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving    f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving    accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving    abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving    ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    f1         0.164 [0.000, 0.351] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   gemma3:latest    Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   gemma3:latest    Relevance top-3 (BM25)     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     abstain    0.667 [0.400, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS w/o conflict graph     ungrounded 0.000 [0.000, 0.000] n=5
+  MuSiQue   gemma3:latest    CAS (full pipeline)        f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        abstain    0.600 [0.333, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS (full pipeline)        ungrounded 0.000 [0.000, 0.000] n=6
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)    f1         0.053 [0.000, 0.160] n=15
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)    accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)    abstain    0.867 [0.667, 1.000] n=15
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)    ungrounded 0.000 [0.000, 0.000] n=2
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving abstain    0.667 [0.400, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving ungrounded 0.000 [0.000, 0.000] n=5
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)     f1         0.087 [0.000, 0.214] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving    f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving    accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving    abstain    0.667 [0.400, 0.867] n=15
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving    ungrounded 0.000 [0.000, 0.000] n=5
+  MuSiQue   llama3.1:8b      Vanilla RAG (no filter)    f1         0.253 [0.067, 0.467] n=15
+  MuSiQue   llama3.1:8b      Vanilla RAG (no filter)    accuracy   0.267 [0.067, 0.467] n=15
+  MuSiQue   llama3.1:8b      Vanilla RAG (no filter)    abstain    0.533 [0.267, 0.800] n=15
+  MuSiQue   llama3.1:8b      Vanilla RAG (no filter)    ungrounded 0.000 [0.000, 0.000] n=7
+  MuSiQue   llama3.1:8b      Relevance top-3 (BM25)     f1         0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.1:8b      Relevance top-3 (BM25)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.1:8b      Relevance top-3 (BM25)     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.1:8b      Relevance top-3 (BM25)     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   llama3.1:8b      CAS w/o conflict graph     f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   llama3.1:8b      CAS w/o conflict graph     accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.1:8b      CAS w/o conflict graph     abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.1:8b      CAS w/o conflict graph     ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   llama3.1:8b      CAS (full pipeline)        f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   llama3.1:8b      CAS (full pipeline)        accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.1:8b      CAS (full pipeline)        abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.1:8b      CAS (full pipeline)        ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)    f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)    accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)    abstain    0.800 [0.600, 1.000] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)    ungrounded 0.000 [0.000, 0.000] n=3
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving ungrounded 0.000 [0.000, 0.000] n=4
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)     f1         0.087 [0.000, 0.214] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)     accuracy   0.067 [0.000, 0.200] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)     abstain    0.800 [0.600, 1.000] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)     ungrounded 0.000 [0.000, 0.000] n=3
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving    f1         0.120 [0.000, 0.293] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving    accuracy   0.133 [0.000, 0.333] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving    abstain    0.733 [0.467, 0.933] n=15
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving    ungrounded 0.000 [0.000, 0.000] n=4
+
+Paired tests (reference minus comparator)
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.164 [-0.282, -0.050] p=0.0085 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  -0.080 [-0.200, +0.040] p=0.3450 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - Relevance top-3 (BM25)     f1        -0.089 [-0.185, +0.000] p=0.1258 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  -0.060 [-0.140, +0.020] p=0.3755 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - CAS w/o conflict graph     f1        -0.036 [-0.092, +0.000] p=0.4983 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS (full pipeline)          - CAS w/o conflict graph     accuracy  -0.020 [-0.060, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.257 [-0.392, -0.120] p=0.0015 holm=0.2955
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.220 [-0.340, -0.100] p=0.0039 holm=0.7526
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        -0.183 [-0.317, -0.052] p=0.0110 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  -0.200 [-0.340, -0.060] p=0.0140 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        -0.129 [-0.256, -0.013] p=0.0483 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  -0.160 [-0.280, -0.040] p=0.0384 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.128 [-0.257, +0.001] p=0.0662 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  -0.060 [-0.180, +0.060] p=0.5445 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        -0.053 [-0.133, +0.020] p=0.3805 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  -0.040 [-0.120, +0.040] p=0.6271 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.225 [-0.374, -0.083] p=0.0062 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.160 [-0.320, -0.020] p=0.0826 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        -0.151 [-0.271, -0.028] p=0.0314 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  -0.140 [-0.260, -0.020] p=0.0688 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        -0.097 [-0.195, -0.007] p=0.0813 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  -0.100 [-0.200, +0.000] p=0.1290 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.128 [-0.257, +0.001] p=0.0662 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  -0.060 [-0.180, +0.060] p=0.5445 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        -0.053 [-0.133, +0.020] p=0.3805 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  -0.040 [-0.120, +0.040] p=0.6271 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.2:latest  CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.088 [-0.220, +0.048] p=0.2768 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  -0.040 [-0.160, +0.080] p=0.7562 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - Relevance top-3 (BM25)     f1        +0.015 [-0.090, +0.115] p=0.8260 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  +0.000 [-0.100, +0.100] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - CAS w/o conflict graph     f1        +0.000 [-0.060, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS (full pipeline)          - CAS w/o conflict graph     accuracy  +0.000 [-0.060, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.283 [-0.404, -0.165] p=0.0001 holm=0.0210
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.240 [-0.360, -0.120] p=0.0005 holm=0.1005
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        -0.179 [-0.322, -0.042] p=0.0150 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  -0.200 [-0.340, -0.060] p=0.0127 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        -0.195 [-0.313, -0.082] p=0.0029 holm=0.5625
+  HotpotQA  gemma3:latest    CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  -0.200 [-0.320, -0.080] p=0.0062 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.084 [-0.232, +0.056] p=0.3117 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  -0.020 [-0.140, +0.100] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        +0.019 [-0.084, +0.123] p=0.7841 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  +0.020 [-0.080, +0.120] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        +0.004 [-0.048, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  +0.020 [+0.000, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.185 [-0.329, -0.052] p=0.0182 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.160 [-0.300, -0.020] p=0.0579 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        -0.082 [-0.212, +0.042] p=0.2195 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  -0.120 [-0.240, +0.000] p=0.1152 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        -0.097 [-0.184, -0.024] p=0.0326 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  -0.120 [-0.220, -0.040] p=0.0326 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.108 [-0.236, +0.012] p=0.1553 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  -0.060 [-0.180, +0.040] p=0.5190 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        -0.005 [-0.114, +0.101] p=0.9179 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  -0.020 [-0.120, +0.080] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        -0.020 [-0.060, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  gemma3:latest    CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  -0.020 [-0.060, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.105 [-0.201, -0.020] p=0.0239 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  -0.100 [-0.180, -0.020] p=0.0630 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - Relevance top-3 (BM25)     f1        -0.073 [-0.161, +0.020] p=0.1413 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  -0.080 [-0.200, +0.040] p=0.2933 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - CAS w/o conflict graph     f1        +0.010 [+0.000, +0.030] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS (full pipeline)          - CAS w/o conflict graph     accuracy  +0.020 [+0.000, +0.060] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.366 [-0.516, -0.222] p=0.0001 holm=0.0210
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.380 [-0.520, -0.240] p=0.0001 holm=0.0210
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        -0.333 [-0.475, -0.199] p=0.0001 holm=0.0210
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  -0.360 [-0.500, -0.220] p=0.0001 holm=0.0210
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        -0.251 [-0.386, -0.127] p=0.0007 holm=0.1400
+  HotpotQA  llama3.1:8b      CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  -0.260 [-0.380, -0.140] p=0.0004 holm=0.0812
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.115 [-0.211, -0.030] p=0.0170 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  -0.120 [-0.220, -0.040] p=0.0321 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        -0.083 [-0.168, +0.000] p=0.0917 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  -0.100 [-0.200, +0.000] p=0.1208 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.191 [-0.323, -0.063] p=0.0081 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.220 [-0.340, -0.120] p=0.0017 holm=0.3332
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        -0.158 [-0.281, -0.033] p=0.0195 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  -0.200 [-0.340, -0.060] p=0.0141 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        -0.075 [-0.181, +0.024] p=0.1723 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  -0.100 [-0.200, +0.000] p=0.1311 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.115 [-0.211, -0.030] p=0.0170 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  -0.120 [-0.220, -0.040] p=0.0321 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        -0.083 [-0.168, +0.000] p=0.0917 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  -0.100 [-0.200, +0.000] p=0.1208 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  HotpotQA  llama3.1:8b      CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.133 [-0.333, +0.033] p=0.3761 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  -0.133 [-0.333, +0.000] p=0.4985 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - Relevance top-3 (BM25)     f1        +0.100 [+0.000, +0.267] p=0.5022 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - CAS w/o conflict graph     f1        +0.100 [+0.000, +0.267] p=0.5022 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS (full pipeline)          - CAS w/o conflict graph     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.233 [-0.500, +0.033] p=0.2232 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.200 [-0.467, +0.067] p=0.3787 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.300 [-0.533, -0.100] p=0.0654 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  -0.267 [-0.467, -0.067] p=0.1302 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.200 [-0.400, -0.033] p=0.1250 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.200 [-0.400, +0.000] p=0.2483 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        +0.033 [-0.100, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        +0.033 [-0.100, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.233 [-0.467, -0.033] p=0.1315 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  -0.200 [-0.400, +0.000] p=0.2615 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.2:latest  CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.044 [-0.133, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS (full pipeline)          - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.111 [-0.267, +0.000] p=0.5032 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        -0.013 [-0.200, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.044 [-0.133, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.078 [-0.189, +0.000] p=0.5032 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        +0.020 [-0.080, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        -0.033 [-0.100, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.044 [-0.133, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   gemma3:latest    CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    f1        -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    accuracy  -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS (full pipeline)          - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    f1        -0.133 [-0.400, +0.067] p=0.6247 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    accuracy  -0.133 [-0.400, +0.067] p=0.6247 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     f1        +0.053 [-0.134, +0.253] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - Relevance top-3 (BM25)     accuracy  +0.067 [-0.133, +0.267] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - CAS w/o conflict graph     f1        +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI (full pipeline)      - CAS w/o conflict graph     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    f1        -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    accuracy  -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI conflict-preserving  - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    f1        -0.167 [-0.367, +0.000] p=0.2540 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    accuracy  -0.200 [-0.400, +0.000] p=0.2540 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     f1        +0.020 [-0.080, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - Relevance top-3 (BM25)     accuracy  +0.000 [-0.200, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     f1        -0.033 [-0.100, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV (penalty)       - CAS w/o conflict graph     accuracy  -0.067 [-0.200, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    f1        -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    accuracy  -0.133 [-0.333, +0.000] p=0.5082 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     f1        +0.053 [+0.000, +0.160] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - Relevance top-3 (BM25)     accuracy  +0.067 [+0.000, +0.200] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - CAS w/o conflict graph     f1        +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  MuSiQue   llama3.1:8b      CAS-NLI θ-CV preserving      - CAS w/o conflict graph     accuracy  +0.000 [+0.000, +0.000] p=1.0000 holm=1.0000
+  WikiContradict llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    conflict_flagged -0.120 [-0.220, -0.040] p=0.0314 holm=1.0000
+  WikiContradict llama3.2:latest  CAS (full pipeline)          - Vanilla RAG (no filter)    both      -0.140 [-0.240, -0.060] p=0.0159 holm=1.0000
+  WikiContradict llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    conflict_flagged -0.180 [-0.300, -0.060] p=0.0128 holm=1.0000
+  WikiContradict llama3.2:latest  CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    both      -0.320 [-0.460, -0.200] p=0.0001 holm=0.0210
+  WikiContradict llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    conflict_flagged +0.040 [-0.080, +0.160] p=0.7547 holm=1.0000
+  WikiContradict llama3.2:latest  CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    both      -0.180 [-0.280, -0.080] p=0.0040 holm=0.7679
+  WikiContradict llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    conflict_flagged -0.140 [-0.260, -0.020] p=0.0387 holm=1.0000
+  WikiContradict llama3.2:latest  CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    both      -0.240 [-0.360, -0.120] p=0.0007 holm=0.1400
+  WikiContradict llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    conflict_flagged -0.080 [-0.200, +0.040] p=0.3447 holm=1.0000
+  WikiContradict llama3.2:latest  CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    both      -0.180 [-0.280, -0.080] p=0.0040 holm=0.7679
+  WikiContradict gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    conflict_flagged -0.140 [-0.240, -0.060] p=0.0158 holm=1.0000
+  WikiContradict gemma3:latest    CAS (full pipeline)          - Vanilla RAG (no filter)    both      -0.060 [-0.140, +0.000] p=0.2594 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    conflict_flagged +0.200 [+0.040, +0.360] p=0.0424 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    both      -0.220 [-0.340, -0.120] p=0.0014 holm=0.2772
+  WikiContradict gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    conflict_flagged -0.020 [-0.180, +0.120] p=1.0000 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    both      -0.080 [-0.160, -0.020] p=0.1285 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    conflict_flagged -0.060 [-0.200, +0.080] p=0.5423 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    both      -0.140 [-0.240, -0.060] p=0.0165 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    conflict_flagged -0.100 [-0.240, +0.040] p=0.2248 holm=1.0000
+  WikiContradict gemma3:latest    CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    both      -0.080 [-0.160, -0.020] p=0.1285 holm=1.0000
+  WikiContradict llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    conflict_flagged -0.100 [-0.180, -0.020] p=0.0641 holm=1.0000
+  WikiContradict llama3.1:8b      CAS (full pipeline)          - Vanilla RAG (no filter)    both      -0.100 [-0.200, +0.000] p=0.1244 holm=1.0000
+  WikiContradict llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    conflict_flagged -0.240 [-0.360, -0.120] p=0.0004 holm=0.0812
+  WikiContradict llama3.1:8b      CAS-NLI (full pipeline)      - Vanilla RAG (no filter)    both      -0.280 [-0.400, -0.160] p=0.0003 holm=0.0612
+  WikiContradict llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    conflict_flagged -0.020 [-0.140, +0.100] p=1.0000 holm=1.0000
+  WikiContradict llama3.1:8b      CAS-NLI conflict-preserving  - Vanilla RAG (no filter)    both      -0.140 [-0.240, -0.040] p=0.0396 holm=1.0000
+  WikiContradict llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    conflict_flagged -0.180 [-0.300, -0.080] p=0.0044 holm=0.8359
+  WikiContradict llama3.1:8b      CAS-NLI θ-CV (penalty)       - Vanilla RAG (no filter)    both      -0.200 [-0.320, -0.100] p=0.0019 holm=0.3705
+  WikiContradict llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    conflict_flagged -0.120 [-0.220, -0.020] p=0.0722 holm=1.0000
+  WikiContradict llama3.1:8b      CAS-NLI θ-CV preserving      - Vanilla RAG (no filter)    both      -0.140 [-0.240, -0.040] p=0.0396 holm=1.0000
+
+WikiContradict conflict handling
+  llama3.2:latest  Vanilla RAG (no filter)    both              0.480 [0.340, 0.620]
+  llama3.2:latest  Vanilla RAG (no filter)    conflict_flagged  0.220 [0.100, 0.340]
+  llama3.2:latest  Vanilla RAG (no filter)    {'both answers': 24, 'neither': 19, 'one answer': 7} kept=2.00
+  llama3.2:latest  Relevance top-3 (BM25)     both              0.480 [0.340, 0.620]
+  llama3.2:latest  Relevance top-3 (BM25)     conflict_flagged  0.220 [0.100, 0.340]
+  llama3.2:latest  Relevance top-3 (BM25)     {'both answers': 24, 'neither': 19, 'one answer': 7} kept=2.00
+  llama3.2:latest  CAS w/o conflict graph     both              0.300 [0.180, 0.420]
+  llama3.2:latest  CAS w/o conflict graph     conflict_flagged  0.100 [0.020, 0.200]
+  llama3.2:latest  CAS w/o conflict graph     {'both answers': 15, 'neither': 25, 'one answer': 10} kept=1.44
+  llama3.2:latest  CAS (full pipeline)        both              0.340 [0.220, 0.480]
+  llama3.2:latest  CAS (full pipeline)        conflict_flagged  0.100 [0.020, 0.200]
+  llama3.2:latest  CAS (full pipeline)        {'both answers': 17, 'neither': 23, 'one answer': 10} kept=1.62
+  llama3.2:latest  CAS-NLI (full pipeline)    both              0.160 [0.060, 0.260]
+  llama3.2:latest  CAS-NLI (full pipeline)    conflict_flagged  0.040 [0.000, 0.100]
+  llama3.2:latest  CAS-NLI (full pipeline)    {'neither': 37, 'both answers': 8, 'one answer': 5} kept=0.78
+  llama3.2:latest  CAS-NLI conflict-preserving both              0.300 [0.180, 0.420]
+  llama3.2:latest  CAS-NLI conflict-preserving conflict_flagged  0.260 [0.140, 0.380]
+  llama3.2:latest  CAS-NLI conflict-preserving {'both answers': 15, 'neither': 25, 'one answer': 10} kept=1.56
+  llama3.2:latest  CAS-NLI θ-CV (penalty)     both              0.240 [0.120, 0.360]
+  llama3.2:latest  CAS-NLI θ-CV (penalty)     conflict_flagged  0.080 [0.020, 0.160]
+  llama3.2:latest  CAS-NLI θ-CV (penalty)     {'neither': 30, 'both answers': 12, 'one answer': 8} kept=1.26
+  llama3.2:latest  CAS-NLI θ-CV preserving    both              0.300 [0.180, 0.420]
+  llama3.2:latest  CAS-NLI θ-CV preserving    conflict_flagged  0.140 [0.060, 0.240]
+  llama3.2:latest  CAS-NLI θ-CV preserving    {'both answers': 15, 'neither': 25, 'one answer': 10} kept=1.48
+  gemma3:latest    Vanilla RAG (no filter)    both              0.480 [0.340, 0.620]
+  gemma3:latest    Vanilla RAG (no filter)    conflict_flagged  0.320 [0.200, 0.460]
+  gemma3:latest    Vanilla RAG (no filter)    {'both answers': 24, 'neither': 16, 'one answer': 10} kept=2.00
+  gemma3:latest    Relevance top-3 (BM25)     both              0.480 [0.340, 0.620]
+  gemma3:latest    Relevance top-3 (BM25)     conflict_flagged  0.320 [0.200, 0.460]
+  gemma3:latest    Relevance top-3 (BM25)     {'both answers': 24, 'neither': 16, 'one answer': 10} kept=2.00
+  gemma3:latest    CAS w/o conflict graph     both              0.400 [0.260, 0.540]
+  gemma3:latest    CAS w/o conflict graph     conflict_flagged  0.160 [0.060, 0.280]
+  gemma3:latest    CAS w/o conflict graph     {'both answers': 20, 'neither': 17, 'one answer': 13} kept=1.44
+  gemma3:latest    CAS (full pipeline)        both              0.420 [0.280, 0.560]
+  gemma3:latest    CAS (full pipeline)        conflict_flagged  0.180 [0.080, 0.300]
+  gemma3:latest    CAS (full pipeline)        {'both answers': 21, 'neither': 17, 'one answer': 12} kept=1.62
+  gemma3:latest    CAS-NLI (full pipeline)    both              0.260 [0.140, 0.380]
+  gemma3:latest    CAS-NLI (full pipeline)    conflict_flagged  0.520 [0.380, 0.660]
+  gemma3:latest    CAS-NLI (full pipeline)    {'both answers': 13, 'neither': 29, 'one answer': 8} kept=0.78
+  gemma3:latest    CAS-NLI conflict-preserving both              0.400 [0.260, 0.540]
+  gemma3:latest    CAS-NLI conflict-preserving conflict_flagged  0.300 [0.180, 0.440]
+  gemma3:latest    CAS-NLI conflict-preserving {'both answers': 20, 'neither': 17, 'one answer': 13} kept=1.56
+  gemma3:latest    CAS-NLI θ-CV (penalty)     both              0.340 [0.200, 0.460]
+  gemma3:latest    CAS-NLI θ-CV (penalty)     conflict_flagged  0.260 [0.140, 0.380]
+  gemma3:latest    CAS-NLI θ-CV (penalty)     {'both answers': 17, 'neither': 21, 'one answer': 12} kept=1.26
+  gemma3:latest    CAS-NLI θ-CV preserving    both              0.400 [0.260, 0.540]
+  gemma3:latest    CAS-NLI θ-CV preserving    conflict_flagged  0.220 [0.100, 0.340]
+  gemma3:latest    CAS-NLI θ-CV preserving    {'both answers': 20, 'neither': 17, 'one answer': 13} kept=1.48
+  llama3.1:8b      Vanilla RAG (no filter)    both              0.420 [0.280, 0.560]
+  llama3.1:8b      Vanilla RAG (no filter)    conflict_flagged  0.280 [0.160, 0.400]
+  llama3.1:8b      Vanilla RAG (no filter)    {'one answer': 9, 'neither': 20, 'both answers': 21} kept=2.00
+  llama3.1:8b      Relevance top-3 (BM25)     both              0.420 [0.280, 0.560]
+  llama3.1:8b      Relevance top-3 (BM25)     conflict_flagged  0.280 [0.160, 0.400]
+  llama3.1:8b      Relevance top-3 (BM25)     {'one answer': 9, 'neither': 20, 'both answers': 21} kept=2.00
+  llama3.1:8b      CAS w/o conflict graph     both              0.300 [0.180, 0.440]
+  llama3.1:8b      CAS w/o conflict graph     conflict_flagged  0.120 [0.040, 0.220]
+  llama3.1:8b      CAS w/o conflict graph     {'both answers': 15, 'neither': 23, 'one answer': 12} kept=1.44
+  llama3.1:8b      CAS (full pipeline)        both              0.320 [0.200, 0.460]
+  llama3.1:8b      CAS (full pipeline)        conflict_flagged  0.180 [0.080, 0.300]
+  llama3.1:8b      CAS (full pipeline)        {'both answers': 16, 'neither': 22, 'one answer': 12} kept=1.62
+  llama3.1:8b      CAS-NLI (full pipeline)    both              0.140 [0.060, 0.240]
+  llama3.1:8b      CAS-NLI (full pipeline)    conflict_flagged  0.040 [0.000, 0.100]
+  llama3.1:8b      CAS-NLI (full pipeline)    {'neither': 35, 'one answer': 8, 'both answers': 7} kept=0.78
+  llama3.1:8b      CAS-NLI conflict-preserving both              0.280 [0.160, 0.420]
+  llama3.1:8b      CAS-NLI conflict-preserving conflict_flagged  0.260 [0.140, 0.380]
+  llama3.1:8b      CAS-NLI conflict-preserving {'both answers': 14, 'neither': 24, 'one answer': 12} kept=1.56
+  llama3.1:8b      CAS-NLI θ-CV (penalty)     both              0.220 [0.120, 0.340]
+  llama3.1:8b      CAS-NLI θ-CV (penalty)     conflict_flagged  0.100 [0.020, 0.180]
+  llama3.1:8b      CAS-NLI θ-CV (penalty)     {'neither': 28, 'one answer': 11, 'both answers': 11} kept=1.26
+  llama3.1:8b      CAS-NLI θ-CV preserving    both              0.280 [0.160, 0.420]
+  llama3.1:8b      CAS-NLI θ-CV preserving    conflict_flagged  0.160 [0.060, 0.260]
+  llama3.1:8b      CAS-NLI θ-CV preserving    {'both answers': 14, 'neither': 23, 'one answer': 13} kept=1.48
+=== exit 0 after 5 s
+=== evaluation/run_poison.py --study 1
+[selection A] 10/200  elapsed 0.0 min
+[selection A] 20/200  elapsed 0.0 min
+[selection A] 30/200  elapsed 0.0 min
+[selection A] 40/200  elapsed 0.0 min
+[selection A] 50/200  elapsed 0.0 min
+[selection A] 60/200  elapsed 0.0 min
+[selection A] 70/200  elapsed 0.0 min
+[selection A] 80/200  elapsed 0.0 min
+[selection A] 90/200  elapsed 0.0 min
+[selection A] 100/200  elapsed 0.0 min
+[selection A] 110/200  elapsed 0.0 min
+[selection A] 120/200  elapsed 0.0 min
+[selection A] 130/200  elapsed 0.0 min
+[selection A] 140/200  elapsed 0.0 min
+[selection A] 150/200  elapsed 0.0 min
+[selection A] 160/200  elapsed 0.0 min
+[selection A] 170/200  elapsed 0.0 min
+[selection A] 180/200  elapsed 0.0 min
+[selection A] 190/200  elapsed 0.0 min
+[selection A] 200/200  elapsed 0.0 min
+[selection B] 10/200  elapsed 0.0 min
+[selection B] 20/200  elapsed 0.0 min
+[selection B] 30/200  elapsed 0.0 min
+[selection B] 40/200  elapsed 0.0 min
+[selection B] 50/200  elapsed 0.0 min
+[selection B] 60/200  elapsed 0.0 min
+[selection B] 70/200  elapsed 0.0 min
+[selection B] 80/200  elapsed 0.0 min
+[selection B] 90/200  elapsed 0.0 min
+[selection B] 100/200  elapsed 0.0 min
+[selection B] 110/200  elapsed 0.0 min
+[selection B] 120/200  elapsed 0.0 min
+[selection B] 130/200  elapsed 0.0 min
+[selection B] 140/200  elapsed 0.0 min
+[selection B] 150/200  elapsed 0.0 min
+[selection B] 160/200  elapsed 0.0 min
+[selection B] 170/200  elapsed 0.0 min
+[selection B] 180/200  elapsed 0.0 min
+[selection B] 190/200  elapsed 0.0 min
+[selection B] 200/200  elapsed 0.0 min
+[200/5200] llama3.2:latest | A | Vanilla RAG done, elapsed 0.0 min
+[400/5200] llama3.2:latest | A | BM25 top-3 done, elapsed 0.0 min
+[600/5200] llama3.2:latest | A | CAS w/o graph done, elapsed 0.0 min
+[800/5200] llama3.2:latest | A | CAS-keyword done, elapsed 0.0 min
+[1000/5200] llama3.2:latest | A | CAS-NLI penalty done, elapsed 0.0 min
+[1200/5200] llama3.2:latest | A | CAS-NLI preserve done, elapsed 0.0 min
+[1400/5200] llama3.2:latest | B | Vanilla RAG done, elapsed 0.0 min
+[1600/5200] llama3.2:latest | B | BM25 top-3 done, elapsed 0.0 min
+[1800/5200] llama3.2:latest | B | Provenance + BM25 top-3 done, elapsed 0.0 min
+[2000/5200] llama3.2:latest | B | CAS w/o graph done, elapsed 0.0 min
+[2200/5200] llama3.2:latest | B | CAS-keyword done, elapsed 0.0 min
+[2400/5200] llama3.2:latest | B | CAS-NLI penalty done, elapsed 0.0 min
+[2600/5200] llama3.2:latest | B | CAS-NLI preserve done, elapsed 0.1 min
+[2800/5200] gemma3:latest | A | Vanilla RAG done, elapsed 0.1 min
+[3000/5200] gemma3:latest | A | BM25 top-3 done, elapsed 0.1 min
+[3200/5200] gemma3:latest | A | CAS w/o graph done, elapsed 0.1 min
+[3400/5200] gemma3:latest | A | CAS-keyword done, elapsed 0.1 min
+[3600/5200] gemma3:latest | A | CAS-NLI penalty done, elapsed 0.1 min
+[3800/5200] gemma3:latest | A | CAS-NLI preserve done, elapsed 0.1 min
+[4000/5200] gemma3:latest | B | Vanilla RAG done, elapsed 0.1 min
+[4200/5200] gemma3:latest | B | BM25 top-3 done, elapsed 0.1 min
+[4400/5200] gemma3:latest | B | Provenance + BM25 top-3 done, elapsed 0.1 min
+[4600/5200] gemma3:latest | B | CAS w/o graph done, elapsed 0.1 min
+[4800/5200] gemma3:latest | B | CAS-keyword done, elapsed 0.1 min
+[5000/5200] gemma3:latest | B | CAS-NLI penalty done, elapsed 0.1 min
+[5200/5200] gemma3:latest | B | CAS-NLI preserve done, elapsed 0.1 min
+
+Descriptive (mean [95% CI])
+  llama3.2:latest  A Vanilla RAG              adoption           0.035 [0.010, 0.060]
+  llama3.2:latest  A Vanilla RAG              accuracy           0.505 [0.440, 0.570]
+  llama3.2:latest  A Vanilla RAG              abstain            0.030 [0.010, 0.055]
+  llama3.2:latest  A Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  A BM25 top-3               adoption           0.050 [0.025, 0.080]
+  llama3.2:latest  A BM25 top-3               accuracy           0.350 [0.285, 0.420]
+  llama3.2:latest  A BM25 top-3               abstain            0.145 [0.100, 0.195]
+  llama3.2:latest  A BM25 top-3               poison_in_context  0.520 [0.455, 0.590]
+  llama3.2:latest  A CAS w/o graph            adoption           0.040 [0.015, 0.070]
+  llama3.2:latest  A CAS w/o graph            accuracy           0.350 [0.285, 0.420]
+  llama3.2:latest  A CAS w/o graph            abstain            0.190 [0.135, 0.245]
+  llama3.2:latest  A CAS w/o graph            poison_in_context  0.535 [0.465, 0.605]
+  llama3.2:latest  A CAS-keyword              adoption           0.035 [0.010, 0.065]
+  llama3.2:latest  A CAS-keyword              accuracy           0.460 [0.390, 0.530]
+  llama3.2:latest  A CAS-keyword              abstain            0.080 [0.045, 0.120]
+  llama3.2:latest  A CAS-keyword              poison_in_context  0.755 [0.695, 0.815]
+  llama3.2:latest  A CAS-NLI penalty          adoption           0.030 [0.010, 0.055]
+  llama3.2:latest  A CAS-NLI penalty          accuracy           0.330 [0.270, 0.395]
+  llama3.2:latest  A CAS-NLI penalty          abstain            0.260 [0.205, 0.325]
+  llama3.2:latest  A CAS-NLI penalty          poison_in_context  0.575 [0.505, 0.640]
+  llama3.2:latest  A CAS-NLI preserve         adoption           0.035 [0.010, 0.065]
+  llama3.2:latest  A CAS-NLI preserve         accuracy           0.395 [0.330, 0.465]
+  llama3.2:latest  A CAS-NLI preserve         abstain            0.125 [0.080, 0.175]
+  llama3.2:latest  A CAS-NLI preserve         poison_in_context  0.685 [0.620, 0.750]
+  llama3.2:latest  B Vanilla RAG              adoption           0.035 [0.010, 0.060]
+  llama3.2:latest  B Vanilla RAG              accuracy           0.505 [0.440, 0.570]
+  llama3.2:latest  B Vanilla RAG              abstain            0.030 [0.010, 0.055]
+  llama3.2:latest  B Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  B BM25 top-3               adoption           0.050 [0.025, 0.080]
+  llama3.2:latest  B BM25 top-3               accuracy           0.350 [0.285, 0.420]
+  llama3.2:latest  B BM25 top-3               abstain            0.145 [0.100, 0.195]
+  llama3.2:latest  B BM25 top-3               poison_in_context  0.520 [0.455, 0.590]
+  llama3.2:latest  B Provenance + BM25 top-3  adoption           0.025 [0.005, 0.050]
+  llama3.2:latest  B Provenance + BM25 top-3  accuracy           0.345 [0.280, 0.415]
+  llama3.2:latest  B Provenance + BM25 top-3  abstain            0.185 [0.130, 0.240]
+  llama3.2:latest  B Provenance + BM25 top-3  poison_in_context  0.140 [0.090, 0.190]
+  llama3.2:latest  B CAS w/o graph            adoption           0.035 [0.010, 0.065]
+  llama3.2:latest  B CAS w/o graph            accuracy           0.380 [0.315, 0.450]
+  llama3.2:latest  B CAS w/o graph            abstain            0.115 [0.075, 0.160]
+  llama3.2:latest  B CAS w/o graph            poison_in_context  0.495 [0.425, 0.565]
+  llama3.2:latest  B CAS-keyword              adoption           0.035 [0.010, 0.060]
+  llama3.2:latest  B CAS-keyword              accuracy           0.450 [0.380, 0.520]
+  llama3.2:latest  B CAS-keyword              abstain            0.055 [0.025, 0.090]
+  llama3.2:latest  B CAS-keyword              poison_in_context  0.725 [0.660, 0.780]
+  llama3.2:latest  B CAS-NLI penalty          adoption           0.040 [0.015, 0.070]
+  llama3.2:latest  B CAS-NLI penalty          accuracy           0.375 [0.305, 0.445]
+  llama3.2:latest  B CAS-NLI penalty          abstain            0.240 [0.185, 0.305]
+  llama3.2:latest  B CAS-NLI penalty          poison_in_context  0.530 [0.460, 0.600]
+  llama3.2:latest  B CAS-NLI preserve         adoption           0.030 [0.010, 0.055]
+  llama3.2:latest  B CAS-NLI preserve         accuracy           0.435 [0.370, 0.505]
+  llama3.2:latest  B CAS-NLI preserve         abstain            0.095 [0.055, 0.140]
+  llama3.2:latest  B CAS-NLI preserve         poison_in_context  0.635 [0.570, 0.700]
+  gemma3:latest    A Vanilla RAG              adoption           0.065 [0.035, 0.100]
+  gemma3:latest    A Vanilla RAG              accuracy           0.390 [0.320, 0.455]
+  gemma3:latest    A Vanilla RAG              abstain            0.040 [0.015, 0.070]
+  gemma3:latest    A Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A BM25 top-3               adoption           0.045 [0.020, 0.075]
+  gemma3:latest    A BM25 top-3               accuracy           0.295 [0.235, 0.360]
+  gemma3:latest    A BM25 top-3               abstain            0.210 [0.155, 0.270]
+  gemma3:latest    A BM25 top-3               poison_in_context  0.520 [0.455, 0.590]
+  gemma3:latest    A CAS w/o graph            adoption           0.060 [0.030, 0.095]
+  gemma3:latest    A CAS w/o graph            accuracy           0.255 [0.195, 0.315]
+  gemma3:latest    A CAS w/o graph            abstain            0.255 [0.200, 0.315]
+  gemma3:latest    A CAS w/o graph            poison_in_context  0.535 [0.465, 0.605]
+  gemma3:latest    A CAS-keyword              adoption           0.070 [0.035, 0.110]
+  gemma3:latest    A CAS-keyword              accuracy           0.370 [0.305, 0.435]
+  gemma3:latest    A CAS-keyword              abstain            0.135 [0.090, 0.185]
+  gemma3:latest    A CAS-keyword              poison_in_context  0.755 [0.695, 0.815]
+  gemma3:latest    A CAS-NLI penalty          adoption           0.065 [0.035, 0.100]
+  gemma3:latest    A CAS-NLI penalty          accuracy           0.280 [0.220, 0.345]
+  gemma3:latest    A CAS-NLI penalty          abstain            0.285 [0.225, 0.350]
+  gemma3:latest    A CAS-NLI penalty          poison_in_context  0.575 [0.505, 0.640]
+  gemma3:latest    A CAS-NLI preserve         adoption           0.085 [0.050, 0.130]
+  gemma3:latest    A CAS-NLI preserve         accuracy           0.340 [0.275, 0.405]
+  gemma3:latest    A CAS-NLI preserve         abstain            0.180 [0.130, 0.230]
+  gemma3:latest    A CAS-NLI preserve         poison_in_context  0.685 [0.620, 0.750]
+  gemma3:latest    B Vanilla RAG              adoption           0.065 [0.035, 0.100]
+  gemma3:latest    B Vanilla RAG              accuracy           0.390 [0.320, 0.455]
+  gemma3:latest    B Vanilla RAG              abstain            0.040 [0.015, 0.070]
+  gemma3:latest    B Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    B BM25 top-3               adoption           0.045 [0.020, 0.075]
+  gemma3:latest    B BM25 top-3               accuracy           0.295 [0.235, 0.360]
+  gemma3:latest    B BM25 top-3               abstain            0.210 [0.155, 0.270]
+  gemma3:latest    B BM25 top-3               poison_in_context  0.520 [0.455, 0.590]
+  gemma3:latest    B Provenance + BM25 top-3  adoption           0.010 [0.000, 0.025]
+  gemma3:latest    B Provenance + BM25 top-3  accuracy           0.345 [0.280, 0.410]
+  gemma3:latest    B Provenance + BM25 top-3  abstain            0.275 [0.215, 0.340]
+  gemma3:latest    B Provenance + BM25 top-3  poison_in_context  0.140 [0.090, 0.190]
+  gemma3:latest    B CAS w/o graph            adoption           0.070 [0.035, 0.110]
+  gemma3:latest    B CAS w/o graph            accuracy           0.300 [0.235, 0.360]
+  gemma3:latest    B CAS w/o graph            abstain            0.190 [0.140, 0.245]
+  gemma3:latest    B CAS w/o graph            poison_in_context  0.495 [0.425, 0.565]
+  gemma3:latest    B CAS-keyword              adoption           0.075 [0.040, 0.115]
+  gemma3:latest    B CAS-keyword              accuracy           0.370 [0.305, 0.440]
+  gemma3:latest    B CAS-keyword              abstain            0.090 [0.055, 0.130]
+  gemma3:latest    B CAS-keyword              poison_in_context  0.725 [0.660, 0.780]
+  gemma3:latest    B CAS-NLI penalty          adoption           0.065 [0.030, 0.100]
+  gemma3:latest    B CAS-NLI penalty          accuracy           0.300 [0.235, 0.365]
+  gemma3:latest    B CAS-NLI penalty          abstain            0.290 [0.230, 0.355]
+  gemma3:latest    B CAS-NLI penalty          poison_in_context  0.530 [0.460, 0.600]
+  gemma3:latest    B CAS-NLI preserve         adoption           0.080 [0.045, 0.120]
+  gemma3:latest    B CAS-NLI preserve         accuracy           0.365 [0.300, 0.435]
+  gemma3:latest    B CAS-NLI preserve         abstain            0.135 [0.090, 0.185]
+  gemma3:latest    B CAS-NLI preserve         poison_in_context  0.635 [0.570, 0.700]
+
+Confirmatory tests (primary minus comparator; Holm over 20 tests)
+  llama3.2:latest  A vs Vanilla RAG              adoption  +0.000 [-0.030, +0.030] p=1.0000 holm=1.0000
+  llama3.2:latest  A vs Vanilla RAG              accuracy  -0.110 [-0.165, -0.055] p=0.0006 holm=0.0120
+  llama3.2:latest  A vs BM25 top-3               adoption  -0.015 [-0.045, +0.015] p=0.5478 holm=1.0000
+  llama3.2:latest  A vs BM25 top-3               accuracy  +0.045 [-0.015, +0.105] p=0.1916 holm=1.0000
+  llama3.2:latest  B vs Vanilla RAG              adoption  -0.005 [-0.030, +0.020] p=1.0000 holm=1.0000
+  llama3.2:latest  B vs Vanilla RAG              accuracy  -0.070 [-0.130, -0.010] p=0.0316 holm=0.4740
+  llama3.2:latest  B vs BM25 top-3               adoption  -0.020 [-0.055, +0.010] p=0.3927 holm=1.0000
+  llama3.2:latest  B vs BM25 top-3               accuracy  +0.085 [+0.015, +0.150] p=0.0153 holm=0.2601
+  llama3.2:latest  B vs Provenance + BM25 top-3  adoption  +0.005 [-0.025, +0.035] p=1.0000 holm=1.0000
+  llama3.2:latest  B vs Provenance + BM25 top-3  accuracy  +0.090 [+0.025, +0.155] p=0.0134 holm=0.2412
+  gemma3:latest    A vs Vanilla RAG              adoption  +0.020 [-0.020, +0.065] p=0.4826 holm=1.0000
+  gemma3:latest    A vs Vanilla RAG              accuracy  -0.050 [-0.120, +0.020] p=0.2145 holm=1.0000
+  gemma3:latest    A vs BM25 top-3               adoption  +0.040 [+0.010, +0.075] p=0.0210 holm=0.3360
+  gemma3:latest    A vs BM25 top-3               accuracy  +0.045 [-0.010, +0.100] p=0.1623 holm=1.0000
+  gemma3:latest    B vs Vanilla RAG              adoption  +0.015 [-0.025, +0.055] p=0.6304 holm=1.0000
+  gemma3:latest    B vs Vanilla RAG              accuracy  -0.025 [-0.090, +0.040] p=0.5472 holm=1.0000
+  gemma3:latest    B vs BM25 top-3               adoption  +0.035 [+0.005, +0.070] p=0.0668 holm=0.8683
+  gemma3:latest    B vs BM25 top-3               accuracy  +0.070 [+0.010, +0.125] p=0.0331 holm=0.4740
+  gemma3:latest    B vs Provenance + BM25 top-3  adoption  +0.070 [+0.030, +0.110] p=0.0016 holm=0.0304
+  gemma3:latest    B vs Provenance + BM25 top-3  accuracy  +0.020 [-0.045, +0.085] p=0.6591 holm=1.0000
+
+Pre-registered decisions
+  A: CAS-NLI preserve vs Vanilla RAG: not supported
+  A: CAS-NLI preserve vs BM25 top-3: not supported
+  B: CAS-NLI preserve vs Vanilla RAG: not supported
+  B: CAS-NLI preserve vs BM25 top-3: not supported
+  B: CAS-NLI preserve vs Provenance + BM25 top-3: not supported
+=== exit 0 after 10 s
+=== evaluation/run_poison.py --study 2
+[selection A] 10/200  elapsed 0.0 min
+[selection A] 20/200  elapsed 0.0 min
+[selection A] 30/200  elapsed 0.0 min
+[selection A] 40/200  elapsed 0.0 min
+[selection A] 50/200  elapsed 0.0 min
+[selection A] 60/200  elapsed 0.0 min
+[selection A] 70/200  elapsed 0.0 min
+[selection A] 80/200  elapsed 0.0 min
+[selection A] 90/200  elapsed 0.0 min
+[selection A] 100/200  elapsed 0.0 min
+[selection A] 110/200  elapsed 0.0 min
+[selection A] 120/200  elapsed 0.0 min
+[selection A] 130/200  elapsed 0.0 min
+[selection A] 140/200  elapsed 0.0 min
+[selection A] 150/200  elapsed 0.0 min
+[selection A] 160/200  elapsed 0.0 min
+[selection A] 170/200  elapsed 0.0 min
+[selection A] 180/200  elapsed 0.0 min
+[selection A] 190/200  elapsed 0.0 min
+[selection A] 200/200  elapsed 0.0 min
+[selection B] 10/200  elapsed 0.0 min
+[selection B] 20/200  elapsed 0.0 min
+[selection B] 30/200  elapsed 0.0 min
+[selection B] 40/200  elapsed 0.0 min
+[selection B] 50/200  elapsed 0.0 min
+[selection B] 60/200  elapsed 0.0 min
+[selection B] 70/200  elapsed 0.0 min
+[selection B] 80/200  elapsed 0.0 min
+[selection B] 90/200  elapsed 0.0 min
+[selection B] 100/200  elapsed 0.0 min
+[selection B] 110/200  elapsed 0.0 min
+[selection B] 120/200  elapsed 0.0 min
+[selection B] 130/200  elapsed 0.0 min
+[selection B] 140/200  elapsed 0.0 min
+[selection B] 150/200  elapsed 0.0 min
+[selection B] 160/200  elapsed 0.0 min
+[selection B] 170/200  elapsed 0.0 min
+[selection B] 180/200  elapsed 0.0 min
+[selection B] 190/200  elapsed 0.0 min
+[selection B] 200/200  elapsed 0.0 min
+[200/5200] llama3.2:latest | A | Vanilla RAG done, elapsed 0.0 min
+[400/5200] llama3.2:latest | A | BM25 top-3 done, elapsed 0.0 min
+[600/5200] llama3.2:latest | A | CAS w/o graph done, elapsed 0.0 min
+[800/5200] llama3.2:latest | A | CAS-keyword done, elapsed 0.0 min
+[1000/5200] llama3.2:latest | A | CAS-NLI penalty done, elapsed 0.0 min
+[1200/5200] llama3.2:latest | A | CAS-NLI preserve done, elapsed 0.0 min
+[1400/5200] llama3.2:latest | B | Vanilla RAG done, elapsed 0.0 min
+[1600/5200] llama3.2:latest | B | BM25 top-3 done, elapsed 0.0 min
+[1800/5200] llama3.2:latest | B | Provenance + BM25 top-3 done, elapsed 0.0 min
+[2000/5200] llama3.2:latest | B | CAS w/o graph done, elapsed 0.0 min
+[2200/5200] llama3.2:latest | B | CAS-keyword done, elapsed 0.0 min
+[2400/5200] llama3.2:latest | B | CAS-NLI penalty done, elapsed 0.0 min
+[2600/5200] llama3.2:latest | B | CAS-NLI preserve done, elapsed 0.1 min
+[2800/5200] gemma3:latest | A | Vanilla RAG done, elapsed 0.1 min
+[3000/5200] gemma3:latest | A | BM25 top-3 done, elapsed 0.1 min
+[3200/5200] gemma3:latest | A | CAS w/o graph done, elapsed 0.1 min
+[3400/5200] gemma3:latest | A | CAS-keyword done, elapsed 0.1 min
+[3600/5200] gemma3:latest | A | CAS-NLI penalty done, elapsed 0.1 min
+[3800/5200] gemma3:latest | A | CAS-NLI preserve done, elapsed 0.1 min
+[4000/5200] gemma3:latest | B | Vanilla RAG done, elapsed 0.1 min
+[4200/5200] gemma3:latest | B | BM25 top-3 done, elapsed 0.1 min
+[4400/5200] gemma3:latest | B | Provenance + BM25 top-3 done, elapsed 0.1 min
+[4600/5200] gemma3:latest | B | CAS w/o graph done, elapsed 0.1 min
+[4800/5200] gemma3:latest | B | CAS-keyword done, elapsed 0.1 min
+[5000/5200] gemma3:latest | B | CAS-NLI penalty done, elapsed 0.1 min
+[5200/5200] gemma3:latest | B | CAS-NLI preserve done, elapsed 0.1 min
+
+Descriptive (mean [95% CI])
+  llama3.2:latest  A Vanilla RAG              adoption           0.280 [0.220, 0.345]
+  llama3.2:latest  A Vanilla RAG              accuracy           0.230 [0.170, 0.290]
+  llama3.2:latest  A Vanilla RAG              abstain            0.030 [0.010, 0.055]
+  llama3.2:latest  A Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  A BM25 top-3               adoption           0.255 [0.195, 0.310]
+  llama3.2:latest  A BM25 top-3               accuracy           0.185 [0.135, 0.240]
+  llama3.2:latest  A BM25 top-3               abstain            0.085 [0.050, 0.125]
+  llama3.2:latest  A BM25 top-3               poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  A CAS w/o graph            adoption           0.230 [0.175, 0.290]
+  llama3.2:latest  A CAS w/o graph            accuracy           0.145 [0.100, 0.195]
+  llama3.2:latest  A CAS w/o graph            abstain            0.130 [0.085, 0.180]
+  llama3.2:latest  A CAS w/o graph            poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  A CAS-keyword              adoption           0.255 [0.195, 0.315]
+  llama3.2:latest  A CAS-keyword              accuracy           0.250 [0.190, 0.315]
+  llama3.2:latest  A CAS-keyword              abstain            0.095 [0.055, 0.135]
+  llama3.2:latest  A CAS-keyword              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  A CAS-NLI penalty          adoption           0.200 [0.145, 0.255]
+  llama3.2:latest  A CAS-NLI penalty          accuracy           0.180 [0.130, 0.235]
+  llama3.2:latest  A CAS-NLI penalty          abstain            0.285 [0.220, 0.350]
+  llama3.2:latest  A CAS-NLI penalty          poison_in_context  0.750 [0.685, 0.810]
+  llama3.2:latest  A CAS-NLI preserve         adoption           0.265 [0.200, 0.325]
+  llama3.2:latest  A CAS-NLI preserve         accuracy           0.220 [0.165, 0.275]
+  llama3.2:latest  A CAS-NLI preserve         abstain            0.115 [0.075, 0.160]
+  llama3.2:latest  A CAS-NLI preserve         poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  B Vanilla RAG              adoption           0.280 [0.220, 0.345]
+  llama3.2:latest  B Vanilla RAG              accuracy           0.230 [0.170, 0.290]
+  llama3.2:latest  B Vanilla RAG              abstain            0.030 [0.010, 0.055]
+  llama3.2:latest  B Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  B BM25 top-3               adoption           0.255 [0.195, 0.310]
+  llama3.2:latest  B BM25 top-3               accuracy           0.185 [0.135, 0.240]
+  llama3.2:latest  B BM25 top-3               abstain            0.085 [0.050, 0.125]
+  llama3.2:latest  B BM25 top-3               poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  B Provenance + BM25 top-3  adoption           0.035 [0.010, 0.065]
+  llama3.2:latest  B Provenance + BM25 top-3  accuracy           0.275 [0.215, 0.335]
+  llama3.2:latest  B Provenance + BM25 top-3  abstain            0.150 [0.105, 0.205]
+  llama3.2:latest  B Provenance + BM25 top-3  poison_in_context  0.315 [0.255, 0.380]
+  llama3.2:latest  B CAS w/o graph            adoption           0.240 [0.185, 0.300]
+  llama3.2:latest  B CAS w/o graph            accuracy           0.195 [0.140, 0.255]
+  llama3.2:latest  B CAS w/o graph            abstain            0.065 [0.035, 0.100]
+  llama3.2:latest  B CAS w/o graph            poison_in_context  0.995 [0.985, 1.000]
+  llama3.2:latest  B CAS-keyword              adoption           0.230 [0.175, 0.290]
+  llama3.2:latest  B CAS-keyword              accuracy           0.265 [0.205, 0.325]
+  llama3.2:latest  B CAS-keyword              abstain            0.070 [0.040, 0.105]
+  llama3.2:latest  B CAS-keyword              poison_in_context  1.000 [1.000, 1.000]
+  llama3.2:latest  B CAS-NLI penalty          adoption           0.185 [0.130, 0.245]
+  llama3.2:latest  B CAS-NLI penalty          accuracy           0.205 [0.150, 0.260]
+  llama3.2:latest  B CAS-NLI penalty          abstain            0.240 [0.180, 0.305]
+  llama3.2:latest  B CAS-NLI penalty          poison_in_context  0.765 [0.705, 0.825]
+  llama3.2:latest  B CAS-NLI preserve         adoption           0.225 [0.170, 0.285]
+  llama3.2:latest  B CAS-NLI preserve         accuracy           0.250 [0.190, 0.310]
+  llama3.2:latest  B CAS-NLI preserve         abstain            0.105 [0.065, 0.150]
+  llama3.2:latest  B CAS-NLI preserve         poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A Vanilla RAG              adoption           0.285 [0.220, 0.350]
+  gemma3:latest    A Vanilla RAG              accuracy           0.220 [0.165, 0.280]
+  gemma3:latest    A Vanilla RAG              abstain            0.035 [0.015, 0.060]
+  gemma3:latest    A Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A BM25 top-3               adoption           0.290 [0.225, 0.355]
+  gemma3:latest    A BM25 top-3               accuracy           0.180 [0.130, 0.235]
+  gemma3:latest    A BM25 top-3               abstain            0.080 [0.045, 0.120]
+  gemma3:latest    A BM25 top-3               poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A CAS w/o graph            adoption           0.290 [0.225, 0.355]
+  gemma3:latest    A CAS w/o graph            accuracy           0.140 [0.095, 0.190]
+  gemma3:latest    A CAS w/o graph            abstain            0.080 [0.045, 0.120]
+  gemma3:latest    A CAS w/o graph            poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A CAS-keyword              adoption           0.270 [0.210, 0.335]
+  gemma3:latest    A CAS-keyword              accuracy           0.230 [0.170, 0.290]
+  gemma3:latest    A CAS-keyword              abstain            0.065 [0.035, 0.100]
+  gemma3:latest    A CAS-keyword              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    A CAS-NLI penalty          adoption           0.215 [0.160, 0.275]
+  gemma3:latest    A CAS-NLI penalty          accuracy           0.175 [0.125, 0.230]
+  gemma3:latest    A CAS-NLI penalty          abstain            0.225 [0.170, 0.285]
+  gemma3:latest    A CAS-NLI penalty          poison_in_context  0.750 [0.685, 0.810]
+  gemma3:latest    A CAS-NLI preserve         adoption           0.315 [0.255, 0.385]
+  gemma3:latest    A CAS-NLI preserve         accuracy           0.195 [0.140, 0.255]
+  gemma3:latest    A CAS-NLI preserve         abstain            0.090 [0.050, 0.130]
+  gemma3:latest    A CAS-NLI preserve         poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    B Vanilla RAG              adoption           0.285 [0.220, 0.350]
+  gemma3:latest    B Vanilla RAG              accuracy           0.220 [0.165, 0.280]
+  gemma3:latest    B Vanilla RAG              abstain            0.035 [0.015, 0.060]
+  gemma3:latest    B Vanilla RAG              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    B BM25 top-3               adoption           0.290 [0.225, 0.355]
+  gemma3:latest    B BM25 top-3               accuracy           0.180 [0.130, 0.235]
+  gemma3:latest    B BM25 top-3               abstain            0.080 [0.045, 0.120]
+  gemma3:latest    B BM25 top-3               poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    B Provenance + BM25 top-3  adoption           0.040 [0.015, 0.070]
+  gemma3:latest    B Provenance + BM25 top-3  accuracy           0.230 [0.175, 0.290]
+  gemma3:latest    B Provenance + BM25 top-3  abstain            0.285 [0.225, 0.350]
+  gemma3:latest    B Provenance + BM25 top-3  poison_in_context  0.315 [0.255, 0.380]
+  gemma3:latest    B CAS w/o graph            adoption           0.260 [0.200, 0.320]
+  gemma3:latest    B CAS w/o graph            accuracy           0.165 [0.115, 0.220]
+  gemma3:latest    B CAS w/o graph            abstain            0.055 [0.025, 0.090]
+  gemma3:latest    B CAS w/o graph            poison_in_context  0.995 [0.985, 1.000]
+  gemma3:latest    B CAS-keyword              adoption           0.255 [0.195, 0.320]
+  gemma3:latest    B CAS-keyword              accuracy           0.250 [0.190, 0.310]
+  gemma3:latest    B CAS-keyword              abstain            0.030 [0.010, 0.055]
+  gemma3:latest    B CAS-keyword              poison_in_context  1.000 [1.000, 1.000]
+  gemma3:latest    B CAS-NLI penalty          adoption           0.195 [0.145, 0.250]
+  gemma3:latest    B CAS-NLI penalty          accuracy           0.165 [0.115, 0.215]
+  gemma3:latest    B CAS-NLI penalty          abstain            0.205 [0.150, 0.260]
+  gemma3:latest    B CAS-NLI penalty          poison_in_context  0.765 [0.705, 0.825]
+  gemma3:latest    B CAS-NLI preserve         adoption           0.280 [0.220, 0.345]
+  gemma3:latest    B CAS-NLI preserve         accuracy           0.205 [0.150, 0.265]
+  gemma3:latest    B CAS-NLI preserve         abstain            0.070 [0.035, 0.105]
+  gemma3:latest    B CAS-NLI preserve         poison_in_context  1.000 [1.000, 1.000]
+
+Confirmatory tests (primary minus comparator; Holm over 20 tests)
+  llama3.2:latest  A vs Vanilla RAG              adoption  -0.015 [-0.065, +0.040] p=0.7204 holm=1.0000
+  llama3.2:latest  A vs Vanilla RAG              accuracy  -0.010 [-0.065, +0.045] p=0.8615 holm=1.0000
+  llama3.2:latest  A vs BM25 top-3               adoption  +0.010 [-0.035, +0.055] p=0.8346 holm=1.0000
+  llama3.2:latest  A vs BM25 top-3               accuracy  +0.035 [-0.020, +0.085] p=0.2404 holm=1.0000
+  llama3.2:latest  B vs Vanilla RAG              adoption  -0.055 [-0.110, +0.000] p=0.0820 holm=1.0000
+  llama3.2:latest  B vs Vanilla RAG              accuracy  +0.020 [-0.035, +0.080] p=0.6125 holm=1.0000
+  llama3.2:latest  B vs BM25 top-3               adoption  -0.030 [-0.070, +0.015] p=0.2443 holm=1.0000
+  llama3.2:latest  B vs BM25 top-3               accuracy  +0.065 [+0.010, +0.115] p=0.0240 holm=0.4320
+  llama3.2:latest  B vs Provenance + BM25 top-3  adoption  +0.190 [+0.130, +0.245] p=0.0001 holm=0.0020
+  llama3.2:latest  B vs Provenance + BM25 top-3  accuracy  -0.025 [-0.090, +0.040] p=0.5703 holm=1.0000
+  gemma3:latest    A vs Vanilla RAG              adoption  +0.030 [-0.025, +0.090] p=0.3927 holm=1.0000
+  gemma3:latest    A vs Vanilla RAG              accuracy  -0.025 [-0.095, +0.040] p=0.5551 holm=1.0000
+  gemma3:latest    A vs BM25 top-3               adoption  +0.025 [-0.015, +0.065] p=0.3322 holm=1.0000
+  gemma3:latest    A vs BM25 top-3               accuracy  +0.015 [-0.030, +0.065] p=0.6747 holm=1.0000
+  gemma3:latest    B vs Vanilla RAG              adoption  -0.005 [-0.060, +0.055] p=1.0000 holm=1.0000
+  gemma3:latest    B vs Vanilla RAG              accuracy  -0.015 [-0.080, +0.045] p=0.7571 holm=1.0000
+  gemma3:latest    B vs BM25 top-3               adoption  -0.010 [-0.055, +0.035] p=0.8190 holm=1.0000
+  gemma3:latest    B vs BM25 top-3               accuracy  +0.025 [-0.020, +0.075] p=0.4193 holm=1.0000
+  gemma3:latest    B vs Provenance + BM25 top-3  adoption  +0.240 [+0.180, +0.310] p=0.0001 holm=0.0020
+  gemma3:latest    B vs Provenance + BM25 top-3  accuracy  -0.025 [-0.090, +0.045] p=0.5498 holm=1.0000
+
+Pre-registered decisions
+  A: CAS-NLI preserve vs Vanilla RAG: not supported
+  A: CAS-NLI preserve vs BM25 top-3: not supported
+  B: CAS-NLI preserve vs Vanilla RAG: not supported
+  B: CAS-NLI preserve vs BM25 top-3: not supported
+  B: CAS-NLI preserve vs Provenance + BM25 top-3: not supported
+=== exit 0 after 11 s
+=== evaluation/run_clean500.py
+[selection] 10/500  elapsed 0.0 min
+[selection] 20/500  elapsed 0.0 min
+[selection] 30/500  elapsed 0.0 min
+[selection] 40/500  elapsed 0.0 min
+[selection] 50/500  elapsed 0.0 min
+[selection] 60/500  elapsed 0.0 min
+[selection] 70/500  elapsed 0.0 min
+[selection] 80/500  elapsed 0.0 min
+[selection] 90/500  elapsed 0.0 min
+[selection] 100/500  elapsed 0.0 min
+[selection] 110/500  elapsed 0.0 min
+[selection] 120/500  elapsed 0.0 min
+[selection] 130/500  elapsed 0.0 min
+[selection] 140/500  elapsed 0.0 min
+[selection] 150/500  elapsed 0.0 min
+[selection] 160/500  elapsed 0.0 min
+[selection] 170/500  elapsed 0.0 min
+[selection] 180/500  elapsed 0.0 min
+[selection] 190/500  elapsed 0.0 min
+[selection] 200/500  elapsed 0.0 min
+[selection] 210/500  elapsed 0.0 min
+[selection] 220/500  elapsed 0.0 min
+[selection] 230/500  elapsed 0.0 min
+[selection] 240/500  elapsed 0.0 min
+[selection] 250/500  elapsed 0.0 min
+[selection] 260/500  elapsed 0.0 min
+[selection] 270/500  elapsed 0.0 min
+[selection] 280/500  elapsed 0.0 min
+[selection] 290/500  elapsed 0.0 min
+[selection] 300/500  elapsed 0.0 min
+[selection] 310/500  elapsed 0.0 min
+[selection] 320/500  elapsed 0.0 min
+[selection] 330/500  elapsed 0.0 min
+[selection] 340/500  elapsed 0.0 min
+[selection] 350/500  elapsed 0.0 min
+[selection] 360/500  elapsed 0.0 min
+[selection] 370/500  elapsed 0.0 min
+[selection] 380/500  elapsed 0.0 min
+[selection] 390/500  elapsed 0.0 min
+[selection] 400/500  elapsed 0.0 min
+[selection] 410/500  elapsed 0.0 min
+[selection] 420/500  elapsed 0.0 min
+[selection] 430/500  elapsed 0.0 min
+[selection] 440/500  elapsed 0.0 min
+[selection] 450/500  elapsed 0.0 min
+[selection] 460/500  elapsed 0.0 min
+[selection] 470/500  elapsed 0.0 min
+[selection] 480/500  elapsed 0.0 min
+[selection] 490/500  elapsed 0.0 min
+[selection] 500/500  elapsed 0.0 min
+[500/6000] llama3.2:latest | Vanilla RAG done, elapsed 0.0 min
+[1000/6000] llama3.2:latest | BM25 top-3 done, elapsed 0.0 min
+[1500/6000] llama3.2:latest | Reranker top-3 done, elapsed 0.0 min
+[2000/6000] llama3.2:latest | CAS w/o graph done, elapsed 0.0 min
+[2500/6000] llama3.2:latest | CAS-NLI penalty done, elapsed 0.0 min
+[3000/6000] llama3.2:latest | CAS-NLI preserve done, elapsed 0.0 min
+[3500/6000] gemma3:latest | Vanilla RAG done, elapsed 0.0 min
+[4000/6000] gemma3:latest | BM25 top-3 done, elapsed 0.0 min
+[4500/6000] gemma3:latest | Reranker top-3 done, elapsed 0.0 min
+[5000/6000] gemma3:latest | CAS w/o graph done, elapsed 0.0 min
+[5500/6000] gemma3:latest | CAS-NLI penalty done, elapsed 0.0 min
+[6000/6000] gemma3:latest | CAS-NLI preserve done, elapsed 0.0 min
+
+Descriptive (mean [95% CI])
+  evidence -                Vanilla RAG        f1            0.335 [0.333, 0.337]
+  evidence -                BM25 top-3         f1            0.640 [0.622, 0.658]
+  evidence -                Reranker top-3     f1            0.648 [0.630, 0.665]
+  evidence -                CAS w/o graph      f1            0.680 [0.661, 0.699]
+  evidence -                CAS-keyword        f1            0.614 [0.595, 0.633]
+  evidence -                CAS-NLI penalty    f1            0.557 [0.530, 0.585]
+  evidence -                CAS-NLI preserve   f1            0.669 [0.650, 0.687]
+  answer   llama3.2:latest  Vanilla RAG        accuracy      0.502 [0.458, 0.546]
+  answer   llama3.2:latest  Vanilla RAG        f1            0.582 [0.543, 0.622]
+  answer   llama3.2:latest  Vanilla RAG        prompt_tokens 1432.640 [1405.120, 1460.234]
+  answer   llama3.2:latest  BM25 top-3         accuracy      0.472 [0.428, 0.512]
+  answer   llama3.2:latest  BM25 top-3         f1            0.543 [0.502, 0.583]
+  answer   llama3.2:latest  BM25 top-3         prompt_tokens 438.728 [427.902, 448.822]
+  answer   llama3.2:latest  Reranker top-3     accuracy      0.450 [0.406, 0.492]
+  answer   llama3.2:latest  Reranker top-3     f1            0.511 [0.471, 0.549]
+  answer   llama3.2:latest  Reranker top-3     prompt_tokens 426.788 [417.010, 435.906]
+  answer   llama3.2:latest  CAS w/o graph      accuracy      0.466 [0.422, 0.508]
+  answer   llama3.2:latest  CAS w/o graph      f1            0.529 [0.491, 0.571]
+  answer   llama3.2:latest  CAS w/o graph      prompt_tokens 386.104 [369.036, 404.554]
+  answer   llama3.2:latest  CAS-NLI penalty    accuracy      0.406 [0.362, 0.452]
+  answer   llama3.2:latest  CAS-NLI penalty    f1            0.456 [0.415, 0.499]
+  answer   llama3.2:latest  CAS-NLI penalty    prompt_tokens 340.760 [323.042, 359.637]
+  answer   llama3.2:latest  CAS-NLI preserve   accuracy      0.464 [0.420, 0.508]
+  answer   llama3.2:latest  CAS-NLI preserve   f1            0.525 [0.486, 0.565]
+  answer   llama3.2:latest  CAS-NLI preserve   prompt_tokens 406.518 [387.736, 427.711]
+  answer   gemma3:latest    Vanilla RAG        accuracy      0.456 [0.412, 0.498]
+  answer   gemma3:latest    Vanilla RAG        f1            0.539 [0.498, 0.579]
+  answer   gemma3:latest    Vanilla RAG        prompt_tokens 1462.410 [1433.844, 1491.708]
+  answer   gemma3:latest    BM25 top-3         accuracy      0.410 [0.368, 0.454]
+  answer   gemma3:latest    BM25 top-3         f1            0.484 [0.442, 0.524]
+  answer   gemma3:latest    BM25 top-3         prompt_tokens 438.184 [426.940, 448.711]
+  answer   gemma3:latest    Reranker top-3     accuracy      0.392 [0.350, 0.434]
+  answer   gemma3:latest    Reranker top-3     f1            0.457 [0.417, 0.497]
+  answer   gemma3:latest    Reranker top-3     prompt_tokens 426.694 [416.802, 436.286]
+  answer   gemma3:latest    CAS w/o graph      accuracy      0.390 [0.348, 0.432]
+  answer   gemma3:latest    CAS w/o graph      f1            0.453 [0.412, 0.494]
+  answer   gemma3:latest    CAS w/o graph      prompt_tokens 384.144 [366.536, 403.243]
+  answer   gemma3:latest    CAS-NLI penalty    accuracy      0.310 [0.270, 0.352]
+  answer   gemma3:latest    CAS-NLI penalty    f1            0.363 [0.323, 0.401]
+  answer   gemma3:latest    CAS-NLI penalty    prompt_tokens 336.868 [318.607, 356.532]
+  answer   gemma3:latest    CAS-NLI preserve   accuracy      0.388 [0.346, 0.430]
+  answer   gemma3:latest    CAS-NLI preserve   f1            0.447 [0.407, 0.488]
+  answer   gemma3:latest    CAS-NLI preserve   prompt_tokens 405.300 [385.842, 427.236]
+
+Confirmatory (primary minus comparator; Holm over 9 tests)
+  H1 -                vs Vanilla RAG     f1        +0.334 [+0.316, +0.353] p=0.0001 holm=0.0009
+  H1 -                vs BM25 top-3      f1        +0.029 [+0.016, +0.043] p=0.0002 holm=0.0016
+  H1 -                vs Reranker top-3  f1        +0.021 [-0.001, +0.043] p=0.0671 holm=0.4026
+  H2 llama3.2:latest  vs Vanilla RAG     accuracy  -0.038 [-0.078, +0.000] p=0.0826 holm=0.4130
+  H2 llama3.2:latest  vs BM25 top-3      accuracy  -0.008 [-0.036, +0.020] p=0.6852 holm=1.0000
+  H2 llama3.2:latest  vs Reranker top-3  accuracy  +0.014 [-0.026, +0.050] p=0.5448 holm=1.0000
+  H2 gemma3:latest    vs Vanilla RAG     accuracy  -0.068 [-0.108, -0.030] p=0.0014 holm=0.0098
+  H2 gemma3:latest    vs BM25 top-3      accuracy  -0.022 [-0.050, +0.008] p=0.1880 holm=0.7519
+  H2 gemma3:latest    vs Reranker top-3  accuracy  -0.004 [-0.044, +0.036] p=0.9156 holm=1.0000
+  H3 llama3.2:latest  vs Vanilla RAG accuracy -0.038 [-0.078, +0.000] margin -0.05: fails
+  H3 gemma3:latest    vs Vanilla RAG accuracy -0.068 [-0.108, -0.030] margin -0.05: fails
+
+Pre-registered decisions
+  CAS selects better evidence (H1): not supported
+  CAS improves answers (H2): not supported
+  CAS filtering is accuracy-neutral (H3): not supported
+=== exit 0 after 4 s
+=== evaluation/run_montecarlo.py
+validation: {'selections_checked': 4400, 'mismatches': 0}
+[simulation] 50/400 questions  elapsed 0.0 min
+[simulation] 100/400 questions  elapsed 0.0 min
+[simulation] 150/400 questions  elapsed 0.0 min
+[simulation] 200/400 questions  elapsed 0.0 min
+[simulation] 250/400 questions  elapsed 0.1 min
+[simulation] 300/400 questions  elapsed 0.1 min
+[simulation] 350/400 questions  elapsed 0.1 min
+[simulation] 400/400 questions  elapsed 0.1 min
+
+3,064,800 question-level runs ({'E1': 1000800, 'E2': 1008000, 'E3': 1056000}) in 0.7 min
+
+E1: CAS-NLI preserve minus comparator over 1,250 random weight/tau settings (pooled, 400 questions)
+  A vs Vanilla RAG              silent_exposure   default -0.213  median -0.225 [p5 -0.285, p95 -0.137]  CAS better in 100.0%  robust=True
+  A vs Vanilla RAG              exposure          default -0.157  median -0.150 [p5 -0.243, p95 -0.052]  CAS better in 98.6%  robust=True
+  A vs Vanilla RAG              answer_available  default -0.287  median -0.265 [p5 -0.536, p95 -0.085]  CAS better in 0.0%  robust=True
+  A vs BM25 top-3               silent_exposure   default +0.027  median +0.015 [p5 -0.045, p95 +0.103]  CAS better in 36.2%  robust=False
+  A vs BM25 top-3               exposure          default +0.083  median +0.090 [p5 -0.003, p95 +0.188]  CAS better in 5.2%  robust=True
+  A vs BM25 top-3               answer_available  default +0.177  median +0.200 [p5 -0.071, p95 +0.380]  CAS better in 89.9%  robust=False
+  B vs Vanilla RAG              silent_exposure   default -0.255  median -0.257 [p5 -0.421, p95 -0.162]  CAS better in 100.0%  robust=True
+  B vs Vanilla RAG              exposure          default -0.180  median -0.170 [p5 -0.302, p95 -0.085]  CAS better in 100.0%  robust=True
+  B vs Vanilla RAG              answer_available  default -0.213  median -0.230 [p5 -0.450, p95 -0.066]  CAS better in 0.0%  robust=True
+  B vs BM25 top-3               silent_exposure   default -0.015  median -0.017 [p5 -0.181, p95 +0.078]  CAS better in 62.3%  robust=False
+  B vs BM25 top-3               exposure          default +0.060  median +0.070 [p5 -0.062, p95 +0.155]  CAS better in 14.4%  robust=False
+  B vs BM25 top-3               answer_available  default +0.252  median +0.235 [p5 +0.015, p95 +0.399]  CAS better in 95.7%  robust=True
+  B vs Provenance + BM25 top-3  silent_exposure   default +0.512  median +0.510 [p5 +0.339, p95 +0.605]  CAS better in 0.0%  robust=True
+  B vs Provenance + BM25 top-3  exposure          default +0.587  median +0.593 [p5 +0.452, p95 +0.682]  CAS better in 0.0%  robust=True
+  B vs Provenance + BM25 top-3  answer_available  default +0.190  median +0.182 [p5 -0.040, p95 +0.350]  CAS better in 91.8%  robust=True
+
+E2:
+  {'flip': 0.0, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': 0.4, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.1, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.2, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.3, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.4, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+  {'flip': 0.5, 'min_separation_silent_le_0.05 | Provenance + BM25 top-3': None, 'min_separation_silent_le_0.05 | CAS w/o graph': None, 'min_separation_silent_le_0.05 | CAS-NLI penalty': None, 'min_separation_silent_le_0.05 | CAS-NLI preserve': None, 'min_separation_cas_no_worse_than_source_filter': None}
+
+E3:
+  {'condition': 'A', 'false_alarm': 0.0, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.7125, 'penalty_answer_available_r1': 0.105, 'preserve_answer_available_r0': 0.7125, 'preserve_answer_available_r1': 0.4475, 'realised_question_recall_at_min_r': 0.50375, 'realised_false_alarm': 0.0}
+  {'condition': 'A', 'false_alarm': 0.1, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.7020000000000002, 'penalty_answer_available_r1': 0.10300000000000001, 'preserve_answer_available_r0': 0.7125, 'preserve_answer_available_r1': 0.4475, 'realised_question_recall_at_min_r': 0.5016666666666666, 'realised_false_alarm': 0.10033333333333332}
+  {'condition': 'A', 'false_alarm': 0.25, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.6821666666666667, 'penalty_answer_available_r1': 0.09925, 'preserve_answer_available_r0': 0.7125, 'preserve_answer_available_r1': 0.44775, 'realised_question_recall_at_min_r': 0.5011666666666666, 'realised_false_alarm': 0.24241666666666667}
+  {'condition': 'A', 'false_alarm': 0.5, 'comparator': 'BM25 top-3', 'min_recall_cas_no_worse': 0.3, 'comparator_silent_exposure': 0.76, 'penalty_answer_available_r0': 0.6359166666666668, 'penalty_answer_available_r1': 0.09308333333333334, 'preserve_answer_available_r0': 0.7125, 'preserve_answer_available_r1': 0.4480833333333334, 'realised_question_recall_at_min_r': 0.5041666666666667, 'realised_false_alarm': 0.5053333333333333}
+  {'condition': 'B', 'false_alarm': 0.0, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.22775, 'penalty_answer_available_r0': 0.7780833333333333, 'penalty_answer_available_r1': 0.16341666666666668, 'preserve_answer_available_r0': 0.7780833333333333, 'preserve_answer_available_r1': 0.57225, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.0}
+  {'condition': 'B', 'false_alarm': 0.1, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.2371666666666667, 'penalty_answer_available_r0': 0.7689166666666668, 'penalty_answer_available_r1': 0.15983333333333336, 'preserve_answer_available_r0': 0.7806666666666666, 'preserve_answer_available_r1': 0.57575, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.10258333333333333}
+  {'condition': 'B', 'false_alarm': 0.25, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.23575, 'penalty_answer_available_r0': 0.7445, 'penalty_answer_available_r1': 0.15333333333333335, 'preserve_answer_available_r0': 0.778, 'preserve_answer_available_r1': 0.5724166666666667, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.25066666666666665}
+  {'condition': 'B', 'false_alarm': 0.5, 'comparator': 'Provenance + BM25 top-3', 'min_recall_cas_no_worse': None, 'comparator_silent_exposure': 0.23391666666666666, 'penalty_answer_available_r0': 0.7045, 'penalty_answer_available_r1': 0.14391666666666666, 'preserve_answer_available_r0': 0.7811666666666668, 'preserve_answer_available_r1': 0.5711666666666666, 'realised_question_recall_at_min_r': None, 'realised_false_alarm': 0.4988333333333334}
+
+E4:
+  {'model': 'gemma3:latest', 'poison_marked_by_note': False, 'n': 594, 'adoption': 0.2222222222222222, 'ci_low': 0.19023569023569023, 'ci_high': 0.25757575757575757}
+  {'model': 'gemma3:latest', 'poison_marked_by_note': True, 'n': 70, 'adoption': 0.2857142857142857, 'ci_low': 0.18571428571428572, 'ci_high': 0.4}
+  {'model': 'llama3.2:latest', 'poison_marked_by_note': False, 'n': 594, 'adoption': 0.16835016835016836, 'ci_low': 0.13973063973063973, 'ci_high': 0.19865319865319866}
+  {'model': 'llama3.2:latest', 'poison_marked_by_note': True, 'n': 70, 'adoption': 0.15714285714285714, 'ci_low': 0.07142857142857142, 'ci_high': 0.24285714285714285}
+=== exit 0 after 40 s
+=== evaluation/run_detector_probe.py
+current_cas_detector   S1 recall 0.050 FA 0.550 | S2 recall 0.145 FA 0.525 | wiki 0.140 | 21.45 s/query  {'detector': 'deberta_passage', 'theta': 0.99, 'gate': 0.0, 'directions': 'both', 's1_recall': 0.05, 's1_false_alarm': 0.55, 's1_sec_per_query': 21.454503888053683, 's1_pairs_per_query': 44.24, 's2_recall': 0.145, 's2_false_alarm': 0.525, 's2_sec_per_query': 22.09380953210386, 's2_pairs_per_query': 44.955, 'wiki_recall': 0.14}
+chosen_nli             S1 recall 0.045 FA 0.055 | S2 recall 0.030 FA 0.020 | wiki 0.000 | 0.15 s/query  {'detector': 'minilm_passage', 'theta': 0.99, 'gate': 0.5, 'directions': 'one', 's1_recall': 0.045, 's1_false_alarm': 0.055, 's1_sec_per_query': 0.15498033027892147, 's1_pairs_per_query': 2.475, 's2_recall': 0.03, 's2_false_alarm': 0.02, 's2_sec_per_query': 0.14337028940425323, 's2_pairs_per_query': 2.15, 'wiki_recall': 0.0}
+chosen_answer_level    S1 recall 0.060 FA 0.085 | S2 recall 0.070 FA 0.060 | wiki 0.080 | 0.43 s/query  {'detector': 'answer-level (tinyroberta-squad2)', 'sigma': 0.7, 's1_recall': 0.06, 's1_false_alarm': 0.085, 's1_sec_per_query': 0.42660914054934673, 's2_recall': 0.07, 's2_false_alarm': 0.06, 's2_sec_per_query': 0.45096975029807645, 'wiki_recall': 0.08}
+=== exit 0 after 6 s
+=== evaluation/human_eval/make_sheet.py
+wrote 150 rows (75 clean, 75 poison)
+=== exit 0 after 0 s

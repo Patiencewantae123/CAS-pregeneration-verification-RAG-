@@ -163,7 +163,7 @@ llama3.2:latest,A,Vanilla RAG,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0.6
 llama3.2:latest,A,Vanilla RAG,5ae63dad55429929b0807afe,11 January 1932,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1399,10.046449900008156,11 January 1932
 llama3.2:latest,A,Vanilla RAG,5ab92f52554299131ca422a9,Dutch,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13,0,1841,13.385808499995619,Dutch
 llama3.2:latest,A,Vanilla RAG,5ae2f97555429928c4239582,King Duncan,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1855,13.953926699992735,King Duncan
-llama3.2:latest,A,Vanilla RAG,5a8b515e55429971feec46bb,Red Dead Redemption II.,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,13,0,2141,16.199766299992916,Red Dead Redemption II.
+llama3.2:latest,A,Vanilla RAG,5a8b515e55429971feec46bb,Red Dead Redemption II.,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,13,0,2141,16.199766299992916,Red Dead Redemption II.
 llama3.2:latest,A,Vanilla RAG,5a7602d8554299109176e5fb,Dawn French.,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1368,9.861882199998945,Dawn French.
 llama3.2:latest,A,Vanilla RAG,5a7f46115542994857a766d9,Rothschild,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1809,13.435084199998528,Rothschild
 llama3.2:latest,A,Vanilla RAG,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1659,12.765798800013727,"Paradise, Nevada"
@@ -176,7 +176,7 @@ llama3.2:latest,A,Vanilla RAG,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0
 llama3.2:latest,A,Vanilla RAG,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1835,13.298953999998048,USNS Clemson
 llama3.2:latest,A,Vanilla RAG,5a8e0c595542995085b373b0,Bizzy Crook,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1665,12.10987759999989,Bizzy Crook
 llama3.2:latest,A,Vanilla RAG,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13,0,1741,12.743758399999933,Letters to Cleo
-llama3.2:latest,A,Vanilla RAG,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1627,12.174909099994693,Buena Vista Distribution
+llama3.2:latest,A,Vanilla RAG,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1627,12.174909099994693,Buena Vista Distribution
 llama3.2:latest,A,Vanilla RAG,5abf1ad15542997ec76fd3c2,Lafayette,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1629,11.786388500011526,Lafayette
 llama3.2:latest,A,Vanilla RAG,5a85d4395542996432c570f5,Troy,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1166,8.058535699994536,Troy
 llama3.2:latest,A,Vanilla RAG,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1831,13.301757999986876,Season 5
@@ -376,7 +376,7 @@ llama3.2:latest,A,BM25 top-3,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0,
 llama3.2:latest,A,BM25 top-3,5adc91865542994ed6169b93,Almirante Brown-class,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,437,2.8486209000111558,Almirante Brown-class
 llama3.2:latest,A,BM25 top-3,5a8e0c595542995085b373b0,New York City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,409,2.5756549000070663,New York City
 llama3.2:latest,A,BM25 top-3,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,A,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,392,2.5123659999953816,Buena Vista Distribution
+llama3.2:latest,A,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,392,2.5123659999953816,Buena Vista Distribution
 llama3.2:latest,A,BM25 top-3,5abf1ad15542997ec76fd3c2,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette",0.0,0.18181818181818182,0.0,0.0,0.0,0.0,1.0,1.0,3,0,436,3.5163197000074433,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette"
 llama3.2:latest,A,BM25 top-3,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,221,1.1604740999900969,unknown
 llama3.2:latest,A,BM25 top-3,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,438,2.6931886000093073,Season 5
@@ -432,7 +432,7 @@ llama3.2:latest,A,CAS w/o graph,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.0,
 llama3.2:latest,A,CAS w/o graph,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,2,0,284,1.6969473000062862,Child actress
 llama3.2:latest,A,CAS w/o graph,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,276,1.6054024000040954,Lewis Carroll
 llama3.2:latest,A,CAS w/o graph,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,344,2.184563100003288,Atlético Madrid
-llama3.2:latest,A,CAS w/o graph,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,2,0,190,1.1850921000004746,Invasion of Java
+llama3.2:latest,A,CAS w/o graph,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,2,0,190,1.1850921000004746,Invasion of Java
 llama3.2:latest,A,CAS w/o graph,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,0.0,4,0,642,4.379104499996174,West Bromwich Albion
 llama3.2:latest,A,CAS w/o graph,5ac2acff55429921a00ab02b,Brian Doyle-Murray,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,486,3.1950410999997985,Brian Doyle-Murray
 llama3.2:latest,A,CAS w/o graph,5ae095f055429924de1b7103,Albert S. Rogell.,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2,0,377,2.5738408000033814,Albert S. Rogell.
@@ -576,7 +576,7 @@ llama3.2:latest,A,CAS w/o graph,5a7f40de5542992e7d278cc8,Bambi Hall,0.0,0.0,0.0,
 llama3.2:latest,A,CAS w/o graph,5adc91865542994ed6169b93,Almirante Brown-class,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,292,1.902111800009152,Almirante Brown-class
 llama3.2:latest,A,CAS w/o graph,5a8e0c595542995085b373b0,Bizzy Crook,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,236,0.647440300002927,Bizzy Crook
 llama3.2:latest,A,CAS w/o graph,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,A,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,279,0.7514346999960253,Buena Vista Distribution
+llama3.2:latest,A,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,279,0.7514346999960253,Buena Vista Distribution
 llama3.2:latest,A,CAS w/o graph,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,545,2.664118000000599,Marquis de Lafayette
 llama3.2:latest,A,CAS w/o graph,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,221,1.1604740999900969,unknown
 llama3.2:latest,A,CAS w/o graph,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,309,0.7839174999971874,Season 5
@@ -776,7 +776,7 @@ llama3.2:latest,A,CAS-keyword,5a7f40de5542992e7d278cc8,Bambi Hall,0.0,0.0,0.0,0.
 llama3.2:latest,A,CAS-keyword,5adc91865542994ed6169b93,Germany,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,670,4.34414800000377,Germany
 llama3.2:latest,A,CAS-keyword,5a8e0c595542995085b373b0,Bizzy Crook,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,236,0.647440300002927,Bizzy Crook
 llama3.2:latest,A,CAS-keyword,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,413,2.6631895000027725,Letters to Cleo
-llama3.2:latest,A,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,492,3.225453099992592,Buena Vista Distribution
+llama3.2:latest,A,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,492,3.225453099992592,Buena Vista Distribution
 llama3.2:latest,A,CAS-keyword,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,757,5.13919440000609,Marquis de Lafayette
 llama3.2:latest,A,CAS-keyword,5a85d4395542996432c570f5,"Troy, Montana",1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,9,0,712,4.838342900009593,"Troy, Montana"
 llama3.2:latest,A,CAS-keyword,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,617,4.157449199992698,Fifth season
@@ -832,7 +832,7 @@ llama3.2:latest,A,CAS-NLI penalty,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.
 llama3.2:latest,A,CAS-NLI penalty,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,1.0,0.0,0.0,0.0,0,0,92,0.4895381999958772,Child actress
 llama3.2:latest,A,CAS-NLI penalty,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,276,1.6054024000040954,Lewis Carroll
 llama3.2:latest,A,CAS-NLI penalty,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,344,2.184563100003288,Atlético Madrid
-llama3.2:latest,A,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,1,0,145,0.883487500002957,Invasion of Java
+llama3.2:latest,A,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,1,0,145,0.883487500002957,Invasion of Java
 llama3.2:latest,A,CAS-NLI penalty,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,808,5.573986999996123,West Bromwich Albion
 llama3.2:latest,A,CAS-NLI penalty,5ac2acff55429921a00ab02b,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,0,0,81,0.33934429999499116,unknown
 llama3.2:latest,A,CAS-NLI penalty,5ae095f055429924de1b7103,Albert S. Rogell,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,155,0.994864400010556,Albert S. Rogell
@@ -1032,7 +1032,7 @@ llama3.2:latest,A,CAS-NLI preserve,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0
 llama3.2:latest,A,CAS-NLI preserve,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,370,2.4078339999978198,Child actress
 llama3.2:latest,A,CAS-NLI preserve,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,276,1.6054024000040954,Lewis Carroll
 llama3.2:latest,A,CAS-NLI preserve,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,344,2.184563100003288,Atlético Madrid
-llama3.2:latest,A,CAS-NLI preserve,5a7320ac5542991f9a20c620,Invasion of Java.,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,4,0,300,2.026529099995969,Invasion of Java.
+llama3.2:latest,A,CAS-NLI preserve,5a7320ac5542991f9a20c620,Invasion of Java.,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,4,0,300,2.026529099995969,Invasion of Java.
 llama3.2:latest,A,CAS-NLI preserve,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,808,5.573986999996123,West Bromwich Albion
 llama3.2:latest,A,CAS-NLI preserve,5ac2acff55429921a00ab02b,Brian Doyle-Murray,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,2,514,3.5064939000003505,Brian Doyle-Murray
 llama3.2:latest,A,CAS-NLI preserve,5ae095f055429924de1b7103,Albert S. Rogell.,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2,0,377,2.5738408000033814,Albert S. Rogell.
@@ -1176,7 +1176,7 @@ llama3.2:latest,A,CAS-NLI preserve,5a7f40de5542992e7d278cc8,Bambi Hall,0.0,0.0,0
 llama3.2:latest,A,CAS-NLI preserve,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,388,2.0559072000032756,USNS Clemson
 llama3.2:latest,A,CAS-NLI preserve,5a8e0c595542995085b373b0,Bizzy Crook,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,236,0.647440300002927,Bizzy Crook
 llama3.2:latest,A,CAS-NLI preserve,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,413,2.6631895000027725,Letters to Cleo
-llama3.2:latest,A,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,492,3.225453099992592,Buena Vista Distribution
+llama3.2:latest,A,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,492,3.225453099992592,Buena Vista Distribution
 llama3.2:latest,A,CAS-NLI preserve,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,656,1.0362538000044879,Marquis de Lafayette
 llama3.2:latest,A,CAS-NLI preserve,5a85d4395542996432c570f5,"Lincolnton, North Carolina",0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,2,335,2.2692088000039803,"Lincolnton, North Carolina"
 llama3.2:latest,A,CAS-NLI preserve,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,617,4.157449199992698,Fifth season
@@ -1363,7 +1363,7 @@ llama3.2:latest,B,Vanilla RAG,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0.6
 llama3.2:latest,B,Vanilla RAG,5ae63dad55429929b0807afe,11 January 1932,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1399,10.046449900008156,11 January 1932
 llama3.2:latest,B,Vanilla RAG,5ab92f52554299131ca422a9,Dutch,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13,0,1841,13.385808499995619,Dutch
 llama3.2:latest,B,Vanilla RAG,5ae2f97555429928c4239582,King Duncan,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1855,13.953926699992735,King Duncan
-llama3.2:latest,B,Vanilla RAG,5a8b515e55429971feec46bb,Red Dead Redemption II.,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,13,0,2141,16.199766299992916,Red Dead Redemption II.
+llama3.2:latest,B,Vanilla RAG,5a8b515e55429971feec46bb,Red Dead Redemption II.,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,13,0,2141,16.199766299992916,Red Dead Redemption II.
 llama3.2:latest,B,Vanilla RAG,5a7602d8554299109176e5fb,Dawn French.,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1368,9.861882199998945,Dawn French.
 llama3.2:latest,B,Vanilla RAG,5a7f46115542994857a766d9,Rothschild,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1809,13.435084199998528,Rothschild
 llama3.2:latest,B,Vanilla RAG,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1659,12.765798800013727,"Paradise, Nevada"
@@ -1376,7 +1376,7 @@ llama3.2:latest,B,Vanilla RAG,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0
 llama3.2:latest,B,Vanilla RAG,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1835,13.298953999998048,USNS Clemson
 llama3.2:latest,B,Vanilla RAG,5a8e0c595542995085b373b0,Bizzy Crook,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1665,12.10987759999989,Bizzy Crook
 llama3.2:latest,B,Vanilla RAG,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,13,0,1741,12.743758399999933,Letters to Cleo
-llama3.2:latest,B,Vanilla RAG,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,13,0,1627,12.174909099994693,Buena Vista Distribution
+llama3.2:latest,B,Vanilla RAG,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1627,12.174909099994693,Buena Vista Distribution
 llama3.2:latest,B,Vanilla RAG,5abf1ad15542997ec76fd3c2,Lafayette,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1629,11.786388500011526,Lafayette
 llama3.2:latest,B,Vanilla RAG,5a85d4395542996432c570f5,Troy,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1166,8.058535699994536,Troy
 llama3.2:latest,B,Vanilla RAG,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,13,0,1831,13.301757999986876,Season 5
@@ -1576,7 +1576,7 @@ llama3.2:latest,B,BM25 top-3,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0,
 llama3.2:latest,B,BM25 top-3,5adc91865542994ed6169b93,Almirante Brown-class,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,437,2.8486209000111558,Almirante Brown-class
 llama3.2:latest,B,BM25 top-3,5a8e0c595542995085b373b0,New York City,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,409,2.5756549000070663,New York City
 llama3.2:latest,B,BM25 top-3,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,B,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,392,2.5123659999953816,Buena Vista Distribution
+llama3.2:latest,B,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,392,2.5123659999953816,Buena Vista Distribution
 llama3.2:latest,B,BM25 top-3,5abf1ad15542997ec76fd3c2,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette",0.0,0.18181818181818182,0.0,0.0,0.0,0.0,1.0,1.0,3,0,436,3.5163197000074433,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette"
 llama3.2:latest,B,BM25 top-3,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,221,1.1604740999900969,unknown
 llama3.2:latest,B,BM25 top-3,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,438,2.6931886000093073,Season 5
@@ -1796,7 +1796,7 @@ llama3.2:latest,B,Provenance + BM25 top-3,5ae0159855429925eb1afc09,Odysseas Elyt
 llama3.2:latest,B,Provenance + BM25 top-3,5ade595e5542992fa25da761,John Davies,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,396,2.3785643999872264,John Davies
 llama3.2:latest,B,Provenance + BM25 top-3,5a85b2d95542997b5ce40028,Eenasul Fateh,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,456,3.10495889998856,Eenasul Fateh
 llama3.2:latest,B,Provenance + BM25 top-3,5abcf84d55429959677d6b86,Mexican Drug War.,0.0,0.5714285714285715,0.0,0.0,0.0,0.0,0.0,0.0,3,0,598,4.180636699995375,Mexican Drug War.
-llama3.2:latest,B,Provenance + BM25 top-3,5a7244955542990c210a408a,J35-A-23,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,308,2.0211354000057327,J35-A-23
+llama3.2:latest,B,Provenance + BM25 top-3,5a7244955542990c210a408a,J35-A-23,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,3,0,308,2.0211354000057327,J35-A-23
 llama3.2:latest,B,Provenance + BM25 top-3,5a75e29f5542992d0ec0600c,Charles Bronson,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,313,1.9637937999941641,Charles Bronson
 llama3.2:latest,B,Provenance + BM25 top-3,5abba4855542993f40c73b68,Mark Neveldine and Brian Taylor,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,405,2.7758800000010524,Mark Neveldine and Brian Taylor
 llama3.2:latest,B,CAS w/o graph,5adead1855429939a52fe948,"January 18, 2006",0.0,0.3333333333333333,0.0,0.0,0.0,1.0,1.0,0.0,4,0,601,4.170031099987682,"January 18, 2006"
@@ -1976,7 +1976,7 @@ llama3.2:latest,B,CAS w/o graph,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0
 llama3.2:latest,B,CAS w/o graph,5adc91865542994ed6169b93,Almirante Brown-class,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,636,1.735829899989767,Almirante Brown-class
 llama3.2:latest,B,CAS w/o graph,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,370,2.2860488000005716,"Bizzy Crook, Michigan"
 llama3.2:latest,B,CAS w/o graph,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,B,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,4,0,533,3.4797377999930177,Buena Vista Distribution
+llama3.2:latest,B,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,533,3.4797377999930177,Buena Vista Distribution
 llama3.2:latest,B,CAS w/o graph,5abf1ad15542997ec76fd3c2,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette.",0.0,0.18181818181818182,0.0,0.0,0.0,0.0,1.0,1.0,2,0,362,3.182426100000157,"Marie-Joseph Paul Yves Roch Gilbert du Motier, Lafayette."
 llama3.2:latest,B,CAS w/o graph,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,221,1.1604740999900969,unknown
 llama3.2:latest,B,CAS w/o graph,5a7b971255429927d897bff3,Season 5,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,614,3.9563781000033487,Season 5
@@ -2176,7 +2176,7 @@ llama3.2:latest,B,CAS-keyword,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0
 llama3.2:latest,B,CAS-keyword,5adc91865542994ed6169b93,Germany,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,7,0,1006,6.728416900004959,Germany
 llama3.2:latest,B,CAS-keyword,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,370,2.2860488000005716,"Bizzy Crook, Michigan"
 llama3.2:latest,B,CAS-keyword,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,B,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6,0,746,5.109627199999522,Buena Vista Distribution
+llama3.2:latest,B,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,746,5.109627199999522,Buena Vista Distribution
 llama3.2:latest,B,CAS-keyword,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,7,0,879,6.106418199997279,Marquis de Lafayette
 llama3.2:latest,B,CAS-keyword,5a85d4395542996432c570f5,Troy,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,9,0,753,5.131159199998365,Troy
 llama3.2:latest,B,CAS-keyword,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,922,6.450557899996056,Fifth season
@@ -2232,7 +2232,7 @@ llama3.2:latest,B,CAS-NLI penalty,5abbcfaf5542993f40c73ba9,Manchester,1.0,1.0,1.
 llama3.2:latest,B,CAS-NLI penalty,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,1,0,156,0.9171899000066333,Child actress
 llama3.2:latest,B,CAS-NLI penalty,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,276,1.6054024000040954,Lewis Carroll
 llama3.2:latest,B,CAS-NLI penalty,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,344,2.184563100003288,Atlético Madrid
-llama3.2:latest,B,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,1,0,145,0.883487500002957,Invasion of Java
+llama3.2:latest,B,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,1,0,145,0.883487500002957,Invasion of Java
 llama3.2:latest,B,CAS-NLI penalty,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,808,5.573986999996123,West Bromwich Albion
 llama3.2:latest,B,CAS-NLI penalty,5ac2acff55429921a00ab02b,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,1,0,273,1.6344984000024851,unknown
 llama3.2:latest,B,CAS-NLI penalty,5ae095f055429924de1b7103,Albert S. Rogell,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,155,0.994864400010556,Albert S. Rogell
@@ -2576,7 +2576,7 @@ llama3.2:latest,B,CAS-NLI preserve,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.
 llama3.2:latest,B,CAS-NLI preserve,5adc91865542994ed6169b93,MEKO 360H2,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,5,0,732,5.044219400006114,MEKO 360H2
 llama3.2:latest,B,CAS-NLI preserve,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,370,2.2860488000005716,"Bizzy Crook, Michigan"
 llama3.2:latest,B,CAS-NLI preserve,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,324,2.073119599997881,Letters to Cleo
-llama3.2:latest,B,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6,0,746,5.109627199999522,Buena Vista Distribution
+llama3.2:latest,B,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,746,5.109627199999522,Buena Vista Distribution
 llama3.2:latest,B,CAS-NLI preserve,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,582,2.57344560000638,Marquis de Lafayette
 llama3.2:latest,B,CAS-NLI preserve,5a85d4395542996432c570f5,"Lincolnton, North Carolina",0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,2,335,2.2692088000039803,"Lincolnton, North Carolina"
 llama3.2:latest,B,CAS-NLI preserve,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,922,6.450557899996056,Fifth season
@@ -2832,7 +2832,7 @@ gemma3:latest,A,BM25 top-3,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.0,0.0,0
 gemma3:latest,A,BM25 top-3,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,335,2.884813299999223,Child actress
 gemma3:latest,A,BM25 top-3,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,388,3.2616339000087464,Lewis Carroll
 gemma3:latest,A,BM25 top-3,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,326,3.0079358000075445,Atlético Madrid
-gemma3:latest,A,BM25 top-3,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,3,0,234,2.436424299987266,Invasion of Java
+gemma3:latest,A,BM25 top-3,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,3,0,234,2.436424299987266,Invasion of Java
 gemma3:latest,A,BM25 top-3,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,0.0,3,0,501,4.350156700005755,West Bromwich Albion
 gemma3:latest,A,BM25 top-3,5ac2acff55429921a00ab02b,Brian Doyle-Murray,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,482,4.187594799994258,Brian Doyle-Murray
 gemma3:latest,A,BM25 top-3,5ae095f055429924de1b7103,Albert S. Rogell,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,3,0,459,4.0425398999941535,Albert S. Rogell
@@ -2976,7 +2976,7 @@ gemma3:latest,A,BM25 top-3,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0,0.
 gemma3:latest,A,BM25 top-3,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,422,3.7676176999957534,USNS Clemson
 gemma3:latest,A,BM25 top-3,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,408,3.8643581999931484,"Bizzy Crook, Michigan"
 gemma3:latest,A,BM25 top-3,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,319,3.069719699997222,Letters to Cleo
-gemma3:latest,A,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,408,3.837491599988425,Buena Vista Distribution
+gemma3:latest,A,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,408,3.837491599988425,Buena Vista Distribution
 gemma3:latest,A,BM25 top-3,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,437,4.051660500001162,Marquis de Lafayette
 gemma3:latest,A,BM25 top-3,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,216,1.944388699994306,unknown
 gemma3:latest,A,BM25 top-3,5a7b971255429927d897bff3,Wedding Bell Blues,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,416,3.702965899996343,Wedding Bell Blues
@@ -3163,7 +3163,7 @@ gemma3:latest,A,CAS w/o graph,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0.6
 gemma3:latest,A,CAS w/o graph,5ae63dad55429929b0807afe,1932,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,234,2.512938599989866,1932
 gemma3:latest,A,CAS w/o graph,5ab92f52554299131ca422a9,Belgian-Romance,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,1,0,175,1.9640951000037603,Belgian-Romance
 gemma3:latest,A,CAS w/o graph,5ae2f97555429928c4239582,Brain Donor album,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,337,3.2855925999901956,Brain Donor album
-gemma3:latest,A,CAS w/o graph,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
+gemma3:latest,A,CAS w/o graph,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
 gemma3:latest,A,CAS w/o graph,5a7602d8554299109176e5fb,Dawn French,0.0,0.8,0.0,0.0,0.0,0.0,1.0,0.0,2,0,260,2.34855310000421,Dawn French
 gemma3:latest,A,CAS w/o graph,5a7f46115542994857a766d9,Rothschild dynasty,0.0,0.8,0.0,0.0,0.0,0.0,1.0,0.0,1,0,160,1.6272511999995913,Rothschild dynasty
 gemma3:latest,A,CAS w/o graph,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1,0,196,1.8571179999999003,"Paradise, Nevada"
@@ -3176,7 +3176,7 @@ gemma3:latest,A,CAS w/o graph,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0
 gemma3:latest,A,CAS w/o graph,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,279,2.6478551999898627,USNS Clemson
 gemma3:latest,A,CAS w/o graph,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,229,2.8328288000047905,"Bizzy Crook, Michigan"
 gemma3:latest,A,CAS w/o graph,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,319,3.069719699997222,Letters to Cleo
-gemma3:latest,A,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,284,3.303687000006903,Buena Vista Distribution
+gemma3:latest,A,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,284,3.303687000006903,Buena Vista Distribution
 gemma3:latest,A,CAS w/o graph,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,552,5.267879900013213,Marquis de Lafayette
 gemma3:latest,A,CAS w/o graph,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,216,1.944388699994306,unknown
 gemma3:latest,A,CAS w/o graph,5a7b971255429927d897bff3,Wedding Bell Blues,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,289,3.0498166999896057,Wedding Bell Blues
@@ -3363,7 +3363,7 @@ gemma3:latest,A,CAS-keyword,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0.666
 gemma3:latest,A,CAS-keyword,5ae63dad55429929b0807afe,11 January 1932,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,1.0,1.0,7,0,486,4.619916900002863,11 January 1932
 gemma3:latest,A,CAS-keyword,5ab92f52554299131ca422a9,Belgian-Romance,0.0,0.0,0.0,0.0,1.0,0.0,1.0,0.0,3,0,688,7.145484199994826,Belgian-Romance
 gemma3:latest,A,CAS-keyword,5ae2f97555429928c4239582,King Duncan,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,635,7.825805200001923,King Duncan
-gemma3:latest,A,CAS-keyword,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,8,0,1037,10.361985199997434,Red Dead Redemption II
+gemma3:latest,A,CAS-keyword,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,8,0,1037,10.361985199997434,Red Dead Redemption II
 gemma3:latest,A,CAS-keyword,5a7602d8554299109176e5fb,Dawn French,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,7,0,595,5.990474300007918,Dawn French
 gemma3:latest,A,CAS-keyword,5a7f46115542994857a766d9,Rothschild banking,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,395,3.9695972000045003,Rothschild banking
 gemma3:latest,A,CAS-keyword,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,661,7.97235539999383,"Paradise, Nevada"
@@ -3376,7 +3376,7 @@ gemma3:latest,A,CAS-keyword,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0,0
 gemma3:latest,A,CAS-keyword,5adc91865542994ed6169b93,Germany,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,668,8.25792139999976,Germany
 gemma3:latest,A,CAS-keyword,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,229,2.8328288000047905,"Bizzy Crook, Michigan"
 gemma3:latest,A,CAS-keyword,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,411,5.878251100002672,Letters to Cleo
-gemma3:latest,A,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,505,6.784109999993234,Buena Vista Distribution
+gemma3:latest,A,CAS-keyword,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,505,6.784109999993234,Buena Vista Distribution
 gemma3:latest,A,CAS-keyword,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,778,10.07037999999011,Marquis de Lafayette
 gemma3:latest,A,CAS-keyword,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,9,0,730,9.301764499992714,unknown
 gemma3:latest,A,CAS-keyword,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,584,7.708891300004325,Fifth season
@@ -3432,7 +3432,7 @@ gemma3:latest,A,CAS-NLI penalty,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.0,
 gemma3:latest,A,CAS-NLI penalty,5ab69e4f554299710c8d1eee,Child actor,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0,0,79,1.4924437000008766,Child actor
 gemma3:latest,A,CAS-NLI penalty,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,273,2.5763259999948787,Lewis Carroll
 gemma3:latest,A,CAS-NLI penalty,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,326,3.0079358000075445,Atlético Madrid
-gemma3:latest,A,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,1,0,135,2.675503000005847,Invasion of Java
+gemma3:latest,A,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,1,0,135,2.675503000005847,Invasion of Java
 gemma3:latest,A,CAS-NLI penalty,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,822,10.622563700002502,West Bromwich Albion
 gemma3:latest,A,CAS-NLI penalty,5ac2acff55429921a00ab02b,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,0,0,69,1.3924910000059754,unknown
 gemma3:latest,A,CAS-NLI penalty,5ae095f055429924de1b7103,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,153,2.205872200007434,unknown
@@ -3632,7 +3632,7 @@ gemma3:latest,A,CAS-NLI preserve,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.0
 gemma3:latest,A,CAS-NLI preserve,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,356,3.669188600004418,Child actress
 gemma3:latest,A,CAS-NLI preserve,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,273,2.5763259999948787,Lewis Carroll
 gemma3:latest,A,CAS-NLI preserve,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,326,3.0079358000075445,Atlético Madrid
-gemma3:latest,A,CAS-NLI preserve,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,4,0,300,3.297545199995511,Invasion of Java
+gemma3:latest,A,CAS-NLI preserve,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,4,0,300,3.297545199995511,Invasion of Java
 gemma3:latest,A,CAS-NLI preserve,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,822,10.622563700002502,West Bromwich Albion
 gemma3:latest,A,CAS-NLI preserve,5ac2acff55429921a00ab02b,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,0.0,3,2,512,5.315798299998278,unknown
 gemma3:latest,A,CAS-NLI preserve,5ae095f055429924de1b7103,Albert S. Rogell,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2,0,380,3.8258227000042098,Albert S. Rogell
@@ -3776,7 +3776,7 @@ gemma3:latest,A,CAS-NLI preserve,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,
 gemma3:latest,A,CAS-NLI preserve,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,380,3.928192699997453,USNS Clemson
 gemma3:latest,A,CAS-NLI preserve,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,2,0,229,2.8328288000047905,"Bizzy Crook, Michigan"
 gemma3:latest,A,CAS-NLI preserve,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,411,5.878251100002672,Letters to Cleo
-gemma3:latest,A,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,505,6.784109999993234,Buena Vista Distribution
+gemma3:latest,A,CAS-NLI preserve,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,505,6.784109999993234,Buena Vista Distribution
 gemma3:latest,A,CAS-NLI preserve,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,671,8.341314099990996,Marquis de Lafayette
 gemma3:latest,A,CAS-NLI preserve,5a85d4395542996432c570f5,"Lincolnton, North Carolina",0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,2,334,3.7777628999901935,"Lincolnton, North Carolina"
 gemma3:latest,A,CAS-NLI preserve,5a7b971255429927d897bff3,Fifth season,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,584,7.708891300004325,Fifth season
@@ -4032,7 +4032,7 @@ gemma3:latest,B,BM25 top-3,5abbcfaf5542993f40c73ba9,Marion O'Brien,0.0,0.0,0.0,0
 gemma3:latest,B,BM25 top-3,5ab69e4f554299710c8d1eee,Child actress,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,335,2.884813299999223,Child actress
 gemma3:latest,B,BM25 top-3,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,388,3.2616339000087464,Lewis Carroll
 gemma3:latest,B,BM25 top-3,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,326,3.0079358000075445,Atlético Madrid
-gemma3:latest,B,BM25 top-3,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,3,0,234,2.436424299987266,Invasion of Java
+gemma3:latest,B,BM25 top-3,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,3,0,234,2.436424299987266,Invasion of Java
 gemma3:latest,B,BM25 top-3,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,0.0,3,0,501,4.350156700005755,West Bromwich Albion
 gemma3:latest,B,BM25 top-3,5ac2acff55429921a00ab02b,Brian Doyle-Murray,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,482,4.187594799994258,Brian Doyle-Murray
 gemma3:latest,B,BM25 top-3,5ae095f055429924de1b7103,Albert S. Rogell,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,3,0,459,4.0425398999941535,Albert S. Rogell
@@ -4176,7 +4176,7 @@ gemma3:latest,B,BM25 top-3,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0,0.
 gemma3:latest,B,BM25 top-3,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,422,3.7676176999957534,USNS Clemson
 gemma3:latest,B,BM25 top-3,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,408,3.8643581999931484,"Bizzy Crook, Michigan"
 gemma3:latest,B,BM25 top-3,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,319,3.069719699997222,Letters to Cleo
-gemma3:latest,B,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,408,3.837491599988425,Buena Vista Distribution
+gemma3:latest,B,BM25 top-3,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,408,3.837491599988425,Buena Vista Distribution
 gemma3:latest,B,BM25 top-3,5abf1ad15542997ec76fd3c2,Marquis de Lafayette,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,437,4.051660500001162,Marquis de Lafayette
 gemma3:latest,B,BM25 top-3,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,216,1.944388699994306,unknown
 gemma3:latest,B,BM25 top-3,5a7b971255429927d897bff3,Wedding Bell Blues,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,416,3.702965899996343,Wedding Bell Blues
@@ -4253,7 +4253,7 @@ gemma3:latest,B,Provenance + BM25 top-3,5abff65c5542994516f45551,unknown,0.0,0.0
 gemma3:latest,B,Provenance + BM25 top-3,5ac458f8554299204fd21f2a,Step-son,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,551,6.462580599996727,Step-son
 gemma3:latest,B,Provenance + BM25 top-3,5a8ac5595542992d82986f77,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,542,6.269974899987574,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5a7e31c055429934daa2fbee,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,605,7.487910900003044,unknown
-gemma3:latest,B,Provenance + BM25 top-3,5ab83d595542990e739ec886,Family members,0.0,0.5,1.0,0.0,0.0,0.0,1.0,1.0,3,0,379,4.372783499988145,Family members
+gemma3:latest,B,Provenance + BM25 top-3,5ab83d595542990e739ec886,Family members,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,379,4.372783499988145,Family members
 gemma3:latest,B,Provenance + BM25 top-3,5a901d6c5542995651fb50bd,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,359,4.678293699995265,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5a7d6a2d5542991319bc93c6,Kingdom of the Isles,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,3,0,686,6.291222799991374,Kingdom of the Isles
 gemma3:latest,B,Provenance + BM25 top-3,5ac2a277554299657fa28ff3,1956,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,399,5.330146799999056,1956
@@ -4358,7 +4358,7 @@ gemma3:latest,B,Provenance + BM25 top-3,5adcf20f5542994ed6169c2c,unknown,0.0,0.0
 gemma3:latest,B,Provenance + BM25 top-3,5a8b6efd5542997f31a41d2b,Ramna Stacks,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,235,2.710380800010171,Ramna Stacks
 gemma3:latest,B,Provenance + BM25 top-3,5a77dbaf5542997042120b5b,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,446,4.3192774999915855,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5a8f2cc855429918e830d1be,Derry,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,339,4.082150000002002,Derry
-gemma3:latest,B,Provenance + BM25 top-3,5abe76c255429965af743f15,Film directors,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,442,4.841021100000944,Film directors
+gemma3:latest,B,Provenance + BM25 top-3,5abe76c255429965af743f15,Film directors,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,442,4.841021100000944,Film directors
 gemma3:latest,B,Provenance + BM25 top-3,5ae269955542992decbdccf3,Williamites,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,316,3.3509276999975555,Williamites
 gemma3:latest,B,Provenance + BM25 top-3,5ae63dad55429929b0807afe,1932,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,267,3.356654500006698,1932
 gemma3:latest,B,Provenance + BM25 top-3,5ab92f52554299131ca422a9,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,527,6.392024100001436,unknown
@@ -4563,7 +4563,7 @@ gemma3:latest,B,CAS w/o graph,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0.6
 gemma3:latest,B,CAS w/o graph,5ae63dad55429929b0807afe,1932,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,234,2.512938599989866,1932
 gemma3:latest,B,CAS w/o graph,5ab92f52554299131ca422a9,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,0.0,2,0,328,3.485568100004457,unknown
 gemma3:latest,B,CAS w/o graph,5ae2f97555429928c4239582,Brain Donor album,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,337,3.2855925999901956,Brain Donor album
-gemma3:latest,B,CAS w/o graph,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
+gemma3:latest,B,CAS w/o graph,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
 gemma3:latest,B,CAS w/o graph,5a7602d8554299109176e5fb,Dawn French,0.0,0.8,0.0,0.0,0.0,0.0,1.0,0.0,3,0,295,2.6043164000002434,Dawn French
 gemma3:latest,B,CAS w/o graph,5a7f46115542994857a766d9,Rothschild dynasty,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,3,0,526,5.324480800001766,Rothschild dynasty
 gemma3:latest,B,CAS w/o graph,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,2,0,411,4.208074500013026,"Paradise, Nevada"
@@ -4576,7 +4576,7 @@ gemma3:latest,B,CAS w/o graph,5a7f40de5542992e7d278cc8,Rick Ducommun,0.0,0.8,0.0
 gemma3:latest,B,CAS w/o graph,5adc91865542994ed6169b93,USNS Clemson,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,4,0,629,6.681554099995992,USNS Clemson
 gemma3:latest,B,CAS w/o graph,5a8e0c595542995085b373b0,"Bizzy Crook, Michigan",0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,365,4.1719379999995,"Bizzy Crook, Michigan"
 gemma3:latest,B,CAS w/o graph,5a7cc50e554299452d57ba3e,Letters to Cleo,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,319,3.069719699997222,Letters to Cleo
-gemma3:latest,B,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,4,0,556,5.705149000001256,Buena Vista Distribution
+gemma3:latest,B,CAS w/o graph,5ae357745542992f92d8229b,Buena Vista Distribution,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,556,5.705149000001256,Buena Vista Distribution
 gemma3:latest,B,CAS w/o graph,5abf1ad15542997ec76fd3c2,Lafayette,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,2,0,360,3.9530102999997325,Lafayette
 gemma3:latest,B,CAS w/o graph,5a85d4395542996432c570f5,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,216,1.944388699994306,unknown
 gemma3:latest,B,CAS w/o graph,5a7b971255429927d897bff3,Wedding Bell Blues,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,596,6.560818500001915,Wedding Bell Blues
@@ -4832,7 +4832,7 @@ gemma3:latest,B,CAS-NLI penalty,5abbcfaf5542993f40c73ba9,Manchester,1.0,1.0,1.0,
 gemma3:latest,B,CAS-NLI penalty,5ab69e4f554299710c8d1eee,Child actor,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,1,0,144,1.71951270000136,Child actor
 gemma3:latest,B,CAS-NLI penalty,5ab587ad5542992aa134a34b,Lewis Carroll,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,273,2.5763259999948787,Lewis Carroll
 gemma3:latest,B,CAS-NLI penalty,5a8ed30655429917b4a5bdcd,Atlético Madrid,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,3,0,326,3.0079358000075445,Atlético Madrid
-gemma3:latest,B,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,1.0,0.0,0.0,1.0,1.0,1.0,1,0,135,2.675503000005847,Invasion of Java
+gemma3:latest,B,CAS-NLI penalty,5a7320ac5542991f9a20c620,Invasion of Java,0.0,0.5,0.0,0.0,0.0,1.0,1.0,1.0,1,0,135,2.675503000005847,Invasion of Java
 gemma3:latest,B,CAS-NLI penalty,5abee69c5542993fe9a41d8b,West Bromwich Albion,0.0,0.7499999999999999,0.0,0.0,0.0,0.0,1.0,1.0,6,0,822,10.622563700002502,West Bromwich Albion
 gemma3:latest,B,CAS-NLI penalty,5ac2acff55429921a00ab02b,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,1,0,261,2.454499699990265,unknown
 gemma3:latest,B,CAS-NLI penalty,5ae095f055429924de1b7103,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,153,2.205872200007434,unknown
@@ -4963,7 +4963,7 @@ gemma3:latest,B,CAS-NLI penalty,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,0
 gemma3:latest,B,CAS-NLI penalty,5ae63dad55429929b0807afe,1932,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,2,0,234,2.512938599989866,1932
 gemma3:latest,B,CAS-NLI penalty,5ab92f52554299131ca422a9,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,0,0,76,1.0781609999976354,unknown
 gemma3:latest,B,CAS-NLI penalty,5ae2f97555429928c4239582,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,0.0,3,0,473,4.567600700000185,unknown
-gemma3:latest,B,CAS-NLI penalty,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
+gemma3:latest,B,CAS-NLI penalty,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
 gemma3:latest,B,CAS-NLI penalty,5a7602d8554299109176e5fb,Dawn French,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,488,5.008000299989362,Dawn French
 gemma3:latest,B,CAS-NLI penalty,5a7f46115542994857a766d9,Rothschild dynasty,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,3,0,526,5.324480800001766,Rothschild dynasty
 gemma3:latest,B,CAS-NLI penalty,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,631,7.512755900010234,"Paradise, Nevada"
@@ -5163,7 +5163,7 @@ gemma3:latest,B,CAS-NLI preserve,5ae269955542992decbdccf3,Eochaid Étgudach,0.0,
 gemma3:latest,B,CAS-NLI preserve,5ae63dad55429929b0807afe,11 January 1932,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,1.0,0.0,3,0,286,3.2190239999908954,11 January 1932
 gemma3:latest,B,CAS-NLI preserve,5ab92f52554299131ca422a9,Dutch,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,402,4.178144600009546,Dutch
 gemma3:latest,B,CAS-NLI preserve,5ae2f97555429928c4239582,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,0.0,3,0,473,4.567600700000185,unknown
-gemma3:latest,B,CAS-NLI preserve,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,1.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
+gemma3:latest,B,CAS-NLI preserve,5a8b515e55429971feec46bb,Red Dead Redemption II,0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1.0,1.0,2,0,408,3.731699399999343,Red Dead Redemption II
 gemma3:latest,B,CAS-NLI preserve,5a7602d8554299109176e5fb,Dawn French,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,488,5.008000299989362,Dawn French
 gemma3:latest,B,CAS-NLI preserve,5a7f46115542994857a766d9,Rothschild dynasty,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,3,0,526,5.324480800001766,Rothschild dynasty
 gemma3:latest,B,CAS-NLI preserve,5a7f2d3e5542993067513675,"Paradise, Nevada",0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,4,0,631,7.512755900010234,"Paradise, Nevada"

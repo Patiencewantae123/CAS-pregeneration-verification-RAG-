@@ -1,14 +1,16 @@
-﻿import html
+﻿import codecs
+import html
+import io
 import json
 import os
 import sys
-import tempfile
 import time
 import urllib.request
 import streamlit as st
 
-from langchain_community.document_loaders import PyPDFLoader
+from charset_normalizer import from_bytes
 from langchain_core.documents import Document as LCDocument
+from pypdf import PdfReader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
@@ -25,6 +27,7 @@ from services.nli_model_verifier import NLIModelVerifier  # noqa: E402
 from run_llm_generation import OPTIONS, QA_PROMPT, format_passages  # noqa: E402
 from run_evaluation import bm25_scores  # noqa: E402
 
+NLI_MODEL = "cross-encoder/nli-deberta-v3-base"
 THETA = 0.99   # contradiction threshold chosen by cross-validation and used in every experiment
 EXPLAINED_PROMPT = """Answer the question using only the passages below, citing the passages you use, e.g. [2].
 If the passages contradict each other, say so and give each position with its citation.
@@ -38,26 +41,33 @@ OLLAMA_URL = "http://localhost:11434"
 NLI_CACHE = os.path.join(ROOT, ".cas_cache", "app_nli_cache.jsonl")   # kept apart from the experiments' cache
 
 
+def decode_text(data):
+    """Text of a TXT upload: a byte-order mark wins, then UTF-8, then the detected encoding (e.g. CP949, CP1252)."""
+    for bom, encoding in ((codecs.BOM_UTF8, "utf-8-sig"), (codecs.BOM_UTF16_LE, "utf-16"), (codecs.BOM_UTF16_BE, "utf-16")):
+        if data.startswith(bom):
+            text = data.decode(encoding)
+            break
+    else:
+        try:
+            text = data.decode("utf-8")
+        except UnicodeDecodeError:
+            best = from_bytes(data).best()
+            if best is None:
+                raise ValueError("unknown text encoding; save the file as UTF-8")
+            text = str(best)
+    if "\x00" in text:
+        raise ValueError("this looks like a binary file, not plain text")
+    return text.replace("\r\n", "\n").replace("\r", "\n")
+
+
 def load_file(uploaded_file):
-    """Pages of an uploaded PDF, or the text of a TXT file (UTF-8, then CP949, then Latin-1)."""
+    """Pages of an uploaded PDF (read in memory), or the text of a TXT file."""
     data = uploaded_file.getvalue()
     if uploaded_file.name.lower().endswith(".pdf"):
-        with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
-            tmp.write(data)
-        try:
-            docs = PyPDFLoader(tmp.name).load()
-        finally:
-            try:
-                os.remove(tmp.name)
-            except OSError:
-                pass
+        docs = [LCDocument(page_content=page.extract_text() or "", metadata={"page": i})
+                for i, page in enumerate(PdfReader(io.BytesIO(data)).pages)]
     else:
-        for encoding in ("utf-8", "cp949", "latin-1"):
-            try:
-                docs = [LCDocument(page_content=data.decode(encoding))]
-                break
-            except UnicodeDecodeError:
-                continue
+        docs = [LCDocument(page_content=decode_text(data))]
     for d in docs:
         d.metadata["source"] = uploaded_file.name
     return docs
@@ -69,7 +79,8 @@ def chunk_card(c, text_chars=250):
              if c.get("status") else "")
     scores = (f' | <strong>Trust:</strong> {c["trust"]:.2f} | <strong>Agreement:</strong> {c["agreement"]:.2f}'
               f' | <strong>Contradiction:</strong> {c["contradiction"]:.2f}' if "trust" in c else "")
-    text = html.escape(c["text"][:text_chars]) + ("..." if len(c["text"]) > text_chars else "")
+    # Escaped, and line breaks as <br>: a blank line would otherwise end the HTML block and render the rest as Markdown
+    text = html.escape(c["text"][:text_chars]).replace("\n", "<br>") + ("..." if len(c["text"]) > text_chars else "")
     return (f'<div class="metric-card">{badge}<strong>{c["id"]}</strong> | <strong>Source:</strong> '
             f'{html.escape(c["source"])}{scores}'
             f'<p style="margin-top: 8px; font-size: 0.9rem; color: #475569;">{text}</p></div>')
@@ -80,13 +91,18 @@ def show_details(d, expanded):
     with st.expander("🛡️ Pre-Generation Context Verification", expanded=expanded):
         col1, col2, col3, col4 = st.columns(4)
         col1.metric("Retrieved Chunks", d["retrieved"])
-        col2.metric("Passed to the LLM", d["kept"])
+        col2.metric("Kept after Verification", d["kept"])
         col3.metric("Contradicting Pairs", len(d["conflicts"]))
-        col4.metric("Verification Time", f'{d["timings"]["Retrieval"] + d["timings"]["Conflict check"]:.1f} s')
+        col4.metric("Conflict Check Time", f'{d["timings"]["Conflict check"]:.1f} s')
         st.caption(" · ".join(f"{k}: {v:.1f} s" for k, v in d["timings"].items()))
         for c in d["conflicts"]:
-            st.markdown(f"**⚔️ {c['a']['id']} contradicts {c['b']['id']}** (confidence {c['confidence']:.2f}) · "
-                        + ("both passed to the LLM with a conflict note" if c["passed"] else "not passed to the LLM together"))
+            if not c["both_kept"]:
+                status = "not both kept"
+            elif d["preserve"]:
+                status = "both kept, with a conflict note for the LLM"
+            else:
+                status = "both kept, without a note (penalty mode)"
+            st.markdown(f"**⚔️ {c['a']['id']} contradicts {c['b']['id']}** (confidence {c['confidence']:.2f}) · {status}")
             left, right = st.columns(2)
             left.markdown(chunk_card(c["a"], 600), unsafe_allow_html=True)
             right.markdown(chunk_card(c["b"], 600), unsafe_allow_html=True)
@@ -258,17 +274,21 @@ if "all_chunks" not in st.session_state:
     st.session_state.all_chunks = []
 
 @st.cache_resource(show_spinner="Loading NLI Cross-Encoder Verifier...")
-def load_verifier():
-    """DeBERTa-v3 NLI at θ = 0.99. Predictions are cached on disk, so chunk pairs seen before cost nothing."""
-    os.makedirs(os.path.dirname(NLI_CACHE), exist_ok=True)
-    return NLIModelVerifier(model=CrossEncoder("cross-encoder/nli-deberta-v3-base"), contradiction_threshold=THETA,
-                            cache_path=NLI_CACHE)
+def load_verifier(model_name, theta, cache_path):
+    """NLI cross-encoder at threshold θ. Predictions are cached on disk, keyed by model name, so chunk pairs seen
+    before cost nothing. The arguments are part of Streamlit's cache key, so changing any of them reloads."""
+    try:
+        os.makedirs(os.path.dirname(cache_path), exist_ok=True)
+    except OSError:   # read-only install: keep predictions in memory only
+        cache_path = None
+    return NLIModelVerifier(model_name=model_name, model=CrossEncoder(model_name), contradiction_threshold=theta,
+                            cache_path=cache_path)
 
 @st.cache_resource(show_spinner="Loading Embedding Model...")
 def load_embedding_model():
     return HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-verifier = load_verifier()
+verifier = load_verifier(NLI_MODEL, THETA, NLI_CACHE)
 embeddings = load_embedding_model()
 
 with st.sidebar:
@@ -312,7 +332,10 @@ with st.sidebar:
                     n_files = len({c.metadata["source"] for c in chunks})
                     st.success(f"Indexed {len(chunks)} chunks across {n_files} document(s)!")
                 else:
-                    st.error("No text could be indexed from these files.")
+                    # Drop any earlier index too, so questions are not silently answered from old documents
+                    st.session_state.vector_store = st.session_state.bm25_retriever = None
+                    st.session_state.all_chunks = []
+                    st.error("No text could be indexed from these files. The previous index was cleared.")
 
     st.markdown("---")
     st.subheader("📊 Model Configurations")
@@ -392,15 +415,16 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
 
             def side(doc):
                 return {"id": doc.id, "source": doc.source, "text": doc.content}
-            passed = {frozenset(p) for p in result["conflicts"]}
+            kept_ids = {v.doc.id for v in verified_contexts}
             details = {
                 "retrieved": len(combined_docs), "kept": len(verified_contexts), "timings": timings,
+                "preserve": conflict_mode == "Conflict-preserving",
                 "cards": [{**side(v.doc), "status": "Rejected" if v.is_filtered else "Retained", "trust": v.trust_score,
                            "agreement": graph.get_agreement_score(v.doc.id), "contradiction": v.conflict_penalty}
                           for v in result["verified_documents"]],
                 "conflicts": [{"a": side(graph.nodes[e.source_doc_id]), "b": side(graph.nodes[e.target_doc_id]),
                                "confidence": e.confidence,
-                               "passed": frozenset((e.source_doc_id, e.target_doc_id)) in passed}
+                               "both_kept": {e.source_doc_id, e.target_doc_id} <= kept_ids}
                               for e in graph.edges if e.relation.value == "Contradiction"],
             }
             show_details(details, expanded=True)
@@ -423,17 +447,21 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                 start = time.perf_counter()
                 try:
                     answer = st.write_stream(ollama_stream(llm_model, llm_prompt, options)).strip()
+                    failed = False
                 except Exception as e:
-                    answer = f"⚠️ **{llm_model} failed:** {e}"
+                    answer, failed = f"⚠️ **{llm_model} failed:** {e}", True
                     st.markdown(answer)
                 timings["Answer"] = time.perf_counter() - start
-                legend = " · ".join(f"[{k + 1}] {cas_docs[i].id} ({cas_docs[i].source})" for k, i in enumerate(kept))
-                notes = ""
-                if result["conflicts"]:
-                    pairs = ", ".join(f"{a} ↔ {b}" for a, b in result["conflicts"])
-                    notes = f"⚠️ **Contradicting passages passed to the model:** {pairs}\n\n"
-                footer = (f"{notes}*{llm_model} answered in {timings['Answer']:.1f} s from {len(kept)} "
-                          f"verified passage(s): {legend}*")
-                st.markdown(footer)
-                response_text = f"{answer}\n\n{footer}"
+                if failed:
+                    response_text = answer
+                else:
+                    legend = " · ".join(f"[{k + 1}] {cas_docs[i].id} ({cas_docs[i].source})" for k, i in enumerate(kept))
+                    notes = ""
+                    if result["conflicts"]:
+                        pairs = ", ".join(f"{a} ↔ {b}" for a, b in result["conflicts"])
+                        notes = f"⚠️ **Contradicting passages passed to the model:** {pairs}\n\n"
+                    footer = (f"{notes}*{llm_model} answered in {timings['Answer']:.1f} s from {len(kept)} "
+                              f"verified passage(s): {legend}*")
+                    st.markdown(footer)
+                    response_text = f"{answer}\n\n{footer}"
             st.session_state.messages.append({"role": "assistant", "content": response_text, "details": details})

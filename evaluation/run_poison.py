@@ -8,6 +8,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 
@@ -15,7 +16,8 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_evaluation import (DATA, DEFAULT_TAU, OUT_RESULTS, TOP_K, ConflictGraph, Document, NLIVerifier,  # noqa: E402
-                            TrustAwareSynthesizer, bm25_scores, boot_ci, nli_verifier, paired_test, write_csv)
+                            TrustAwareSynthesizer, bm25_scores, boot_ci, has_phrase, holm, nli_verifier,
+                            paired_test, write_csv)
 from run_llm_generation import QA_PROMPT, format_passages, generate, load_cache, normalize, score_qa  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -101,9 +103,18 @@ def run_selection(items):
 # 2. GENERATION AND SCORING
 # ============================================================
 
+def strip_phrase(text, phrase):
+    return re.sub(r"(?<!\w)" + re.escape(phrase) + r"(?!\w)", " ", text)
+
+
 def score(response, it, context):
     s = score_qa(response, [it["answer"]], context)
-    s["adoption"] = float(normalize(it["substitute"]) in normalize(s["pred"]))
+    pred, gold, sub = normalize(s["pred"]), normalize(it["answer"]), normalize(it["substitute"])
+    # When one answer contains the other ('Java' vs 'Invasion of Java'), the longer one is removed before looking
+    # for the shorter, so giving the fake answer does not also count as correct, and vice versa
+    if has_phrase(sub, gold) and not s["abstain"]:
+        s["accuracy"] = float(has_phrase(strip_phrase(pred, sub), gold))
+    s["adoption"] = float(has_phrase(strip_phrase(pred, gold) if has_phrase(gold, sub) else pred, sub))
     return s
 
 
@@ -123,7 +134,7 @@ def run_generation(items, sel, models):
                     sc = score(rec["response"], it, context)
                     rows.append({"model": model, "condition": cond, "method": name, "id": it["id"], **sc,
                                  "poison_in_context": float(bool(chosen & set(it["poison"]))),
-                                 "answer_in_context": float(normalize(it["answer"]) in normalize(context)),
+                                 "answer_in_context": float(has_phrase(normalize(context), normalize(it["answer"]))),
                                  "n_selected": len(chosen), "n_conflict_notes": len(s["conflicts"]),
                                  "prompt_tokens": rec["prompt_tokens"], "wall_s": rec["wall_s"],
                                  "response": rec["response"]})
@@ -135,14 +146,6 @@ def run_generation(items, sel, models):
 # ============================================================
 # 3. PRE-REGISTERED ANALYSIS
 # ============================================================
-
-def holm(tests):
-    order = sorted(range(len(tests)), key=lambda i: tests[i]["p_value"])
-    running = 0.0
-    for rank, i in enumerate(order):
-        running = max(running, min(1.0, (len(tests) - rank) * tests[i]["p_value"]))
-        tests[i]["p_holm"] = running
-
 
 def summarize(rows, models, n_items):
     by = {}

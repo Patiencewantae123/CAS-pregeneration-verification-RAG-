@@ -89,7 +89,7 @@ llama3.2:latest,Vanilla RAG,5abd0553554299700f9d7963,bridge,Marks & Spencer,0.0,
 llama3.2:latest,Vanilla RAG,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,2065,15.478557700000238,"29,000"
 llama3.2:latest,Vanilla RAG,5a88cc8f55429938390d3fc5,bridge,Loretta Lynn.,0.0,0.0,0.0,0.0,0.0,1.0,1279,9.102889600000708,Loretta Lynn.
 llama3.2:latest,Vanilla RAG,5abdaa0f55429965af743dad,bridge,2nd Armored Division,1.0,1.0,1.0,0.0,0.0,1.0,843,5.794545499999003,2nd Armored Division
-llama3.2:latest,Vanilla RAG,5a8b041955429971feec4604,bridge,Mountaineering.,0.0,0.0,1.0,0.0,0.0,1.0,1302,9.098541700001078,Mountaineering.
+llama3.2:latest,Vanilla RAG,5a8b041955429971feec4604,bridge,Mountaineering.,0.0,0.0,0.0,0.0,0.0,1.0,1302,9.098541700001078,Mountaineering.
 llama3.2:latest,Vanilla RAG,5a79c9395542994bb94570a2,comparison,Singer-songwriter,0.0,0.0,0.0,0.0,0.0,1.0,1314,9.343173400000524,Singer-songwriter
 llama3.2:latest,Vanilla RAG,5ab2979c554299449642c919,bridge,"Gold and Silver Pawn Shop, Las Vegas.",0.0,0.8571428571428571,0.0,0.0,0.0,1.0,1186,8.57368309999947,"Gold and Silver Pawn Shop, Las Vegas."
 llama3.2:latest,Vanilla RAG,5a7c6e435542996dd594b933,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,1347,9.40568919999896,unknown
@@ -139,7 +139,7 @@ llama3.2:latest,Vanilla RAG,5a808cbd5542996402f6a54b,bridge,Getaway driver,1.0,1
 llama3.2:latest,Vanilla RAG,5a770eb65542994aec3b71d4,bridge,The Ninth Gate,1.0,1.0,1.0,0.0,0.0,1.0,1152,8.04260499999873,The Ninth Gate
 llama3.2:latest,Vanilla RAG,5adfe6c455429906c02daa85,bridge,Godiva,1.0,1.0,1.0,0.0,0.0,1.0,1104,7.560946399999011,Godiva
 llama3.2:latest,Vanilla RAG,5ac248fd55429951e9e68525,bridge,"14,000",0.0,0.6666666666666666,0.0,0.0,0.0,1.0,909,6.09896949999893,"14,000"
-llama3.2:latest,Vanilla RAG,5a8b42be55429949d91db515,comparison,Journalist/Novelist,0.0,0.0,1.0,0.0,0.0,1.0,893,6.2000877000009496,Journalist/Novelist
+llama3.2:latest,Vanilla RAG,5a8b42be55429949d91db515,comparison,Journalist/Novelist,0.0,0.0,0.0,0.0,0.0,1.0,893,6.2000877000009496,Journalist/Novelist
 llama3.2:latest,Vanilla RAG,5a78d9c455429970f5fffda7,bridge,Major General Nathan Bedford Forrest.,1.0,1.0,1.0,0.0,0.0,1.0,1646,11.986715700000786,Major General Nathan Bedford Forrest.
 llama3.2:latest,Vanilla RAG,5a8f51185542992414482a3d,bridge,Tony McCoy,0.0,0.0,0.0,0.0,0.0,1.0,1076,7.170111699999325,Tony McCoy
 llama3.2:latest,Vanilla RAG,5ac258cc554299636651998e,bridge,Neneh Cherry,1.0,1.0,1.0,0.0,0.0,1.0,1186,8.409658599999602,Neneh Cherry
@@ -409,7 +409,7 @@ llama3.2:latest,Vanilla RAG,5ab84f2c55429934fafe6d54,bridge,Alice's Adventures i
 llama3.2:latest,Vanilla RAG,5a7293655542991f9a20c4ff,bridge,David Brock.,0.0,0.0,0.0,0.0,0.0,1.0,921,6.226734399999259,David Brock.
 llama3.2:latest,Vanilla RAG,5ac50c0355429924173fb581,bridge,1965,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,1376,9.650873099999444,1965
 llama3.2:latest,Vanilla RAG,5ae608715542992663a4f244,bridge,Steven Wilson,1.0,1.0,1.0,0.0,0.0,1.0,1179,8.223724699997547,Steven Wilson
-llama3.2:latest,Vanilla RAG,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,1.0,0.0,0.0,1.0,1261,9.278192599998874,"Samuel Beckett's ""Eleuthéria"""
+llama3.2:latest,Vanilla RAG,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,0.0,0.0,0.0,1.0,1261,9.278192599998874,"Samuel Beckett's ""Eleuthéria"""
 llama3.2:latest,Vanilla RAG,5ae352285542994393b9e685,bridge,1967,1.0,1.0,1.0,0.0,0.0,1.0,833,5.498439999999391,1967
 llama3.2:latest,Vanilla RAG,5ae7313c5542991e8301cbbc,bridge,Melbourne,0.0,0.5,0.0,0.0,0.0,1.0,1749,12.440781599998445,Melbourne
 llama3.2:latest,Vanilla RAG,5ae3de615542992f92d823a5,bridge,every aspect,0.0,0.4444444444444445,0.0,0.0,0.0,1.0,1613,11.430305300000327,every aspect
@@ -464,7 +464,7 @@ llama3.2:latest,Vanilla RAG,5ac2cfab554299657fa29079,bridge,1898,1.0,1.0,1.0,0.0
 llama3.2:latest,Vanilla RAG,5a8351fd55429954d2e2ec98,bridge,The Mighty Thor,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,1809,13.326519999998709,The Mighty Thor
 llama3.2:latest,Vanilla RAG,5a80870d5542992bc0c4a752,bridge,Matt Winer,0.0,0.4,0.0,0.0,0.0,1.0,1616,11.492957700000261,Matt Winer
 llama3.2:latest,Vanilla RAG,5a84de5f5542991dd0999e07,bridge,"Detroit, Michigan",1.0,1.0,1.0,0.0,0.0,1.0,1204,8.460968899998988,"Detroit, Michigan"
-llama3.2:latest,Vanilla RAG,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,1.0,0.0,0.0,1.0,1765,12.95033820000026,Writer/Explorer
+llama3.2:latest,Vanilla RAG,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,0.0,0.0,0.0,1.0,1765,12.95033820000026,Writer/Explorer
 llama3.2:latest,Vanilla RAG,5a87ed5b5542994846c1cdfc,bridge,Freemium,0.0,0.0,0.0,0.0,0.0,1.0,1448,10.411044899999979,Freemium
 llama3.2:latest,Vanilla RAG,5a810d7655429903bc27b915,bridge,Bass,1.0,1.0,1.0,0.0,0.0,1.0,1193,8.232406700000865,Bass
 llama3.2:latest,Vanilla RAG,5a77d4eb55429949eeb29f74,bridge,Yanka Dyagileva,0.0,0.0,0.0,0.0,0.0,1.0,1325,9.463844900001277,Yanka Dyagileva
@@ -480,7 +480,7 @@ llama3.2:latest,Vanilla RAG,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1.0,0
 llama3.2:latest,Vanilla RAG,5a77671255429966f1a36d21,comparison,Dice,0.0,0.0,0.0,0.0,0.0,1.0,1524,10.589497000000847,Dice
 llama3.2:latest,Vanilla RAG,5a87c7dc5542996e4f30891b,bridge,57 kg,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,1470,10.457688000002236,57 kg
 llama3.2:latest,Vanilla RAG,5a8900c75542997e5c09a6ed,comparison,Lime,1.0,1.0,1.0,0.0,0.0,1.0,818,5.541509800001222,Lime
-llama3.2:latest,Vanilla RAG,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,1345,9.431720000000496,2 acres
+llama3.2:latest,Vanilla RAG,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,1345,9.431720000000496,2 acres
 llama3.2:latest,Vanilla RAG,5ac175635542994ab5c67d4b,bridge,Martin O'Neill,1.0,1.0,1.0,0.0,0.0,1.0,1263,9.131541700000525,Martin O'Neill
 llama3.2:latest,Vanilla RAG,5ae2196b554299495565da02,bridge,Attorney,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,1599,11.254978300003131,Attorney
 llama3.2:latest,Vanilla RAG,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,1091,7.505638200000249,Wong Jing
@@ -892,7 +892,7 @@ llama3.2:latest,BM25 top-3,5a7c00a55542996dd594b87e,bridge,unknown,0.0,0.0,0.0,1
 llama3.2:latest,BM25 top-3,5ab809bb5542990e739ec7f9,bridge,High Hopes,0.0,0.0,0.0,0.0,0.0,0.0,514,3.2991258000001835,High Hopes
 llama3.2:latest,BM25 top-3,5ac3af895542995ef918c1f0,bridge,Stedelijk Museum Amsterdam.,1.0,1.0,1.0,0.0,0.0,1.0,603,4.1396808000026795,Stedelijk Museum Amsterdam.
 llama3.2:latest,BM25 top-3,5ab9188c5542991b5579f0f5,comparison,Alternative rock,0.0,0.5,0.0,0.0,0.0,1.0,335,1.965045500000997,Alternative rock
-llama3.2:latest,BM25 top-3,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
+llama3.2:latest,BM25 top-3,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
 llama3.2:latest,BM25 top-3,5a73d3ea5542992d56e7e3af,bridge,Arlo Looking Cloud,1.0,1.0,1.0,0.0,0.0,1.0,411,2.6844887000006565,Arlo Looking Cloud
 llama3.2:latest,BM25 top-3,5ade79335542997c77adee38,bridge,Ohio,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,364,2.08838150000156,Ohio
 llama3.2:latest,BM25 top-3,5add67555542992ae4cec54e,comparison,Battle of Belleau Wood.,1.0,1.0,1.0,0.0,0.0,1.0,722,5.082286500000919,Battle of Belleau Wood.
@@ -909,7 +909,7 @@ llama3.2:latest,BM25 top-3,5ab84f2c55429934fafe6d54,bridge,Through the Looking-G
 llama3.2:latest,BM25 top-3,5a7293655542991f9a20c4ff,bridge,Zair le gaulois,0.0,0.0,0.0,0.0,0.0,1.0,318,2.1135414999989734,Zair le gaulois
 llama3.2:latest,BM25 top-3,5ac50c0355429924173fb581,bridge,1965,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,547,3.4213434000012057,1965
 llama3.2:latest,BM25 top-3,5ae608715542992663a4f244,bridge,Steven Wilson,1.0,1.0,1.0,0.0,0.0,1.0,364,2.157809399999678,Steven Wilson
-llama3.2:latest,BM25 top-3,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,1.0,0.0,0.0,1.0,248,2.0030361999997695,"Samuel Beckett's ""Eleuthéria"""
+llama3.2:latest,BM25 top-3,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,0.0,0.0,0.0,1.0,248,2.0030361999997695,"Samuel Beckett's ""Eleuthéria"""
 llama3.2:latest,BM25 top-3,5ae352285542994393b9e685,bridge,1967,1.0,1.0,1.0,0.0,0.0,1.0,300,1.7424747999975807,1967
 llama3.2:latest,BM25 top-3,5ae7313c5542991e8301cbbc,bridge,Melbourne,0.0,0.5,0.0,0.0,0.0,1.0,583,3.7808160000022326,Melbourne
 llama3.2:latest,BM25 top-3,5ae3de615542992f92d823a5,bridge,every aspect,0.0,0.4444444444444445,0.0,0.0,0.0,1.0,446,2.9506467999999586,every aspect
@@ -956,7 +956,7 @@ llama3.2:latest,BM25 top-3,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1
 llama3.2:latest,BM25 top-3,5ac385f8554299741d48a279,bridge,Alfred Preis.,1.0,1.0,1.0,0.0,0.0,1.0,381,2.472869199998968,Alfred Preis.
 llama3.2:latest,BM25 top-3,5ade618e554299728e26c700,comparison,Film directing,0.0,0.5,0.0,0.0,0.0,1.0,244,1.423749499997939,Film directing
 llama3.2:latest,BM25 top-3,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,259,1.8886070000007749,Eve Hewson
-llama3.2:latest,BM25 top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,438,2.708986699999514,unknown
+llama3.2:latest,BM25 top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,438,2.708986699999514,unknown
 llama3.2:latest,BM25 top-3,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,608,3.9175990000003367,Katy Perry
 llama3.2:latest,BM25 top-3,5a75e67d5542992db9473709,bridge,New York and New Jersey campaign.,1.0,1.0,1.0,0.0,0.0,1.0,547,3.8748220999987097,New York and New Jersey campaign.
 llama3.2:latest,BM25 top-3,5ae3789b5542992e3233c412,bridge,Marshal of France,1.0,1.0,1.0,0.0,0.0,1.0,520,3.254362300001958,Marshal of France
@@ -964,7 +964,7 @@ llama3.2:latest,BM25 top-3,5ac2cfab554299657fa29079,bridge,1898,1.0,1.0,1.0,0.0,
 llama3.2:latest,BM25 top-3,5a8351fd55429954d2e2ec98,bridge,Thor.,1.0,1.0,1.0,0.0,0.0,1.0,491,3.071821200002887,Thor.
 llama3.2:latest,BM25 top-3,5a80870d5542992bc0c4a752,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,568,3.4782763000002888,unknown
 llama3.2:latest,BM25 top-3,5a84de5f5542991dd0999e07,bridge,"Detroit, Michigan",1.0,1.0,1.0,0.0,0.0,1.0,368,2.2527167000007466,"Detroit, Michigan"
-llama3.2:latest,BM25 top-3,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,1.0,0.0,0.0,1.0,441,2.7468112999995355,Writer/Explorer
+llama3.2:latest,BM25 top-3,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,0.0,0.0,0.0,1.0,441,2.7468112999995355,Writer/Explorer
 llama3.2:latest,BM25 top-3,5a87ed5b5542994846c1cdfc,bridge,GNU GPLv3,1.0,1.0,1.0,0.0,0.0,1.0,452,2.8519159000024956,GNU GPLv3
 llama3.2:latest,BM25 top-3,5a810d7655429903bc27b915,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,496,2.949181599997246,unknown
 llama3.2:latest,BM25 top-3,5a77d4eb55429949eeb29f74,bridge,Yanka Dyagileva,0.0,0.0,0.0,0.0,0.0,1.0,400,2.6600121000010404,Yanka Dyagileva
@@ -980,7 +980,7 @@ llama3.2:latest,BM25 top-3,5a8c8502554299585d9e36d0,bridge,Ed Lee.,1.0,1.0,1.0,0
 llama3.2:latest,BM25 top-3,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,672,4.374261000000843,Negotiation phases
 llama3.2:latest,BM25 top-3,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,325,1.944374800001242,Flyweight
 llama3.2:latest,BM25 top-3,5a8900c75542997e5c09a6ed,comparison,Vodka and rum,0.0,0.0,0.0,0.0,0.0,1.0,190,1.1643755000004603,Vodka and rum
-llama3.2:latest,BM25 top-3,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,1.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
+llama3.2:latest,BM25 top-3,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,0.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
 llama3.2:latest,BM25 top-3,5ac175635542994ab5c67d4b,bridge,David O'Leary,0.0,0.0,0.0,0.0,0.0,1.0,355,2.311335800000961,David O'Leary
 llama3.2:latest,BM25 top-3,5ae2196b554299495565da02,bridge,Attorney,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,359,2.177810799999861,Attorney
 llama3.2:latest,BM25 top-3,5a80abd15542996402f6a5e0,bridge,Ding Sheng,1.0,1.0,1.0,0.0,0.0,1.0,367,2.298532900000282,Ding Sheng
@@ -1032,7 +1032,7 @@ llama3.2:latest,Reranker top-3,5ab851e35542990e739ec8c3,bridge,Karnataka,0.0,0.6
 llama3.2:latest,Reranker top-3,5ae455d45542996836b02c7b,bridge,Unknown,0.0,0.0,0.0,1.0,,1.0,409,2.475264900000184,Unknown
 llama3.2:latest,Reranker top-3,5a88a1e55542997e5c09a64d,bridge,Mount Smart Stadium,0.0,0.4,0.0,0.0,0.0,1.0,305,1.8813076000005822,Mount Smart Stadium
 llama3.2:latest,Reranker top-3,5a8c6d4e5542996e8ac88aa6,comparison,Lionel Ngakane,0.0,0.0,0.0,0.0,0.0,1.0,248,1.6934933999982604,Lionel Ngakane
-llama3.2:latest,Reranker top-3,5a8bbb8c5542995d1e6f142e,bridge,"Pakistani, Swiss",0.0,0.0,1.0,0.0,0.0,1.0,325,2.577076500001567,"Pakistani, Swiss"
+llama3.2:latest,Reranker top-3,5a8bbb8c5542995d1e6f142e,bridge,"Pakistani, Swiss",0.0,0.0,0.0,0.0,0.0,1.0,325,2.577076500001567,"Pakistani, Swiss"
 llama3.2:latest,Reranker top-3,5a8389445542996488c2e450,comparison,Tennessee–Tombigbee Waterway,1.0,1.0,1.0,0.0,0.0,1.0,391,3.3949987000014517,Tennessee–Tombigbee Waterway
 llama3.2:latest,Reranker top-3,5aba7fd055429955dce3ee5e,bridge,Nikolai Trubetzkoy,1.0,1.0,1.0,0.0,0.0,1.0,436,3.0552711999989697,Nikolai Trubetzkoy
 llama3.2:latest,Reranker top-3,5ae73acb5542991e8301cc07,bridge,Counter-steering.,0.0,0.0,0.0,0.0,0.0,1.0,555,3.6231955000002927,Counter-steering.
@@ -1089,7 +1089,7 @@ llama3.2:latest,Reranker top-3,5abd0553554299700f9d7963,bridge,Marks & Spencer.,
 llama3.2:latest,Reranker top-3,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,392,2.4565445999978692,"29,000"
 llama3.2:latest,Reranker top-3,5a88cc8f55429938390d3fc5,bridge,Loretta Devine,0.0,0.0,0.0,0.0,0.0,1.0,433,2.8936190999993414,Loretta Devine
 llama3.2:latest,Reranker top-3,5abdaa0f55429965af743dad,bridge,6th Armored,0.0,0.4,0.0,0.0,0.0,1.0,318,2.0445466000019223,6th Armored
-llama3.2:latest,Reranker top-3,5a8b041955429971feec4604,bridge,Mountaineering.,0.0,0.0,1.0,0.0,1.0,1.0,375,2.353470299996843,Mountaineering.
+llama3.2:latest,Reranker top-3,5a8b041955429971feec4604,bridge,Mountaineering.,0.0,0.0,0.0,0.0,1.0,1.0,375,2.353470299996843,Mountaineering.
 llama3.2:latest,Reranker top-3,5a79c9395542994bb94570a2,comparison,Singer-Songwriter,0.0,0.0,0.0,0.0,0.0,1.0,437,2.82294660000116,Singer-Songwriter
 llama3.2:latest,Reranker top-3,5ab2979c554299449642c919,bridge,"World Famous Gold & Silver Pawn Shop, Las Vegas.",0.0,0.7999999999999999,0.0,0.0,0.0,1.0,409,3.1561656999983825,"World Famous Gold & Silver Pawn Shop, Las Vegas."
 llama3.2:latest,Reranker top-3,5a7c6e435542996dd594b933,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,531,3.2491993000003276,unknown
@@ -1139,7 +1139,7 @@ llama3.2:latest,Reranker top-3,5a808cbd5542996402f6a54b,bridge,Getaway driver,1.
 llama3.2:latest,Reranker top-3,5a770eb65542994aec3b71d4,bridge,The Ninth Gate,1.0,1.0,1.0,0.0,0.0,1.0,481,3.0296521999989636,The Ninth Gate
 llama3.2:latest,Reranker top-3,5adfe6c455429906c02daa85,bridge,Godiva,1.0,1.0,1.0,0.0,0.0,1.0,310,1.94245619999856,Godiva
 llama3.2:latest,Reranker top-3,5ac248fd55429951e9e68525,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,361,2.448299199997564,unknown
-llama3.2:latest,Reranker top-3,5a8b42be55429949d91db515,comparison,Journalist/Novelist,0.0,0.0,1.0,0.0,0.0,1.0,327,2.227597400000377,Journalist/Novelist
+llama3.2:latest,Reranker top-3,5a8b42be55429949d91db515,comparison,Journalist/Novelist,0.0,0.0,0.0,0.0,0.0,1.0,327,2.227597400000377,Journalist/Novelist
 llama3.2:latest,Reranker top-3,5a78d9c455429970f5fffda7,bridge,Nathan Bedford Forrest,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,452,3.054309800001647,Nathan Bedford Forrest
 llama3.2:latest,Reranker top-3,5a8f51185542992414482a3d,bridge,20 consecutive times,0.0,0.5,1.0,0.0,0.0,1.0,322,1.981206000000384,20 consecutive times
 llama3.2:latest,Reranker top-3,5ac258cc554299636651998e,bridge,Neneh Cherry,1.0,1.0,1.0,0.0,0.0,1.0,452,3.09590439999738,Neneh Cherry
@@ -1409,7 +1409,7 @@ llama3.2:latest,Reranker top-3,5ab84f2c55429934fafe6d54,bridge,Alice's Adventure
 llama3.2:latest,Reranker top-3,5a7293655542991f9a20c4ff,bridge,Between Hope and History.,0.0,0.0,0.0,0.0,0.0,1.0,319,2.069849100000283,Between Hope and History.
 llama3.2:latest,Reranker top-3,5ac50c0355429924173fb581,bridge,1968,0.0,0.0,0.0,0.0,0.0,1.0,370,2.192500699999073,1968
 llama3.2:latest,Reranker top-3,5ae608715542992663a4f244,bridge,Steven Wilson,1.0,1.0,1.0,0.0,0.0,1.0,485,3.032389299998613,Steven Wilson
-llama3.2:latest,Reranker top-3,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,1.0,0.0,0.0,1.0,323,2.537490999999136,"Samuel Beckett's ""Eleuthéria"""
+llama3.2:latest,Reranker top-3,5a7545605542993748c89807,bridge,"Samuel Beckett's ""Eleuthéria""",0.0,0.4,0.0,0.0,0.0,1.0,323,2.537490999999136,"Samuel Beckett's ""Eleuthéria"""
 llama3.2:latest,Reranker top-3,5ae352285542994393b9e685,bridge,1967,1.0,1.0,1.0,0.0,0.0,1.0,323,1.8768888999984483,1967
 llama3.2:latest,Reranker top-3,5ae7313c5542991e8301cbbc,bridge,Essendon.,0.0,0.0,0.0,0.0,0.0,1.0,603,3.904223399997136,Essendon.
 llama3.2:latest,Reranker top-3,5ae3de615542992f92d823a5,bridge,the totalitarian and oppressive world of World War II-era Japan.,0.0,0.25,0.0,0.0,0.0,1.0,496,3.717189299997699,the totalitarian and oppressive world of World War II-era Japan.
@@ -1464,7 +1464,7 @@ llama3.2:latest,Reranker top-3,5ac2cfab554299657fa29079,bridge,1898,1.0,1.0,1.0,
 llama3.2:latest,Reranker top-3,5a8351fd55429954d2e2ec98,bridge,The Mighty Thor,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,530,3.3855378000007477,The Mighty Thor
 llama3.2:latest,Reranker top-3,5a80870d5542992bc0c4a752,bridge,Matt Winer,0.0,0.4,0.0,0.0,0.0,1.0,417,2.6258286999982374,Matt Winer
 llama3.2:latest,Reranker top-3,5a84de5f5542991dd0999e07,bridge,"Detroit, Michigan",1.0,1.0,1.0,0.0,0.0,1.0,418,2.6557639999991807,"Detroit, Michigan"
-llama3.2:latest,Reranker top-3,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,1.0,0.0,0.0,1.0,769,5.155808899999101,Writer/Explorer
+llama3.2:latest,Reranker top-3,5a886098554299206df2b248,bridge,Writer/Explorer,0.0,0.0,0.0,0.0,0.0,1.0,769,5.155808899999101,Writer/Explorer
 llama3.2:latest,Reranker top-3,5a87ed5b5542994846c1cdfc,bridge,GNU GPLv3,1.0,1.0,1.0,0.0,0.0,1.0,525,3.3335249999981897,GNU GPLv3
 llama3.2:latest,Reranker top-3,5a810d7655429903bc27b915,bridge,Bass,1.0,1.0,1.0,0.0,1.0,1.0,407,2.5018901999974332,Bass
 llama3.2:latest,Reranker top-3,5a77d4eb55429949eeb29f74,bridge,Yanka Dyagileva,0.0,0.0,0.0,0.0,0.0,1.0,400,2.6600121000010404,Yanka Dyagileva
@@ -1480,7 +1480,7 @@ llama3.2:latest,Reranker top-3,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1.
 llama3.2:latest,Reranker top-3,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,485,3.136408999998821,Negotiation phases
 llama3.2:latest,Reranker top-3,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,325,1.944374800001242,Flyweight
 llama3.2:latest,Reranker top-3,5a8900c75542997e5c09a6ed,comparison,Vodka,0.0,0.0,0.0,0.0,0.0,1.0,224,1.3286000999978569,Vodka
-llama3.2:latest,Reranker top-3,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,1.0,0.0,0.0,1.0,236,1.5856375000003027,Approximately 2 acres.
+llama3.2:latest,Reranker top-3,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,0.0,0.0,0.0,1.0,236,1.5856375000003027,Approximately 2 acres.
 llama3.2:latest,Reranker top-3,5ac175635542994ab5c67d4b,bridge,Martin O'Neill,1.0,1.0,1.0,0.0,0.0,1.0,472,2.961687700000766,Martin O'Neill
 llama3.2:latest,Reranker top-3,5ae2196b554299495565da02,bridge,Optometry,0.0,0.0,0.0,0.0,0.0,1.0,421,2.6215654000006907,Optometry
 llama3.2:latest,Reranker top-3,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,319,2.02864160000172,Wong Jing
@@ -1571,7 +1571,7 @@ llama3.2:latest,CAS w/o graph,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.3
 llama3.2:latest,CAS w/o graph,5a909a0355429916514e7505,comparison,American,0.0,0.0,0.0,0.0,0.0,1.0,419,2.5180129000000306,American
 llama3.2:latest,CAS w/o graph,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,597,3.9736507999987225,Mark Donohue
 llama3.2:latest,CAS w/o graph,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,189,1.0845313999998325,Latin American culture
-llama3.2:latest,CAS w/o graph,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,303,1.709303399999044,unknown
+llama3.2:latest,CAS w/o graph,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,303,1.709303399999044,unknown
 llama3.2:latest,CAS w/o graph,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,260,1.5026719999987108,Ten Walls
 llama3.2:latest,CAS w/o graph,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,171,0.9098448999975517,Belgium
 llama3.2:latest,CAS w/o graph,5ab48c325542996a3a969f93,bridge,Essex,1.0,1.0,1.0,0.0,1.0,1.0,348,2.0464257999992697,Essex
@@ -1892,7 +1892,7 @@ llama3.2:latest,CAS w/o graph,5a7c00a55542996dd594b87e,bridge,unknown,0.0,0.0,0.
 llama3.2:latest,CAS w/o graph,5ab809bb5542990e739ec7f9,bridge,The Fifth Estate,0.0,0.0,0.0,0.0,0.0,1.0,995,6.764696499998536,The Fifth Estate
 llama3.2:latest,CAS w/o graph,5ac3af895542995ef918c1f0,bridge,Stedelijk Museum Amsterdam.,1.0,1.0,1.0,0.0,0.0,1.0,263,1.8161659999968833,Stedelijk Museum Amsterdam.
 llama3.2:latest,CAS w/o graph,5ab9188c5542991b5579f0f5,comparison,Alternative rock,0.0,0.5,0.0,0.0,0.0,1.0,202,1.1129781000017829,Alternative rock
-llama3.2:latest,CAS w/o graph,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
+llama3.2:latest,CAS w/o graph,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
 llama3.2:latest,CAS w/o graph,5a73d3ea5542992d56e7e3af,bridge,Arlo Looking Cloud,1.0,1.0,1.0,0.0,0.0,1.0,358,2.37146120000034,Arlo Looking Cloud
 llama3.2:latest,CAS w/o graph,5ade79335542997c77adee38,bridge,Ohio River,1.0,1.0,1.0,0.0,0.0,1.0,488,3.0470760999996855,Ohio River
 llama3.2:latest,CAS w/o graph,5add67555542992ae4cec54e,comparison,Battle of Belleau Wood.,1.0,1.0,1.0,0.0,0.0,1.0,722,5.082286500000919,Battle of Belleau Wood.
@@ -1956,7 +1956,7 @@ llama3.2:latest,CAS w/o graph,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.
 llama3.2:latest,CAS w/o graph,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,4.759600699999282,Alfred Preis
 llama3.2:latest,CAS w/o graph,5ade618e554299728e26c700,comparison,Film and painting,0.0,0.4,0.0,0.0,0.0,1.0,123,0.674011099999916,Film and painting
 llama3.2:latest,CAS w/o graph,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,230,1.4635004999981902,Eve Hewson
-llama3.2:latest,CAS w/o graph,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,438,2.708986699999514,unknown
+llama3.2:latest,CAS w/o graph,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,438,2.708986699999514,unknown
 llama3.2:latest,CAS w/o graph,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,458,3.17610070000228,Katy Perry
 llama3.2:latest,CAS w/o graph,5a75e67d5542992db9473709,bridge,New York and New Jersey campaign.,1.0,1.0,1.0,0.0,0.0,1.0,547,3.8748220999987097,New York and New Jersey campaign.
 llama3.2:latest,CAS w/o graph,5ae3789b5542992e3233c412,bridge,Marshal Philippe Pétain,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,214,1.4010320000015781,Marshal Philippe Pétain
@@ -1980,7 +1980,7 @@ llama3.2:latest,CAS w/o graph,5a8c8502554299585d9e36d0,bridge,Ed Lee.,1.0,1.0,1.
 llama3.2:latest,CAS w/o graph,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,873,5.957981400002609,Negotiation phases
 llama3.2:latest,CAS w/o graph,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,325,1.944374800001242,Flyweight
 llama3.2:latest,CAS w/o graph,5a8900c75542997e5c09a6ed,comparison,Lime juice,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,122,0.7153974000029848,Lime juice
-llama3.2:latest,CAS w/o graph,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,1.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
+llama3.2:latest,CAS w/o graph,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,0.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
 llama3.2:latest,CAS w/o graph,5ac175635542994ab5c67d4b,bridge,Mervyn Day,0.0,0.0,0.0,0.0,0.0,1.0,266,1.7019701999997778,Mervyn Day
 llama3.2:latest,CAS w/o graph,5ae2196b554299495565da02,bridge,Attorney,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,162,0.8349373999990348,Attorney
 llama3.2:latest,CAS w/o graph,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,262,1.7069408999996085,Wong Jing
@@ -2071,7 +2071,7 @@ llama3.2:latest,CAS-NLI penalty,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0
 llama3.2:latest,CAS-NLI penalty,5a909a0355429916514e7505,comparison,American,0.0,0.0,0.0,0.0,0.0,1.0,419,2.5180129000000306,American
 llama3.2:latest,CAS-NLI penalty,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,597,3.9736507999987225,Mark Donohue
 llama3.2:latest,CAS-NLI penalty,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,189,1.0845313999998325,Latin American culture
-llama3.2:latest,CAS-NLI penalty,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,303,1.709303399999044,unknown
+llama3.2:latest,CAS-NLI penalty,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,303,1.709303399999044,unknown
 llama3.2:latest,CAS-NLI penalty,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,260,1.5026719999987108,Ten Walls
 llama3.2:latest,CAS-NLI penalty,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,171,0.9098448999975517,Belgium
 llama3.2:latest,CAS-NLI penalty,5ab48c325542996a3a969f93,bridge,Essex,1.0,1.0,1.0,0.0,1.0,1.0,348,2.0464257999992697,Essex
@@ -2456,7 +2456,7 @@ llama3.2:latest,CAS-NLI penalty,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,
 llama3.2:latest,CAS-NLI penalty,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,4.759600699999282,Alfred Preis
 llama3.2:latest,CAS-NLI penalty,5ade618e554299728e26c700,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,85,0.3175528000028862,unknown
 llama3.2:latest,CAS-NLI penalty,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,300,1.8950428999996802,Eve Hewson
-llama3.2:latest,CAS-NLI penalty,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,438,2.708986699999514,unknown
+llama3.2:latest,CAS-NLI penalty,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,438,2.708986699999514,unknown
 llama3.2:latest,CAS-NLI penalty,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,458,3.17610070000228,Katy Perry
 llama3.2:latest,CAS-NLI penalty,5a75e67d5542992db9473709,bridge,New York and New Jersey campaign.,1.0,1.0,1.0,0.0,0.0,1.0,547,3.8748220999987097,New York and New Jersey campaign.
 llama3.2:latest,CAS-NLI penalty,5ae3789b5542992e3233c412,bridge,unknown,0.0,0.0,0.0,1.0,,0.0,80,0.2915906000016548,unknown
@@ -2480,7 +2480,7 @@ llama3.2:latest,CAS-NLI penalty,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1
 llama3.2:latest,CAS-NLI penalty,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,873,5.957981400002609,Negotiation phases
 llama3.2:latest,CAS-NLI penalty,5a87c7dc5542996e4f30891b,bridge,unknown,0.0,0.0,0.0,1.0,,0.0,163,0.787031299998489,unknown
 llama3.2:latest,CAS-NLI penalty,5a8900c75542997e5c09a6ed,comparison,Rum,0.0,0.0,0.0,0.0,1.0,0.0,78,0.356374599999981,Rum
-llama3.2:latest,CAS-NLI penalty,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,1.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
+llama3.2:latest,CAS-NLI penalty,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,0.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
 llama3.2:latest,CAS-NLI penalty,5ac175635542994ab5c67d4b,bridge,Mervyn Day,0.0,0.0,0.0,0.0,0.0,1.0,266,1.7019701999997778,Mervyn Day
 llama3.2:latest,CAS-NLI penalty,5ae2196b554299495565da02,bridge,Attorney,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,162,0.8349373999990348,Attorney
 llama3.2:latest,CAS-NLI penalty,5a80abd15542996402f6a5e0,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,195,1.0800756999997247,unknown
@@ -2571,7 +2571,7 @@ llama3.2:latest,CAS-NLI preserve,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,
 llama3.2:latest,CAS-NLI preserve,5a909a0355429916514e7505,comparison,American,0.0,0.0,0.0,0.0,0.0,1.0,419,2.5180129000000306,American
 llama3.2:latest,CAS-NLI preserve,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,597,3.9736507999987225,Mark Donohue
 llama3.2:latest,CAS-NLI preserve,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,189,1.0845313999998325,Latin American culture
-llama3.2:latest,CAS-NLI preserve,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,303,1.709303399999044,unknown
+llama3.2:latest,CAS-NLI preserve,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,303,1.709303399999044,unknown
 llama3.2:latest,CAS-NLI preserve,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,260,1.5026719999987108,Ten Walls
 llama3.2:latest,CAS-NLI preserve,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,171,0.9098448999975517,Belgium
 llama3.2:latest,CAS-NLI preserve,5ab48c325542996a3a969f93,bridge,Essex,1.0,1.0,1.0,0.0,1.0,1.0,348,2.0464257999992697,Essex
@@ -2892,7 +2892,7 @@ llama3.2:latest,CAS-NLI preserve,5a7c00a55542996dd594b87e,bridge,unknown,0.0,0.0
 llama3.2:latest,CAS-NLI preserve,5ab809bb5542990e739ec7f9,bridge,The Fifth Estate,0.0,0.0,0.0,0.0,0.0,1.0,1009,6.7468699000019114,The Fifth Estate
 llama3.2:latest,CAS-NLI preserve,5ac3af895542995ef918c1f0,bridge,Stedelijk Museum Amsterdam.,1.0,1.0,1.0,0.0,0.0,1.0,263,1.8161659999968833,Stedelijk Museum Amsterdam.
 llama3.2:latest,CAS-NLI preserve,5ab9188c5542991b5579f0f5,comparison,Alternative rock,0.0,0.5,0.0,0.0,0.0,1.0,202,1.1129781000017829,Alternative rock
-llama3.2:latest,CAS-NLI preserve,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
+llama3.2:latest,CAS-NLI preserve,5ab93262554299131ca422b6,bridge,Heavy metal bands,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,347,2.180288200001087,Heavy metal bands
 llama3.2:latest,CAS-NLI preserve,5a73d3ea5542992d56e7e3af,bridge,Arlo Looking Cloud,1.0,1.0,1.0,0.0,0.0,1.0,464,3.1221107999990636,Arlo Looking Cloud
 llama3.2:latest,CAS-NLI preserve,5ade79335542997c77adee38,bridge,Ohio,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,919,6.031925499999488,Ohio
 llama3.2:latest,CAS-NLI preserve,5add67555542992ae4cec54e,comparison,Battle of Belleau Wood.,1.0,1.0,1.0,0.0,0.0,1.0,722,5.082286500000919,Battle of Belleau Wood.
@@ -2956,7 +2956,7 @@ llama3.2:latest,CAS-NLI preserve,5ac0641f554299294b218fbe,bridge,2.1 million,1.0
 llama3.2:latest,CAS-NLI preserve,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,4.759600699999282,Alfred Preis
 llama3.2:latest,CAS-NLI preserve,5ade618e554299728e26c700,comparison,Film and painting,0.0,0.4,0.0,0.0,0.0,1.0,123,0.674011099999916,Film and painting
 llama3.2:latest,CAS-NLI preserve,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,300,1.8950428999996802,Eve Hewson
-llama3.2:latest,CAS-NLI preserve,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,438,2.708986699999514,unknown
+llama3.2:latest,CAS-NLI preserve,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,438,2.708986699999514,unknown
 llama3.2:latest,CAS-NLI preserve,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,458,3.17610070000228,Katy Perry
 llama3.2:latest,CAS-NLI preserve,5a75e67d5542992db9473709,bridge,New York and New Jersey campaign.,1.0,1.0,1.0,0.0,0.0,1.0,547,3.8748220999987097,New York and New Jersey campaign.
 llama3.2:latest,CAS-NLI preserve,5ae3789b5542992e3233c412,bridge,Marshal Philippe Pétain,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,214,1.4010320000015781,Marshal Philippe Pétain
@@ -2980,7 +2980,7 @@ llama3.2:latest,CAS-NLI preserve,5a8c8502554299585d9e36d0,bridge,Ed Lee.,1.0,1.0
 llama3.2:latest,CAS-NLI preserve,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,873,5.957981400002609,Negotiation phases
 llama3.2:latest,CAS-NLI preserve,5a87c7dc5542996e4f30891b,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,339,2.059359400001995,unknown
 llama3.2:latest,CAS-NLI preserve,5a8900c75542997e5c09a6ed,comparison,Lime juice,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,122,0.7153974000029848,Lime juice
-llama3.2:latest,CAS-NLI preserve,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,1.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
+llama3.2:latest,CAS-NLI preserve,5ae5fd395542996de7b71ab3,bridge,Approximately 2 acres.,0.0,0.4,0.0,0.0,0.0,1.0,301,1.9588159000013547,Approximately 2 acres.
 llama3.2:latest,CAS-NLI preserve,5ac175635542994ab5c67d4b,bridge,Mervyn Day,0.0,0.0,0.0,0.0,0.0,1.0,266,1.7019701999997778,Mervyn Day
 llama3.2:latest,CAS-NLI preserve,5ae2196b554299495565da02,bridge,Attorney,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,162,0.8349373999990348,Attorney
 llama3.2:latest,CAS-NLI preserve,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,262,1.7069408999996085,Wong Jing
@@ -3071,7 +3071,7 @@ gemma3:latest,Vanilla RAG,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.33333
 gemma3:latest,Vanilla RAG,5a909a0355429916514e7505,comparison,yes,1.0,1.0,1.0,0.0,,1.0,1301,11.012524600002507,yes
 gemma3:latest,Vanilla RAG,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,1306,10.732632899998862,Mark Donohue
 gemma3:latest,Vanilla RAG,5ab6ecd85542991d322236cf,bridge,Culture,0.0,0.5,0.0,0.0,0.0,1.0,1194,9.48801739999908,Culture
-gemma3:latest,Vanilla RAG,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,1403,12.329075000001467,unknown
+gemma3:latest,Vanilla RAG,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,1403,12.329075000001467,unknown
 gemma3:latest,Vanilla RAG,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,2082,17.612961999999243,Ten Walls
 gemma3:latest,Vanilla RAG,5a85fa815542996432c57155,bridge,France,0.0,0.0,0.0,0.0,0.0,1.0,1460,12.104314599997451,France
 gemma3:latest,Vanilla RAG,5ab48c325542996a3a969f93,bridge,Essex,1.0,1.0,1.0,0.0,0.0,1.0,1298,11.068734599997697,Essex
@@ -3089,7 +3089,7 @@ gemma3:latest,Vanilla RAG,5abd0553554299700f9d7963,bridge,Marks & Spencer,0.0,0.
 gemma3:latest,Vanilla RAG,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,2083,17.70487460000004,"29,000"
 gemma3:latest,Vanilla RAG,5a88cc8f55429938390d3fc5,bridge,Sissy Spacek,1.0,1.0,1.0,0.0,0.0,1.0,1290,11.889621499998611,Sissy Spacek
 gemma3:latest,Vanilla RAG,5abdaa0f55429965af743dad,bridge,6th Armored Division,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,893,8.241347300001507,6th Armored Division
-gemma3:latest,Vanilla RAG,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,0.0,1.0,1297,10.732653399998526,Mountaineering
+gemma3:latest,Vanilla RAG,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,0.0,1.0,1297,10.732653399998526,Mountaineering
 gemma3:latest,Vanilla RAG,5a79c9395542994bb94570a2,comparison,Music recording,0.0,0.0,0.0,0.0,0.0,1.0,1363,11.150809599999775,Music recording
 gemma3:latest,Vanilla RAG,5ab2979c554299449642c919,bridge,Las Vegas,0.0,0.4444444444444445,0.0,0.0,0.0,1.0,1236,10.522227999997995,Las Vegas
 gemma3:latest,Vanilla RAG,5a7c6e435542996dd594b933,bridge,"July 16, 1971",1.0,1.0,1.0,0.0,0.0,1.0,1377,13.079547099998308,"July 16, 1971"
@@ -3172,7 +3172,7 @@ gemma3:latest,Vanilla RAG,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,0.0,0
 gemma3:latest,Vanilla RAG,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,1902,15.856062800001382,2012
 gemma3:latest,Vanilla RAG,5adecc7755429975fa854f9d,bridge,Sigurdur Thordarson,0.0,0.0,0.0,0.0,0.0,1.0,1592,13.477939000000333,Sigurdur Thordarson
 gemma3:latest,Vanilla RAG,5a7c6c9d554299683c1c6302,bridge,Freeport,0.0,0.0,0.0,0.0,0.0,1.0,1146,9.439322199999879,Freeport
-gemma3:latest,Vanilla RAG,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,738,5.790673600000446,unknown
+gemma3:latest,Vanilla RAG,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,738,5.790673600000446,unknown
 gemma3:latest,Vanilla RAG,5ae4e2ca55429908b63264aa,bridge,David May,1.0,1.0,1.0,0.0,0.0,1.0,1405,11.569222999998601,David May
 gemma3:latest,Vanilla RAG,5a7662745542992db9473786,bridge,Ulver,0.0,0.0,0.0,0.0,0.0,1.0,1759,14.560613900001044,Ulver
 gemma3:latest,Vanilla RAG,5a88fa9e5542993b751ca8de,bridge,Chicago Bears,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,1360,11.753516000000673,Chicago Bears
@@ -3247,7 +3247,7 @@ gemma3:latest,Vanilla RAG,5adf41a45542993a75d26456,bridge,unknown,0.0,0.0,0.0,1.
 gemma3:latest,Vanilla RAG,5a8ceb4955429941ae14df43,bridge,Niño,1.0,1.0,1.0,0.0,0.0,1.0,1991,17.968678799999907,Niño
 gemma3:latest,Vanilla RAG,5ac0c1cf5542992a796ded7c,bridge,Ukrainian,1.0,1.0,1.0,0.0,0.0,1.0,1598,14.089684899998247,Ukrainian
 gemma3:latest,Vanilla RAG,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,1129,9.818894,Casey Bond
-gemma3:latest,Vanilla RAG,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,1264,11.109390199999325,unknown
+gemma3:latest,Vanilla RAG,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,1264,11.109390199999325,unknown
 gemma3:latest,Vanilla RAG,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,1494,13.635700099999667,265 million
 gemma3:latest,Vanilla RAG,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,1447,12.573228000001109,Spam
 gemma3:latest,Vanilla RAG,5a79ad485542994bb9457036,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,1896,16.472402799998235,unknown
@@ -3323,7 +3323,7 @@ gemma3:latest,Vanilla RAG,5adcfe5f5542992c1e3a24f0,bridge,Magnate,0.0,0.0,0.0,0.
 gemma3:latest,Vanilla RAG,5ae2ad6b5542996483e64a3d,bridge,King Duncan,1.0,1.0,1.0,0.0,0.0,1.0,1557,13.338792100003047,King Duncan
 gemma3:latest,Vanilla RAG,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,1459,12.750141699998494,Masa Takayama
 gemma3:latest,Vanilla RAG,5abaf6865542996cc5e49f3c,bridge,The Lodge,0.0,0.0,0.0,0.0,0.0,1.0,1594,14.390653099999327,The Lodge
-gemma3:latest,Vanilla RAG,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,1610,13.825413200000185,unknown
+gemma3:latest,Vanilla RAG,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,1610,13.825413200000185,unknown
 gemma3:latest,Vanilla RAG,5ae39f405542991a06ce9a02,bridge,750,0.0,0.0,0.0,0.0,0.0,1.0,1343,11.83672149999984,750
 gemma3:latest,Vanilla RAG,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,1396,11.952027200000884,King Kelly
 gemma3:latest,Vanilla RAG,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,1398,12.520863699999609,Lucie Šafářová
@@ -3433,7 +3433,7 @@ gemma3:latest,Vanilla RAG,5ac05310554299012d1db5e7,bridge,Ron Goldman,1.0,1.0,1.
 gemma3:latest,Vanilla RAG,5ae0de1455429924de1b71b4,bridge,Orange Julius,0.0,0.5,0.0,0.0,0.0,1.0,1086,9.37204859999838,Orange Julius
 gemma3:latest,Vanilla RAG,5a816db055429903bc27b961,comparison,New York City,1.0,1.0,1.0,0.0,0.0,1.0,1837,15.966501800001424,New York City
 gemma3:latest,Vanilla RAG,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,1092,10.038670199999615,Herschell Gordon Lewis
-gemma3:latest,Vanilla RAG,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,1602,13.716902000000118,unknown
+gemma3:latest,Vanilla RAG,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,1602,13.716902000000118,unknown
 gemma3:latest,Vanilla RAG,5a83438955429966c78a6b61,bridge,Bill McCutcheon,1.0,1.0,1.0,0.0,0.0,1.0,2846,25.212660600001982,Bill McCutcheon
 gemma3:latest,Vanilla RAG,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,1427,13.221990100002586,Saturday Night Live
 gemma3:latest,Vanilla RAG,5a7fc5875542992e7d278d67,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,1159,9.966091099999176,unknown
@@ -3450,7 +3450,7 @@ gemma3:latest,Vanilla RAG,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,1.0,0
 gemma3:latest,Vanilla RAG,5a75eb125542994ccc918659,comparison,Kamāl al-Dīn al-Fārisī,0.0,0.0,0.0,0.0,0.0,1.0,1631,15.317965499998536,Kamāl al-Dīn al-Fārisī
 gemma3:latest,Vanilla RAG,5adcd1665542994d58a2f6e6,bridge,Bruce R. Cook,1.0,1.0,1.0,0.0,0.0,1.0,1359,12.70718190000116,Bruce R. Cook
 gemma3:latest,Vanilla RAG,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,1822,15.713522900001408,Taylor Swift
-gemma3:latest,Vanilla RAG,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,1148,9.975120600000082,unknown
+gemma3:latest,Vanilla RAG,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,1148,9.975120600000082,unknown
 gemma3:latest,Vanilla RAG,5ab55b0c554299488d4d995e,bridge,Big 12 Conference,1.0,1.0,1.0,0.0,0.0,1.0,1367,12.103772599999502,Big 12 Conference
 gemma3:latest,Vanilla RAG,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1.0,0.0,0.0,1.0,1274,11.213485699998273,2.1 million
 gemma3:latest,Vanilla RAG,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,1374,11.874290600000677,Alfred Preis
@@ -3571,7 +3571,7 @@ gemma3:latest,BM25 top-3,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.333333
 gemma3:latest,BM25 top-3,5a909a0355429916514e7505,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,414,3.7778857000012067,unknown
 gemma3:latest,BM25 top-3,5a726ba35542997f827839c0,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,448,3.849914999998873,unknown
 gemma3:latest,BM25 top-3,5ab6ecd85542991d322236cf,bridge,Culture,0.0,0.5,0.0,0.0,0.0,1.0,365,3.213382100002491,Culture
-gemma3:latest,BM25 top-3,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,436,3.67575399999987,unknown
+gemma3:latest,BM25 top-3,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,436,3.67575399999987,unknown
 gemma3:latest,BM25 top-3,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,442,4.031191900001431,Ten Walls
 gemma3:latest,BM25 top-3,5a85fa815542996432c57155,bridge,Western Europe,1.0,1.0,1.0,0.0,0.0,1.0,366,3.3382793000018864,Western Europe
 gemma3:latest,BM25 top-3,5ab48c325542996a3a969f93,bridge,Waltham Abbey,0.0,0.0,0.0,0.0,0.0,1.0,422,3.8151585000014165,Waltham Abbey
@@ -3589,7 +3589,7 @@ gemma3:latest,BM25 top-3,5abd0553554299700f9d7963,bridge,Marks & Spencer,0.0,0.6
 gemma3:latest,BM25 top-3,5ae12aa6554299422ee99617,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,389,3.3505757999992056,unknown
 gemma3:latest,BM25 top-3,5a88cc8f55429938390d3fc5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,354,3.0652616000006674,unknown
 gemma3:latest,BM25 top-3,5abdaa0f55429965af743dad,bridge,United States Army,0.0,0.0,0.0,0.0,0.0,1.0,322,3.1069673000019975,United States Army
-gemma3:latest,BM25 top-3,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,1.0,1.0,385,3.4930133999987447,Mountaineering
+gemma3:latest,BM25 top-3,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,1.0,1.0,385,3.4930133999987447,Mountaineering
 gemma3:latest,BM25 top-3,5a79c9395542994bb94570a2,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,394,3.308036300000822,unknown
 gemma3:latest,BM25 top-3,5ab2979c554299449642c919,bridge,Las Vegas,0.0,0.4444444444444445,0.0,0.0,0.0,1.0,439,3.8323319999981322,Las Vegas
 gemma3:latest,BM25 top-3,5a7c6e435542996dd594b933,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,398,3.4476554000029864,unknown
@@ -3672,7 +3672,7 @@ gemma3:latest,BM25 top-3,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,0.0,0.
 gemma3:latest,BM25 top-3,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,629,5.715608099999372,2012
 gemma3:latest,BM25 top-3,5adecc7755429975fa854f9d,bridge,Sigurdur Thordarson,0.0,0.0,0.0,0.0,0.0,1.0,673,6.6395054000022355,Sigurdur Thordarson
 gemma3:latest,BM25 top-3,5a7c6c9d554299683c1c6302,bridge,Freeport,0.0,0.0,0.0,0.0,0.0,1.0,352,3.106224700000894,Freeport
-gemma3:latest,BM25 top-3,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,232,2.1414736000006087,unknown
+gemma3:latest,BM25 top-3,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,232,2.1414736000006087,unknown
 gemma3:latest,BM25 top-3,5ae4e2ca55429908b63264aa,bridge,David May,1.0,1.0,1.0,0.0,0.0,1.0,293,2.5971240999970178,David May
 gemma3:latest,BM25 top-3,5a7662745542992db9473786,bridge,Ulver and the Tromsø Chamber Orchestra,0.0,0.0,0.0,0.0,0.0,1.0,478,4.659999899999093,Ulver and the Tromsø Chamber Orchestra
 gemma3:latest,BM25 top-3,5a88fa9e5542993b751ca8de,bridge,Chicago Bears,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,485,4.232458000002225,Chicago Bears
@@ -3747,13 +3747,13 @@ gemma3:latest,BM25 top-3,5adf41a45542993a75d26456,bridge,2010,1.0,1.0,1.0,0.0,0.
 gemma3:latest,BM25 top-3,5a8ceb4955429941ae14df43,bridge,José Fernández,0.0,0.0,0.0,0.0,0.0,1.0,757,6.54802539999946,José Fernández
 gemma3:latest,BM25 top-3,5ac0c1cf5542992a796ded7c,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,388,3.4430605999987165,unknown
 gemma3:latest,BM25 top-3,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,424,3.723634999998467,Casey Bond
-gemma3:latest,BM25 top-3,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,515,4.469451299999491,unknown
+gemma3:latest,BM25 top-3,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,515,4.469451299999491,unknown
 gemma3:latest,BM25 top-3,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,611,5.7353290999999444,265 million
 gemma3:latest,BM25 top-3,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,445,3.9270520999998553,Spam
 gemma3:latest,BM25 top-3,5a79ad485542994bb9457036,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,767,6.451504099997692,unknown
 gemma3:latest,BM25 top-3,5ab98d70554299753720f82f,comparison,Pizza franchises,0.0,0.0,0.0,0.0,0.0,1.0,364,3.3934674000011,Pizza franchises
 gemma3:latest,BM25 top-3,5ac371aa5542995ef918c191,bridge,Workers' self-management,0.0,0.0,0.0,0.0,0.0,1.0,353,3.4106221000001824,Workers' self-management
-gemma3:latest,BM25 top-3,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,508,4.382415700001729,unknown
+gemma3:latest,BM25 top-3,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,508,4.382415700001729,unknown
 gemma3:latest,BM25 top-3,5a71646e5542994082a3e80e,bridge,Tetrahydrogestrinone,1.0,1.0,1.0,0.0,0.0,1.0,472,4.42483970000103,Tetrahydrogestrinone
 gemma3:latest,BM25 top-3,5ac275f155429921a00aaf82,bridge,capital of French Indochina,0.0,0.0,0.0,0.0,0.0,1.0,501,5.12006509999992,capital of French Indochina
 gemma3:latest,BM25 top-3,5a8e1577554299068b959e54,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,391,3.3173655999999028,unknown
@@ -3790,7 +3790,7 @@ gemma3:latest,BM25 top-3,5a807ca5554299485f598613,bridge,Baltimore and Ohio Rail
 gemma3:latest,BM25 top-3,5a76538d5542992db9473764,comparison,Nate Albert,1.0,1.0,1.0,0.0,0.0,1.0,636,5.535797399999865,Nate Albert
 gemma3:latest,BM25 top-3,5a737ef85542992d56e7e336,bridge,Dire Straits,1.0,1.0,1.0,0.0,0.0,1.0,378,3.718766300000425,Dire Straits
 gemma3:latest,BM25 top-3,5a771ead55429966f1a36c7c,bridge,Phelan Beale,0.0,0.0,0.0,0.0,0.0,1.0,469,4.191976500002056,Phelan Beale
-gemma3:latest,BM25 top-3,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,400,3.473302099999273,unknown
+gemma3:latest,BM25 top-3,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,400,3.473302099999273,unknown
 gemma3:latest,BM25 top-3,5a7fd95d5542992e7d278dc5,bridge,Golden Globe nomination,0.0,0.8,1.0,0.0,0.0,1.0,488,4.390240299999277,Golden Globe nomination
 gemma3:latest,BM25 top-3,5ae72fc5554299572ea54770,bridge,Jaipur,1.0,1.0,1.0,0.0,0.0,1.0,384,3.5066327000022284,Jaipur
 gemma3:latest,BM25 top-3,5ac5101455429924173fb592,bridge,Every Rose Its Thorn,0.0,0.888888888888889,0.0,0.0,0.0,1.0,560,5.358469300001161,Every Rose Its Thorn
@@ -3823,12 +3823,12 @@ gemma3:latest,BM25 top-3,5adcfe5f5542992c1e3a24f0,bridge,unknown,0.0,0.0,0.0,1.0
 gemma3:latest,BM25 top-3,5ae2ad6b5542996483e64a3d,bridge,King Duncan,1.0,1.0,1.0,0.0,0.0,1.0,441,4.129651600000216,King Duncan
 gemma3:latest,BM25 top-3,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,522,4.861955300002592,Masa Takayama
 gemma3:latest,BM25 top-3,5abaf6865542996cc5e49f3c,bridge,The Lodge,0.0,0.0,0.0,0.0,0.0,1.0,427,3.836195299998508,The Lodge
-gemma3:latest,BM25 top-3,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,376,3.223858299999847,unknown
+gemma3:latest,BM25 top-3,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,376,3.223858299999847,unknown
 gemma3:latest,BM25 top-3,5ae39f405542991a06ce9a02,bridge,750 words,0.0,0.5,0.0,0.0,0.0,1.0,455,4.2340700999993715,750 words
 gemma3:latest,BM25 top-3,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,498,4.463704500001768,King Kelly
 gemma3:latest,BM25 top-3,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,497,4.9939398000024084,Lucie Šafářová
 gemma3:latest,BM25 top-3,5ade0fb95542997545bbbe39,bridge,7.51 km,0.0,0.5,0.0,0.0,0.0,1.0,215,2.464109599997755,7.51 km
-gemma3:latest,BM25 top-3,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,494,4.416008000000147,unknown
+gemma3:latest,BM25 top-3,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,494,4.416008000000147,unknown
 gemma3:latest,BM25 top-3,5abb0b5c5542996cc5e49f79,bridge,Pan Am Railways,1.0,1.0,1.0,0.0,0.0,1.0,359,3.3997928999997384,Pan Am Railways
 gemma3:latest,BM25 top-3,5a84edf65542994c784dda8d,bridge,M2M,1.0,1.0,1.0,0.0,0.0,1.0,597,5.301669099997525,M2M
 gemma3:latest,BM25 top-3,5a7b12a355429927d897bf2a,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,309,2.685420099998737,unknown
@@ -3872,7 +3872,7 @@ gemma3:latest,BM25 top-3,5abb1e1b5542992ccd8e7f19,comparison,Nobel Prize,0.0,0.6
 gemma3:latest,BM25 top-3,5a8fb65d5542997ba9cb32fa,bridge,Flying Buffalo,1.0,1.0,1.0,0.0,0.0,1.0,315,2.883268900000985,Flying Buffalo
 gemma3:latest,BM25 top-3,5adf82945542993344016ca4,comparison,Film director,1.0,1.0,1.0,0.0,0.0,1.0,401,3.5765233999991324,Film director
 gemma3:latest,BM25 top-3,5ae1f5a15542997f29b3c1b5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,589,5.068136699999741,unknown
-gemma3:latest,BM25 top-3,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,586,5.198483500000293,unknown
+gemma3:latest,BM25 top-3,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,586,5.198483500000293,unknown
 gemma3:latest,BM25 top-3,5ab281f45542993be8fa9938,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,853,7.482711699998617,unknown
 gemma3:latest,BM25 top-3,5a78ad26554299148911f913,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,628,5.948354399999516,unknown
 gemma3:latest,BM25 top-3,5ab9cfe655429970cfb8ebaf,bridge,"May 27, 1977",0.0,0.0,0.0,0.0,0.0,1.0,416,4.529561799998191,"May 27, 1977"
@@ -3903,7 +3903,7 @@ gemma3:latest,BM25 top-3,5adeab4555429975fa854f5f,bridge,unknown,0.0,0.0,0.0,1.0
 gemma3:latest,BM25 top-3,5a89a128554299669944a552,bridge,"6,396",1.0,1.0,1.0,0.0,0.0,1.0,289,2.9308443000008992,"6,396"
 gemma3:latest,BM25 top-3,5a8e32d35542995a26add480,bridge,John Travolta,1.0,1.0,1.0,0.0,0.0,1.0,436,3.978099799998745,John Travolta
 gemma3:latest,BM25 top-3,5ae55ed15542992663a4f1ea,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,491,4.402153200000612,unknown
-gemma3:latest,BM25 top-3,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,299,2.6012981999992917,unknown
+gemma3:latest,BM25 top-3,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,299,2.6012981999992917,unknown
 gemma3:latest,BM25 top-3,5abed4d55542990832d3a0e0,comparison,Yes,1.0,1.0,1.0,0.0,,1.0,305,2.680924000000232,Yes
 gemma3:latest,BM25 top-3,5ab84f2c55429934fafe6d54,bridge,Through the Looking-Glass,0.0,0.0,0.0,0.0,0.0,1.0,334,3.2710698999981105,Through the Looking-Glass
 gemma3:latest,BM25 top-3,5a7293655542991f9a20c4ff,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,311,2.852382499997475,unknown
@@ -3933,7 +3933,7 @@ gemma3:latest,BM25 top-3,5ac05310554299012d1db5e7,bridge,unknown,0.0,0.0,0.0,1.0
 gemma3:latest,BM25 top-3,5ae0de1455429924de1b71b4,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,283,2.4904626999996253,unknown
 gemma3:latest,BM25 top-3,5a816db055429903bc27b961,comparison,New York City,1.0,1.0,1.0,0.0,0.0,1.0,463,4.246761900001729,New York City
 gemma3:latest,BM25 top-3,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,345,3.417372699997941,Herschell Gordon Lewis
-gemma3:latest,BM25 top-3,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,285,2.4710400000003574,unknown
+gemma3:latest,BM25 top-3,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,285,2.4710400000003574,unknown
 gemma3:latest,BM25 top-3,5a83438955429966c78a6b61,bridge,Bill McCutcheon,1.0,1.0,1.0,0.0,0.0,1.0,317,3.0413013999968825,Bill McCutcheon
 gemma3:latest,BM25 top-3,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,448,4.042120399997657,Saturday Night Live
 gemma3:latest,BM25 top-3,5a7fc5875542992e7d278d67,bridge,Fifty Pills,1.0,1.0,1.0,0.0,0.0,1.0,270,2.4407390000014857,Fifty Pills
@@ -3950,13 +3950,13 @@ gemma3:latest,BM25 top-3,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,1.0,0.
 gemma3:latest,BM25 top-3,5a75eb125542994ccc918659,comparison,Kamāl al-Dīn al-Fārisī,0.0,0.0,0.0,0.0,0.0,1.0,436,4.891989400002785,Kamāl al-Dīn al-Fārisī
 gemma3:latest,BM25 top-3,5adcd1665542994d58a2f6e6,bridge,Bruce R. Cook,1.0,1.0,1.0,0.0,0.0,1.0,326,3.034322700001212,Bruce R. Cook
 gemma3:latest,BM25 top-3,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,482,4.181343199998082,Taylor Swift
-gemma3:latest,BM25 top-3,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,366,3.5168135999992955,unknown
+gemma3:latest,BM25 top-3,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,366,3.5168135999992955,unknown
 gemma3:latest,BM25 top-3,5ab55b0c554299488d4d995e,bridge,Big 12 Conference,1.0,1.0,1.0,0.0,0.0,1.0,282,2.84227109999847,Big 12 Conference
 gemma3:latest,BM25 top-3,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1.0,0.0,0.0,1.0,468,4.360707900003035,2.1 million
 gemma3:latest,BM25 top-3,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,379,3.4404245000005176,Alfred Preis
 gemma3:latest,BM25 top-3,5ade618e554299728e26c700,comparison,Filmmaking,0.0,0.0,0.0,0.0,1.0,1.0,235,2.316719700000249,Filmmaking
 gemma3:latest,BM25 top-3,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,249,2.445328400001017,Eve Hewson
-gemma3:latest,BM25 top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,436,3.7421383000000787,unknown
+gemma3:latest,BM25 top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,436,3.7421383000000787,unknown
 gemma3:latest,BM25 top-3,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,609,5.431159600000683,Katy Perry
 gemma3:latest,BM25 top-3,5a75e67d5542992db9473709,bridge,Battle of White Plains,0.0,0.0,0.0,0.0,0.0,1.0,557,5.099389599999995,Battle of White Plains
 gemma3:latest,BM25 top-3,5ae3789b5542992e3233c412,bridge,Philippe Pétain,0.0,0.0,0.0,0.0,0.0,1.0,533,4.787824799997907,Philippe Pétain
@@ -3980,7 +3980,7 @@ gemma3:latest,BM25 top-3,5a8c8502554299585d9e36d0,bridge,Jeff Sheehy,0.0,0.0,0.0
 gemma3:latest,BM25 top-3,5a77671255429966f1a36d21,comparison,Negotiation,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,668,6.04940219999844,Negotiation
 gemma3:latest,BM25 top-3,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,309,2.8378142999972624,Flyweight
 gemma3:latest,BM25 top-3,5a8900c75542997e5c09a6ed,comparison,Lime,1.0,1.0,1.0,0.0,0.0,1.0,169,1.7764429999988351,Lime
-gemma3:latest,BM25 top-3,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
+gemma3:latest,BM25 top-3,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
 gemma3:latest,BM25 top-3,5ac175635542994ab5c67d4b,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,353,3.3363637999973434,unknown
 gemma3:latest,BM25 top-3,5ae2196b554299495565da02,bridge,Law,0.0,0.0,0.0,0.0,0.0,1.0,363,3.3743125000000873,Law
 gemma3:latest,BM25 top-3,5a80abd15542996402f6a5e0,bridge,Ding Sheng,1.0,1.0,1.0,0.0,0.0,1.0,373,3.3564064000020153,Ding Sheng
@@ -4071,7 +4071,7 @@ gemma3:latest,Reranker top-3,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.33
 gemma3:latest,Reranker top-3,5a909a0355429916514e7505,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,306,3.1238197999991826,unknown
 gemma3:latest,Reranker top-3,5a726ba35542997f827839c0,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,413,3.6956645999998727,unknown
 gemma3:latest,Reranker top-3,5ab6ecd85542991d322236cf,bridge,Culture,0.0,0.5,0.0,0.0,0.0,1.0,365,3.213382100002491,Culture
-gemma3:latest,Reranker top-3,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,512,4.991034399998171,unknown
+gemma3:latest,Reranker top-3,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,512,4.991034399998171,unknown
 gemma3:latest,Reranker top-3,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,581,5.318727800000488,Ten Walls
 gemma3:latest,Reranker top-3,5a85fa815542996432c57155,bridge,Western Europe,1.0,1.0,1.0,0.0,0.0,1.0,488,4.545925400001579,Western Europe
 gemma3:latest,Reranker top-3,5ab48c325542996a3a969f93,bridge,Waltham Abbey,0.0,0.0,0.0,0.0,0.0,1.0,415,3.920588900000439,Waltham Abbey
@@ -4089,7 +4089,7 @@ gemma3:latest,Reranker top-3,5abd0553554299700f9d7963,bridge,Marks & Spencer,0.0
 gemma3:latest,Reranker top-3,5ae12aa6554299422ee99617,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,389,3.3505757999992056,unknown
 gemma3:latest,Reranker top-3,5a88cc8f55429938390d3fc5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,422,3.437157299998944,unknown
 gemma3:latest,Reranker top-3,5abdaa0f55429965af743dad,bridge,United States Army,0.0,0.0,0.0,0.0,0.0,1.0,322,3.1069673000019975,United States Army
-gemma3:latest,Reranker top-3,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,1.0,1.0,373,3.2138497999985702,Mountaineering
+gemma3:latest,Reranker top-3,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,1.0,1.0,373,3.2138497999985702,Mountaineering
 gemma3:latest,Reranker top-3,5a79c9395542994bb94570a2,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,449,3.6130395000000135,unknown
 gemma3:latest,Reranker top-3,5ab2979c554299449642c919,bridge,Las Vegas,0.0,0.4444444444444445,0.0,0.0,0.0,1.0,415,3.465650400001323,Las Vegas
 gemma3:latest,Reranker top-3,5a7c6e435542996dd594b933,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,528,4.470733500002098,unknown
@@ -4172,7 +4172,7 @@ gemma3:latest,Reranker top-3,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,0.
 gemma3:latest,Reranker top-3,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,559,4.975098899998557,2012
 gemma3:latest,Reranker top-3,5adecc7755429975fa854f9d,bridge,Sigurdur Thordarson,0.0,0.0,0.0,0.0,0.0,1.0,616,5.75864399999773,Sigurdur Thordarson
 gemma3:latest,Reranker top-3,5a7c6c9d554299683c1c6302,bridge,New York,0.0,0.0,0.0,0.0,0.0,1.0,338,3.3561714999996184,New York
-gemma3:latest,Reranker top-3,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,232,2.1414736000006087,unknown
+gemma3:latest,Reranker top-3,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,232,2.1414736000006087,unknown
 gemma3:latest,Reranker top-3,5ae4e2ca55429908b63264aa,bridge,David May,1.0,1.0,1.0,0.0,0.0,1.0,293,2.5971240999970178,David May
 gemma3:latest,Reranker top-3,5a7662745542992db9473786,bridge,Ulver and the Tromsø Chamber Orchestra,0.0,0.0,0.0,0.0,0.0,1.0,478,4.659999899999093,Ulver and the Tromsø Chamber Orchestra
 gemma3:latest,Reranker top-3,5a88fa9e5542993b751ca8de,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,484,4.271783000000141,unknown
@@ -4247,16 +4247,16 @@ gemma3:latest,Reranker top-3,5adf41a45542993a75d26456,bridge,2010,1.0,1.0,1.0,0.
 gemma3:latest,Reranker top-3,5a8ceb4955429941ae14df43,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,696,6.486504499996954,unknown
 gemma3:latest,Reranker top-3,5ac0c1cf5542992a796ded7c,bridge,Ukrainian,1.0,1.0,1.0,0.0,0.0,1.0,314,3.1356491000005917,Ukrainian
 gemma3:latest,Reranker top-3,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,424,3.723634999998467,Casey Bond
-gemma3:latest,Reranker top-3,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,462,3.8994947999999567,unknown
+gemma3:latest,Reranker top-3,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,462,3.8994947999999567,unknown
 gemma3:latest,Reranker top-3,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,394,3.683066699999472,265 million
 gemma3:latest,Reranker top-3,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,445,3.9270520999998553,Spam
 gemma3:latest,Reranker top-3,5a79ad485542994bb9457036,bridge,Hong Kong national football team,0.0,0.0,0.0,0.0,0.0,1.0,612,6.242783699999563,Hong Kong national football team
 gemma3:latest,Reranker top-3,5ab98d70554299753720f82f,comparison,Pizza franchises,0.0,0.0,0.0,0.0,0.0,1.0,364,3.3934674000011,Pizza franchises
 gemma3:latest,Reranker top-3,5ac371aa5542995ef918c191,bridge,Workers' self-management,0.0,0.0,0.0,0.0,0.0,1.0,353,3.4106221000001824,Workers' self-management
-gemma3:latest,Reranker top-3,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,351,3.576631100000668,unknown
+gemma3:latest,Reranker top-3,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,351,3.576631100000668,unknown
 gemma3:latest,Reranker top-3,5a71646e5542994082a3e80e,bridge,Tetrahydrogestrinone,1.0,1.0,1.0,0.0,0.0,1.0,477,5.045924099998956,Tetrahydrogestrinone
 gemma3:latest,Reranker top-3,5ac275f155429921a00aaf82,bridge,Base of support,0.0,0.3333333333333333,0.0,0.0,0.0,1.0,522,5.67369250000047,Base of support
-gemma3:latest,Reranker top-3,5a8e1577554299068b959e54,comparison,Film directors,0.0,0.0,1.0,0.0,0.0,1.0,295,3.100727099998039,Film directors
+gemma3:latest,Reranker top-3,5a8e1577554299068b959e54,comparison,Film directors,0.0,0.0,0.0,0.0,0.0,1.0,295,3.100727099998039,Film directors
 gemma3:latest,Reranker top-3,5a77c15f5542997042120b1c,bridge,Leafcutter John,1.0,1.0,1.0,0.0,0.0,1.0,179,1.8369044000028225,Leafcutter John
 gemma3:latest,Reranker top-3,5a85a3005542991dd0999e72,bridge,Subhas Chandra Bose,0.0,0.0,0.0,0.0,0.0,1.0,690,7.854384599999321,Subhas Chandra Bose
 gemma3:latest,Reranker top-3,5a820f2c55429926c1cdae17,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,432,4.204030999997485,unknown
@@ -4290,7 +4290,7 @@ gemma3:latest,Reranker top-3,5a807ca5554299485f598613,bridge,Baltimore and Ohio 
 gemma3:latest,Reranker top-3,5a76538d5542992db9473764,comparison,Nate Albert,1.0,1.0,1.0,0.0,0.0,1.0,555,4.719957899997098,Nate Albert
 gemma3:latest,Reranker top-3,5a737ef85542992d56e7e336,bridge,Dire Straits,1.0,1.0,1.0,0.0,0.0,1.0,469,4.035457999998471,Dire Straits
 gemma3:latest,Reranker top-3,5a771ead55429966f1a36c7c,bridge,Ken Howard,1.0,1.0,1.0,0.0,0.0,1.0,451,3.8293889999986277,Ken Howard
-gemma3:latest,Reranker top-3,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,332,2.8255348000020604,unknown
+gemma3:latest,Reranker top-3,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,332,2.8255348000020604,unknown
 gemma3:latest,Reranker top-3,5a7fd95d5542992e7d278dc5,bridge,Golden Globe nomination,0.0,0.8,1.0,0.0,0.0,1.0,394,3.419535900000483,Golden Globe nomination
 gemma3:latest,Reranker top-3,5ae72fc5554299572ea54770,bridge,Jaipur,1.0,1.0,1.0,0.0,0.0,1.0,308,2.6986142999994627,Jaipur
 gemma3:latest,Reranker top-3,5ac5101455429924173fb592,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,629,5.065745500000048,unknown
@@ -4323,7 +4323,7 @@ gemma3:latest,Reranker top-3,5adcfe5f5542992c1e3a24f0,bridge,Count/Countess,0.0,
 gemma3:latest,Reranker top-3,5ae2ad6b5542996483e64a3d,bridge,King Duncan,1.0,1.0,1.0,0.0,0.0,1.0,441,4.129651600000216,King Duncan
 gemma3:latest,Reranker top-3,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,519,4.764437400001043,Masa Takayama
 gemma3:latest,Reranker top-3,5abaf6865542996cc5e49f3c,bridge,The Lodge,0.0,0.0,0.0,0.0,0.0,1.0,427,3.836195299998508,The Lodge
-gemma3:latest,Reranker top-3,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,370,3.4419756999996025,unknown
+gemma3:latest,Reranker top-3,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,370,3.4419756999996025,unknown
 gemma3:latest,Reranker top-3,5ae39f405542991a06ce9a02,bridge,750 words,0.0,0.5,0.0,0.0,0.0,1.0,421,3.653495799997472,750 words
 gemma3:latest,Reranker top-3,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,498,4.463704500001768,King Kelly
 gemma3:latest,Reranker top-3,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,582,5.078137399999832,Lucie Šafářová
@@ -4372,7 +4372,7 @@ gemma3:latest,Reranker top-3,5abb1e1b5542992ccd8e7f19,comparison,Nobel Prize,0.0
 gemma3:latest,Reranker top-3,5a8fb65d5542997ba9cb32fa,bridge,Flying Buffalo,1.0,1.0,1.0,0.0,0.0,1.0,315,2.883268900000985,Flying Buffalo
 gemma3:latest,Reranker top-3,5adf82945542993344016ca4,comparison,Film director,1.0,1.0,1.0,0.0,0.0,1.0,306,2.613140299999941,Film director
 gemma3:latest,Reranker top-3,5ae1f5a15542997f29b3c1b5,bridge,1966,1.0,1.0,1.0,0.0,0.0,1.0,653,5.549010400001862,1966
-gemma3:latest,Reranker top-3,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,523,4.254809199999727,unknown
+gemma3:latest,Reranker top-3,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,523,4.254809199999727,unknown
 gemma3:latest,Reranker top-3,5ab281f45542993be8fa9938,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,591,4.875936600001296,unknown
 gemma3:latest,Reranker top-3,5a78ad26554299148911f913,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,550,4.618719699999929,unknown
 gemma3:latest,Reranker top-3,5ab9cfe655429970cfb8ebaf,bridge,"January 15, 1975",1.0,1.0,1.0,0.0,0.0,1.0,463,4.456706699998904,"January 15, 1975"
@@ -4403,7 +4403,7 @@ gemma3:latest,Reranker top-3,5adeab4555429975fa854f5f,bridge,unknown,0.0,0.0,0.0
 gemma3:latest,Reranker top-3,5a89a128554299669944a552,bridge,"6,396",1.0,1.0,1.0,0.0,0.0,1.0,289,2.9308443000008992,"6,396"
 gemma3:latest,Reranker top-3,5a8e32d35542995a26add480,bridge,John Travolta,1.0,1.0,1.0,0.0,0.0,1.0,436,3.978099799998745,John Travolta
 gemma3:latest,Reranker top-3,5ae55ed15542992663a4f1ea,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,353,2.906786200001079,unknown
-gemma3:latest,Reranker top-3,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,299,2.6012981999992917,unknown
+gemma3:latest,Reranker top-3,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,299,2.6012981999992917,unknown
 gemma3:latest,Reranker top-3,5abed4d55542990832d3a0e0,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,387,3.1825597000024572,unknown
 gemma3:latest,Reranker top-3,5ab84f2c55429934fafe6d54,bridge,Alice's Adventures in Wonderland,1.0,1.0,1.0,0.0,0.0,1.0,323,3.037625199998729,Alice's Adventures in Wonderland
 gemma3:latest,Reranker top-3,5a7293655542991f9a20c4ff,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,325,2.600489700002072,unknown
@@ -4433,7 +4433,7 @@ gemma3:latest,Reranker top-3,5ac05310554299012d1db5e7,bridge,unknown,0.0,0.0,0.0
 gemma3:latest,Reranker top-3,5ae0de1455429924de1b71b4,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,283,2.4904626999996253,unknown
 gemma3:latest,Reranker top-3,5a816db055429903bc27b961,comparison,New York City,1.0,1.0,1.0,0.0,0.0,1.0,537,4.590270000000601,New York City
 gemma3:latest,Reranker top-3,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,345,3.417372699997941,Herschell Gordon Lewis
-gemma3:latest,Reranker top-3,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,397,3.2865796999976737,unknown
+gemma3:latest,Reranker top-3,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,397,3.2865796999976737,unknown
 gemma3:latest,Reranker top-3,5a83438955429966c78a6b61,bridge,Bill McCutcheon,1.0,1.0,1.0,0.0,0.0,1.0,384,3.332411100000172,Bill McCutcheon
 gemma3:latest,Reranker top-3,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,448,4.042120399997657,Saturday Night Live
 gemma3:latest,Reranker top-3,5a7fc5875542992e7d278d67,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,293,2.4669761000004655,unknown
@@ -4450,13 +4450,13 @@ gemma3:latest,Reranker top-3,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,1.
 gemma3:latest,Reranker top-3,5a75eb125542994ccc918659,comparison,Kamāl al-Dīn al-Fārisī,0.0,0.0,0.0,0.0,0.0,1.0,436,4.891989400002785,Kamāl al-Dīn al-Fārisī
 gemma3:latest,Reranker top-3,5adcd1665542994d58a2f6e6,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,370,3.1482366000018374,unknown
 gemma3:latest,Reranker top-3,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,482,4.181343199998082,Taylor Swift
-gemma3:latest,Reranker top-3,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,334,2.74672990000181,unknown
+gemma3:latest,Reranker top-3,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,334,2.74672990000181,unknown
 gemma3:latest,Reranker top-3,5ab55b0c554299488d4d995e,bridge,Kansas Jayhawks,0.0,0.0,0.0,0.0,0.0,1.0,288,2.627127100000507,Kansas Jayhawks
 gemma3:latest,Reranker top-3,5ac0641f554299294b218fbe,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,460,3.811006699997961,unknown
 gemma3:latest,Reranker top-3,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,377,3.108448099999805,Alfred Preis
 gemma3:latest,Reranker top-3,5ade618e554299728e26c700,comparison,Filmmaking,0.0,0.0,0.0,0.0,1.0,1.0,345,3.054904799999349,Filmmaking
 gemma3:latest,Reranker top-3,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,449,3.7813193000001775,Eve Hewson
-gemma3:latest,Reranker top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,343,2.919014499999321,unknown
+gemma3:latest,Reranker top-3,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,343,2.919014499999321,unknown
 gemma3:latest,Reranker top-3,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,567,4.802056600001379,Katy Perry
 gemma3:latest,Reranker top-3,5a75e67d5542992db9473709,bridge,Battle of White Plains,0.0,0.0,0.0,0.0,0.0,1.0,557,5.099389599999995,Battle of White Plains
 gemma3:latest,Reranker top-3,5ae3789b5542992e3233c412,bridge,Philippe Pétain,0.0,0.0,0.0,0.0,0.0,1.0,539,4.566335999999865,Philippe Pétain
@@ -4480,7 +4480,7 @@ gemma3:latest,Reranker top-3,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1.0,
 gemma3:latest,Reranker top-3,5a77671255429966f1a36d21,comparison,Negotiation phases,1.0,1.0,1.0,0.0,0.0,1.0,478,4.571813200000179,Negotiation phases
 gemma3:latest,Reranker top-3,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,309,2.8378142999972624,Flyweight
 gemma3:latest,Reranker top-3,5a8900c75542997e5c09a6ed,comparison,Lime,1.0,1.0,1.0,0.0,0.0,1.0,207,1.940756899999542,Lime
-gemma3:latest,Reranker top-3,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,217,1.9068083999991359,2 acres
+gemma3:latest,Reranker top-3,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,217,1.9068083999991359,2 acres
 gemma3:latest,Reranker top-3,5ac175635542994ab5c67d4b,bridge,David O'Leary,0.0,0.0,0.0,0.0,0.0,1.0,495,4.219903399996838,David O'Leary
 gemma3:latest,Reranker top-3,5ae2196b554299495565da02,bridge,Law and politics,0.0,0.0,0.0,0.0,1.0,1.0,414,3.5381707999986247,Law and politics
 gemma3:latest,Reranker top-3,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,325,2.7259675999994215,Wong Jing
@@ -4571,7 +4571,7 @@ gemma3:latest,CAS w/o graph,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.333
 gemma3:latest,CAS w/o graph,5a909a0355429916514e7505,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,414,3.7778857000012067,unknown
 gemma3:latest,CAS w/o graph,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,637,5.456394399996498,Mark Donohue
 gemma3:latest,CAS w/o graph,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,174,1.786286900001869,Latin American culture
-gemma3:latest,CAS w/o graph,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,300,2.641647500000545,unknown
+gemma3:latest,CAS w/o graph,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,300,2.641647500000545,unknown
 gemma3:latest,CAS w/o graph,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,253,2.279790499997034,Ten Walls
 gemma3:latest,CAS w/o graph,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,162,1.5714888000002247,Belgium
 gemma3:latest,CAS w/o graph,5ab48c325542996a3a969f93,bridge,Waltham Abbey,0.0,0.0,0.0,0.0,0.0,1.0,330,3.0720684999978403,Waltham Abbey
@@ -4589,7 +4589,7 @@ gemma3:latest,CAS w/o graph,5abd0553554299700f9d7963,bridge,Marks & Spencer,0.0,
 gemma3:latest,CAS w/o graph,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,230,2.3473469999953522,"29,000"
 gemma3:latest,CAS w/o graph,5a88cc8f55429938390d3fc5,bridge,Dolly Parton,0.0,0.0,0.0,0.0,1.0,1.0,131,1.3403185000061058,Dolly Parton
 gemma3:latest,CAS w/o graph,5abdaa0f55429965af743dad,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,148,1.2801982000019052,unknown
-gemma3:latest,CAS w/o graph,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
+gemma3:latest,CAS w/o graph,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
 gemma3:latest,CAS w/o graph,5a79c9395542994bb94570a2,comparison,Musicians,0.0,0.0,0.0,0.0,1.0,0.0,561,4.533972299999732,Musicians
 gemma3:latest,CAS w/o graph,5ab2979c554299449642c919,bridge,Las Vegas shop,0.0,0.6,0.0,0.0,0.0,1.0,526,4.390354799994384,Las Vegas shop
 gemma3:latest,CAS w/o graph,5a7c6e435542996dd594b933,bridge,"April 23, 1959",0.0,0.0,0.0,0.0,0.0,0.0,223,2.5744636000017636,"April 23, 1959"
@@ -4672,7 +4672,7 @@ gemma3:latest,CAS w/o graph,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,0.0
 gemma3:latest,CAS w/o graph,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,629,5.715608099999372,2012
 gemma3:latest,CAS w/o graph,5adecc7755429975fa854f9d,bridge,Chelsea Manning,0.0,0.0,0.0,0.0,1.0,1.0,231,2.171062300003541,Chelsea Manning
 gemma3:latest,CAS w/o graph,5a7c6c9d554299683c1c6302,bridge,"Freeport, New York",0.0,0.0,0.0,0.0,0.0,1.0,416,3.761900199999218,"Freeport, New York"
-gemma3:latest,CAS w/o graph,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,301,2.5303178999965894,unknown
+gemma3:latest,CAS w/o graph,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,301,2.5303178999965894,unknown
 gemma3:latest,CAS w/o graph,5ae4e2ca55429908b63264aa,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,226,1.9873547999959555,unknown
 gemma3:latest,CAS w/o graph,5a7662745542992db9473786,bridge,Ulver,0.0,0.0,0.0,0.0,0.0,1.0,159,1.5834190000023227,Ulver
 gemma3:latest,CAS w/o graph,5a88fa9e5542993b751ca8de,bridge,Chicago Bears,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,673,5.760701599996537,Chicago Bears
@@ -4717,7 +4717,7 @@ gemma3:latest,CAS w/o graph,5a7cbf8c554299452d57b9f4,comparison,Dinosaur,1.0,1.0
 gemma3:latest,CAS w/o graph,5ab1ebff5542993be8fa9882,comparison,Eustoma,1.0,1.0,1.0,0.0,0.0,1.0,216,2.172256199999538,Eustoma
 gemma3:latest,CAS w/o graph,5ac1b3a75542994ab5c67dd2,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,135,1.260565399999905,unknown
 gemma3:latest,CAS w/o graph,5a7716ee55429937353601cc,bridge,Chesley Sullenberger,0.0,0.5714285714285715,0.0,0.0,0.0,1.0,438,3.895422800000233,Chesley Sullenberger
-gemma3:latest,CAS w/o graph,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,1.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
+gemma3:latest,CAS w/o graph,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,0.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
 gemma3:latest,CAS w/o graph,5ade283a5542997c77aded80,comparison,X,1.0,1.0,1.0,0.0,0.0,1.0,1107,9.704908600004273,X
 gemma3:latest,CAS w/o graph,5a77d5e655429967ab1052cc,bridge,Gallery,0.0,0.0,0.0,0.0,0.0,1.0,502,4.736448800002108,Gallery
 gemma3:latest,CAS w/o graph,5ac537975542996feb3fea3c,bridge,Ronald Reagan,0.0,0.8,0.0,0.0,0.0,1.0,195,1.914300299999013,Ronald Reagan
@@ -4747,13 +4747,13 @@ gemma3:latest,CAS w/o graph,5adf41a45542993a75d26456,bridge,2010,1.0,1.0,1.0,0.0
 gemma3:latest,CAS w/o graph,5a8ceb4955429941ae14df43,bridge,José Fernández,0.0,0.0,0.0,0.0,0.0,1.0,757,6.54802539999946,José Fernández
 gemma3:latest,CAS w/o graph,5ac0c1cf5542992a796ded7c,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,388,3.4430605999987165,unknown
 gemma3:latest,CAS w/o graph,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,424,3.723634999998467,Casey Bond
-gemma3:latest,CAS w/o graph,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,515,4.469451299999491,unknown
+gemma3:latest,CAS w/o graph,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,515,4.469451299999491,unknown
 gemma3:latest,CAS w/o graph,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,611,5.7353290999999444,265 million
 gemma3:latest,CAS w/o graph,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,445,3.9270520999998553,Spam
 gemma3:latest,CAS w/o graph,5a79ad485542994bb9457036,bridge,China and Hong Kong,0.0,0.0,0.0,0.0,0.0,1.0,123,1.3275540999966324,China and Hong Kong
 gemma3:latest,CAS w/o graph,5ab98d70554299753720f82f,comparison,Unknown,0.0,0.0,0.0,1.0,,1.0,286,2.3321741000036127,Unknown
 gemma3:latest,CAS w/o graph,5ac371aa5542995ef918c191,bridge,Workers' self-management,0.0,0.0,0.0,0.0,0.0,1.0,160,1.8430508999954327,Workers' self-management
-gemma3:latest,CAS w/o graph,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,641,5.061549500002002,unknown
+gemma3:latest,CAS w/o graph,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,641,5.061549500002002,unknown
 gemma3:latest,CAS w/o graph,5a71646e5542994082a3e80e,bridge,Tetrahydrogestrinone,1.0,1.0,1.0,0.0,0.0,1.0,472,4.42483970000103,Tetrahydrogestrinone
 gemma3:latest,CAS w/o graph,5ac275f155429921a00aaf82,bridge,French Indochina,0.0,0.0,0.0,0.0,0.0,1.0,284,2.767370399997162,French Indochina
 gemma3:latest,CAS w/o graph,5a8e1577554299068b959e54,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,391,3.3173655999999028,unknown
@@ -4790,7 +4790,7 @@ gemma3:latest,CAS w/o graph,5a807ca5554299485f598613,bridge,Baltimore and Ohio R
 gemma3:latest,CAS w/o graph,5a76538d5542992db9473764,comparison,Nate Albert,1.0,1.0,1.0,0.0,0.0,1.0,346,2.999092099998961,Nate Albert
 gemma3:latest,CAS w/o graph,5a737ef85542992d56e7e336,bridge,Dire Straits,1.0,1.0,1.0,0.0,0.0,1.0,922,7.762643100002606,Dire Straits
 gemma3:latest,CAS w/o graph,5a771ead55429966f1a36c7c,bridge,Phelan Beale,0.0,0.0,0.0,0.0,0.0,1.0,363,3.273182500000985,Phelan Beale
-gemma3:latest,CAS w/o graph,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,400,3.473302099999273,unknown
+gemma3:latest,CAS w/o graph,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,400,3.473302099999273,unknown
 gemma3:latest,CAS w/o graph,5a7fd95d5542992e7d278dc5,bridge,Golden Globe nomination,0.0,0.8,1.0,0.0,0.0,1.0,380,3.2455670999988797,Golden Globe nomination
 gemma3:latest,CAS w/o graph,5ae72fc5554299572ea54770,bridge,Jaipur,1.0,1.0,1.0,0.0,0.0,1.0,384,3.5066327000022284,Jaipur
 gemma3:latest,CAS w/o graph,5ac5101455429924173fb592,bridge,Every Rose Has Its Thorn,1.0,1.0,1.0,0.0,0.0,1.0,344,3.121672799999942,Every Rose Has Its Thorn
@@ -4823,12 +4823,12 @@ gemma3:latest,CAS w/o graph,5adcfe5f5542992c1e3a24f0,bridge,unknown,0.0,0.0,0.0,
 gemma3:latest,CAS w/o graph,5ae2ad6b5542996483e64a3d,bridge,King Duncan,1.0,1.0,1.0,0.0,0.0,1.0,441,4.129651600000216,King Duncan
 gemma3:latest,CAS w/o graph,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,522,4.861955300002592,Masa Takayama
 gemma3:latest,CAS w/o graph,5abaf6865542996cc5e49f3c,bridge,The Lodge,0.0,0.0,0.0,0.0,0.0,1.0,267,2.3870375999977114,The Lodge
-gemma3:latest,CAS w/o graph,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,569,4.606690599997819,unknown
+gemma3:latest,CAS w/o graph,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,569,4.606690599997819,unknown
 gemma3:latest,CAS w/o graph,5ae39f405542991a06ce9a02,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,115,1.3024682000032044,unknown
 gemma3:latest,CAS w/o graph,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,498,4.463704500001768,King Kelly
 gemma3:latest,CAS w/o graph,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,766,6.79399199999898,Lucie Šafářová
 gemma3:latest,CAS w/o graph,5ade0fb95542997545bbbe39,bridge,Unknown,0.0,0.0,0.0,1.0,,1.0,364,3.567835299996659,Unknown
-gemma3:latest,CAS w/o graph,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,339,2.956327700005204,unknown
+gemma3:latest,CAS w/o graph,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,339,2.956327700005204,unknown
 gemma3:latest,CAS w/o graph,5abb0b5c5542996cc5e49f79,bridge,Pan Am Railways,1.0,1.0,1.0,0.0,0.0,1.0,319,3.0556982999987667,Pan Am Railways
 gemma3:latest,CAS w/o graph,5a84edf65542994c784dda8d,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,261,2.292607700001099,unknown
 gemma3:latest,CAS w/o graph,5a7b12a355429927d897bf2a,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,130,1.3532656999959727,unknown
@@ -4872,7 +4872,7 @@ gemma3:latest,CAS w/o graph,5abb1e1b5542992ccd8e7f19,comparison,Nobel Prize,0.0,
 gemma3:latest,CAS w/o graph,5a8fb65d5542997ba9cb32fa,bridge,Flying Buffalo,1.0,1.0,1.0,0.0,0.0,1.0,277,2.3979582999963895,Flying Buffalo
 gemma3:latest,CAS w/o graph,5adf82945542993344016ca4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,358,2.8721527000016067,unknown
 gemma3:latest,CAS w/o graph,5ae1f5a15542997f29b3c1b5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,589,5.068136699999741,unknown
-gemma3:latest,CAS w/o graph,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,396,3.2932317000013427,unknown
+gemma3:latest,CAS w/o graph,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,396,3.2932317000013427,unknown
 gemma3:latest,CAS w/o graph,5ab281f45542993be8fa9938,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,853,7.482711699998617,unknown
 gemma3:latest,CAS w/o graph,5a78ad26554299148911f913,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,373,3.033367399999406,unknown
 gemma3:latest,CAS w/o graph,5ab9cfe655429970cfb8ebaf,bridge,"May 27, 1977",0.0,0.0,0.0,0.0,0.0,1.0,416,4.529561799998191,"May 27, 1977"
@@ -4903,7 +4903,7 @@ gemma3:latest,CAS w/o graph,5adeab4555429975fa854f5f,bridge,unknown,0.0,0.0,0.0,
 gemma3:latest,CAS w/o graph,5a89a128554299669944a552,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,171,1.5147715999992215,unknown
 gemma3:latest,CAS w/o graph,5a8e32d35542995a26add480,bridge,John Travolta,1.0,1.0,1.0,0.0,0.0,1.0,656,5.593072600000596,John Travolta
 gemma3:latest,CAS w/o graph,5ae55ed15542992663a4f1ea,bridge,Haslingden,0.0,0.0,0.0,0.0,0.0,1.0,552,5.264770699999644,Haslingden
-gemma3:latest,CAS w/o graph,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,602,5.079410899998038,unknown
+gemma3:latest,CAS w/o graph,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,602,5.079410899998038,unknown
 gemma3:latest,CAS w/o graph,5abed4d55542990832d3a0e0,comparison,Yes,1.0,1.0,1.0,0.0,,1.0,305,2.680924000000232,Yes
 gemma3:latest,CAS w/o graph,5ab84f2c55429934fafe6d54,bridge,Through the Looking-Glass,0.0,0.0,0.0,0.0,0.0,1.0,261,2.5739802999960375,Through the Looking-Glass
 gemma3:latest,CAS w/o graph,5a7293655542991f9a20c4ff,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,311,2.852382499997475,unknown
@@ -4933,7 +4933,7 @@ gemma3:latest,CAS w/o graph,5ac05310554299012d1db5e7,bridge,unknown,0.0,0.0,0.0,
 gemma3:latest,CAS w/o graph,5ae0de1455429924de1b71b4,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,283,2.4904626999996253,unknown
 gemma3:latest,CAS w/o graph,5a816db055429903bc27b961,comparison,New York City,1.0,1.0,1.0,0.0,0.0,1.0,769,6.759741000001668,New York City
 gemma3:latest,CAS w/o graph,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,281,2.57745860000432,Herschell Gordon Lewis
-gemma3:latest,CAS w/o graph,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,163,1.4143844000063837,unknown
+gemma3:latest,CAS w/o graph,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,163,1.4143844000063837,unknown
 gemma3:latest,CAS w/o graph,5a83438955429966c78a6b61,bridge,Bill McCutcheon,1.0,1.0,1.0,0.0,0.0,1.0,317,3.0413013999968825,Bill McCutcheon
 gemma3:latest,CAS w/o graph,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,196,1.8944255000023986,Saturday Night Live
 gemma3:latest,CAS w/o graph,5a7fc5875542992e7d278d67,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,337,2.7508810999934212,unknown
@@ -4950,13 +4950,13 @@ gemma3:latest,CAS w/o graph,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,1.0
 gemma3:latest,CAS w/o graph,5a75eb125542994ccc918659,comparison,Kamāl al-Dīn al-Fārisī,0.0,0.0,0.0,0.0,0.0,1.0,436,4.891989400002785,Kamāl al-Dīn al-Fārisī
 gemma3:latest,CAS w/o graph,5adcd1665542994d58a2f6e6,bridge,Bruce R. Cook,1.0,1.0,1.0,0.0,0.0,1.0,326,3.034322700001212,Bruce R. Cook
 gemma3:latest,CAS w/o graph,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,308,2.565823199998704,Taylor Swift
-gemma3:latest,CAS w/o graph,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,161,1.3827648000005865,unknown
+gemma3:latest,CAS w/o graph,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,161,1.3827648000005865,unknown
 gemma3:latest,CAS w/o graph,5ab55b0c554299488d4d995e,bridge,Big 12 Conference,1.0,1.0,1.0,0.0,0.0,1.0,282,2.84227109999847,Big 12 Conference
 gemma3:latest,CAS w/o graph,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1.0,0.0,0.0,1.0,756,6.3003847999934806,2.1 million
 gemma3:latest,CAS w/o graph,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,6.120781899997382,Alfred Preis
 gemma3:latest,CAS w/o graph,5ade618e554299728e26c700,comparison,Film director,1.0,1.0,1.0,0.0,0.0,1.0,110,1.5515951000052155,Film director
 gemma3:latest,CAS w/o graph,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,220,2.610708699998213,Eve Hewson
-gemma3:latest,CAS w/o graph,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,436,3.7421383000000787,unknown
+gemma3:latest,CAS w/o graph,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,436,3.7421383000000787,unknown
 gemma3:latest,CAS w/o graph,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,454,4.35529719999613,Katy Perry
 gemma3:latest,CAS w/o graph,5a75e67d5542992db9473709,bridge,Battle of White Plains,0.0,0.0,0.0,0.0,0.0,1.0,557,5.099389599999995,Battle of White Plains
 gemma3:latest,CAS w/o graph,5ae3789b5542992e3233c412,bridge,Philippe Pétain,0.0,0.0,0.0,0.0,0.0,1.0,217,2.151307000000088,Philippe Pétain
@@ -4980,7 +4980,7 @@ gemma3:latest,CAS w/o graph,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1.0,0
 gemma3:latest,CAS w/o graph,5a77671255429966f1a36d21,comparison,Strategy,0.0,0.0,0.0,0.0,0.0,1.0,860,7.161377199998242,Strategy
 gemma3:latest,CAS w/o graph,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,309,2.8378142999972624,Flyweight
 gemma3:latest,CAS w/o graph,5a8900c75542997e5c09a6ed,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,105,1.107658300003095,unknown
-gemma3:latest,CAS w/o graph,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
+gemma3:latest,CAS w/o graph,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
 gemma3:latest,CAS w/o graph,5ac175635542994ab5c67d4b,bridge,David O'Leary,0.0,0.0,0.0,0.0,0.0,1.0,256,2.340857600000163,David O'Leary
 gemma3:latest,CAS w/o graph,5ae2196b554299495565da02,bridge,Law and politics,0.0,0.0,0.0,0.0,1.0,1.0,159,1.570429499995953,Law and politics
 gemma3:latest,CAS w/o graph,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,263,2.49030810000113,Wong Jing
@@ -5071,7 +5071,7 @@ gemma3:latest,CAS-NLI penalty,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.3
 gemma3:latest,CAS-NLI penalty,5a909a0355429916514e7505,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,414,3.7778857000012067,unknown
 gemma3:latest,CAS-NLI penalty,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,637,5.456394399996498,Mark Donohue
 gemma3:latest,CAS-NLI penalty,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,174,1.786286900001869,Latin American culture
-gemma3:latest,CAS-NLI penalty,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,300,2.641647500000545,unknown
+gemma3:latest,CAS-NLI penalty,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,300,2.641647500000545,unknown
 gemma3:latest,CAS-NLI penalty,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,253,2.279790499997034,Ten Walls
 gemma3:latest,CAS-NLI penalty,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,162,1.5714888000002247,Belgium
 gemma3:latest,CAS-NLI penalty,5ab48c325542996a3a969f93,bridge,Waltham Abbey,0.0,0.0,0.0,0.0,0.0,1.0,330,3.0720684999978403,Waltham Abbey
@@ -5089,7 +5089,7 @@ gemma3:latest,CAS-NLI penalty,5abd0553554299700f9d7963,bridge,B&Q,0.0,0.0,0.0,0.
 gemma3:latest,CAS-NLI penalty,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,230,2.3473469999953522,"29,000"
 gemma3:latest,CAS-NLI penalty,5a88cc8f55429938390d3fc5,bridge,Dolly Parton,0.0,0.0,0.0,0.0,1.0,1.0,131,1.3403185000061058,Dolly Parton
 gemma3:latest,CAS-NLI penalty,5abdaa0f55429965af743dad,bridge,North Carolina,0.0,0.0,0.0,0.0,1.0,0.0,71,0.7629244999989169,North Carolina
-gemma3:latest,CAS-NLI penalty,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
+gemma3:latest,CAS-NLI penalty,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
 gemma3:latest,CAS-NLI penalty,5a79c9395542994bb94570a2,comparison,Music,0.0,0.0,0.0,0.0,0.0,1.0,620,5.0383474999980535,Music
 gemma3:latest,CAS-NLI penalty,5ab2979c554299449642c919,bridge,Las Vegas shop,0.0,0.6,0.0,0.0,0.0,1.0,526,4.390354799994384,Las Vegas shop
 gemma3:latest,CAS-NLI penalty,5a7c6e435542996dd594b933,bridge,"April 23, 1959",0.0,0.0,0.0,0.0,0.0,0.0,223,2.5744636000017636,"April 23, 1959"
@@ -5172,7 +5172,7 @@ gemma3:latest,CAS-NLI penalty,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,0
 gemma3:latest,CAS-NLI penalty,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,629,5.715608099999372,2012
 gemma3:latest,CAS-NLI penalty,5adecc7755429975fa854f9d,bridge,Chelsea Manning,0.0,0.0,0.0,0.0,1.0,1.0,231,2.171062300003541,Chelsea Manning
 gemma3:latest,CAS-NLI penalty,5a7c6c9d554299683c1c6302,bridge,Prince George’s County,0.0,0.4,0.0,0.0,0.0,0.0,277,2.7904183999999077,Prince George’s County
-gemma3:latest,CAS-NLI penalty,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,0.0,125,0.9698430999997072,unknown
+gemma3:latest,CAS-NLI penalty,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,125,0.9698430999997072,unknown
 gemma3:latest,CAS-NLI penalty,5ae4e2ca55429908b63264aa,bridge,Federated,0.0,0.0,0.0,0.0,0.0,1.0,154,1.1624147999973502,Federated
 gemma3:latest,CAS-NLI penalty,5a7662745542992db9473786,bridge,Stockhausen,0.0,0.0,0.0,0.0,1.0,0.0,71,0.8921613999991678,Stockhausen
 gemma3:latest,CAS-NLI penalty,5a88fa9e5542993b751ca8de,bridge,Chicago Bears,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,673,5.760701599996537,Chicago Bears
@@ -5217,7 +5217,7 @@ gemma3:latest,CAS-NLI penalty,5a7cbf8c554299452d57b9f4,comparison,Dinosaur,1.0,1
 gemma3:latest,CAS-NLI penalty,5ab1ebff5542993be8fa9882,comparison,Eustoma,1.0,1.0,1.0,0.0,0.0,1.0,216,2.172256199999538,Eustoma
 gemma3:latest,CAS-NLI penalty,5ac1b3a75542994ab5c67dd2,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,135,1.260565399999905,unknown
 gemma3:latest,CAS-NLI penalty,5a7716ee55429937353601cc,bridge,Chesley Sullenberger,0.0,0.5714285714285715,0.0,0.0,0.0,1.0,438,3.895422800000233,Chesley Sullenberger
-gemma3:latest,CAS-NLI penalty,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,1.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
+gemma3:latest,CAS-NLI penalty,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,0.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
 gemma3:latest,CAS-NLI penalty,5ade283a5542997c77aded80,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,524,4.254985400002624,unknown
 gemma3:latest,CAS-NLI penalty,5a77d5e655429967ab1052cc,bridge,Club,1.0,1.0,1.0,0.0,0.0,1.0,490,4.096762599998328,Club
 gemma3:latest,CAS-NLI penalty,5ac537975542996feb3fea3c,bridge,Ronald Reagan,0.0,0.8,0.0,0.0,0.0,1.0,195,1.914300299999013,Ronald Reagan
@@ -5247,16 +5247,16 @@ gemma3:latest,CAS-NLI penalty,5adf41a45542993a75d26456,bridge,2010,1.0,1.0,1.0,0
 gemma3:latest,CAS-NLI penalty,5a8ceb4955429941ae14df43,bridge,José Fernández,0.0,0.0,0.0,0.0,0.0,1.0,757,6.54802539999946,José Fernández
 gemma3:latest,CAS-NLI penalty,5ac0c1cf5542992a796ded7c,bridge,unknown,0.0,0.0,0.0,1.0,,0.0,306,2.6055639000041992,unknown
 gemma3:latest,CAS-NLI penalty,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,424,3.723634999998467,Casey Bond
-gemma3:latest,CAS-NLI penalty,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,0.0,335,2.8572149999963585,unknown
+gemma3:latest,CAS-NLI penalty,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,335,2.8572149999963585,unknown
 gemma3:latest,CAS-NLI penalty,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,611,5.7353290999999444,265 million
 gemma3:latest,CAS-NLI penalty,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,445,3.9270520999998553,Spam
 gemma3:latest,CAS-NLI penalty,5a79ad485542994bb9457036,bridge,China and Hong Kong,0.0,0.0,0.0,0.0,0.0,1.0,123,1.3275540999966324,China and Hong Kong
 gemma3:latest,CAS-NLI penalty,5ab98d70554299753720f82f,comparison,Unknown,0.0,0.0,0.0,1.0,,1.0,286,2.3321741000036127,Unknown
 gemma3:latest,CAS-NLI penalty,5ac371aa5542995ef918c191,bridge,Workers' self-management,0.0,0.0,0.0,0.0,0.0,1.0,160,1.8430508999954327,Workers' self-management
-gemma3:latest,CAS-NLI penalty,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,641,5.061549500002002,unknown
+gemma3:latest,CAS-NLI penalty,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,641,5.061549500002002,unknown
 gemma3:latest,CAS-NLI penalty,5a71646e5542994082a3e80e,bridge,Tetrahydrogestrinone,1.0,1.0,1.0,0.0,0.0,1.0,472,4.42483970000103,Tetrahydrogestrinone
 gemma3:latest,CAS-NLI penalty,5ac275f155429921a00aaf82,bridge,French Indochina,0.0,0.0,0.0,0.0,0.0,1.0,284,2.767370399997162,French Indochina
-gemma3:latest,CAS-NLI penalty,5a8e1577554299068b959e54,comparison,Film directors,0.0,0.0,1.0,0.0,0.0,1.0,261,2.499499500001548,Film directors
+gemma3:latest,CAS-NLI penalty,5a8e1577554299068b959e54,comparison,Film directors,0.0,0.0,0.0,0.0,0.0,1.0,261,2.499499500001548,Film directors
 gemma3:latest,CAS-NLI penalty,5a77c15f5542997042120b1c,bridge,Leafcutter John,1.0,1.0,1.0,0.0,0.0,1.0,190,1.859126199997263,Leafcutter John
 gemma3:latest,CAS-NLI penalty,5a85a3005542991dd0999e72,bridge,Subhas Chandra Bose,0.0,0.0,0.0,0.0,1.0,0.0,91,1.3421612000020104,Subhas Chandra Bose
 gemma3:latest,CAS-NLI penalty,5a820f2c55429926c1cdae17,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,68,0.7905253999997512,unknown
@@ -5290,7 +5290,7 @@ gemma3:latest,CAS-NLI penalty,5a807ca5554299485f598613,bridge,unknown,0.0,0.0,0.
 gemma3:latest,CAS-NLI penalty,5a76538d5542992db9473764,comparison,Nate Albert,1.0,1.0,1.0,0.0,0.0,1.0,346,2.999092099998961,Nate Albert
 gemma3:latest,CAS-NLI penalty,5a737ef85542992d56e7e336,bridge,Dire Straits,1.0,1.0,1.0,0.0,0.0,1.0,922,7.762643100002606,Dire Straits
 gemma3:latest,CAS-NLI penalty,5a771ead55429966f1a36c7c,bridge,Phelan Beale,0.0,0.0,0.0,0.0,0.0,1.0,363,3.273182500000985,Phelan Beale
-gemma3:latest,CAS-NLI penalty,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,400,3.473302099999273,unknown
+gemma3:latest,CAS-NLI penalty,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,400,3.473302099999273,unknown
 gemma3:latest,CAS-NLI penalty,5a7fd95d5542992e7d278dc5,bridge,Golden Globe nomination,0.0,0.8,1.0,0.0,0.0,1.0,380,3.2455670999988797,Golden Globe nomination
 gemma3:latest,CAS-NLI penalty,5ae72fc5554299572ea54770,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,249,2.2282262000007904,unknown
 gemma3:latest,CAS-NLI penalty,5ac5101455429924173fb592,bridge,Every Rose Has Its Thorn,1.0,1.0,1.0,0.0,0.0,1.0,344,3.121672799999942,Every Rose Has Its Thorn
@@ -5323,12 +5323,12 @@ gemma3:latest,CAS-NLI penalty,5adcfe5f5542992c1e3a24f0,bridge,unknown,0.0,0.0,0.
 gemma3:latest,CAS-NLI penalty,5ae2ad6b5542996483e64a3d,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,251,2.1269739999988815,unknown
 gemma3:latest,CAS-NLI penalty,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,522,4.861955300002592,Masa Takayama
 gemma3:latest,CAS-NLI penalty,5abaf6865542996cc5e49f3c,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,165,1.4113753000056022,unknown
-gemma3:latest,CAS-NLI penalty,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,569,4.606690599997819,unknown
+gemma3:latest,CAS-NLI penalty,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,569,4.606690599997819,unknown
 gemma3:latest,CAS-NLI penalty,5ae39f405542991a06ce9a02,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,115,1.3024682000032044,unknown
 gemma3:latest,CAS-NLI penalty,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,498,4.463704500001768,King Kelly
 gemma3:latest,CAS-NLI penalty,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,460,4.047188099997584,Lucie Šafářová
 gemma3:latest,CAS-NLI penalty,5ade0fb95542997545bbbe39,bridge,Unknown,0.0,0.0,0.0,1.0,,1.0,364,3.567835299996659,Unknown
-gemma3:latest,CAS-NLI penalty,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,339,2.956327700005204,unknown
+gemma3:latest,CAS-NLI penalty,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,339,2.956327700005204,unknown
 gemma3:latest,CAS-NLI penalty,5abb0b5c5542996cc5e49f79,bridge,Pan Am Railways,1.0,1.0,1.0,0.0,0.0,1.0,319,3.0556982999987667,Pan Am Railways
 gemma3:latest,CAS-NLI penalty,5a84edf65542994c784dda8d,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,261,2.292607700001099,unknown
 gemma3:latest,CAS-NLI penalty,5a7b12a355429927d897bf2a,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,130,1.3532656999959727,unknown
@@ -5372,7 +5372,7 @@ gemma3:latest,CAS-NLI penalty,5abb1e1b5542992ccd8e7f19,comparison,Nobel Prize,0.
 gemma3:latest,CAS-NLI penalty,5a8fb65d5542997ba9cb32fa,bridge,Flying Buffalo,1.0,1.0,1.0,0.0,0.0,1.0,277,2.3979582999963895,Flying Buffalo
 gemma3:latest,CAS-NLI penalty,5adf82945542993344016ca4,comparison,Radio commentators,0.0,0.0,0.0,0.0,1.0,0.0,66,0.8425619000045117,Radio commentators
 gemma3:latest,CAS-NLI penalty,5ae1f5a15542997f29b3c1b5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,589,5.068136699999741,unknown
-gemma3:latest,CAS-NLI penalty,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,396,3.2932317000013427,unknown
+gemma3:latest,CAS-NLI penalty,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,396,3.2932317000013427,unknown
 gemma3:latest,CAS-NLI penalty,5ab281f45542993be8fa9938,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,853,7.482711699998617,unknown
 gemma3:latest,CAS-NLI penalty,5a78ad26554299148911f913,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,373,3.033367399999406,unknown
 gemma3:latest,CAS-NLI penalty,5ab9cfe655429970cfb8ebaf,bridge,"May 27, 1977",0.0,0.0,0.0,0.0,0.0,1.0,416,4.529561799998191,"May 27, 1977"
@@ -5403,7 +5403,7 @@ gemma3:latest,CAS-NLI penalty,5adeab4555429975fa854f5f,bridge,unknown,0.0,0.0,0.
 gemma3:latest,CAS-NLI penalty,5a89a128554299669944a552,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,171,1.5147715999992215,unknown
 gemma3:latest,CAS-NLI penalty,5a8e32d35542995a26add480,bridge,John Travolta,1.0,1.0,1.0,0.0,0.0,1.0,656,5.593072600000596,John Travolta
 gemma3:latest,CAS-NLI penalty,5ae55ed15542992663a4f1ea,bridge,Haslingden,0.0,0.0,0.0,0.0,0.0,1.0,552,5.264770699999644,Haslingden
-gemma3:latest,CAS-NLI penalty,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,602,5.079410899998038,unknown
+gemma3:latest,CAS-NLI penalty,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,602,5.079410899998038,unknown
 gemma3:latest,CAS-NLI penalty,5abed4d55542990832d3a0e0,comparison,Yes,1.0,1.0,1.0,0.0,,1.0,305,2.680924000000232,Yes
 gemma3:latest,CAS-NLI penalty,5ab84f2c55429934fafe6d54,bridge,Through the Looking-Glass,0.0,0.0,0.0,0.0,0.0,1.0,261,2.5739802999960375,Through the Looking-Glass
 gemma3:latest,CAS-NLI penalty,5a7293655542991f9a20c4ff,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,311,2.852382499997475,unknown
@@ -5433,7 +5433,7 @@ gemma3:latest,CAS-NLI penalty,5ac05310554299012d1db5e7,bridge,Sharon Collins,0.0
 gemma3:latest,CAS-NLI penalty,5ae0de1455429924de1b71b4,bridge,Unknown,0.0,0.0,0.0,1.0,,0.0,85,0.796457399999781,Unknown
 gemma3:latest,CAS-NLI penalty,5a816db055429903bc27b961,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,70,0.7791872999951011,unknown
 gemma3:latest,CAS-NLI penalty,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,281,2.57745860000432,Herschell Gordon Lewis
-gemma3:latest,CAS-NLI penalty,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,163,1.4143844000063837,unknown
+gemma3:latest,CAS-NLI penalty,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,163,1.4143844000063837,unknown
 gemma3:latest,CAS-NLI penalty,5a83438955429966c78a6b61,bridge,Walter Brennan,0.0,0.0,0.0,0.0,1.0,0.0,76,0.8387505999999121,Walter Brennan
 gemma3:latest,CAS-NLI penalty,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,196,1.8944255000023986,Saturday Night Live
 gemma3:latest,CAS-NLI penalty,5a7fc5875542992e7d278d67,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,224,1.8332484000056866,unknown
@@ -5450,13 +5450,13 @@ gemma3:latest,CAS-NLI penalty,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,1
 gemma3:latest,CAS-NLI penalty,5a75eb125542994ccc918659,comparison,unknown,0.0,0.0,0.0,1.0,,0.0,149,1.2809551999962423,unknown
 gemma3:latest,CAS-NLI penalty,5adcd1665542994d58a2f6e6,bridge,Bruce R. Cook,1.0,1.0,1.0,0.0,0.0,1.0,237,2.2381330000062007,Bruce R. Cook
 gemma3:latest,CAS-NLI penalty,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,308,2.565823199998704,Taylor Swift
-gemma3:latest,CAS-NLI penalty,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,161,1.3827648000005865,unknown
+gemma3:latest,CAS-NLI penalty,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,161,1.3827648000005865,unknown
 gemma3:latest,CAS-NLI penalty,5ab55b0c554299488d4d995e,bridge,Big 12 Conference,1.0,1.0,1.0,0.0,0.0,1.0,282,2.84227109999847,Big 12 Conference
 gemma3:latest,CAS-NLI penalty,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1.0,0.0,0.0,1.0,756,6.3003847999934806,2.1 million
 gemma3:latest,CAS-NLI penalty,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,6.120781899997382,Alfred Preis
 gemma3:latest,CAS-NLI penalty,5ade618e554299728e26c700,comparison,Filmmaking,0.0,0.0,0.0,0.0,1.0,0.0,70,0.8713391999990563,Filmmaking
 gemma3:latest,CAS-NLI penalty,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,286,2.487943100000848,Eve Hewson
-gemma3:latest,CAS-NLI penalty,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,436,3.7421383000000787,unknown
+gemma3:latest,CAS-NLI penalty,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,436,3.7421383000000787,unknown
 gemma3:latest,CAS-NLI penalty,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,454,4.35529719999613,Katy Perry
 gemma3:latest,CAS-NLI penalty,5a75e67d5542992db9473709,bridge,Battle of White Plains,0.0,0.0,0.0,0.0,0.0,1.0,557,5.099389599999995,Battle of White Plains
 gemma3:latest,CAS-NLI penalty,5ae3789b5542992e3233c412,bridge,unknown,0.0,0.0,0.0,1.0,,0.0,68,0.7088832000008551,unknown
@@ -5480,7 +5480,7 @@ gemma3:latest,CAS-NLI penalty,5a8c8502554299585d9e36d0,bridge,Jeff Sheehy,0.0,0.
 gemma3:latest,CAS-NLI penalty,5a77671255429966f1a36d21,comparison,Strategy,0.0,0.0,0.0,0.0,0.0,1.0,860,7.161377199998242,Strategy
 gemma3:latest,CAS-NLI penalty,5a87c7dc5542996e4f30891b,bridge,unknown,0.0,0.0,0.0,1.0,,0.0,144,1.3024850000001607,unknown
 gemma3:latest,CAS-NLI penalty,5a8900c75542997e5c09a6ed,comparison,Lime,1.0,1.0,1.0,0.0,1.0,0.0,65,0.756668299996818,Lime
-gemma3:latest,CAS-NLI penalty,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
+gemma3:latest,CAS-NLI penalty,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
 gemma3:latest,CAS-NLI penalty,5ac175635542994ab5c67d4b,bridge,David O'Leary,0.0,0.0,0.0,0.0,0.0,1.0,256,2.340857600000163,David O'Leary
 gemma3:latest,CAS-NLI penalty,5ae2196b554299495565da02,bridge,Law and politics,0.0,0.0,0.0,0.0,1.0,1.0,159,1.570429499995953,Law and politics
 gemma3:latest,CAS-NLI penalty,5a80abd15542996402f6a5e0,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,196,1.6351161999991746,unknown
@@ -5571,7 +5571,7 @@ gemma3:latest,CAS-NLI preserve,5ae792f55542994a481bbdae,bridge,Al Horford,0.0,0.
 gemma3:latest,CAS-NLI preserve,5a909a0355429916514e7505,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,414,3.7778857000012067,unknown
 gemma3:latest,CAS-NLI preserve,5a726ba35542997f827839c0,bridge,Mark Donohue,0.0,0.6666666666666666,0.0,0.0,0.0,1.0,637,5.456394399996498,Mark Donohue
 gemma3:latest,CAS-NLI preserve,5ab6ecd85542991d322236cf,bridge,Latin American culture,1.0,1.0,1.0,0.0,0.0,1.0,174,1.786286900001869,Latin American culture
-gemma3:latest,CAS-NLI preserve,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,300,2.641647500000545,unknown
+gemma3:latest,CAS-NLI preserve,5abe91895542993f32c2a168,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,300,2.641647500000545,unknown
 gemma3:latest,CAS-NLI preserve,5a78cc7c55429974737f789f,bridge,Ten Walls,1.0,1.0,1.0,0.0,0.0,1.0,253,2.279790499997034,Ten Walls
 gemma3:latest,CAS-NLI preserve,5a85fa815542996432c57155,bridge,Belgium,0.0,0.0,0.0,0.0,1.0,1.0,162,1.5714888000002247,Belgium
 gemma3:latest,CAS-NLI preserve,5ab48c325542996a3a969f93,bridge,Waltham Abbey,0.0,0.0,0.0,0.0,0.0,1.0,330,3.0720684999978403,Waltham Abbey
@@ -5589,7 +5589,7 @@ gemma3:latest,CAS-NLI preserve,5abd0553554299700f9d7963,bridge,Marks & Spencer,0
 gemma3:latest,CAS-NLI preserve,5ae12aa6554299422ee99617,bridge,"29,000",1.0,1.0,1.0,0.0,0.0,1.0,230,2.3473469999953522,"29,000"
 gemma3:latest,CAS-NLI preserve,5a88cc8f55429938390d3fc5,bridge,Dolly Parton,0.0,0.0,0.0,0.0,1.0,1.0,131,1.3403185000061058,Dolly Parton
 gemma3:latest,CAS-NLI preserve,5abdaa0f55429965af743dad,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,148,1.2801982000019052,unknown
-gemma3:latest,CAS-NLI preserve,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,1.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
+gemma3:latest,CAS-NLI preserve,5a8b041955429971feec4604,bridge,Mountaineering,0.0,0.0,0.0,0.0,1.0,1.0,461,3.782581499996013,Mountaineering
 gemma3:latest,CAS-NLI preserve,5a79c9395542994bb94570a2,comparison,Music recording,0.0,0.0,0.0,0.0,0.0,1.0,815,6.629392599999846,Music recording
 gemma3:latest,CAS-NLI preserve,5ab2979c554299449642c919,bridge,Las Vegas shop,0.0,0.6,0.0,0.0,0.0,1.0,526,4.390354799994384,Las Vegas shop
 gemma3:latest,CAS-NLI preserve,5a7c6e435542996dd594b933,bridge,"April 23, 1959",0.0,0.0,0.0,0.0,0.0,0.0,223,2.5744636000017636,"April 23, 1959"
@@ -5672,7 +5672,7 @@ gemma3:latest,CAS-NLI preserve,5a7dedb55542995f4f402317,bridge,1837,1.0,1.0,1.0,
 gemma3:latest,CAS-NLI preserve,5a899bf955429946c8d6e959,bridge,2012,1.0,1.0,1.0,0.0,0.0,1.0,629,5.715608099999372,2012
 gemma3:latest,CAS-NLI preserve,5adecc7755429975fa854f9d,bridge,Chelsea Manning,0.0,0.0,0.0,0.0,1.0,1.0,231,2.171062300003541,Chelsea Manning
 gemma3:latest,CAS-NLI preserve,5a7c6c9d554299683c1c6302,bridge,"Freeport, New York",0.0,0.0,0.0,0.0,0.0,1.0,446,4.214693699999771,"Freeport, New York"
-gemma3:latest,CAS-NLI preserve,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,660,5.313345599999593,unknown
+gemma3:latest,CAS-NLI preserve,5a84c4135542994c784dda31,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,660,5.313345599999593,unknown
 gemma3:latest,CAS-NLI preserve,5ae4e2ca55429908b63264aa,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,226,1.9873547999959555,unknown
 gemma3:latest,CAS-NLI preserve,5a7662745542992db9473786,bridge,Ulver,0.0,0.0,0.0,0.0,0.0,1.0,159,1.5834190000023227,Ulver
 gemma3:latest,CAS-NLI preserve,5a88fa9e5542993b751ca8de,bridge,Chicago Bears,0.0,0.6666666666666666,1.0,0.0,0.0,1.0,673,5.760701599996537,Chicago Bears
@@ -5717,7 +5717,7 @@ gemma3:latest,CAS-NLI preserve,5a7cbf8c554299452d57b9f4,comparison,Dinosaur,1.0,
 gemma3:latest,CAS-NLI preserve,5ab1ebff5542993be8fa9882,comparison,Eustoma,1.0,1.0,1.0,0.0,0.0,1.0,216,2.172256199999538,Eustoma
 gemma3:latest,CAS-NLI preserve,5ac1b3a75542994ab5c67dd2,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,135,1.260565399999905,unknown
 gemma3:latest,CAS-NLI preserve,5a7716ee55429937353601cc,bridge,Chesley Sullenberger,0.0,0.5714285714285715,0.0,0.0,0.0,1.0,438,3.895422800000233,Chesley Sullenberger
-gemma3:latest,CAS-NLI preserve,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,1.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
+gemma3:latest,CAS-NLI preserve,5a8a03245542992e4fca84d5,bridge,Singers,0.0,0.0,0.0,0.0,0.0,1.0,159,1.5211199000041233,Singers
 gemma3:latest,CAS-NLI preserve,5ade283a5542997c77aded80,comparison,X,1.0,1.0,1.0,0.0,0.0,1.0,1562,12.668565200001467,X
 gemma3:latest,CAS-NLI preserve,5a77d5e655429967ab1052cc,bridge,Club (magazine),0.0,0.6666666666666666,1.0,0.0,0.0,1.0,674,5.558300700002292,Club (magazine)
 gemma3:latest,CAS-NLI preserve,5ac537975542996feb3fea3c,bridge,Ronald Reagan,0.0,0.8,0.0,0.0,0.0,1.0,195,1.914300299999013,Ronald Reagan
@@ -5747,13 +5747,13 @@ gemma3:latest,CAS-NLI preserve,5adf41a45542993a75d26456,bridge,2010,1.0,1.0,1.0,
 gemma3:latest,CAS-NLI preserve,5a8ceb4955429941ae14df43,bridge,José Fernández,0.0,0.0,0.0,0.0,0.0,1.0,757,6.54802539999946,José Fernández
 gemma3:latest,CAS-NLI preserve,5ac0c1cf5542992a796ded7c,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,388,3.4430605999987165,unknown
 gemma3:latest,CAS-NLI preserve,5abd0ac45542992ac4f381b5,bridge,Casey Bond,1.0,1.0,1.0,0.0,0.0,1.0,424,3.723634999998467,Casey Bond
-gemma3:latest,CAS-NLI preserve,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,515,4.469451299999491,unknown
+gemma3:latest,CAS-NLI preserve,5abaee4f5542996cc5e49f15,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,515,4.469451299999491,unknown
 gemma3:latest,CAS-NLI preserve,5a7b5af7554299042af8f752,bridge,265 million,1.0,1.0,1.0,0.0,0.0,1.0,611,5.7353290999999444,265 million
 gemma3:latest,CAS-NLI preserve,5ae306115542992decbdcdc4,bridge,Spam,0.0,0.0,0.0,0.0,0.0,1.0,445,3.9270520999998553,Spam
 gemma3:latest,CAS-NLI preserve,5a79ad485542994bb9457036,bridge,China and Hong Kong,0.0,0.0,0.0,0.0,0.0,1.0,123,1.3275540999966324,China and Hong Kong
 gemma3:latest,CAS-NLI preserve,5ab98d70554299753720f82f,comparison,Unknown,0.0,0.0,0.0,1.0,,1.0,286,2.3321741000036127,Unknown
 gemma3:latest,CAS-NLI preserve,5ac371aa5542995ef918c191,bridge,Workers' self-management,0.0,0.0,0.0,0.0,0.0,1.0,160,1.8430508999954327,Workers' self-management
-gemma3:latest,CAS-NLI preserve,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,641,5.061549500002002,unknown
+gemma3:latest,CAS-NLI preserve,5a82800855429966c78a6a2f,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,641,5.061549500002002,unknown
 gemma3:latest,CAS-NLI preserve,5a71646e5542994082a3e80e,bridge,Tetrahydrogestrinone,1.0,1.0,1.0,0.0,0.0,1.0,472,4.42483970000103,Tetrahydrogestrinone
 gemma3:latest,CAS-NLI preserve,5ac275f155429921a00aaf82,bridge,French Indochina,0.0,0.0,0.0,0.0,0.0,1.0,284,2.767370399997162,French Indochina
 gemma3:latest,CAS-NLI preserve,5a8e1577554299068b959e54,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,391,3.3173655999999028,unknown
@@ -5790,7 +5790,7 @@ gemma3:latest,CAS-NLI preserve,5a807ca5554299485f598613,bridge,Baltimore and Ohi
 gemma3:latest,CAS-NLI preserve,5a76538d5542992db9473764,comparison,Nate Albert,1.0,1.0,1.0,0.0,0.0,1.0,346,2.999092099998961,Nate Albert
 gemma3:latest,CAS-NLI preserve,5a737ef85542992d56e7e336,bridge,Dire Straits,1.0,1.0,1.0,0.0,0.0,1.0,922,7.762643100002606,Dire Straits
 gemma3:latest,CAS-NLI preserve,5a771ead55429966f1a36c7c,bridge,Phelan Beale,0.0,0.0,0.0,0.0,0.0,1.0,363,3.273182500000985,Phelan Beale
-gemma3:latest,CAS-NLI preserve,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,400,3.473302099999273,unknown
+gemma3:latest,CAS-NLI preserve,5adf5daf5542995534e8c79d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,400,3.473302099999273,unknown
 gemma3:latest,CAS-NLI preserve,5a7fd95d5542992e7d278dc5,bridge,Golden Globe nomination,0.0,0.8,1.0,0.0,0.0,1.0,380,3.2455670999988797,Golden Globe nomination
 gemma3:latest,CAS-NLI preserve,5ae72fc5554299572ea54770,bridge,Jaipur,1.0,1.0,1.0,0.0,0.0,1.0,384,3.5066327000022284,Jaipur
 gemma3:latest,CAS-NLI preserve,5ac5101455429924173fb592,bridge,Every Rose Has Its Thorn,1.0,1.0,1.0,0.0,0.0,1.0,344,3.121672799999942,Every Rose Has Its Thorn
@@ -5823,12 +5823,12 @@ gemma3:latest,CAS-NLI preserve,5adcfe5f5542992c1e3a24f0,bridge,unknown,0.0,0.0,0
 gemma3:latest,CAS-NLI preserve,5ae2ad6b5542996483e64a3d,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,456,3.4966453000015463,unknown
 gemma3:latest,CAS-NLI preserve,5ae55b8255429908b63265ef,bridge,Masa Takayama,0.0,0.8,0.0,0.0,0.0,1.0,522,4.861955300002592,Masa Takayama
 gemma3:latest,CAS-NLI preserve,5abaf6865542996cc5e49f3c,bridge,The Lodge,0.0,0.0,0.0,0.0,0.0,1.0,267,2.3870375999977114,The Lodge
-gemma3:latest,CAS-NLI preserve,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,569,4.606690599997819,unknown
+gemma3:latest,CAS-NLI preserve,5ae4ebeb55429908b63264bb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,569,4.606690599997819,unknown
 gemma3:latest,CAS-NLI preserve,5ae39f405542991a06ce9a02,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,115,1.3024682000032044,unknown
 gemma3:latest,CAS-NLI preserve,5ac06e24554299294b218fd1,bridge,King Kelly,0.0,0.5,0.0,0.0,0.0,1.0,498,4.463704500001768,King Kelly
 gemma3:latest,CAS-NLI preserve,5a8a6a2155429930ff3c0dd0,comparison,Lucie Šafářová,0.0,0.0,0.0,0.0,0.0,1.0,918,7.84029290000035,Lucie Šafářová
 gemma3:latest,CAS-NLI preserve,5ade0fb95542997545bbbe39,bridge,Unknown,0.0,0.0,0.0,1.0,,1.0,364,3.567835299996659,Unknown
-gemma3:latest,CAS-NLI preserve,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,339,2.956327700005204,unknown
+gemma3:latest,CAS-NLI preserve,5abd0eae5542996e802b46d4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,339,2.956327700005204,unknown
 gemma3:latest,CAS-NLI preserve,5abb0b5c5542996cc5e49f79,bridge,Pan Am Railways,1.0,1.0,1.0,0.0,0.0,1.0,319,3.0556982999987667,Pan Am Railways
 gemma3:latest,CAS-NLI preserve,5a84edf65542994c784dda8d,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,261,2.292607700001099,unknown
 gemma3:latest,CAS-NLI preserve,5a7b12a355429927d897bf2a,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,130,1.3532656999959727,unknown
@@ -5872,7 +5872,7 @@ gemma3:latest,CAS-NLI preserve,5abb1e1b5542992ccd8e7f19,comparison,Nobel Prize,0
 gemma3:latest,CAS-NLI preserve,5a8fb65d5542997ba9cb32fa,bridge,Flying Buffalo,1.0,1.0,1.0,0.0,0.0,1.0,277,2.3979582999963895,Flying Buffalo
 gemma3:latest,CAS-NLI preserve,5adf82945542993344016ca4,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,358,2.8721527000016067,unknown
 gemma3:latest,CAS-NLI preserve,5ae1f5a15542997f29b3c1b5,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,589,5.068136699999741,unknown
-gemma3:latest,CAS-NLI preserve,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,396,3.2932317000013427,unknown
+gemma3:latest,CAS-NLI preserve,5ab25004554299722f9b4cd7,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,396,3.2932317000013427,unknown
 gemma3:latest,CAS-NLI preserve,5ab281f45542993be8fa9938,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,853,7.482711699998617,unknown
 gemma3:latest,CAS-NLI preserve,5a78ad26554299148911f913,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,373,3.033367399999406,unknown
 gemma3:latest,CAS-NLI preserve,5ab9cfe655429970cfb8ebaf,bridge,"May 27, 1977",0.0,0.0,0.0,0.0,0.0,1.0,416,4.529561799998191,"May 27, 1977"
@@ -5903,7 +5903,7 @@ gemma3:latest,CAS-NLI preserve,5adeab4555429975fa854f5f,bridge,unknown,0.0,0.0,0
 gemma3:latest,CAS-NLI preserve,5a89a128554299669944a552,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,171,1.5147715999992215,unknown
 gemma3:latest,CAS-NLI preserve,5a8e32d35542995a26add480,bridge,John Travolta,1.0,1.0,1.0,0.0,0.0,1.0,656,5.593072600000596,John Travolta
 gemma3:latest,CAS-NLI preserve,5ae55ed15542992663a4f1ea,bridge,Haslingden,0.0,0.0,0.0,0.0,0.0,1.0,552,5.264770699999644,Haslingden
-gemma3:latest,CAS-NLI preserve,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,602,5.079410899998038,unknown
+gemma3:latest,CAS-NLI preserve,5ae33a6e5542992f92d8224d,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,602,5.079410899998038,unknown
 gemma3:latest,CAS-NLI preserve,5abed4d55542990832d3a0e0,comparison,Yes,1.0,1.0,1.0,0.0,,1.0,305,2.680924000000232,Yes
 gemma3:latest,CAS-NLI preserve,5ab84f2c55429934fafe6d54,bridge,Through the Looking-Glass,0.0,0.0,0.0,0.0,0.0,1.0,261,2.5739802999960375,Through the Looking-Glass
 gemma3:latest,CAS-NLI preserve,5a7293655542991f9a20c4ff,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,311,2.852382499997475,unknown
@@ -5933,7 +5933,7 @@ gemma3:latest,CAS-NLI preserve,5ac05310554299012d1db5e7,bridge,unknown,0.0,0.0,0
 gemma3:latest,CAS-NLI preserve,5ae0de1455429924de1b71b4,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,283,2.4904626999996253,unknown
 gemma3:latest,CAS-NLI preserve,5a816db055429903bc27b961,comparison,New York City,1.0,1.0,1.0,0.0,0.0,1.0,769,6.759741000001668,New York City
 gemma3:latest,CAS-NLI preserve,5ab4482b55429942dd415f09,comparison,Herschell Gordon Lewis,0.0,0.7499999999999999,0.0,0.0,0.0,1.0,281,2.57745860000432,Herschell Gordon Lewis
-gemma3:latest,CAS-NLI preserve,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,163,1.4143844000063837,unknown
+gemma3:latest,CAS-NLI preserve,5a8482e55542997175ce1edc,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,163,1.4143844000063837,unknown
 gemma3:latest,CAS-NLI preserve,5a83438955429966c78a6b61,bridge,Bill McCutcheon,1.0,1.0,1.0,0.0,0.0,1.0,317,3.0413013999968825,Bill McCutcheon
 gemma3:latest,CAS-NLI preserve,5ac0f7df554299012d1db667,bridge,Saturday Night Live,0.0,0.0,0.0,0.0,0.0,1.0,196,1.8944255000023986,Saturday Night Live
 gemma3:latest,CAS-NLI preserve,5a7fc5875542992e7d278d67,bridge,unknown,0.0,0.0,0.0,1.0,,1.0,836,6.659619799997017,unknown
@@ -5950,13 +5950,13 @@ gemma3:latest,CAS-NLI preserve,5a79cabc5542994f819ef0a1,bridge,Marco Fu,1.0,1.0,
 gemma3:latest,CAS-NLI preserve,5a75eb125542994ccc918659,comparison,Kamāl al-Dīn al-Fārisī,0.0,0.0,0.0,0.0,0.0,1.0,436,4.891989400002785,Kamāl al-Dīn al-Fārisī
 gemma3:latest,CAS-NLI preserve,5adcd1665542994d58a2f6e6,bridge,Bruce R. Cook,1.0,1.0,1.0,0.0,0.0,1.0,326,3.034322700001212,Bruce R. Cook
 gemma3:latest,CAS-NLI preserve,5ae520315542993aec5ec152,bridge,Taylor Swift,1.0,1.0,1.0,0.0,0.0,1.0,308,2.565823199998704,Taylor Swift
-gemma3:latest,CAS-NLI preserve,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,161,1.3827648000005865,unknown
+gemma3:latest,CAS-NLI preserve,5adbf84555429947ff17387c,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,161,1.3827648000005865,unknown
 gemma3:latest,CAS-NLI preserve,5ab55b0c554299488d4d995e,bridge,Big 12 Conference,1.0,1.0,1.0,0.0,0.0,1.0,282,2.84227109999847,Big 12 Conference
 gemma3:latest,CAS-NLI preserve,5ac0641f554299294b218fbe,bridge,2.1 million,1.0,1.0,1.0,0.0,0.0,1.0,756,6.3003847999934806,2.1 million
 gemma3:latest,CAS-NLI preserve,5ac385f8554299741d48a279,bridge,Alfred Preis,1.0,1.0,1.0,0.0,0.0,1.0,709,6.120781899997382,Alfred Preis
 gemma3:latest,CAS-NLI preserve,5ade618e554299728e26c700,comparison,Film director,1.0,1.0,1.0,0.0,0.0,1.0,110,1.5515951000052155,Film director
 gemma3:latest,CAS-NLI preserve,5a8d841955429941ae14dfe6,bridge,Eve Hewson,1.0,1.0,1.0,0.0,0.0,1.0,286,2.487943100000848,Eve Hewson
-gemma3:latest,CAS-NLI preserve,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,1.0,1.0,,1.0,436,3.7421383000000787,unknown
+gemma3:latest,CAS-NLI preserve,5ac37dd6554299218029dbdb,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,436,3.7421383000000787,unknown
 gemma3:latest,CAS-NLI preserve,5abd56355542993062266c58,bridge,Katy Perry,1.0,1.0,1.0,0.0,0.0,1.0,454,4.35529719999613,Katy Perry
 gemma3:latest,CAS-NLI preserve,5a75e67d5542992db9473709,bridge,Battle of White Plains,0.0,0.0,0.0,0.0,0.0,1.0,557,5.099389599999995,Battle of White Plains
 gemma3:latest,CAS-NLI preserve,5ae3789b5542992e3233c412,bridge,Philippe Pétain,0.0,0.0,0.0,0.0,0.0,1.0,217,2.151307000000088,Philippe Pétain
@@ -5980,7 +5980,7 @@ gemma3:latest,CAS-NLI preserve,5a8c8502554299585d9e36d0,bridge,Ed Lee,1.0,1.0,1.
 gemma3:latest,CAS-NLI preserve,5a77671255429966f1a36d21,comparison,Strategy,0.0,0.0,0.0,0.0,0.0,1.0,860,7.161377199998242,Strategy
 gemma3:latest,CAS-NLI preserve,5a87c7dc5542996e4f30891b,bridge,Flyweight,0.0,0.0,0.0,0.0,0.0,1.0,324,2.774758899999142,Flyweight
 gemma3:latest,CAS-NLI preserve,5a8900c75542997e5c09a6ed,comparison,unknown,0.0,0.0,0.0,1.0,,1.0,105,1.107658300003095,unknown
-gemma3:latest,CAS-NLI preserve,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,1.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
+gemma3:latest,CAS-NLI preserve,5ae5fd395542996de7b71ab3,bridge,2 acres,0.0,0.5,0.0,0.0,0.0,1.0,290,2.6503059999995457,2 acres
 gemma3:latest,CAS-NLI preserve,5ac175635542994ab5c67d4b,bridge,David O'Leary,0.0,0.0,0.0,0.0,0.0,1.0,256,2.340857600000163,David O'Leary
 gemma3:latest,CAS-NLI preserve,5ae2196b554299495565da02,bridge,Law and politics,0.0,0.0,0.0,0.0,1.0,1.0,159,1.570429499995953,Law and politics
 gemma3:latest,CAS-NLI preserve,5a80abd15542996402f6a5e0,bridge,Wong Jing,0.0,0.0,0.0,0.0,0.0,1.0,263,2.49030810000113,Wong Jing

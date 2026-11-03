@@ -15,7 +15,8 @@ FAMILY = {"deberta_passage": "DeBERTa-v3 NLI, whole passage", "deberta_sentence"
 COLOR = dict(zip(FAMILY, ["#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4", "#6250d6"]))
 MARKER = dict(zip(FAMILY, ["o", "s", "^", "D", "v", "P"]))
 points = R["nli"] + R["answer_level"]
-cur, chosen = R["current_cas_detector"], [R["chosen_nli"], R["chosen_answer_level"]]
+cur = R["current_cas_detector"]
+chosen = [c for c in (R["chosen_nli"], R["chosen_answer_level"]) if c is not None]   # None: no setting met the rule
 rows = []
 
 fig, axes = plt.subplots(1, 2, figsize=(DOUBLE, 3.1))

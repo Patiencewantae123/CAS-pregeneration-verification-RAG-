@@ -1,2 +1,6 @@
 # Local NLI prediction cache written by app.py
 .cas_cache/
+
+# Python bytecode
+__pycache__/
+*.pyc

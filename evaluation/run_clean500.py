@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_evaluation import (DATA, DEFAULT_TAU, OUT_RESULTS, SEED, TOP_K, boot_ci, cas_nli_theta, load,  # noqa: E402
                             paired_test, prf, select_cas, select_topk, write_csv)
 from run_llm_generation import QA_PROMPT, format_passages, generate, load_cache, score_qa  # noqa: E402
-from run_poison import holm  # noqa: E402
+from run_evaluation import holm  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PREREG = os.path.join(HERE, "PREREGISTRATION_clean500.md")

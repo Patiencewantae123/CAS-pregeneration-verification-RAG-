@@ -293,9 +293,9 @@
    "model": "llama3.2:latest",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.512,
-   "ci_low": 0.468,
-   "ci_high": 0.556,
+   "mean": 0.502,
+   "ci_low": 0.458,
+   "ci_high": 0.546,
    "n": 500
   },
   {
@@ -343,9 +343,9 @@
    "model": "llama3.2:latest",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.482,
-   "ci_low": 0.438,
-   "ci_high": 0.524,
+   "mean": 0.472,
+   "ci_low": 0.42795,
+   "ci_high": 0.512,
    "n": 500
   },
   {
@@ -393,9 +393,9 @@
    "model": "llama3.2:latest",
    "method": "Reranker top-3",
    "metric": "accuracy",
-   "mean": 0.462,
-   "ci_low": 0.418,
-   "ci_high": 0.504,
+   "mean": 0.45,
+   "ci_low": 0.406,
+   "ci_high": 0.492,
    "n": 500
   },
   {
@@ -443,9 +443,9 @@
    "model": "llama3.2:latest",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.474,
-   "ci_low": 0.43,
-   "ci_high": 0.516,
+   "mean": 0.466,
+   "ci_low": 0.422,
+   "ci_high": 0.508,
    "n": 500
   },
   {
@@ -493,9 +493,9 @@
    "model": "llama3.2:latest",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.412,
-   "ci_low": 0.368,
-   "ci_high": 0.458,
+   "mean": 0.406,
+   "ci_low": 0.362,
+   "ci_high": 0.452,
    "n": 500
   },
   {
@@ -543,9 +543,9 @@
    "model": "llama3.2:latest",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.472,
-   "ci_low": 0.428,
-   "ci_high": 0.516,
+   "mean": 0.464,
+   "ci_low": 0.42,
+   "ci_high": 0.508,
    "n": 500
   },
   {
@@ -593,9 +593,9 @@
    "model": "gemma3:latest",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.47,
-   "ci_low": 0.42795,
-   "ci_high": 0.512,
+   "mean": 0.456,
+   "ci_low": 0.412,
+   "ci_high": 0.4980499999999997,
    "n": 500
   },
   {
@@ -643,9 +643,9 @@
    "model": "gemma3:latest",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.438,
-   "ci_low": 0.396,
-   "ci_high": 0.482,
+   "mean": 0.41,
+   "ci_low": 0.368,
+   "ci_high": 0.45404999999999973,
    "n": 500
   },
   {
@@ -693,9 +693,9 @@
    "model": "gemma3:latest",
    "method": "Reranker top-3",
    "metric": "accuracy",
-   "mean": 0.42,
-   "ci_low": 0.37795,
-   "ci_high": 0.464,
+   "mean": 0.392,
+   "ci_low": 0.35,
+   "ci_high": 0.434,
    "n": 500
   },
   {
@@ -743,9 +743,9 @@
    "model": "gemma3:latest",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.42,
-   "ci_low": 0.378,
-   "ci_high": 0.46204999999999974,
+   "mean": 0.39,
+   "ci_low": 0.348,
+   "ci_high": 0.432,
    "n": 500
   },
   {
@@ -793,9 +793,9 @@
    "model": "gemma3:latest",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.342,
-   "ci_low": 0.3,
-   "ci_high": 0.384,
+   "mean": 0.31,
+   "ci_low": 0.27,
+   "ci_high": 0.352,
    "n": 500
   },
   {
@@ -843,9 +843,9 @@
    "model": "gemma3:latest",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.418,
-   "ci_low": 0.378,
-   "ci_high": 0.462,
+   "mean": 0.388,
+   "ci_low": 0.346,
+   "ci_high": 0.43,
    "n": 500
   },
   {
@@ -921,27 +921,27 @@
    "p_value": 0.0670932906709329,
    "hypothesis": "H1",
    "model": "-",
-   "p_holm": 0.386961303869613
+   "p_holm": 0.40255974402559747
   },
   {
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
    "model": "llama3.2:latest",
-   "mean_diff": -0.04,
-   "ci_low": -0.08,
-   "ci_high": -0.002,
-   "p_value": 0.0644935506449355,
+   "mean_diff": -0.038,
+   "ci_low": -0.078,
+   "ci_high": 0.0,
+   "p_value": 0.08259174082591741,
    "hypothesis": "H2",
-   "p_holm": 0.386961303869613
+   "p_holm": 0.4129587041295871
   },
   {
    "comparator": "BM25 top-3",
    "metric": "accuracy",
    "model": "llama3.2:latest",
-   "mean_diff": -0.01,
-   "ci_low": -0.04,
-   "ci_high": 0.018,
-   "p_value": 0.5844415558444156,
+   "mean_diff": -0.008,
+   "ci_low": -0.036,
+   "ci_high": 0.02,
+   "p_value": 0.6852314768523148,
    "hypothesis": "H2",
    "p_holm": 1.0
   },
@@ -949,10 +949,10 @@
    "comparator": "Reranker top-3",
    "metric": "accuracy",
    "model": "llama3.2:latest",
-   "mean_diff": 0.01,
-   "ci_low": -0.028,
-   "ci_high": 0.048,
-   "p_value": 0.6846315368463154,
+   "mean_diff": 0.014,
+   "ci_low": -0.026,
+   "ci_high": 0.05,
+   "p_value": 0.5448455154484552,
    "hypothesis": "H2",
    "p_holm": 1.0
   },
@@ -960,32 +960,32 @@
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
    "model": "gemma3:latest",
-   "mean_diff": -0.052,
-   "ci_low": -0.092,
-   "ci_high": -0.014,
-   "p_value": 0.015998400159984,
+   "mean_diff": -0.068,
+   "ci_low": -0.108,
+   "ci_high": -0.02995000000000027,
+   "p_value": 0.0013998600139986002,
    "hypothesis": "H2",
-   "p_holm": 0.11198880111988802
+   "p_holm": 0.009799020097990201
   },
   {
    "comparator": "BM25 top-3",
    "metric": "accuracy",
    "model": "gemma3:latest",
-   "mean_diff": -0.02,
-   "ci_low": -0.05,
-   "ci_high": 0.01,
-   "p_value": 0.24137586241375864,
+   "mean_diff": -0.022,
+   "ci_low": -0.05005,
+   "ci_high": 0.008,
+   "p_value": 0.18798120187981202,
    "hypothesis": "H2",
-   "p_holm": 0.9655034496550345
+   "p_holm": 0.7519248075192481
   },
   {
    "comparator": "Reranker top-3",
    "metric": "accuracy",
    "model": "gemma3:latest",
-   "mean_diff": -0.002,
-   "ci_low": -0.042,
-   "ci_high": 0.038,
-   "p_value": 1.0,
+   "mean_diff": -0.004,
+   "ci_low": -0.044,
+   "ci_high": 0.036,
+   "p_value": 0.9156084391560844,
    "hypothesis": "H2",
    "p_holm": 1.0
   }
@@ -995,10 +995,10 @@
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
    "model": "llama3.2:latest",
-   "mean_diff": -0.04,
-   "ci_low": -0.08,
-   "ci_high": -0.002,
-   "p_value": 0.0644935506449355,
+   "mean_diff": -0.038,
+   "ci_low": -0.078,
+   "ci_high": 0.0,
+   "p_value": 0.08259174082591741,
    "hypothesis": "H3",
    "margin": -0.05,
    "holds": false
@@ -1007,10 +1007,10 @@
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
    "model": "gemma3:latest",
-   "mean_diff": -0.052,
-   "ci_low": -0.092,
-   "ci_high": -0.014,
-   "p_value": 0.015998400159984,
+   "mean_diff": -0.068,
+   "ci_low": -0.108,
+   "ci_high": -0.02995000000000027,
+   "p_value": 0.0013998600139986002,
    "hypothesis": "H3",
    "margin": -0.05,
    "holds": false
@@ -1061,9 +1061,9 @@
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
    "model": "llama3.2:latest",
-   "mean_diff": 0.06,
+   "mean_diff": 0.058,
    "ci_low": 0.036,
-   "ci_high": 0.084,
+   "ci_high": 0.082,
    "p_value": 9.999000099990002e-05,
    "p_holm": 0.0006999300069993001
   },
@@ -1081,9 +1081,9 @@
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
    "model": "gemma3:latest",
-   "mean_diff": 0.076,
-   "ci_low": 0.05,
-   "ci_high": 0.102,
+   "mean_diff": 0.078,
+   "ci_low": 0.052,
+   "ci_high": 0.104,
    "p_value": 9.999000099990002e-05,
    "p_holm": 0.0006999300069993001
   }

@@ -1,0 +1,29 @@
+panel,model,method,mean,ci_low,ci_high,comparator,mean_diff,p_holm
+f1,-,Vanilla RAG,0.3346666666666666,0.3333333333333333,0.3373333333333334,,,
+f1,-,BM25 top-3,0.6396000000000001,0.6216000000000002,0.6584,,,
+f1,-,Reranker top-3,0.6476000000000002,0.6296000000000002,0.6652,,,
+f1,-,CAS w/o graph,0.68,0.6608567857142857,0.6990657142857143,,,
+f1,-,CAS-keyword,0.6140500721500721,0.5950838275613276,0.6334372979797979,,,
+f1,-,CAS-NLI penalty,0.5569476190476191,0.5297904761904761,0.584642380952381,,,
+f1,-,CAS-NLI preserve,0.6686301587301586,0.6501245634920635,0.687335119047619,,,
+accuracy,llama3.2:latest,Vanilla RAG,0.502,0.458,0.546,,,
+accuracy,gemma3:latest,Vanilla RAG,0.456,0.412,0.4980499999999997,,,
+accuracy,llama3.2:latest,BM25 top-3,0.472,0.42795,0.512,,,
+accuracy,gemma3:latest,BM25 top-3,0.41,0.368,0.45404999999999973,,,
+accuracy,llama3.2:latest,Reranker top-3,0.45,0.406,0.492,,,
+accuracy,gemma3:latest,Reranker top-3,0.392,0.35,0.434,,,
+accuracy,llama3.2:latest,CAS w/o graph,0.466,0.422,0.508,,,
+accuracy,gemma3:latest,CAS w/o graph,0.39,0.348,0.432,,,
+accuracy,llama3.2:latest,CAS-NLI penalty,0.406,0.362,0.452,,,
+accuracy,gemma3:latest,CAS-NLI penalty,0.31,0.27,0.352,,,
+accuracy,llama3.2:latest,CAS-NLI preserve,0.464,0.42,0.508,,,
+accuracy,gemma3:latest,CAS-NLI preserve,0.388,0.346,0.43,,,
+H1,-,,,0.3155053571428571,0.35300317460317454,Vanilla RAG,0.333963492063492,0.0008999100089991002
+H1,-,,,0.015523650793650761,0.04308960317460314,BM25 top-3,0.029030158730158698,0.0015998400159984002
+H1,-,,,-0.0010650396825397127,0.043163809523809486,Reranker top-3,0.021030158730158698,0.40255974402559747
+H2,llama3.2:latest,,,-0.078,0.0,Vanilla RAG,-0.038,0.4129587041295871
+H2,llama3.2:latest,,,-0.036,0.02,BM25 top-3,-0.008,1.0
+H2,llama3.2:latest,,,-0.026,0.05,Reranker top-3,0.014,1.0
+H2,gemma3:latest,,,-0.108,-0.02995000000000027,Vanilla RAG,-0.068,0.009799020097990201
+H2,gemma3:latest,,,-0.05005,0.008,BM25 top-3,-0.022,0.7519248075192481
+H2,gemma3:latest,,,-0.044,0.036,Reranker top-3,-0.004,1.0

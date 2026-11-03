@@ -25,7 +25,7 @@ import time
 from collections import defaultdict
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from run_evaluation import OUT_RESULTS, bm25_scores, load, nli_verifier, sentences, tokens  # noqa: E402
+from run_evaluation import OUT_RESULTS, bm25_scores, has_phrase, load, nli_verifier, sentences, tokens  # noqa: E402
 from run_llm_generation import normalize, token_f1  # noqa: E402
 from services.nli_model_verifier import NLIModelVerifier  # noqa: E402
 
@@ -182,7 +182,7 @@ def evaluate_qa(model_name, cache, sigma):
             spans, poison = c["spans"], set(it["poison"])
             bearing = {i for i, s in enumerate(spans) if s["text"] and s["score"] >= sigma}
             clean = [i for i in bearing if i not in poison]
-            gold = [i for i in clean if normalize(it["answer"]) in normalize(spans[i]["text"])
+            gold = [i for i in clean if has_phrase(normalize(spans[i]["text"]), normalize(it["answer"]))
                     or token_f1(spans[i]["text"], it["answer"]) >= 0.5]
             hit += any(differ(spans[g]["text"], spans[p]["text"]) for g in gold for p in bearing & poison)
             fa += any(differ(spans[i]["text"], spans[j]["text"]) for i in clean for j in clean if i < j)
@@ -219,6 +219,9 @@ def main():
         json.dump(result, f, indent=1)
     for name in ("current_cas_detector", "chosen_nli", "chosen_answer_level"):
         r = result[name]
+        if r is None:
+            print(f"{name:<22} no setting meets the rule ({result['selection_rule']})")
+            continue
         print(f"{name:<22} S1 recall {r['s1_recall']:.3f} FA {r['s1_false_alarm']:.3f} | "
               f"S2 recall {r['s2_recall']:.3f} FA {r['s2_false_alarm']:.3f} | wiki {r['wiki_recall']:.3f} | "
               f"{r['s1_sec_per_query']:.2f} s/query  {r}")

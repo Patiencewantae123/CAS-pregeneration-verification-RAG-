@@ -22,7 +22,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_evaluation import (METHODS, OUT_RESULTS, REFERENCES, boot_ci, cas_preserving,  # noqa: E402
-                            cas_preserving_cv, evidence_items, load, paired_test, tokens)
+                            cas_preserving_cv, evidence_items, has_phrase, holm, load, paired_test, tokens)
 
 OLLAMA = "http://localhost:11434/api/generate"
 OPTIONS = {"temperature": 0, "seed": 42, "num_ctx": 8192, "num_predict": 96}
@@ -54,7 +54,10 @@ def load_cache():
     if os.path.exists(CACHE):
         with open(CACHE, encoding="utf-8") as f:
             for line in f:
-                r = json.loads(line)
+                try:
+                    r = json.loads(line)
+                except json.JSONDecodeError:   # a line cut short by an interrupted write; it is regenerated
+                    continue
                 cache[r["key"]] = r
     return cache
 
@@ -129,7 +132,8 @@ def score_qa(response, golds, context):
     abstain = bool(ABSTAIN.search(pred))
     em = max(float(normalize(pred) == normalize(g)) for g in golds)
     f1 = max(token_f1(pred, g) for g in golds)
-    acc = max(float(normalize(g) != "" and normalize(g) in normalize(pred)) for g in golds)
+    # Whole-word match ('no' is not in 'unknown'); an abstention is never correct
+    acc = 0.0 if abstain else max(float(has_phrase(normalize(pred), normalize(g))) for g in golds)
     # Ungrounded: a non-abstaining, non yes/no answer whose content tokens are mostly absent from the context
     ans_tokens = tokens(pred)
     ctx = set(tokens(context))
@@ -149,8 +153,9 @@ def mentions(response, answer):
 
 def score_conflict(response, a1, a2):
     m1, m2 = mentions(response, a1), mentions(response, a2)
-    flagged = bool(re.search(r"disagree|conflict|contradict|differ|inconsistent|however|whereas|"
-                             r"one passage|another passage|passage \[?\d", response, re.I))
+    # Explicit conflict language only: a bare citation such as "Passage [1] states ..." or a "however" is not a flag
+    flagged = bool(re.search(r"disagree|conflict|contradict|differ|inconsistent|whereas|"
+                             r"one passage|another passage", response, re.I))
     if m1 and m2:
         outcome = "both answers"
     elif m1 or m2:
@@ -189,7 +194,8 @@ def conflict_tasks(limit):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--models", nargs="+", default=["llama3.2:latest", "gemma3:latest"])
+    # The summary is rebuilt from the models given here, so the default is every model in the reported results
+    ap.add_argument("--models", nargs="+", default=["llama3.2:latest", "gemma3:latest", "llama3.1:8b"])
     ap.add_argument("--limit", type=int, default=10 ** 6)
     args = ap.parse_args()
     sys.stdout.reconfigure(encoding="utf-8", line_buffering=True)
@@ -274,11 +280,7 @@ def summarize(rows, conflict_rows, models):
                 tests.append({"dataset": "WikiContradict", "model": model, "reference": ref,
                               "comparator": "Vanilla RAG (no filter)", "metric": metric,
                               "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
-    order = sorted(range(len(tests)), key=lambda i: tests[i]["p_value"])
-    running = 0.0
-    for rank, i in enumerate(order):
-        running = max(running, min(1.0, (len(tests) - rank) * tests[i]["p_value"]))
-        tests[i]["p_holm"] = running
+    holm(tests)
 
     conflict_summary = []
     for model in models:

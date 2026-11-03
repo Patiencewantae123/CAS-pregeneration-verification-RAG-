@@ -35,21 +35,21 @@ b,abstain,llama3.1:8b,CAS-NLI θ-CV (penalty),0.38461538461538464,0.276923076923
 b,abstain,llama3.2:latest,CAS-NLI θ-CV preserving,0.2,0.1076923076923077,0.2923076923076923,65
 b,abstain,gemma3:latest,CAS-NLI θ-CV preserving,0.2923076923076923,0.18461538461538463,0.4,65
 b,abstain,llama3.1:8b,CAS-NLI θ-CV preserving,0.2923076923076923,0.18461538461538463,0.4,65
-c,conflict_flagged,llama3.2:latest,Vanilla RAG (no filter),0.48,0.34,0.62,50
-c,conflict_flagged,gemma3:latest,Vanilla RAG (no filter),0.7,0.58,0.82,50
-c,conflict_flagged,llama3.1:8b,Vanilla RAG (no filter),0.8,0.68,0.9,50
-c,conflict_flagged,llama3.2:latest,Relevance top-3 (BM25),0.48,0.34,0.62,50
-c,conflict_flagged,gemma3:latest,Relevance top-3 (BM25),0.7,0.58,0.82,50
-c,conflict_flagged,llama3.1:8b,Relevance top-3 (BM25),0.8,0.68,0.9,50
-c,conflict_flagged,llama3.2:latest,CAS (full pipeline),0.3,0.18,0.44,50
-c,conflict_flagged,gemma3:latest,CAS (full pipeline),0.42,0.28,0.56,50
-c,conflict_flagged,llama3.1:8b,CAS (full pipeline),0.64,0.5,0.7604999999999973,50
-c,conflict_flagged,llama3.2:latest,CAS-NLI (full pipeline),0.2,0.1,0.32,50
-c,conflict_flagged,gemma3:latest,CAS-NLI (full pipeline),0.6,0.46,0.74,50
-c,conflict_flagged,llama3.1:8b,CAS-NLI (full pipeline),0.28,0.16,0.4,50
-c,conflict_flagged,llama3.2:latest,CAS-NLI θ-CV (penalty),0.26,0.14,0.38,50
-c,conflict_flagged,gemma3:latest,CAS-NLI θ-CV (penalty),0.38,0.24,0.52,50
-c,conflict_flagged,llama3.1:8b,CAS-NLI θ-CV (penalty),0.48,0.34,0.62,50
-c,conflict_flagged,llama3.2:latest,CAS-NLI θ-CV preserving,0.32,0.2,0.46,50
-c,conflict_flagged,gemma3:latest,CAS-NLI θ-CV preserving,0.34,0.21950000000000003,0.48,50
-c,conflict_flagged,llama3.1:8b,CAS-NLI θ-CV preserving,0.58,0.44,0.72,50
+c,conflict_flagged,llama3.2:latest,Vanilla RAG (no filter),0.22,0.1,0.34,50
+c,conflict_flagged,gemma3:latest,Vanilla RAG (no filter),0.32,0.2,0.46,50
+c,conflict_flagged,llama3.1:8b,Vanilla RAG (no filter),0.28,0.16,0.4,50
+c,conflict_flagged,llama3.2:latest,Relevance top-3 (BM25),0.22,0.1,0.34,50
+c,conflict_flagged,gemma3:latest,Relevance top-3 (BM25),0.32,0.2,0.46,50
+c,conflict_flagged,llama3.1:8b,Relevance top-3 (BM25),0.28,0.16,0.4,50
+c,conflict_flagged,llama3.2:latest,CAS (full pipeline),0.1,0.02,0.2,50
+c,conflict_flagged,gemma3:latest,CAS (full pipeline),0.18,0.08,0.3,50
+c,conflict_flagged,llama3.1:8b,CAS (full pipeline),0.18,0.08,0.3,50
+c,conflict_flagged,llama3.2:latest,CAS-NLI (full pipeline),0.04,0.0,0.1,50
+c,conflict_flagged,gemma3:latest,CAS-NLI (full pipeline),0.52,0.38,0.66,50
+c,conflict_flagged,llama3.1:8b,CAS-NLI (full pipeline),0.04,0.0,0.1,50
+c,conflict_flagged,llama3.2:latest,CAS-NLI θ-CV (penalty),0.08,0.02,0.16,50
+c,conflict_flagged,gemma3:latest,CAS-NLI θ-CV (penalty),0.26,0.14,0.38,50
+c,conflict_flagged,llama3.1:8b,CAS-NLI θ-CV (penalty),0.1,0.02,0.18,50
+c,conflict_flagged,llama3.2:latest,CAS-NLI θ-CV preserving,0.14,0.06,0.24,50
+c,conflict_flagged,gemma3:latest,CAS-NLI θ-CV preserving,0.22,0.1,0.34,50
+c,conflict_flagged,llama3.1:8b,CAS-NLI θ-CV preserving,0.16,0.06,0.26,50

@@ -6,7 +6,10 @@ conflictbank_hf_samples.json,JSONL,50,Not used (see notes)
 fever.json,JSON,2,Not used (see notes)
 halueval.json,JSON,1,Not used (see notes)
 hotpotqa.json,JSON,10,Not used (see notes)
+hotpotqa_clean500.json,JSON,500,Not used (see notes)
 hotpotqa_hf_samples.json,JSONL,50,Evidence selection; consistent-pair negatives
+hotpotqa_poison.json,JSON,200,Not used (see notes)
+hotpotqa_poison2.json,JSON,200,Not used (see notes)
 merged_cleaned_dataset.json,JSON,48,Not used (see notes)
 multinli.json,JSON,20,3-way NLI; contradiction detection
 musique.json,JSON,20,Evidence selection

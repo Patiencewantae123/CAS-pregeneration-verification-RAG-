@@ -1,6 +1,7 @@
 import hashlib
 import json
 import os
+import threading
 import time
 from typing import Dict, List, Tuple
 
@@ -21,6 +22,8 @@ class NLIModelVerifier:
     measured inference time, so repeated evaluations are cheap and the model cost is still reportable.
     """
 
+    _write_lock = threading.Lock()   # one writer at a time, e.g. several Streamlit sessions sharing a cache file
+
     def __init__(self, model_name: str = "cross-encoder/nli-deberta-v3-base",
                  cache_path: str = None, batch_size: int = 16, model=None,
                  contradiction_threshold: float = None):
@@ -33,6 +36,7 @@ class NLIModelVerifier:
         self.batch_size = batch_size
         self._model = model
         self._labels = None
+        self._base = None   # set on threshold views, which load the model through the verifier they came from
         if model is not None:
             config = model.model.config
             self._labels = [config.id2label[i].lower() for i in range(len(config.id2label))]
@@ -40,11 +44,17 @@ class NLIModelVerifier:
         if cache_path and os.path.exists(cache_path):
             with open(cache_path, encoding="utf-8") as f:
                 for line in f:
-                    rec = json.loads(line)
+                    try:
+                        rec = json.loads(line)
+                    except json.JSONDecodeError:   # a line cut short by an interrupted write; it is recomputed
+                        continue
                     self.cache[rec["key"]] = rec
 
     def _load(self):
-        if self._model is None:
+        if self._base is not None:
+            self._base._load()
+            self._model, self._labels = self._base._model, self._base._labels
+        elif self._model is None:
             from sentence_transformers import CrossEncoder
             self._model = CrossEncoder(self.model_name, device="cpu")
             self._labels = [self._model.model.config.id2label[i].lower()
@@ -74,9 +84,11 @@ class NLIModelVerifier:
                     self.cache[k] = rec
                     new.append(rec)
             if self.cache_path:
-                with open(self.cache_path, "a", encoding="utf-8") as f:
-                    for rec in new:
-                        f.write(json.dumps(rec) + "\n")
+                try:
+                    with self._write_lock, open(self.cache_path, "a", encoding="utf-8") as f:
+                        f.write("".join(json.dumps(rec) + "\n" for rec in new))
+                except OSError:   # read-only location: keep the predictions in memory only
+                    pass
         return [self.cache[k]["probs"] for k in keys]
 
     def inference_seconds(self, pairs: List[Tuple[str, str]]) -> float:
@@ -96,6 +108,7 @@ class NLIModelVerifier:
         view = NLIModelVerifier.__new__(NLIModelVerifier)
         view.__dict__.update(self.__dict__)
         view.contradiction_threshold = contradiction_threshold
+        view._base = self._base or self   # so a model loaded by any view is loaded once, on the base verifier
         return view
 
     def compare_documents(self, doc_a: Document, doc_b: Document) -> NLIEdge:

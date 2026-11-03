@@ -43,15 +43,27 @@ def main():
     rng.shuffle(rows)
     df = pd.DataFrame(rows)
     df.insert(0, "row", range(1, len(df) + 1))
-    sheet = df[["row", "question", "reference_answer", "fake_answer", "model_answer"]].copy()
-    sheet["correct (1/0)"] = ""
-    sheet["abstains (1/0)"] = ""
-    sheet["gives_fake_answer (1/0, poison rows only)"] = ""
-    sheet["notes"] = ""
-    sheet.to_csv(os.path.join(HERE, "annotation_sheet.csv"), index=False, encoding="utf-8-sig")
+    shown = ["row", "question", "reference_answer", "fake_answer", "model_answer"]
+    labels = ["correct (1/0)", "abstains (1/0)", "gives_fake_answer (1/0, poison rows only)"]
+    sheet_path = os.path.join(HERE, "annotation_sheet.csv")
+    write_sheet = True
+    if os.path.exists(sheet_path):
+        old = pd.read_csv(sheet_path, encoding="utf-8-sig")
+        if old[labels].notna().any().any():
+            # Never overwrite human labels: refresh only the key, and only if it still describes the same rows
+            same = old[shown].fillna("").astype(str).equals(df[shown].fillna("").astype(str))
+            if not same:
+                raise SystemExit("annotation_sheet.csv already holds labels for a different sample; nothing written")
+            write_sheet = False
+    if write_sheet:
+        sheet = df[shown].copy()
+        for col in labels + ["notes"]:
+            sheet[col] = ""
+        sheet.to_csv(sheet_path, index=False, encoding="utf-8-sig")
     df[["row", "source", "model", "method", "auto_accuracy", "auto_abstain", "auto_adoption"]].to_csv(
         os.path.join(HERE, "annotation_key.csv"), index=False, encoding="utf-8")
-    print(f"wrote {len(df)} rows ({N_CLEAN} clean, {N_POISON} poison)")
+    print(f"{'wrote' if write_sheet else 'kept the labelled sheet and refreshed the key for'} {len(df)} rows "
+          f"({N_CLEAN} clean, {N_POISON} poison)")
 
 
 if __name__ == "__main__":

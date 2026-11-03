@@ -147,11 +147,11 @@ llama3.2:latest,A,Vanilla RAG,5ab833ad5542990e739ec86f,Necaxa,0.0,0.0,0.0,0.0,0.
 llama3.2:latest,A,Vanilla RAG,5abce9ca554299114383a193,Lawyer,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,11,0,1433,10.024942099997133,Lawyer
 llama3.2:latest,A,Vanilla RAG,5ae18ae6554299234fd04289,1917,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1091,7.644829299999401,1917
 llama3.2:latest,A,Vanilla RAG,5ab78edc5542995dae37e95c,"Olathe, Kansas",0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1505,10.964704700003495,"Olathe, Kansas"
-llama3.2:latest,A,Vanilla RAG,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1734,13.16748770000413,Musician/Singer/Songwriter
+llama3.2:latest,A,Vanilla RAG,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1734,13.16748770000413,Musician/Singer/Songwriter
 llama3.2:latest,A,Vanilla RAG,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1508,10.629962600003637,United States
 llama3.2:latest,A,Vanilla RAG,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1668,12.358549399999902,Randall Boggs
 llama3.2:latest,A,Vanilla RAG,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1926,14.517574199999217,John Faso
-llama3.2:latest,A,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1761,12.73891939999885,Russian
+llama3.2:latest,A,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1761,12.73891939999885,Russian
 llama3.2:latest,A,Vanilla RAG,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,2108,15.728361699999368,Obsession
 llama3.2:latest,A,Vanilla RAG,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1868,13.571781799997552,Betty Friedan
 llama3.2:latest,A,Vanilla RAG,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1419,10.010293899998942,Emmitt Ford
@@ -218,7 +218,7 @@ llama3.2:latest,A,BM25 top-3,5a88f0d455429946c8d6e8dc,Wayne County,0.0,0.5,0.0,0
 llama3.2:latest,A,BM25 top-3,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,288,1.6814902000041911,247 Cherry
 llama3.2:latest,A,BM25 top-3,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,260,1.50401260000217,20 miles
 llama3.2:latest,A,BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,417,2.686906100003398,New Jewel Movement
-llama3.2:latest,A,BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,A,BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,A,BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,521,3.337149600003613,CBS News
 llama3.2:latest,A,BM25 top-3,5ac13f425542991316484a96,Louisville International Airport.,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,434,2.89044229999854,Louisville International Airport.
 llama3.2:latest,A,BM25 top-3,5a8de4595542995085b37348,"The prefix is ""The"".",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,401,2.7533938999986276,"The prefix is ""The""."
@@ -351,7 +351,7 @@ llama3.2:latest,A,BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,0
 llama3.2:latest,A,BM25 top-3,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,374,2.229202999995323,England
 llama3.2:latest,A,BM25 top-3,5a8a5dd055429970aeb702c7,Magic Band,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,523,3.3109170999960043,Magic Band
 llama3.2:latest,A,BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,418,2.7081863000057638,John Faso
-llama3.2:latest,A,BM25 top-3,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,599,3.740602300000319,Russian
+llama3.2:latest,A,BM25 top-3,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,599,3.740602300000319,Russian
 llama3.2:latest,A,BM25 top-3,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,388,2.3547120000002906,Obsession
 llama3.2:latest,A,BM25 top-3,5ac24cea55429951e9e6853a,Starlite,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,386,2.3383736000032513,Starlite
 llama3.2:latest,A,BM25 top-3,5ab2861b554299449642c8df,Ophelia Ford,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,3,0,313,1.9979519999978947,Ophelia Ford
@@ -418,7 +418,7 @@ llama3.2:latest,A,CAS w/o graph,5a88f0d455429946c8d6e8dc,Warren,0.0,0.0,0.0,0.0,
 llama3.2:latest,A,CAS w/o graph,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,288,1.6814902000041911,247 Cherry
 llama3.2:latest,A,CAS w/o graph,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,392,2.436903900001198,20 miles
 llama3.2:latest,A,CAS w/o graph,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,417,2.686906100003398,New Jewel Movement
-llama3.2:latest,A,CAS w/o graph,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,A,CAS w/o graph,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,A,CAS w/o graph,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,A,CAS w/o graph,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,812,5.478441200000816,Louisville International Airport
 llama3.2:latest,A,CAS w/o graph,5a8de4595542995085b37348,Male,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,195,1.0234454000019468,Male
@@ -551,7 +551,7 @@ llama3.2:latest,A,CAS w/o graph,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0
 llama3.2:latest,A,CAS w/o graph,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,374,2.229202999995323,England
 llama3.2:latest,A,CAS w/o graph,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,1033,7.062522200001695,Randall Boggs
 llama3.2:latest,A,CAS w/o graph,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,464,1.999144300003536,John Faso
-llama3.2:latest,A,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1,0,261,0.7096944000004441,Russian
+llama3.2:latest,A,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,261,0.7096944000004441,Russian
 llama3.2:latest,A,CAS w/o graph,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,388,2.3547120000002906,Obsession
 llama3.2:latest,A,CAS w/o graph,5ac24cea55429951e9e6853a,Starlite,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,656,3.5219060000017635,Starlite
 llama3.2:latest,A,CAS w/o graph,5ab2861b554299449642c8df,John Ford,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,4,0,415,1.7922668000028352,John Ford
@@ -618,7 +618,7 @@ llama3.2:latest,A,CAS-keyword,5a88f0d455429946c8d6e8dc,Macomb,0.0,0.666666666666
 llama3.2:latest,A,CAS-keyword,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,7,0,917,6.009218899998814,247 Cherry
 llama3.2:latest,A,CAS-keyword,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,392,2.436903900001198,20 miles
 llama3.2:latest,A,CAS-keyword,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,417,2.686906100003398,New Jewel Movement
-llama3.2:latest,A,CAS-keyword,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,A,CAS-keyword,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,A,CAS-keyword,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,707,3.1566917000018293,CBS News
 llama3.2:latest,A,CAS-keyword,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,812,5.478441200000816,Louisville International Airport
 llama3.2:latest,A,CAS-keyword,5a8de4595542995085b37348,Male,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,195,1.0234454000019468,Male
@@ -751,7 +751,7 @@ llama3.2:latest,A,CAS-keyword,5abe731255429965af743f0e,Singer and songwriter.,0.
 llama3.2:latest,A,CAS-keyword,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,7,0,817,5.314550600000075,United States
 llama3.2:latest,A,CAS-keyword,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,1033,7.062522200001695,Randall Boggs
 llama3.2:latest,A,CAS-keyword,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,550,3.4967680999980075,John Faso
-llama3.2:latest,A,CAS-keyword,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,7,0,1224,8.297513600002276,Russian
+llama3.2:latest,A,CAS-keyword,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7,0,1224,8.297513600002276,Russian
 llama3.2:latest,A,CAS-keyword,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,388,2.3547120000002906,Obsession
 llama3.2:latest,A,CAS-keyword,5ac24cea55429951e9e6853a,Starlite,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,656,3.5219060000017635,Starlite
 llama3.2:latest,A,CAS-keyword,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,553,3.5612215000001015,Emmitt Ford
@@ -818,7 +818,7 @@ llama3.2:latest,A,CAS-NLI penalty,5a88f0d455429946c8d6e8dc,Macomb,0.0,0.66666666
 llama3.2:latest,A,CAS-NLI penalty,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,288,1.6814902000041911,247 Cherry
 llama3.2:latest,A,CAS-NLI penalty,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,392,2.436903900001198,20 miles
 llama3.2:latest,A,CAS-NLI penalty,5ab840e255429934fafe6d3b,Black Liberation Movement.,0.0,0.3333333333333333,0.0,0.0,1.0,0.0,0.0,0.0,1,0,166,0.9663761999981944,Black Liberation Movement.
-llama3.2:latest,A,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,A,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,A,CAS-NLI penalty,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,A,CAS-NLI penalty,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,812,5.478441200000816,Louisville International Airport
 llama3.2:latest,A,CAS-NLI penalty,5a8de4595542995085b37348,Male,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,195,1.0234454000019468,Male
@@ -1018,7 +1018,7 @@ llama3.2:latest,A,CAS-NLI preserve,5a88f0d455429946c8d6e8dc,Macomb,0.0,0.6666666
 llama3.2:latest,A,CAS-NLI preserve,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,288,1.6814902000041911,247 Cherry
 llama3.2:latest,A,CAS-NLI preserve,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,392,2.436903900001198,20 miles
 llama3.2:latest,A,CAS-NLI preserve,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,417,2.686906100003398,New Jewel Movement
-llama3.2:latest,A,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,A,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,A,CAS-NLI preserve,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,A,CAS-NLI preserve,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,812,5.478441200000816,Louisville International Airport
 llama3.2:latest,A,CAS-NLI preserve,5a8de4595542995085b37348,Male,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,195,1.0234454000019468,Male
@@ -1151,7 +1151,7 @@ llama3.2:latest,A,CAS-NLI preserve,5abe731255429965af743f0e,Musician,1.0,1.0,1.0
 llama3.2:latest,A,CAS-NLI preserve,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,7,0,817,5.314550600000075,United States
 llama3.2:latest,A,CAS-NLI preserve,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,1033,7.062522200001695,Randall Boggs
 llama3.2:latest,A,CAS-NLI preserve,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,464,1.999144300003536,John Faso
-llama3.2:latest,A,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1,0,261,0.7096944000004441,Russian
+llama3.2:latest,A,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,261,0.7096944000004441,Russian
 llama3.2:latest,A,CAS-NLI preserve,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,388,2.3547120000002906,Obsession
 llama3.2:latest,A,CAS-NLI preserve,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,5,892,6.014108600000327,Betty Friedan
 llama3.2:latest,A,CAS-NLI preserve,5ab2861b554299449642c8df,John Ford,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,4,0,415,1.7922668000028352,John Ford
@@ -1347,11 +1347,11 @@ llama3.2:latest,B,Vanilla RAG,5ab833ad5542990e739ec86f,Necaxa,0.0,0.0,0.0,0.0,0.
 llama3.2:latest,B,Vanilla RAG,5abce9ca554299114383a193,Lawyer,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,11,0,1433,10.024942099997133,Lawyer
 llama3.2:latest,B,Vanilla RAG,5ae18ae6554299234fd04289,1917,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1091,7.644829299999401,1917
 llama3.2:latest,B,Vanilla RAG,5ab78edc5542995dae37e95c,"Olathe, Kansas",0.0,0.6666666666666666,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1505,10.964704700003495,"Olathe, Kansas"
-llama3.2:latest,B,Vanilla RAG,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1734,13.16748770000413,Musician/Singer/Songwriter
+llama3.2:latest,B,Vanilla RAG,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1734,13.16748770000413,Musician/Singer/Songwriter
 llama3.2:latest,B,Vanilla RAG,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1508,10.629962600003637,United States
 llama3.2:latest,B,Vanilla RAG,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1668,12.358549399999902,Randall Boggs
 llama3.2:latest,B,Vanilla RAG,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1926,14.517574199999217,John Faso
-llama3.2:latest,B,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1761,12.73891939999885,Russian
+llama3.2:latest,B,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1761,12.73891939999885,Russian
 llama3.2:latest,B,Vanilla RAG,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,2108,15.728361699999368,Obsession
 llama3.2:latest,B,Vanilla RAG,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1868,13.571781799997552,Betty Friedan
 llama3.2:latest,B,Vanilla RAG,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1419,10.010293899998942,Emmitt Ford
@@ -1418,7 +1418,7 @@ llama3.2:latest,B,BM25 top-3,5a88f0d455429946c8d6e8dc,Wayne County,0.0,0.5,0.0,0
 llama3.2:latest,B,BM25 top-3,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,288,1.6814902000041911,247 Cherry
 llama3.2:latest,B,BM25 top-3,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,3,0,260,1.50401260000217,20 miles
 llama3.2:latest,B,BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,417,2.686906100003398,New Jewel Movement
-llama3.2:latest,B,BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,B,BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,B,BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,521,3.337149600003613,CBS News
 llama3.2:latest,B,BM25 top-3,5ac13f425542991316484a96,Louisville International Airport.,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,434,2.89044229999854,Louisville International Airport.
 llama3.2:latest,B,BM25 top-3,5a8de4595542995085b37348,"The prefix is ""The"".",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,401,2.7533938999986276,"The prefix is ""The""."
@@ -1551,7 +1551,7 @@ llama3.2:latest,B,BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,0
 llama3.2:latest,B,BM25 top-3,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,374,2.229202999995323,England
 llama3.2:latest,B,BM25 top-3,5a8a5dd055429970aeb702c7,Magic Band,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,3,0,523,3.3109170999960043,Magic Band
 llama3.2:latest,B,BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,418,2.7081863000057638,John Faso
-llama3.2:latest,B,BM25 top-3,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,599,3.740602300000319,Russian
+llama3.2:latest,B,BM25 top-3,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,599,3.740602300000319,Russian
 llama3.2:latest,B,BM25 top-3,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,388,2.3547120000002906,Obsession
 llama3.2:latest,B,BM25 top-3,5ac24cea55429951e9e6853a,Starlite,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,386,2.3383736000032513,Starlite
 llama3.2:latest,B,BM25 top-3,5ab2861b554299449642c8df,Ophelia Ford,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,3,0,313,1.9979519999978947,Ophelia Ford
@@ -1618,7 +1618,7 @@ llama3.2:latest,B,Provenance + BM25 top-3,5a88f0d455429946c8d6e8dc,Wayne County,
 llama3.2:latest,B,Provenance + BM25 top-3,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,427,2.667316999999457,13-3
 llama3.2:latest,B,Provenance + BM25 top-3,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,358,2.1148503000003984,7 miles
 llama3.2:latest,B,Provenance + BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,420,2.738576000003377,New Jewel Movement
-llama3.2:latest,B,Provenance + BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,B,Provenance + BM25 top-3,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,B,Provenance + BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,445,2.76869550000265,CBS News
 llama3.2:latest,B,Provenance + BM25 top-3,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,463,3.009884000006423,Louisville International Airport
 llama3.2:latest,B,Provenance + BM25 top-3,5a8de4595542995085b37348,The,0.0,0.0,0.0,0.0,,0.0,0.0,0.0,3,0,528,3.2631578000000445,The
@@ -1714,7 +1714,7 @@ llama3.2:latest,B,Provenance + BM25 top-3,5ab4bea15542990594ba9cae,Dublin,1.0,1.
 llama3.2:latest,B,Provenance + BM25 top-3,5abeb7eb5542993fe9a41d1f,American,1.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,3,0,442,2.7218576000013854,American
 llama3.2:latest,B,Provenance + BM25 top-3,5a8463545542990548d0b2a3,Unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,399,2.3703982000006363,Unknown
 llama3.2:latest,B,Provenance + BM25 top-3,5a81624d5542995ce29dcbf1,Conservative.,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,832,5.553178599999228,Conservative.
-llama3.2:latest,B,Provenance + BM25 top-3,5ade3b925542992fa25da70a,Jacklynwood,0.0,0.0,1.0,0.0,1.0,0.0,0.0,1.0,3,0,499,2.7713905000055092,Jacklynwood
+llama3.2:latest,B,Provenance + BM25 top-3,5ade3b925542992fa25da70a,Jacklynwood,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,499,2.7713905000055092,Jacklynwood
 llama3.2:latest,B,Provenance + BM25 top-3,5a7747e15542994aec3b7266,Lonestar,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,521,3.3202144999959273,Lonestar
 llama3.2:latest,B,Provenance + BM25 top-3,5ae6795855429908198fa5e4,16th Street and Georgetown Road.,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,345,1.8872456000026432,16th Street and Georgetown Road.
 llama3.2:latest,B,Provenance + BM25 top-3,5adcfc135542990d50227d87,Captain Beefheart & His Magic Band,0.0,0.5714285714285715,1.0,0.0,0.0,0.0,0.0,1.0,3,0,451,3.200799799997185,Captain Beefheart & His Magic Band
@@ -1751,7 +1751,7 @@ llama3.2:latest,B,Provenance + BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0
 llama3.2:latest,B,Provenance + BM25 top-3,5a8b120755429949d91db4a4,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,377,2.193132299995341,unknown
 llama3.2:latest,B,Provenance + BM25 top-3,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,524,3.4325929999977234,Randall Boggs
 llama3.2:latest,B,Provenance + BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,479,3.110381899998174,John Faso
-llama3.2:latest,B,Provenance + BM25 top-3,5a84c6e65542994c784dda48,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,607,3.7459706000008737,unknown
+llama3.2:latest,B,Provenance + BM25 top-3,5a84c6e65542994c784dda48,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,607,3.7459706000008737,unknown
 llama3.2:latest,B,Provenance + BM25 top-3,5a733caa5542992359bc32a3,Squatter,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,439,2.736155900005542,Squatter
 llama3.2:latest,B,Provenance + BM25 top-3,5ac24cea55429951e9e6853a,Kate Millett,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,478,3.025359400002344,Kate Millett
 llama3.2:latest,B,Provenance + BM25 top-3,5ab2861b554299449642c8df,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,452,2.8966003000023193,unknown
@@ -1818,7 +1818,7 @@ llama3.2:latest,B,CAS w/o graph,5a88f0d455429946c8d6e8dc,Warren,0.0,0.0,0.0,0.0,
 llama3.2:latest,B,CAS w/o graph,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,651,3.4678827000025194,247 Cherry
 llama3.2:latest,B,CAS w/o graph,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,5,0,584,3.813786300001084,20 miles
 llama3.2:latest,B,CAS w/o graph,5ab840e255429934fafe6d3b,New Jewel Movement.,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,358,1.7428721000032965,New Jewel Movement.
-llama3.2:latest,B,CAS w/o graph,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,B,CAS w/o graph,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,B,CAS w/o graph,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,B,CAS w/o graph,5ac13f425542991316484a96,Louisville International Airport.,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,7,0,869,6.470874400001776,Louisville International Airport.
 llama3.2:latest,B,CAS w/o graph,5a8de4595542995085b37348,The,0.0,0.0,0.0,0.0,,0.0,0.0,0.0,2,0,302,1.6908123999965028,The
@@ -1951,7 +1951,7 @@ llama3.2:latest,B,CAS w/o graph,5abe731255429965af743f0e,Musician,1.0,1.0,1.0,0.
 llama3.2:latest,B,CAS w/o graph,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,4,0,490,3.0896794000000227,United States
 llama3.2:latest,B,CAS w/o graph,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,1091,7.541443499998422,Randall Boggs
 llama3.2:latest,B,CAS w/o graph,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,754,4.934687599998142,John Faso
-llama3.2:latest,B,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,2,0,427,2.561787300001015,Russian
+llama3.2:latest,B,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0,427,2.561787300001015,Russian
 llama3.2:latest,B,CAS w/o graph,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,619,3.9504375999968033,Obsession
 llama3.2:latest,B,CAS w/o graph,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,822,5.4742078999988735,Betty Friedan
 llama3.2:latest,B,CAS w/o graph,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,451,2.8806784999978845,Emmitt Ford
@@ -2147,11 +2147,11 @@ llama3.2:latest,B,CAS-keyword,5ab833ad5542990e739ec86f,Aguascalientes.,0.0,0.0,0
 llama3.2:latest,B,CAS-keyword,5abce9ca554299114383a193,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,7,0,893,5.80651680000301,unknown
 llama3.2:latest,B,CAS-keyword,5ae18ae6554299234fd04289,1917,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,9,0,905,6.111089500001981,1917
 llama3.2:latest,B,CAS-keyword,5ab78edc5542995dae37e95c,Olathe East High School,0.0,0.25,0.0,0.0,0.0,0.0,0.0,0.0,3,0,507,3.391408399998909,Olathe East High School
-llama3.2:latest,B,CAS-keyword,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1525,11.11871660000179,Musician/Singer/Songwriter
+llama3.2:latest,B,CAS-keyword,5abe731255429965af743f0e,Musician/Singer/Songwriter,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1525,11.11871660000179,Musician/Singer/Songwriter
 llama3.2:latest,B,CAS-keyword,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,6,0,710,4.582886000003782,United States
 llama3.2:latest,B,CAS-keyword,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,1091,7.541443499998422,Randall Boggs
 llama3.2:latest,B,CAS-keyword,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,754,4.934687599998142,John Faso
-llama3.2:latest,B,CAS-keyword,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,6,0,1093,7.457106299996667,Russian
+llama3.2:latest,B,CAS-keyword,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6,0,1093,7.457106299996667,Russian
 llama3.2:latest,B,CAS-keyword,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,619,3.9504375999968033,Obsession
 llama3.2:latest,B,CAS-keyword,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,822,5.4742078999988735,Betty Friedan
 llama3.2:latest,B,CAS-keyword,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,553,3.5612215000001015,Emmitt Ford
@@ -2218,7 +2218,7 @@ llama3.2:latest,B,CAS-NLI penalty,5a88f0d455429946c8d6e8dc,Macomb,0.0,0.66666666
 llama3.2:latest,B,CAS-NLI penalty,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,651,3.4678827000025194,247 Cherry
 llama3.2:latest,B,CAS-NLI penalty,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,5,0,584,3.813786300001084,20 miles
 llama3.2:latest,B,CAS-NLI penalty,5ab840e255429934fafe6d3b,Black Liberation Movement.,0.0,0.3333333333333333,0.0,0.0,1.0,0.0,0.0,0.0,1,0,166,0.9663761999981944,Black Liberation Movement.
-llama3.2:latest,B,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,B,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,B,CAS-NLI penalty,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,B,CAS-NLI penalty,5ac13f425542991316484a96,Louisville International Airport.,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,7,0,869,6.470874400001776,Louisville International Airport.
 llama3.2:latest,B,CAS-NLI penalty,5a8de4595542995085b37348,The Younger,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,374,2.3387772000060068,The Younger
@@ -2418,7 +2418,7 @@ llama3.2:latest,B,CAS-NLI preserve,5a88f0d455429946c8d6e8dc,Macomb,0.0,0.6666666
 llama3.2:latest,B,CAS-NLI preserve,5a90580655429933b8a204ef,247 Cherry,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,5,0,651,3.4678827000025194,247 Cherry
 llama3.2:latest,B,CAS-NLI preserve,5a9068a95542990a98493621,20 miles,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,5,0,584,3.813786300001084,20 miles
 llama3.2:latest,B,CAS-NLI preserve,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,2,513,3.3703366999980062,New Jewel Movement
-llama3.2:latest,B,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,501,3.1061727999986033,London
+llama3.2:latest,B,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,London,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,3,0,501,3.1061727999986033,London
 llama3.2:latest,B,CAS-NLI preserve,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,336,1.9463515000024927,unknown
 llama3.2:latest,B,CAS-NLI preserve,5ac13f425542991316484a96,Louisville International Airport.,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,7,0,869,6.470874400001776,Louisville International Airport.
 llama3.2:latest,B,CAS-NLI preserve,5a8de4595542995085b37348,The Younger,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,374,2.3387772000060068,The Younger
@@ -2551,7 +2551,7 @@ llama3.2:latest,B,CAS-NLI preserve,5abe731255429965af743f0e,Musician,1.0,1.0,1.0
 llama3.2:latest,B,CAS-NLI preserve,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,6,0,710,4.582886000003782,United States
 llama3.2:latest,B,CAS-NLI preserve,5a8a5dd055429970aeb702c7,Randall Boggs,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,1091,7.541443499998422,Randall Boggs
 llama3.2:latest,B,CAS-NLI preserve,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,754,4.934687599998142,John Faso
-llama3.2:latest,B,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,2,1,441,0.9885114999997313,Russian
+llama3.2:latest,B,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,1,441,0.9885114999997313,Russian
 llama3.2:latest,B,CAS-NLI preserve,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,619,3.9504375999968033,Obsession
 llama3.2:latest,B,CAS-NLI preserve,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,5,892,6.014108600000327,Betty Friedan
 llama3.2:latest,B,CAS-NLI preserve,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,451,2.8806784999978845,Emmitt Ford
@@ -2751,7 +2751,7 @@ gemma3:latest,A,Vanilla RAG,5abe731255429965af743f0e,musician,1.0,1.0,1.0,0.0,0.
 gemma3:latest,A,Vanilla RAG,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1563,12.8565987999973,United States
 gemma3:latest,A,Vanilla RAG,5a8a5dd055429970aeb702c7,Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1673,14.25061899999855,Buscemi
 gemma3:latest,A,Vanilla RAG,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12,0,2032,17.07460340000398,William's
-gemma3:latest,A,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1852,15.158046500000637,Russian
+gemma3:latest,A,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1852,15.158046500000637,Russian
 gemma3:latest,A,Vanilla RAG,5a733caa5542992359bc32a3,Battle Sheep,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,2126,17.77568600000086,Battle Sheep
 gemma3:latest,A,Vanilla RAG,5ac24cea55429951e9e6853a,Kate Millett,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1905,15.772741200002201,Kate Millett
 gemma3:latest,A,Vanilla RAG,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1533,12.742249199996877,Emmitt Ford
@@ -2818,7 +2818,7 @@ gemma3:latest,A,BM25 top-3,5a88f0d455429946c8d6e8dc,"Warren, Michigan",0.0,0.0,0
 gemma3:latest,A,BM25 top-3,5a90580655429933b8a204ef,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,307,2.374674300001061,unknown
 gemma3:latest,A,BM25 top-3,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,258,2.1370012999977916,7 miles
 gemma3:latest,A,BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,441,3.7006292000005487,New Jewel Movement
-gemma3:latest,A,BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,A,BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,A,BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,539,4.512068800002453,CBS News
 gemma3:latest,A,BM25 top-3,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,413,3.682627700000012,Louisville International Airport
 gemma3:latest,A,BM25 top-3,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,401,3.4242652999964776,unknown
@@ -2951,7 +2951,7 @@ gemma3:latest,A,BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,0.0
 gemma3:latest,A,BM25 top-3,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,367,3.1429642000002787,England
 gemma3:latest,A,BM25 top-3,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,503,4.2864730000001146,Steve Buscemi
 gemma3:latest,A,BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,442,3.753913399996236,John Faso
-gemma3:latest,A,BM25 top-3,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,620,5.377157699993404,Sergey Sirotkin
+gemma3:latest,A,BM25 top-3,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,620,5.377157699993404,Sergey Sirotkin
 gemma3:latest,A,BM25 top-3,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.3432924000007915,Obsession
 gemma3:latest,A,BM25 top-3,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,3,0,387,3.2862151000008453,Betty Friedan
 gemma3:latest,A,BM25 top-3,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,3,0,328,2.974334099999396,Emmitt Ford
@@ -3018,7 +3018,7 @@ gemma3:latest,A,CAS w/o graph,5a88f0d455429946c8d6e8dc,"Warren, Michigan",0.0,0.
 gemma3:latest,A,CAS w/o graph,5a90580655429933b8a204ef,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,307,2.374674300001061,unknown
 gemma3:latest,A,CAS w/o graph,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,401,3.4508952999967732,7 miles
 gemma3:latest,A,CAS w/o graph,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,441,3.7006292000005487,New Jewel Movement
-gemma3:latest,A,CAS w/o graph,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,A,CAS w/o graph,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,A,CAS w/o graph,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,A,CAS w/o graph,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,783,6.695209099998465,Louisville International Airport
 gemma3:latest,A,CAS w/o graph,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,190,1.6803445999976248,unknown
@@ -3151,7 +3151,7 @@ gemma3:latest,A,CAS w/o graph,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,
 gemma3:latest,A,CAS w/o graph,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,367,3.1429642000002787,England
 gemma3:latest,A,CAS w/o graph,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,1003,8.426582200001576,Steve Buscemi
 gemma3:latest,A,CAS w/o graph,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,490,4.133776900001976,William's
-gemma3:latest,A,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1,0,260,2.210436099994695,Russian
+gemma3:latest,A,CAS w/o graph,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,260,2.210436099994695,Russian
 gemma3:latest,A,CAS w/o graph,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.3432924000007915,Obsession
 gemma3:latest,A,CAS w/o graph,5ac24cea55429951e9e6853a,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,5,0,656,5.210714000000735,unknown
 gemma3:latest,A,CAS w/o graph,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,438,3.7859821999954875,Emmitt Ford
@@ -3218,7 +3218,7 @@ gemma3:latest,A,CAS-keyword,5a88f0d455429946c8d6e8dc,Macomb County,1.0,1.0,1.0,0
 gemma3:latest,A,CAS-keyword,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,7,0,972,8.255980900001305,13-3
 gemma3:latest,A,CAS-keyword,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,401,3.4508952999967732,7 miles
 gemma3:latest,A,CAS-keyword,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,441,3.7006292000005487,New Jewel Movement
-gemma3:latest,A,CAS-keyword,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,A,CAS-keyword,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,A,CAS-keyword,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,4,0,740,6.176335600001039,unknown
 gemma3:latest,A,CAS-keyword,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,783,6.695209099998465,Louisville International Airport
 gemma3:latest,A,CAS-keyword,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,190,1.6803445999976248,unknown
@@ -3289,7 +3289,7 @@ gemma3:latest,A,CAS-keyword,5a7db62d5542997cc2c4747c,Konstanz,0.0,0.0,0.0,0.0,0.
 gemma3:latest,A,CAS-keyword,5ac2b2e2554299218029dafa,NHL,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,3,0,319,2.919161300000269,NHL
 gemma3:latest,A,CAS-keyword,5abb7d8b5542996cc5e4a006,Live Your Life,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,743,6.653317899996182,Live Your Life
 gemma3:latest,A,CAS-keyword,5a731a635542994cef4bc458,The Handmaid’s Tale,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,557,4.982808499997191,The Handmaid’s Tale
-gemma3:latest,A,CAS-keyword,5ab28120554299449642c8cc,Documentary films,0.0,0.5,1.0,0.0,0.0,0.0,1.0,1.0,6,0,462,3.8485414999959175,Documentary films
+gemma3:latest,A,CAS-keyword,5ab28120554299449642c8cc,Documentary films,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,6,0,462,3.8485414999959175,Documentary films
 gemma3:latest,A,CAS-keyword,5ae3287f5542991a06ce993b,2010,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,260,2.5204120999987936,2010
 gemma3:latest,A,CAS-keyword,5abed9435542994516f45457,Tron,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,347,2.8271430999957374,Tron
 gemma3:latest,A,CAS-keyword,5a80f42b55429938b614226c,"December 19, 1998",0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,3,0,344,3.4800367999996524,"December 19, 1998"
@@ -3351,7 +3351,7 @@ gemma3:latest,A,CAS-keyword,5abe731255429965af743f0e,Musician,1.0,1.0,1.0,0.0,0.
 gemma3:latest,A,CAS-keyword,5a8b120755429949d91db4a4,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,7,0,840,6.966362400002254,unknown
 gemma3:latest,A,CAS-keyword,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,1003,8.426582200001576,Steve Buscemi
 gemma3:latest,A,CAS-keyword,5adf076f5542992d7e9f9277,William James Faso,0.0,0.4,0.0,0.0,0.0,0.0,1.0,1.0,5,0,577,4.63715499999671,William James Faso
-gemma3:latest,A,CAS-keyword,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,7,0,1286,10.596428099997866,Sergey Sirotkin
+gemma3:latest,A,CAS-keyword,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,7,0,1286,10.596428099997866,Sergey Sirotkin
 gemma3:latest,A,CAS-keyword,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.3432924000007915,Obsession
 gemma3:latest,A,CAS-keyword,5ac24cea55429951e9e6853a,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,5,0,656,5.210714000000735,unknown
 gemma3:latest,A,CAS-keyword,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,585,4.858829500000866,Emmitt Ford
@@ -3418,7 +3418,7 @@ gemma3:latest,A,CAS-NLI penalty,5a88f0d455429946c8d6e8dc,Macomb County,1.0,1.0,1
 gemma3:latest,A,CAS-NLI penalty,5a90580655429933b8a204ef,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,307,2.374674300001061,unknown
 gemma3:latest,A,CAS-NLI penalty,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,401,3.4508952999967732,7 miles
 gemma3:latest,A,CAS-NLI penalty,5ab840e255429934fafe6d3b,Maurice Bishop,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,160,1.5045792999953846,Maurice Bishop
-gemma3:latest,A,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,A,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,A,CAS-NLI penalty,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,A,CAS-NLI penalty,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,783,6.695209099998465,Louisville International Airport
 gemma3:latest,A,CAS-NLI penalty,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,190,1.6803445999976248,unknown
@@ -3618,7 +3618,7 @@ gemma3:latest,A,CAS-NLI preserve,5a88f0d455429946c8d6e8dc,Macomb County,1.0,1.0,
 gemma3:latest,A,CAS-NLI preserve,5a90580655429933b8a204ef,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,307,2.374674300001061,unknown
 gemma3:latest,A,CAS-NLI preserve,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,401,3.4508952999967732,7 miles
 gemma3:latest,A,CAS-NLI preserve,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,441,3.7006292000005487,New Jewel Movement
-gemma3:latest,A,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,A,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,A,CAS-NLI preserve,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,A,CAS-NLI preserve,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,6,0,783,6.695209099998465,Louisville International Airport
 gemma3:latest,A,CAS-NLI preserve,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,1,0,190,1.6803445999976248,unknown
@@ -3751,7 +3751,7 @@ gemma3:latest,A,CAS-NLI preserve,5abe731255429965af743f0e,Musician,1.0,1.0,1.0,0
 gemma3:latest,A,CAS-NLI preserve,5a8b120755429949d91db4a4,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,7,0,840,6.966362400002254,unknown
 gemma3:latest,A,CAS-NLI preserve,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,1003,8.426582200001576,Steve Buscemi
 gemma3:latest,A,CAS-NLI preserve,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,490,4.133776900001976,William's
-gemma3:latest,A,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,1,0,260,2.210436099994695,Russian
+gemma3:latest,A,CAS-NLI preserve,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,260,2.210436099994695,Russian
 gemma3:latest,A,CAS-NLI preserve,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.3432924000007915,Obsession
 gemma3:latest,A,CAS-NLI preserve,5ac24cea55429951e9e6853a,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,6,5,893,7.29886140000599,unknown
 gemma3:latest,A,CAS-NLI preserve,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,438,3.7859821999954875,Emmitt Ford
@@ -3951,7 +3951,7 @@ gemma3:latest,B,Vanilla RAG,5abe731255429965af743f0e,musician,1.0,1.0,1.0,0.0,0.
 gemma3:latest,B,Vanilla RAG,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,12,0,1563,12.8565987999973,United States
 gemma3:latest,B,Vanilla RAG,5a8a5dd055429970aeb702c7,Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1673,14.25061899999855,Buscemi
 gemma3:latest,B,Vanilla RAG,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,12,0,2032,17.07460340000398,William's
-gemma3:latest,B,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,1.0,0.0,0.0,0.0,1.0,1.0,11,0,1852,15.158046500000637,Russian
+gemma3:latest,B,Vanilla RAG,5a84c6e65542994c784dda48,Russian,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1852,15.158046500000637,Russian
 gemma3:latest,B,Vanilla RAG,5a733caa5542992359bc32a3,Battle Sheep,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,11,0,2126,17.77568600000086,Battle Sheep
 gemma3:latest,B,Vanilla RAG,5ac24cea55429951e9e6853a,Kate Millett,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,12,0,1905,15.772741200002201,Kate Millett
 gemma3:latest,B,Vanilla RAG,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,11,0,1533,12.742249199996877,Emmitt Ford
@@ -4018,7 +4018,7 @@ gemma3:latest,B,BM25 top-3,5a88f0d455429946c8d6e8dc,"Warren, Michigan",0.0,0.0,0
 gemma3:latest,B,BM25 top-3,5a90580655429933b8a204ef,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,3,0,307,2.374674300001061,unknown
 gemma3:latest,B,BM25 top-3,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,258,2.1370012999977916,7 miles
 gemma3:latest,B,BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,441,3.7006292000005487,New Jewel Movement
-gemma3:latest,B,BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,B,BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,B,BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,539,4.512068800002453,CBS News
 gemma3:latest,B,BM25 top-3,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,413,3.682627700000012,Louisville International Airport
 gemma3:latest,B,BM25 top-3,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,401,3.4242652999964776,unknown
@@ -4151,7 +4151,7 @@ gemma3:latest,B,BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,0.0
 gemma3:latest,B,BM25 top-3,5a8b120755429949d91db4a4,England,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,367,3.1429642000002787,England
 gemma3:latest,B,BM25 top-3,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,3,0,503,4.2864730000001146,Steve Buscemi
 gemma3:latest,B,BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,3,0,442,3.753913399996236,John Faso
-gemma3:latest,B,BM25 top-3,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,620,5.377157699993404,Sergey Sirotkin
+gemma3:latest,B,BM25 top-3,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,620,5.377157699993404,Sergey Sirotkin
 gemma3:latest,B,BM25 top-3,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.3432924000007915,Obsession
 gemma3:latest,B,BM25 top-3,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,3,0,387,3.2862151000008453,Betty Friedan
 gemma3:latest,B,BM25 top-3,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,3,0,328,2.974334099999396,Emmitt Ford
@@ -4218,7 +4218,7 @@ gemma3:latest,B,Provenance + BM25 top-3,5a88f0d455429946c8d6e8dc,"Warren, Michig
 gemma3:latest,B,Provenance + BM25 top-3,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,446,3.8753026999984286,13-3
 gemma3:latest,B,Provenance + BM25 top-3,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,363,3.421312800004671,7 miles
 gemma3:latest,B,Provenance + BM25 top-3,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,431,3.776196999999229,New Jewel Movement
-gemma3:latest,B,Provenance + BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,B,Provenance + BM25 top-3,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,B,Provenance + BM25 top-3,5a81f85d55429926c1cdadca,CBS News,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,451,3.8071501000013086,CBS News
 gemma3:latest,B,Provenance + BM25 top-3,5ac13f425542991316484a96,Louisville International Airport,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,437,3.8017551000011736,Louisville International Airport
 gemma3:latest,B,Provenance + BM25 top-3,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,542,4.518712899996899,unknown
@@ -4351,7 +4351,7 @@ gemma3:latest,B,Provenance + BM25 top-3,5abe731255429965af743f0e,unknown,0.0,0.0
 gemma3:latest,B,Provenance + BM25 top-3,5a8b120755429949d91db4a4,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,374,3.06192369999917,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,504,4.354096799994295,Steve Buscemi
 gemma3:latest,B,Provenance + BM25 top-3,5adf076f5542992d7e9f9277,John Faso,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,494,4.115550299997267,John Faso
-gemma3:latest,B,Provenance + BM25 top-3,5a84c6e65542994c784dda48,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,629,5.018218899997009,unknown
+gemma3:latest,B,Provenance + BM25 top-3,5a84c6e65542994c784dda48,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,629,5.018218899997009,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,438,3.6145414000056917,Obsession
 gemma3:latest,B,Provenance + BM25 top-3,5ac24cea55429951e9e6853a,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,3,0,468,3.7433099999980186,unknown
 gemma3:latest,B,Provenance + BM25 top-3,5ab2861b554299449642c8df,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,3,0,464,3.710771300000488,unknown
@@ -4418,7 +4418,7 @@ gemma3:latest,B,CAS w/o graph,5a88f0d455429946c8d6e8dc,"Warren, Michigan",0.0,0.
 gemma3:latest,B,CAS w/o graph,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,689,5.897476799997094,13-3
 gemma3:latest,B,CAS w/o graph,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,599,4.8468303000045125,7 miles
 gemma3:latest,B,CAS w/o graph,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,3,0,371,3.235602699998708,New Jewel Movement
-gemma3:latest,B,CAS w/o graph,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,B,CAS w/o graph,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,B,CAS w/o graph,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,B,CAS w/o graph,5ac13f425542991316484a96,Shenandoah Valley Regional Airport,0.0,0.28571428571428575,0.0,0.0,0.0,0.0,1.0,1.0,7,0,844,7.241949399998703,Shenandoah Valley Regional Airport
 gemma3:latest,B,CAS w/o graph,5a8de4595542995085b37348,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,310,2.5629355999990366,unknown
@@ -4489,7 +4489,7 @@ gemma3:latest,B,CAS w/o graph,5a7db62d5542997cc2c4747c,Konstanz,0.0,0.0,0.0,0.0,
 gemma3:latest,B,CAS w/o graph,5ac2b2e2554299218029dafa,National Hockey League,0.0,0.8571428571428571,0.0,0.0,0.0,0.0,0.0,1.0,3,0,314,3.178162700001849,National Hockey League
 gemma3:latest,B,CAS w/o graph,5abb7d8b5542996cc5e4a006,No Mercy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3,0,475,4.005646999998135,No Mercy
 gemma3:latest,B,CAS w/o graph,5a731a635542994cef4bc458,The Handmaid's Tale,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,2,0,319,2.957569999998668,The Handmaid's Tale
-gemma3:latest,B,CAS w/o graph,5ab28120554299449642c8cc,Documentary films,0.0,0.5,1.0,0.0,0.0,0.0,1.0,1.0,5,0,470,4.0678636000011466,Documentary films
+gemma3:latest,B,CAS w/o graph,5ab28120554299449642c8cc,Documentary films,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,5,0,470,4.0678636000011466,Documentary films
 gemma3:latest,B,CAS w/o graph,5ae3287f5542991a06ce993b,2003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0,415,3.5135807000042405,2003
 gemma3:latest,B,CAS w/o graph,5abed9435542994516f45457,Tron,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,452,3.583980600000359,Tron
 gemma3:latest,B,CAS w/o graph,5a80f42b55429938b614226c,"December 19, 1998",0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,4,0,494,4.681015599999228,"December 19, 1998"
@@ -4551,7 +4551,7 @@ gemma3:latest,B,CAS w/o graph,5abe731255429965af743f0e,unknown,0.0,0.0,0.0,1.0,,
 gemma3:latest,B,CAS w/o graph,5a8b120755429949d91db4a4,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,1.0,4,0,498,4.114225400000578,unknown
 gemma3:latest,B,CAS w/o graph,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,1059,9.453110900001775,Steve Buscemi
 gemma3:latest,B,CAS w/o graph,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6,0,790,6.204521299994667,William's
-gemma3:latest,B,CAS w/o graph,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2,0,437,3.6523526000019046,Sergey Sirotkin
+gemma3:latest,B,CAS w/o graph,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0,437,3.6523526000019046,Sergey Sirotkin
 gemma3:latest,B,CAS w/o graph,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,623,4.826502000003529,Obsession
 gemma3:latest,B,CAS w/o graph,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,818,6.525791800006118,Betty Friedan
 gemma3:latest,B,CAS w/o graph,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,475,4.318519300002663,Emmitt Ford
@@ -4689,7 +4689,7 @@ gemma3:latest,B,CAS-keyword,5a7db62d5542997cc2c4747c,Konstanz,0.0,0.0,0.0,0.0,0.
 gemma3:latest,B,CAS-keyword,5ac2b2e2554299218029dafa,National Hockey League,0.0,0.8571428571428571,0.0,0.0,0.0,0.0,1.0,1.0,4,0,403,3.473141199996462,National Hockey League
 gemma3:latest,B,CAS-keyword,5abb7d8b5542996cc5e4a006,Live Your Life,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,4,0,602,4.936560699999973,Live Your Life
 gemma3:latest,B,CAS-keyword,5a731a635542994cef4bc458,The Handmaid’s Tale,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,4,0,557,4.982808499997191,The Handmaid’s Tale
-gemma3:latest,B,CAS-keyword,5ab28120554299449642c8cc,Documentary films,0.0,0.5,1.0,0.0,0.0,0.0,1.0,1.0,6,0,552,4.669318499996734,Documentary films
+gemma3:latest,B,CAS-keyword,5ab28120554299449642c8cc,Documentary films,0.0,0.5,0.0,0.0,0.0,0.0,1.0,1.0,6,0,552,4.669318499996734,Documentary films
 gemma3:latest,B,CAS-keyword,5ae3287f5542991a06ce993b,2003,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,0,415,3.5135807000042405,2003
 gemma3:latest,B,CAS-keyword,5abed9435542994516f45457,Tron,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,0,452,3.583980600000359,Tron
 gemma3:latest,B,CAS-keyword,5a80f42b55429938b614226c,1998,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,606,5.6644530999983544,1998
@@ -4751,7 +4751,7 @@ gemma3:latest,B,CAS-keyword,5abe731255429965af743f0e,Musician,1.0,1.0,1.0,0.0,0.
 gemma3:latest,B,CAS-keyword,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,6,0,733,5.898920200001157,United States
 gemma3:latest,B,CAS-keyword,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,1059,9.453110900001775,Steve Buscemi
 gemma3:latest,B,CAS-keyword,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6,0,790,6.204521299994667,William's
-gemma3:latest,B,CAS-keyword,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,6,0,1151,9.44530659999873,Sergey Sirotkin
+gemma3:latest,B,CAS-keyword,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,6,0,1151,9.44530659999873,Sergey Sirotkin
 gemma3:latest,B,CAS-keyword,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,623,4.826502000003529,Obsession
 gemma3:latest,B,CAS-keyword,5ac24cea55429951e9e6853a,Betty Friedan,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,818,6.525791800006118,Betty Friedan
 gemma3:latest,B,CAS-keyword,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,5,0,585,4.858829500000866,Emmitt Ford
@@ -4818,7 +4818,7 @@ gemma3:latest,B,CAS-NLI penalty,5a88f0d455429946c8d6e8dc,Macomb County,1.0,1.0,1
 gemma3:latest,B,CAS-NLI penalty,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,689,5.897476799997094,13-3
 gemma3:latest,B,CAS-NLI penalty,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,599,4.8468303000045125,7 miles
 gemma3:latest,B,CAS-NLI penalty,5ab840e255429934fafe6d3b,Maurice Bishop,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1,0,160,1.5045792999953846,Maurice Bishop
-gemma3:latest,B,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,B,CAS-NLI penalty,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,B,CAS-NLI penalty,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,B,CAS-NLI penalty,5ac13f425542991316484a96,Shenandoah Valley Regional Airport,0.0,0.28571428571428575,0.0,0.0,0.0,0.0,1.0,1.0,7,0,844,7.241949399998703,Shenandoah Valley Regional Airport
 gemma3:latest,B,CAS-NLI penalty,5a8de4595542995085b37348,The Younger,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.1458079000003636,The Younger
@@ -5018,7 +5018,7 @@ gemma3:latest,B,CAS-NLI preserve,5a88f0d455429946c8d6e8dc,Macomb County,1.0,1.0,
 gemma3:latest,B,CAS-NLI preserve,5a90580655429933b8a204ef,13-3,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,5,0,689,5.897476799997094,13-3
 gemma3:latest,B,CAS-NLI preserve,5a9068a95542990a98493621,7 miles,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,5,0,599,4.8468303000045125,7 miles
 gemma3:latest,B,CAS-NLI preserve,5ab840e255429934fafe6d3b,New Jewel Movement,1.0,1.0,1.0,0.0,0.0,0.0,1.0,1.0,4,2,543,4.548251300002448,New Jewel Movement
-gemma3:latest,B,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3,0,477,3.7578708000000915,Bristol
+gemma3:latest,B,CAS-NLI preserve,5a7e1a2955429965cec5ea5d,Bristol,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,3,0,477,3.7578708000000915,Bristol
 gemma3:latest,B,CAS-NLI preserve,5a81f85d55429926c1cdadca,unknown,0.0,0.0,0.0,1.0,,0.0,0.0,0.0,2,0,338,3.174091999993834,unknown
 gemma3:latest,B,CAS-NLI preserve,5ac13f425542991316484a96,Shenandoah Valley Regional Airport,0.0,0.28571428571428575,0.0,0.0,0.0,0.0,1.0,1.0,7,0,844,7.241949399998703,Shenandoah Valley Regional Airport
 gemma3:latest,B,CAS-NLI preserve,5a8de4595542995085b37348,The Younger,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3,0,385,3.1458079000003636,The Younger
@@ -5151,7 +5151,7 @@ gemma3:latest,B,CAS-NLI preserve,5abe731255429965af743f0e,Musician,1.0,1.0,1.0,0
 gemma3:latest,B,CAS-NLI preserve,5a8b120755429949d91db4a4,United States,0.0,0.0,0.0,0.0,1.0,0.0,1.0,1.0,6,0,733,5.898920200001157,United States
 gemma3:latest,B,CAS-NLI preserve,5a8a5dd055429970aeb702c7,Steve Buscemi,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,6,0,1059,9.453110900001775,Steve Buscemi
 gemma3:latest,B,CAS-NLI preserve,5adf076f5542992d7e9f9277,William's,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,6,0,790,6.204521299994667,William's
-gemma3:latest,B,CAS-NLI preserve,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,2,1,452,3.93886389999534,Sergey Sirotkin
+gemma3:latest,B,CAS-NLI preserve,5a84c6e65542994c784dda48,Sergey Sirotkin,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2,1,452,3.93886389999534,Sergey Sirotkin
 gemma3:latest,B,CAS-NLI preserve,5a733caa5542992359bc32a3,Obsession,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,4,0,623,4.826502000003529,Obsession
 gemma3:latest,B,CAS-NLI preserve,5ac24cea55429951e9e6853a,unknown,0.0,0.0,0.0,1.0,,0.0,1.0,1.0,6,5,893,7.29886140000599,unknown
 gemma3:latest,B,CAS-NLI preserve,5ab2861b554299449642c8df,Emmitt Ford,0.0,0.8,0.0,0.0,0.0,0.0,1.0,1.0,4,0,475,4.318519300002663,Emmitt Ford

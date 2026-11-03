@@ -13,9 +13,9 @@
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "adoption",
-   "mean": 0.285,
-   "ci_low": 0.22,
-   "ci_high": 0.35,
+   "mean": 0.28,
+   "ci_low": 0.21987500000000001,
+   "ci_high": 0.345,
    "n": 200
   },
   {
@@ -23,9 +23,9 @@
    "condition": "A",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.235,
-   "ci_low": 0.175,
-   "ci_high": 0.3,
+   "mean": 0.23,
+   "ci_low": 0.17,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -73,9 +73,9 @@
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.26,
-   "ci_low": 0.2,
-   "ci_high": 0.32,
+   "mean": 0.255,
+   "ci_low": 0.195,
+   "ci_high": 0.31,
    "n": 200
   },
   {
@@ -133,9 +133,9 @@
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.235,
-   "ci_low": 0.18,
-   "ci_high": 0.295,
+   "mean": 0.23,
+   "ci_low": 0.175,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -143,9 +143,9 @@
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.15,
-   "ci_low": 0.1,
-   "ci_high": 0.2,
+   "mean": 0.145,
+   "ci_low": 0.09987500000000002,
+   "ci_high": 0.195,
    "n": 200
   },
   {
@@ -193,9 +193,9 @@
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "adoption",
-   "mean": 0.26,
-   "ci_low": 0.2,
-   "ci_high": 0.32,
+   "mean": 0.255,
+   "ci_low": 0.195,
+   "ci_high": 0.315,
    "n": 200
   },
   {
@@ -263,9 +263,9 @@
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.185,
+   "mean": 0.18,
    "ci_low": 0.13,
-   "ci_high": 0.24,
+   "ci_high": 0.235,
    "n": 200
   },
   {
@@ -313,9 +313,9 @@
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "adoption",
-   "mean": 0.27,
-   "ci_low": 0.205,
-   "ci_high": 0.33,
+   "mean": 0.265,
+   "ci_low": 0.2,
+   "ci_high": 0.325,
    "n": 200
   },
   {
@@ -323,9 +323,9 @@
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.225,
+   "mean": 0.22,
    "ci_low": 0.165,
-   "ci_high": 0.28012499999999935,
+   "ci_high": 0.27512499999999934,
    "n": 200
   },
   {
@@ -373,9 +373,9 @@
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "adoption",
-   "mean": 0.285,
-   "ci_low": 0.22,
-   "ci_high": 0.35,
+   "mean": 0.28,
+   "ci_low": 0.21987500000000001,
+   "ci_high": 0.345,
    "n": 200
   },
   {
@@ -383,9 +383,9 @@
    "condition": "B",
    "method": "Vanilla RAG",
    "metric": "accuracy",
-   "mean": 0.235,
-   "ci_low": 0.175,
-   "ci_high": 0.3,
+   "mean": 0.23,
+   "ci_low": 0.17,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -433,9 +433,9 @@
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.26,
-   "ci_low": 0.2,
-   "ci_high": 0.32,
+   "mean": 0.255,
+   "ci_low": 0.195,
+   "ci_high": 0.31,
    "n": 200
   },
   {
@@ -503,9 +503,9 @@
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.28,
-   "ci_low": 0.22,
-   "ci_high": 0.345,
+   "mean": 0.275,
+   "ci_low": 0.215,
+   "ci_high": 0.33512499999999934,
    "n": 200
   },
   {
@@ -553,9 +553,9 @@
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.245,
-   "ci_low": 0.185,
-   "ci_high": 0.305,
+   "mean": 0.24,
+   "ci_low": 0.184875,
+   "ci_high": 0.3,
    "n": 200
   },
   {
@@ -613,9 +613,9 @@
    "condition": "B",
    "method": "CAS-keyword",
    "metric": "adoption",
-   "mean": 0.235,
-   "ci_low": 0.18,
-   "ci_high": 0.295,
+   "mean": 0.23,
+   "ci_low": 0.175,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -683,9 +683,9 @@
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.21,
-   "ci_low": 0.155,
-   "ci_high": 0.265,
+   "mean": 0.205,
+   "ci_low": 0.15,
+   "ci_high": 0.26,
    "n": 200
   },
   {
@@ -733,9 +733,9 @@
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "adoption",
-   "mean": 0.23,
-   "ci_low": 0.174875,
-   "ci_high": 0.29,
+   "mean": 0.225,
+   "ci_low": 0.17,
+   "ci_high": 0.285,
    "n": 200
   },
   {
@@ -853,9 +853,9 @@
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.295,
-   "ci_low": 0.235,
-   "ci_high": 0.36,
+   "mean": 0.29,
+   "ci_low": 0.225,
+   "ci_high": 0.355,
    "n": 200
   },
   {
@@ -863,9 +863,9 @@
    "condition": "A",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.185,
-   "ci_low": 0.135,
-   "ci_high": 0.24,
+   "mean": 0.18,
+   "ci_low": 0.13,
+   "ci_high": 0.235,
    "n": 200
   },
   {
@@ -913,9 +913,9 @@
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.295,
-   "ci_low": 0.23,
-   "ci_high": 0.36,
+   "mean": 0.29,
+   "ci_low": 0.225,
+   "ci_high": 0.355,
    "n": 200
   },
   {
@@ -923,9 +923,9 @@
    "condition": "A",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.145,
-   "ci_low": 0.1,
-   "ci_high": 0.19512499999999933,
+   "mean": 0.14,
+   "ci_low": 0.095,
+   "ci_high": 0.19,
    "n": 200
   },
   {
@@ -973,9 +973,9 @@
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "adoption",
-   "mean": 0.275,
-   "ci_low": 0.215,
-   "ci_high": 0.34,
+   "mean": 0.27,
+   "ci_low": 0.21,
+   "ci_high": 0.335,
    "n": 200
   },
   {
@@ -983,9 +983,9 @@
    "condition": "A",
    "method": "CAS-keyword",
    "metric": "accuracy",
-   "mean": 0.235,
-   "ci_low": 0.175,
-   "ci_high": 0.295,
+   "mean": 0.23,
+   "ci_low": 0.17,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -1043,9 +1043,9 @@
    "condition": "A",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.18,
-   "ci_low": 0.13,
-   "ci_high": 0.235,
+   "mean": 0.175,
+   "ci_low": 0.125,
+   "ci_high": 0.23,
    "n": 200
   },
   {
@@ -1093,9 +1093,9 @@
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "adoption",
-   "mean": 0.32,
-   "ci_low": 0.26,
-   "ci_high": 0.39,
+   "mean": 0.315,
+   "ci_low": 0.255,
+   "ci_high": 0.385,
    "n": 200
   },
   {
@@ -1103,9 +1103,9 @@
    "condition": "A",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.2,
-   "ci_low": 0.145,
-   "ci_high": 0.26,
+   "mean": 0.195,
+   "ci_low": 0.14,
+   "ci_high": 0.255,
    "n": 200
   },
   {
@@ -1213,9 +1213,9 @@
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "adoption",
-   "mean": 0.295,
-   "ci_low": 0.235,
-   "ci_high": 0.36,
+   "mean": 0.29,
+   "ci_low": 0.225,
+   "ci_high": 0.355,
    "n": 200
   },
   {
@@ -1223,9 +1223,9 @@
    "condition": "B",
    "method": "BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.185,
-   "ci_low": 0.135,
-   "ci_high": 0.24,
+   "mean": 0.18,
+   "ci_low": 0.13,
+   "ci_high": 0.235,
    "n": 200
   },
   {
@@ -1283,9 +1283,9 @@
    "condition": "B",
    "method": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean": 0.24,
-   "ci_low": 0.18,
-   "ci_high": 0.3001249999999993,
+   "mean": 0.23,
+   "ci_low": 0.175,
+   "ci_high": 0.29,
    "n": 200
   },
   {
@@ -1333,9 +1333,9 @@
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "adoption",
-   "mean": 0.265,
-   "ci_low": 0.205,
-   "ci_high": 0.33,
+   "mean": 0.26,
+   "ci_low": 0.2,
+   "ci_high": 0.3201249999999993,
    "n": 200
   },
   {
@@ -1343,9 +1343,9 @@
    "condition": "B",
    "method": "CAS w/o graph",
    "metric": "accuracy",
-   "mean": 0.17,
-   "ci_low": 0.12,
-   "ci_high": 0.225,
+   "mean": 0.165,
+   "ci_low": 0.115,
+   "ci_high": 0.22,
    "n": 200
   },
   {
@@ -1463,9 +1463,9 @@
    "condition": "B",
    "method": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean": 0.175,
-   "ci_low": 0.125,
-   "ci_high": 0.225,
+   "mean": 0.165,
+   "ci_low": 0.115,
+   "ci_high": 0.215,
    "n": 200
   },
   {
@@ -1523,9 +1523,9 @@
    "condition": "B",
    "method": "CAS-NLI preserve",
    "metric": "accuracy",
-   "mean": 0.21,
-   "ci_low": 0.155,
-   "ci_high": 0.27,
+   "mean": 0.205,
+   "ci_low": 0.15,
+   "ci_high": 0.265,
    "n": 200
   },
   {
@@ -1589,9 +1589,9 @@
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
    "mean_diff": -0.01,
-   "ci_low": -0.07,
+   "ci_low": -0.065,
    "ci_high": 0.045,
-   "p_value": 0.8686131386861314,
+   "p_value": 0.8615138486151385,
    "p_holm": 1.0
   },
   {
@@ -1612,10 +1612,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": 0.04,
-   "ci_low": -0.01,
+   "mean_diff": 0.035,
+   "ci_low": -0.02,
    "ci_high": 0.085,
-   "p_value": 0.16818318168183183,
+   "p_value": 0.24037596240375964,
    "p_holm": 1.0
   },
   {
@@ -1636,10 +1636,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
-   "mean_diff": 0.015,
-   "ci_low": -0.040124999999999994,
-   "ci_high": 0.07,
-   "p_value": 0.7336266373362663,
+   "mean_diff": 0.02,
+   "ci_low": -0.035,
+   "ci_high": 0.08,
+   "p_value": 0.6125387461253875,
    "p_holm": 1.0
   },
   {
@@ -1672,9 +1672,9 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Provenance + BM25 top-3",
    "metric": "adoption",
-   "mean_diff": 0.195,
-   "ci_low": 0.135,
-   "ci_high": 0.25,
+   "mean_diff": 0.19,
+   "ci_low": 0.13,
+   "ci_high": 0.245,
    "p_value": 9.999000099990002e-05,
    "p_holm": 0.001999800019998
   },
@@ -1684,10 +1684,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": -0.03,
-   "ci_low": -0.095,
-   "ci_high": 0.035,
-   "p_value": 0.4784521547845215,
+   "mean_diff": -0.025,
+   "ci_low": -0.09,
+   "ci_high": 0.04,
+   "p_value": 0.5703429657034297,
    "p_holm": 1.0
   },
   {
@@ -1696,10 +1696,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "adoption",
-   "mean_diff": 0.035,
-   "ci_low": -0.02,
-   "ci_high": 0.095,
-   "p_value": 0.2976702329767023,
+   "mean_diff": 0.03,
+   "ci_low": -0.025,
+   "ci_high": 0.09,
+   "p_value": 0.39266073392660733,
    "p_holm": 1.0
   },
   {
@@ -1708,10 +1708,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
-   "mean_diff": -0.02,
-   "ci_low": -0.09,
-   "ci_high": 0.045,
-   "p_value": 0.6626337366263374,
+   "mean_diff": -0.025,
+   "ci_low": -0.095,
+   "ci_high": 0.04,
+   "p_value": 0.5551444855514449,
    "p_holm": 1.0
   },
   {
@@ -1756,10 +1756,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Vanilla RAG",
    "metric": "accuracy",
-   "mean_diff": -0.01,
-   "ci_low": -0.075,
-   "ci_high": 0.055,
-   "p_value": 0.8798120187981202,
+   "mean_diff": -0.015,
+   "ci_low": -0.08,
+   "ci_high": 0.045,
+   "p_value": 0.7571242875712428,
    "p_holm": 1.0
   },
   {
@@ -1768,10 +1768,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "BM25 top-3",
    "metric": "adoption",
-   "mean_diff": -0.015,
-   "ci_low": -0.06,
-   "ci_high": 0.03,
-   "p_value": 0.6552344765523448,
+   "mean_diff": -0.01,
+   "ci_low": -0.055,
+   "ci_high": 0.035,
+   "p_value": 0.819018098190181,
    "p_holm": 1.0
   },
   {
@@ -1783,7 +1783,7 @@
    "mean_diff": 0.025,
    "ci_low": -0.02,
    "ci_high": 0.075,
-   "p_value": 0.41655834416558346,
+   "p_value": 0.41925807419258077,
    "p_holm": 1.0
   },
   {
@@ -1804,10 +1804,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "Provenance + BM25 top-3",
    "metric": "accuracy",
-   "mean_diff": -0.03,
-   "ci_low": -0.09512499999999999,
-   "ci_high": 0.04,
-   "p_value": 0.45595440455954406,
+   "mean_diff": -0.025,
+   "ci_low": -0.09,
+   "ci_high": 0.045,
+   "p_value": 0.5498450154984501,
    "p_holm": 1.0
   }
  ],
@@ -1854,10 +1854,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-keyword",
    "metric": "accuracy",
-   "mean_diff": -0.025,
-   "ci_low": -0.075,
-   "ci_high": 0.025,
-   "p_value": 0.44745525447455253,
+   "mean_diff": -0.03,
+   "ci_low": -0.08,
+   "ci_high": 0.02,
+   "p_value": 0.3344665533446655,
    "p_holm": 1.0
   },
   {
@@ -1866,11 +1866,11 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean_diff": 0.07,
-   "ci_low": 0.03,
-   "ci_high": 0.115,
-   "p_value": 0.0006999300069993001,
-   "p_holm": 0.015398460153984602
+   "mean_diff": 0.065,
+   "ci_low": 0.025,
+   "ci_high": 0.10512499999999932,
+   "p_value": 0.0018998100189981002,
+   "p_holm": 0.039896010398960104
   },
   {
    "model": "llama3.2:latest",
@@ -1882,7 +1882,7 @@
    "ci_low": 0.01,
    "ci_high": 0.07,
    "p_value": 0.020997900209979003,
-   "p_holm": 0.37796220377962203
+   "p_holm": 0.3989601039896011
   },
   {
    "model": "llama3.2:latest",
@@ -1938,10 +1938,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean_diff": 0.045,
-   "ci_low": 0.005,
-   "ci_high": 0.09,
-   "p_value": 0.06469353064693531,
+   "mean_diff": 0.04,
+   "ci_low": 0.0,
+   "ci_high": 0.085,
+   "p_value": 0.09809019098090191,
    "p_holm": 1.0
   },
   {
@@ -1950,11 +1950,11 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean_diff": 0.04,
-   "ci_low": 0.005,
+   "mean_diff": 0.045,
+   "ci_low": 0.01,
    "ci_high": 0.085,
-   "p_value": 0.0781921807819218,
-   "p_holm": 1.0
+   "p_value": 0.0372962703729627,
+   "p_holm": 0.6340365963403659
   },
   {
    "model": "gemma3:latest",
@@ -1975,10 +1975,10 @@
    "comparator": "CAS w/o graph",
    "metric": "accuracy",
    "mean_diff": 0.055,
-   "ci_low": 0.015,
-   "ci_high": 0.095,
-   "p_value": 0.0184981501849815,
-   "p_holm": 0.3514648535146485
+   "ci_low": 0.01,
+   "ci_high": 0.1,
+   "p_value": 0.029397060293970604,
+   "p_holm": 0.5291470852914709
   },
   {
    "model": "gemma3:latest",
@@ -2001,7 +2001,7 @@
    "mean_diff": -0.035,
    "ci_low": -0.085,
    "ci_high": 0.015,
-   "p_value": 0.25137486251374863,
+   "p_value": 0.24587541245875413,
    "p_holm": 1.0
   },
   {
@@ -2010,9 +2010,9 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "adoption",
-   "mean_diff": 0.105,
-   "ci_low": 0.055,
-   "ci_high": 0.155,
+   "mean_diff": 0.1,
+   "ci_low": 0.05,
+   "ci_high": 0.15,
    "p_value": 0.00029997000299970003,
    "p_holm": 0.007199280071992801
   },
@@ -2034,10 +2034,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS w/o graph",
    "metric": "adoption",
-   "mean_diff": 0.015,
-   "ci_low": -0.025,
-   "ci_high": 0.055,
-   "p_value": 0.630936906309369,
+   "mean_diff": 0.02,
+   "ci_low": -0.02,
+   "ci_high": 0.06,
+   "p_value": 0.45635436456354367,
    "p_holm": 1.0
   },
   {
@@ -2070,10 +2070,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-keyword",
    "metric": "accuracy",
-   "mean_diff": -0.04,
-   "ci_low": -0.085,
-   "ci_high": 0.005,
-   "p_value": 0.1356864313568643,
+   "mean_diff": -0.045,
+   "ci_low": -0.09,
+   "ci_high": 0.0,
+   "p_value": 0.07639236076392361,
    "p_holm": 1.0
   },
   {
@@ -2086,7 +2086,7 @@
    "ci_low": 0.04,
    "ci_high": 0.135,
    "p_value": 0.0013998600139986002,
-   "p_holm": 0.029397060293970604
+   "p_holm": 0.030796920307969204
   },
   {
    "model": "gemma3:latest",
@@ -2094,10 +2094,10 @@
    "reference": "CAS-NLI preserve",
    "comparator": "CAS-NLI penalty",
    "metric": "accuracy",
-   "mean_diff": 0.035,
-   "ci_low": -0.005,
+   "mean_diff": 0.04,
+   "ci_low": 0.0,
    "ci_high": 0.08,
-   "p_value": 0.16878312168783122,
+   "p_value": 0.09519048095190481,
    "p_holm": 1.0
   }
  ],

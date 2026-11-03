@@ -1,0 +1,151 @@
+row,source,model,method,auto_accuracy,auto_abstain,auto_adoption
+1,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+2,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+3,poison,gemma3:latest,Vanilla RAG (A),0.0,0.0,1.0
+4,poison,gemma3:latest,BM25 top-3 (A),0.0,0.0,1.0
+5,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,1.0,0.0
+6,clean,llama3.1:8b,CAS-NLI conflict-preserving,0.0,0.0,
+7,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,0.0,
+8,clean,gemma3:latest,Vanilla RAG (no filter),1.0,0.0,
+9,clean,llama3.1:8b,Relevance top-3 (BM25),1.0,0.0,
+10,clean,llama3.1:8b,CAS-NLI (full pipeline),0.0,1.0,
+11,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,0.0
+12,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+13,poison,llama3.2:latest,CAS-keyword (B),0.0,0.0,0.0
+14,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,1.0,
+15,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+16,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+17,clean,llama3.2:latest,CAS w/o conflict graph,0.0,1.0,
+18,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,1.0,
+19,poison,gemma3:latest,Vanilla RAG (A),0.0,0.0,1.0
+20,poison,gemma3:latest,CAS-NLI preserve (A),0.0,0.0,0.0
+21,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,0.0,
+22,poison,gemma3:latest,Vanilla RAG (A),0.0,0.0,0.0
+23,poison,llama3.2:latest,BM25 top-3 (A),1.0,0.0,0.0
+24,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,1.0,0.0
+25,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,1.0,
+26,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+27,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,1.0
+28,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,0.0,0.0
+29,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,
+30,clean,llama3.1:8b,CAS-NLI (full pipeline),0.0,1.0,
+31,poison,llama3.2:latest,BM25 top-3 (A),1.0,0.0,0.0
+32,clean,gemma3:latest,Vanilla RAG (no filter),0.0,0.0,
+33,poison,llama3.2:latest,Provenance + BM25 top-3 (B),1.0,0.0,0.0
+34,clean,gemma3:latest,CAS-NLI (full pipeline),1.0,0.0,
+35,clean,llama3.2:latest,CAS-NLI θ-CV (penalty),0.0,1.0,
+36,poison,gemma3:latest,Vanilla RAG (A),0.0,0.0,0.0
+37,clean,gemma3:latest,CAS w/o conflict graph,0.0,1.0,
+38,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+39,poison,gemma3:latest,CAS-NLI penalty (A),0.0,0.0,0.0
+40,clean,gemma3:latest,Relevance top-3 (BM25),0.0,0.0,
+41,clean,llama3.1:8b,Relevance top-3 (BM25),1.0,0.0,
+42,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+43,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,0.0,0.0
+44,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+45,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+46,poison,gemma3:latest,CAS w/o graph (A),0.0,0.0,0.0
+47,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+48,poison,llama3.2:latest,CAS w/o graph (A),0.0,0.0,1.0
+49,poison,llama3.2:latest,CAS-keyword (A),1.0,0.0,0.0
+50,clean,llama3.2:latest,Relevance top-3 (BM25),1.0,0.0,
+51,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+52,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+53,clean,llama3.2:latest,CAS w/o conflict graph,0.0,0.0,
+54,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,0.0
+55,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+56,clean,llama3.2:latest,Relevance top-3 (BM25),1.0,0.0,
+57,clean,gemma3:latest,Vanilla RAG (no filter),0.0,0.0,
+58,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+59,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,0.0
+60,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+61,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,1.0
+62,poison,llama3.2:latest,Provenance + BM25 top-3 (B),1.0,0.0,0.0
+63,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+64,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,1.0
+65,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+66,poison,llama3.2:latest,CAS w/o graph (B),0.0,0.0,1.0
+67,poison,gemma3:latest,BM25 top-3 (A),0.0,0.0,0.0
+68,clean,llama3.1:8b,Vanilla RAG (no filter),1.0,0.0,
+69,poison,gemma3:latest,CAS w/o graph (A),0.0,0.0,0.0
+70,poison,llama3.2:latest,BM25 top-3 (A),1.0,0.0,0.0
+71,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,
+72,clean,llama3.2:latest,CAS w/o conflict graph,0.0,0.0,
+73,clean,gemma3:latest,Relevance top-3 (BM25),0.0,0.0,
+74,clean,gemma3:latest,Vanilla RAG (no filter),1.0,0.0,
+75,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,
+76,poison,gemma3:latest,CAS-keyword (B),0.0,0.0,0.0
+77,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+78,poison,llama3.2:latest,Provenance + BM25 top-3 (B),0.0,1.0,0.0
+79,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,0.0
+80,poison,gemma3:latest,CAS-keyword (A),0.0,0.0,0.0
+81,clean,gemma3:latest,Vanilla RAG (no filter),0.0,0.0,
+82,clean,llama3.1:8b,Relevance top-3 (BM25),1.0,0.0,
+83,poison,llama3.2:latest,CAS w/o graph (A),0.0,0.0,0.0
+84,poison,llama3.2:latest,CAS w/o graph (A),0.0,1.0,0.0
+85,clean,llama3.2:latest,CAS-NLI conflict-preserving,0.0,1.0,
+86,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,1.0,
+87,clean,gemma3:latest,Relevance top-3 (BM25),0.0,1.0,
+88,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+89,poison,llama3.2:latest,CAS-keyword (A),1.0,0.0,0.0
+90,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,1.0
+91,poison,llama3.2:latest,CAS-keyword (A),0.0,0.0,0.0
+92,poison,llama3.2:latest,CAS-keyword (B),0.0,0.0,0.0
+93,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+94,poison,gemma3:latest,CAS w/o graph (A),0.0,0.0,0.0
+95,poison,gemma3:latest,BM25 top-3 (A),1.0,0.0,0.0
+96,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,1.0
+97,clean,llama3.1:8b,CAS-NLI (full pipeline),0.0,0.0,
+98,clean,gemma3:latest,CAS-NLI (full pipeline),0.0,0.0,
+99,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+100,clean,gemma3:latest,CAS w/o conflict graph,0.0,0.0,
+101,clean,llama3.2:latest,CAS w/o conflict graph,0.0,1.0,
+102,poison,llama3.2:latest,Provenance + BM25 top-3 (B),0.0,0.0,0.0
+103,clean,gemma3:latest,CAS w/o conflict graph,0.0,0.0,
+104,clean,llama3.2:latest,CAS-NLI conflict-preserving,1.0,0.0,
+105,poison,llama3.2:latest,BM25 top-3 (A),0.0,1.0,0.0
+106,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,
+107,clean,llama3.1:8b,CAS w/o conflict graph,0.0,0.0,
+108,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,1.0
+109,poison,gemma3:latest,BM25 top-3 (A),0.0,0.0,0.0
+110,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,0.0,0.0
+111,poison,llama3.2:latest,BM25 top-3 (A),1.0,0.0,0.0
+112,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+113,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+114,poison,gemma3:latest,Vanilla RAG (A),0.0,0.0,0.0
+115,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,1.0,
+116,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,0.0,
+117,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+118,poison,llama3.2:latest,Vanilla RAG (A),1.0,0.0,0.0
+119,poison,gemma3:latest,BM25 top-3 (A),0.0,1.0,0.0
+120,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,0.0
+121,poison,llama3.2:latest,BM25 top-3 (A),0.0,0.0,1.0
+122,clean,gemma3:latest,CAS-NLI (full pipeline),0.0,0.0,
+123,poison,llama3.2:latest,CAS-NLI penalty (A),0.0,1.0,0.0
+124,poison,llama3.2:latest,BM25 top-3 (A),0.0,1.0,0.0
+125,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+126,poison,llama3.2:latest,Provenance + BM25 top-3 (B),0.0,1.0,0.0
+127,poison,gemma3:latest,CAS-NLI penalty (A),0.0,0.0,0.0
+128,clean,llama3.1:8b,Relevance top-3 (BM25),1.0,0.0,
+129,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+130,clean,llama3.2:latest,Vanilla RAG (no filter),0.0,1.0,
+131,poison,gemma3:latest,Provenance + BM25 top-3 (B),1.0,0.0,0.0
+132,poison,llama3.2:latest,Provenance + BM25 top-3 (B),0.0,0.0,0.0
+133,poison,gemma3:latest,Provenance + BM25 top-3 (B),0.0,1.0,0.0
+134,poison,gemma3:latest,Provenance + BM25 top-3 (B),0.0,1.0,0.0
+135,poison,llama3.2:latest,Vanilla RAG (A),0.0,0.0,0.0
+136,poison,llama3.2:latest,CAS-keyword (A),0.0,0.0,1.0
+137,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,1.0,
+138,clean,llama3.1:8b,CAS (full pipeline),0.0,1.0,
+139,clean,gemma3:latest,CAS w/o conflict graph,0.0,0.0,
+140,clean,llama3.2:latest,Relevance top-3 (BM25),0.0,0.0,
+141,poison,gemma3:latest,CAS-NLI penalty (A),0.0,0.0,1.0
+142,poison,llama3.2:latest,BM25 top-3 (A),1.0,0.0,0.0
+143,poison,llama3.2:latest,CAS w/o graph (B),0.0,0.0,1.0
+144,poison,gemma3:latest,CAS-NLI penalty (A),1.0,0.0,0.0
+145,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+146,poison,gemma3:latest,CAS w/o graph (A),1.0,0.0,0.0
+147,clean,gemma3:latest,Vanilla RAG (no filter),0.0,0.0,
+148,clean,llama3.2:latest,Vanilla RAG (no filter),1.0,0.0,
+149,clean,gemma3:latest,Vanilla RAG (no filter),1.0,0.0,
+150,clean,llama3.2:latest,CAS-NLI (full pipeline),0.0,0.0,

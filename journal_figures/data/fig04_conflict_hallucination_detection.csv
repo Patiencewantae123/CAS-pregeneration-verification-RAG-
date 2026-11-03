@@ -1,7 +1,7 @@
 panel,detector,group,n,flagged,flag_rate,wilson_low,wilson_high,fpr,tpr,auroc,auroc_ci_low,auroc_ci_high
 a,Negation-cue baseline,WikiContradict: Explicit,28.0,4.0,0.14285714285714285,0.056989129307017855,0.31490173044877334,,,,,
 a,Negation-cue baseline,WikiContradict: Implicit,22.0,3.0,0.13636363636363635,0.04748917264236269,0.3333541187947,,,,,
-a,Negation-cue baseline,MultiNLI,20.0,3.0,0.15,0.05236779195949584,0.36042329588695743,,,,,
+a,Negation-cue baseline,MultiNLI,20.0,4.0,0.2,0.0806563532712,0.41602172202575993,,,,,
 a,Negation-cue baseline,HotpotQA gold pair,50.0,4.0,0.08,0.031549003255790686,0.18838502545063704,,,,,
 a,CAS NLIVerifier (as implemented),WikiContradict: Explicit,28.0,0.0,0.0,0.0,0.12064720365810762,,,,,
 a,CAS NLIVerifier (as implemented),WikiContradict: Implicit,22.0,0.0,0.0,1.3877787807814457e-17,0.14865952572596125,,,,,

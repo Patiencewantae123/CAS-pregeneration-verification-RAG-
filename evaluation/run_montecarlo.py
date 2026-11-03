@@ -20,7 +20,7 @@ import pandas as pd
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from run_detector_probe import labelled_pairs  # noqa: E402
-from run_evaluation import DEFAULT_TAU, OUT_RESULTS, SEED, TOP_K, bm25_scores, load  # noqa: E402
+from run_evaluation import DEFAULT_TAU, OUT_RESULTS, SEED, TOP_K, bm25_scores, has_phrase, load  # noqa: E402
 from run_llm_generation import normalize  # noqa: E402
 from run_poison import PRIMARY, THETA  # noqa: E402
 from models.nli_edge import NLIRelation  # noqa: E402
@@ -88,7 +88,8 @@ class Question:
         self.conf = 1 - rank / n
         self.order = np.argsort(-self.raw, kind="stable")
         self.poison = np.isin(np.arange(n), it["poison"])
-        self.answer = np.array([not self.poison[i] and normalize(it["answer"]) in normalize(p[i]) for i in range(n)])
+        self.answer = np.array([not self.poison[i] and has_phrase(normalize(p[i]), normalize(it["answer"]))
+                                for i in range(n)])
         self.provenance_B = np.array(it["provenance_B"], dtype=float)
         self.pairs = [(i, j) for i in range(n) for j in range(i + 1, n)]
         index = {pair: k for k, pair in enumerate(self.pairs)}

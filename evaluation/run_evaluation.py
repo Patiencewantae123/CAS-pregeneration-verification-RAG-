@@ -71,6 +71,20 @@ def tokens(text):
 def norm_answer(s):
     return " ".join(re.findall(r"\w+", str(s).lower()))
 
+
+def has_phrase(text, phrase):
+    """`phrase` occurs in `text` as whole words: 'no' is not found in 'unknown', nor 'two' in 'network'."""
+    return bool(phrase) and re.search(r"(?<!\w)" + re.escape(phrase) + r"(?!\w)", text) is not None
+
+
+def holm(tests):
+    """Holm-Bonferroni step-down adjustment; adds p_holm to each test dict in place."""
+    order = sorted(range(len(tests)), key=lambda i: tests[i]["p_value"])
+    running = 0.0
+    for rank, i in enumerate(order):
+        running = max(running, min(1.0, (len(tests) - rank) * tests[i]["p_value"]))
+        tests[i]["p_holm"] = running
+
 # ============================================================
 # 2. RETRIEVAL SCORING (BM25 over each question's candidate pool)
 # ============================================================
@@ -192,8 +206,10 @@ def cas_nli_theta(query, passages, theta, preserve, tau=DEFAULT_TAU):
 
 def theta_for(kind, query):
     """Held-out theta for a tuning question; the all-data theta for questions never used in tuning."""
-    table = CV_THETA.get(kind, {})
-    return table.get(query, table.get("__all__", 0.5))
+    if kind not in CV_THETA:
+        raise RuntimeError(f"no cross-validated θ for '{kind}': run evaluation/run_evaluation.py (run_cv) first")
+    table = CV_THETA[kind]
+    return table.get(query, table["__all__"])
 
 
 def select_cas_nli_cv(query, passages, tau=DEFAULT_TAU, **_):
@@ -276,6 +292,8 @@ def auroc(scores, labels):
 
 def boot_auroc(scores, labels, n=N_BOOT, seed=SEED):
     scores, labels = np.asarray(scores), np.asarray(labels)
+    if labels.min() == labels.max():
+        raise ValueError("AUROC needs both positive and negative labels")
     rng = np.random.default_rng(seed)
     vals = []
     while len(vals) < n:
@@ -307,7 +325,7 @@ def evidence_items():
 
 def answer_covered(selected, passages, answers):
     text = norm_answer(" ".join(passages[i] for i in selected))
-    return float(any(norm_answer(a) and norm_answer(a) in text for a in answers))
+    return float(any(has_phrase(text, norm_answer(a)) for a in answers))
 
 
 def paired_test(a, b, n=10000, seed=SEED):
@@ -382,16 +400,19 @@ def run_timing(items, repeats=20):
                 for q, passages, _, _ in data:
                     fn(q, passages)
                 runs.append(1000 * (time.perf_counter() - start) / len(data))
-            # Repeats of NLI methods hit the prediction cache, so add the model time measured at first computation
-            model_ms = 0.0
+            # Repeats of NLI methods hit the prediction cache, so add the model time measured at first computation.
+            # That time was measured once, so these methods get no run-to-run SD; the spread across questions is
+            # reported separately.
+            model_ms, model_sd = 0.0, None
             if method in NLI_METHODS:
-                model_ms = 1000 * float(np.mean([
-                    nli_verifier().inference_seconds(nli_verifier().document_pairs(to_documents(q, p)[0]))
-                    for q, p, _, _ in data]))
+                per_query = [1000 * nli_verifier().inference_seconds(nli_verifier().document_pairs(to_documents(q, p)[0]))
+                             for q, p, _, _ in data]
+                model_ms, model_sd = float(np.mean(per_query)), float(np.std(per_query, ddof=1))
             rows.append({"dataset": ds, "method": method, "repeats": repeats,
                          "ms_per_query_mean": float(np.mean(runs)) + model_ms,
-                         "ms_per_query_sd": float(np.std(runs, ddof=1)),
+                         "ms_per_query_sd": None if method in NLI_METHODS else float(np.std(runs, ddof=1)),
                          "nli_model_ms_per_query": model_ms,
+                         "nli_model_ms_sd_across_queries": model_sd,
                          "candidates_per_query": len(data[0][1])})
     return rows
 
@@ -483,12 +504,7 @@ def run_paired_tests(per_item):
                     m, lo, hi, p = paired_test(per_item[(ds, ref)][metric], per_item[(ds, other)][metric])
                     rows.append({"dataset": ds, "reference": ref, "comparator": other, "metric": metric,
                                  "mean_diff": m, "ci_low": lo, "ci_high": hi, "p_value": p})
-    # Holm-Bonferroni step-down adjustment across the whole family of tests
-    order = sorted(range(len(rows)), key=lambda i: rows[i]["p_value"])
-    running = 0.0
-    for rank, i in enumerate(order):
-        running = max(running, min(1.0, (len(rows) - rank) * rows[i]["p_value"]))
-        rows[i]["p_holm"] = running
+    holm(rows)   # across the whole family of tests
     return rows
 
 
@@ -518,7 +534,10 @@ NEGATIONS = {"not", "no", "never", "none", "neither", "nor", "cannot", "without"
 
 def negation_baseline(a, b):
     """Lexical baseline: flag a contradiction when one side is negated and the two overlap."""
-    ta, tb = set(re.findall(r"\w+|n't", a.lower())), set(re.findall(r"\w+|n't", b.lower()))
+    def cues(s):   # words plus "n't", which \w+ would otherwise split off as 'isn' + 't'
+        s = s.lower().replace("’", "'")
+        return set(re.findall(r"\w+", s)) | ({"n't"} if "n't" in s else set())
+    ta, tb = cues(a), cues(b)
     overlap = len(set(tokens(a)) & set(tokens(b))) / max(1, min(len(set(tokens(a))), len(set(tokens(b)))))
     return int(bool(ta & NEGATIONS) != bool(tb & NEGATIONS) and overlap >= 0.2)
 

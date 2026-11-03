@@ -16,8 +16,8 @@
 
 **Results.**
 - On clean retrieval, conflict-preserving CAS selected more precise evidence than Vanilla RAG (F1 +0.299, Holm p = 0.015). It cut prompts to about 28% of Vanilla's length. It did not improve answer accuracy for any model.
-- None of the ten pre-registered decisions in the poisoning studies supported CAS. Under the stronger attack, a plain source filter cut poison adoption to 3.5–4.0%; conflict-preserving CAS left it at 23–28% (Holm p = 0.002).
-- **[S3: one sentence on H1–H3 from `evaluation/results/clean500_summary.json` → `decisions`.]**
+- None of the ten pre-registered decisions in the poisoning studies supported CAS. Under the stronger attack, a plain source filter cut poison adoption to 3.5–4.0%; conflict-preserving CAS left it at 22.5–28% (Holm p = 0.002).
+- At n = 500, CAS selected significantly better evidence than Vanilla RAG and BM25 (F1 +0.334 and +0.029), but not significantly better than a cross-encoder reranker. It did not improve answer accuracy, and for one model it was significantly less accurate than Vanilla RAG, so all three pre-registered hypotheses were not supported.
 - The Monte Carlo study shows that these outcomes do not depend on the hand-set weights: the comparisons with Vanilla RAG and with the source filter went the same way in 100% of 1,250 random settings. It also identifies two causes:
   - The NLI model labels 56% of poisoned copies as *agreeing* with their source, so CAS's agreement score rewards the poison.
   - Without source metadata, the detector would need about five times its current recall before CAS matches a BM25 baseline.
@@ -191,13 +191,22 @@ The automatic accuracy, abstention and adoption labels are being validated again
 |---|---|
 | 1 | 47224db4 |
 | 2 | a06a32f1 |
+| 3 | c1eb4a89 |
 | 4 | 2038df84 |
-| 3 | **[S3: `preregistration_sha256`]** |
 
 - **Confirmatory families:**
   - studies 1–2: 20 tests each (2 models × 5 comparisons × 2 endpoints), five mechanical decisions;
   - study 3: 9 tests plus a non-inferiority margin of −0.05.
 - **The plans were not deposited in a public registry.** We release the full git history.
+
+**Deviation: scoring corrections.**
+- **What happened.** After studies 1–3 had run, a code review found that the answer scoring did not implement the pre-registered definitions. For example, a gold answer "no" was found inside "unknown". The fixes:
+  - answers now match as whole words;
+  - an abstention is never counted as correct;
+  - a fake answer that contains the real answer is scored separately;
+  - the exploratory conflict flag needs explicit conflict language.
+- **How it was corrected.** All studies were re-scored from the same cached model outputs; no model was re-run. The as-run results are archived.
+- **Impact.** No pre-registered decision changed. One confirmatory test became significant, and it went against CAS (study 3, Gemma 3 vs Vanilla RAG: −0.068, Holm p = 0.010). Every number in this paper uses the corrected scoring. The full before/after comparison is in the released `DEVIATIONS.md`.
 
 ### 4.6 Monte Carlo design (study 4)
 
@@ -230,13 +239,13 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 
 **Answers.**
 - After Holm correction over 210 tests, no CAS variant was significantly better than any baseline for any of the three LLMs.
-- Vanilla RAG was the most accurate method on HotpotQA for every model (0.60, 0.56, 0.68).
-- Conflict-preserving CAS cut the mean prompt from about 1,700–1,770 tokens to roughly 28% of that, at an accuracy cost of 0.03–0.11.
+- Vanilla RAG was the most accurate method on HotpotQA for every model (0.56, 0.52, 0.68).
+- Conflict-preserving CAS cut the mean prompt from about 1,700–1,770 tokens to roughly 28% of that, at an accuracy cost of 0.05–0.12.
 
 **Conflict surfacing.** On WikiContradict, conflict notes did not increase the rate at which models flagged a conflict above simply showing both passages:
-- Vanilla RAG: 0.48–0.80.
-- Conflict-preserving CAS: 0.32–0.58.
-- Every significant difference was a drop.
+- Vanilla RAG: 0.22–0.32.
+- Conflict-preserving CAS: 0.14–0.22.
+- No flagging difference was significant after Holm correction.
 
 **Detection and cost.**
 - Pooled over 120 labelled pairs (WikiContradict contradictions and consistent HotpotQA pairs), DeBERTa detected contradictions with F1 0.652. The keyword verifier detected none.
@@ -259,31 +268,31 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 | 2 | B | Vanilla RAG | not supported |
 | 2 | B | BM25 top-3 | not supported |
 | 2 | B | Provenance + BM25 top-3 | not supported |
-| 3 | — | H1, evidence F1 | **[S3]** |
-| 3 | — | H2, accuracy | **[S3]** |
-| 3 | — | H3, non-inferiority | **[S3]** |
+| 3 | — | H1, evidence F1 | not supported (significant vs Vanilla RAG and BM25, not vs the reranker) |
+| 3 | — | H2, accuracy | not supported |
+| 3 | — | H3, non-inferiority | not supported |
 
 **The attack was weak.** Many substitutes were implausible, so poison adoption was near its floor even without filtering (Vanilla RAG: 3.5% for Llama, 6.5% for Gemma). That left little room to show a reduction.
 
 **Accuracy.**
-- Vanilla RAG was the most accurate method (Llama 0.515, Gemma 0.395).
-- Conflict-preserving CAS was significantly less accurate than Vanilla RAG for Llama in condition A (−0.115 [−0.170, −0.060], Holm p = 0.004).
+- Vanilla RAG was the most accurate method (Llama 0.505, Gemma 0.390).
+- Conflict-preserving CAS was significantly less accurate than Vanilla RAG for Llama in condition A (−0.110 [−0.165, −0.055], Holm p = 0.012).
 
 **Source filter.** In condition B, the filter gave Gemma 1.0% adoption, against 8.0% for conflict-preserving CAS (Holm p = 0.030).
 
-**Preserve vs penalty (exploratory family).** Conflict preservation was more accurate than the penalty, by +0.065 to +0.070 (Holm p ≈ 0.03).
+**Preserve vs penalty (exploratory family).** Conflict preservation was more accurate than the penalty, by +0.060 to +0.065. The difference was significant in three of four cases (Holm p = 0.031–0.044).
 
 All five decisions were "not supported" (Table 2).
 
 ### 5.3 Study 2: a stronger attack (pre-registered)
 
-**The attack was effective.** Without filtering, both models gave the poison answer in 28.5% of questions, and accuracy fell to 0.235 (Llama) and 0.220 (Gemma).
+**The attack was effective.** Without filtering, the models gave the poison answer in 28.0% (Llama) and 28.5% (Gemma) of questions, and accuracy fell to 0.230 and 0.220.
 
 **Condition A (no metadata).** Conflict-preserving CAS did not differ from Vanilla RAG or BM25 top-3 on either endpoint (all Holm p = 1.0). A poison passage reached its context for every question.
 
 **Condition B (noisy metadata).**
 - The source filter cut adoption to 3.5% (Llama) and 4.0% (Gemma), with accuracy not significantly different from conflict-preserving CAS.
-- Conflict-preserving CAS stayed at 23.0% and 28.0% (differences +0.195 and +0.240, both Holm p = 0.002).
+- Conflict-preserving CAS stayed at 22.5% and 28.0% (differences +0.190 and +0.240, both Holm p = 0.002).
 - CAS w/o graph still selected a poison passage for 99.5% of questions.
 
 **Penalty mode** gave the lowest CAS adoption (18.5–21.5%), with no accuracy gain and abstention of up to 20.5–28.5%.
@@ -292,14 +301,29 @@ All five decisions were "not supported".
 
 ### 5.4 Study 3: clean replication at n = 500 (pre-registered)
 
-**[S3: Report exactly, from `evaluation/results/clean500_summary.json`:**
-- **H1:** evidence F1 difference vs Vanilla RAG, BM25 top-3 and Reranker top-3, with 95% CIs and Holm p;
-- **H2:** accuracy difference vs the same three comparators, per model;
-- **H3:** the CI lower bound vs −0.05, per model;
-- **the three decisions;**
-- **descriptive:** prompt tokens and abstention.
+Study 3 used 500 new HotpotQA questions, with 10 passages each and no poisoning (Fig. 6). All three pre-registered hypotheses were not supported (Table 2).
 
-**No sentence in this section is to be written before the file exists.]**
+**Evidence selection (H1).**
+- Conflict-preserving CAS reached evidence F1 0.669, against:
+  - Vanilla RAG: 0.335;
+  - BM25 top-3: 0.640;
+  - the cross-encoder reranker: 0.648.
+- It was significantly better than Vanilla RAG (+0.334 [+0.316, +0.353], Holm p < 0.001) and BM25 top-3 (+0.029 [+0.016, +0.043], Holm p = 0.002).
+- It was not significantly better than the reranker (+0.021 [−0.001, +0.043], Holm p = 0.40). H1 required all three comparisons, so it is not supported.
+- **Exploratory:** CAS without the conflict graph selected slightly better evidence than with it (F1 0.680; difference −0.011, Holm p < 0.001). This repeats the clean-benchmark finding that the graph adds nothing to selection.
+
+**Answer accuracy (H2, H3).**
+- Vanilla RAG was the most accurate method (Llama 0.502, Gemma 0.456); conflict-preserving CAS reached 0.464 and 0.388.
+- No accuracy comparison favoured CAS.
+- For Gemma, CAS was significantly less accurate than Vanilla RAG (−0.068 [−0.108, −0.030], Holm p = 0.010).
+- Non-inferiority to Vanilla RAG failed for both models: the CI lower bounds were −0.078 and −0.108, against a margin of −0.05.
+- **Abstention:**
+  - CAS abstained more often: 15.8% vs 3.4% for Llama, and 24.0% vs 8.2% for Gemma.
+  - About half of the questions that Vanilla RAG answered correctly and CAS did not were CAS abstentions: 29 of 61 (Llama) and 37 of 70 (Gemma).
+
+**Exploratory.**
+- **Preserve vs penalty:** conflict preservation again beat the contradiction penalty, by +0.058 (Llama) and +0.078 (Gemma) in accuracy and +0.112 in evidence F1, all Holm p < 0.001.
+- **Cost:** CAS used about 28% of Vanilla RAG's prompt (406 vs 1,433–1,462 tokens) and generated answers about 3.5 times faster (2.6–3.6 s vs 10.3–12.8 s).
 
 ### 5.5 Study 4: what drives the outcome (pre-registered Monte Carlo)
 
@@ -315,10 +339,10 @@ All five decisions were "not supported".
 |---|---|---|---|---|---|
 | A | Vanilla RAG | Silent exposure | −0.213 | −0.220 [−0.254, −0.188] | 100% |
 | A | BM25 top-3 | Silent exposure | +0.027 | +0.020 [−0.013, +0.054] | 36% |
-| A | BM25 top-3 | Answer passage kept | +0.177 | +0.187 [+0.148, +0.228] | 89.8% |
+| A | BM25 top-3 | Answer passage kept | +0.177 | +0.189 [+0.150, +0.231] | 89.9% |
 | B | Vanilla RAG | Silent exposure | −0.255 | −0.267 [−0.301, −0.234] | 100% |
 | B | Source filter | Silent exposure | +0.512 | +0.497 [+0.469, +0.524] | 0% |
-| B | Source filter | Answer passage kept | +0.188 | +0.174 [+0.148, +0.200] | 91.2% |
+| B | Source filter | Answer passage kept | +0.190 | +0.178 [+0.151, +0.203] | 91.8% |
 
 **Metadata quality (E2).**
 - The source filter reached ≤ 5% silent exposure only with perfectly labelled sources (separation ≥ 0.4). With 10% of sources mislabelled, it bottomed out at 12%.
@@ -327,11 +351,11 @@ All five decisions were "not supported".
 **Detector quality (E3).**
 - **Without metadata,** conflict-preserving CAS matched BM25 top-3 once the detector flagged 30% of true conflict pairs. That is about 50% recall per question, roughly five times the current detector's 9.75% (pooled over studies 1–2). The false-alarm rate (0–50%) barely mattered for this endpoint.
 - **With noisy metadata,** even a perfect detector left CAS behind the source filter (0.33 vs 0.23).
-- **Penalty mode** reached zero silent exposure with a perfect detector, but only by penalising both passages of every flagged pair. The answer passage then survived in 11–17% of questions, against 71–77% with no detection.
+- **Penalty mode** reached zero silent exposure with a perfect detector, but only by penalising both passages of every flagged pair. The answer passage then survived in 10–16% of questions, against 70–77% with no detection.
 
 **Conflict notes (E4, exploratory).** In the real study 1–2 outputs, a conflict note on the poison did not lower adoption:
-- Llama 3.2: 15.7% with a note (n = 70) vs 17.2% without (n = 594).
-- Gemma 3: 28.6% vs 22.4%.
+- Llama 3.2: 15.7% with a note (n = 70) vs 16.8% without (n = 594).
+- Gemma 3: 28.6% vs 22.2%.
 
 ### 5.6 Can the detector be made practical? (exploratory)
 
@@ -371,10 +395,10 @@ Three mechanisms, each measured directly, explain the negative results.
 
 ### 6.2 What does work
 
-- **Conflict preservation is the better synthesis mode.** It beat the penalty in accuracy under poisoning (study 1, exploratory), and it did not empty the context on clean data. Once contradictions are flagged, it keeps the answer passage far more often than the penalty: 45–58% vs 11–17% with a perfect detector.
+- **Conflict preservation is the better synthesis mode.** It beat the penalty in accuracy under poisoning (study 1, exploratory), and it did not empty the context on clean data. Once contradictions are flagged, it keeps the answer passage far more often than the penalty: 45–58% vs 10–16% with a perfect detector. Study 3 confirmed the advantage at n = 500: +0.058 to +0.078 accuracy and +0.112 evidence F1 (exploratory, Holm p < 0.001).
 - **On clean retrieval, CAS-style filtering improves evidence precision and cuts prompt length by about 3.5×.** This matters for latency-bound deployments, even though answer accuracy does not improve.
 
-**[S3: state whether the n = 500 replication confirms either point.]**
+At n = 500 (study 3), the evidence gain held against Vanilla RAG and BM25 but not against a cross-encoder reranker. A trained reranker therefore matches CAS's selection without any conflict graph.
 
 ### 6.3 Design recommendations
 
@@ -416,7 +440,9 @@ Conflict-aware pre-generation verification makes two claims: it selects better e
 
 **Clean retrieval.** Conflict-preserving CAS selected significantly more precise evidence than Vanilla RAG and cut prompts to about 28% of their length. Conflict preservation also outperformed contradiction penalties.
 
-**Poisoning.** In both pre-registered poisoning studies, CAS did not significantly reduce poison adoption relative to Vanilla RAG (differences −0.055 to +0.035, all Holm p = 1.0). When source metadata were available, a plain source filter performed significantly better.
+**At scale.** In a pre-registered replication on 500 clean questions, CAS selected significantly better evidence than Vanilla RAG and BM25, but not better than a cross-encoder reranker. It did not improve answer accuracy.
+
+**Poisoning.** In both pre-registered poisoning studies, CAS did not significantly reduce poison adoption relative to Vanilla RAG (differences −0.055 to +0.030, all Holm p = 1.0). When source metadata were available, a plain source filter performed significantly better.
 
 **Causes.** A pre-registered Monte Carlo study of more than three million selection runs traced the poisoning result to three measurable causes. Each points to a concrete fix:
 
@@ -451,7 +477,7 @@ All code, pre-registrations, benchmarks, cached NLI and LLM outputs, per-questio
 | Fig. 3 | LLM answer quality and cost | `fig08_llm_answer_quality`, `fig10_llm_cost_tradeoff` |
 | Fig. 4 | Study 1 | `fig12_poison_study1` |
 | Fig. 5 | Study 2 | `fig13_poison_study2` |
-| Fig. 6 | Study 3 | **[S3: fig16, after the run]** |
+| Fig. 6 | Study 3 | `fig16_clean500` |
 | Fig. 7 | Detector accuracy vs false alarms vs cost | `fig14_detector_tradeoff` |
 | Fig. 8 | Monte Carlo study | `fig15_montecarlo` |
 

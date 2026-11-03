@@ -1,6 +1,6 @@
 # Journal figures: CAS pre-generation verification
 
-Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all fifteen figures and `tables.md`, then checks the plotted values against the results files (last run: **PASS, 15 figures**).
+Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all sixteen figures and `tables.md`, then checks the plotted values against the results files and exits with an error if any differ (last run: **PASS, 16 figures**).
 
 ## Reproduce
 
@@ -8,7 +8,9 @@ Every number in this folder is measured. The figures are drawn from the files in
 py evaluation/run_evaluation.py         # ~45 min on CPU (DeBERTa NLI); predictions cached in nli_cache.jsonl
 py evaluation/run_llm_generation.py --models llama3.2:latest gemma3:latest llama3.1:8b
                                         # Ollama, CPU only; ~3.5 h for the 8B model; responses cached
+py evaluation/run_clean500.py           # study 3: 500 questions x 6 methods x 2 LLMs; ~6 h on CPU, responses cached
 py evaluation/run_montecarlo.py         # study 4: 3,064,800 simulated selections in ~1 min; no model inference
+py evaluation/compare_as_run.py         # as-run vs corrected scores (DEVIATIONS.md)
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 
@@ -46,6 +48,13 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 3. **Evaluation adapter fix:** relevance is now BM25 divided by the pool maximum. It was previously min-max normalised, which forced the weakest passage to 0 and so, for two-passage pools, always dropped one of them. All methods were re-run under the corrected adapter, which changed the earlier CAS-keyword numbers (for example HotpotQA F1 went from 0.580 to 0.552). The earlier numbers remain in git history.
 4. **θ is now chosen by held-out cross-validation** (`run_cv` in `evaluation/run_evaluation.py`; Fig. 11).
 5. **A third, larger LLM was added:** Llama 3.1 8B, run on CPU.
+6. **Scoring corrections (2026-11-03), after a code review.** Every study was re-scored from the same cached model outputs, with no model re-run:
+   - answers now match the gold answer as whole words ("no" is no longer found inside "unknown");
+   - an abstention is never counted as correct;
+   - the conflict flag needs explicit conflict language;
+   - fake answers that contain the real answer, or the other way round, are scored separately.
+
+   No pre-registered decision changed. The as-run files are archived in `evaluation/results/as_run_2026-11-03/`. Details and the impact on every test are in `evaluation/DEVIATIONS.md`.
 
 ## Figure → data mapping
 
@@ -66,6 +75,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 13 | `fig13_poison_study2.py` (uses `_poison.py`) | `data/fig13_*.csv` | `poison2_summary.json` → `descriptive` |
 | 14 | `fig14_detector_tradeoff.py` | `data/fig14_*.csv` | `detector_probe.json` (from `evaluation/run_detector_probe.py`) |
 | 15 | `fig15_montecarlo.py` | `data/fig15_*.csv` | `montecarlo_summary.json`, `montecarlo_e1/e2/e3.csv` (from `evaluation/run_montecarlo.py`) |
+| 16 | `fig16_clean500.py` | `data/fig16_*.csv` | `clean500_summary.json` (from `evaluation/run_clean500.py`) |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -105,7 +115,8 @@ Every table cell is in `tables.md` (Tables 1–10).
 - Not shown: on MultiNLI, DeBERTa scores 20/20. This is **not** a valid result, because these samples are from the MultiNLI training set the model was trained on.
 
 **Fig. 5. Evidence F1 vs selection latency per query.**
-- Log scale; mean ± SD over 20 repeats. NLI methods include CPU model time, measured at first computation.
+- Log scale. Methods without NLI: mean ± SD over 20 repeats.
+- NLI methods include the CPU model time, which was measured once per passage pair when it was first computed. They therefore have no run-to-run SD and are shown without error bars. Their spread across questions is in `results.json` → `timing` → `nli_model_ms_sd_across_queries`.
 - DeBERTa costs about 23 s per HotpotQA query (90 directional pairs) and 84 s per MuSiQue query (380 pairs). Every non-NLI method takes under 5 ms.
 - The cost grows quadratically with the number of candidates.
 
@@ -121,15 +132,15 @@ Every table cell is in `tables.md` (Tables 1–10).
 
 **Fig. 8. End-to-end answer quality, three local LLMs × six evidence-selection methods.**
 - Models: Llama 3.2 3B, Gemma 3 4B and Llama 3.1 8B, all at temperature 0. Error bars are 95% bootstrap CIs.
-- On HotpotQA, Vanilla RAG is the most accurate method for every model: 0.60, 0.56 and 0.68.
+- On HotpotQA, Vanilla RAG is the most accurate method for every model: 0.56 (Llama 3.2 3B), 0.52 (Gemma 3 4B) and 0.68 (Llama 3.1 8B).
 - The larger model does not change the ranking. With Llama 3.1 8B:
-  - BM25 top-3 reaches 0.68.
-  - CAS-keyword and CAS-NLI θ-CV preserve reach 0.60.
-  - CAS-NLI θ-CV (penalty) reaches 0.50, and CAS-NLI reaches 0.36.
+  - BM25 top-3 reaches 0.66.
+  - CAS-keyword reaches 0.58, and CAS-NLI θ-CV preserve 0.56.
+  - CAS-NLI θ-CV (penalty) reaches 0.46, and CAS-NLI reaches 0.30.
 - After Holm correction over 210 tests, **no CAS variant is significantly better than any baseline for any model**. The significant QA differences are all losses for CAS-NLI with argmax labels:
   - Gemma, HotpotQA F1 vs Vanilla: −0.283.
-  - Llama 3.1 8B, HotpotQA vs Vanilla: accuracy −0.32, F1 −0.366.
-  - Llama 3.1 8B, HotpotQA vs BM25: accuracy −0.32, F1 −0.333.
+  - Llama 3.1 8B, HotpotQA vs Vanilla: accuracy −0.38, F1 −0.366.
+  - Llama 3.1 8B, HotpotQA vs BM25: accuracy −0.36, F1 −0.333.
   - All have Holm p = 0.021.
 - MuSiQue (n = 15) intervals are too wide to separate the methods.
 
@@ -143,12 +154,12 @@ Every table cell is in `tables.md` (Tables 1–10).
   - CAS-NLI θ-CV preserve: 0.20–0.29.
   - CAS-NLI: 0.40–0.54.
 - (c) WikiContradict conflict flagging (n = 50).
-  - Vanilla RAG gives 0.48, 0.70 and 0.80. CAS-NLI θ-CV preserve gives 0.32, 0.34 and 0.58.
-  - The labelled conflict notes do **not** raise flagging above simply showing both passages. Every significant difference is a drop vs Vanilla RAG:
-    - Gemma, θ-CV preserve: −0.36 (Holm p = 0.021).
-    - Gemma, CAS-keyword: −0.28.
-    - Llama 3.1 8B, CAS-NLI: −0.52.
-    - Llama 3.1 8B, CAS-NLI θ-CV: −0.32 (Holm p = 0.040).
+  - Flagging is rare for every method:
+    - Vanilla RAG: 0.22 (Llama 3.2), 0.32 (Gemma), 0.28 (Llama 3.1 8B).
+    - CAS-NLI θ-CV preserve: 0.14, 0.22 and 0.16.
+  - The labelled conflict notes do **not** raise flagging above simply showing both passages. No flagging difference is significant after Holm correction.
+  - The only significant conflict-handling difference is a drop: with Llama 3.2, CAS-NLI with argmax labels gives both answers less often than Vanilla RAG (−0.32, Holm p = 0.021).
+  - These numbers use the corrected flag rule. The first version counted any citation such as "Passage [1] states…" as a flag; see `evaluation/DEVIATIONS.md`.
 
 **Fig. 10. Answer accuracy vs generation cost** (HotpotQA and MuSiQue pooled, n = 65 per point).
 - Latency is LLM generation only; it excludes the NLI step in Fig. 5.
@@ -157,9 +168,9 @@ Every table cell is in `tables.md` (Tables 1–10).
 
   | Model | θ-CV preserve | Vanilla RAG | Gap |
   |---|---|---|---|
-  | Gemma 3 4B | 0.446 | 0.477 | −0.03 |
-  | Llama 3.2 3B | 0.431 | 0.538 | −0.11 |
-  | Llama 3.1 8B | 0.508 | 0.600 | −0.09 |
+  | Gemma 3 4B | 0.385 | 0.431 | −0.05 |
+  | Llama 3.2 3B | 0.400 | 0.492 | −0.09 |
+  | Llama 3.1 8B | 0.462 | 0.585 | −0.12 |
 
 **Fig. 11. Choosing the contradiction threshold θ by 5-fold cross-validation** (HotpotQA + MuSiQue, n = 65).
 - (a) Mean evidence F1 over the θ grid, all questions, descriptive.
@@ -170,21 +181,21 @@ Every table cell is in `tables.md` (Tables 1–10).
 
 **Fig. 12. Pre-registered study 1: CAS under poisoned retrieval** (HotpotQA-Poison, 200 new dev questions; `evaluation/PREREGISTRATION_poison.md`).
 - **Setup.** Each question gets one or two copies of its gold passage with the answer replaced by another question's answer. Condition B adds noisy source-reliability scores, which every method can use. Nothing was tuned (τ = 0.45, θ = 0.99).
-- **(a, b) Accuracy.** Vanilla RAG is the most accurate (Llama 0.515, Gemma 0.395). CAS-NLI preserve is significantly less accurate than Vanilla for Llama in condition A (−0.115 [−0.170, −0.060], Holm p = 0.004). Among the methods that filter the context, it is the strongest after CAS-keyword:
+- **(a, b) Accuracy.** Vanilla RAG is the most accurate (Llama 0.505, Gemma 0.390). CAS-NLI preserve is significantly less accurate than Vanilla for Llama in condition A (−0.110 [−0.165, −0.055], Holm p = 0.012). Among the methods that filter the context, it is the strongest after CAS-keyword:
   - vs BM25 top-3: +0.045 to +0.085.
   - vs Provenance + BM25 top-3: +0.020 to +0.090.
-  - These differences are significant before but not after Holm correction.
-  - vs CAS-NLI penalty: +0.065 to +0.070 (exploratory family, Holm p ≈ 0.03).
+  - Some of these differences (condition B) are significant before Holm correction; none is after it.
+  - vs CAS-NLI penalty: +0.060 to +0.065, significant in three of four cases (exploratory family, Holm p = 0.031–0.044).
 - **(c, d) Poison adoption.** The models seldom gave the fake answer even with no filtering (Vanilla RAG: 3.5% and 6.5%), because many substitutes were implausible. This floor left no room to show a reduction. In condition B the source filter did best: for Gemma it cut adoption to 1.0%, against 8.0% for CAS-NLI preserve (Holm p = 0.030).
 - **Pre-registered decisions:** all five are "not supported".
 
 **Fig. 13. Pre-registered study 2: a stronger attack** (HotpotQA-Poison-2, 200 further dev questions; `evaluation/PREREGISTRATION_poison2.md`, including its one amendment, made before any method ran).
 - **Setup.** Three type-matched poison passages per question, which agree with each other and outnumber the true passage, following the PoisonedRAG black-box design. Conditions, methods and tests are the same as in study 1.
-- **The attack worked.** With no filtering, both models gave the fake answer in 28.5% of answers, and accuracy fell to 0.235 (Llama) and 0.220 (Gemma).
+- **The attack worked.** With no filtering, the models gave the fake answer in 28.0% (Llama) and 28.5% (Gemma) of answers, and accuracy fell to 0.230 and 0.220.
 - **(a, c) Condition A, no source metadata.** CAS-NLI preserve does not differ from Vanilla RAG or BM25 top-3 on either endpoint (all Holm p = 1.0). The poison reaches its context for every question.
 - **(b, d) Condition B, noisy source metadata.**
   - Provenance + BM25 top-3 cuts adoption to 3.5% (Llama) and 4.0% (Gemma), and its accuracy is not significantly different from CAS-NLI preserve.
-  - CAS-NLI preserve stays at 23.0% and 28.0%, significantly worse (+0.195 and +0.240, both Holm p = 0.002).
+  - CAS-NLI preserve stays at 22.5% and 28.0%, significantly worse (+0.190 and +0.240, both Holm p = 0.002).
   - The poison still reaches the CAS-NLI preserve context for every question. The trust score does not remove a highly relevant passage on provenance alone (CAS w/o graph: 99.5%), and conflict preservation adds contradicted passages back.
 - **CAS-NLI penalty** removes poison from about a quarter of contexts and gives the lowest CAS adoption (18.5–21.5%), with abstention up to 20.5–28.5% and no accuracy gain. Its adoption is significantly lower than CAS-NLI preserve in three of four cases (exploratory family).
 - **Pre-registered decisions:** all five are "not supported".
@@ -221,7 +232,7 @@ Every table cell is in `tables.md` (Tables 1–10).
 - **(a) Trust weights and τ (E1).**
   - Settings: 1,250 random ones (weights ~ Dirichlet(1, 1, 1, 1), τ ~ U(0.30, 0.60)) plus the default.
   - **Against Vanilla RAG:** CAS-NLI preserve has less silent exposure in 100% of settings (pooled mean difference −0.22 without metadata, −0.27 with noisy metadata). It keeps the answer passage less often in every setting, because Vanilla RAG keeps everything.
-  - **Against the source filter (Provenance + BM25 top-3):** CAS has more silent exposure in 100% of settings (+0.50, 95% CI [+0.47, +0.52]). It keeps the answer passage more often in 91% of settings (+0.17 [+0.15, +0.20]).
+  - **Against the source filter (Provenance + BM25 top-3):** CAS has more silent exposure in 100% of settings (+0.50, 95% CI [+0.47, +0.52]). It keeps the answer passage more often in 92% of settings (+0.18 [+0.15, +0.20]).
   - **Against BM25 top-3:** the silent-exposure difference is not robust to the parameters (CAS is better in 36% of settings without metadata and 62% with noisy metadata). CAS keeps the answer passage more often (+0.19 and +0.23).
   - **Conclusion:** study 2's finding that the source filter beats CAS is not an artefact of the hand-set weights.
   - **Note:** at the low end of its range (5th percentile), CAS w/o graph keeps no passage at all, so its exposure is 0 there.
@@ -235,14 +246,36 @@ Every table cell is in `tables.md` (Tables 1–10).
   - **Without metadata (c):** CAS-NLI preserve matches BM25 top-3 from r = 0.3. That corresponds to a question-level recall of about 50%, about five times the current detector's 9.75%.
   - **With noisy metadata (d):** CAS-NLI preserve never reaches the source filter, even with a perfect detector (0.33 vs 0.23). CAS-NLI penalty crosses it between r = 0.8 and 0.9, but by then it keeps the answer passage in at most 25% of questions (e).
 - **(e) The cost, at 10% false alarms.**
-  - Penalty mode penalises both sides of a detected conflict. Going from no detection to a perfect detector cuts how often the answer passage is kept from 71–77% to 11–17%.
-  - Preserve mode also drops, from 72–78% to 45–58%. Reason: the real model labels 470 of 845 gold–poison pairs (56%) as *agreement*, and only 67 (8%) as contradiction. Flagging a pair removes that agreement bonus from both passages.
+  - Penalty mode penalises both sides of a detected conflict. Going from no detection to a perfect detector cuts how often the answer passage is kept from 70–77% to 10–16%.
+  - Preserve mode also drops, from 71–78% to 45–58%. Reason: the real model labels 470 of 845 gold–poison pairs (56%) as *agreement*, and only 67 (8%) as contradiction. Flagging a pair removes that agreement bonus from both passages.
   - The same agreement bonus explains why, with no contradiction flags at all, CAS-NLI lets more poison through silently than CAS w/o graph (0.84 vs 0.77 without metadata): a poisoned copy "agrees" with its source, and the trust score rewards it.
 - **E4 (exploratory, real LLM outputs; not plotted; numbers in `montecarlo_summary.json`).**
   - When poison reached the CAS-NLI preserve prompt, a conflict note did not lower adoption.
-    - Llama 3.2: 15.7% with a note (n = 70) vs 17.2% without (n = 594).
-    - Gemma 3: 28.6% vs 22.4%.
+    - Llama 3.2: 15.7% with a note (n = 70) vs 16.8% without (n = 594).
+    - Gemma 3: 28.6% vs 22.2%.
   - For these small models, a better detector would not help unless the generator acts on the notes.
+
+**Fig. 16. Pre-registered study 3: clean retrieval at n = 500** (500 further HotpotQA dev questions; `evaluation/PREREGISTRATION_clean500.md`; scores corrected as described in `evaluation/DEVIATIONS.md`).
+- **Setup.**
+  - 10 passages per question, with no poisoning and no tuning (τ = 0.45, θ = 0.99).
+  - A cross-encoder reranker (`ms-marco-MiniLM-L-6-v2`) is added as a stronger baseline.
+  - Answers come from Llama 3.2 3B and Gemma 3 4B. Error bars are 95% bootstrap CIs. Filled markers in (c, d) have Holm p < 0.05 over the 9 confirmatory tests.
+- **(a, c) Evidence selection, H1.**
+  - CAS-NLI preserve reaches F1 0.669, against 0.335 for Vanilla RAG, 0.640 for BM25 top-3 and 0.648 for the reranker.
+  - It is significantly better than Vanilla RAG (+0.334 [+0.316, +0.353], Holm p < 0.001) and BM25 top-3 (+0.029 [+0.016, +0.043], Holm p = 0.002).
+  - It is not significantly better than the reranker (+0.021 [−0.001, +0.043], Holm p = 0.40).
+  - H1 required all three comparisons to be significant, so it is **not supported**.
+  - Exploratory: CAS w/o graph selects slightly better evidence than CAS-NLI preserve (F1 0.680, difference −0.011, Holm p < 0.001), so the conflict graph does not help selection.
+- **(b, d) Answer accuracy, H2 and H3.**
+  - Vanilla RAG is the most accurate method (Llama 0.502, Gemma 0.456). CAS-NLI preserve reaches 0.464 and 0.388.
+  - No comparison favours CAS. For Gemma, CAS-NLI preserve is significantly less accurate than Vanilla RAG (−0.068 [−0.108, −0.030], Holm p = 0.010).
+  - Non-inferiority to Vanilla RAG (H3, margin −0.05) fails for both models: the CI lower bounds are −0.078 and −0.108.
+  - H2 and H3 are **not supported**.
+- **What does hold, exploratory.**
+  - Conflict preservation beats the contradiction penalty: accuracy +0.058 (Llama) and +0.078 (Gemma), F1 +0.112, all Holm p < 0.001.
+  - CAS-NLI preserve uses about 28% of Vanilla RAG's prompt (406 vs 1,433–1,462 tokens) and generates about 3.5× faster (2.6–3.6 s vs 10.3–12.8 s).
+  - It abstains more often: 15.8% vs 3.4% (Llama) and 24.0% vs 8.2% (Gemma).
+  - About half of the questions that Vanilla RAG answers correctly and CAS-NLI preserve does not are abstentions: 29 of 61 (Llama) and 37 of 70 (Gemma). In the other direction, CAS-NLI preserve answers correctly 42 (Llama) and 36 (Gemma) questions that Vanilla RAG gets wrong.
 
 ## Summary of evidence
 
@@ -255,17 +288,19 @@ Every table cell is in `tables.md` (Tables 1–10).
 | …than CAS without the conflict graph | **No** difference (Fig. 2): the graph is not what helps |
 | CAS improves LLM answer accuracy | **No** significant improvement with 3B, 4B or 8B models (Fig. 8) |
 | CAS reduces prompt size and generation latency | **Yes**, about 3.5× shorter prompts (Fig. 10), but the NLI step itself costs 23–84 s per query on CPU (Fig. 5) |
-| CAS improves conflict surfacing | **No**: showing both passages (Vanilla) does as well or significantly better (Fig. 9c) |
+| CAS improves conflict surfacing | **No**: conflict notes do not raise flagging above simply showing both passages, and no flagging difference is significant (Fig. 9c) |
 | CAS reduces adoption of poisoned passages (pre-registered study 1) | **Not supported**; adoption was near floor for every method (Fig. 12) |
 | CAS reduces adoption under a stronger attack (pre-registered study 2) | **Not supported**: no difference from Vanilla RAG, and a simple source filter is significantly better (Fig. 13) |
+| CAS selects better evidence at n = 500 (pre-registered study 3, H1) | **Not supported** as pre-registered. It is significantly better than Vanilla RAG (+0.334) and BM25 top-3 (+0.029), but not the reranker (+0.021, Holm p = 0.40) (Fig. 16) |
+| CAS improves answers, or costs no accuracy, at n = 500 (study 3, H2/H3) | **Not supported**: no gain against any baseline; significantly less accurate than Vanilla RAG for Gemma (−0.068); non-inferiority fails for both models (Fig. 16) |
 | The conflict check can run cheaply on CPU | **Yes**: 0.04 s per query, about 500× faster than now (Fig. 14b) |
 | The conflict check is reliable enough for day-to-day use | **No**: at most 14% of conflicts caught at ≤ 10% false warnings; the current detector warns falsely on about half of normal questions (Fig. 14a) |
-| Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2). At the selection level, penalties also discard the answer passage as detection improves (Fig. 15e) |
+| Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.060 to +0.065 accuracy under poisoning, significant in three of four cases (Fig. 12; exploratory family, Holm p = 0.031–0.044), and on clean data (Fig. 2). At the selection level, penalties also discard the answer passage as detection improves (Fig. 15e) |
 | CAS's selection-level results are an artefact of the hand-set weights and τ | **No**: the direction against Vanilla RAG and against the source filter holds in 100% of 1,250 random settings (Fig. 15a) |
 | CAS uses source metadata as well as a simple source filter | **No**: at every metadata quality tested, the filter lets less poison through silently (Fig. 15b) |
 | A better conflict detector would make CAS competitive | **Partly**: without metadata, CAS matches BM25 top-3 once it catches about half of conflicts, about 5× today's detector, whatever the false-alarm rate. With noisy metadata it never matches the source filter (Fig. 15c–d) |
 | The agreement term in the trust score helps against poisoning | **No**: the NLI model calls 56% of gold–poison pairs "agreement", so the bonus raises poison exposure (Fig. 15, E3 at r = 0) |
-| A conflict note stops small LLMs adopting poison | **No evidence**: 15.7–28.6% adoption with a note vs 17.2–22.4% without (exploratory, E4) |
+| A conflict note stops small LLMs adopting poison | **No evidence**: 15.7–28.6% adoption with a note vs 16.8–22.2% without (exploratory, E4) |
 
 ## Limitations
 
