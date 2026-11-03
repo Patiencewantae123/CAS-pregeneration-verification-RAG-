@@ -1,0 +1,730 @@
+{
+ "preregistration_sha256": "c1eb4a893315b433281caa82dbec56ed21a00e63463827b81d50e2123264e927",
+ "n_questions": 2,
+ "models": [
+  "llama3.2:latest"
+ ],
+ "theta": 0.99,
+ "tau": 0.45,
+ "descriptive": [
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Vanilla RAG",
+   "metric": "precision",
+   "mean": 0.2,
+   "ci_low": 0.2,
+   "ci_high": 0.2,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Vanilla RAG",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.33333333333333337,
+   "ci_low": 0.33333333333333337,
+   "ci_high": 0.33333333333333337,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Vanilla RAG",
+   "metric": "n_selected",
+   "mean": 10.0,
+   "ci_low": 10.0,
+   "ci_high": 10.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "BM25 top-3",
+   "metric": "precision",
+   "mean": 0.6666666666666666,
+   "ci_low": 0.6666666666666666,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "BM25 top-3",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 0.8,
+   "ci_low": 0.8,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "BM25 top-3",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Reranker top-3",
+   "metric": "precision",
+   "mean": 0.5,
+   "ci_low": 0.3333333333333333,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Reranker top-3",
+   "metric": "recall",
+   "mean": 0.75,
+   "ci_low": 0.5,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Reranker top-3",
+   "metric": "f1",
+   "mean": 0.6000000000000001,
+   "ci_low": 0.4,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "Reranker top-3",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS w/o graph",
+   "metric": "precision",
+   "mean": 0.6666666666666666,
+   "ci_low": 0.6666666666666666,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS w/o graph",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.8,
+   "ci_low": 0.8,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS w/o graph",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-keyword",
+   "metric": "precision",
+   "mean": 0.6666666666666666,
+   "ci_low": 0.6666666666666666,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-keyword",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-keyword",
+   "metric": "f1",
+   "mean": 0.8,
+   "ci_low": 0.8,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-keyword",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI penalty",
+   "metric": "precision",
+   "mean": 0.6666666666666666,
+   "ci_low": 0.6666666666666666,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI penalty",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.8,
+   "ci_low": 0.8,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI penalty",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI preserve",
+   "metric": "precision",
+   "mean": 0.6666666666666666,
+   "ci_low": 0.6666666666666666,
+   "ci_high": 0.6666666666666666,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI preserve",
+   "metric": "recall",
+   "mean": 1.0,
+   "ci_low": 1.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.8,
+   "ci_low": 0.8,
+   "ci_high": 0.8,
+   "n": 2
+  },
+  {
+   "level": "evidence",
+   "model": "-",
+   "method": "CAS-NLI preserve",
+   "metric": "n_selected",
+   "mean": 3.0,
+   "ci_low": 3.0,
+   "ci_high": 3.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "metric": "f1",
+   "mean": 0.9,
+   "ci_low": 0.8,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "metric": "prompt_tokens",
+   "mean": 1770.0,
+   "ci_low": 1563.0,
+   "ci_high": 1977.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "metric": "wall_s",
+   "mean": 14.97327185000006,
+   "ci_low": 11.579144400000132,
+   "ci_high": 18.367399299999988,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "metric": "f1",
+   "mean": 0.9,
+   "ci_low": 0.8,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "metric": "prompt_tokens",
+   "mean": 540.0,
+   "ci_low": 536.0,
+   "ci_high": 544.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "metric": "wall_s",
+   "mean": 3.6288659500000904,
+   "ci_low": 3.5445240000001377,
+   "ci_high": 3.713207900000043,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "metric": "f1",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "metric": "prompt_tokens",
+   "mean": 553.0,
+   "ci_low": 536.0,
+   "ci_high": 570.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "metric": "wall_s",
+   "mean": 2.6121925500000316,
+   "ci_low": 1.51117720000002,
+   "ci_high": 3.713207900000043,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "metric": "f1",
+   "mean": 0.9,
+   "ci_low": 0.8,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "metric": "prompt_tokens",
+   "mean": 540.0,
+   "ci_low": 536.0,
+   "ci_high": 544.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "metric": "wall_s",
+   "mean": 3.6288659500000904,
+   "ci_low": 3.5445240000001377,
+   "ci_high": 3.713207900000043,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean": 0.9,
+   "ci_low": 0.8,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "metric": "prompt_tokens",
+   "mean": 540.0,
+   "ci_low": 536.0,
+   "ci_high": 544.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "metric": "wall_s",
+   "mean": 3.6288659500000904,
+   "ci_low": 3.5445240000001377,
+   "ci_high": 3.713207900000043,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "metric": "accuracy",
+   "mean": 0.5,
+   "ci_low": 0.0,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "metric": "f1",
+   "mean": 0.9,
+   "ci_low": 0.8,
+   "ci_high": 1.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "metric": "abstain",
+   "mean": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "metric": "prompt_tokens",
+   "mean": 540.0,
+   "ci_low": 536.0,
+   "ci_high": 544.0,
+   "n": 2
+  },
+  {
+   "level": "answer",
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "metric": "wall_s",
+   "mean": 3.6288659500000904,
+   "ci_low": 3.5445240000001377,
+   "ci_high": 3.713207900000043,
+   "n": 2
+  }
+ ],
+ "confirmatory": [
+  {
+   "comparator": "Vanilla RAG",
+   "metric": "f1",
+   "mean_diff": 0.4666666666666667,
+   "ci_low": 0.4666666666666667,
+   "ci_high": 0.4666666666666667,
+   "p_value": 0.5078492150784921,
+   "hypothesis": "H1",
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "BM25 top-3",
+   "metric": "f1",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "hypothesis": "H1",
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "Reranker top-3",
+   "metric": "f1",
+   "mean_diff": 0.2,
+   "ci_low": 0.0,
+   "ci_high": 0.4,
+   "p_value": 1.0,
+   "hypothesis": "H1",
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "hypothesis": "H2",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "BM25 top-3",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "hypothesis": "H2",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "Reranker top-3",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "hypothesis": "H2",
+   "p_holm": 1.0
+  }
+ ],
+ "non_inferiority": [
+  {
+   "comparator": "Vanilla RAG",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "hypothesis": "H3",
+   "margin": -0.05,
+   "holds": true
+  }
+ ],
+ "exploratory": [
+  {
+   "comparator": "CAS w/o graph",
+   "metric": "f1",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "CAS-keyword",
+   "metric": "f1",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "CAS-NLI penalty",
+   "metric": "f1",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "model": "-",
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "CAS w/o graph",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  },
+  {
+   "comparator": "CAS-NLI penalty",
+   "metric": "accuracy",
+   "model": "llama3.2:latest",
+   "mean_diff": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0,
+   "p_value": 1.0,
+   "p_holm": 1.0
+  }
+ ],
+ "decisions": {
+  "CAS selects better evidence (H1)": false,
+  "CAS improves answers (H2)": false,
+  "CAS filtering is accuracy-neutral (H3)": true
+ }
+}

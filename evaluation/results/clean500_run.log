@@ -1,0 +1,19 @@
+﻿py : Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate 
+limits and faster downloads.
+At line:1 char:302
++ ... tch {} } }; py evaluation/run_clean500.py *> evaluation/results/clean ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Warning: You ar...ster downloads.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]
+Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3449.10it/s]
+C:\Users\chosun\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\jit\_script.py:1485: FutureWarning: 
+`torch.jit.script` is not supported in Python 3.14+ and may break. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]
+Loading weights:  15%|█▍        | 30/202 [00:00<00:00, 279.02it/s]
+Loading weights:  36%|███▌      | 73/202 [00:00<00:00, 353.10it/s]
+Loading weights: 100%|██████████| 202/202 [00:00<00:00, 689.29it/s]

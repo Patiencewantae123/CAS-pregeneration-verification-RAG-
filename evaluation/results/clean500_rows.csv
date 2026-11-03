@@ -1,0 +1,13 @@
+model,method,id,type,pred,em,f1,accuracy,abstain,ungrounded,gold_in_context,prompt_tokens,wall_s,response
+llama3.2:latest,Vanilla RAG,5abdd30c5542991f66106052,bridge,dream pop,0.0,0.8,0.0,0.0,0.0,1.0,1977,18.367399299999988,dream pop
+llama3.2:latest,Vanilla RAG,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,1563,11.579144400000132,Cuyler Reynolds.
+llama3.2:latest,BM25 top-3,5abdd30c5542991f66106052,bridge,dream pop,0.0,0.8,0.0,0.0,0.0,1.0,544,3.5445240000001377,dream pop
+llama3.2:latest,BM25 top-3,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,536,3.713207900000043,Cuyler Reynolds.
+llama3.2:latest,Reranker top-3,5abdd30c5542991f66106052,bridge,Love ballad,0.0,0.0,0.0,0.0,1.0,1.0,570,1.51117720000002,Love ballad
+llama3.2:latest,Reranker top-3,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,536,3.713207900000043,Cuyler Reynolds.
+llama3.2:latest,CAS w/o graph,5abdd30c5542991f66106052,bridge,dream pop,0.0,0.8,0.0,0.0,0.0,1.0,544,3.5445240000001377,dream pop
+llama3.2:latest,CAS w/o graph,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,536,3.713207900000043,Cuyler Reynolds.
+llama3.2:latest,CAS-NLI penalty,5abdd30c5542991f66106052,bridge,dream pop,0.0,0.8,0.0,0.0,0.0,1.0,544,3.5445240000001377,dream pop
+llama3.2:latest,CAS-NLI penalty,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,536,3.713207900000043,Cuyler Reynolds.
+llama3.2:latest,CAS-NLI preserve,5abdd30c5542991f66106052,bridge,dream pop,0.0,0.8,0.0,0.0,0.0,1.0,544,3.5445240000001377,dream pop
+llama3.2:latest,CAS-NLI preserve,5a8485fa5542992a431d1a41,bridge,Cuyler Reynolds.,1.0,1.0,1.0,0.0,0.0,1.0,536,3.713207900000043,Cuyler Reynolds.
