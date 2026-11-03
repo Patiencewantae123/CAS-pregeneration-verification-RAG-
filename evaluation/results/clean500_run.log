@@ -2538,3 +2538,5 @@ Loading weights: 100%|██████████| 202/202 [00:00<00:00, 740.
 [2000/6000] llama3.2:latest | CAS w/o graph done, elapsed 140.4 min
 [2500/6000] llama3.2:latest | CAS-NLI penalty done, elapsed 144.9 min
 [3000/6000] llama3.2:latest | CAS-NLI preserve done, elapsed 148.4 min
+[3500/6000] gemma3:latest | Vanilla RAG done, elapsed 254.8 min
+[4000/6000] gemma3:latest | BM25 top-3 done, elapsed 288.5 min
