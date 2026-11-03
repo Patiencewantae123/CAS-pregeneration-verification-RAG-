@@ -2540,3 +2540,4 @@ Loading weights: 100%|██████████| 202/202 [00:00<00:00, 740.
 [3000/6000] llama3.2:latest | CAS-NLI preserve done, elapsed 148.4 min
 [3500/6000] gemma3:latest | Vanilla RAG done, elapsed 254.8 min
 [4000/6000] gemma3:latest | BM25 top-3 done, elapsed 288.5 min
+[4500/6000] gemma3:latest | Reranker top-3 done, elapsed 313.8 min
