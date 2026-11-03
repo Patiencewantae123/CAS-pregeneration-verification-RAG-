@@ -2541,3 +2541,69 @@ Loading weights: 100%|██████████| 202/202 [00:00<00:00, 740.
 [3500/6000] gemma3:latest | Vanilla RAG done, elapsed 254.8 min
 [4000/6000] gemma3:latest | BM25 top-3 done, elapsed 288.5 min
 [4500/6000] gemma3:latest | Reranker top-3 done, elapsed 313.8 min
+[5000/6000] gemma3:latest | CAS w/o graph done, elapsed 333.1 min
+[5500/6000] gemma3:latest | CAS-NLI penalty done, elapsed 339.8 min
+[6000/6000] gemma3:latest | CAS-NLI preserve done, elapsed 344.9 min
+
+Descriptive (mean [95% CI])
+  evidence -                Vanilla RAG        f1            0.335 [0.333, 0.337]
+  evidence -                BM25 top-3         f1            0.640 [0.622, 0.658]
+  evidence -                Reranker top-3     f1            0.648 [0.630, 0.665]
+  evidence -                CAS w/o graph      f1            0.680 [0.661, 0.699]
+  evidence -                CAS-keyword        f1            0.614 [0.595, 0.633]
+  evidence -                CAS-NLI penalty    f1            0.557 [0.530, 0.585]
+  evidence -                CAS-NLI preserve   f1            0.669 [0.650, 0.687]
+  answer   llama3.2:latest  Vanilla RAG        accuracy      0.512 [0.468, 0.556]
+  answer   llama3.2:latest  Vanilla RAG        f1            0.582 [0.543, 0.622]
+  answer   llama3.2:latest  Vanilla RAG        prompt_tokens 1432.640 [1405.120, 1460.234]
+  answer   llama3.2:latest  BM25 top-3         accuracy      0.482 [0.438, 0.524]
+  answer   llama3.2:latest  BM25 top-3         f1            0.543 [0.502, 0.583]
+  answer   llama3.2:latest  BM25 top-3         prompt_tokens 438.728 [427.902, 448.822]
+  answer   llama3.2:latest  Reranker top-3     accuracy      0.462 [0.418, 0.504]
+  answer   llama3.2:latest  Reranker top-3     f1            0.511 [0.471, 0.549]
+  answer   llama3.2:latest  Reranker top-3     prompt_tokens 426.788 [417.010, 435.906]
+  answer   llama3.2:latest  CAS w/o graph      accuracy      0.474 [0.430, 0.516]
+  answer   llama3.2:latest  CAS w/o graph      f1            0.529 [0.491, 0.571]
+  answer   llama3.2:latest  CAS w/o graph      prompt_tokens 386.104 [369.036, 404.554]
+  answer   llama3.2:latest  CAS-NLI penalty    accuracy      0.412 [0.368, 0.458]
+  answer   llama3.2:latest  CAS-NLI penalty    f1            0.456 [0.415, 0.499]
+  answer   llama3.2:latest  CAS-NLI penalty    prompt_tokens 340.760 [323.042, 359.637]
+  answer   llama3.2:latest  CAS-NLI preserve   accuracy      0.472 [0.428, 0.516]
+  answer   llama3.2:latest  CAS-NLI preserve   f1            0.525 [0.486, 0.565]
+  answer   llama3.2:latest  CAS-NLI preserve   prompt_tokens 406.518 [387.736, 427.711]
+  answer   gemma3:latest    Vanilla RAG        accuracy      0.470 [0.428, 0.512]
+  answer   gemma3:latest    Vanilla RAG        f1            0.539 [0.498, 0.579]
+  answer   gemma3:latest    Vanilla RAG        prompt_tokens 1462.410 [1433.844, 1491.708]
+  answer   gemma3:latest    BM25 top-3         accuracy      0.438 [0.396, 0.482]
+  answer   gemma3:latest    BM25 top-3         f1            0.484 [0.442, 0.524]
+  answer   gemma3:latest    BM25 top-3         prompt_tokens 438.184 [426.940, 448.711]
+  answer   gemma3:latest    Reranker top-3     accuracy      0.420 [0.378, 0.464]
+  answer   gemma3:latest    Reranker top-3     f1            0.457 [0.417, 0.497]
+  answer   gemma3:latest    Reranker top-3     prompt_tokens 426.694 [416.802, 436.286]
+  answer   gemma3:latest    CAS w/o graph      accuracy      0.420 [0.378, 0.462]
+  answer   gemma3:latest    CAS w/o graph      f1            0.453 [0.412, 0.494]
+  answer   gemma3:latest    CAS w/o graph      prompt_tokens 384.144 [366.536, 403.243]
+  answer   gemma3:latest    CAS-NLI penalty    accuracy      0.342 [0.300, 0.384]
+  answer   gemma3:latest    CAS-NLI penalty    f1            0.363 [0.323, 0.401]
+  answer   gemma3:latest    CAS-NLI penalty    prompt_tokens 336.868 [318.607, 356.532]
+  answer   gemma3:latest    CAS-NLI preserve   accuracy      0.418 [0.378, 0.462]
+  answer   gemma3:latest    CAS-NLI preserve   f1            0.447 [0.407, 0.488]
+  answer   gemma3:latest    CAS-NLI preserve   prompt_tokens 405.300 [385.842, 427.236]
+
+Confirmatory (primary minus comparator; Holm over 9 tests)
+  H1 -                vs Vanilla RAG     f1        +0.334 [+0.316, +0.353] p=0.0001 holm=0.0009
+  H1 -                vs BM25 top-3      f1        +0.029 [+0.016, +0.043] p=0.0002 holm=0.0016
+  H1 -                vs Reranker top-3  f1        +0.021 [-0.001, +0.043] p=0.0671 holm=0.3870
+  H2 llama3.2:latest  vs Vanilla RAG     accuracy  -0.040 [-0.080, -0.002] p=0.0645 holm=0.3870
+  H2 llama3.2:latest  vs BM25 top-3      accuracy  -0.010 [-0.040, +0.018] p=0.5844 holm=1.0000
+  H2 llama3.2:latest  vs Reranker top-3  accuracy  +0.010 [-0.028, +0.048] p=0.6846 holm=1.0000
+  H2 gemma3:latest    vs Vanilla RAG     accuracy  -0.052 [-0.092, -0.014] p=0.0160 holm=0.1120
+  H2 gemma3:latest    vs BM25 top-3      accuracy  -0.020 [-0.050, +0.010] p=0.2414 holm=0.9655
+  H2 gemma3:latest    vs Reranker top-3  accuracy  -0.002 [-0.042, +0.038] p=1.0000 holm=1.0000
+  H3 llama3.2:latest  vs Vanilla RAG accuracy -0.040 [-0.080, -0.002] margin -0.05: fails
+  H3 gemma3:latest    vs Vanilla RAG accuracy -0.052 [-0.092, -0.014] margin -0.05: fails
+
+Pre-registered decisions
+  CAS selects better evidence (H1): not supported
+  CAS improves answers (H2): not supported
+  CAS filtering is accuracy-neutral (H3): not supported
