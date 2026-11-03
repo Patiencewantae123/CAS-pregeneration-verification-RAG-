@@ -63,6 +63,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 11 | `fig11_cv_threshold.py` | `data/fig11_*.csv` | `results.json` → `cv_threshold` (also `cv_thresholds.json`) |
 | 12 | `fig12_poison_study1.py` (uses `_poison.py`) | `data/fig12_*.csv` | `poison_summary.json` → `descriptive` |
 | 13 | `fig13_poison_study2.py` (uses `_poison.py`) | `data/fig13_*.csv` | `poison2_summary.json` → `descriptive` |
+| 14 | `fig14_detector_tradeoff.py` | `data/fig14_*.csv` | `detector_probe.json` (from `evaluation/run_detector_probe.py`) |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -186,6 +187,28 @@ Every table cell is in `tables.md` (Tables 1–10).
 - **CAS-NLI penalty** removes poison from about a quarter of contexts and gives the lowest CAS adoption (18.5–21.5%), with abstention up to 20.5–28.5% and no accuracy gain. Its adoption is significantly lower than CAS-NLI preserve in three of four cases (exploratory family).
 - **Pre-registered decisions:** all five are "not supported".
 
+**Fig. 14. Can the conflict detector be made accurate and cheap enough for day-to-day use?** This analysis is exploratory (`evaluation/run_detector_probe.py`).
+- **Ground truth.**
+  - The gold passage vs its poisoned copy is a true conflict.
+  - Pairs of original HotpotQA passages are treated as non-conflicting, so a flag there is a false warning on a normal question.
+  - 50 WikiContradict pairs give natural contradictions.
+- **Configurations.** 110 detector settings, covering:
+  - NLI model: DeBERTa-v3 or MiniLM.
+  - What is compared: whole passages or the most question-relevant sentence.
+  - θ ∈ {0.5, 0.9, 0.99}.
+  - A lexical-overlap gate that skips unrelated pairs.
+  - One or both directions.
+  - Also answer-level detection with two extractive QA models.
+- **Selection rule (fixed in advance):** on study 1, maximise conflicts caught subject to at most 10% false warnings. Study 2 is the held-out check.
+- **(a) Detection vs false alarms.**
+  - The current CAS detector (★) catches 14.5% of held-out conflicts and 14% of WikiContradict contradictions, but gives a false warning on 52.5% of normal questions.
+  - No setting catches more than 14% of held-out conflicts while staying within 10% false warnings.
+  - The rule-chosen settings (circled) catch 3.0% (MiniLM) and 7.0% (answer-level) of held-out conflicts.
+- **(b) Detection vs CPU cost.**
+  - CPU cost is not the obstacle. Sentence-level MiniLM with the overlap gate needs 0.04 s per query against 21 s for the current detector, about 500 times less, and some cheap settings catch up to 70% of conflicts.
+  - But those settings warn on about a third of normal questions.
+- **Conclusion.** The binding constraint is detection quality, not speed.
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -200,6 +223,8 @@ Every table cell is in `tables.md` (Tables 1–10).
 | CAS improves conflict surfacing | **No**: showing both passages (Vanilla) does as well or significantly better (Fig. 9c) |
 | CAS reduces adoption of poisoned passages (pre-registered study 1) | **Not supported**; adoption was near floor for every method (Fig. 12) |
 | CAS reduces adoption under a stronger attack (pre-registered study 2) | **Not supported**: no difference from Vanilla RAG, and a simple source filter is significantly better (Fig. 13) |
+| The conflict check can run cheaply on CPU | **Yes**: 0.04 s per query, about 500× faster than now (Fig. 14b) |
+| The conflict check is reliable enough for day-to-day use | **No**: at most 14% of conflicts caught at ≤ 10% false warnings; the current detector warns falsely on about half of normal questions (Fig. 14a) |
 | Among context filters, conflict preservation beats contradiction penalties | **Yes**: +0.065 to +0.07 accuracy under poisoning (Fig. 12; exploratory family, Holm p ≈ 0.03), and on clean data (Fig. 2) |
 
 ## Limitations
