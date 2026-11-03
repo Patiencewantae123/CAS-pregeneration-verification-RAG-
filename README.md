@@ -1,4 +1,5 @@
 # CAS-PreGeneration-Verification-RAG
+<img width="1904" height="953" alt="image" src="https://github.com/user-attachments/assets/b5e26cd0-bb94-40d8-b9b4-3a7051aa900f" />
 
 ### Conflict-Aware Synthesis for Reliable Retrieval-Augmented Generation
 
