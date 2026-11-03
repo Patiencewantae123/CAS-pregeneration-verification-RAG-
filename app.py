@@ -1,7 +1,8 @@
-﻿import os
+﻿import json
+import os
 import sys
 import tempfile
-import ollama
+import urllib.request
 import streamlit as st
 
 from langchain_community.document_loaders import PyPDFLoader, TextLoader
@@ -29,6 +30,29 @@ If the passages do not contain the answer, reply exactly: unknown
 
 Question: {question}
 Answer:"""
+OLLAMA_URL = "http://localhost:11434"
+
+
+def ollama_models():
+    """Names of the models installed in the local Ollama server ([] if it is not running)."""
+    try:
+        with urllib.request.urlopen(f"{OLLAMA_URL}/api/tags", timeout=3) as resp:
+            return [m["name"] for m in json.load(resp)["models"]]
+    except OSError:
+        return []
+
+
+def ollama_stream(model, prompt, options):
+    """Stream an answer from the local Ollama server, piece by piece."""
+    body = json.dumps({"model": model, "prompt": prompt, "stream": True, "options": options}).encode()
+    req = urllib.request.Request(f"{OLLAMA_URL}/api/generate", data=body, headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=1800) as resp:
+        for line in resp:
+            if line.strip():
+                chunk = json.loads(line)
+                if "error" in chunk:
+                    raise RuntimeError(chunk["error"])
+                yield chunk.get("response", "")
 
 st.set_page_config(
     page_title="CAS-V RAG Verification Studio",
@@ -240,10 +264,7 @@ with st.sidebar:
 
     st.markdown("---")
     st.subheader("🤖 Answer Generation (Ollama)")
-    try:
-        installed = [m.model for m in ollama.list().models]
-    except Exception:
-        installed = []
+    installed = ollama_models()
     if installed:
         llm_model = st.selectbox("LLM", installed,
                                  index=installed.index("llama3.2:latest") if "llama3.2:latest" in installed else 0)
@@ -330,8 +351,7 @@ if prompt := st.chat_input("Ask a question about your uploaded documents..."):
                 llm_prompt = (QA_PROMPT if short else EXPLAINED_PROMPT).format(passages=context, question=prompt)
                 options = OPTIONS if short else {**OPTIONS, "num_predict": 512}
                 try:
-                    stream = ollama.generate(model=llm_model, prompt=llm_prompt, options=options, stream=True)
-                    answer = st.write_stream(chunk.response for chunk in stream).strip()
+                    answer = st.write_stream(ollama_stream(llm_model, llm_prompt, options)).strip()
                 except Exception as e:
                     answer = f"⚠️ **{llm_model} failed:** {e}"
                     st.markdown(answer)
