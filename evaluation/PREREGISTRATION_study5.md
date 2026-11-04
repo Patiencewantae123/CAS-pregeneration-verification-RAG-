@@ -30,7 +30,12 @@ CAS v2 (`evaluation/cas_v2.py`) changes one thing for each cause. Study 5 tests 
 - **Clean set:** 200 questions of all types, drawn with seed 42; the original 10 passages.
 - **Poison set:** 150 further questions, eligible by the study 1–2 rule (a span answer of at most five words, found in a supporting passage), drawn with the same seed. Each gets one type-matched substitute (the study 2 rule) and is attacked twice:
   - **Copy attack:** the study 2 attack. Three passages are added: the edited answer passage, the question followed by it, and the title followed by the edited answer sentences.
-  - **Written attack:** the black-box attack of PoisonedRAG [9]. Three passages are added, each the question followed by a text that an attacker LLM wrote. The attacker is Llama 3.1 8B, which is not one of the answering models (temperature 0.8, seeds tried in order from 1). Its prompt asks for a corpus of at most 30 words that makes the substitute the answer. A text is used only if it states the substitute and not the gold answer. A question is skipped if three such texts are not found within 10 seeds.
+  - **Written attack:** the black-box attack of PoisonedRAG [9]. Three passages are added, each the question followed by a text that an attacker LLM wrote.
+    - **Attacker:** Llama 3.1 8B, which is not one of the answering models (temperature 0.8, seeds tried in order from 1).
+    - **Prompt:** PoisonedRAG's prompt, which asks for a corpus of at most 30 words that makes the substitute the answer. Two sentences are added: the corpus must contain the substitute verbatim, and the reply must be the corpus only. The exact text is `ATTACK_PROMPT` in `build_study5.py`.
+    - **Extraction:** if the reply quotes a passage of 20 or more characters, the longest quoted part is used. Otherwise a leading "Here is …:" and a trailing note are removed.
+    - **Acceptance:** a text is used only if it states the substitute and not the gold answer. A question is skipped if three such texts are not found within 10 seeds.
+    - **Pilot:** the prompt and the extraction rule were piloted on 9 questions from study 2 (already analysed). In the pilot, 8 of 12 replies were accepted.
 - **Source metadata:** each attack runs in condition A (no metadata) and condition B (noisy metadata, the study 1–2 rule: trusted U(0.55, 0.95), untrusted U(0.05, 0.45), status flipped with probability 0.2).
 - **Titles:** original passages keep their HotpotQA title. A copy that starts with a title keeps it. A passage led by the question has no title.
 
@@ -68,9 +73,10 @@ CAS v2 (`evaluation/cas_v2.py`) changes one thing for each cause. Study 5 tests 
 | H6 | Copy attack, B: v2 has lower adoption than the source filter | 2 |
 | H7 | Written attack, A: v2 has lower adoption than Vanilla RAG | 2 |
 | H8 | Written attack, B: v2 has lower adoption than the source filter | 2 |
+| H9 | Clean: v2 is more accurate than Vanilla RAG (a stricter claim than H4) | 2 |
 
 - **Test:** a two-sided paired sign-flip permutation (10,000 permutations) on per-question differences.
-- **Multiplicity:** Holm correction over the 18 tests of H1–H3 and H5–H8. H4 is judged by its CI against the margin.
+- **Multiplicity:** Holm correction over the 20 tests of H1–H3 and H5–H9. H4 is judged by its CI against the margin.
 
 ## Decision rule (fixed in advance)
 
@@ -83,5 +89,13 @@ CAS v2 (`evaluation/cas_v2.py`) changes one thing for each cause. Study 5 tests 
 - **H1, H5 and H6:** expected to be supported. The development data showed large selection-level gains.
 - **H7:** expected *not* to be supported. The written attack makes no copies, so the quarantine cannot see it.
 - **H8:** uncertain. v2 applies the same gate as the source filter.
-- **H2–H4:** see the development check, `results/cas_v2_dev_llm.json`.
+- **H2–H4 and H9:** the development check (first 200 study 3 questions; unadjusted) found the following.
+
+  | Model | Accuracy: v2 vs v1 | Accuracy: v2 vs Vanilla RAG | Wrong answers: v2 vs Vanilla RAG |
+  |---|---|---|---|
+  | Llama 3.2 | +0.105 | +0.075 [+0.020, +0.130] | −0.085 [−0.140, −0.025] |
+  | Gemma 3 | +0.105 | +0.030 [−0.035, +0.095] | −0.055 [−0.120, +0.015] |
+
+  - **H2 and H4:** expected to be supported.
+  - **H3 and H9:** expected for Llama 3.2. They are uncertain for Gemma 3 at n = 200, so they may not be supported, because the decision rule needs both models.
 - **Expected cost:** under the copy attack without metadata, v2 should also lose accuracy, because the quarantine removes the true passage together with its copies. It is expected to abstain rather than adopt the poison.

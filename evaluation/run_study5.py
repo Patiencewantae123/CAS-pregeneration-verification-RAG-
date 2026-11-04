@@ -184,7 +184,8 @@ def summarize(ev, rows, models, n):
                          test("H5", "adoption", V1, mo, "copy", "A"),
                          test("H6", "adoption", "Source filter", mo, "copy", "B"),
                          test("H7", "adoption", "Vanilla RAG", mo, "written", "A"),
-                         test("H8", "adoption", "Source filter", mo, "written", "B")]
+                         test("H8", "adoption", "Source filter", mo, "written", "B"),
+                         test("H9", "accuracy", "Vanilla RAG", mo)]
     holm(confirmatory)
     non_inferiority = []
     for mo in models:
@@ -201,12 +202,13 @@ def summarize(ev, rows, models, n):
                     exploratory.append(test("S", metric, c, mo, attack, cond))
         for c in ("BM25 top-3", "Reranker top-3"):
             exploratory.append(test("S", "accuracy", c, mo))
+        exploratory.append(test("S", "wrong", V1, mo))
         exploratory.append(test("S", "abstain", "Vanilla RAG", mo))
     holm(exploratory)
 
     # Decision rules from the pre-registration, applied mechanically: every test of a hypothesis significant
-    # (Holm p < 0.05) in the predicted direction; H1 and H2 predict v2 higher, H3 and H5-H8 predict v2 lower
-    higher = {"H1", "H2"}
+    # (Holm p < 0.05) in the predicted direction; H1, H2 and H9 predict v2 higher, H3 and H5-H8 predict v2 lower
+    higher = {"H1", "H2", "H9"}
 
     def holds(h):
         ts = [t for t in confirmatory if t["hypothesis"] == h]
@@ -218,7 +220,8 @@ def summarize(ev, rows, models, n):
              "H5": "copy attack, no metadata: v2 is poisoned less than Vanilla RAG and v1",
              "H6": "copy attack, noisy metadata: v2 is poisoned less than the source filter",
              "H7": "written attack, no metadata: v2 is poisoned less than Vanilla RAG",
-             "H8": "written attack, noisy metadata: v2 is poisoned less than the source filter"}
+             "H8": "written attack, noisy metadata: v2 is poisoned less than the source filter",
+             "H9": "v2 is more accurate than Vanilla RAG on clean retrieval"}
     decisions = {f"{h}: {txt}": holds(h) for h, txt in names.items()}
     decisions["H4: v2 is non-inferior to Vanilla RAG in accuracy (margin 0.05)"] = all(t["holds"] for t in non_inferiority)
     with open(PREREG, "rb") as f:
