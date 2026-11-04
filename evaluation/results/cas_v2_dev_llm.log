@@ -1,2 +1,5 @@
 llama3.2:latest 50/200
 llama3.2:latest 100/200
+llama3.2:latest 150/200
+llama3.2:latest 200/200
+gemma3:latest 50/200
