@@ -1,0 +1,547 @@
+{
+ "note": "Development on studies 1-3 only; selection level; no model run.",
+ "clean": [
+  {
+   "method": "BM25 top-3",
+   "precision": 0.5333333333333332,
+   "recall": 0.799,
+   "f1": 0.6396000000000002,
+   "full_evidence": 0.616,
+   "n_selected": 2.998
+  },
+  {
+   "method": "CAS v1 (NLI preserve)",
+   "precision": 0.6704095238095238,
+   "recall": 0.754,
+   "f1": 0.6686301587301587,
+   "full_evidence": 0.518,
+   "n_selected": 2.698
+  },
+  {
+   "method": "v2 tau=0.4 no-quarantine link=False",
+   "precision": 0.5667547619047618,
+   "recall": 0.811,
+   "f1": 0.632884126984127,
+   "full_evidence": 0.626,
+   "n_selected": 3.368
+  },
+  {
+   "method": "v2 tau=0.4 no-quarantine link=True",
+   "precision": 0.5592801587301588,
+   "recall": 0.961,
+   "f1": 0.6824606060606061,
+   "full_evidence": 0.926,
+   "n_selected": 3.982
+  },
+  {
+   "method": "v2 tau=0.45 no-quarantine link=False",
+   "precision": 0.69125,
+   "recall": 0.748,
+   "f1": 0.68,
+   "full_evidence": 0.508,
+   "n_selected": 2.548
+  },
+  {
+   "method": "v2 tau=0.45 no-quarantine link=True",
+   "precision": 0.6629849206349206,
+   "recall": 0.943,
+   "f1": 0.7514272727272727,
+   "full_evidence": 0.894,
+   "n_selected": 3.286
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.7 edit=4 link=True",
+   "precision": 0.6636357142857142,
+   "recall": 0.924,
+   "f1": 0.7438777777777777,
+   "full_evidence": 0.864,
+   "n_selected": 3.194
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.7 edit=6 link=True",
+   "precision": 0.6636357142857142,
+   "recall": 0.924,
+   "f1": 0.7438777777777777,
+   "full_evidence": 0.864,
+   "n_selected": 3.194
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.7 edit=8 link=True",
+   "precision": 0.6636357142857142,
+   "recall": 0.924,
+   "f1": 0.7438777777777777,
+   "full_evidence": 0.864,
+   "n_selected": 3.194
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.8 edit=4 link=True",
+   "precision": 0.6613515873015872,
+   "recall": 0.934,
+   "f1": 0.7469510822510822,
+   "full_evidence": 0.882,
+   "n_selected": 3.248
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.8 edit=6 link=True",
+   "precision": 0.6613515873015872,
+   "recall": 0.934,
+   "f1": 0.7469510822510822,
+   "full_evidence": 0.882,
+   "n_selected": 3.248
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.8 edit=8 link=True",
+   "precision": 0.6613515873015872,
+   "recall": 0.934,
+   "f1": 0.7469510822510822,
+   "full_evidence": 0.882,
+   "n_selected": 3.248
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.9 edit=4 link=True",
+   "precision": 0.6608182539682539,
+   "recall": 0.937,
+   "f1": 0.7478939393939393,
+   "full_evidence": 0.886,
+   "n_selected": 3.262
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.9 edit=6 link=True",
+   "precision": 0.6608182539682539,
+   "recall": 0.937,
+   "f1": 0.7478939393939393,
+   "full_evidence": 0.886,
+   "n_selected": 3.262
+  },
+  {
+   "method": "v2 tau=0.45 kappa=0.9 edit=8 link=True",
+   "precision": 0.6608182539682539,
+   "recall": 0.937,
+   "f1": 0.7478939393939393,
+   "full_evidence": 0.886,
+   "n_selected": 3.262
+  }
+ ],
+ "clean_quarantine": [
+  {
+   "kappa": 0.7,
+   "edit": 4,
+   "any_quarantine": 0.106,
+   "gold_quarantined": 0.032
+  },
+  {
+   "kappa": 0.7,
+   "edit": 6,
+   "any_quarantine": 0.106,
+   "gold_quarantined": 0.032
+  },
+  {
+   "kappa": 0.7,
+   "edit": 8,
+   "any_quarantine": 0.106,
+   "gold_quarantined": 0.032
+  },
+  {
+   "kappa": 0.8,
+   "edit": 4,
+   "any_quarantine": 0.046,
+   "gold_quarantined": 0.014
+  },
+  {
+   "kappa": 0.8,
+   "edit": 6,
+   "any_quarantine": 0.046,
+   "gold_quarantined": 0.014
+  },
+  {
+   "kappa": 0.8,
+   "edit": 8,
+   "any_quarantine": 0.046,
+   "gold_quarantined": 0.014
+  },
+  {
+   "kappa": 0.9,
+   "edit": 4,
+   "any_quarantine": 0.02,
+   "gold_quarantined": 0.008
+  },
+  {
+   "kappa": 0.9,
+   "edit": 6,
+   "any_quarantine": 0.02,
+   "gold_quarantined": 0.008
+  },
+  {
+   "kappa": 0.9,
+   "edit": 8,
+   "any_quarantine": 0.02,
+   "gold_quarantined": 0.008
+  }
+ ],
+ "poisoned": [
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 1.0
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "poison_in_context": 0.52,
+   "answer_passage_kept": 0.63
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "CAS v1 (NLI preserve)",
+   "poison_in_context": 0.685,
+   "answer_passage_kept": 0.76
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=4",
+   "poison_in_context": 0.085,
+   "answer_passage_kept": 0.105
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=6",
+   "poison_in_context": 0.025,
+   "answer_passage_kept": 0.045
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=8",
+   "poison_in_context": 0.005,
+   "answer_passage_kept": 0.025
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=4",
+   "poison_in_context": 0.085,
+   "answer_passage_kept": 0.115
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=6",
+   "poison_in_context": 0.025,
+   "answer_passage_kept": 0.055
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=8",
+   "poison_in_context": 0.01,
+   "answer_passage_kept": 0.04
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=4",
+   "poison_in_context": 0.125,
+   "answer_passage_kept": 0.17
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=6",
+   "poison_in_context": 0.07,
+   "answer_passage_kept": 0.115
+  },
+  {
+   "study": "1",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=8",
+   "poison_in_context": 0.055,
+   "answer_passage_kept": 0.1
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 1.0
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "poison_in_context": 0.52,
+   "answer_passage_kept": 0.63
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "CAS v1 (NLI preserve)",
+   "poison_in_context": 0.635,
+   "answer_passage_kept": 0.785
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "poison_in_context": 0.14,
+   "answer_passage_kept": 0.595
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 gate only",
+   "poison_in_context": 0.18,
+   "answer_passage_kept": 0.77
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=4",
+   "poison_in_context": 0.045,
+   "answer_passage_kept": 0.655
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=6",
+   "poison_in_context": 0.025,
+   "answer_passage_kept": 0.635
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=8",
+   "poison_in_context": 0.02,
+   "answer_passage_kept": 0.63
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=4",
+   "poison_in_context": 0.05,
+   "answer_passage_kept": 0.655
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=6",
+   "poison_in_context": 0.03,
+   "answer_passage_kept": 0.635
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=8",
+   "poison_in_context": 0.03,
+   "answer_passage_kept": 0.635
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=4",
+   "poison_in_context": 0.07,
+   "answer_passage_kept": 0.68
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=6",
+   "poison_in_context": 0.05,
+   "answer_passage_kept": 0.66
+  },
+  {
+   "study": "1",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=8",
+   "poison_in_context": 0.05,
+   "answer_passage_kept": 0.66
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "Vanilla RAG",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 1.0
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "BM25 top-3",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 0.35
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "CAS v1 (NLI preserve)",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 0.645
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=4",
+   "poison_in_context": 0.055,
+   "answer_passage_kept": 0.155
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=6",
+   "poison_in_context": 0.005,
+   "answer_passage_kept": 0.11
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.7 edit=8",
+   "poison_in_context": 0.005,
+   "answer_passage_kept": 0.11
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=4",
+   "poison_in_context": 0.06,
+   "answer_passage_kept": 0.16
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=6",
+   "poison_in_context": 0.01,
+   "answer_passage_kept": 0.115
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.8 edit=8",
+   "poison_in_context": 0.005,
+   "answer_passage_kept": 0.11
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=4",
+   "poison_in_context": 0.095,
+   "answer_passage_kept": 0.195
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=6",
+   "poison_in_context": 0.03,
+   "answer_passage_kept": 0.15
+  },
+  {
+   "study": "2",
+   "condition": "A",
+   "method": "v2 kappa=0.9 edit=8",
+   "poison_in_context": 0.02,
+   "answer_passage_kept": 0.145
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "Vanilla RAG",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 1.0
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "BM25 top-3",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 0.35
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "CAS v1 (NLI preserve)",
+   "poison_in_context": 1.0,
+   "answer_passage_kept": 0.725
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "Provenance + BM25 top-3",
+   "poison_in_context": 0.315,
+   "answer_passage_kept": 0.48
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 gate only",
+   "poison_in_context": 0.395,
+   "answer_passage_kept": 0.65
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=4",
+   "poison_in_context": 0.12,
+   "answer_passage_kept": 0.415
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=6",
+   "poison_in_context": 0.1,
+   "answer_passage_kept": 0.4
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.7 edit=8",
+   "poison_in_context": 0.09,
+   "answer_passage_kept": 0.4
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=4",
+   "poison_in_context": 0.13,
+   "answer_passage_kept": 0.425
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=6",
+   "poison_in_context": 0.11,
+   "answer_passage_kept": 0.41
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.8 edit=8",
+   "poison_in_context": 0.1,
+   "answer_passage_kept": 0.41
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=4",
+   "poison_in_context": 0.15,
+   "answer_passage_kept": 0.45
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=6",
+   "poison_in_context": 0.13,
+   "answer_passage_kept": 0.435
+  },
+  {
+   "study": "2",
+   "condition": "B",
+   "method": "v2 kappa=0.9 edit=8",
+   "poison_in_context": 0.12,
+   "answer_passage_kept": 0.435
+  }
+ ]
+}
