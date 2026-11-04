@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3915.59it/s]
+C:\Users\chosun\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\jit\_script.py:1485: FutureWarning: `torch.jit.script` is not supported in Python 3.14+ and may break. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 32/202 [00:00<00:00, 311.01it/s]Loading weights:  32%|███▏      | 64/202 [00:00<00:00, 214.63it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 598.37it/s]
