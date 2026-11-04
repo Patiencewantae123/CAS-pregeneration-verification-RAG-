@@ -11,6 +11,7 @@ py evaluation/run_llm_generation.py --models llama3.2:latest gemma3:latest llama
 py evaluation/run_clean500.py           # study 3: 500 questions x 6 methods x 2 LLMs; ~6 h on CPU, responses cached
 py evaluation/run_montecarlo.py         # study 4: 3,064,800 simulated selections in ~1 min; no model inference
 py evaluation/compare_as_run.py         # as-run vs corrected scores (DEVIATIONS.md)
+py evaluation/run_discussion_analyses.py  # exploratory study 3 analyses for manuscript Section 6 (Tables 4-5)
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 

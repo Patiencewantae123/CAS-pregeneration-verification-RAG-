@@ -17,7 +17,7 @@
 **Results.**
 - On clean retrieval, conflict-preserving CAS selected more precise evidence than Vanilla RAG (F1 +0.299, Holm p = 0.015). It cut prompts to about 28% of Vanilla's length. It did not improve answer accuracy for any model.
 - None of the ten pre-registered decisions in the poisoning studies supported CAS. Under the stronger attack, a plain source filter cut poison adoption to 3.5–4.0%; conflict-preserving CAS left it at 22.5–28% (Holm p = 0.002).
-- At n = 500, CAS selected significantly better evidence than Vanilla RAG and BM25 (F1 +0.334 and +0.029), but not significantly better than a cross-encoder reranker. It did not improve answer accuracy, and for one model it was significantly less accurate than Vanilla RAG, so all three pre-registered hypotheses were not supported.
+- At n = 500, CAS selected significantly better evidence than Vanilla RAG and BM25 (F1 +0.334 and +0.029), but not significantly better than a cross-encoder reranker. It did not improve answer accuracy, and for one model it was significantly less accurate than Vanilla RAG, so all three pre-registered hypotheses were not supported. In exploratory analyses, CAS gave fewer wrong answers than Vanilla RAG (−0.086 and −0.090), mostly by abstaining when its selection lacked the answer.
 - The Monte Carlo study shows that these outcomes do not depend on the hand-set weights: the comparisons with Vanilla RAG and with the source filter went the same way in 100% of 1,250 random settings. It also identifies two causes:
   - The NLI model labels 56% of poisoned copies as *agreeing* with their source, so CAS's agreement score rewards the poison.
   - Without source metadata, the detector would need about five times its current recall before CAS matches a BM25 baseline.
@@ -68,7 +68,7 @@ The headline result is negative. On clean retrieval, CAS improves evidence preci
 
 **Corpus poisoning.** PoisonedRAG [9] showed that a few injected passages, written to be retrieved and to state a target answer, can control RAG output. Certified and aggregation-based defences have been proposed in response [12], [13]. Our study 2 follows the black-box PoisonedRAG design: several mutually consistent poison passages per question, which outnumber the true passage.
 
-**NLI as a verifier.** Cross-encoder NLI models such as DeBERTa-v3 [16], trained on MultiNLI [17] and similar corpora, are widely used to check consistency between texts. Their behaviour on near-duplicate passages that differ in a single entity is central to our results (Section 6.1).
+**NLI as a verifier.** Cross-encoder NLI models such as DeBERTa-v3 [16], trained on MultiNLI [17] and similar corpora, are widely used to check consistency between texts. Their behaviour on near-duplicate passages that differ in a single entity is central to our results (Section 6.3).
 
 **Pre-registration.** Pre-registration fixes hypotheses and analyses before data collection, so that confirmatory and exploratory results can be told apart [18]. It is still rare in NLP evaluation. We use it to make negative results interpretable.
 
@@ -323,7 +323,7 @@ Study 3 used 500 new HotpotQA questions, with 10 passages each and no poisoning 
 
 **Exploratory.**
 - **Preserve vs penalty:** conflict preservation again beat the contradiction penalty, by +0.058 (Llama) and +0.078 (Gemma) in accuracy and +0.112 in evidence F1, all Holm p < 0.001.
-- **Cost:** CAS used about 28% of Vanilla RAG's prompt (406 vs 1,433–1,462 tokens) and generated answers about 3.5 times faster (2.6–3.6 s vs 10.3–12.8 s).
+- **Cost:** CAS used about 28% of Vanilla RAG's prompt (406 vs 1,433–1,462 tokens) and generated answers about 3.5 times faster (2.6–3.6 s vs 10.3–12.8 s). Generation is not the whole cost: the NLI step added 23.8 s per question, so end to end CAS was slower than Vanilla RAG (Section 6.5).
 
 ### 5.5 Study 4: what drives the outcome (pre-registered Monte Carlo)
 
@@ -374,7 +374,92 @@ We evaluated 110 detector configurations, spanning:
 
 ## 6. Discussion
 
-### 6.1 Why CAS does not stop poisoning
+The results raise four questions:
+- Why did better evidence not give better answers (Sections 6.1–6.2)?
+- Why does CAS not stop poisoning (Section 6.3)?
+- Why do conflict notes not change answers (Section 6.4)?
+- What does the conflict graph cost (Section 6.5)?
+
+Sections 6.1, 6.2, 6.4 and 6.5 use exploratory analyses of the cached study 3 outputs, chosen after the results were known (`evaluation/run_discussion_analyses.py`, output `results/discussion_analyses.json`). They were not pre-registered. They help explain the confirmatory results but do not replace them, and each would need its own confirmatory test.
+
+### 6.1 Why better evidence did not give better answers
+
+In study 3, CAS doubled evidence F1 relative to Vanilla RAG, yet answered less accurately. This is not specific to CAS. Every filter, including BM25 top-3 and the reranker, was less accurate than Vanilla RAG for both models (Section 5.4).
+
+**Filtering helps when it keeps the evidence, and hurts when it drops it.** We split the 500 questions by whether a filter kept every supporting passage. Within each group, we compared the filter with Vanilla RAG on the same questions (Table 4).
+- **When a filter kept every supporting passage,** it was *more* accurate than Vanilla RAG in all ten filter–model combinations (+0.039 to +0.062). The 95% CI excluded zero in eight of them. After Holm correction over the 20 stratified tests, only one remained significant: BM25 top-3 with Llama 3.2 (Holm p = 0.044).
+- **When a filter dropped a supporting passage,** it was much less accurate (−0.129 to −0.258; all Holm p ≤ 0.003).
+- **Most of CAS's losses were in the second group.** Take the questions that Vanilla RAG answered correctly and CAS did not. CAS had dropped a supporting passage on 48 of 61 of them (Llama 3.2) and on 58 of 70 (Gemma 3).
+
+**Table 4. Accuracy by whether the filter kept every supporting passage** (study 3; exploratory; each filter is paired with Vanilla RAG on the same questions).
+
+| Model | Filter | Supporting passages | n | Filter accuracy | Vanilla RAG accuracy | Difference [95% CI] |
+|---|---|---|---|---|---|---|
+| Llama 3.2 | BM25 top-3 | all kept | 308 | 0.610 | 0.549 | +0.062 [+0.019, +0.101] |
+| | | one or more dropped | 192 | 0.250 | 0.427 | −0.177 [−0.250, −0.109] |
+| | Reranker top-3 | all kept | 314 | 0.602 | 0.551 | +0.051 [+0.010, +0.092] |
+| | | one or more dropped | 186 | 0.194 | 0.419 | −0.226 [−0.296, −0.161] |
+| | CAS-NLI preserve | all kept | 259 | 0.622 | 0.575 | +0.046 [0.000, +0.093] |
+| | | one or more dropped | 241 | 0.295 | 0.423 | −0.129 [−0.195, −0.062] |
+| Gemma 3 | BM25 top-3 | all kept | 308 | 0.542 | 0.487 | +0.055 [+0.006, +0.101] |
+| | | one or more dropped | 192 | 0.198 | 0.406 | −0.208 [−0.276, −0.141] |
+| | Reranker top-3 | all kept | 314 | 0.519 | 0.468 | +0.051 [+0.003, +0.099] |
+| | | one or more dropped | 186 | 0.177 | 0.435 | −0.258 [−0.339, −0.177] |
+| | CAS-NLI preserve | all kept | 259 | 0.544 | 0.494 | +0.050 [+0.004, +0.097] |
+| | | one or more dropped | 241 | 0.220 | 0.415 | −0.195 [−0.261, −0.137] |
+
+**A distractor costs less than a missing passage.** The two effects agree with what is known about long contexts.
+- Irrelevant passages distract LLMs [3], [4]. Removing them gained about five points here.
+- But a HotpotQA question needs two passages. A filter that removes one leaves the model unable to answer, however precise the rest of the selection is.
+- At ten passages (about 1,450 prompt tokens), distraction cost less than losing a needed passage.
+
+**Evidence F1 rewarded the wrong trade-off.**
+- CAS was more precise than BM25 top-3 and the reranker (0.670 vs 0.533 and 0.540), but less complete (recall 0.754 vs 0.799 and 0.809).
+- It kept every supporting passage for 51.8% of questions, against 61.6% and 62.8%.
+- Its F1 advantage was therefore a precision advantage. The answer depends mainly on whether every needed passage survives.
+
+**What a filter would need.** Suppose the effects in the two groups stayed as measured. Conflict-preserving CAS would then match Vanilla RAG's accuracy only if it kept every supporting passage for about 74% (Llama 3.2) to 80% (Gemma 3) of questions, against 52% today. This extrapolation is rough, because the two groups are not comparable. The questions on which a filter keeps all the evidence are easier: Vanilla RAG, too, is more accurate on them (0.575 vs 0.423 for Llama 3.2).
+
+### 6.2 CAS fails safe: fewer wrong answers, more abstentions
+
+Accuracy counts an abstention and a wrong answer the same way. Table 5 separates them.
+
+**Table 5. Answer outcomes on the 500 clean questions of study 3** (share of questions; exploratory).
+
+| Method | Llama 3.2 correct | Llama 3.2 wrong | Llama 3.2 abstained | Gemma 3 correct | Gemma 3 wrong | Gemma 3 abstained |
+|---|---|---|---|---|---|---|
+| Vanilla RAG | 0.502 | 0.464 | 0.034 | 0.456 | 0.462 | 0.082 |
+| BM25 top-3 | 0.472 | 0.416 | 0.112 | 0.410 | 0.388 | 0.202 |
+| Reranker top-3 | 0.450 | 0.450 | 0.100 | 0.392 | 0.390 | 0.218 |
+| CAS w/o graph | 0.466 | 0.376 | 0.158 | 0.390 | 0.366 | 0.244 |
+| CAS-NLI penalty | 0.406 | 0.342 | 0.252 | 0.310 | 0.364 | 0.326 |
+| CAS-NLI preserve | 0.464 | 0.378 | 0.158 | 0.388 | 0.372 | 0.240 |
+
+**Fewer wrong answers.**
+- Conflict-preserving CAS gave fewer wrong answers than Vanilla RAG: −0.086 [−0.126, −0.046] for Llama 3.2 and −0.090 [−0.134, −0.048] for Gemma 3. Both have Holm p = 0.001, over ten tests.
+- Every filter reduced wrong answers. The reduction was significant in nine of the ten filter–model combinations, and largest for the CAS variants (0.086–0.122).
+
+**The abstentions were mostly justified.** We counted only answers that are text spans, not yes/no answers.
+- For CAS, the answer appeared nowhere in its selected passages in 51 of its 72 abstentions (71%, Llama 3.2) and 57 of 100 (57%, Gemma 3). The model was right to say that it could not answer from what it was given.
+- Vanilla RAG's abstentions never had this justification. In all 15 and all 32 cases, the answer was in its context.
+
+**Answered questions were not less accurate.**
+- Among the questions it did answer, CAS was slightly, not significantly, more accurate than Vanilla RAG:
+  - Llama 3.2: 0.551 vs 0.520 (+0.031 [−0.010, +0.071]);
+  - Gemma 3: 0.511 vs 0.497 (+0.014 [−0.032, +0.056]).
+- It answered fewer questions: 84.2% vs 96.6% (Llama 3.2) and 76.0% vs 91.8% (Gemma 3).
+
+**Whether this is a good trade depends on the cost of a wrong answer.**
+- Per 500 questions, compared with Vanilla RAG, CAS gave:
+  - Llama 3.2: 19 fewer correct answers, 43 fewer wrong answers and 62 more abstentions;
+  - Gemma 3: 34 fewer correct, 45 fewer wrong and 79 more abstentions.
+- Score a correct answer +1, an abstention 0 and a wrong answer −*c*. CAS then beats Vanilla RAG whenever *c* > 0.44 (Llama 3.2) or *c* > 0.76 (Gemma 3).
+- At *c* = 1, the advantage was +0.048 [−0.026, +0.118] and +0.022 [−0.052, +0.092]. Neither is significant (Holm p = 1.0).
+- The "fails safe" reading is therefore suggestive, not established. It deserves a pre-registered test with risk–coverage endpoints, in applications where a wrong answer costs more than no answer, such as clinical, legal or enterprise question answering.
+
+**The safety comes from filtering, not from conflict detection.** CAS without the graph shows the same pattern: wrong answers fell by 0.088 and 0.096. So do BM25 top-3 and the reranker, by less.
+
+### 6.3 Why CAS does not stop poisoning
 
 Three mechanisms, each measured directly, explain the negative results.
 
@@ -382,30 +467,83 @@ Three mechanisms, each measured directly, explain the negative results.
 - A poisoned copy differs from its source in one entity. The NLI model labelled 470 of 845 such pairs (56%) as entailment, and only 67 (8%) as contradiction.
 - Poison passages also "agree" with each other (301 of 645 pairs).
 - The agreement term (weight 0.20) therefore raises the poison's trust. With no contradiction flags at all, NLI-based CAS let poison through silently in 84% of questions, against 77% without the graph.
-- Agreement-based trust assumes that agreement is evidence of truth. PoisonedRAG-style attacks violate this assumption by construction [9].
+- This is consistent with a known weakness of NLI classifiers trained on MultiNLI: they lean on lexical overlap, and predict entailment for pairs that share most of their words [30]. A poisoned copy shares all but one entity with its source.
+- Agreement-based trust assumes that agreement is evidence of truth. That holds only when the agreeing sources are independent. Near-duplicates and coordinated poison are not independent, and PoisonedRAG-style attacks violate the assumption by construction [9].
+- In study 2, three mutually consistent poison passages faced one true passage, so any defence that counts agreement sides with the poison. Certified aggregation defences [12] likewise give their guarantees only for a bounded number of corrupted passages.
 
 **2. Provenance is a soft weight.**
 - With a weight of 0.25, provenance cannot remove a highly relevant passage, and an attacker controls relevance.
 - A hard filter on the same noisy scores outperformed CAS in 100% of weight settings and at every metadata quality.
+- Better metadata did not help CAS. Across the whole metadata-quality grid (E2), its silent exposure stayed between 0.72 and 0.79, because the weight never let the metadata decide.
 - When reliability metadata exist, they should gate passages, not be averaged with relevance.
 
 **3. Detection is the binding constraint, and penalties destroy evidence.**
 - Today's detector would need about five times its recall for CAS to match BM25 without metadata. No configuration we tested came close at a tolerable false-alarm rate.
 - Penalty mode only looks safe with a better detector, because it discards both sides of a conflict, including the answer.
 
-### 6.2 What does work
+**Why the selection-level gain did not reach the answers.**
+- In the Monte Carlo study, CAS let poison through silently less often than Vanilla RAG in all 1,250 settings (mean differences 0.22 and 0.27).
+- In the real outputs, it did not significantly reduce adoption.
+- The gain consisted of conflict notes and some removals. The notes did not change answers (Section 6.4), and in study 2, condition A, a poison passage still reached CAS's context for every question.
 
-- **Conflict preservation is the better synthesis mode.** It beat the penalty in accuracy under poisoning (study 1, exploratory), and it did not empty the context on clean data. Once contradictions are flagged, it keeps the answer passage far more often than the penalty: 45–58% vs 10–16% with a perfect detector. Study 3 confirmed the advantage at n = 500: +0.058 to +0.078 accuracy and +0.112 evidence F1 (exploratory, Holm p < 0.001).
-- **On clean retrieval, CAS-style filtering improves evidence precision and cuts prompt length by about 3.5×.** This matters for latency-bound deployments, even though answer accuracy does not improve.
+### 6.4 Why conflict notes do not change answers
 
-At n = 500 (study 3), the evidence gain held against Vanilla RAG and BM25 but not against a cross-encoder reranker. A trained reranker therefore matches CAS's selection without any conflict graph.
+Three observations point the same way:
+1. **WikiContradict.** Notes did not raise the rate at which models flagged a conflict (Section 5.1).
+2. **Poisoning.** A note on the poison passage did not lower adoption (E4): 15.7% vs 16.8% for Llama 3.2, and 28.6% vs 22.2% for Gemma 3.
+3. **Clean data.**
+   - The detector attached notes to 49 of the 500 study 3 questions (100 notes in all), although no conflicts had been planted.
+   - On those questions, CAS was not more accurate than CAS without the graph: −0.061 [−0.143, +0.020] for Llama 3.2 and −0.041 [−0.122, +0.041] for Gemma 3.
+   - This comparison also includes any difference in selection, not only the note.
 
-### 6.3 Design recommendations
+**Interpretation.** A 3–4B instruction-tuned model appears to treat "passages [i] and [j] contradict each other" as one more piece of context, not as an instruction to weigh the evidence. This matches the finding that LLMs follow coherent and plentiful evidence, even when other evidence contradicts it [7].
+
+**Caveats.**
+- **E4 is observational.** A note was attached only where the detector fired, which may be where the conflict was most obvious. A randomised ablation is needed: one that adds or removes the note with everything else fixed.
+- **We tested one wording.** A note that says which source is more reliable, or one that asks the model to report both values, might behave differently.
+- **Training is another route.** Generators trained to critique their context, as in Self-RAG [10], may use such signals better.
+
+### 6.5 What the conflict graph costs and buys
+
+- **Cost.** In study 3, building the graph for ten passages took 23.8 s per question on CPU (45 pairs, each scored in both directions).
+  - End to end, conflict-preserving CAS took 26.4 s (Llama 3.2) and 27.5 s (Gemma 3) per question, against 10.3 s and 12.8 s for Vanilla RAG. That is 2.2–2.6 times slower.
+  - The trust-score filter alone (CAS w/o graph) took 2.5 s and 3.5 s, 3.7–4.1 times faster than Vanilla RAG.
+- **Benefit on clean data: none measurable.** Without the graph, evidence F1 was slightly higher (0.680 vs 0.669) and accuracy was the same (difference −0.002 for both models, Holm p = 1.0).
+- **Benefit under poisoning.** The graph flagged a true conflict in 9.75% of poisoned questions.
+- **Conclusion.** With today's detectors and CPU hardware, the graph is almost pure cost. The prompt and latency savings reported for CAS come from the trust-score filter. A cheap detector (0.04 s per query, Section 5.6) would remove the cost, but none of the configurations we tested would supply the missing recall.
+
+### 6.6 What does work
+
+- **Conflict preservation is the better synthesis mode.**
+  - It beat the penalty in accuracy under poisoning (study 1, exploratory), and it did not empty the context on clean data.
+  - Once contradictions are flagged, it keeps the answer passage far more often than the penalty: 45–58% vs 10–16% with a perfect detector.
+  - Study 3 confirmed the advantage at n = 500: +0.058 to +0.078 accuracy and +0.112 evidence F1 (exploratory, Holm p < 0.001).
+- **Trust-score filtering has real benefits.** It improves evidence precision, cuts prompts to about 28% of their length, and gives fewer wrong answers (Section 6.2). Without the conflict graph, it also cuts end-to-end latency on CPU by a factor of 3.7–4.1.
+- **A hard source filter works against poisoning.** When reliability metadata exist, it was the one defence that worked: adoption was 3.5–4.0% in study 2.
+- **A reranker matches CAS.** At n = 500, a cross-encoder reranker matched CAS's evidence selection without any conflict graph.
+
+### 6.7 Implications for evaluating pre-generation verification
+
+1. **Selection-level metrics overstated the benefit, twice.**
+   - Evidence F1 doubled while accuracy fell (Section 6.1).
+   - Silent exposure fell in every Monte Carlo setting, while adoption did not significantly fall (Section 6.3).
+   - Pre-generation methods should be judged on answers. At the selection level, the share of questions with every supporting passage kept tells more than F1.
+2. **Report correct, wrong and abstained answers separately.** Accuracy alone hides the trade shown in Table 5.
+3. **Report end-to-end latency, including verification.** Generation time alone made CAS-NLI look about 3.5 times faster than Vanilla RAG. End to end, it was 2.2–2.6 times slower.
+4. **Fix the analysis before the data exist.**
+   - Pre-registration made the negative results interpretable, because no endpoint could be chosen after the fact.
+   - It also let us show that the scoring errors found later changed no decision (Section 4.5).
+   - The Monte Carlo study ruled out the most common objection to a negative result: that the parameters were wrong.
+
+### 6.8 Design recommendations
 
 1. **Do not treat agreement among retrieved passages as evidence of truth.** At minimum, discount agreement between near-duplicates, and agreement involving passages from the same source.
 2. **Use reliability metadata as a gate.** Fall back to trust weighting only among passages that pass it.
 3. **Keep both sides of a detected conflict rather than penalising.** But do not expect small (3–4B) generators to act on conflict notes (E4); generators may need training to use them.
 4. **Invest in detection recall before detection speed.** Without metadata, CAS needs roughly 50% question-level recall to beat BM25 at the selection level. CPU-cheap detectors already exist, at 0.04 s per query.
+5. **Optimise filters for evidence recall, not F1.** For multi-hop questions, a filter should keep every passage the answer needs, even at some cost in precision. One option is to keep any passage that links to a passage already kept.
+6. **Pair lossy filtering with abstention, and measure the trade-off.** If a filter can drop needed evidence, the generator should be allowed to abstain. The system should then be judged on risk and coverage, not on accuracy alone.
+7. **Leave the conflict graph out until the detector is good enough.** Until a detector reaches roughly 50% question-level recall at a tolerable false-alarm rate, CAS without the graph selects evidence as well, at a fraction of the cost.
 
 ## 7. Threats to Validity
 
@@ -415,7 +553,7 @@ At n = 500 (study 3), the evidence gain held against Vanilla RAG and BM25 but no
 - Some substitutes remain semantically mismatched (for example, a person's name replacing a place). This makes the attack easier to resist, not harder.
 
 **Construct validity.**
-- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**).
+- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 5: a correct paraphrase that does not contain the gold string counts as wrong.
 - Silent exposure (study 4) is a selection-level proxy. E4 suggests that, for small models, a conflict note does not change adoption, so the proxy may overstate the value of marking.
 
 **External validity.**
@@ -428,6 +566,7 @@ At n = 500 (study 3), the evidence gain held against Vanilla RAG and BM25 but no
 - The clean comparison has n = 65 and is exploratory; study 3 replicates it at n = 500.
 - The confirmatory families are Holm-corrected.
 - The Monte Carlo study reports question-level CIs only. Its run count reduces simulation noise, not sampling error.
+- The analyses in Sections 6.1, 6.2, 6.4 and 6.5 were chosen after the results were known. Their tests are Holm-corrected within each analysis, but the set of analyses was not fixed in advance. The groups in Table 4 are defined by each method's own selection, so they are not randomly assigned.
 
 **Pre-registration.**
 - The plans are hash-stamped in the outputs but were not deposited in a public registry.
@@ -441,6 +580,8 @@ Conflict-aware pre-generation verification makes two claims: it selects better e
 **Clean retrieval.** Conflict-preserving CAS selected significantly more precise evidence than Vanilla RAG and cut prompts to about 28% of their length. Conflict preservation also outperformed contradiction penalties.
 
 **At scale.** In a pre-registered replication on 500 clean questions, CAS selected significantly better evidence than Vanilla RAG and BM25, but not better than a cross-encoder reranker. It did not improve answer accuracy.
+
+**Why, and what it does instead.** Exploratory analyses explain the gap. Filtering helped when it kept every supporting passage and hurt when it dropped one, and CAS dropped one for nearly half of the questions. CAS also gave significantly fewer wrong answers than Vanilla RAG (−0.086 and −0.090), mostly by abstaining when its selection did not contain the answer. Where a wrong answer costs more than no answer, that trade may favour CAS. This needs a confirmatory test.
 
 **Poisoning.** In both pre-registered poisoning studies, CAS did not significantly reduce poison adoption relative to Vanilla RAG (differences −0.055 to +0.030, all Holm p = 1.0). When source metadata were available, a plain source filter performed significantly better.
 
@@ -514,3 +655,4 @@ All code, pre-registrations, benchmarks, cached NLI and LLM outputs, per-questio
 [27] J. Cohen, "A coefficient of agreement for nominal scales," *Educ. Psychol. Meas.*, 1960.
 [28] B. Efron, R. J. Tibshirani, *An Introduction to the Bootstrap*. Chapman & Hall, 1993.
 [29] S. Holm, "A simple sequentially rejective multiple test procedure," *Scand. J. Statist.*, 1979.
+[30] R. T. McCoy, E. Pavlick, T. Linzen, "Right for the wrong reasons: Diagnosing syntactic heuristics in natural language inference," in *Proc. ACL*, 2019.
