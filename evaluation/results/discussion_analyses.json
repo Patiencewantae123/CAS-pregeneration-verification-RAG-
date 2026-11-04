@@ -1,0 +1,762 @@
+{
+ "note": "Exploratory, post hoc, not pre-registered. Study 3 cached outputs only.",
+ "accuracy_by_recall": [
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "stratum": "all supporting passages kept",
+   "n": 308,
+   "accuracy": 0.6103896103896104,
+   "vanilla_accuracy": 0.5487012987012987,
+   "abstain": 0.03571428571428571,
+   "mean_diff": 0.06168831168831169,
+   "ci_low": 0.01948051948051948,
+   "ci_high": 0.10064935064935066,
+   "p_value": 0.004399560043995601,
+   "p_holm": 0.04399560043995601
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "stratum": "a supporting passage dropped",
+   "n": 192,
+   "accuracy": 0.25,
+   "vanilla_accuracy": 0.4270833333333333,
+   "abstain": 0.234375,
+   "mean_diff": -0.17708333333333334,
+   "ci_low": -0.25,
+   "ci_high": -0.109375,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "stratum": "all supporting passages kept",
+   "n": 314,
+   "accuracy": 0.6019108280254777,
+   "vanilla_accuracy": 0.5509554140127388,
+   "abstain": 0.028662420382165606,
+   "mean_diff": 0.050955414012738856,
+   "ci_low": 0.009554140127388535,
+   "ci_high": 0.09235668789808917,
+   "p_value": 0.017198280171982803,
+   "p_holm": 0.15478452154784522
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "stratum": "a supporting passage dropped",
+   "n": 186,
+   "accuracy": 0.1935483870967742,
+   "vanilla_accuracy": 0.41935483870967744,
+   "abstain": 0.22043010752688172,
+   "mean_diff": -0.22580645161290322,
+   "ci_low": -0.2956989247311828,
+   "ci_high": -0.16129032258064516,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "stratum": "all supporting passages kept",
+   "n": 254,
+   "accuracy": 0.6338582677165354,
+   "vanilla_accuracy": 0.5787401574803149,
+   "abstain": 0.04330708661417323,
+   "mean_diff": 0.05511811023622047,
+   "ci_low": 0.0077755905511811075,
+   "ci_high": 0.1062992125984252,
+   "p_value": 0.030296970302969704,
+   "p_holm": 0.21207879212078792
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "stratum": "a supporting passage dropped",
+   "n": 246,
+   "accuracy": 0.2926829268292683,
+   "vanilla_accuracy": 0.42276422764227645,
+   "abstain": 0.2764227642276423,
+   "mean_diff": -0.13008130081300814,
+   "ci_low": -0.1951219512195122,
+   "ci_high": -0.06910569105691057,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "stratum": "all supporting passages kept",
+   "n": 180,
+   "accuracy": 0.6055555555555555,
+   "vanilla_accuracy": 0.5444444444444444,
+   "abstain": 0.044444444444444446,
+   "mean_diff": 0.06111111111111111,
+   "ci_low": 0.005555555555555556,
+   "ci_high": 0.11666666666666667,
+   "p_value": 0.045795420457954206,
+   "p_holm": 0.22897710228977103
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "stratum": "a supporting passage dropped",
+   "n": 320,
+   "accuracy": 0.29375,
+   "vanilla_accuracy": 0.478125,
+   "abstain": 0.36875,
+   "mean_diff": -0.184375,
+   "ci_low": -0.24375,
+   "ci_high": -0.128125,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "stratum": "all supporting passages kept",
+   "n": 259,
+   "accuracy": 0.6216216216216216,
+   "vanilla_accuracy": 0.5752895752895753,
+   "abstain": 0.04633204633204633,
+   "mean_diff": 0.04633204633204633,
+   "ci_low": 0.0,
+   "ci_high": 0.09266409266409266,
+   "p_value": 0.07269273072692731,
+   "p_holm": 0.22897710228977103
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "stratum": "a supporting passage dropped",
+   "n": 241,
+   "accuracy": 0.2946058091286307,
+   "vanilla_accuracy": 0.42323651452282157,
+   "abstain": 0.27800829875518673,
+   "mean_diff": -0.12863070539419086,
+   "ci_low": -0.1950207468879668,
+   "ci_high": -0.06224066390041494,
+   "p_value": 0.00029997000299970003,
+   "p_holm": 0.0032996700329967
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "stratum": "all supporting passages kept",
+   "n": 308,
+   "accuracy": 0.5422077922077922,
+   "vanilla_accuracy": 0.487012987012987,
+   "abstain": 0.09415584415584416,
+   "mean_diff": 0.05519480519480519,
+   "ci_low": 0.006493506493506494,
+   "ci_high": 0.10064935064935066,
+   "p_value": 0.031296870312968704,
+   "p_holm": 0.21207879212078792
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "stratum": "a supporting passage dropped",
+   "n": 192,
+   "accuracy": 0.19791666666666666,
+   "vanilla_accuracy": 0.40625,
+   "abstain": 0.375,
+   "mean_diff": -0.20833333333333334,
+   "ci_low": -0.2760416666666667,
+   "ci_high": -0.140625,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "stratum": "all supporting passages kept",
+   "n": 314,
+   "accuracy": 0.5191082802547771,
+   "vanilla_accuracy": 0.4681528662420382,
+   "abstain": 0.12420382165605096,
+   "mean_diff": 0.050955414012738856,
+   "ci_low": 0.0031847133757961785,
+   "ci_high": 0.09872611464968153,
+   "p_value": 0.05119488051194881,
+   "p_holm": 0.22897710228977103
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "stratum": "a supporting passage dropped",
+   "n": 186,
+   "accuracy": 0.1774193548387097,
+   "vanilla_accuracy": 0.43548387096774194,
+   "abstain": 0.3763440860215054,
+   "mean_diff": -0.25806451612903225,
+   "ci_low": -0.3387096774193548,
+   "ci_high": -0.1774193548387097,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "stratum": "all supporting passages kept",
+   "n": 254,
+   "accuracy": 0.5551181102362205,
+   "vanilla_accuracy": 0.49606299212598426,
+   "abstain": 0.0984251968503937,
+   "mean_diff": 0.05905511811023622,
+   "ci_low": 0.011811023622047244,
+   "ci_high": 0.11023622047244094,
+   "p_value": 0.0254974502549745,
+   "p_holm": 0.203979602039796
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "stratum": "a supporting passage dropped",
+   "n": 246,
+   "accuracy": 0.21951219512195122,
+   "vanilla_accuracy": 0.4146341463414634,
+   "abstain": 0.3943089430894309,
+   "mean_diff": -0.1951219512195122,
+   "ci_low": -0.2601626016260163,
+   "ci_high": -0.13008130081300814,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "stratum": "all supporting passages kept",
+   "n": 180,
+   "accuracy": 0.5166666666666667,
+   "vanilla_accuracy": 0.4777777777777778,
+   "abstain": 0.10555555555555556,
+   "mean_diff": 0.03888888888888889,
+   "ci_low": -0.011111111111111112,
+   "ci_high": 0.08902777777777703,
+   "p_value": 0.21247875212478753,
+   "p_holm": 0.22897710228977103
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "stratum": "a supporting passage dropped",
+   "n": 320,
+   "accuracy": 0.19375,
+   "vanilla_accuracy": 0.44375,
+   "abstain": 0.45,
+   "mean_diff": -0.25,
+   "ci_low": -0.30625,
+   "ci_high": -0.19375,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "stratum": "all supporting passages kept",
+   "n": 259,
+   "accuracy": 0.5444015444015444,
+   "vanilla_accuracy": 0.4942084942084942,
+   "abstain": 0.10038610038610038,
+   "mean_diff": 0.05019305019305019,
+   "ci_low": 0.003861003861003861,
+   "ci_high": 0.09652509652509653,
+   "p_value": 0.04659534046595341,
+   "p_holm": 0.22897710228977103
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "stratum": "a supporting passage dropped",
+   "n": 241,
+   "accuracy": 0.21991701244813278,
+   "vanilla_accuracy": 0.4149377593360996,
+   "abstain": 0.3900414937759336,
+   "mean_diff": -0.1950207468879668,
+   "ci_low": -0.26141078838174275,
+   "ci_high": -0.13692946058091288,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.001999800019998
+  }
+ ],
+ "break_even_full_evidence": [
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "share_all_kept": 0.616,
+   "share_needed": 0.741643059490085
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "share_all_kept": 0.628,
+   "share_needed": 0.8158871566443949
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "share_all_kept": 0.508,
+   "share_needed": 0.7023850674040789
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "share_all_kept": 0.36,
+   "share_needed": 0.751060820367751
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "share_all_kept": 0.518,
+   "share_needed": 0.7351890852486036
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "share_all_kept": 0.616,
+   "share_needed": 0.7905544147843943
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "share_all_kept": 0.628,
+   "share_needed": 0.8351063829787234
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "share_all_kept": 0.508,
+   "share_needed": 0.7676615035889687
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "share_all_kept": 0.36,
+   "share_needed": 0.8653846153846154
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "share_all_kept": 0.518,
+   "share_needed": 0.7953090291388998
+  }
+ ],
+ "selective_accuracy": [
+  {
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "coverage": 0.966,
+   "selective_accuracy": 0.5196687370600414,
+   "diff_vs_vanilla": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "coverage": 0.888,
+   "selective_accuracy": 0.5315315315315315,
+   "diff_vs_vanilla": 0.01186279447149019,
+   "ci_low": -0.02637036851862299,
+   "ci_high": 0.05027803557696133
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "coverage": 0.9,
+   "selective_accuracy": 0.5,
+   "diff_vs_vanilla": -0.019668737060041352,
+   "ci_low": -0.058950419807997756,
+   "ci_high": 0.01852341234984904
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "coverage": 0.842,
+   "selective_accuracy": 0.5534441805225653,
+   "diff_vs_vanilla": 0.033775443462523924,
+   "ci_low": -0.008939852945528117,
+   "ci_high": 0.07225290268121061
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "coverage": 0.748,
+   "selective_accuracy": 0.5427807486631016,
+   "diff_vs_vanilla": 0.0231120116030602,
+   "ci_low": -0.022473677560702076,
+   "ci_high": 0.07086751713481351
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "coverage": 0.842,
+   "selective_accuracy": 0.5510688836104513,
+   "diff_vs_vanilla": 0.0314001465504099,
+   "ci_low": -0.009531235550907074,
+   "ci_high": 0.07060477342167472
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Vanilla RAG",
+   "coverage": 0.918,
+   "selective_accuracy": 0.49673202614379086,
+   "diff_vs_vanilla": 0.0,
+   "ci_low": 0.0,
+   "ci_high": 0.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "coverage": 0.798,
+   "selective_accuracy": 0.5137844611528822,
+   "diff_vs_vanilla": 0.01705243500909137,
+   "ci_low": -0.027453126991744244,
+   "ci_high": 0.061232551952735255
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "coverage": 0.782,
+   "selective_accuracy": 0.5012787723785166,
+   "diff_vs_vanilla": 0.004546746234725729,
+   "ci_low": -0.04450260141943963,
+   "ci_high": 0.04906185211562839
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "coverage": 0.756,
+   "selective_accuracy": 0.5158730158730159,
+   "diff_vs_vanilla": 0.019140989729225066,
+   "ci_low": -0.027139308106727593,
+   "ci_high": 0.06368403158959017
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "coverage": 0.6739999999999999,
+   "selective_accuracy": 0.4599406528189911,
+   "diff_vs_vanilla": -0.03679137332479976,
+   "ci_low": -0.08849834793873182,
+   "ci_high": 0.01162640191583291
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "coverage": 0.76,
+   "selective_accuracy": 0.5105263157894737,
+   "diff_vs_vanilla": 0.013794289645682856,
+   "ci_low": -0.0317554112302839,
+   "ci_high": 0.056358163219049094
+  }
+ ],
+ "wrong_answers": [
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "wrong_rate": 0.416,
+   "vanilla_wrong_rate": 0.464,
+   "mean_diff": -0.048,
+   "ci_low": -0.086,
+   "ci_high": -0.01,
+   "p_value": 0.021597840215978402,
+   "p_holm": 0.043195680431956804
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "wrong_rate": 0.45,
+   "vanilla_wrong_rate": 0.464,
+   "mean_diff": -0.014,
+   "ci_low": -0.052,
+   "ci_high": 0.026,
+   "p_value": 0.5387461253874612,
+   "p_holm": 0.5387461253874612
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "wrong_rate": 0.376,
+   "vanilla_wrong_rate": 0.464,
+   "mean_diff": -0.088,
+   "ci_low": -0.126,
+   "ci_high": -0.046,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "wrong_rate": 0.342,
+   "vanilla_wrong_rate": 0.464,
+   "mean_diff": -0.122,
+   "ci_low": -0.16605,
+   "ci_high": -0.07795000000000027,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "wrong_rate": 0.378,
+   "vanilla_wrong_rate": 0.464,
+   "mean_diff": -0.086,
+   "ci_low": -0.126,
+   "ci_high": -0.046,
+   "p_value": 0.00019998000199980003,
+   "p_holm": 0.0011998800119988001
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "wrong_rate": 0.388,
+   "vanilla_wrong_rate": 0.462,
+   "mean_diff": -0.074,
+   "ci_low": -0.114,
+   "ci_high": -0.03,
+   "p_value": 0.0013998600139986002,
+   "p_holm": 0.004199580041995801
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "wrong_rate": 0.39,
+   "vanilla_wrong_rate": 0.462,
+   "mean_diff": -0.072,
+   "ci_low": -0.114,
+   "ci_high": -0.03,
+   "p_value": 0.0008999100089991,
+   "p_holm": 0.0035996400359964
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "wrong_rate": 0.366,
+   "vanilla_wrong_rate": 0.462,
+   "mean_diff": -0.096,
+   "ci_low": -0.142,
+   "ci_high": -0.052,
+   "p_value": 0.00019998000199980003,
+   "p_holm": 0.0011998800119988001
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "wrong_rate": 0.364,
+   "vanilla_wrong_rate": 0.462,
+   "mean_diff": -0.098,
+   "ci_low": -0.144,
+   "ci_high": -0.051950000000000274,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "wrong_rate": 0.372,
+   "vanilla_wrong_rate": 0.462,
+   "mean_diff": -0.09,
+   "ci_low": -0.134,
+   "ci_high": -0.04795000000000028,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  }
+ ],
+ "utility": [
+  {
+   "model": "llama3.2:latest",
+   "method": "BM25 top-3",
+   "break_even_c": 0.625,
+   "diff_at_c1": 0.018,
+   "ci_low": -0.054,
+   "ci_high": 0.08804999999999973,
+   "p_value": 0.667033296670333,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "break_even_c": 3.7142857142857104,
+   "diff_at_c1": -0.038,
+   "ci_low": -0.112,
+   "ci_high": 0.032049999999999725,
+   "p_value": 0.3260673932606739,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "break_even_c": 0.4090909090909087,
+   "diff_at_c1": 0.052,
+   "ci_low": -0.026,
+   "ci_high": 0.122,
+   "p_value": 0.198980101989801,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI penalty",
+   "break_even_c": 0.7868852459016391,
+   "diff_at_c1": 0.026,
+   "ci_low": -0.052,
+   "ci_high": 0.106,
+   "p_value": 0.551044895510449,
+   "p_holm": 1.0
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "break_even_c": 0.4418604651162787,
+   "diff_at_c1": 0.048,
+   "ci_low": -0.026,
+   "ci_high": 0.118,
+   "p_value": 0.23217678232176783,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "BM25 top-3",
+   "break_even_c": 0.621621621621622,
+   "diff_at_c1": 0.028,
+   "ci_low": -0.048,
+   "ci_high": 0.102,
+   "p_value": 0.5062493750624938,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "break_even_c": 0.8888888888888888,
+   "diff_at_c1": 0.008,
+   "ci_low": -0.072,
+   "ci_high": 0.084,
+   "p_value": 0.8777122287771223,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "break_even_c": 0.6874999999999998,
+   "diff_at_c1": 0.03,
+   "ci_low": -0.046,
+   "ci_high": 0.104,
+   "p_value": 0.47855214478552144,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI penalty",
+   "break_even_c": 1.4897959183673466,
+   "diff_at_c1": -0.048,
+   "ci_low": -0.128,
+   "ci_high": 0.028,
+   "p_value": 0.260973902609739,
+   "p_holm": 1.0
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "break_even_c": 0.7555555555555554,
+   "diff_at_c1": 0.022,
+   "ci_low": -0.05204999999999999,
+   "ci_high": 0.09204999999999973,
+   "p_value": 0.6043395660433957,
+   "p_holm": 1.0
+  }
+ ],
+ "outcomes_vs_vanilla": [
+  {
+   "model": "llama3.2:latest",
+   "n": 500,
+   "vanilla_right_cas_wrong": 61,
+   "of_which_cas_abstained": 29,
+   "of_which_supporting_passage_dropped": 48,
+   "cas_right_vanilla_wrong": 42,
+   "net": -19,
+   "cas_abstentions_span": 72,
+   "cas_abstentions_span_answer_not_in_selection": 51,
+   "vanilla_abstentions_span": 15,
+   "vanilla_abstentions_span_answer_not_in_selection": 0
+  },
+  {
+   "model": "gemma3:latest",
+   "n": 500,
+   "vanilla_right_cas_wrong": 70,
+   "of_which_cas_abstained": 37,
+   "of_which_supporting_passage_dropped": 58,
+   "cas_right_vanilla_wrong": 36,
+   "net": -34,
+   "cas_abstentions_span": 100,
+   "cas_abstentions_span_answer_not_in_selection": 57,
+   "vanilla_abstentions_span": 32,
+   "vanilla_abstentions_span_answer_not_in_selection": 0
+  }
+ ],
+ "false_conflict_notes": {
+  "questions_with_a_note": 49,
+  "n": 500,
+  "notes_total": 100,
+  "llama3.2:latest": {
+   "accuracy_with_note": 0.42857142857142855,
+   "cas_wo_graph_same_questions": 0.4897959183673469,
+   "mean_diff": -0.061224489795918366,
+   "ci_low": -0.14285714285714285,
+   "ci_high": 0.02040816326530612
+  },
+  "gemma3:latest": {
+   "accuracy_with_note": 0.30612244897959184,
+   "cas_wo_graph_same_questions": 0.3469387755102041,
+   "mean_diff": -0.04081632653061224,
+   "ci_low": -0.12244897959183673,
+   "ci_high": 0.04081632653061224
+  }
+ },
+ "latency": [
+  {
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "selection_s": 2.2612000307162815e-06,
+   "generation_s": 10.278889917799999,
+   "end_to_end_s": 10.27889217900003
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS w/o graph",
+   "selection_s": 0.0004510281999750498,
+   "generation_s": 2.4832720756000364,
+   "end_to_end_s": 2.4837231038000116
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS-NLI preserve",
+   "selection_s": 23.84720531260001,
+   "generation_s": 2.563354740200035,
+   "end_to_end_s": 26.410560052800044
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Vanilla RAG",
+   "selection_s": 2.2612000307162815e-06,
+   "generation_s": 12.768893032199886,
+   "end_to_end_s": 12.768895293399916
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS w/o graph",
+   "selection_s": 0.0004510281999750498,
+   "generation_s": 3.4855875409999646,
+   "end_to_end_s": 3.48603856919994
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS-NLI preserve",
+   "selection_s": 23.84720531260001,
+   "generation_s": 3.6209929646000236,
+   "end_to_end_s": 27.468198277200035
+  }
+ ]
+}
