@@ -16,7 +16,10 @@ Study 6 is a new confirmatory study. It is not pooled with study 5, whose result
 
 - **CAS v2 is frozen** exactly as in study 5 (`evaluation/cas_v2.py`, unchanged since 2026-11-04: κ = 0.8, edits of 1–8 content words, provenance gate unused because there is no metadata, τ = 0.45, title links).
 - **The datasets and methods were fixed before the pilot below was run.** The pilot only informed the sample sizes and the predictions.
-- **Generation:** the study 1–5 QA prompt; Llama 3.2 3B and Gemma 3 4B; Ollama 0.40.13, temperature 0, seed 42, context 8,192 tokens.
+- **Generation:** the study 1–5 QA prompt; Llama 3.2 3B and Gemma 3 4B (model IDs `a80c4f17acd5`, `a2af6cc3eb7f`); temperature 0, seed 42, context 8,192 tokens.
+- **Ollama runtime: 0.40.13**, the version of studies 3 and 5.
+  - Version 0.40.14 has been downloaded by Ollama's updater since 2026-11-03. It installs itself when the Ollama app next starts.
+  - `run_study6.py` checks the version before every question and stops if it is not 0.40.13. Cached answers are kept, and a stopped run is resumed only on 0.40.13. No study 6 answer can therefore come from another version.
 
 ## Data (`build_study6.py`)
 

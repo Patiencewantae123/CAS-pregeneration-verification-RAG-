@@ -15,6 +15,7 @@ import os
 import subprocess
 import sys
 import time
+import urllib.request
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import build_study6  # noqa: E402
@@ -28,6 +29,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PREREG = os.path.join(HERE, "PREREGISTRATION_study6.md")
 SEL_PATH = os.path.join(OUT_RESULTS, "study6_selections.json")
 MARGIN = 0.05
+OLLAMA_VERSION = "0.40.13"   # the version named in the plan; 0.40.14 is downloaded and installs when the app restarts
 V2 = "CAS v2"
 MODELS = ["llama3.2:latest", "gemma3:latest"]
 DATASETS = {"hotpotqa": "HotpotQA", "musique": "MuSiQue"}
@@ -56,6 +58,15 @@ def wait_for_plan():
         time.sleep(60)
     print(f"plan committed in {found[0][:8]} at {found[1]}", flush=True)
     return found
+
+
+def check_ollama():
+    """Stop rather than mix runtimes: every answer must come from the Ollama version named in the plan."""
+    with urllib.request.urlopen("http://localhost:11434/api/version", timeout=60) as resp:
+        version = json.loads(resp.read())["version"]
+    if version != OLLAMA_VERSION:
+        sys.exit(f"Ollama is {version}, but the plan fixes {OLLAMA_VERSION}. Stopped; cached answers are kept. "
+                 f"Resume only on {OLLAMA_VERSION}.")
 
 # ============================================================
 # 2. SELECTION, GENERATION AND SCORING
@@ -112,6 +123,7 @@ def run_generation(data, sel, models, limit):
     for model in models:
         for ds in DATASETS:
             for k, it in enumerate(data[ds][:limit]):
+                check_ollama()
                 for m in ANSWER_METHODS:
                     chosen = set(sel[f"{ds}|{m}|{it['id']}"]["selected"])
                     context = format_passages(it["passages"], chosen)
@@ -212,7 +224,8 @@ def summarize(ev, rows, models, n, commit):
             t["holds"] for t in non_inferiority if t["dataset"] == ds)
     with open(PREREG, "rb") as f:
         sha = hashlib.sha256(f.read()).hexdigest()
-    return {"preregistration_sha256": sha, "preregistration_commit": commit, "n": n, "models": models,
+    return {"preregistration_sha256": sha, "preregistration_commit": commit, "ollama_version": OLLAMA_VERSION,
+            "n": n, "models": models,
             "tau": DEFAULT_TAU, "v2": {"kappa": cas_v2.KAPPA, "edit": cas_v2.EDIT, "gate": cas_v2.GATE,
                                        "min_words": cas_v2.MIN_WORDS},
             "descriptive": descriptive, "primary": primary, "secondary": secondary,
@@ -228,6 +241,7 @@ def main():
     ap.add_argument("--no-wait", action="store_true", help="for smoke tests only: skip the plan-commit check")
     args = ap.parse_args()
     commit = None if args.no_wait else wait_for_plan()
+    check_ollama()
     if not os.path.exists(build_study6.OUT):
         build_study6.main()
     with open(build_study6.OUT, encoding="utf-8") as f:

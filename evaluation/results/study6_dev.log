@@ -1,2 +1,4 @@
 Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
 Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3993.27it/s]
+{'model': 'llama3.2:latest', 'method': 'Vanilla RAG', 'accuracy': 0.26666666666666666, 'wrong': 0.45, 'abstain': 0.2833333333333333, 'wall_s': 22.960228779998822, 'prompt_tokens': 2625.4}
+{'model': 'llama3.2:latest', 'method': 'CAS v2', 'accuracy': 0.13333333333333333, 'wrong': 0.45, 'abstain': 0.4166666666666667, 'wall_s': 6.283379366666486, 'prompt_tokens': 891.5666666666667}
