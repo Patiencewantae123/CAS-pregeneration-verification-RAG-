@@ -185,7 +185,13 @@ The substitute rules were amended once (Amendment 1), before any method ran.
 ### 4.3 Generation
 
 - **Models:** Llama 3.2 3B and Gemma 3 4B in all studies, plus Llama 3.1 8B on the clean benchmark [24], [25]. Llama 3.1 8B also wrote the study 5 attack texts.
-- **Runtime:** Ollama on CPU, temperature 0, seed 42.
+- **Runtime:** Ollama on CPU, temperature 0, seed 42, context window 8,192 tokens, at most 96 generated tokens.
+- **Software:** Python 3.14.6, PyTorch 2.15.0 (CPU build), Sentence-Transformers 6.2.0 and Transformers 5.21.0. These were installed on 2026-10-29, before the first NLI prediction appears in the repository, and were not changed afterwards.
+- **Ollama version:** the version was not stored with each cached response; this account comes from Ollama's server logs.
+  - 0.40.12 served every answer generated on 2026-10-29 and 2026-10-30: the exploratory comparison and studies 1–2.
+  - Ollama updated itself to 0.40.13 on 2026-11-03, before study 3's answers were generated. That version served studies 3 and 5.
+  - The logs show no generation requests before 2026-10-29.
+  - The model weights did not change between studies. The Ollama model IDs are `a80c4f17acd5` (Llama 3.2 3B), `a2af6cc3eb7f` (Gemma 3 4B) and `46e0c10c039e` (Llama 3.1 8B).
 - **Prompt:** one fixed QA prompt that asks for a short answer, or "unknown" when the passages do not contain it.
 - **Hardware:** an Intel CPU with 15 GB RAM and no GPU.
 
@@ -760,6 +766,7 @@ Study 5 tested four of the recommendations together, on questions that no earlie
   - H5 therefore tests whether v2 generalises to new questions, not to a new attack.
   - The written attack is the only out-of-family test, and the one test where v2's gain turned out to be incidental.
 - **The study 5 mechanism analysis (Section 6.9) is post hoc.**
+- **The Ollama runtime changed between studies.** It moved from 0.40.12 to 0.40.13 between study 2 and study 3 (Section 4.3), with the same model weights. Comparisons within a study are unaffected, because every method in a study ran on the same version. Comparisons of absolute accuracy across studies could be affected.
 
 **Construct validity.**
 - Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 5: a correct paraphrase that does not contain the gold string counts as wrong.

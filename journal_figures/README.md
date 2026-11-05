@@ -21,7 +21,8 @@ py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/fi
 ```
 
 Environment:
-- Software: Python 3.14, numpy 2.5, pandas 3.0, matplotlib 3.11, torch 2.15 (CPU), sentence-transformers, Ollama 0.40.12.
+- Software: Python 3.14.6, PyTorch 2.15.0 (CPU), Sentence-Transformers 6.2.0, Transformers 5.21.0, numpy 2.5.1, pandas 3.0.3, matplotlib 3.11.0.
+- Ollama: 0.40.12 for the exploratory answers and studies 1–2 (2026-10-29/30); 0.40.13 for studies 3 and 5 (from 2026-11-03, after an automatic update). The version is not stored per response; this comes from Ollama's server logs. Model IDs (unchanged throughout): llama3.2 `a80c4f17acd5`, gemma3 `a2af6cc3eb7f`, llama3.1:8b `46e0c10c039e`.
 - Hardware: Intel CPU, 15 GB RAM, **no GPU**. Llama 3.1 8B ran at about 48 prompt tokens/s and 9 generated tokens/s.
 - Statistics: seed 42; 2,000 bootstrap resamples; 10,000 sign-flip permutations; Holm correction within each family of tests.
 
