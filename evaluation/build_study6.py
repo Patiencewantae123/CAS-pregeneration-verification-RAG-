@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from dev_study6 import MUSIQUE, musique_item  # noqa: E402
 from run_evaluation import DATA, SEED, load  # noqa: E402
 
-N_HOTPOT, N_MUSIQUE = 800, 400
+N_HOTPOT, N_MUSIQUE = 700, 200
 OUT = os.path.join(DATA, "study6.json")
 
 

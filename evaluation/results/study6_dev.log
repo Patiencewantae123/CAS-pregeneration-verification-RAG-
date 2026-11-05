@@ -2,3 +2,121 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3993.27it/s]
 {'model': 'llama3.2:latest', 'method': 'Vanilla RAG', 'accuracy': 0.26666666666666666, 'wrong': 0.45, 'abstain': 0.2833333333333333, 'wall_s': 22.960228779998822, 'prompt_tokens': 2625.4}
 {'model': 'llama3.2:latest', 'method': 'CAS v2', 'accuracy': 0.13333333333333333, 'wrong': 0.45, 'abstain': 0.4166666666666667, 'wall_s': 6.283379366666486, 'prompt_tokens': 891.5666666666667}
+{'model': 'gemma3:latest', 'method': 'Vanilla RAG', 'accuracy': 0.16666666666666666, 'wrong': 0.4666666666666667, 'abstain': 0.36666666666666664, 'wall_s': 24.521186770000106, 'prompt_tokens': 2718.266666666667}
+{'model': 'gemma3:latest', 'method': 'CAS v2', 'accuracy': 0.15, 'wrong': 0.35, 'abstain': 0.5, 'wall_s': 10.69966004833162, 'prompt_tokens': 907.2833333333333}
+{
+ "note": "Development check on MuSiQue questions excluded from study 6; CAS v2 frozen; unadjusted.",
+ "n_selection": 200,
+ "n_pilot": 60,
+ "selection": [
+  {
+   "method": "Vanilla RAG",
+   "precision": 0.13183333333333333,
+   "recall": 1.0,
+   "f1": 0.23111895351025782,
+   "full_evidence": 1.0,
+   "n_selected": 19.99
+  },
+  {
+   "method": "BM25 top-3",
+   "precision": 0.3833333333333333,
+   "recall": 0.4575,
+   "f1": 0.4105714285714286,
+   "full_evidence": 0.085,
+   "n_selected": 3.0
+  },
+  {
+   "method": "Reranker top-3",
+   "precision": 0.45833333333333326,
+   "recall": 0.5479166666666666,
+   "f1": 0.49109523809523814,
+   "full_evidence": 0.18,
+   "n_selected": 3.0
+  },
+  {
+   "method": "CAS v2",
+   "precision": 0.3551673396048396,
+   "recall": 0.71875,
+   "f1": 0.44364052631235296,
+   "full_evidence": 0.435,
+   "n_selected": 6.38
+  }
+ ],
+ "pilot": [
+  {
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "accuracy": 0.26666666666666666,
+   "wrong": 0.45,
+   "abstain": 0.2833333333333333,
+   "wall_s": 22.960228779998822,
+   "prompt_tokens": 2625.4
+  },
+  {
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "accuracy": 0.13333333333333333,
+   "wrong": 0.45,
+   "abstain": 0.4166666666666667,
+   "wall_s": 6.283379366666486,
+   "prompt_tokens": 891.5666666666667
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "Vanilla RAG",
+   "accuracy": 0.16666666666666666,
+   "wrong": 0.4666666666666667,
+   "abstain": 0.36666666666666664,
+   "wall_s": 24.521186770000106,
+   "prompt_tokens": 2718.266666666667
+  },
+  {
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "accuracy": 0.15,
+   "wrong": 0.35,
+   "abstain": 0.5,
+   "wall_s": 10.69966004833162,
+   "prompt_tokens": 907.2833333333333
+  }
+ ],
+ "pilot_tests": [
+  {
+   "model": "llama3.2:latest",
+   "metric": "accuracy",
+   "mean_diff": -0.13333333333333333,
+   "ci_low": -0.23333333333333334,
+   "ci_high": -0.03333333333333333,
+   "p_value": 0.0193980601939806,
+   "sd_diff": 0.3891175007353576
+  },
+  {
+   "model": "llama3.2:latest",
+   "metric": "wrong",
+   "mean_diff": 0.0,
+   "ci_low": -0.11666666666666667,
+   "ci_high": 0.11666666666666667,
+   "p_value": 1.0,
+   "sd_diff": 0.4509876168016973
+  },
+  {
+   "model": "gemma3:latest",
+   "metric": "accuracy",
+   "mean_diff": -0.016666666666666666,
+   "ci_low": -0.11666666666666667,
+   "ci_high": 0.08333333333333333,
+   "p_value": 1.0,
+   "sd_diff": 0.3902049294994229
+  },
+  {
+   "model": "gemma3:latest",
+   "metric": "wrong",
+   "mean_diff": -0.11666666666666667,
+   "ci_low": -0.23374999999999999,
+   "ci_high": 0.0004166666666643929,
+   "p_value": 0.11248875112488751,
+   "sd_diff": 0.4903014177279
+  }
+ ],
+ "v2_quarantine_fired": 0.19
+}

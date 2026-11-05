@@ -1,0 +1,62 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3313.71it/s]
+{'dataset': 'MuSiQue', 'variant': 'v2', 'full_evidence': np.float64(0.435), 'f1': np.float64(0.44364052631235296), 'n_selected': np.float64(6.38)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=1 ratio=1.0', 'full_evidence': np.float64(0.55), 'f1': np.float64(0.4262889646902805), 'n_selected': np.float64(7.39)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=1 ratio=0.8', 'full_evidence': np.float64(0.63), 'f1': np.float64(0.4110685367693881), 'n_selected': np.float64(8.48)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=1 ratio=0.6', 'full_evidence': np.float64(0.725), 'f1': np.float64(0.3734829857964533), 'n_selected': np.float64(10.37)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=2 ratio=1.0', 'full_evidence': np.float64(0.58), 'f1': np.float64(0.39078732138174854), 'n_selected': np.float64(8.39)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=2 ratio=0.8', 'full_evidence': np.float64(0.67), 'f1': np.float64(0.3567551928187276), 'n_selected': np.float64(10.3)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=2 ratio=0.6', 'full_evidence': np.float64(0.785), 'f1': np.float64(0.3038369171715349), 'n_selected': np.float64(13.435)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=3 ratio=1.0', 'full_evidence': np.float64(0.62), 'f1': np.float64(0.3632020334326836), 'n_selected': np.float64(9.38)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=3 ratio=0.8', 'full_evidence': np.float64(0.705), 'f1': np.float64(0.322785273228738), 'n_selected': np.float64(11.86)}
+{'dataset': 'MuSiQue', 'variant': 'hop expansion R=3 ratio=0.6', 'full_evidence': np.float64(0.82), 'f1': np.float64(0.26829509665078044), 'n_selected': np.float64(15.61)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=None', 'full_evidence': np.float64(0.16), 'f1': np.float64(0.5476666666666666), 'n_selected': np.float64(2.0)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=None + links', 'full_evidence': np.float64(0.36), 'f1': np.float64(0.6006625216888374), 'n_selected': np.float64(3.295)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=0.0', 'full_evidence': np.float64(0.09), 'f1': np.float64(0.5123333333333333), 'n_selected': np.float64(1.44)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=0.0 + links', 'full_evidence': np.float64(0.325), 'f1': np.float64(0.6160243543006702), 'n_selected': np.float64(2.825)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=-3.0', 'full_evidence': np.float64(0.15), 'f1': np.float64(0.5423333333333333), 'n_selected': np.float64(1.885)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=2 t=-3.0 + links', 'full_evidence': np.float64(0.35), 'f1': np.float64(0.6023133153396312), 'n_selected': np.float64(3.18)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=None', 'full_evidence': np.float64(0.235), 'f1': np.float64(0.523), 'n_selected': np.float64(3.0)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=None + links', 'full_evidence': np.float64(0.435), 'f1': np.float64(0.5536864699627857), 'n_selected': np.float64(4.245)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=0.0', 'full_evidence': np.float64(0.12), 'f1': np.float64(0.5182857142857143), 'n_selected': np.float64(1.735)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=0.0 + links', 'full_evidence': np.float64(0.345), 'f1': np.float64(0.6067477975241133), 'n_selected': np.float64(3.035)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=-3.0', 'full_evidence': np.float64(0.21), 'f1': np.float64(0.5352619047619048), 'n_selected': np.float64(2.615)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=3 t=-3.0 + links', 'full_evidence': np.float64(0.395), 'f1': np.float64(0.5718985911749069), 'n_selected': np.float64(3.795)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=None', 'full_evidence': np.float64(0.325), 'f1': np.float64(0.4969642857142857), 'n_selected': np.float64(4.0)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=None + links', 'full_evidence': np.float64(0.51), 'f1': np.float64(0.5190409488172646), 'n_selected': np.float64(5.125)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=0.0', 'full_evidence': np.float64(0.145), 'f1': np.float64(0.5203690476190477), 'n_selected': np.float64(1.97)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=0.0 + links', 'full_evidence': np.float64(0.36), 'f1': np.float64(0.6044357484620643), 'n_selected': np.float64(3.21)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=-3.0', 'full_evidence': np.float64(0.28), 'f1': np.float64(0.5237142857142857), 'n_selected': np.float64(3.275)}
+{'dataset': 'MuSiQue', 'variant': 'chain H=4 t=-3.0 + links', 'full_evidence': np.float64(0.455), 'f1': np.float64(0.5515677830940988), 'n_selected': np.float64(4.405)}
+{'dataset': 'HotpotQA', 'variant': 'v2', 'full_evidence': np.float64(0.875), 'f1': np.float64(0.7544570707070707), 'n_selected': np.float64(3.16)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=1 ratio=1.0', 'full_evidence': np.float64(0.925), 'f1': np.float64(0.6445126262626263), 'n_selected': np.float64(4.145)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=1 ratio=0.8', 'full_evidence': np.float64(0.945), 'f1': np.float64(0.5988777056277057), 'n_selected': np.float64(4.73)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=1 ratio=0.6', 'full_evidence': np.float64(0.96), 'f1': np.float64(0.5340548340548341), 'n_selected': np.float64(5.625)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=2 ratio=1.0', 'full_evidence': np.float64(0.935), 'f1': np.float64(0.5516536796536796), 'n_selected': np.float64(5.125)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=2 ratio=0.8', 'full_evidence': np.float64(0.945), 'f1': np.float64(0.4881251803751804), 'n_selected': np.float64(6.2)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=2 ratio=0.6', 'full_evidence': np.float64(0.96), 'f1': np.float64(0.4133282828282829), 'n_selected': np.float64(7.675)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=3 ratio=1.0', 'full_evidence': np.float64(0.935), 'f1': np.float64(0.4817016594516595), 'n_selected': np.float64(6.1)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=3 ratio=0.8', 'full_evidence': np.float64(0.95), 'f1': np.float64(0.4200569985569986), 'n_selected': np.float64(7.47)}
+{'dataset': 'HotpotQA', 'variant': 'hop expansion R=3 ratio=0.6', 'full_evidence': np.float64(0.97), 'f1': np.float64(0.3645670995670996), 'n_selected': np.float64(8.885)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=None', 'full_evidence': np.float64(0.51), 'f1': np.float64(0.7325), 'n_selected': np.float64(2.0)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=None + links', 'full_evidence': np.float64(0.89), 'f1': np.float64(0.8028412698412698), 'n_selected': np.float64(2.735)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=0.0', 'full_evidence': np.float64(0.46), 'f1': np.float64(0.7233333333333334), 'n_selected': np.float64(1.875)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=0.0 + links', 'full_evidence': np.float64(0.88), 'f1': np.float64(0.8090079365079365), 'n_selected': np.float64(2.655)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=-3.0', 'full_evidence': np.float64(0.5), 'f1': np.float64(0.7291666666666665), 'n_selected': np.float64(1.99)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=2 t=-3.0 + links', 'full_evidence': np.float64(0.89), 'f1': np.float64(0.8028412698412698), 'n_selected': np.float64(2.735)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=None', 'full_evidence': np.float64(0.635), 'f1': np.float64(0.6409999999999999), 'n_selected': np.float64(2.995)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=None + links', 'full_evidence': np.float64(0.905), 'f1': np.float64(0.6888015873015874), 'n_selected': np.float64(3.56)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=0.0', 'full_evidence': np.float64(0.55), 'f1': np.float64(0.6644999999999999), 'n_selected': np.float64(2.565)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=0.0 + links', 'full_evidence': np.float64(0.885), 'f1': np.float64(0.7353015873015873), 'n_selected': np.float64(3.2)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=-3.0', 'full_evidence': np.float64(0.62), 'f1': np.float64(0.6446666666666667), 'n_selected': np.float64(2.925)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=3 t=-3.0 + links', 'full_evidence': np.float64(0.905), 'f1': np.float64(0.6976349206349206), 'n_selected': np.float64(3.5)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=None', 'full_evidence': np.float64(0.715), 'f1': np.float64(0.5616666666666668), 'n_selected': np.float64(3.99)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=None + links', 'full_evidence': np.float64(0.915), 'f1': np.float64(0.5965436507936509), 'n_selected': np.float64(4.435)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=0.0', 'full_evidence': np.float64(0.61), 'f1': np.float64(0.6321666666666667), 'n_selected': np.float64(3.075)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=0.0 + links', 'full_evidence': np.float64(0.895), 'f1': np.float64(0.6984960317460317), 'n_selected': np.float64(3.61)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=-3.0', 'full_evidence': np.float64(0.69), 'f1': np.float64(0.5748333333333333), 'n_selected': np.float64(3.8)}
+{'dataset': 'HotpotQA', 'variant': 'chain H=4 t=-3.0 + links', 'full_evidence': np.float64(0.915), 'f1': np.float64(0.6169007936507938), 'n_selected': np.float64(4.27)}
+{'dataset': 'HotpotQA (study 5 clean)', 'model': 'llama3.2:latest', 'n': 200, 'fallback_used': 9, 'vanilla_accuracy': np.float64(0.485), 'vanilla_wrong': np.float64(0.5), 'vanilla_abstain': np.float64(0.015), 'v2_accuracy': np.float64(0.55), 'v2_wrong': np.float64(0.405), 'v2_abstain': np.float64(0.045), 'fallback_accuracy': np.float64(0.56), 'fallback_wrong': np.float64(0.435), 'fallback_abstain': np.float64(0.005), 'fallback_minus_vanilla_accuracy': 0.075, 'accuracy_ci': [0.025, 0.13], 'accuracy_p': 0.007799220077992201, 'fallback_minus_vanilla_wrong': -0.065, 'wrong_ci': [-0.12, -0.015], 'wrong_p': 0.023397660233976603}
+{'dataset': 'HotpotQA (study 5 clean)', 'model': 'gemma3:latest', 'n': 200, 'fallback_used': 22, 'vanilla_accuracy': np.float64(0.395), 'vanilla_wrong': np.float64(0.52), 'vanilla_abstain': np.float64(0.085), 'v2_accuracy': np.float64(0.45), 'v2_wrong': np.float64(0.44), 'v2_abstain': np.float64(0.11), 'fallback_accuracy': np.float64(0.465), 'fallback_wrong': np.float64(0.495), 'fallback_abstain': np.float64(0.04), 'fallback_minus_vanilla_accuracy': 0.07, 'accuracy_ci': [0.015, 0.12], 'accuracy_p': 0.017198280171982803, 'fallback_minus_vanilla_wrong': -0.025, 'wrong_ci': [-0.085, 0.035], 'wrong_p': 0.5097490250974902}
+{'dataset': 'MuSiQue (pilot)', 'model': 'llama3.2:latest', 'n': 60, 'fallback_used': 25, 'vanilla_accuracy': np.float64(0.26666666666666666), 'vanilla_wrong': np.float64(0.45), 'vanilla_abstain': np.float64(0.2833333333333333), 'v2_accuracy': np.float64(0.13333333333333333), 'v2_wrong': np.float64(0.45), 'v2_abstain': np.float64(0.4166666666666667), 'fallback_accuracy': np.float64(0.2), 'fallback_wrong': np.float64(0.5333333333333333), 'fallback_abstain': np.float64(0.26666666666666666), 'fallback_minus_vanilla_accuracy': -0.06666666666666667, 'accuracy_ci': [-0.15, 0.016666666666666666], 'accuracy_p': 0.20927907209279073, 'fallback_minus_vanilla_wrong': 0.08333333333333333, 'wrong_ci': [0.0, 0.16666666666666666], 'wrong_p': 0.11768823117688232}
+{'dataset': 'MuSiQue (pilot)', 'model': 'gemma3:latest', 'n': 60, 'fallback_used': 30, 'vanilla_accuracy': np.float64(0.16666666666666666), 'vanilla_wrong': np.float64(0.4666666666666667), 'vanilla_abstain': np.float64(0.36666666666666664), 'v2_accuracy': np.float64(0.15), 'v2_wrong': np.float64(0.35), 'v2_abstain': np.float64(0.5), 'fallback_accuracy': np.float64(0.21666666666666667), 'fallback_wrong': np.float64(0.48333333333333334), 'fallback_abstain': np.float64(0.3), 'fallback_minus_vanilla_accuracy': 0.05, 'accuracy_ci': [-0.03333333333333333, 0.13333333333333333], 'accuracy_p': 0.45615438456154384, 'fallback_minus_vanilla_wrong': 0.016666666666666666, 'wrong_ci': [-0.06666666666666667, 0.1], 'wrong_p': 1.0}

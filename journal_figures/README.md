@@ -17,6 +17,10 @@ py evaluation/dev_cas_v2_llm.py        # CAS v2 development check on the first 2
 py evaluation/build_study5.py          # study 5 sample + attack texts (Llama 3.1 8B attacker; ~80 min, cached)
 py evaluation/run_study5.py            # study 5: 200 clean + 150 x 2 attacks, 2 LLMs; ~10 h on CPU, cached
 py evaluation/run_study5_mechanism.py  # exploratory: which CAS v2 step removed what (no LLM)
+py evaluation/dev_study6.py            # study 6 pilot: CAS v2 on 200 held-out MuSiQue questions (answers for 60)
+py evaluation/dev_study6_variants.py   # study 6 development: hop expansion, cross-encoder chain, abstention fallback
+py evaluation/run_study6.py            # study 6: 700 HotpotQA + 200 MuSiQue, 2 LLMs; ~12 h on CPU; waits for the
+                                       # plan to be committed and stops if Ollama is not 0.40.13
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 

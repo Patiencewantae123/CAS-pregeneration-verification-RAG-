@@ -31,10 +31,12 @@ SEL_PATH = os.path.join(OUT_RESULTS, "study6_selections.json")
 MARGIN = 0.05
 OLLAMA_VERSION = "0.40.13"   # the version named in the plan; 0.40.14 is downloaded and installs when the app restarts
 V2 = "CAS v2"
+FB = "CAS v2 + fallback"   # v2; if the model abstains, ask again with every passage that passed the quarantine
+POOL = "CAS v2 pool"
 MODELS = ["llama3.2:latest", "gemma3:latest"]
 DATASETS = {"hotpotqa": "HotpotQA", "musique": "MuSiQue"}
 SELECT_METHODS = ["Vanilla RAG", "BM25 top-3", "Reranker top-3", V2]
-ANSWER_METHODS = ["Vanilla RAG", "Reranker top-3", V2]
+ANSWER_METHODS = ["Vanilla RAG", "Reranker top-3", V2]   # FB is derived from V2 in run_generation
 
 # ============================================================
 # 1. THE PLAN MUST BE COMMITTED FIRST
@@ -82,6 +84,9 @@ def select(method, it):
         return select_rerank(q, passages)
     if method == V2:
         return cas_v2.select(q, passages, it["titles"])[0]
+    if method == POOL:   # what the fallback may use: everything v2's gate and quarantine let through
+        info = cas_v2.select(q, passages, it["titles"])[1]
+        return set(range(len(passages))) - set(info["gated"]) - set(info["quarantined"])
     raise ValueError(method)
 
 
@@ -92,7 +97,7 @@ def run_selection(data, limit):
             sel = json.load(f)
     for ds in DATASETS:
         for it in data[ds][:limit]:
-            for m in SELECT_METHODS:
+            for m in SELECT_METHODS + [POOL]:
                 key = f"{ds}|{m}|{it['id']}"
                 if key not in sel:
                     t = time.perf_counter()
@@ -117,6 +122,17 @@ def evidence_rows(data, sel, limit):
     return rows
 
 
+def answer(model, it, chosen, cache):
+    context = format_passages(it["passages"], chosen)
+    rec = generate(model, QA_PROMPT.format(passages=context, question=it["question"]), cache)
+    sc = score_qa(rec["response"], it["answers"], context)
+    sc["wrong"] = (1 - sc["accuracy"]) * (1 - sc["abstain"])
+    norm_ctx = normalize(context)
+    return {**sc, "answer_in_context": float(any(has_phrase(norm_ctx, normalize(a)) for a in it["answers"])),
+            "full_evidence": float(set(it["gold"]) <= chosen), "n_selected": len(chosen),
+            "prompt_tokens": rec["prompt_tokens"], "wall_s": rec["wall_s"], "response": rec["response"]}
+
+
 def run_generation(data, sel, models, limit):
     cache = load_cache()
     rows, start = [], time.time()
@@ -124,19 +140,19 @@ def run_generation(data, sel, models, limit):
         for ds in DATASETS:
             for k, it in enumerate(data[ds][:limit]):
                 check_ollama()
+                key = {"model": model, "dataset": ds, "id": it["id"], "type": it["type"]}
                 for m in ANSWER_METHODS:
-                    chosen = set(sel[f"{ds}|{m}|{it['id']}"]["selected"])
-                    context = format_passages(it["passages"], chosen)
-                    rec = generate(model, QA_PROMPT.format(passages=context, question=it["question"]), cache)
-                    sc = score_qa(rec["response"], it["answers"], context)
-                    sc["wrong"] = (1 - sc["accuracy"]) * (1 - sc["abstain"])
-                    norm_ctx = normalize(context)
-                    rows.append({"model": model, "dataset": ds, "method": m, "id": it["id"], "type": it["type"], **sc,
-                                 "answer_in_context": float(any(has_phrase(norm_ctx, normalize(a))
-                                                                for a in it["answers"])),
-                                 "full_evidence": float(set(it["gold"]) <= chosen), "n_selected": len(chosen),
-                                 "prompt_tokens": rec["prompt_tokens"], "wall_s": rec["wall_s"],
-                                 "response": rec["response"]})
+                    rows.append({**key, "method": m,
+                                 **answer(model, it, set(sel[f"{ds}|{m}|{it['id']}"]["selected"]), cache)})
+                # The fallback arm: v2's answer, unless the model abstained; its cost includes both calls
+                first = rows[-1]
+                if first["abstain"]:
+                    second = answer(model, it, set(sel[f"{ds}|{POOL}|{it['id']}"]["selected"]), cache)
+                    rows.append({**key, "method": FB, **second, "fallback_used": 1.0,
+                                 "prompt_tokens": first["prompt_tokens"] + second["prompt_tokens"],
+                                 "wall_s": first["wall_s"] + second["wall_s"]})
+                else:
+                    rows.append({**first, "method": FB, "fallback_used": 0.0})
                 if (k + 1) % 50 == 0:
                     print(f"[generation] {model} {ds} {k + 1}, elapsed {(time.time() - start) / 60:.1f} min",
                           flush=True)
@@ -159,33 +175,37 @@ def summarize(ev, rows, models, n, commit):
                 descriptive.append({"level": "evidence", "dataset": ds, "model": "-", "method": m, "metric": metric,
                                     "mean": mean, "ci_low": lo, "ci_high": hi})
         for model in models:
-            for m in ANSWER_METHODS:
-                for metric in ("accuracy", "wrong", "abstain", "answer_in_context", "prompt_tokens", "wall_s"):
+            for m in ANSWER_METHODS + [FB]:
+                for metric in ("accuracy", "wrong", "abstain", "answer_in_context", "prompt_tokens", "wall_s") + (
+                        ("fallback_used",) if m == FB else ()):
                     vals = col(rows, metric, model=model, dataset=ds, method=m)
                     mean, lo, hi = boot_ci(vals)
                     descriptive.append({"level": "answer", "dataset": ds, "model": model, "method": m,
                                         "metric": metric, "mean": mean, "ci_low": lo, "ci_high": hi,
                                         "n": len(vals)})
 
-    def test(hyp, ds, metric, comp, model="-"):
+    def test(hyp, ds, metric, comp, model="-", subject=V2):
         if model == "-":
-            a, b = col(ev, metric, dataset=ds, method=V2), col(ev, metric, dataset=ds, method=comp)
+            a, b = col(ev, metric, dataset=ds, method=subject), col(ev, metric, dataset=ds, method=comp)
         else:
-            a = col(rows, metric, model=model, dataset=ds, method=V2)
+            a = col(rows, metric, model=model, dataset=ds, method=subject)
             b = col(rows, metric, model=model, dataset=ds, method=comp)
         mean, lo, hi, p = paired_test(a, b)
-        return {"hypothesis": hyp, "dataset": ds, "model": model, "comparator": comp, "metric": metric,
-                "mean_diff": mean, "ci_low": lo, "ci_high": hi, "p_value": p}
+        return {"hypothesis": hyp, "dataset": ds, "model": model, "method": subject, "comparator": comp,
+                "metric": metric, "mean_diff": mean, "ci_low": lo, "ci_high": hi, "p_value": p}
 
     # Primary family: is v2 better than passing every retrieved passage? Secondary family: than the best filter?
     primary, secondary, non_inferiority, exploratory = [], [], [], []
     for ds in DATASETS:
         for mo in models:
             primary += [test("H1", ds, "accuracy", "Vanilla RAG", mo), test("H2", ds, "wrong", "Vanilla RAG", mo)]
-            secondary.append(test("H4", ds, "accuracy", "Reranker top-3", mo))
+            secondary += [test("H4", ds, "accuracy", "Reranker top-3", mo),
+                          test("H6", ds, "accuracy", "Vanilla RAG", mo, subject=FB)]
             t = test("H3", ds, "accuracy", "Vanilla RAG", mo)
             non_inferiority.append(dict(t, margin=-MARGIN, holds=t["ci_low"] > -MARGIN))
-            exploratory += [test("S", ds, "abstain", "Vanilla RAG", mo), test("S", ds, "wrong", "Reranker top-3", mo)]
+            exploratory += [test("S", ds, "abstain", "Vanilla RAG", mo), test("S", ds, "wrong", "Reranker top-3", mo),
+                            test("S", ds, "wrong", "Vanilla RAG", mo, subject=FB),
+                            test("S", ds, "accuracy", V2, mo, subject=FB)]
         secondary += [test("H5", ds, "f1", "Reranker top-3"), test("H5", ds, "f1", "BM25 top-3")]
     holm(primary)
     holm(secondary)
@@ -215,7 +235,8 @@ def summarize(ev, rows, models, n, commit):
 
     names = {"H1": "v2 is more accurate than Vanilla RAG", "H2": "v2 gives fewer wrong answers than Vanilla RAG",
              "H4": "v2 is more accurate than Reranker top-3",
-             "H5": "v2 selects better evidence than Reranker top-3 and BM25 top-3"}
+             "H5": "v2 selects better evidence than Reranker top-3 and BM25 top-3",
+             "H6": "v2 + fallback is more accurate than Vanilla RAG"}
     decisions = {}
     for ds, label in DATASETS.items():
         for h, txt in names.items():
@@ -260,7 +281,8 @@ def main():
     for fam in ("primary", "secondary"):
         print(f"\n{fam.capitalize()} family (CAS v2 minus comparator; Holm over {len(summary[fam])} tests)")
         for t in summary[fam]:
-            print(f"  {t['hypothesis']} {t['dataset']:<8} {t['model']:<16} vs {t['comparator']:<14} {t['metric']:<8} "
+            print(f"  {t['hypothesis']} {t['dataset']:<8} {t['model']:<16} {t['method']:<18} vs {t['comparator']:<14} "
+                  f"{t['metric']:<8} "
                   f"{t['mean_diff']:+.3f} [{t['ci_low']:+.3f}, {t['ci_high']:+.3f}] holm={t['p_holm']:.4f}")
     for t in summary["non_inferiority"]:
         print(f"  H3 {t['dataset']:<8} {t['model']:<16} accuracy vs Vanilla RAG {t['mean_diff']:+.3f} "
