@@ -1,0 +1,12 @@
+# Python packages for reproducing the paper's results (evaluation/ and journal_figures/).
+# Versions are those installed on the machine that ran every study (Python 3.14.6, Windows 11, CPU only).
+# PyTorch is the CPU build:
+#   pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+numpy==2.5.1
+pandas==3.0.3
+pyarrow==24.0.0
+matplotlib==3.11.0
+torch==2.15.0
+sentence-transformers==6.2.0
+transformers==5.21.0
+huggingface_hub==2.3.0

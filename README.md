@@ -38,3 +38,30 @@ The objective is to investigate whether verifying and synthesizing retrieved evi
 The proposed framework introduces a pre-generation verification approach that integrates contradiction detection, evidence relationship modeling, trust-aware ranking, and conflict-aware synthesis into the RAG pipeline.
 
 **Research Focus:** Trustworthy AI · LLM Reliability · Retrieval-Augmented Generation · Evidence Verification
+
+## 🔁 Reproducing the paper
+
+Every result in `paper/manuscript.md` comes from the scripts in `evaluation/`; every figure is rebuilt and checked against the result files by `journal_figures/make_all.py`. The step-by-step commands are in [`journal_figures/README.md`](journal_figures/README.md#reproduce).
+
+**Software** (the versions that produced the results):
+
+| Component | Version |
+|---|---|
+| Python | 3.14.6 |
+| PyTorch | 2.15.0 (CPU build) |
+| Sentence-Transformers | 6.2.0 |
+| Transformers | 5.21.0 |
+| numpy / pandas / pyarrow / matplotlib | 2.5.1 / 3.0.3 / 24.0.0 / 3.11.0 |
+| Ollama | 0.40.12 for the exploratory answers and studies 1–2; 0.40.13 for studies 3 and 5 (an automatic update on 2026-11-03, between studies 2 and 3) |
+
+```bash
+pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
+ollama pull llama3.2 && ollama pull gemma3 && ollama pull llama3.1:8b
+ollama list    # the IDs should match those below; a newer pull may bring different weights
+```
+
+**Models** (Ollama IDs, unchanged across studies): Llama 3.2 3B `a80c4f17acd5`, Gemma 3 4B `a2af6cc3eb7f`, Llama 3.1 8B `46e0c10c039e`. The NLI model is `cross-encoder/nli-deberta-v3-base` and the reranker `cross-encoder/ms-marco-MiniLM-L-6-v2`, both from the Hugging Face Hub.
+
+**Hardware:** an Intel CPU with 15 GB RAM and no GPU. Model answers are cached in `evaluation/results/llm_generations.jsonl`, so the analyses re-run without Ollama.
+
+Ollama's Windows app installs a downloaded update when it next starts. To reproduce a study on one runtime version, do not restart Ollama during a run; `evaluation/run_study6.py` checks the version before every question and stops if it changes.
