@@ -30,7 +30,7 @@ def used_hotpot_questions():
     s5 = load("hotpotqa_study5.json")
     used |= {it["question"] for it in s5["clean"] + s5["poison"]}
     with open(os.path.join(DATA, "external", "study5_attacker.jsonl"), encoding="utf-8") as f:
-        used |= {json.loads(line)["key"].split("|")[2] for line in f}
+        used |= {json.loads(line)["key"].split("|", 2)[2].rsplit("|", 1)[0] for line in f}   # model|seed|q|answer
     return used
 
 
@@ -54,10 +54,15 @@ def main():
 
     with open(os.path.join(DATA, "study6_dev_ids.json"), encoding="utf-8") as f:
         excluded = set(json.load(f))
-    excluded_q = {r["question"] for r in load("musique.json")}
     with open(MUSIQUE, encoding="utf-8") as f:
         rows = [json.loads(line) for line in f]
-    pool = [musique_item(r) for r in rows if r["id"] not in excluded and r["question"] not in excluded_q]
+    # Five question texts occur twice under different ids: exclude by text as well as id, and keep one of each
+    excluded_q = {r["question"] for r in load("musique.json")} | {r["question"] for r in rows if r["id"] in excluded}
+    pool, seen = [], set(excluded_q)
+    for r in rows:
+        if r["id"] not in excluded and r["question"] not in seen:
+            seen.add(r["question"])
+            pool.append(musique_item(r))
     musique = rng.sample(pool, N_MUSIQUE)
 
     with open(OUT, "w", encoding="utf-8") as f:
