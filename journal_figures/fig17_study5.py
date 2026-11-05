@@ -55,12 +55,14 @@ panel_title(axes[0, 1], "b", "Clean: answers (H2-H4, H9)")
 # (c, d) adoption of the fake answer under the two attacks
 for ax, attack, letter, title in ((axes[1, 0], "copy", "c", "Copy attack (H5, H6)"),
                                    (axes[1, 1], "written", "d", "Written attack (H7, H8)")):
-    entries = [(f"{m}, no metadata", attack, "A", m, "adoption") for m in ("Vanilla RAG", "CAS v1", "CAS v2")
+    entries = [(f"{m} (A)", attack, "A", m, "adoption") for m in ("Vanilla RAG", "CAS v1", "CAS v2")
                if (MODELS[0], attack, "A", m, "adoption") in look]
-    entries += [(f"{m}, noisy metadata", attack, "B", m, "adoption") for m in ("Source filter", "CAS v2")]
+    entries += [(f"{m} (B)", attack, "B", m, "adoption") for m in ("Source filter", "CAS v2")]
     dots(ax, letter, entries, MODELS)
-    ax.set_xlim(0, 0.6)
-    ax.set_xlabel("Poison adoption (fake answer given; 95% CI)")
+    ax.set_xlim(-0.02, 0.6)
+    ax.set_xlabel("Poison adoption (95% CI)")
+    ax.text(0.98, 0.03, "A: no source metadata\nB: noisy source metadata", transform=ax.transAxes, ha="right",
+            va="bottom", fontsize=6.5, color=INK2)
     panel_title(ax, letter, title)
 
 fig.legend(handles=[Line2D([], [], marker=MARK[mo], linestyle="", markersize=4.5, color=INK2,

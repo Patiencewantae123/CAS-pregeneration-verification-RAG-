@@ -1,0 +1,119 @@
+{
+ "note": "Exploratory, post hoc; not part of the pre-registered analysis.",
+ "fate": [
+  {
+   "attack": "copy",
+   "condition": "A",
+   "n_questions": 150,
+   "poison_gated_per_question": 0.0,
+   "poison_quarantined_per_question": 2.993333333333333,
+   "poison_below_tau_per_question": 0.0,
+   "poison_kept_per_question": 0.006666666666666667,
+   "true_passage_quarantined": 1.0,
+   "true_passage_kept": 0.0
+  },
+  {
+   "attack": "copy",
+   "condition": "B",
+   "n_questions": 150,
+   "poison_gated_per_question": 2.473333333333333,
+   "poison_quarantined_per_question": 0.4266666666666667,
+   "poison_below_tau_per_question": 0.02666666666666667,
+   "poison_kept_per_question": 0.07333333333333333,
+   "true_passage_quarantined": 0.34,
+   "true_passage_kept": 0.38
+  },
+  {
+   "attack": "written",
+   "condition": "A",
+   "n_questions": 150,
+   "poison_gated_per_question": 0.0,
+   "poison_quarantined_per_question": 0.54,
+   "poison_below_tau_per_question": 0.0,
+   "poison_kept_per_question": 2.46,
+   "true_passage_quarantined": 0.006666666666666667,
+   "true_passage_kept": 0.5333333333333333
+  },
+  {
+   "attack": "written",
+   "condition": "B",
+   "n_questions": 150,
+   "poison_gated_per_question": 2.433333333333333,
+   "poison_quarantined_per_question": 0.006666666666666667,
+   "poison_below_tau_per_question": 0.0,
+   "poison_kept_per_question": 0.56,
+   "true_passage_quarantined": 0.006666666666666667,
+   "true_passage_kept": 0.54
+  }
+ ],
+ "written_by_count": [
+  {
+   "model": "llama3.2:latest",
+   "poison_kept": 0,
+   "n": 15,
+   "poison_share_of_prompt_v2": 0.0,
+   "adoption_v2": 0.0,
+   "adoption_vanilla_same_questions": 0.5333333333333333
+  },
+  {
+   "model": "llama3.2:latest",
+   "poison_kept": 1,
+   "n": 18,
+   "poison_share_of_prompt_v2": 0.3259259259259259,
+   "adoption_v2": 0.3333333333333333,
+   "adoption_vanilla_same_questions": 0.4444444444444444
+  },
+  {
+   "model": "llama3.2:latest",
+   "poison_kept": 3,
+   "n": 117,
+   "poison_share_of_prompt_v2": 0.5584452584452584,
+   "adoption_v2": 0.2222222222222222,
+   "adoption_vanilla_same_questions": 0.2564102564102564
+  },
+  {
+   "model": "gemma3:latest",
+   "poison_kept": 0,
+   "n": 15,
+   "poison_share_of_prompt_v2": 0.0,
+   "adoption_v2": 0.0,
+   "adoption_vanilla_same_questions": 0.6
+  },
+  {
+   "model": "gemma3:latest",
+   "poison_kept": 1,
+   "n": 18,
+   "poison_share_of_prompt_v2": 0.3259259259259259,
+   "adoption_v2": 0.2777777777777778,
+   "adoption_vanilla_same_questions": 0.4444444444444444
+  },
+  {
+   "model": "gemma3:latest",
+   "poison_kept": 3,
+   "n": 117,
+   "poison_share_of_prompt_v2": 0.5584452584452584,
+   "adoption_v2": 0.26495726495726496,
+   "adoption_vanilla_same_questions": 0.28205128205128205
+  }
+ ],
+ "clean": {
+  "n_questions": 200,
+  "quarantine_fired": 0.07,
+  "links_added_any": 0.61,
+  "linked_passages": 159,
+  "linked_passages_gold": 89
+ },
+ "written_mean_poison_kept": 2.46,
+ "written_poison_share_of_prompt": {
+  "CAS v2": 0.4910673234811166,
+  "Vanilla RAG": 0.23076923076923075
+ },
+ "written_true_passage": {
+  "dropped": 70,
+  "of_which_poison_held_top3_bm25": 70,
+  "of_which_below_tau_not_quarantined": 69,
+  "kept_when_poison_removed": 138,
+  "n_questions": 150
+ },
+ "selection_mismatches_with_cache": 0
+}

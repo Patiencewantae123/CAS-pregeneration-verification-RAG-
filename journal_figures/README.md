@@ -1,6 +1,6 @@
 # Journal figures: CAS pre-generation verification
 
-Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all sixteen figures and `tables.md`, then checks the plotted values against the results files and exits with an error if any differ (last run: **PASS, 16 figures**).
+Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all seventeen figures and `tables.md`, then checks the plotted values against the results files and exits with an error if any differ (last run: **PASS, 17 figures**).
 
 ## Reproduce
 
@@ -12,6 +12,11 @@ py evaluation/run_clean500.py           # study 3: 500 questions x 6 methods x 2
 py evaluation/run_montecarlo.py         # study 4: 3,064,800 simulated selections in ~1 min; no model inference
 py evaluation/compare_as_run.py         # as-run vs corrected scores (DEVIATIONS.md)
 py evaluation/run_discussion_analyses.py  # exploratory study 3 analyses for manuscript Section 6 (Tables 4-5)
+py evaluation/dev_cas_v2.py            # CAS v2 development on studies 1-3 data (selection only; seconds)
+py evaluation/dev_cas_v2_llm.py        # CAS v2 development check on the first 200 study 3 questions (answers)
+py evaluation/build_study5.py          # study 5 sample + attack texts (Llama 3.1 8B attacker; ~80 min, cached)
+py evaluation/run_study5.py            # study 5: 200 clean + 150 x 2 attacks, 2 LLMs; ~10 h on CPU, cached
+py evaluation/run_study5_mechanism.py  # exploratory: which CAS v2 step removed what (no LLM)
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 
@@ -41,6 +46,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | CAS-NLI preserve | DeBERTa NLI with no penalty. When a kept passage contradicts another passage of relevance ≥ 0.5, both are kept and the conflict is labelled for the LLM |
 | CAS-NLI θ-CV | CAS-NLI, but a pair counts as a contradiction only if p(contradiction) ≥ θ, with θ chosen by CV |
 | CAS-NLI θ-CV preserve | CAS-NLI preserve with the CV-chosen θ |
+| CAS v2 (study 5 only) | Provenance gate (< 0.5 removed when metadata exist); quarantine of every passage in a group of copies that contains an edited copy; trust score without the agreement term (τ = 0.45); passages named by title in the question or a kept passage are added. No NLI. Settings fixed on studies 1–3 before study 5 (`evaluation/cas_v2.py`) |
 
 ## What changed since the first version of these figures
 
@@ -56,6 +62,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
    - fake answers that contain the real answer, or the other way round, are scored separately.
 
    No pre-registered decision changed. The as-run files are archived in `evaluation/results/as_run_2026-11-03/`. Details and the impact on every test are in `evaluation/DEVIATIONS.md`.
+7. **CAS v2 and study 5 (2026-11-04).** A redesign that addresses the four measured causes of CAS's failures, tested in a fifth pre-registered study on fresh questions (`evaluation/PREREGISTRATION_study5.md`; Fig. 17). Studies 1–4 and their figures are unchanged.
 
 ## Figure → data mapping
 
@@ -77,6 +84,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 14 | `fig14_detector_tradeoff.py` | `data/fig14_*.csv` | `detector_probe.json` (from `evaluation/run_detector_probe.py`) |
 | 15 | `fig15_montecarlo.py` | `data/fig15_*.csv` | `montecarlo_summary.json`, `montecarlo_e1/e2/e3.csv` (from `evaluation/run_montecarlo.py`) |
 | 16 | `fig16_clean500.py` | `data/fig16_*.csv` | `clean500_summary.json` (from `evaluation/run_clean500.py`) |
+| 17 | `fig17_study5.py` | `data/fig17_*.csv` | `study5_summary.json` → `descriptive` (from `evaluation/run_study5.py`) |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -278,6 +286,34 @@ Every table cell is in `tables.md` (Tables 1–10).
   - It abstains more often: 15.8% vs 3.4% (Llama) and 24.0% vs 8.2% (Gemma).
   - About half of the questions that Vanilla RAG answers correctly and CAS-NLI preserve does not are abstentions: 29 of 61 (Llama) and 37 of 70 (Gemma). In the other direction, CAS-NLI preserve answers correctly 42 (Llama) and 36 (Gemma) questions that Vanilla RAG gets wrong.
 
+**Fig. 17. Pre-registered study 5: CAS v2 on fresh questions** (`evaluation/PREREGISTRATION_study5.md`, SHA-256 `c91b8c27…`; `evaluation/run_study5.py`).
+- **Setup.**
+  - 200 clean HotpotQA dev questions and 150 poisoned ones, none used in any earlier study.
+  - Each poisoned question is attacked twice with the same substitute:
+    - the copy attack of study 2;
+    - a written attack: three texts that Llama 3.1 8B wrote to make the substitute the answer, in the PoisonedRAG black-box style.
+  - A: no source metadata. B: noisy metadata.
+  - Answers come from Llama 3.2 3B (filled markers) and Gemma 3 4B (open markers). Error bars are 95% bootstrap CIs.
+  - Holm correction is over the 20 confirmatory tests.
+- **(a) Evidence, H1: supported.**
+  - CAS v2 reaches F1 0.744, against 0.337 (Vanilla RAG), 0.625 (BM25 top-3), 0.631 (reranker) and 0.647 (CAS v1). All four differences have Holm p = 0.002.
+  - It keeps every supporting passage for 91.0% of questions, against 48.5% for CAS v1 and 58.0–58.5% for the top-3 filters.
+- **(b) Answers.**
+  - **H2 supported:** CAS v2 is more accurate than CAS v1, +0.135 for both models (Holm p = 0.002).
+  - **H4 supported:** it is non-inferior to Vanilla RAG. The CI lower bounds are +0.015 and 0.000, against a margin of −0.05.
+  - **H9 not supported:** it is more accurate than Vanilla RAG, but not significantly after Holm correction (0.550 vs 0.485, +0.065, Holm p = 0.18; 0.450 vs 0.395, +0.055, Holm p = 0.41).
+  - **H3 not supported:** it gives fewer wrong answers than Vanilla RAG (−0.095, Holm p = 0.022; −0.080, Holm p = 0.18), significantly only for Llama 3.2.
+- **(c) Copy attack.**
+  - **H5 supported.** Without metadata, no CAS v2 answer gave the fake answer (0 of 150 for each model). Vanilla RAG gave it in 27.3% and 34.0% of questions, CAS v1 in 33.3% and 39.3% (all Holm p = 0.002).
+  - **The cost:** the quarantine removed the true passage with its copies in all 150 questions. Accuracy fell to 0.073, against 0.247 and 0.213 for Vanilla RAG, and v2 abstained on 38.7% and 43.3%.
+  - **H6 not supported:** with noisy metadata, CAS v2 matches the source filter (3.3% vs 4.7%, Holm p = 1.0).
+- **(d) Written attack.**
+  - **H7 supported, against the stated prediction:** adoption 21.3% and 24.0%, against 30.7% and 33.3% for Vanilla RAG (−0.093, Holm p = 0.013 and 0.033).
+  - **Post hoc:** the gain came from the attacker repeating itself (`run_study5_mechanism.py`).
+    - In 33 of 150 questions, the attacker's three texts were near-copies of each other, and the quarantine removed two or all three.
+    - Where all three texts reached the prompt (117 questions), adoption was close to Vanilla RAG's: 22.2% vs 25.6%, and 26.5% vs 28.2%.
+  - **H8 not supported:** with noisy metadata, CAS v2 matches the source filter (10.7% vs 11.3%, 12.7% vs 14.0%).
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -302,6 +338,12 @@ Every table cell is in `tables.md` (Tables 1–10).
 | A better conflict detector would make CAS competitive | **Partly**: without metadata, CAS matches BM25 top-3 once it catches about half of conflicts, about 5× today's detector, whatever the false-alarm rate. With noisy metadata it never matches the source filter (Fig. 15c–d) |
 | The agreement term in the trust score helps against poisoning | **No**: the NLI model calls 56% of gold–poison pairs "agreement", so the bonus raises poison exposure (Fig. 15, E3 at r = 0) |
 | A conflict note stops small LLMs adopting poison | **No evidence**: 15.7–28.6% adoption with a note vs 16.8–22.2% without (exploratory, E4) |
+| CAS v2 selects better evidence than every baseline and CAS v1 (pre-registered study 5, H1) | **Supported**: F1 +0.096 to +0.406, all Holm p = 0.002; every supporting passage kept for 91% of questions (Fig. 17a) |
+| CAS v2 answers better than CAS v1 (study 5, H2), and costs no accuracy against Vanilla RAG (H4) | **Supported**: +0.135 for both models; non-inferiority holds for both (Fig. 17b) |
+| CAS v2 answers better than Vanilla RAG (study 5, H9), or gives fewer wrong answers (H3) | **Not supported**: higher accuracy (+0.065, +0.055) and fewer wrong answers (−0.095, −0.080), but significant after Holm only for Llama's wrong answers (Fig. 17b) |
+| CAS v2 stops the copy attack without metadata (study 5, H5) | **Supported**: 0% adoption against 27–39%. But the true passage is removed too, and accuracy falls to 0.073 (Fig. 17c) |
+| CAS v2 beats a plain source filter when metadata exist (study 5, H6, H8) | **Not supported**: no difference under either attack (Fig. 17c–d) |
+| CAS v2 resists an LLM-written attack without metadata (study 5, H7) | **Supported as pre-registered (−0.093), against our prediction.** Post hoc, the gain is limited to the 22% of questions where the attacker's texts were near-copies of each other (Fig. 17d) |
 
 ## Limitations
 

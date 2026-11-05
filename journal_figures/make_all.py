@@ -93,5 +93,11 @@ for _, row in pd.read_csv(os.path.join(HERE, "data", "fig16_clean500.csv")).iter
     else:
         compare("fig16_clean500", row, desc[(row["model"], row["method"], row["panel"])], ("mean", "ci_low", "ci_high"))
 
+S = json.load(open(os.path.join(RES, "study5_summary.json"), encoding="utf-8"))
+desc = {(r["model"], r["attack"], r["condition"], r["method"], r["metric"]): r for r in S["descriptive"]}
+for _, row in pd.read_csv(os.path.join(HERE, "data", "fig17_study5.csv"), keep_default_na=False).iterrows():
+    compare("fig17_study5", row, desc[(row["model"], row["attack"], row["condition"], row["method"], row["metric"])],
+            ("mean", "ci_low", "ci_high"))
+
 print(f"\nTraceability check: {'PASS' if bad == 0 else f'{bad} problems'} ({len(scripts)} figures)")
 sys.exit(1 if bad else 0)

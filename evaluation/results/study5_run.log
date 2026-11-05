@@ -3,3 +3,159 @@ Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF
 C:\Users\chosun\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\torch\jit\_script.py:1485: FutureWarning: `torch.jit.script` is not supported in Python 3.14+ and may break. Please switch to `torch.compile` or `torch.export`.
   warnings.warn(
 Loading weights:   0%|          | 0/202 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 32/202 [00:00<00:00, 311.01it/s]Loading weights:  32%|███▏      | 64/202 [00:00<00:00, 214.63it/s]Loading weights: 100%|██████████| 202/202 [00:00<00:00, 598.37it/s]
+[selection] 10 items, elapsed 3.9 min
+[selection] 20 items, elapsed 7.2 min
+[selection] 30 items, elapsed 10.1 min
+[selection] 40 items, elapsed 13.5 min
+[selection] 50 items, elapsed 17.3 min
+[selection] 60 items, elapsed 21.0 min
+[selection] 70 items, elapsed 24.4 min
+[selection] 80 items, elapsed 27.9 min
+[selection] 90 items, elapsed 31.2 min
+[selection] 100 items, elapsed 34.3 min
+[selection] 110 items, elapsed 37.3 min
+[selection] 120 items, elapsed 40.7 min
+[selection] 130 items, elapsed 43.9 min
+[selection] 140 items, elapsed 47.1 min
+[selection] 150 items, elapsed 50.1 min
+[selection] 160 items, elapsed 53.0 min
+[selection] 170 items, elapsed 56.6 min
+[selection] 180 items, elapsed 59.9 min
+[selection] 190 items, elapsed 62.5 min
+[selection] 200 items, elapsed 66.6 min
+[selection] 210 items, elapsed 73.1 min
+[selection] 220 items, elapsed 79.1 min
+[selection] 230 items, elapsed 83.9 min
+[selection] 240 items, elapsed 88.5 min
+[selection] 250 items, elapsed 93.4 min
+[selection] 260 items, elapsed 99.4 min
+[selection] 270 items, elapsed 105.6 min
+[selection] 280 items, elapsed 111.3 min
+[selection] 290 items, elapsed 116.8 min
+[selection] 300 items, elapsed 122.5 min
+[selection] 310 items, elapsed 129.0 min
+[selection] 320 items, elapsed 135.1 min
+[selection] 330 items, elapsed 140.5 min
+[selection] 340 items, elapsed 146.1 min
+[selection] 350 items, elapsed 153.3 min
+[selection] 360 items, elapsed 153.3 min
+[selection] 370 items, elapsed 153.3 min
+[selection] 380 items, elapsed 153.3 min
+[selection] 390 items, elapsed 153.3 min
+[selection] 400 items, elapsed 153.3 min
+[selection] 410 items, elapsed 153.3 min
+[selection] 420 items, elapsed 153.3 min
+[selection] 430 items, elapsed 153.3 min
+[selection] 440 items, elapsed 153.3 min
+[selection] 450 items, elapsed 153.3 min
+[selection] 460 items, elapsed 153.3 min
+[selection] 470 items, elapsed 153.3 min
+[selection] 480 items, elapsed 153.3 min
+[selection] 490 items, elapsed 153.3 min
+[selection] 500 items, elapsed 153.3 min
+[selection] 510 items, elapsed 153.3 min
+[selection] 520 items, elapsed 153.3 min
+[selection] 530 items, elapsed 153.3 min
+[selection] 540 items, elapsed 153.3 min
+[selection] 550 items, elapsed 153.3 min
+[selection] 560 items, elapsed 153.3 min
+[selection] 570 items, elapsed 153.3 min
+[selection] 580 items, elapsed 153.3 min
+[selection] 590 items, elapsed 153.3 min
+[selection] 600 items, elapsed 153.3 min
+[selection] 610 items, elapsed 153.3 min
+[selection] 620 items, elapsed 153.3 min
+[selection] 630 items, elapsed 153.3 min
+[selection] 640 items, elapsed 153.3 min
+[selection] 650 items, elapsed 153.3 min
+[selection] 660 items, elapsed 153.3 min
+[selection] 670 items, elapsed 153.3 min
+[selection] 680 items, elapsed 153.3 min
+[selection] 690 items, elapsed 153.3 min
+[selection] 700 items, elapsed 153.3 min
+[selection] 710 items, elapsed 153.3 min
+[selection] 720 items, elapsed 153.3 min
+[selection] 730 items, elapsed 153.3 min
+[selection] 740 items, elapsed 153.3 min
+[selection] 750 items, elapsed 153.3 min
+[selection] 760 items, elapsed 153.3 min
+[selection] 770 items, elapsed 153.3 min
+[selection] 780 items, elapsed 153.3 min
+[selection] 790 items, elapsed 153.3 min
+[selection] 800 items, elapsed 153.3 min
+[generation] 100 answers, elapsed 6.2 min
+[generation] 200 answers, elapsed 11.2 min
+[generation] 300 answers, elapsed 17.5 min
+[generation] 400 answers, elapsed 23.3 min
+[generation] 500 answers, elapsed 29.0 min
+[generation] 600 answers, elapsed 35.1 min
+[generation] 700 answers, elapsed 40.7 min
+[generation] 800 answers, elapsed 46.2 min
+[generation] 900 answers, elapsed 52.0 min
+[generation] 1000 answers, elapsed 57.5 min
+[generation] 1300 answers, elapsed 85.7 min
+[generation] 1500 answers, elapsed 102.6 min
+[generation] 1600 answers, elapsed 106.4 min
+[generation] 1700 answers, elapsed 109.8 min
+[generation] 1800 answers, elapsed 118.3 min
+[generation] 1900 answers, elapsed 130.5 min
+[generation] 2000 answers, elapsed 143.4 min
+[generation] 2100 answers, elapsed 151.5 min
+[generation] 2200 answers, elapsed 154.7 min
+[generation] 2300 answers, elapsed 158.0 min
+[generation] 2400 answers, elapsed 164.5 min
+[generation] 2500 answers, elapsed 171.7 min
+[generation] 2600 answers, elapsed 179.5 min
+[generation] 2700 answers, elapsed 187.8 min
+[generation] 2800 answers, elapsed 196.3 min
+[generation] 2900 answers, elapsed 204.1 min
+[generation] 3000 answers, elapsed 212.5 min
+[generation] 3100 answers, elapsed 220.4 min
+[generation] 3200 answers, elapsed 228.2 min
+[generation] 3300 answers, elapsed 235.2 min
+[generation] 3500 answers, elapsed 257.4 min
+[generation] 3800 answers, elapsed 294.2 min
+[generation] 3900 answers, elapsed 299.3 min
+[generation] 4000 answers, elapsed 304.3 min
+[generation] 4100 answers, elapsed 309.5 min
+[generation] 4200 answers, elapsed 324.9 min
+[generation] 4300 answers, elapsed 340.5 min
+[generation] 4400 answers, elapsed 356.6 min
+[generation] 4500 answers, elapsed 361.1 min
+[generation] 4600 answers, elapsed 365.8 min
+[generation] 4700 answers, elapsed 370.4 min
+
+Confirmatory tests (CAS v2 minus comparator; Holm over 20 tests)
+  H1 -                -       - vs Vanilla RAG    f1       +0.406 [+0.379, +0.431] holm=0.0020
+  H1 -                -       - vs BM25 top-3     f1       +0.119 [+0.090, +0.148] holm=0.0020
+  H1 -                -       - vs Reranker top-3 f1       +0.113 [+0.078, +0.145] holm=0.0020
+  H1 -                -       - vs CAS v1         f1       +0.096 [+0.072, +0.121] holm=0.0020
+  H2 llama3.2:latest  -       - vs CAS v1         accuracy +0.135 [+0.080, +0.195] holm=0.0020
+  H3 llama3.2:latest  -       - vs Vanilla RAG    wrong    -0.095 [-0.155, -0.040] holm=0.0225
+  H5 llama3.2:latest  copy    A vs Vanilla RAG    adoption -0.273 [-0.347, -0.200] holm=0.0020
+  H5 llama3.2:latest  copy    A vs CAS v1         adoption -0.333 [-0.413, -0.260] holm=0.0020
+  H6 llama3.2:latest  copy    B vs Source filter  adoption -0.013 [-0.053, +0.020] holm=1.0000
+  H7 llama3.2:latest  written A vs Vanilla RAG    adoption -0.093 [-0.147, -0.040] holm=0.0130
+  H8 llama3.2:latest  written B vs Source filter  adoption -0.007 [-0.040, +0.027] holm=1.0000
+  H9 llama3.2:latest  -       - vs Vanilla RAG    accuracy +0.065 [+0.015, +0.120] holm=0.1771
+  H2 gemma3:latest    -       - vs CAS v1         accuracy +0.135 [+0.085, +0.190] holm=0.0020
+  H3 gemma3:latest    -       - vs Vanilla RAG    wrong    -0.080 [-0.150, -0.015] holm=0.1771
+  H5 gemma3:latest    copy    A vs Vanilla RAG    adoption -0.340 [-0.420, -0.267] holm=0.0020
+  H5 gemma3:latest    copy    A vs CAS v1         adoption -0.393 [-0.473, -0.320] holm=0.0020
+  H6 gemma3:latest    copy    B vs Source filter  adoption -0.013 [-0.053, +0.020] holm=1.0000
+  H7 gemma3:latest    written A vs Vanilla RAG    adoption -0.093 [-0.153, -0.033] holm=0.0328
+  H8 gemma3:latest    written B vs Source filter  adoption -0.013 [-0.040, +0.013] holm=1.0000
+  H9 gemma3:latest    -       - vs Vanilla RAG    accuracy +0.055 [+0.000, +0.115] holm=0.4060
+  H4 llama3.2:latest  accuracy vs Vanilla RAG +0.065 [+0.015, +0.120] holds=True
+  H4 gemma3:latest    accuracy vs Vanilla RAG +0.055 [+0.000, +0.115] holds=True
+
+Pre-registered decisions
+  H1: v2 selects better evidence than all four comparators: supported
+  H2: v2 is more accurate than v1 on clean retrieval: supported
+  H3: v2 gives fewer wrong answers than Vanilla RAG on clean retrieval: not supported
+  H5: copy attack, no metadata: v2 is poisoned less than Vanilla RAG and v1: supported
+  H6: copy attack, noisy metadata: v2 is poisoned less than the source filter: not supported
+  H7: written attack, no metadata: v2 is poisoned less than Vanilla RAG: supported
+  H8: written attack, noisy metadata: v2 is poisoned less than the source filter: not supported
+  H9: v2 is more accurate than Vanilla RAG on clean retrieval: not supported
+  H4: v2 is non-inferior to Vanilla RAG in accuracy (margin 0.05): supported
