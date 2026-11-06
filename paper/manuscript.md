@@ -261,6 +261,8 @@ The substitute rules were amended once (Amendment 1), before any method ran.
 - **Accuracy:** the gold answer appears in the first line of the response after SQuAD normalisation [37].
 - **Poison adoption:** the substitute answer appears in the first line.
 - **Abstention:** the model says "unknown" or a similar phrase.
+- **Exact match (EM) and token F1:** the standard SQuAD answer metrics on the first line, best over the gold aliases [37] (Section 5.10).
+- **Coverage, selective accuracy and net score:** the share of questions answered, the accuracy among them, and correct minus wrong answers (Section 5.10).
 - **Poison in context:** a poison passage was selected.
 - **Prompt tokens and latency.**
 - **Monte Carlo endpoints (study 4):** silent poison exposure (poison in the prompt with no conflict note), any exposure, and answer passage retained.
@@ -417,7 +419,7 @@ Study 6 asks study 5's clean-retrieval questions again, with enough questions to
 
 ### Overview of the main results
 
-Tables 2–5 collect the main comparisons, with numbers generated from the result files by `evaluation/make_paper_tables.py`. Sections 5.1–5.9 then report each study in full.
+Tables 2–5 collect the main comparisons, with numbers generated from the result files by `evaluation/make_paper_tables.py`. Sections 5.1–5.9 then report each study in full, and Section 5.10 adds standard metrics and abstention-aware analyses.
 
 **On HotpotQA, CAS v2 was the most accurate single-call method, and on both datasets it gave the fewest wrong answers** (Table 2).
 - **HotpotQA (700 fresh questions).** v2 answered correctly 0.554 of the time with Llama 3.2 and 0.470 with Gemma 3, against 0.507 and 0.411 for Vanilla RAG and 0.441 and 0.370 for the reranker.
@@ -427,6 +429,10 @@ Tables 2–5 collect the main comparisons, with numbers generated from the resul
 **Study 5 compares every baseline, including the original design** (Table 3).
 - v2 was the most accurate method for both models.
 - It selected the best evidence: F1 0.744, with every supporting passage kept for 91.0% of questions. For CAS v1, the figures were 0.647 and 48.5%.
+
+**Standard metrics and abstention-aware scores agree** (Section 5.10; exploratory).
+- On HotpotQA, v2 raised exact match and token F1 by about 0.05 with both models, and the fallback by 0.06–0.09.
+- Scoring a correct answer +1, an abstention 0 and a wrong answer −1, v2 beat Vanilla RAG on both datasets with both models (+0.13 to +0.17).
 
 **Under poisoning** (Table 4):
 - **Copy attack.** v2 blocked it completely (adoption 0.000, against 0.273–0.393 for Vanilla RAG and CAS v1), but at a cost in accuracy (0.073).
@@ -796,6 +802,108 @@ Each step of v2 was switched off in turn on the study 5 and study 6 data (`evalu
 - **The quarantine supplies the copy defence.** Without it, poison reaches the prompt for every copy-attack question. On clean data it costs little (86.3% vs 87.7% full evidence on HotpotQA).
 - **The two interact under attack.** The links pull in poisoned copies that keep the original's title (2.93 poison passages per question without the quarantine, against 1.42 for the trust threshold alone). The quarantine removes them. The steps are complementary, not redundant.
 
+### 5.10 Further analyses: standard metrics, abstention, and where the gains came from (exploratory)
+
+These analyses were chosen after studies 5 and 6 had been analysed. They use only the cached per-question results (`evaluation/run_extra_analyses.py`, output `results/extra_analyses.json`); no model was called. Tests are paired sign-flip permutation tests, Holm-corrected within each family; the CIs are 95% bootstrap intervals and are not adjusted for multiplicity.
+
+**Standard answer metrics agree with accuracy** (Table 11).
+- **HotpotQA, study 6.** v2 raised exact match by +0.046 [+0.013, +0.077] (Llama 3.2) and +0.047 [+0.013, +0.081] (Gemma 3), and token F1 by +0.049 [+0.017, +0.080] and +0.050 [+0.017, +0.083]. The F1 gains survived Holm correction over the 16 study 6 tests (p = 0.036 and 0.042); the EM gains narrowly did not (p = 0.053 and 0.076).
+- **The fallback** raised both metrics with both models: EM by +0.064 and +0.080, F1 by +0.075 and +0.090 (Holm p ≤ 0.005).
+- **MuSiQue.** v2 did not change EM or F1 (all differences within ±0.020). The fallback raised them for Gemma 3 only (EM +0.075, F1 +0.084; Holm p = 0.036 and 0.012).
+- **Study 5.** v2 had the highest EM and F1 of the five methods with both models. Only Gemma 3's F1 gain over Vanilla RAG survived Holm correction (+0.077 [+0.020, +0.132], p = 0.018).
+
+**Abstention-aware scores favour v2 on both datasets** (Table 12).
+- **Selective accuracy.** Among the questions it answered, v2 was more accurate than Vanilla RAG:
+  - HotpotQA: 0.599 vs 0.527 (+0.071 [+0.039, +0.103], Llama 3.2) and 0.558 vs 0.462 (+0.096 [+0.061, +0.132], Gemma 3);
+  - MuSiQue: 0.273 vs 0.201 (+0.071 [0.000, +0.145]) and 0.321 vs 0.242 (+0.078 [−0.010, +0.172]).
+- **Coverage** was the price: v2 answered 92.6% and 84.3% of HotpotQA questions, against 96.1% and 89.1% for Vanilla RAG, and 60.5% and 53.0% of MuSiQue questions, against 74.5% and 66.0%.
+- **Net score** (correct − wrong; the cost *c* = 1 of Section 6.2). v2 beat Vanilla RAG on both datasets with both models, over 10 comparisons:
+  - HotpotQA: +0.130 [+0.067, +0.193] (Holm p = 0.004) and +0.166 [+0.104, +0.227] (p = 0.001);
+  - MuSiQue: +0.170 [+0.075, +0.270] (p = 0.007) and +0.150 [+0.035, +0.255] (p = 0.044);
+  - study 5: +0.160 [+0.060, +0.265] (p = 0.024) and +0.135 [+0.025, +0.245] (p = 0.063).
+- **The fallback** kept the net gain on HotpotQA (+0.121 and +0.154; Holm p ≤ 0.004) but not on MuSiQue (+0.040 and +0.045; p = 0.78), where its second call brought back wrong answers.
+- In study 3, CAS v1's advantage at *c* = 1 was not significant (Section 6.2). v2's is, because v2 gave more correct answers as well as fewer wrong ones.
+
+**On HotpotQA, the fall in wrong answers came mostly from answers that became correct** (Table 13).
+- With each model, v2 turned 79 of Vanilla RAG's wrong answers into correct ones, and 37 (Llama 3.2) and 29 (Gemma 3) correct answers into wrong ones.
+- The net gains, +33 and +41 of 700 questions, are the pre-registered H1 effects (+0.047 and +0.059).
+- Fewer of Vanilla RAG's wrong answers became abstentions (20 and 32).
+- On MuSiQue the picture is reversed. Few answers changed from wrong to correct (11 and 12); most of the fall in wrong answers came from abstentions (30 and 32 wrong → abstain), and the net change in correct answers was +3 and +2.
+
+**v2's new abstentions were not aimed at Vanilla RAG's errors** (Table 13, last two columns).
+- On the questions where v2 abstained and Vanilla RAG answered, Vanilla RAG was right 47.4% (Llama 3.2) and 44.8% (Gemma 3) of the time. That is close to its accuracy on all the questions it answered (52.7% and 46.2%).
+- On MuSiQue the two shares were also close: 16.7% vs 20.1%, and 27.3% vs 24.2%.
+- Study 5 had suggested otherwise (25.0% vs 49.2%, and 18.8% vs 43.2%), but those figures rest on 8 and 16 questions. The larger study did not repeat them.
+- **The abstentions followed missing evidence instead.** For questions with a span answer, the gold answer was absent from v2's prompt in 57% of its abstentions on HotpotQA (28 of 49, Llama 3.2) and 39% (31 of 80, Gemma 3), and in 59% (47 of 79) and 51% (48 of 94) on MuSiQue. None of Vanilla RAG's abstentions had this justification.
+- So v2 abstains when its filter has removed the answer, not when the question is one that the model would get wrong. On MuSiQue, these abstentions removed wrong answers mainly because most of Vanilla RAG's answers there were wrong (79.9% and 75.8% of those it gave).
+
+**When the answer was in both prompts, v2's prompt was read better.**
+- On the 579 HotpotQA questions where the gold answer appeared in both prompts, v2 was more accurate than Vanilla RAG by +0.086 [+0.052, +0.121] (Llama 3.2) and +0.112 [+0.076, +0.147] (Gemma 3); Holm p < 0.001 over the six such comparisons.
+- The same held in study 5 (+0.093, Holm p = 0.007, and +0.066, p = 0.15; 183 questions). On MuSiQue (123 questions), the differences were +0.049 and +0.089, not significant after Holm correction (p = 0.27 and 0.15).
+- This subset depends on v2's own selection, but it was only slightly easier than the full set: Vanilla RAG's accuracy on it was 0.527 and 0.428, against 0.507 and 0.411 overall.
+- **The errors changed kind.** On HotpotQA, wrong answers given with the gold answer in the prompt fell from 0.426 and 0.470 of questions (Vanilla RAG) to 0.290 and 0.306 (v2). Wrong answers given without it rose from 0.029 and 0.010 to 0.081 and 0.067. v2 removed more reading errors (−0.136 and −0.164) than it added evidence errors (+0.053 and +0.057).
+- This is the trade that Section 6.1 identified in study 3: removing distractors pays when the needed passages survive. Study 3's filters lost the trade because they dropped those passages too often; v2 kept them for 86.3% of questions.
+
+**By question type, wrong answers fell everywhere; accuracy gains were uneven** (Table 14).
+- On HotpotQA, v2 was more accurate on both bridge and comparison questions. The CI excluded zero for bridge questions with Gemma 3 (+0.065) and comparison questions with Llama 3.2 (+0.117).
+- Wrong answers fell for every question type with both models. The CI excluded zero in 9 of the 10 cells; the exception is 4-hop MuSiQue with Llama 3.2 (−0.128 [−0.282, +0.026]; 39 questions).
+- On MuSiQue, accuracy differences stayed within ±0.042 at every hop count.
+
+**Table 11. Standard answer metrics: exact match (EM) and token F1** (SQuAD normalisation, best over the gold aliases; exploratory). * CAS v2 or v2 + fallback differs from Vanilla RAG on the same questions (paired sign-flip test, Holm p < 0.05 within each study); bold = best within each block.
+
+| Data | Method | Llama 3.2 EM ↑ | Llama 3.2 F1 ↑ | Gemma 3 EM ↑ | Gemma 3 F1 ↑ |
+|---|---|---|---|---|---|
+| HotpotQA, study 6 (n = 700) | Vanilla RAG | 0.469 | 0.603 | 0.387 | 0.506 |
+|  | Reranker top-3 | 0.401 | 0.531 | 0.334 | 0.438 |
+|  | CAS v2 | 0.514 | 0.652* | 0.434 | 0.556* |
+|  | CAS v2 + fallback | **0.533*** | **0.678*** | **0.467*** | **0.596*** |
+| MuSiQue, study 6 (n = 200) | Vanilla RAG | 0.135 | 0.220 | 0.145 | 0.205 |
+|  | Reranker top-3 | 0.110 | 0.174 | 0.140 | 0.192 |
+|  | CAS v2 | 0.150 | 0.216 | 0.165 | 0.217 |
+|  | CAS v2 + fallback | **0.175** | **0.264** | **0.220*** | **0.288*** |
+| HotpotQA, study 5 (n = 200) | Vanilla RAG | 0.470 | 0.623 | 0.385 | 0.517 |
+|  | BM25 top-3 | 0.420 | 0.549 | 0.330 | 0.472 |
+|  | Reranker top-3 | 0.430 | 0.556 | 0.325 | 0.469 |
+|  | CAS v1 | 0.400 | 0.523 | 0.300 | 0.441 |
+|  | CAS v2 | **0.515** | **0.662** | **0.430** | **0.595*** |
+
+
+**Table 12. Abstention-aware scores** (study 6; exploratory). Coverage = share of questions answered; selective accuracy = accuracy among answered questions; net score = correct − wrong (a correct answer scores +1, an abstention 0, a wrong answer −1). * net score differs from Vanilla RAG's (paired sign-flip test, Holm p < 0.05 over the 10 comparisons with Vanilla RAG in studies 5 and 6).
+
+| Data | Method | Llama 3.2 coverage | Llama 3.2 selective acc. ↑ | Llama 3.2 net score ↑ | Gemma 3 coverage | Gemma 3 selective acc. ↑ | Gemma 3 net score ↑ |
+|---|---|---|---|---|---|---|---|
+| HotpotQA, study 6 (n = 700) | Vanilla RAG | 0.961 | 0.527 | +0.053 | 0.891 | 0.462 | −0.069 |
+|  | Reranker top-3 | 0.874 | 0.505 | +0.009 | 0.770 | 0.481 | −0.030 |
+|  | CAS v2 | 0.926 | 0.599 | +0.183* | 0.843 | 0.558 | +0.097* |
+|  | CAS v2 + fallback | 0.974 | 0.589 | +0.174* | 0.920 | 0.547 | +0.086* |
+| MuSiQue, study 6 (n = 200) | Vanilla RAG | 0.745 | 0.201 | −0.445 | 0.660 | 0.242 | −0.340 |
+|  | Reranker top-3 | 0.585 | 0.205 | −0.345 | 0.540 | 0.278 | −0.240 |
+|  | CAS v2 | 0.605 | 0.273 | −0.275* | 0.530 | 0.321 | −0.190* |
+|  | CAS v2 + fallback | 0.795 | 0.245 | −0.405 | 0.755 | 0.305 | −0.295 |
+
+
+**Table 13. How each question's outcome moved from Vanilla RAG to CAS v2** (number of questions; exploratory). The last two columns ask whether v2's new abstentions fell on questions that Vanilla RAG got wrong. They compare Vanilla RAG's accuracy on the questions where v2 abstained and Vanilla RAG answered with its accuracy on every question it answered.
+
+| Data | Model | Wrong → correct | Correct → wrong | Wrong → abstain | Correct → abstain | Abstain → correct / wrong | Net change in correct | Vanilla RAG accuracy on v2's new abstentions | Vanilla RAG accuracy where it answered |
+|---|---|---|---|---|---|---|---|---|---|
+| HotpotQA, study 6 (n = 700) | Llama 3.2 | 79 | 37 | 20 | 18 | 9 / 4 | +33 | 0.474 (n = 38) | 0.527 |
+|  | Gemma 3 | 79 | 29 | 32 | 26 | 17 / 7 | +41 | 0.448 (n = 58) | 0.462 |
+| MuSiQue, study 6 (n = 200) | Llama 3.2 | 11 | 5 | 30 | 6 | 3 / 5 | +3 | 0.167 (n = 36) | 0.201 |
+|  | Gemma 3 | 12 | 5 | 32 | 12 | 7 / 11 | +2 | 0.273 (n = 44) | 0.242 |
+| HotpotQA, study 5 (n = 200) | Llama 3.2 | 21 | 7 | 6 | 2 | 1 / 1 | +13 | 0.250 (n = 8) | 0.492 |
+|  | Gemma 3 | 18 | 8 | 13 | 3 | 4 / 7 | +11 | 0.188 (n = 16) | 0.432 |
+
+
+**Table 14. CAS v2 minus Vanilla RAG by question type** (study 6; same questions; 95% bootstrap CIs; exploratory, not corrected for multiplicity). The interval [0.000, 0.000] for Llama 3.2 on 4-hop questions means that the two methods answered exactly the same questions correctly.
+
+| Data | Question type | n | Llama 3.2 Δ accuracy | Llama 3.2 Δ wrong | Gemma 3 Δ accuracy | Gemma 3 Δ wrong |
+|---|---|---|---|---|---|---|
+| HotpotQA | bridge | 555 | +0.029 [−0.009, +0.065] | −0.077 [−0.114, −0.040] | +0.065 [+0.029, +0.101] | −0.112 [−0.148, −0.074] |
+|  | comparison | 145 | +0.117 [+0.048, +0.186] | −0.103 [−0.166, −0.041] | +0.034 [−0.041, +0.110] | −0.090 [−0.166, −0.021] |
+| MuSiQue | 2 hops | 95 | +0.011 [−0.063, +0.084] | −0.189 [−0.284, −0.095] | +0.042 [−0.042, +0.126] | −0.116 [−0.221, −0.011] |
+|  | 3 hops | 66 | +0.030 [−0.061, +0.121] | −0.121 [−0.242, −0.015] | −0.030 [−0.136, +0.076] | −0.152 [−0.288, −0.015] |
+|  | 4 hops | 39 | 0.000 [0.000, 0.000] | −0.128 [−0.282, +0.026] | 0.000 [−0.154, +0.154] | −0.179 [−0.333, −0.026] |
+
 ## 6. Discussion
 
 The results raise six questions:
@@ -812,12 +920,12 @@ Sections 6.1, 6.2, 6.4 and 6.5 use exploratory analyses of the cached study 3 ou
 
 In study 3, CAS doubled evidence F1 relative to Vanilla RAG, yet answered less accurately. This is not specific to CAS. Every filter, including BM25 top-3 and the reranker, was less accurate than Vanilla RAG for both models (Section 5.4).
 
-**Filtering helps when it keeps the evidence, and hurts when it drops it.** We split the 500 questions by whether a filter kept every supporting passage. Within each group, we compared the filter with Vanilla RAG on the same questions (Table 11).
+**Filtering helps when it keeps the evidence, and hurts when it drops it.** We split the 500 questions by whether a filter kept every supporting passage. Within each group, we compared the filter with Vanilla RAG on the same questions (Table 15).
 - **When a filter kept every supporting passage,** it was *more* accurate than Vanilla RAG in all ten filter–model combinations (+0.039 to +0.062). The 95% CI excluded zero in eight of them. After Holm correction over the 20 stratified tests, only one remained significant: BM25 top-3 with Llama 3.2 (Holm p = 0.044).
 - **When a filter dropped a supporting passage,** it was much less accurate (−0.129 to −0.258; all Holm p ≤ 0.003).
 - **Most of CAS's losses were in the second group.** Take the questions that Vanilla RAG answered correctly and CAS did not. CAS had dropped a supporting passage on 48 of 61 of them (Llama 3.2) and on 58 of 70 (Gemma 3).
 
-**Table 11. Accuracy by whether the filter kept every supporting passage** (study 3; exploratory; each filter is paired with Vanilla RAG on the same questions).
+**Table 15. Accuracy by whether the filter kept every supporting passage** (study 3; exploratory; each filter is paired with Vanilla RAG on the same questions).
 
 | Model | Filter | Supporting passages | n | Filter accuracy | Vanilla RAG accuracy | Difference [95% CI] |
 |---|---|---|---|---|---|---|
@@ -846,11 +954,11 @@ In study 3, CAS doubled evidence F1 relative to Vanilla RAG, yet answered less a
 
 **What a filter would need.** Suppose the effects in the two groups stayed as measured. Conflict-preserving CAS would then match Vanilla RAG's accuracy only if it kept every supporting passage for about 74% (Llama 3.2) to 80% (Gemma 3) of questions, against 52% today. This extrapolation is rough, because the two groups are not comparable. The questions on which a filter keeps all the evidence are easier: Vanilla RAG, too, is more accurate on them (0.575 vs 0.423 for Llama 3.2).
 
-### 6.2 CAS fails safe: fewer wrong answers, more abstentions
+### 6.2 Fewer wrong answers, more abstentions: does CAS fail safe?
 
-Accuracy counts an abstention and a wrong answer the same way. Table 12 separates them.
+Accuracy counts an abstention and a wrong answer the same way. Table 16 separates them.
 
-**Table 12. Answer outcomes on the 500 clean questions of study 3** (share of questions; exploratory).
+**Table 16. Answer outcomes on the 500 clean questions of study 3** (share of questions; exploratory).
 
 | Method | Llama 3.2 correct | Llama 3.2 wrong | Llama 3.2 abstained | Gemma 3 correct | Gemma 3 wrong | Gemma 3 abstained |
 |---|---|---|---|---|---|---|
@@ -882,6 +990,11 @@ Accuracy counts an abstention and a wrong answer the same way. Table 12 separate
 - Score a correct answer +1, an abstention 0 and a wrong answer −*c*. CAS then beats Vanilla RAG whenever *c* > 0.44 (Llama 3.2) or *c* > 0.76 (Gemma 3).
 - At *c* = 1, the advantage was +0.048 [−0.026, +0.118] and +0.022 [−0.052, +0.092]. Neither is significant (Holm p = 1.0).
 - The "fails safe" reading is therefore suggestive, not established. It deserves a pre-registered test with risk–coverage endpoints, in applications where a wrong answer costs more than no answer, such as clinical, legal or enterprise question answering.
+
+**Study 6 sharpens this reading** (Section 5.10).
+- v2's net score at *c* = 1 was significantly higher than Vanilla RAG's on both datasets (exploratory test). The trade is therefore favourable even when a wrong answer costs as much as a correct answer gains.
+- But v2's new abstentions were not concentrated on the questions that Vanilla RAG got wrong (Table 13). They followed missing evidence: on questions with a span answer, the gold answer was absent from v2's prompt in 39–59% of its abstentions.
+- The safety is therefore a by-product of filtering. The model refuses when the filter has removed what it needs; this is not evidence that it knows when it would be wrong.
 
 **The safety comes from filtering, not from conflict detection.** CAS without the graph shows the same pattern: wrong answers fell by 0.088 and 0.096. So do BM25 top-3 and the reranker, by less.
 
@@ -954,7 +1067,7 @@ Three observations point the same way:
    - Evidence F1 doubled while accuracy fell (Section 6.1).
    - Silent exposure fell in every Monte Carlo setting, while adoption did not significantly fall (Section 6.3).
    - Pre-generation methods should be judged on answers. At the selection level, the share of questions with every supporting passage kept tells more than F1.
-2. **Report correct, wrong and abstained answers separately.** Accuracy alone hides the trade shown in Table 12.
+2. **Report correct, wrong and abstained answers separately.** Accuracy alone hides the trade shown in Table 16.
 3. **Report end-to-end latency, including verification.** Generation time alone made CAS-NLI look about 3.5 times faster than Vanilla RAG. End to end, it was 2.2–2.6 times slower.
 4. **Fix the analysis before the data exist.**
    - Pre-registration made the negative results interpretable, because no endpoint could be chosen after the fact.
@@ -1036,10 +1149,10 @@ Study 5 tested four of the recommendations together, on questions that no earlie
 **2. v2 dominates Vanilla RAG on both datasets, though only partly significantly.**
 - In point estimates, v2 gave more correct answers *and* fewer wrong answers than Vanilla RAG, for both models on both datasets (Section 5.8).
 - It therefore scores higher under any cost of a wrong answer: +1 for correct, 0 for an abstention, −*c* for wrong, for any *c* ≥ 0. This is unlike CAS v1 in study 3, which beat Vanilla RAG only when *c* > 0.44–0.76 (Section 6.2).
-- Among the questions it answered, v2 was right more often than Vanilla RAG in all four cases. These figures are computed from the shares in Section 5.8:
+- Among the questions it answered, v2 was right more often than Vanilla RAG in all four cases (CIs and tests in Section 5.10):
   - HotpotQA: 0.599 vs 0.527 (Llama 3.2) and 0.558 vs 0.462 (Gemma 3);
   - MuSiQue: 0.273 vs 0.201 and 0.321 vs 0.242.
-- On MuSiQue, only the reduction in wrong answers is statistically supported. The accuracy differences are not.
+- On MuSiQue, the reduction in wrong answers is statistically supported, and so, in an exploratory test, is the higher net score at *c* = 1. The accuracy differences are not.
 
 **3. On MuSiQue, the lever does not reach far enough.**
 - v2 kept the full evidence chain for 40.0% of questions, far below the level at which filtering pays off in accuracy.
@@ -1054,7 +1167,7 @@ Study 5 tested four of the recommendations together, on questions that no earlie
 
 **5. A small pilot misled the predictions, and pre-registration made that visible.**
 - The 60-question pilot made v2 look clearly harmful on MuSiQue for Llama 3.2 (−0.133). We therefore predicted that H2 would fail.
-- On 200 questions, v2 was level in accuracy and significantly reduced wrong answers.
+- On 200 questions, v2's accuracy did not differ significantly from Vanilla RAG's, and v2 significantly reduced wrong answers.
 - Because the prediction was written down, the error shows. Readers can see that our expectations, not the data, were wrong.
 - Pilot estimates at n = 60 should inform the plan's direction, not its predictions of effect size.
 
@@ -1073,7 +1186,7 @@ Study 5 tested four of the recommendations together, on questions that no earlie
 - **The Ollama runtime changed between studies.** It moved from 0.40.12 to 0.40.13 between study 2 and study 3 (Section 4.3), with the same model weights. Comparisons within a study are unaffected, because every method in a study ran on the same version. Comparisons of absolute accuracy across studies could be affected.
 
 **Construct validity.**
-- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 12: a correct paraphrase that does not contain the gold string counts as wrong.
+- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 16: a correct paraphrase that does not contain the gold string counts as wrong.
 - Silent exposure (study 4) is a selection-level proxy. E4 suggests that, for small models, a conflict note does not change adoption, so the proxy may overstate the value of marking.
 - **The written attack (study 5) uses one attacker model and one prompt.**
   - The prompt adds two sentences to PoisonedRAG's.
@@ -1096,7 +1209,7 @@ Study 5 tested four of the recommendations together, on questions that no earlie
 - The Monte Carlo study reports question-level CIs only. Its run count reduces simulation noise, not sampling error.
 - Study 5's clean set is small (n = 200). Its accuracy differences have 95% CIs about ±0.05 wide, so differences of 0.055–0.065 did not survive Holm correction over 20 tests. The plan anticipated this for Gemma 3 (H3, H9).
 - Study 6's MuSiQue sample is small (n = 200). There, H3 failed for Gemma 3 with a CI lower bound exactly at the −0.05 margin, so a slightly different sample could have reversed this decision.
-- The analyses in Sections 5.9, 6.1, 6.2, 6.4, 6.5, 6.9 and 6.10 were chosen after the results were known. Their tests are Holm-corrected within each analysis, but the set of analyses was not fixed in advance. The groups in Table 11 are defined by each method's own selection, so they are not randomly assigned.
+- The analyses in Sections 5.9, 5.10, 6.1, 6.2, 6.4, 6.5, 6.9 and 6.10 were chosen after the results were known. Their tests are Holm-corrected within each analysis, but the set of analyses was not fixed in advance. The groups in Table 15 are defined by each method's own selection, so they are not randomly assigned.
 
 **Pre-registration.**
 - The plans are hash-stamped in the outputs but were not deposited in a public registry.

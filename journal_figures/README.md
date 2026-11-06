@@ -22,7 +22,8 @@ py evaluation/dev_study6_variants.py   # study 6 development: hop expansion, cro
 py evaluation/run_study6.py            # study 6: 700 HotpotQA + 200 MuSiQue, 2 LLMs; ~10.5 h on CPU; waits for the
                                        # plan to be committed and stops if Ollama is not 0.40.13
 py evaluation/run_v2_ablation.py       # exploratory: CAS v2 with each step switched off (selection level, no LLM)
-py evaluation/make_paper_tables.py     # manuscript Tables 2-5 (main results), written to paper/main_tables.md
+py evaluation/run_extra_analyses.py    # exploratory: EM/F1, abstention-aware scores, outcome transitions, by type (no LLM)
+py evaluation/make_paper_tables.py     # manuscript Tables 2-5 and 11-14, written to paper/main_tables.md and paper/extra_tables.md
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 
