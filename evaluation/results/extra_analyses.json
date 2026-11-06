@@ -1,0 +1,2211 @@
+{
+ "note": "Exploratory, post hoc analyses of cached results; no model calls; not pre-registered.",
+ "n_boot": 2000,
+ "seed": 42,
+ "qa_metrics": {
+  "descriptive": [
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.434286,
+    "ci_low": 0.397143,
+    "ci_high": 0.471429
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.555666,
+    "ci_low": 0.522408,
+    "ci_high": 0.587926
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.467143,
+    "ci_low": 0.43,
+    "ci_high": 0.501429
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.595605,
+    "ci_low": 0.563107,
+    "ci_high": 0.626763
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.334286,
+    "ci_low": 0.301429,
+    "ci_high": 0.370036
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.438442,
+    "ci_low": 0.404995,
+    "ci_high": 0.473646
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.387143,
+    "ci_low": 0.35,
+    "ci_high": 0.422857
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.506091,
+    "ci_low": 0.472027,
+    "ci_high": 0.540382
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.514286,
+    "ci_low": 0.478536,
+    "ci_high": 0.551429
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.652319,
+    "ci_low": 0.620962,
+    "ci_high": 0.683479
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.532857,
+    "ci_low": 0.497143,
+    "ci_high": 0.568571
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.678223,
+    "ci_low": 0.647942,
+    "ci_high": 0.707831
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.401429,
+    "ci_low": 0.365714,
+    "ci_high": 0.438607
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.53091,
+    "ci_low": 0.497307,
+    "ci_high": 0.565237
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 700,
+    "mean": 0.468571,
+    "ci_low": 0.431429,
+    "ci_high": 0.507143
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 700,
+    "mean": 0.603206,
+    "ci_low": 0.570904,
+    "ci_high": 0.635153
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "BM25 top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.33,
+    "ci_low": 0.265,
+    "ci_high": 0.395
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "BM25 top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.471659,
+    "ci_low": 0.413232,
+    "ci_high": 0.53641
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v1",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.3,
+    "ci_low": 0.24,
+    "ci_high": 0.36
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v1",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.440659,
+    "ci_low": 0.378471,
+    "ci_high": 0.502573
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.43,
+    "ci_low": 0.365,
+    "ci_high": 0.5
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.594652,
+    "ci_low": 0.536423,
+    "ci_high": 0.655244
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.325,
+    "ci_low": 0.26,
+    "ci_high": 0.39
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.46875,
+    "ci_low": 0.404535,
+    "ci_high": 0.534033
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.385,
+    "ci_low": 0.32,
+    "ci_high": 0.455
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.517358,
+    "ci_low": 0.456702,
+    "ci_high": 0.580882
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "BM25 top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.42,
+    "ci_low": 0.355,
+    "ci_high": 0.49
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "BM25 top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.549232,
+    "ci_low": 0.490305,
+    "ci_high": 0.612913
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v1",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.4,
+    "ci_low": 0.335,
+    "ci_high": 0.465
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v1",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.523348,
+    "ci_low": 0.462076,
+    "ci_high": 0.585072
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.515,
+    "ci_low": 0.45,
+    "ci_high": 0.585
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.66204,
+    "ci_low": 0.605267,
+    "ci_high": 0.719812
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.43,
+    "ci_low": 0.365,
+    "ci_high": 0.5
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.556115,
+    "ci_low": 0.494841,
+    "ci_high": 0.617165
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.47,
+    "ci_low": 0.4,
+    "ci_high": 0.54
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.622586,
+    "ci_low": 0.5612,
+    "ci_high": 0.681514
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.165,
+    "ci_low": 0.115,
+    "ci_high": 0.215
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.216929,
+    "ci_low": 0.163499,
+    "ci_high": 0.272174
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.22,
+    "ci_low": 0.165,
+    "ci_high": 0.28
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.288298,
+    "ci_low": 0.232403,
+    "ci_high": 0.34761
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.14,
+    "ci_low": 0.095,
+    "ci_high": 0.19
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.192073,
+    "ci_low": 0.145701,
+    "ci_high": 0.24382
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.145,
+    "ci_low": 0.095,
+    "ci_high": 0.195125
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.204583,
+    "ci_low": 0.155588,
+    "ci_high": 0.259705
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.15,
+    "ci_low": 0.105,
+    "ci_high": 0.200125
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.216101,
+    "ci_low": 0.167068,
+    "ci_high": 0.270197
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.175,
+    "ci_low": 0.12,
+    "ci_high": 0.23
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.264266,
+    "ci_low": 0.212858,
+    "ci_high": 0.322233
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.11,
+    "ci_low": 0.07,
+    "ci_high": 0.155
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.17419,
+    "ci_low": 0.130132,
+    "ci_high": 0.226274
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "em",
+    "n": 200,
+    "mean": 0.135,
+    "ci_low": 0.085,
+    "ci_high": 0.185
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "metric": "f1",
+    "n": 200,
+    "mean": 0.220242,
+    "ci_low": 0.17042,
+    "ci_high": 0.277392
+   }
+  ],
+  "tests": {
+   "study 6": [
+    {
+     "dataset": "hotpotqa",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 700,
+     "mean_diff": 0.047143,
+     "ci_low": 0.012857,
+     "ci_high": 0.081429,
+     "p_value": 0.010798920107989201,
+     "p_holm": 0.0755924407559244
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 700,
+     "mean_diff": 0.049576,
+     "ci_low": 0.01683,
+     "ci_high": 0.082582,
+     "p_value": 0.0046995300469953,
+     "p_holm": 0.04229577042295771
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "gemma3:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 700,
+     "mean_diff": 0.08,
+     "ci_low": 0.048571,
+     "ci_high": 0.112857,
+     "p_value": 9.999000099990002e-05,
+     "p_holm": 0.0015998400159984002
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "gemma3:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 700,
+     "mean_diff": 0.089514,
+     "ci_low": 0.061529,
+     "ci_high": 0.119862,
+     "p_value": 9.999000099990002e-05,
+     "p_holm": 0.0015998400159984002
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 700,
+     "mean_diff": 0.045714,
+     "ci_low": 0.012857,
+     "ci_high": 0.077143,
+     "p_value": 0.0065993400659934,
+     "p_holm": 0.0527947205279472
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 700,
+     "mean_diff": 0.049113,
+     "ci_low": 0.016725,
+     "ci_high": 0.079746,
+     "p_value": 0.0033996600339966003,
+     "p_holm": 0.0362963703629637
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "llama3.2:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 700,
+     "mean_diff": 0.064286,
+     "ci_low": 0.034286,
+     "ci_high": 0.094286,
+     "p_value": 0.00039996000399960006,
+     "p_holm": 0.005199480051994801
+    },
+    {
+     "dataset": "hotpotqa",
+     "model": "llama3.2:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 700,
+     "mean_diff": 0.075018,
+     "ci_low": 0.045544,
+     "ci_high": 0.103965,
+     "p_value": 9.999000099990002e-05,
+     "p_holm": 0.0015998400159984002
+    },
+    {
+     "dataset": "musique",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.02,
+     "ci_low": -0.04,
+     "ci_high": 0.08,
+     "p_value": 0.6051394860513949,
+     "p_holm": 1.0
+    },
+    {
+     "dataset": "musique",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": 0.012345,
+     "ci_low": -0.051276,
+     "ci_high": 0.075671,
+     "p_value": 0.6934306569343066,
+     "p_holm": 1.0
+    },
+    {
+     "dataset": "musique",
+     "model": "gemma3:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.075,
+     "ci_low": 0.03,
+     "ci_high": 0.12,
+     "p_value": 0.0032996700329967,
+     "p_holm": 0.0362963703629637
+    },
+    {
+     "dataset": "musique",
+     "model": "gemma3:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": 0.083714,
+     "ci_low": 0.037732,
+     "ci_high": 0.135422,
+     "p_value": 0.000999900009999,
+     "p_holm": 0.011998800119988001
+    },
+    {
+     "dataset": "musique",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.015,
+     "ci_low": -0.03,
+     "ci_high": 0.065,
+     "p_value": 0.672032796720328,
+     "p_holm": 1.0
+    },
+    {
+     "dataset": "musique",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": -0.004141,
+     "ci_low": -0.055314,
+     "ci_high": 0.049382,
+     "p_value": 0.8713128687131287,
+     "p_holm": 1.0
+    },
+    {
+     "dataset": "musique",
+     "model": "llama3.2:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.04,
+     "ci_low": 0.0,
+     "ci_high": 0.085,
+     "p_value": 0.11788821117888211,
+     "p_holm": 0.5894410558944105
+    },
+    {
+     "dataset": "musique",
+     "model": "llama3.2:latest",
+     "method": "CAS v2 + fallback",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": 0.044024,
+     "ci_low": 0.002262,
+     "ci_high": 0.089621,
+     "p_value": 0.048995100489951,
+     "p_holm": 0.293970602939706
+    }
+   ],
+   "study 5": [
+    {
+     "dataset": "hotpotqa (study 5)",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.045,
+     "ci_low": -0.015,
+     "ci_high": 0.1,
+     "p_value": 0.14658534146585342,
+     "p_holm": 0.3272672732726727
+    },
+    {
+     "dataset": "hotpotqa (study 5)",
+     "model": "gemma3:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": 0.077294,
+     "ci_low": 0.020401,
+     "ci_high": 0.132256,
+     "p_value": 0.0044995500449955,
+     "p_holm": 0.017998200179982
+    },
+    {
+     "dataset": "hotpotqa (study 5)",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "em",
+     "n": 200,
+     "mean_diff": 0.045,
+     "ci_low": -0.005,
+     "ci_high": 0.095,
+     "p_value": 0.1217878212178782,
+     "p_holm": 0.3272672732726727
+    },
+    {
+     "dataset": "hotpotqa (study 5)",
+     "model": "llama3.2:latest",
+     "method": "CAS v2",
+     "comparator": "Vanilla RAG",
+     "metric": "f1",
+     "n": 200,
+     "mean_diff": 0.039455,
+     "ci_low": -0.007722,
+     "ci_high": 0.086755,
+     "p_value": 0.1090890910908909,
+     "p_holm": 0.3272672732726727
+    }
+   ]
+  }
+ },
+ "selective": {
+  "descriptive": [
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "n": 700,
+    "coverage": 0.891429,
+    "selective_accuracy": 0.461538,
+    "selective_wrong": 0.538462
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "n": 700,
+    "coverage": 0.77,
+    "selective_accuracy": 0.480519,
+    "selective_wrong": 0.519481
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "n": 700,
+    "coverage": 0.842857,
+    "selective_accuracy": 0.557627,
+    "selective_wrong": 0.442373
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "n": 700,
+    "coverage": 0.92,
+    "selective_accuracy": 0.546584,
+    "selective_wrong": 0.453416
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "n": 700,
+    "coverage": 0.961429,
+    "selective_accuracy": 0.527489,
+    "selective_wrong": 0.472511
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "n": 700,
+    "coverage": 0.874286,
+    "selective_accuracy": 0.504902,
+    "selective_wrong": 0.495098
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "n": 700,
+    "coverage": 0.925714,
+    "selective_accuracy": 0.598765,
+    "selective_wrong": 0.401235
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "n": 700,
+    "coverage": 0.974286,
+    "selective_accuracy": 0.589443,
+    "selective_wrong": 0.410557
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "n": 200,
+    "coverage": 0.915,
+    "selective_accuracy": 0.431694,
+    "selective_wrong": 0.568306
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "BM25 top-3",
+    "n": 200,
+    "coverage": 0.77,
+    "selective_accuracy": 0.454545,
+    "selective_wrong": 0.545455
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "n": 200,
+    "coverage": 0.785,
+    "selective_accuracy": 0.452229,
+    "selective_wrong": 0.547771
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v1",
+    "n": 200,
+    "coverage": 0.755,
+    "selective_accuracy": 0.417219,
+    "selective_wrong": 0.582781
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "n": 200,
+    "coverage": 0.89,
+    "selective_accuracy": 0.505618,
+    "selective_wrong": 0.494382
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "n": 200,
+    "coverage": 0.985,
+    "selective_accuracy": 0.492386,
+    "selective_wrong": 0.507614
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "BM25 top-3",
+    "n": 200,
+    "coverage": 0.9,
+    "selective_accuracy": 0.5,
+    "selective_wrong": 0.5
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "n": 200,
+    "coverage": 0.875,
+    "selective_accuracy": 0.508571,
+    "selective_wrong": 0.491429
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v1",
+    "n": 200,
+    "coverage": 0.845,
+    "selective_accuracy": 0.491124,
+    "selective_wrong": 0.508876
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "n": 200,
+    "coverage": 0.955,
+    "selective_accuracy": 0.575916,
+    "selective_wrong": 0.424084
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "n": 200,
+    "coverage": 0.66,
+    "selective_accuracy": 0.242424,
+    "selective_wrong": 0.757576
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "n": 200,
+    "coverage": 0.54,
+    "selective_accuracy": 0.277778,
+    "selective_wrong": 0.722222
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "n": 200,
+    "coverage": 0.53,
+    "selective_accuracy": 0.320755,
+    "selective_wrong": 0.679245
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "n": 200,
+    "coverage": 0.755,
+    "selective_accuracy": 0.304636,
+    "selective_wrong": 0.695364
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "n": 200,
+    "coverage": 0.745,
+    "selective_accuracy": 0.201342,
+    "selective_wrong": 0.798658
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "n": 200,
+    "coverage": 0.585,
+    "selective_accuracy": 0.205128,
+    "selective_wrong": 0.794872
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "n": 200,
+    "coverage": 0.605,
+    "selective_accuracy": 0.272727,
+    "selective_wrong": 0.727273
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "n": 200,
+    "coverage": 0.795,
+    "selective_accuracy": 0.245283,
+    "selective_wrong": 0.754717
+   }
+  ],
+  "differences": [
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.096089,
+    "ci_low": 0.06056,
+    "ci_high": 0.131814
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.085045,
+    "ci_low": 0.053679,
+    "ci_high": 0.11858
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.071277,
+    "ci_low": 0.038618,
+    "ci_high": 0.103456
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.061954,
+    "ci_low": 0.031322,
+    "ci_high": 0.094179
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.073924,
+    "ci_low": 0.013422,
+    "ci_high": 0.138711
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.08353,
+    "ci_low": 0.031111,
+    "ci_high": 0.137491
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.07833,
+    "ci_low": -0.010252,
+    "ci_high": 0.171905
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.062212,
+    "ci_low": 0.001008,
+    "ci_high": 0.127848
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.071385,
+    "ci_low": -0.000322,
+    "ci_high": 0.144753
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "comparator": "Vanilla RAG",
+    "metric": "selective_accuracy",
+    "mean_diff": 0.043941,
+    "ci_low": -0.012914,
+    "ci_high": 0.098888
+   }
+  ]
+ },
+ "targeting": [
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "n_extra_abstentions": 58,
+   "vanilla_accuracy_on_them": 0.448276,
+   "n_both_answered": 566,
+   "vanilla_accuracy_where_both_answered": 0.462898,
+   "vanilla_accuracy_where_it_answered": 0.461538
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "n_extra_abstentions": 38,
+   "vanilla_accuracy_on_them": 0.473684,
+   "n_both_answered": 635,
+   "vanilla_accuracy_where_both_answered": 0.530709,
+   "vanilla_accuracy_where_it_answered": 0.527489
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "gemma3:latest",
+   "n_extra_abstentions": 16,
+   "vanilla_accuracy_on_them": 0.1875,
+   "n_both_answered": 167,
+   "vanilla_accuracy_where_both_answered": 0.45509,
+   "vanilla_accuracy_where_it_answered": 0.431694
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "llama3.2:latest",
+   "n_extra_abstentions": 8,
+   "vanilla_accuracy_on_them": 0.25,
+   "n_both_answered": 189,
+   "vanilla_accuracy_where_both_answered": 0.502646,
+   "vanilla_accuracy_where_it_answered": 0.492386
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "n_extra_abstentions": 44,
+   "vanilla_accuracy_on_them": 0.272727,
+   "n_both_answered": 88,
+   "vanilla_accuracy_where_both_answered": 0.227273,
+   "vanilla_accuracy_where_it_answered": 0.242424
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "n_extra_abstentions": 36,
+   "vanilla_accuracy_on_them": 0.166667,
+   "n_both_answered": 113,
+   "vanilla_accuracy_where_both_answered": 0.212389,
+   "vanilla_accuracy_where_it_answered": 0.201342
+  }
+ ],
+ "net_score_c1": [
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.097143,
+   "comparator_score": -0.068571,
+   "mean_diff": 0.165714,
+   "ci_low": 0.104286,
+   "ci_high": 0.227143,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "CAS v2 + fallback",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.085714,
+   "comparator_score": -0.068571,
+   "mean_diff": 0.154286,
+   "ci_low": 0.097143,
+   "ci_high": 0.214286,
+   "p_value": 9.999000099990002e-05,
+   "p_holm": 0.000999900009999
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.182857,
+   "comparator_score": 0.052857,
+   "mean_diff": 0.13,
+   "ci_low": 0.067143,
+   "ci_high": 0.192857,
+   "p_value": 0.0004999500049995,
+   "p_holm": 0.003999600039996
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "CAS v2 + fallback",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.174286,
+   "comparator_score": 0.052857,
+   "mean_diff": 0.121429,
+   "ci_low": 0.06,
+   "ci_high": 0.182857,
+   "p_value": 0.0005999400059994001,
+   "p_holm": 0.004199580041995801
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.01,
+   "comparator_score": -0.125,
+   "mean_diff": 0.135,
+   "ci_low": 0.024875,
+   "ci_high": 0.245,
+   "p_value": 0.020897910208979104,
+   "p_holm": 0.06269373062693731
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": 0.145,
+   "comparator_score": -0.015,
+   "mean_diff": 0.16,
+   "ci_low": 0.059875,
+   "ci_high": 0.265,
+   "p_value": 0.004899510048995101,
+   "p_holm": 0.024497550244975505
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": -0.19,
+   "comparator_score": -0.34,
+   "mean_diff": 0.15,
+   "ci_low": 0.035,
+   "ci_high": 0.255,
+   "p_value": 0.0110988901109889,
+   "p_holm": 0.0443955604439556
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "CAS v2 + fallback",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": -0.295,
+   "comparator_score": -0.34,
+   "mean_diff": 0.045,
+   "ci_low": -0.045,
+   "ci_high": 0.135,
+   "p_value": 0.39236076392360764,
+   "p_holm": 0.7847215278472153
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": -0.275,
+   "comparator_score": -0.445,
+   "mean_diff": 0.17,
+   "ci_low": 0.075,
+   "ci_high": 0.27,
+   "p_value": 0.0011998800119988001,
+   "p_holm": 0.007199280071992801
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "CAS v2 + fallback",
+   "comparator": "Vanilla RAG",
+   "metric": "correct - wrong",
+   "method_score": -0.405,
+   "comparator_score": -0.445,
+   "mean_diff": 0.04,
+   "ci_low": -0.045,
+   "ci_high": 0.13,
+   "p_value": 0.44115588441155884,
+   "p_holm": 0.7847215278472153
+  }
+ ],
+ "justified_abstentions": [
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "span_questions": 652,
+   "abstentions": 80,
+   "answer_absent_from_prompt": 31,
+   "share_justified": 0.3875
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "CAS v2 + fallback",
+   "span_questions": 652,
+   "abstentions": 33,
+   "answer_absent_from_prompt": 2,
+   "share_justified": 0.060606
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "span_questions": 652,
+   "abstentions": 126,
+   "answer_absent_from_prompt": 68,
+   "share_justified": 0.539683
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "method": "Vanilla RAG",
+   "span_questions": 652,
+   "abstentions": 49,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "span_questions": 652,
+   "abstentions": 49,
+   "answer_absent_from_prompt": 28,
+   "share_justified": 0.571429
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "CAS v2 + fallback",
+   "span_questions": 652,
+   "abstentions": 16,
+   "answer_absent_from_prompt": 1,
+   "share_justified": 0.0625
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "span_questions": 652,
+   "abstentions": 83,
+   "answer_absent_from_prompt": 53,
+   "share_justified": 0.638554
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "span_questions": 652,
+   "abstentions": 22,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "CAS v2",
+   "span_questions": 200,
+   "abstentions": 94,
+   "answer_absent_from_prompt": 48,
+   "share_justified": 0.510638
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "CAS v2 + fallback",
+   "span_questions": 200,
+   "abstentions": 49,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "Reranker top-3",
+   "span_questions": 200,
+   "abstentions": 92,
+   "answer_absent_from_prompt": 68,
+   "share_justified": 0.73913
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "method": "Vanilla RAG",
+   "span_questions": 200,
+   "abstentions": 68,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "CAS v2",
+   "span_questions": 200,
+   "abstentions": 79,
+   "answer_absent_from_prompt": 47,
+   "share_justified": 0.594937
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "CAS v2 + fallback",
+   "span_questions": 200,
+   "abstentions": 41,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "Reranker top-3",
+   "span_questions": 200,
+   "abstentions": 83,
+   "answer_absent_from_prompt": 63,
+   "share_justified": 0.759036
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "method": "Vanilla RAG",
+   "span_questions": 200,
+   "abstentions": 51,
+   "answer_absent_from_prompt": 0,
+   "share_justified": 0.0
+  }
+ ],
+ "transitions": [
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "n": 700,
+   "counts": {
+    "correct->correct": 233,
+    "correct->wrong": 29,
+    "correct->abstain": 26,
+    "wrong->correct": 79,
+    "wrong->wrong": 225,
+    "wrong->abstain": 32,
+    "abstain->correct": 17,
+    "abstain->wrong": 7,
+    "abstain->abstain": 52
+   }
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "n": 700,
+   "counts": {
+    "correct->correct": 300,
+    "correct->wrong": 37,
+    "correct->abstain": 18,
+    "wrong->correct": 79,
+    "wrong->wrong": 219,
+    "wrong->abstain": 20,
+    "abstain->correct": 9,
+    "abstain->wrong": 4,
+    "abstain->abstain": 14
+   }
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "gemma3:latest",
+   "n": 200,
+   "counts": {
+    "correct->correct": 68,
+    "correct->wrong": 8,
+    "correct->abstain": 3,
+    "wrong->correct": 18,
+    "wrong->wrong": 73,
+    "wrong->abstain": 13,
+    "abstain->correct": 4,
+    "abstain->wrong": 7,
+    "abstain->abstain": 6
+   }
+  },
+  {
+   "dataset": "hotpotqa (study 5)",
+   "model": "llama3.2:latest",
+   "n": 200,
+   "counts": {
+    "correct->correct": 88,
+    "correct->wrong": 7,
+    "correct->abstain": 2,
+    "wrong->correct": 21,
+    "wrong->wrong": 73,
+    "wrong->abstain": 6,
+    "abstain->correct": 1,
+    "abstain->wrong": 1,
+    "abstain->abstain": 1
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "n": 200,
+   "counts": {
+    "correct->correct": 15,
+    "correct->wrong": 5,
+    "correct->abstain": 12,
+    "wrong->correct": 12,
+    "wrong->wrong": 56,
+    "wrong->abstain": 32,
+    "abstain->correct": 7,
+    "abstain->wrong": 11,
+    "abstain->abstain": 50
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "n": 200,
+   "counts": {
+    "correct->correct": 19,
+    "correct->wrong": 5,
+    "correct->abstain": 6,
+    "wrong->correct": 11,
+    "wrong->wrong": 78,
+    "wrong->abstain": 30,
+    "abstain->correct": 3,
+    "abstain->wrong": 5,
+    "abstain->abstain": 43
+   }
+  }
+ ],
+ "reading": {
+  "descriptive": [
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 0.937143,
+    "accuracy_if_in_prompt": 0.414634,
+    "wrong_with_answer_in_prompt": 0.47,
+    "wrong_without_answer_in_prompt": 0.01
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.671429,
+    "accuracy_if_in_prompt": 0.521277,
+    "wrong_with_answer_in_prompt": 0.234286,
+    "wrong_without_answer_in_prompt": 0.165714
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.827143,
+    "accuracy_if_in_prompt": 0.540587,
+    "wrong_with_answer_in_prompt": 0.305714,
+    "wrong_without_answer_in_prompt": 0.067143
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "answer_in_prompt": 0.872857,
+    "accuracy_if_in_prompt": 0.540098,
+    "wrong_with_answer_in_prompt": 0.348571,
+    "wrong_without_answer_in_prompt": 0.068571
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 0.937143,
+    "accuracy_if_in_prompt": 0.510671,
+    "wrong_with_answer_in_prompt": 0.425714,
+    "wrong_without_answer_in_prompt": 0.028571
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.671429,
+    "accuracy_if_in_prompt": 0.578723,
+    "wrong_with_answer_in_prompt": 0.24,
+    "wrong_without_answer_in_prompt": 0.192857
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.827143,
+    "accuracy_if_in_prompt": 0.613126,
+    "wrong_with_answer_in_prompt": 0.29,
+    "wrong_without_answer_in_prompt": 0.081429
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "answer_in_prompt": 0.865714,
+    "accuracy_if_in_prompt": 0.608911,
+    "wrong_with_answer_in_prompt": 0.315714,
+    "wrong_without_answer_in_prompt": 0.084286
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 0.97,
+    "accuracy_if_in_prompt": 0.396907,
+    "wrong_with_answer_in_prompt": 0.51,
+    "wrong_without_answer_in_prompt": 0.01
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "BM25 top-3",
+    "answer_in_prompt": 0.775,
+    "accuracy_if_in_prompt": 0.451613,
+    "wrong_with_answer_in_prompt": 0.31,
+    "wrong_without_answer_in_prompt": 0.11
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.75,
+    "accuracy_if_in_prompt": 0.453333,
+    "wrong_with_answer_in_prompt": 0.32,
+    "wrong_without_answer_in_prompt": 0.11
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v1",
+    "answer_in_prompt": 0.725,
+    "accuracy_if_in_prompt": 0.42069,
+    "wrong_with_answer_in_prompt": 0.31,
+    "wrong_without_answer_in_prompt": 0.13
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.915,
+    "accuracy_if_in_prompt": 0.480874,
+    "wrong_with_answer_in_prompt": 0.41,
+    "wrong_without_answer_in_prompt": 0.03
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 0.97,
+    "accuracy_if_in_prompt": 0.484536,
+    "wrong_with_answer_in_prompt": 0.485,
+    "wrong_without_answer_in_prompt": 0.015
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "BM25 top-3",
+    "answer_in_prompt": 0.775,
+    "accuracy_if_in_prompt": 0.56129,
+    "wrong_with_answer_in_prompt": 0.3,
+    "wrong_without_answer_in_prompt": 0.15
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.75,
+    "accuracy_if_in_prompt": 0.56,
+    "wrong_with_answer_in_prompt": 0.29,
+    "wrong_without_answer_in_prompt": 0.14
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v1",
+    "answer_in_prompt": 0.725,
+    "accuracy_if_in_prompt": 0.544828,
+    "wrong_with_answer_in_prompt": 0.275,
+    "wrong_without_answer_in_prompt": 0.155
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.915,
+    "accuracy_if_in_prompt": 0.584699,
+    "wrong_with_answer_in_prompt": 0.36,
+    "wrong_without_answer_in_prompt": 0.045
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 1.0,
+    "accuracy_if_in_prompt": 0.16,
+    "wrong_with_answer_in_prompt": 0.5,
+    "wrong_without_answer_in_prompt": 0.0
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.445,
+    "accuracy_if_in_prompt": 0.337079,
+    "wrong_with_answer_in_prompt": 0.175,
+    "wrong_without_answer_in_prompt": 0.215
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.615,
+    "accuracy_if_in_prompt": 0.276423,
+    "wrong_with_answer_in_prompt": 0.215,
+    "wrong_without_answer_in_prompt": 0.145
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "method": "CAS v2 + fallback",
+    "answer_in_prompt": 0.855,
+    "accuracy_if_in_prompt": 0.269006,
+    "wrong_with_answer_in_prompt": 0.38,
+    "wrong_without_answer_in_prompt": 0.145
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Vanilla RAG",
+    "answer_in_prompt": 1.0,
+    "accuracy_if_in_prompt": 0.15,
+    "wrong_with_answer_in_prompt": 0.595,
+    "wrong_without_answer_in_prompt": 0.0
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "Reranker top-3",
+    "answer_in_prompt": 0.445,
+    "accuracy_if_in_prompt": 0.269663,
+    "wrong_with_answer_in_prompt": 0.225,
+    "wrong_without_answer_in_prompt": 0.24
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2",
+    "answer_in_prompt": 0.615,
+    "accuracy_if_in_prompt": 0.260163,
+    "wrong_with_answer_in_prompt": 0.295,
+    "wrong_without_answer_in_prompt": 0.145
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "method": "CAS v2 + fallback",
+    "answer_in_prompt": 0.85,
+    "accuracy_if_in_prompt": 0.223529,
+    "wrong_with_answer_in_prompt": 0.455,
+    "wrong_without_answer_in_prompt": 0.145
+   }
+  ],
+  "same_questions_answer_in_both": [
+   {
+    "dataset": "hotpotqa",
+    "model": "gemma3:latest",
+    "subset": "answer in both prompts",
+    "n": 579,
+    "metric": "accuracy",
+    "mean_diff": 0.112263,
+    "ci_low": 0.075993,
+    "ci_high": 0.146805,
+    "p_value": 9.999000099990002e-05,
+    "p_holm": 0.0005999400059994001
+   },
+   {
+    "dataset": "hotpotqa",
+    "model": "llama3.2:latest",
+    "subset": "answer in both prompts",
+    "n": 579,
+    "metric": "accuracy",
+    "mean_diff": 0.086356,
+    "ci_low": 0.051813,
+    "ci_high": 0.120898,
+    "p_value": 9.999000099990002e-05,
+    "p_holm": 0.0005999400059994001
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "gemma3:latest",
+    "subset": "answer in both prompts",
+    "n": 183,
+    "metric": "accuracy",
+    "mean_diff": 0.065574,
+    "ci_low": 0.005464,
+    "ci_high": 0.125683,
+    "p_value": 0.0514948505149485,
+    "p_holm": 0.1544845515448455
+   },
+   {
+    "dataset": "hotpotqa (study 5)",
+    "model": "llama3.2:latest",
+    "subset": "answer in both prompts",
+    "n": 183,
+    "metric": "accuracy",
+    "mean_diff": 0.092896,
+    "ci_low": 0.038251,
+    "ci_high": 0.147541,
+    "p_value": 0.0017998200179982,
+    "p_holm": 0.0071992800719928
+   },
+   {
+    "dataset": "musique",
+    "model": "gemma3:latest",
+    "subset": "answer in both prompts",
+    "n": 123,
+    "metric": "accuracy",
+    "mean_diff": 0.089431,
+    "ci_low": 0.00813,
+    "ci_high": 0.170732,
+    "p_value": 0.0524947505249475,
+    "p_holm": 0.1544845515448455
+   },
+   {
+    "dataset": "musique",
+    "model": "llama3.2:latest",
+    "subset": "answer in both prompts",
+    "n": 123,
+    "metric": "accuracy",
+    "mean_diff": 0.04878,
+    "ci_low": -0.02439,
+    "ci_high": 0.121951,
+    "p_value": 0.26617338266173385,
+    "p_holm": 0.26617338266173385
+   }
+  ]
+ },
+ "by_type": [
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "type": "bridge",
+   "n": 555,
+   "Vanilla RAG": {
+    "accuracy": 0.425225,
+    "wrong": 0.511712
+   },
+   "Reranker top-3": {
+    "accuracy": 0.378378,
+    "wrong": 0.434234
+   },
+   "CAS v2": {
+    "accuracy": 0.49009,
+    "wrong": 0.4
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.517117,
+    "wrong": 0.441441
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.064865,
+    "ci_low": 0.028829,
+    "ci_high": 0.100901
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.111712,
+    "ci_low": -0.147748,
+    "ci_high": -0.073874
+   }
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "gemma3:latest",
+   "type": "comparison",
+   "n": 145,
+   "Vanilla RAG": {
+    "accuracy": 0.358621,
+    "wrong": 0.358621
+   },
+   "Reranker top-3": {
+    "accuracy": 0.337931,
+    "wrong": 0.268966
+   },
+   "CAS v2": {
+    "accuracy": 0.393103,
+    "wrong": 0.268966
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.448276,
+    "wrong": 0.324138
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.034483,
+    "ci_low": -0.041379,
+    "ci_high": 0.110345
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.089655,
+    "ci_low": -0.165517,
+    "ci_high": -0.02069
+   }
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "type": "bridge",
+   "n": 555,
+   "Vanilla RAG": {
+    "accuracy": 0.513514,
+    "wrong": 0.452252
+   },
+   "Reranker top-3": {
+    "accuracy": 0.410811,
+    "wrong": 0.452252
+   },
+   "CAS v2": {
+    "accuracy": 0.542342,
+    "wrong": 0.374775
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.567568,
+    "wrong": 0.405405
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.028829,
+    "ci_low": -0.009009,
+    "ci_high": 0.064865
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.077477,
+    "ci_low": -0.113514,
+    "ci_high": -0.03964
+   }
+  },
+  {
+   "dataset": "hotpotqa",
+   "model": "llama3.2:latest",
+   "type": "comparison",
+   "n": 145,
+   "Vanilla RAG": {
+    "accuracy": 0.482759,
+    "wrong": 0.462069
+   },
+   "Reranker top-3": {
+    "accuracy": 0.558621,
+    "wrong": 0.358621
+   },
+   "CAS v2": {
+    "accuracy": 0.6,
+    "wrong": 0.358621
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.6,
+    "wrong": 0.37931
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.117241,
+    "ci_low": 0.048276,
+    "ci_high": 0.186207
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.103448,
+    "ci_low": -0.165517,
+    "ci_high": -0.041379
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "type": "2 hops",
+   "n": 95,
+   "Vanilla RAG": {
+    "accuracy": 0.147368,
+    "wrong": 0.515789
+   },
+   "Reranker top-3": {
+    "accuracy": 0.168421,
+    "wrong": 0.505263
+   },
+   "CAS v2": {
+    "accuracy": 0.189474,
+    "wrong": 0.4
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.231579,
+    "wrong": 0.536842
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.042105,
+    "ci_low": -0.042105,
+    "ci_high": 0.126316
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.115789,
+    "ci_low": -0.221053,
+    "ci_high": -0.010526
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "type": "3 hops",
+   "n": 66,
+   "Vanilla RAG": {
+    "accuracy": 0.212121,
+    "wrong": 0.515152
+   },
+   "Reranker top-3": {
+    "accuracy": 0.166667,
+    "wrong": 0.348485
+   },
+   "CAS v2": {
+    "accuracy": 0.181818,
+    "wrong": 0.363636
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.257576,
+    "wrong": 0.560606
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": -0.030303,
+    "ci_low": -0.136364,
+    "ci_high": 0.075758
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.151515,
+    "ci_low": -0.287879,
+    "ci_high": -0.015152
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "gemma3:latest",
+   "type": "4 hops",
+   "n": 39,
+   "Vanilla RAG": {
+    "accuracy": 0.102564,
+    "wrong": 0.435897
+   },
+   "Reranker top-3": {
+    "accuracy": 0.076923,
+    "wrong": 0.179487
+   },
+   "CAS v2": {
+    "accuracy": 0.102564,
+    "wrong": 0.25641
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.179487,
+    "wrong": 0.435897
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.0,
+    "ci_low": -0.153846,
+    "ci_high": 0.153846
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.179487,
+    "ci_low": -0.333333,
+    "ci_high": -0.025641
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "type": "2 hops",
+   "n": 95,
+   "Vanilla RAG": {
+    "accuracy": 0.168421,
+    "wrong": 0.642105
+   },
+   "Reranker top-3": {
+    "accuracy": 0.115789,
+    "wrong": 0.505263
+   },
+   "CAS v2": {
+    "accuracy": 0.178947,
+    "wrong": 0.452632
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.231579,
+    "wrong": 0.610526
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.010526,
+    "ci_low": -0.063158,
+    "ci_high": 0.084211
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.189474,
+    "ci_low": -0.284211,
+    "ci_high": -0.094737
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "type": "3 hops",
+   "n": 66,
+   "Vanilla RAG": {
+    "accuracy": 0.136364,
+    "wrong": 0.575758
+   },
+   "Reranker top-3": {
+    "accuracy": 0.151515,
+    "wrong": 0.484848
+   },
+   "CAS v2": {
+    "accuracy": 0.166667,
+    "wrong": 0.454545
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.181818,
+    "wrong": 0.575758
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.030303,
+    "ci_low": -0.060606,
+    "ci_high": 0.121212
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.121212,
+    "ci_low": -0.242424,
+    "ci_high": -0.014773
+   }
+  },
+  {
+   "dataset": "musique",
+   "model": "llama3.2:latest",
+   "type": "4 hops",
+   "n": 39,
+   "Vanilla RAG": {
+    "accuracy": 0.128205,
+    "wrong": 0.512821
+   },
+   "Reranker top-3": {
+    "accuracy": 0.076923,
+    "wrong": 0.333333
+   },
+   "CAS v2": {
+    "accuracy": 0.128205,
+    "wrong": 0.384615
+   },
+   "CAS v2 + fallback": {
+    "accuracy": 0.128205,
+    "wrong": 0.615385
+   },
+   "v2_minus_vanilla_accuracy": {
+    "mean_diff": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.0
+   },
+   "v2_minus_vanilla_wrong": {
+    "mean_diff": -0.128205,
+    "ci_low": -0.282051,
+    "ci_high": 0.025641
+   }
+  }
+ ]
+}
