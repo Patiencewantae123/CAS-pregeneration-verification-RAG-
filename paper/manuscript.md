@@ -914,6 +914,8 @@ The results raise six questions:
 - Did fixing the diagnosed causes work (Section 6.9)?
 - Where does the fixed method work, and where does it stop (Section 6.10)?
 
+Fig. 11 places every pre-registered test of CAS against Vanilla RAG side by side. CAS v1 never beat Vanilla RAG significantly, in accuracy or in poison adoption. CAS v2 did: in accuracy on fresh HotpotQA questions (study 6), and in adoption under both attacks without metadata (study 5). The figure also shows v2's accuracy cost under the copy attack and its failure to raise accuracy on MuSiQue.
+
 Sections 6.1, 6.2, 6.4 and 6.5 use exploratory analyses of the cached study 3 outputs, chosen after the results were known (`evaluation/run_discussion_analyses.py`, output `results/discussion_analyses.json`). They were not pre-registered. Section 6.9 likewise uses a post hoc analysis of study 5's selections (`evaluation/run_study5_mechanism.py`, output `results/study5_mechanism.json`), and Section 6.10 interprets study 6 with the exploratory ablation of Section 5.9. These analyses help explain the confirmatory results but do not replace them, and each would need its own confirmatory test.
 
 ### 6.1 Why better evidence did not give better answers
@@ -1273,6 +1275,7 @@ All code, pre-registrations, benchmarks, cached NLI and LLM outputs, per-questio
 | Fig. 8 | Detector accuracy vs false alarms vs cost | `fig14_detector_tradeoff` |
 | Fig. 9 | Study 5: CAS v2 on fresh questions | `fig17_study5` |
 | Fig. 10 | Study 6: CAS v2 on 700 HotpotQA and 200 MuSiQue questions | `fig18_study6` |
+| Fig. 11 | Every pre-registered test of CAS against Vanilla RAG, studies 1–6 | `fig19_evidence_trail` |
 
 ## References
 

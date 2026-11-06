@@ -105,5 +105,15 @@ for _, row in pd.read_csv(os.path.join(HERE, "data", "fig18_study6.csv"), keep_d
     compare("fig18_study6", row, desc[(row["dataset"], row["model"], row["method"], row["metric"])],
             ("mean", "ci_low", "ci_high"))
 
+SRC = {}
+for _, row in pd.read_csv(os.path.join(HERE, "data", "fig19_evidence_trail.csv"), keep_default_na=False).iterrows():
+    if row["file"] not in SRC:
+        SRC[row["file"]] = json.load(open(os.path.join(RES, f"{row['file']}.json"), encoding="utf-8"))
+    t = SRC[row["file"]][row["list"]][int(row["index"])]
+    if (t["model"], t["comparator"]) != (row["model"], row["comparator"]):
+        bad += 1
+        print("MISMATCH fig19_evidence_trail: wrong test", dict(row))
+    compare("fig19_evidence_trail", row, t, ("mean_diff", "ci_low", "ci_high", "p_holm"))
+
 print(f"\nTraceability check: {'PASS' if bad == 0 else f'{bad} problems'} ({len(scripts)} figures)")
 sys.exit(1 if bad else 0)

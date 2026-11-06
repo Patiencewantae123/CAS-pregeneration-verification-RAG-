@@ -23,6 +23,8 @@ py evaluation/run_study6.py            # study 6: 700 HotpotQA + 200 MuSiQue, 2 
                                        # plan to be committed and stops if Ollama is not 0.40.13
 py evaluation/run_v2_ablation.py       # exploratory: CAS v2 with each step switched off (selection level, no LLM)
 py evaluation/run_extra_analyses.py    # exploratory: EM/F1, abstention-aware scores, outcome transitions, by type (no LLM)
+py evaluation/run_study7.py --smoke    # study 7 smoke test: 3 study 5 questions, memory and timing only
+py evaluation/run_study7.py            # study 7 (pre-registered; waits until its plan is committed; not yet run)
 py evaluation/make_paper_tables.py     # manuscript Tables 2-5 and 11-14, written to paper/main_tables.md and paper/extra_tables.md
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
@@ -72,6 +74,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
    No pre-registered decision changed. The as-run files are archived in `evaluation/results/as_run_2026-11-03/`. Details and the impact on every test are in `evaluation/DEVIATIONS.md`.
 7. **CAS v2 and study 5 (2026-11-04).** A redesign that addresses the four measured causes of CAS's failures, tested in a fifth pre-registered study on fresh questions (`evaluation/PREREGISTRATION_study5.md`; Fig. 17). Studies 1–4 and their figures are unchanged.
 8. **Study 6 (2026-11-05).** A powered, pre-registered test of the frozen CAS v2 on 700 fresh HotpotQA and 200 MuSiQue questions, with an abstention-fallback arm (Fig. 18). Fig. 0 draws the two pipelines.
+9. **Summary figure and study 7 plan (2026-11-06).** Fig. 19 places every pre-registered test of CAS against Vanilla RAG, studies 1–6, side by side. Study 7 (`evaluation/PREREGISTRATION_study7.md`, `run_study7.py`) tests CAS v2 with Llama 3.1 8B on 1,000 fresh HotpotQA questions. **It has not been run**: it starts only after its plan is committed.
 
 ## Figure → data mapping
 
@@ -96,6 +99,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 0 | `fig00_pipeline.py` | `data/fig00_*.csv` (the boxes) | schematic of `evaluation/run_evaluation.py` and `evaluation/cas_v2.py` |
 | 17 | `fig17_study5.py` | `data/fig17_*.csv` | `study5_summary.json` → `descriptive` (from `evaluation/run_study5.py`) |
 | 18 | `fig18_study6.py` | `data/fig18_*.csv` | `study6_summary.json` → `descriptive` (from `evaluation/run_study6.py`) |
+| 19 | `fig19_evidence_trail.py` | `data/fig19_*.csv` (file, list and index of every test) | `poison_summary.json`, `poison2_summary.json`, `clean500_summary.json`, `study5_summary.json` → `confirmatory` (and study 5 `exploratory` for accuracy under attack); `study6_summary.json` → `primary` |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -339,6 +343,18 @@ Every table cell is in `tables.md` (Tables 1–10).
   - Evidence: every supporting paragraph kept for 40.0% of questions; F1 below the reranker's (0.447 vs 0.509).
   - Accuracy: no difference from Vanilla RAG (+0.015, +0.010).
   - Wrong answers fell from 0.595 to 0.440 and from 0.500 to 0.360 (Holm p < 0.001 and 0.003). This hypothesis was predicted *not* to be supported.
+
+**Fig. 19 (manuscript Fig. 11). Every pre-registered test of CAS against Vanilla RAG, studies 1–6** (`fig19_evidence_trail.py`).
+- **Setup.**
+  - Each row is CAS minus Vanilla RAG on the same questions, with a 95% bootstrap CI. Circles: Llama 3.2 3B; squares: Gemma 3 4B.
+  - Filled markers: Holm p < 0.05 within the study's own family (studies 1 and 2: 20 tests each; study 3: 9; study 5: 20; study 6, primary family: 8).
+  - Grey: CAS v1, conflict-preserving (studies 1–3). Green: CAS v2 (studies 5 and 6).
+- **(a) Accuracy.**
+  - CAS v1 was never significantly more accurate than Vanilla RAG, and significantly less accurate in two of ten tests.
+  - On clean retrieval, every v2 estimate was positive, but only study 6's HotpotQA gains (n = 700) were significant.
+  - Rows marked * come from study 5's exploratory family, because study 5 pre-registered adoption, not accuracy, under attack. Under the copy attack, v2 lost 0.173 and 0.140 in accuracy.
+- **(b) Poison adoption.** CAS v1 did not reduce adoption in any test. v2 reduced it under both attacks without metadata.
+- **(c) Wrong answers on clean retrieval.** v2 reduced them in all six tests, significantly in five.
 
 **Fig. 0 (manuscript Fig. 1). The CAS v1 and CAS v2 pipelines** (schematic, `fig00_pipeline.py`). Each v2 step is labelled with the measured cause of v1's failures that it addresses (C1–C4). The dashed arrow is the abstention fallback.
 
