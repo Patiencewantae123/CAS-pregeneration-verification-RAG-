@@ -34,3 +34,87 @@
 [12:22] waiting for PREREGISTRATION_study6.md to be committed
 [12:23] waiting for PREREGISTRATION_study6.md to be committed
 [12:24] waiting for PREREGISTRATION_study6.md to be committed
+plan committed in a5cc6153 at 2026-11-05T12:25:01+09:00
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+hotpotqa 700 (pool 7405 minus 1330 used), musique 200 -> C:\Users\chosun\Downloads\mty\my\New folder\CAS-pregeneration-verification-RAG-\data\study6.json
+Loading weights:   0%|          | 0/105 [00:00<?, ?it/s]Loading weights: 100%|██████████| 105/105 [00:00<00:00, 3151.63it/s]
+[selection] hotpotqa done
+[selection] musique done
+[generation] llama3.2:latest hotpotqa 50, elapsed 13.3 min
+[generation] llama3.2:latest hotpotqa 100, elapsed 26.3 min
+[generation] llama3.2:latest hotpotqa 150, elapsed 39.0 min
+[generation] llama3.2:latest hotpotqa 200, elapsed 51.4 min
+[generation] llama3.2:latest hotpotqa 250, elapsed 63.9 min
+[generation] llama3.2:latest hotpotqa 300, elapsed 76.7 min
+[generation] llama3.2:latest hotpotqa 350, elapsed 88.9 min
+[generation] llama3.2:latest hotpotqa 400, elapsed 101.9 min
+[generation] llama3.2:latest hotpotqa 450, elapsed 113.9 min
+[generation] llama3.2:latest hotpotqa 500, elapsed 126.7 min
+[generation] llama3.2:latest hotpotqa 550, elapsed 139.3 min
+[generation] llama3.2:latest hotpotqa 600, elapsed 152.1 min
+[generation] llama3.2:latest hotpotqa 650, elapsed 164.1 min
+[generation] llama3.2:latest hotpotqa 700, elapsed 176.4 min
+[generation] llama3.2:latest musique 50, elapsed 201.5 min
+[generation] llama3.2:latest musique 100, elapsed 227.0 min
+[generation] llama3.2:latest musique 150, elapsed 250.2 min
+[generation] llama3.2:latest musique 200, elapsed 277.5 min
+[generation] gemma3:latest hotpotqa 50, elapsed 294.8 min
+[generation] gemma3:latest hotpotqa 100, elapsed 311.7 min
+[generation] gemma3:latest hotpotqa 150, elapsed 327.6 min
+[generation] gemma3:latest hotpotqa 200, elapsed 344.2 min
+[generation] gemma3:latest hotpotqa 250, elapsed 360.2 min
+[generation] gemma3:latest hotpotqa 300, elapsed 377.1 min
+[generation] gemma3:latest hotpotqa 350, elapsed 393.0 min
+[generation] gemma3:latest hotpotqa 400, elapsed 409.9 min
+[generation] gemma3:latest hotpotqa 450, elapsed 425.4 min
+[generation] gemma3:latest hotpotqa 500, elapsed 442.6 min
+[generation] gemma3:latest hotpotqa 550, elapsed 460.4 min
+[generation] gemma3:latest hotpotqa 600, elapsed 477.6 min
+[generation] gemma3:latest hotpotqa 650, elapsed 494.2 min
+[generation] gemma3:latest hotpotqa 700, elapsed 511.7 min
+[generation] gemma3:latest musique 50, elapsed 541.3 min
+[generation] gemma3:latest musique 100, elapsed 570.9 min
+[generation] gemma3:latest musique 150, elapsed 598.2 min
+[generation] gemma3:latest musique 200, elapsed 630.1 min
+
+Primary family (CAS v2 minus comparator; Holm over 8 tests)
+  H1 hotpotqa llama3.2:latest  CAS v2             vs Vanilla RAG    accuracy +0.047 [+0.014, +0.080] holm=0.0207
+  H2 hotpotqa llama3.2:latest  CAS v2             vs Vanilla RAG    wrong    -0.083 [-0.116, -0.051] holm=0.0008
+  H1 hotpotqa gemma3:latest    CAS v2             vs Vanilla RAG    accuracy +0.059 [+0.026, +0.091] holm=0.0048
+  H2 hotpotqa gemma3:latest    CAS v2             vs Vanilla RAG    wrong    -0.107 [-0.139, -0.076] holm=0.0008
+  H1 musique  llama3.2:latest  CAS v2             vs Vanilla RAG    accuracy +0.015 [-0.035, +0.070] holm=1.0000
+  H2 musique  llama3.2:latest  CAS v2             vs Vanilla RAG    wrong    -0.155 [-0.225, -0.090] holm=0.0008
+  H1 musique  gemma3:latest    CAS v2             vs Vanilla RAG    accuracy +0.010 [-0.050, +0.065] holm=1.0000
+  H2 musique  gemma3:latest    CAS v2             vs Vanilla RAG    wrong    -0.140 [-0.215, -0.070] holm=0.0030
+
+Secondary family (CAS v2 minus comparator; Holm over 12 tests)
+  H4 hotpotqa llama3.2:latest  CAS v2             vs Reranker top-3 accuracy +0.113 [+0.080, +0.144] holm=0.0012
+  H6 hotpotqa llama3.2:latest  CAS v2 + fallback  vs Vanilla RAG    accuracy +0.067 [+0.036, +0.099] holm=0.0012
+  H4 hotpotqa gemma3:latest    CAS v2             vs Reranker top-3 accuracy +0.100 [+0.067, +0.131] holm=0.0012
+  H6 hotpotqa gemma3:latest    CAS v2 + fallback  vs Vanilla RAG    accuracy +0.091 [+0.061, +0.121] holm=0.0012
+  H5 hotpotqa -                CAS v2             vs Reranker top-3 f1       +0.089 [+0.069, +0.109] holm=0.0012
+  H5 hotpotqa -                CAS v2             vs BM25 top-3     f1       +0.126 [+0.109, +0.144] holm=0.0012
+  H4 musique  llama3.2:latest  CAS v2             vs Reranker top-3 accuracy +0.045 [-0.005, +0.095] holm=0.2424
+  H6 musique  llama3.2:latest  CAS v2 + fallback  vs Vanilla RAG    accuracy +0.045 [+0.000, +0.090] holm=0.2424
+  H4 musique  gemma3:latest    CAS v2             vs Reranker top-3 accuracy +0.020 [-0.035, +0.075] holm=0.5924
+  H6 musique  gemma3:latest    CAS v2 + fallback  vs Vanilla RAG    accuracy +0.070 [+0.025, +0.115] holm=0.0264
+  H5 musique  -                CAS v2             vs Reranker top-3 f1       -0.062 [-0.097, -0.028] holm=0.0018
+  H5 musique  -                CAS v2             vs BM25 top-3     f1       +0.042 [+0.015, +0.067] holm=0.0145
+  H3 hotpotqa llama3.2:latest  accuracy vs Vanilla RAG +0.047 [+0.014, +0.080] holds=True
+  H3 hotpotqa gemma3:latest    accuracy vs Vanilla RAG +0.059 [+0.026, +0.091] holds=True
+  H3 musique  llama3.2:latest  accuracy vs Vanilla RAG +0.015 [-0.035, +0.070] holds=True
+  H3 musique  gemma3:latest    accuracy vs Vanilla RAG +0.010 [-0.050, +0.065] holds=False
+
+Pre-registered decisions
+  H1 (HotpotQA): v2 is more accurate than Vanilla RAG: supported
+  H2 (HotpotQA): v2 gives fewer wrong answers than Vanilla RAG: supported
+  H4 (HotpotQA): v2 is more accurate than Reranker top-3: supported
+  H5 (HotpotQA): v2 selects better evidence than Reranker top-3 and BM25 top-3: supported
+  H6 (HotpotQA): v2 + fallback is more accurate than Vanilla RAG: supported
+  H3 (HotpotQA): v2 is non-inferior to Vanilla RAG in accuracy (margin 0.05): supported
+  H1 (MuSiQue): v2 is more accurate than Vanilla RAG: not supported
+  H2 (MuSiQue): v2 gives fewer wrong answers than Vanilla RAG: supported
+  H4 (MuSiQue): v2 is more accurate than Reranker top-3: not supported
+  H5 (MuSiQue): v2 selects better evidence than Reranker top-3 and BM25 top-3: not supported
+  H6 (MuSiQue): v2 + fallback is more accurate than Vanilla RAG: not supported
+  H3 (MuSiQue): v2 is non-inferior to Vanilla RAG in accuracy (margin 0.05): not supported
