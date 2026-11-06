@@ -7,10 +7,17 @@ in them is typed by hand.
   C  study 5 poisoning: adoption and accuracy under the copy and written attacks (n = 150)
   D  cost per question: selection time, prompt tokens, generation time (studies 5 and 6)
 
-Numbered as in the manuscript (Tables 2-5). Markers: † = significant in the pre-registered test against Vanilla RAG (Holm p < 0.05); bold = best in the column.
+and the tables of Section 5.10 (exploratory, post hoc), from results/extra_analyses.json (run_extra_analyses.py):
+
+  11  exact match and token F1, studies 5 and 6
+  12  abstention-aware scores: coverage, selective accuracy, net score (correct - wrong)
+  13  how each question's outcome moved from Vanilla RAG to CAS v2
+  14  CAS v2 minus Vanilla RAG by question type
+
+Numbered as in the manuscript (Tables 2-5 and 11-14). Markers: † = significant in the pre-registered test against Vanilla RAG (Holm p < 0.05); bold = best in the column.
 
 Usage:  py evaluation/make_paper_tables.py
-Output: paper/main_tables.md
+Output: paper/main_tables.md (Tables 2-5) and paper/extra_tables.md (Tables 11-14)
 """
 import json
 import os
@@ -145,4 +152,117 @@ out.append("\n".join(lines))
 path = os.path.join(ROOT, "paper", "main_tables.md")
 with open(path, "w", encoding="utf-8") as f:
     f.write("\n".join(out) + "\n")
-print(open(path, encoding="utf-8").read())
+print("wrote", path)
+
+
+# ================================================================================================================
+# Section 5.10 (exploratory, post hoc): Tables 11-14. Marker: * = Holm p < 0.05 within the exploratory family.
+# ================================================================================================================
+X = json.load(open(os.path.join(OUT_RESULTS, "extra_analyses.json"), encoding="utf-8"))
+NAME = {"hotpotqa": "HotpotQA, study 6 (n = 700)", "musique": "MuSiQue, study 6 (n = 200)",
+        "hotpotqa (study 5)": "HotpotQA, study 5 (n = 200)"}
+MINUS = "−"
+
+
+def sg(x):
+    """Signed number with 3 decimals and a true minus sign, as in the manuscript's test tables."""
+    x = round(x, 3)
+    return "0.000" if x == 0 else ("+" if x > 0 else MINUS) + f"{abs(x):.3f}"
+
+
+def ci(t):
+    return f"{sg(t['mean_diff'])} [{sg(t['ci_low'])}, {sg(t['ci_high'])}]"
+
+
+def star(cell, marked):
+    """Put '*' after the number, inside any bold markers."""
+    if not marked:
+        return cell
+    return cell[:-2] + "*" + "**" if cell.endswith("**") else cell + "*"
+
+
+ext = []
+S6_METHODS = ["Vanilla RAG", "Reranker top-3", "CAS v2", "CAS v2 + fallback"]
+
+# 11. Exact match and token F1
+qd = {(d["dataset"], d["model"], d["method"], d["metric"]): d["mean"] for d in X["qa_metrics"]["descriptive"]}
+qt = {(t["dataset"], t["model"], t["method"], t["metric"]): t["p_holm"] < 0.05
+      for fam in X["qa_metrics"]["tests"].values() for t in fam}
+lines = ["| Data | Method | Llama 3.2 EM ↑ | Llama 3.2 F1 ↑ | Gemma 3 EM ↑ | Gemma 3 F1 ↑ |", "|---|---|---|---|---|---|"]
+for ds, ms in (("hotpotqa", S6_METHODS), ("musique", S6_METHODS),
+               ("hotpotqa (study 5)", ["Vanilla RAG", "BM25 top-3", "Reranker top-3", "CAS v1", "CAS v2"])):
+    cols = []
+    for model, _ in MODELS:
+        for metric in ("em", "f1"):
+            col = cells([qd[(ds, model, m, metric)] for m in ms], "max", [False] * len(ms))
+            cols.append([star(c, qt.get((ds, model, m, metric), False)) for c, m in zip(col, ms)])
+    for i, m in enumerate(ms):
+        lines.append("| " + " | ".join([NAME[ds] if i == 0 else "", m] + [c[i] for c in cols]) + " |")
+ext.append("**Table 11. Standard answer metrics: exact match (EM) and token F1** (SQuAD normalisation, best over the "
+           "gold aliases; exploratory). * CAS v2 or v2 + fallback differs from Vanilla RAG on the same questions "
+           "(paired sign-flip test, Holm p < 0.05 within each study); bold = best within each block.\n")
+ext.append("\n".join(lines))
+
+# 12. Abstention-aware scores
+sd = {(d["dataset"], d["model"], d["method"]): d for d in X["selective"]["descriptive"]}
+nd = {(t["dataset"], t["model"], t["method"]): t["p_holm"] < 0.05 for t in X["net_score_c1"]}
+lines = ["| Data | Method | Llama 3.2 coverage | Llama 3.2 selective acc. ↑ | Llama 3.2 net score ↑ "
+         "| Gemma 3 coverage | Gemma 3 selective acc. ↑ | Gemma 3 net score ↑ |", "|---|---|---|---|---|---|---|---|"]
+for ds in ("hotpotqa", "musique"):
+    for i, m in enumerate(S6_METHODS):
+        row = []
+        for model, _ in MODELS:
+            d = sd[(ds, model, m)]
+            score = d6[(ds, model, m, "accuracy")] - d6[(ds, model, m, "wrong")]
+            row += [f"{d['coverage']:.3f}", f"{d['selective_accuracy']:.3f}",
+                    sg(score) + ("*" if nd.get((ds, model, m), False) else "")]
+        lines.append("| " + " | ".join([NAME[ds] if i == 0 else "", m] + row) + " |")
+ext.append("\n\n**Table 12. Abstention-aware scores** (study 6; exploratory). Coverage = share of questions answered; "
+           "selective accuracy = accuracy among answered questions; net score = correct " + MINUS + " wrong (a correct "
+           "answer scores +1, an abstention 0, a wrong answer " + MINUS + "1). * net score differs from Vanilla RAG's "
+           "(paired sign-flip test, Holm p < 0.05 over the 10 comparisons with Vanilla RAG in studies 5 and 6).\n")
+ext.append("\n".join(lines))
+
+# 13. Outcome transitions Vanilla RAG -> CAS v2
+tg = {(d["dataset"], d["model"]): d for d in X["targeting"]}
+lines = ["| Data | Model | Wrong → correct | Correct → wrong | Wrong → abstain | Correct → abstain "
+         "| Abstain → correct / wrong | Net change in correct | Vanilla RAG accuracy on v2's new abstentions "
+         "| Vanilla RAG accuracy where it answered |", "|---|---|---|---|---|---|---|---|---|---|"]
+DS_ORDER = ["hotpotqa", "musique", "hotpotqa (study 5)"]
+MODEL_ORDER = [m for m, _ in MODELS]
+for d in sorted(X["transitions"], key=lambda d: (DS_ORDER.index(d["dataset"]), MODEL_ORDER.index(d["model"]))):
+    c, t = d["counts"], tg[(d["dataset"], d["model"])]
+    net_c = c["wrong->correct"] + c["abstain->correct"] - c["correct->wrong"] - c["correct->abstain"]
+    net_s = ("+" if net_c > 0 else MINUS if net_c < 0 else "") + str(abs(net_c))
+    label = NAME[d["dataset"]] if d["model"] == MODEL_ORDER[0] else ""
+    lines.append(f"| {label} | {dict(MODELS)[d['model']]} | {c['wrong->correct']} | "
+                 f"{c['correct->wrong']} | {c['wrong->abstain']} | {c['correct->abstain']} | "
+                 f"{c['abstain->correct']} / {c['abstain->wrong']} | {net_s} | "
+                 f"{t['vanilla_accuracy_on_them']:.3f} (n = {t['n_extra_abstentions']}) | "
+                 f"{t['vanilla_accuracy_where_it_answered']:.3f} |")
+ext.append("\n\n**Table 13. How each question's outcome moved from Vanilla RAG to CAS v2** (number of questions; "
+           "exploratory). The last two columns ask whether v2's new abstentions fell on questions that Vanilla RAG got "
+           "wrong. They compare Vanilla RAG's accuracy on the questions where v2 abstained and Vanilla RAG answered with "
+           "its accuracy on every question it answered.\n")
+ext.append("\n".join(lines))
+
+# 14. By question type
+bt = {(d["dataset"], d["model"], d["type"]): d for d in X["by_type"]}
+order = [("hotpotqa", "bridge"), ("hotpotqa", "comparison"), ("musique", "2 hops"), ("musique", "3 hops"),
+         ("musique", "4 hops")]
+lines = ["| Data | Question type | n | Llama 3.2 Δ accuracy | Llama 3.2 Δ wrong | Gemma 3 Δ accuracy | Gemma 3 Δ wrong |",
+         "|---|---|---|---|---|---|---|"]
+for k, (ds, ty) in enumerate(order):
+    rec = [bt[(ds, model, ty)] for model, _ in MODELS]
+    label = ("HotpotQA" if ds == "hotpotqa" else "MuSiQue") if k == 0 or order[k - 1][0] != ds else ""
+    lines.append(f"| {label} | {ty} | {rec[0]['n']} | "
+                 + " | ".join(ci(r[f"v2_minus_vanilla_{m}"]) for r in rec for m in ("accuracy", "wrong")) + " |")
+ext.append("\n\n**Table 14. CAS v2 minus Vanilla RAG by question type** (study 6; same questions; 95% bootstrap CIs; "
+           "exploratory, not corrected for multiplicity). The interval [0.000, 0.000] for Llama 3.2 on 4-hop questions "
+           "means that the two methods answered exactly the same questions correctly.\n")
+ext.append("\n".join(lines))
+
+path = os.path.join(ROOT, "paper", "extra_tables.md")
+with open(path, "w", encoding="utf-8") as f:
+    f.write("\n".join(ext) + "\n")
+print("wrote", path)
