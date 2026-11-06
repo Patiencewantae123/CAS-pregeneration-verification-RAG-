@@ -1,0 +1,156 @@
+{
+ "note": "Exploratory, selection level; chosen after studies 5 and 6 were analysed.",
+ "clean": [
+  {
+   "data": "study 6 HotpotQA",
+   "variant": "CAS v2",
+   "f1": 0.7194607297464441,
+   "full_evidence": 0.8628571428571429,
+   "n_selected": 3.4057142857142857
+  },
+  {
+   "data": "study 6 HotpotQA",
+   "variant": "without links",
+   "f1": 0.6273832199546484,
+   "full_evidence": 0.4228571428571429,
+   "n_selected": 2.61
+  },
+  {
+   "data": "study 6 HotpotQA",
+   "variant": "without quarantine",
+   "f1": 0.7234656771799629,
+   "full_evidence": 0.8771428571428571,
+   "n_selected": 3.4657142857142857
+  },
+  {
+   "data": "study 6 HotpotQA",
+   "variant": "trust threshold only",
+   "f1": 0.6306995464852608,
+   "full_evidence": 0.42857142857142855,
+   "n_selected": 2.6485714285714286
+  },
+  {
+   "data": "study 6 MuSiQue",
+   "variant": "CAS v2",
+   "f1": 0.44747803276015347,
+   "full_evidence": 0.4,
+   "n_selected": 6.295
+  },
+  {
+   "data": "study 6 MuSiQue",
+   "variant": "without links",
+   "f1": 0.4077637917637918,
+   "full_evidence": 0.17,
+   "n_selected": 5.085
+  },
+  {
+   "data": "study 6 MuSiQue",
+   "variant": "without quarantine",
+   "f1": 0.44183589711801785,
+   "full_evidence": 0.4,
+   "n_selected": 6.43
+  },
+  {
+   "data": "study 6 MuSiQue",
+   "variant": "trust threshold only",
+   "f1": 0.40308846708846713,
+   "full_evidence": 0.17,
+   "n_selected": 5.18
+  },
+  {
+   "data": "study 5 HotpotQA",
+   "variant": "CAS v2",
+   "f1": 0.7435674603174605,
+   "full_evidence": 0.91,
+   "n_selected": 3.415
+  },
+  {
+   "data": "study 5 HotpotQA",
+   "variant": "without links",
+   "f1": 0.6584325396825398,
+   "full_evidence": 0.475,
+   "n_selected": 2.62
+  },
+  {
+   "data": "study 5 HotpotQA",
+   "variant": "without quarantine",
+   "f1": 0.7391150793650794,
+   "full_evidence": 0.925,
+   "n_selected": 3.5
+  },
+  {
+   "data": "study 5 HotpotQA",
+   "variant": "trust threshold only",
+   "f1": 0.6545992063492063,
+   "full_evidence": 0.48,
+   "n_selected": 2.665
+  }
+ ],
+ "poison": [
+  {
+   "attack": "copy",
+   "condition": "A",
+   "variant": "CAS v2",
+   "poison_in_prompt": 0.006666666666666667,
+   "poison_passages": 0.006666666666666667,
+   "true_passage_kept": 0.0
+  },
+  {
+   "attack": "copy",
+   "condition": "A",
+   "variant": "without links",
+   "poison_in_prompt": 0.0,
+   "poison_passages": 0.0,
+   "true_passage_kept": 0.0
+  },
+  {
+   "attack": "copy",
+   "condition": "A",
+   "variant": "without quarantine",
+   "poison_in_prompt": 1.0,
+   "poison_passages": 2.933333333333333,
+   "true_passage_kept": 0.9666666666666667
+  },
+  {
+   "attack": "copy",
+   "condition": "A",
+   "variant": "trust threshold only",
+   "poison_in_prompt": 1.0,
+   "poison_passages": 1.42,
+   "true_passage_kept": 0.22
+  },
+  {
+   "attack": "written",
+   "condition": "A",
+   "variant": "CAS v2",
+   "poison_in_prompt": 0.9,
+   "poison_passages": 2.46,
+   "true_passage_kept": 0.5333333333333333
+  },
+  {
+   "attack": "written",
+   "condition": "A",
+   "variant": "without links",
+   "poison_in_prompt": 0.9,
+   "poison_passages": 2.46,
+   "true_passage_kept": 0.16
+  },
+  {
+   "attack": "written",
+   "condition": "A",
+   "variant": "without quarantine",
+   "poison_in_prompt": 1.0,
+   "poison_passages": 3.0,
+   "true_passage_kept": 0.5733333333333334
+  },
+  {
+   "attack": "written",
+   "condition": "A",
+   "variant": "trust threshold only",
+   "poison_in_prompt": 1.0,
+   "poison_passages": 3.0,
+   "true_passage_kept": 0.16
+  }
+ ],
+ "mismatches_with_cache": 0
+}

@@ -1,0 +1,14 @@
+row,step
+v1,Retrieved passages
+v1,"Features relevance r, provenance p, rank c"
+v1,NLI conflict graph (DeBERTa-v3) 20–35 s per question
+v1,Trust ≥ τ 0.35r+0.25p+0.20c +0.20·agreement
+v1,"Penalty, or keep both sides with conflict notes"
+v1,LLM answer
+v2,Retrieved passages
+v2,Gate provenance ≥ 0.5 (if metadata exist)
+v2,Quarantine copy groups with an edited copy
+v2,Trust ≥ τ 0.35r+0.25p+0.20c (no agreement)
+v2,Title links add passages named in q or kept text
+v2,LLM answer
+v2,fallback on abstention

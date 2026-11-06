@@ -1,0 +1,49 @@
+panel,dataset,model,method,metric,mean,ci_low,ci_high
+a,hotpotqa,-,Vanilla RAG,f1,0.3396893424036282,0.3358251700680273,0.34454750566893433
+a,hotpotqa,-,BM25 top-3,f1,0.5931428571428572,0.5765714285714286,0.6094285714285714
+a,hotpotqa,-,Reranker top-3,f1,0.6302857142857142,0.6148571428571429,0.6462857142857142
+a,hotpotqa,-,CAS v2,f1,0.7194607297464439,0.7027846371882086,0.7356678854875284
+a,hotpotqa,-,Vanilla RAG,full_evidence,1.0,1.0,1.0
+a,hotpotqa,-,BM25 top-3,full_evidence,0.5042857142857143,0.46714285714285714,0.5414285714285715
+a,hotpotqa,-,Reranker top-3,full_evidence,0.59,0.5557142857142857,0.6271428571428571
+a,hotpotqa,-,CAS v2,full_evidence,0.8628571428571429,0.8371428571428572,0.8871785714285713
+b,hotpotqa,llama3.2:latest,Vanilla RAG,accuracy,0.5071428571428571,0.47,0.5428571428571428
+b,hotpotqa,gemma3:latest,Vanilla RAG,accuracy,0.4114285714285714,0.3757142857142857,0.4471785714285712
+b,hotpotqa,llama3.2:latest,Reranker top-3,accuracy,0.44142857142857145,0.4042857142857143,0.47714285714285715
+b,hotpotqa,gemma3:latest,Reranker top-3,accuracy,0.37,0.3342857142857143,0.4057142857142857
+b,hotpotqa,llama3.2:latest,CAS v2,accuracy,0.5542857142857143,0.5185714285714286,0.5914285714285714
+b,hotpotqa,gemma3:latest,CAS v2,accuracy,0.47,0.4328571428571429,0.5071428571428571
+b,hotpotqa,llama3.2:latest,CAS v2 + fallback,accuracy,0.5742857142857143,0.5385714285714286,0.6114285714285714
+b,hotpotqa,gemma3:latest,CAS v2 + fallback,accuracy,0.5028571428571429,0.4657142857142857,0.5400357142857142
+b,hotpotqa,llama3.2:latest,Vanilla RAG,wrong,0.4542857142857143,0.4185714285714286,0.4900357142857141
+b,hotpotqa,gemma3:latest,Vanilla RAG,wrong,0.48,0.4442857142857143,0.5142857142857142
+b,hotpotqa,llama3.2:latest,Reranker top-3,wrong,0.4328571428571429,0.39714285714285713,0.47
+b,hotpotqa,gemma3:latest,Reranker top-3,wrong,0.4,0.36424999999999996,0.43714285714285717
+b,hotpotqa,llama3.2:latest,CAS v2,wrong,0.37142857142857144,0.3342857142857143,0.4057142857142857
+b,hotpotqa,gemma3:latest,CAS v2,wrong,0.37285714285714283,0.3371071428571428,0.4085714285714286
+b,hotpotqa,llama3.2:latest,CAS v2 + fallback,wrong,0.4,0.3628571428571429,0.4357142857142857
+b,hotpotqa,gemma3:latest,CAS v2 + fallback,wrong,0.41714285714285715,0.38,0.45285714285714285
+c,musique,-,Vanilla RAG,f1,0.23756916996047434,0.22937351778656123,0.24568544137022397
+c,musique,-,BM25 top-3,f1,0.4059523809523809,0.3757083333333333,0.43686190476190473
+c,musique,-,Reranker top-3,f1,0.5092857142857143,0.4785535714285714,0.5415238095238095
+c,musique,-,CAS v2,f1,0.44747803276015347,0.4207875104352562,0.4726822473364269
+c,musique,-,Vanilla RAG,full_evidence,1.0,1.0,1.0
+c,musique,-,BM25 top-3,full_evidence,0.08,0.045,0.12
+c,musique,-,Reranker top-3,full_evidence,0.205,0.15,0.26
+c,musique,-,CAS v2,full_evidence,0.4,0.335,0.47
+d,musique,llama3.2:latest,Vanilla RAG,accuracy,0.15,0.1,0.2
+d,musique,gemma3:latest,Vanilla RAG,accuracy,0.16,0.115,0.21
+d,musique,llama3.2:latest,Reranker top-3,accuracy,0.12,0.08,0.17
+d,musique,gemma3:latest,Reranker top-3,accuracy,0.15,0.105,0.205
+d,musique,llama3.2:latest,CAS v2,accuracy,0.165,0.115,0.22
+d,musique,gemma3:latest,CAS v2,accuracy,0.17,0.12,0.22012499999999932
+d,musique,llama3.2:latest,CAS v2 + fallback,accuracy,0.195,0.14,0.255
+d,musique,gemma3:latest,CAS v2 + fallback,accuracy,0.23,0.175,0.29
+d,musique,llama3.2:latest,Vanilla RAG,wrong,0.595,0.525,0.66
+d,musique,gemma3:latest,Vanilla RAG,wrong,0.5,0.43,0.565
+d,musique,llama3.2:latest,Reranker top-3,wrong,0.465,0.395,0.53
+d,musique,gemma3:latest,Reranker top-3,wrong,0.39,0.32,0.455
+d,musique,llama3.2:latest,CAS v2,wrong,0.44,0.37,0.51
+d,musique,gemma3:latest,CAS v2,wrong,0.36,0.295,0.425
+d,musique,llama3.2:latest,CAS v2 + fallback,wrong,0.6,0.53,0.665
+d,musique,gemma3:latest,CAS v2 + fallback,wrong,0.525,0.455,0.595

@@ -1,36 +1,22 @@
-# When Does Conflict-Aware Evidence Verification Help Retrieval-Augmented Generation? Five Pre-Registered Studies Under Clean and Poisoned Retrieval
+# From Diagnosis to Confirmation: Lightweight Conflict-Aware Evidence Selection for Retrieval-Augmented Generation in Six Pre-Registered Studies
 
-*Draft v0.2, 2026-11-04. Placeholders in **[brackets]** must be filled from result files that do not yet exist. No placeholder may be filled by hand: each names the file and field it comes from.*
+*Draft v0.3, 2026-11-06. Placeholders in **[brackets]** must be filled from result files that do not yet exist. No placeholder may be filled by hand: each names the file and field it comes from.*
 
 ---
 
+## Highlights
+
+- Six pre-registered studies test conflict-aware evidence selection for RAG.
+- NLI-based conflict verification failed; four measurable causes were found.
+- CAS v2 replaces the NLI graph with a gate, a copy quarantine and title links.
+- On 700 fresh questions, CAS v2 beat Vanilla RAG and a reranker in accuracy.
+- On MuSiQue, CAS v2 cut wrong answers but did not raise accuracy.
+
 ## Abstract
 
-**Background.** Retrieval-augmented generation (RAG) passes retrieved passages to a language model, including passages that are irrelevant, contradictory or deliberately poisoned. Conflict-aware synthesis (CAS) is a pre-generation verification layer that addresses this. It scores each passage for relevance, source provenance, retrieval rank and agreement with other passages. It uses a natural-language-inference (NLI) model to detect contradictions. It then either penalises contradicting passages or keeps both sides and labels the conflict.
+Retrieval-augmented generation (RAG) passes irrelevant, contradictory and poisoned passages to the language model. Conflict-aware verification filters them before generation, but has rarely been tested in a way that allows a negative answer. We evaluated a conflict-aware synthesis framework (CAS) in six pre-registered studies with hash-stamped analysis plans, using 3–4B open models on CPU. Studies 1–4 (900 questions and 3.06 million simulated selections) found that the original design, which detects conflicts with a natural-language-inference (NLI) model, neither improved accuracy nor resisted poisoning. They traced this to four measurable causes: poisoned near-duplicates counted as agreement; provenance was too weak a weight; the NLI detector caught under 10% of conflicts at 20–35 s per question; and dropping a supporting passage cost more than keeping a distractor. We built CAS v2 from this diagnosis. It combines a provenance gate, an edited-copy quarantine, an agreement-free trust score and title-linked evidence expansion, without NLI. On 700 fresh HotpotQA questions (study 6), v2 was more accurate than Vanilla RAG (+0.047 and +0.059 for two models) and than a cross-encoder reranker (+0.100 and +0.113). It gave fewer wrong answers (−0.083 and −0.107) and ran 3–4 times faster than Vanilla RAG. An abstention fallback raised the gain over Vanilla RAG to +0.067 and +0.091 (all Holm-corrected p ≤ 0.021). On 200 MuSiQue questions, v2 cut wrong answers (−0.155 and −0.140) but did not improve accuracy. In study 5, v2 blocked copy-based poisoning completely, but by abstaining, and it matched a source filter rather than beating it.
 
-**Methods.** We ran an exploratory comparison and five pre-registered studies, all on CPU only, with parameters that were never tuned on test data. Each pre-registered study had a hash-stamped analysis plan, written before its data were generated.
-- **Exploratory, clean retrieval:** HotpotQA, MuSiQue, WikiContradict and RAGTruth, with three local LLMs (3–8B parameters).
-- **Studies 1 and 2:** two pre-registered poisoning studies on 400 new HotpotQA questions. One used entity substitution; the other used a stronger, PoisonedRAG-style attack.
-- **Study 3:** a pre-registered 500-question replication on clean retrieval, with a cross-encoder reranker baseline.
-- **Study 4:** a pre-registered Monte Carlo study of the selection layer (3,064,800 runs), which tested sensitivity to the trust weights, source-metadata quality and detector quality.
-- **Study 5:** a pre-registered test of CAS v2, a redesign built from the diagnosis of studies 1–4. It ran on 350 fresh HotpotQA questions under clean retrieval, the study 2 attack and an attack written by a separate LLM.
-
-**Results.**
-- On clean retrieval, conflict-preserving CAS selected more precise evidence than Vanilla RAG (F1 +0.299, Holm p = 0.015). It cut prompts to about 28% of Vanilla's length. It did not improve answer accuracy for any model.
-- None of the ten pre-registered decisions in poisoning studies 1 and 2 supported CAS. Under the stronger attack, a plain source filter cut poison adoption to 3.5–4.0%; conflict-preserving CAS left it at 22.5–28% (Holm p = 0.002).
-- At n = 500, CAS selected significantly better evidence than Vanilla RAG and BM25 (F1 +0.334 and +0.029), but not significantly better than a cross-encoder reranker. It did not improve answer accuracy, and for one model it was significantly less accurate than Vanilla RAG, so all three pre-registered hypotheses were not supported. In exploratory analyses, CAS gave fewer wrong answers than Vanilla RAG (−0.086 and −0.090), mostly by abstaining when its selection lacked the answer.
-- The Monte Carlo study shows that these outcomes do not depend on the hand-set weights: the comparisons with Vanilla RAG and with the source filter went the same way in 100% of 1,250 random settings. It also identifies two causes:
-  - The NLI model labels 56% of poisoned copies as *agreeing* with their source, so CAS's agreement score rewards the poison.
-  - Without source metadata, the detector would need about five times its current recall before CAS matches a BM25 baseline.
-- In study 5, CAS v2 met five of nine pre-registered hypotheses.
-  - **Clean retrieval:** it kept every supporting passage for 91% of questions (v1: 48.5%) and selected better evidence than all four comparators (F1 +0.096 to +0.406, Holm p = 0.002). It was more accurate than CAS v1 (+0.135 for both models) and non-inferior to Vanilla RAG. Its accuracy gain over Vanilla RAG (+0.065 and +0.055) was not significant after Holm correction.
-  - **Copy attack:** without metadata, it stopped the attack entirely (0% adoption, against 27–34% for Vanilla RAG), but only by discarding the true passage along with its copies.
-  - **With noisy metadata:** it matched a plain source filter but did not beat it.
-  - **Written attack:** it cut adoption by 9 points, against our stated prediction. Post hoc analysis traced the gain to the attacker repeating itself.
-
-**Conclusion.** Conflict-preserving verification is a better design than contradiction penalties. But with current NLI detectors, trust weighting does not protect RAG against poisoning; a hard source filter does. A redesign that follows this diagnosis removed CAS's accuracy loss on clean retrieval, with selection taking 3 ms per question instead of 20 s. It defended only against copy-based poisoning, and then by abstaining. We give the detector and metadata conditions under which conflict-aware verification could pay off.
-
-**Keywords:** retrieval-augmented generation; knowledge conflicts; corpus poisoning; natural language inference; evidence selection; pre-registration; negative results.
+**Keywords:** retrieval-augmented generation; evidence selection; knowledge conflicts; corpus poisoning; abstention; pre-registration.
 
 ---
 
@@ -51,24 +37,26 @@ One family of defences acts **before generation**: it decides which passages rea
 
 The design is intuitive, and several published systems share parts of it [10]–[13]. Whether it works has rarely been tested under conditions that allow a negative answer.
 
-This paper reports such a test. We make five contributions:
+This paper reports such a test, and then uses what it found. We make five contributions:
 
-1. **A reproducible CPU-only evaluation of CAS** against Vanilla RAG, BM25, a cross-encoder reranker and a source filter. It covers evidence selection, answers from three local LLMs, conflict surfacing and cost. All code, prompts, cached model outputs and figure data are released.
-2. **Three pre-registered confirmatory studies.**
-   - Two use poisoned retrieval of increasing strength: entity substitution [5], and a multi-passage, PoisonedRAG-style attack [9].
-   - One is a 500-question clean-retrieval replication.
-   - For each, the hypotheses, tests, multiplicity correction and decision rules were written down before the data existed, and hash-stamped in the outputs. Section 4.5 states what the version history can and cannot confirm. All results are reported.
-3. **A pre-registered Monte Carlo study of 3,064,800 runs of the selection layer.** It separates the effect of CAS's hand-set parameters from the effects of source-metadata quality and detector quality. It re-uses the real retrieval scores and NLI predictions.
-4. **A diagnosis of why CAS fails against poisoning, with design guidance.**
-   - The NLI model treats a poisoned copy of a passage as *entailed* by its source, so CAS's agreement bonus rewards the poison.
-   - Provenance, entered as one weight among four, cannot outweigh relevance.
-   - Contradiction penalties discard the true passage together with the false one.
-   - Dropping one supporting passage costs more accuracy than keeping a distractor.
-5. **A redesign that follows the diagnosis (CAS v2), tested in a fifth pre-registered study on fresh questions.** The study includes an attack outside the family that v2 was designed against, and a prediction, stated in advance, that v2 would fail against it.
+1. **A diagnosis of why NLI-based conflict verification fails** (studies 1–4: three pre-registered studies on 900 questions and a pre-registered Monte Carlo study of 3,064,800 selections). The original CAS did not improve answers and did not resist poisoning. Four causes were measured directly:
+   - the NLI model scores a poisoned copy of a passage as *agreeing* with its source, so the agreement bonus rewards the poison;
+   - provenance, entered as one weight among four, cannot outweigh relevance;
+   - the NLI detector catches under 10% of the conflicts that matter, at 20–35 s per question on CPU;
+   - dropping one supporting passage costs more accuracy than keeping a distractor.
+2. **CAS v2, a lightweight evidence selector built from that diagnosis** (Section 3.4). It has four steps, one per cause: a provenance gate, a quarantine for edited copies, a trust score without agreement, and title-linked evidence expansion. It has no NLI model, and it selects in about 3 ms per question. An optional abstention fallback asks again with every passage that passed the gate and the quarantine.
+3. **Confirmation of CAS v2 in two pre-registered studies on fresh questions.**
+   - Study 5 (350 HotpotQA questions) covers clean retrieval, the copy attack, and an attack written by a separate LLM.
+   - Study 6 (700 HotpotQA and 200 MuSiQue questions) was powered from study 5's variance. Its runner would not start until the analysis plan had been committed to git.
+   - On HotpotQA, v2 was more accurate than Vanilla RAG and a cross-encoder reranker, gave fewer wrong answers, and ran 3–4 times faster than Vanilla RAG.
+4. **The limits of the method, stated in advance and confirmed.**
+   - On MuSiQue's 2–4-hop questions, v2 cut wrong answers but did not raise accuracy.
+   - Against copy attacks, it protects by abstaining.
+   - When source metadata exist, it is no better than a source filter.
+   - Against varied LLM-written poison, it gives no defence.
+5. **A reproducible CPU-only evaluation.** All code, prompts, cached model outputs, analysis plans and figure data are released. Every figure is regenerated and checked against the result files by one script.
 
-The headline result for the original design is negative. On clean retrieval, CAS improves evidence precision and shortens prompts. It does not improve answers, and it does not protect against poisoning; a simple source filter does. We think this is worth publishing because the failure is specific and measurable, and because it is easy to fix in part.
-
-The redesign shows how far the fixes go. CAS v2 removed the accuracy loss and almost all of the cost, and it stopped copy-based poisoning. But it stopped copies only by abstaining, and it did not beat a source filter when metadata existed. Section 6 states what a detector would have to achieve for conflict-aware verification to pay off.
+The original design failed, and we report its failure in full, because the failure was specific and measurable. The redesign shows that the failure was fixable where the diagnosis applied: evidence recall, cost and copy-based poisoning. It also shows where it was not: multi-hop chains that share no words with the question, and poison that is not a copy.
 
 ## 2. Related Work
 
@@ -86,7 +74,7 @@ The redesign shows how far the fixes go. CAS v2 removed the accuracy loss and al
 
 ### 3.1 Pipeline
 
-For a question *q* with retrieved passages *d₁…dₙ*, CAS proceeds in three steps.
+For a question *q* with retrieved passages *d₁…dₙ*, CAS proceeds in three steps (Fig. 1, top).
 
 **Step 1: document features.** Each passage gets three features:
 - relevance *r*: BM25 [19] divided by the pool maximum;
@@ -118,7 +106,7 @@ The weights and τ are the defaults of the original implementation. They were no
 
 ### 3.4 CAS v2
 
-CAS v2 (`evaluation/cas_v2.py`) was designed after studies 1–4, using only their data. It changes one thing for each measured cause of CAS's failures (Section 6). In study 5, the original design is called CAS v1: conflict-preserving CAS-NLI with θ = 0.99.
+CAS v2 (`evaluation/cas_v2.py`; Fig. 1, bottom) was designed after studies 1–4, using only their data. It changes one thing for each measured cause of CAS's failures (Section 6). In study 5, the original design is called CAS v1: conflict-preserving CAS-NLI with θ = 0.99.
 
 | Step | Rule | Cause addressed |
 |---|---|---|
@@ -128,6 +116,41 @@ CAS v2 (`evaluation/cas_v2.py`) was designed after studies 1–4, using only the
 | Links | A remaining passage whose title (without a parenthetical) is named in the question or in a kept passage is kept too. | Dropping one supporting passage was costly |
 
 v2 has no NLI graph and no conflict notes. The quarantine removes *both* sides of an edit dispute, because the passages alone cannot tell the original from the copy. Section 6.9 shows what that costs.
+
+**Algorithm 1. CAS v2 evidence selection.**
+
+```
+Input:  question q; passages d_1..d_n with titles t_i (may be empty); provenance p_i (optional)
+Output: the set S of passages given to the generator
+
+1  P ← {1..n}
+2  if provenance is available: P ← {i ∈ P : p_i ≥ 0.5}                     # gate
+3  W_i ← content words of d_i, for i ∈ P
+4  for each pair i < j in P:                                               # quarantine
+5      align W_i and W_j (longest matching blocks)
+6      if matched words ≥ 0.8 · min(|W_i|, |W_j|) and min(|W_i|, |W_j|) ≥ 5:
+7          link i and j as copies (union-find)
+8          if some non-matching run has 1..8 words: mark the pair as edited
+9  P ← P minus every passage in a copy group that contains an edited pair
+10 r_i ← BM25(q, d_i) / max_k BM25(q, d_k);  c_i ← 1 − rank_i / n;  p_i ← 0.5 if no provenance
+11 K ← {i ∈ P : 0.35·r_i + 0.25·p_i + 0.20·c_i ≥ 0.45}                     # trust
+12 L ← {i ∈ P \ K : title t_i (without parenthetical, ≥ 4 characters)
+                    occurs as a phrase in q or in some d_k, k ∈ K}           # links
+13 return S ← K ∪ L
+```
+
+**Cost.**
+- With *n* passages of at most *m* content words, the quarantine compares every pair of passages, so the worst case is O(*n*²·*m*²). BM25 scoring and the link test are linear in the total text.
+- With *n* ≤ 20, as in all our studies, selection took 2.7 ms per question on HotpotQA and 6.7 ms on MuSiQue, in single-threaded Python (study 6). No model inference is involved.
+- By comparison, the NLI graph of CAS v1 scores n(n − 1) ordered pairs with a 184M-parameter cross-encoder, which took 20–35 s per question.
+
+### 3.5 Abstention fallback
+
+A filter that drops a needed passage leaves the generator unable to answer (Section 6.1), and small models then mostly abstain (Section 6.2). The fallback uses this signal:
+1. Answer with v2's selection *S*.
+2. If the model abstains, ask again with every passage that passed the gate and the quarantine (*P* after line 9 of Algorithm 1). Score that second answer.
+
+The fallback costs a second generation only on abstentions. It never brings back a passage that the gate or the quarantine removed, so it keeps v2's protection against copies. It was added after study 5, on development data, and is tested in study 6 (Section 4.8).
 
 ## 4. Experimental Design
 
@@ -146,8 +169,11 @@ v2 has no NLI graph and no conflict notes. The quarantine removes *both* sides o
 | HotpotQA-500 (study 3) | Pre-registered clean replication | 500 | 10 |
 | HotpotQA-5, clean (study 5) | Pre-registered test of CAS v2 | 200 | 10 |
 | HotpotQA-5, poisoned (study 5) | Pre-registered test of CAS v2, two attacks | 150 | 13 |
+| MuSiQue development check (study 6) | Pilot and development only | 200 (60 answered) | 20 |
+| HotpotQA-6 (study 6) | Pre-registered powered test of CAS v2 | 700 | 10 |
+| MuSiQue-6 (study 6) [21] | Pre-registered generalisation test of CAS v2 | 200 | 20 |
 
-The poisoning and replication samples are drawn from the HotpotQA dev set. They exclude every question used earlier, and the four samples do not overlap.
+The HotpotQA samples of studies 1–3, 5 and 6 are drawn from the HotpotQA dev set. Each excludes every question used, attacked or attempted earlier, so the five samples do not overlap. The MuSiQue samples come from the answerable MuSiQue dev set. The study 6 sample excludes the development-check questions by id and by question text.
 
 **Study 1 (entity substitution, after [5]).**
 - Each question gets one copy (155 questions) or two copies (45) of a gold passage.
@@ -169,6 +195,11 @@ The substitute rules were amended once (Amendment 1), before any method ran.
   - **Acceptance:** a text was used only if it contained the substitute and not the gold answer.
   - **Skipped questions:** 30 of the 180 sampled questions that had a substitute (17%) were skipped, because the attacker did not produce three usable texts within ten samples.
 
+**Study 6 (clean retrieval, two datasets).**
+- **HotpotQA:** 700 questions of every type; 10 passages each.
+- **MuSiQue:** 200 answerable questions needing 2–4 hops, with 20 paragraphs each. Gold answers include the listed aliases.
+- Both samples were drawn with seed 42 by `build_study6.py`. The runner called it only after the plan had been committed (Section 4.5).
+
 **Source metadata.** Each poisoning study runs in two conditions:
 - **Condition A:** no metadata; every passage has provenance 0.5.
 - **Condition B:** noisy metadata. Trusted sources score U(0.55, 0.95), untrusted sources U(0.05, 0.45), and each passage's trusted/untrusted status is flipped with probability 0.2.
@@ -177,10 +208,11 @@ The substitute rules were amended once (Amendment 1), before any method ran.
 
 - **Vanilla RAG:** keeps all passages.
 - **BM25 top-3.**
-- **Reranker top-3** (studies 3 and 5): `cross-encoder/ms-marco-MiniLM-L-6-v2` [22], [23].
+- **Reranker top-3** (studies 3, 5 and 6): `cross-encoder/ms-marco-MiniLM-L-6-v2` [22], [23].
 - **Provenance + BM25 top-3** (condition B; "source filter"): a hard source filter, provenance ≥ 0.5, then BM25 top-3.
 - **CAS:** w/o graph, keyword, NLI penalty, and NLI conflict-preserving. Conflict-preserving CAS is the primary method in studies 1–4.
-- **CAS v2** (Section 3.4): the primary method in study 5.
+- **CAS v2** (Section 3.4): the primary method in studies 5 and 6.
+- **CAS v2 + fallback** (Section 3.5): a second arm in study 6.
 
 ### 4.3 Generation
 
@@ -189,7 +221,8 @@ The substitute rules were amended once (Amendment 1), before any method ran.
 - **Software:** Python 3.14.6, PyTorch 2.15.0 (CPU build), Sentence-Transformers 6.2.0 and Transformers 5.21.0. These were installed on 2026-10-29, before the first NLI prediction appears in the repository, and were not changed afterwards.
 - **Ollama version:** the version was not stored with each cached response; this account comes from Ollama's server logs.
   - 0.40.12 served every answer generated on 2026-10-29 and 2026-10-30: the exploratory comparison and studies 1–2.
-  - Ollama updated itself to 0.40.13 on 2026-11-03, before study 3's answers were generated. That version served studies 3 and 5.
+  - Ollama updated itself to 0.40.13 on 2026-11-03, before study 3's answers were generated. That version served studies 3, 5 and 6.
+  - In study 6, the runner checked the version before every question and would have stopped on any other version; it never stopped.
   - The logs show no generation requests before 2026-10-29.
   - The model weights did not change between studies. The Ollama model IDs are `a80c4f17acd5` (Llama 3.2 3B), `a2af6cc3eb7f` (Gemma 3 4B) and `46e0c10c039e` (Llama 3.1 8B).
 - **Prompt:** one fixed QA prompt that asks for a short answer, or "unknown" when the passages do not contain it.
@@ -221,7 +254,8 @@ The automatic accuracy, abstention and adoption labels are being validated again
   - study 1: 2026-10-29;
   - study 2: 2026-10-30;
   - studies 3 and 4: 2026-11-03;
-  - study 5: 2026-11-04.
+  - study 5: 2026-11-04;
+  - study 6: 2026-11-05.
 - **What the git history independently confirms:**
   - Study 2: the plan was committed before its benchmark.
   - Study 3: the plan was committed before any output. The plan shares a commit with the 500-question sample, which a seeded script draws deterministically from the plan's own rules.
@@ -229,6 +263,10 @@ The automatic accuracy, abstention and adoption labels are being validated again
     - A first version of the plan, with hypotheses H1–H8, was committed before any study 5 data existed.
     - The final version adds H9, the attack-text rules (prompt, extraction, pilot) and the development results. It first appears in a later commit, together with the first 514 attacker outputs. That commit precedes the benchmark file, every selection and every answer.
     - The plan states that the final version was completed before the attack generation started.
+  - Study 6:
+    - The runner would not start until the plan was committed with the exact content on disk. It recorded that commit (`a5cc6153`, 2026-11-05 12:25:01 +09:00) in its output.
+    - It drew the samples only after that point.
+    - Earlier drafts of the plan are also in the history.
   - Studies 1 and 4: the plan first appears in the same commit as the benchmark (study 1) or the outputs (study 4). For these two, the timing rests on the plan's stated date.
 - Each output file stores the SHA-256 of its plan. The stored hashes match the files:
 
@@ -239,11 +277,13 @@ The automatic accuracy, abstention and adoption labels are being validated again
 | 3 | c1eb4a89 |
 | 4 | 2038df84 |
 | 5 | c91b8c27 |
+| 6 | 0f1fc82b |
 
 - **Confirmatory families:**
   - studies 1–2: 20 tests each (2 models × 5 comparisons × 2 endpoints), five mechanical decisions;
   - study 3: 9 tests plus a non-inferiority margin of −0.05;
-  - study 5: 20 tests plus a non-inferiority margin of −0.05 (Section 4.7).
+  - study 5: 20 tests plus a non-inferiority margin of −0.05 (Section 4.7);
+  - study 6: a primary family of 8 tests, a secondary family of 12, and a non-inferiority margin of −0.05 (Section 4.8).
 - **The plans were not deposited in a public registry.** We release the full git history.
 
 **Deviation: scoring corrections.**
@@ -308,12 +348,50 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 - **H3 and H9:** expected for Llama 3.2 and uncertain for Gemma 3.
 - **Expected cost:** under the copy attack without metadata, v2 would lose accuracy, because the quarantine removes the true passage together with its copies.
 
+### 4.8 Study 6 design
+
+Study 6 asks study 5's clean-retrieval questions again, with enough questions to answer them and on a second dataset. CAS v2 was frozen exactly as in study 5.
+
+**Development before the plan.** All of it used data that study 6 does not use.
+- **Pilot** (`dev_study6.py`). The datasets and comparisons were fixed before any method ran on MuSiQue. A pilot on 200 MuSiQue dev questions, 60 of them answered, then showed v2 losing evidence on multi-hop chains:
+  - every supporting paragraph was kept for 43.5% of questions, against 91% on HotpotQA in study 5;
+  - accuracy for Llama 3.2 was 0.133 vs 0.267 for Vanilla RAG.
+- **Variants tried** (`dev_study6_variants.py`).
+  - Not adopted: BM25 hop expansion, which kept most of the 20 paragraphs, and an iterative cross-encoder chain, which reached at most 51% full evidence.
+  - Adopted as a second arm: the abstention fallback. On study 5's already-analysed clean questions it was +0.075 and +0.070 more accurate than Vanilla RAG (unadjusted).
+  - The fallback was therefore chosen after seeing development results, and study 6 is its first test.
+
+**Hypotheses** (per dataset; v2 against each comparator unless stated).
+
+| | Hypothesis | Family |
+|---|---|---|
+| H1 | v2 is more accurate than Vanilla RAG | primary |
+| H2 | v2 gives fewer wrong answers than Vanilla RAG | primary |
+| H3 | v2 is non-inferior to Vanilla RAG in accuracy (95% CI lower bound above −0.05) | CI rule |
+| H4 | v2 is more accurate than Reranker top-3 | secondary |
+| H5 | v2 has higher evidence F1 than Reranker top-3 and than BM25 top-3 | secondary |
+| H6 | v2 + fallback is more accurate than Vanilla RAG | secondary |
+
+**Tests and decisions.**
+- Holm correction within each family: 8 primary tests and 12 secondary tests.
+- The decision rule is study 5's: every test of a hypothesis must be significant in the predicted direction, for both models.
+- BM25 top-3 was evaluated for selection only, to bound CPU time.
+
+**Sample size.**
+- The SD of the per-question accuracy difference (v2 − Vanilla RAG) in study 5 was 0.389 for Llama 3.2 and 0.403 for Gemma 3.
+- From these, n = 700 HotpotQA questions gives a power of 0.81–0.84 for a true difference of +0.055 at the strictest Holm threshold (α = 0.05/8).
+- MuSiQue (n = 200) is a generalisation test.
+
+**Predictions stated in the plan.**
+- **HotpotQA:** H1, H3, H4, H5 and H6 supported; H2 uncertain for Gemma 3.
+- **MuSiQue:** H1, H2, H3 and H5 not supported; H4 and H6 uncertain.
+
 ## 5. Results
 
 ### 5.1 Clean retrieval (exploratory)
 
 **Evidence selection.**
-- Conflict-preserving CAS with the cross-validated θ reached evidence F1 0.632 on HotpotQA (P 0.651, R 0.700).
+- Conflict-preserving CAS with the cross-validated θ reached evidence F1 0.632 on HotpotQA (P 0.651, R 0.700; Fig. 2).
 - It improved on Vanilla RAG by +0.299 [0.233, 0.360] (Holm p = 0.015, over 150 tests) and on CAS-keyword by +0.080 (Holm p = 0.024).
 - Against BM25 top-3 it was more precise (+0.158, Holm p = 0.015), but the F1 difference was not significant (+0.040 [−0.009, 0.087]).
 - It was indistinguishable from CAS w/o graph (−0.018, Holm p = 1.0). **The conflict graph therefore added nothing to selection.**
@@ -324,7 +402,7 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 - It was significantly worse than the same pipeline without the graph (F1 −0.203, Holm p = 0.024).
 
 **Answers.**
-- After Holm correction over 210 tests, no CAS variant was significantly better than any baseline for any of the three LLMs.
+- After Holm correction over 210 tests, no CAS variant was significantly better than any baseline for any of the three LLMs (Fig. 3).
 - Vanilla RAG was the most accurate method on HotpotQA for every model (0.56, 0.52, 0.68).
 - Conflict-preserving CAS cut the mean prompt from about 1,700–1,770 tokens to roughly 28% of that, at an accuracy cost of 0.05–0.12.
 
@@ -340,7 +418,7 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 
 ### 5.2 Study 1: entity substitution (pre-registered)
 
-**Table 2. Pre-registered decisions** (primary method: conflict-preserving CAS in studies 1–3, CAS v2 in study 5).
+**Table 2. Pre-registered decisions** (primary method: conflict-preserving CAS in studies 1–3, CAS v2 in studies 5 and 6).
 
 | Study | Condition | Comparator | Decision |
 |---|---|---|---|
@@ -366,6 +444,18 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 | 5 | Copy, B | H6, adoption vs source filter | not supported |
 | 5 | Written, A | H7, adoption vs Vanilla RAG | **supported** (predicted not to be) |
 | 5 | Written, B | H8, adoption vs source filter | not supported |
+| 6 | HotpotQA | H1, accuracy vs Vanilla RAG | **supported** |
+| 6 | HotpotQA | H2, fewer wrong answers than Vanilla RAG | **supported** |
+| 6 | HotpotQA | H3, non-inferiority to Vanilla RAG | **supported** |
+| 6 | HotpotQA | H4, accuracy vs Reranker top-3 | **supported** |
+| 6 | HotpotQA | H5, evidence F1 vs Reranker and BM25 top-3 | **supported** |
+| 6 | HotpotQA | H6, v2 + fallback accuracy vs Vanilla RAG | **supported** |
+| 6 | MuSiQue | H1, accuracy vs Vanilla RAG | not supported (as predicted) |
+| 6 | MuSiQue | H2, fewer wrong answers than Vanilla RAG | **supported** (predicted not to be) |
+| 6 | MuSiQue | H3, non-inferiority to Vanilla RAG | not supported (Gemma 3 CI bound at the margin) |
+| 6 | MuSiQue | H4, accuracy vs Reranker top-3 | not supported |
+| 6 | MuSiQue | H5, evidence F1 vs Reranker and BM25 top-3 | not supported (below the reranker) |
+| 6 | MuSiQue | H6, v2 + fallback accuracy vs Vanilla RAG | not supported (significant for Gemma 3 only) |
 
 **The attack was weak.** Many substitutes were implausible, so poison adoption was near its floor even without filtering (Vanilla RAG: 3.5% for Llama, 6.5% for Gemma). That left little room to show a reduction.
 
@@ -377,7 +467,7 @@ Draws are averaged within each question before the bootstrap, and no p-values ar
 
 **Preserve vs penalty (exploratory family).** Conflict preservation was more accurate than the penalty, by +0.060 to +0.065. The difference was significant in three of four cases (Holm p = 0.031–0.044).
 
-All five decisions were "not supported" (Table 2).
+All five decisions were "not supported" (Table 2; Fig. 4).
 
 ### 5.3 Study 2: a stronger attack (pre-registered)
 
@@ -392,7 +482,7 @@ All five decisions were "not supported" (Table 2).
 
 **Penalty mode** gave the lowest CAS adoption (18.5–21.5%), with no accuracy gain and abstention of up to 20.5–28.5%.
 
-All five decisions were "not supported".
+All five decisions were "not supported" (Fig. 5).
 
 ### 5.4 Study 3: clean replication at n = 500 (pre-registered)
 
@@ -422,7 +512,7 @@ Study 3 used 500 new HotpotQA questions, with 10 passages each and no poisoning 
 
 ### 5.5 Study 4: what drives the outcome (pre-registered Monte Carlo)
 
-**Parameters (E1).** Across 1,250 random weight-and-threshold settings, the comparisons with Vanilla RAG and with the source filter had the same sign as at the default setting in 100% of settings (Table 3).
+**Parameters (E1).** Across 1,250 random weight-and-threshold settings, the comparisons with Vanilla RAG and with the source filter had the same sign as at the default setting in 100% of settings (Table 3; Fig. 7).
 - Conflict-preserving CAS let poison through silently less often than Vanilla RAG (pooled mean difference −0.22 without metadata, −0.27 with noisy metadata).
 - It let poison through more often than the source filter (+0.50 [+0.47, +0.52]).
 - **The study 2 result is therefore not an artefact of the hand-set weights.**
@@ -454,7 +544,7 @@ Study 3 used 500 new HotpotQA questions, with 10 passages each and no poisoning 
 
 ### 5.6 Can the detector be made practical? (exploratory)
 
-We evaluated 110 detector configurations, spanning:
+We evaluated 110 detector configurations (Fig. 8), spanning:
 - the NLI model: DeBERTa-v3 or MiniLM;
 - the unit compared: whole passages or the best sentence;
 - θ, a lexical-overlap gate, and one or both directions;
@@ -469,9 +559,9 @@ We evaluated 110 detector configurations, spanning:
 
 ### 5.7 Study 5: CAS v2 on fresh questions (pre-registered)
 
-Five of the nine hypotheses were supported (Table 2; Table 6; Fig. 9). One of them, H7, had been predicted *not* to be supported.
+Five of the nine hypotheses were supported (Table 2; Table 4; Fig. 9). One of them, H7, had been predicted *not* to be supported.
 
-**Table 6. Study 5: confirmatory tests** (CAS v2 minus comparator; 95% bootstrap CIs; p is Holm-corrected over the 20 tests; H4 is judged by its CI against the −0.05 margin). H1 compares selections, which do not depend on the model; its one value per comparator is in the Llama 3.2 column.
+**Table 4. Study 5: confirmatory tests** (CAS v2 minus comparator; 95% bootstrap CIs; p is Holm-corrected over the 20 tests; H4 is judged by its CI against the −0.05 margin). H1 compares selections, which do not depend on the model; its one value per comparator is in the Llama 3.2 column.
 
 | H | Setting | Comparator | Endpoint | Llama 3.2 | Gemma 3 |
 |---|---|---|---|---|---|
@@ -529,27 +619,101 @@ Five of the nine hypotheses were supported (Table 2; Table 6; Fig. 9). One of th
 - **Generation time:** 2.3 s (Llama 3.2) and 4.1 s (Gemma 3), against 10.1 s and 12.2 s for Vanilla RAG.
 - **End to end:** because selection costs almost nothing, v2 was 2.9–4.3 times faster than Vanilla RAG. CAS v1 was slower than Vanilla RAG, because of its NLI step.
 
+### 5.8 Study 6: a powered two-dataset test (pre-registered)
+
+The study ran in full on Ollama 0.40.13. Its decisions are in Table 2 and its tests in Table 5; Fig. 10 shows the estimates.
+
+**Table 5. Study 6: confirmatory tests** (method minus comparator; 95% bootstrap CIs; p is Holm-corrected within each family: primary, 8 tests; secondary, 12 tests). H5 compares selections, which do not depend on the model, so its one value per comparator is in the Llama 3.2 column.
+
+| H | Data | Method vs comparator | Endpoint | Llama 3.2 | Gemma 3 | Decision |
+|---|---|---|---|---|---|---|
+| H1 | HotpotQA | v2 vs Vanilla RAG | Accuracy | +0.047 [+0.014, +0.080], p = 0.021 | +0.059 [+0.026, +0.091], p = 0.005 | **supported** |
+| H2 | HotpotQA | v2 vs Vanilla RAG | Wrong answers | −0.083 [−0.116, −0.051], p < 0.001 | −0.107 [−0.139, −0.076], p < 0.001 | **supported** |
+| H3 | HotpotQA | v2 vs Vanilla RAG | Accuracy (margin −0.05) | CI lower bound +0.014 | +0.026 | **supported** |
+| H4 | HotpotQA | v2 vs Reranker top-3 | Accuracy | +0.113 [+0.080, +0.144], p = 0.001 | +0.100 [+0.067, +0.131], p = 0.001 | **supported** |
+| H5 | HotpotQA | v2 vs Reranker top-3 | Evidence F1 | +0.089 [+0.069, +0.109], p = 0.001 | — | **supported** |
+| H5 | HotpotQA | v2 vs BM25 top-3 | Evidence F1 | +0.126 [+0.109, +0.144], p = 0.001 | — | |
+| H6 | HotpotQA | v2 + fallback vs Vanilla RAG | Accuracy | +0.067 [+0.036, +0.099], p = 0.001 | +0.091 [+0.061, +0.121], p = 0.001 | **supported** |
+| H1 | MuSiQue | v2 vs Vanilla RAG | Accuracy | +0.015 [−0.035, +0.070], p = 1.0 | +0.010 [−0.050, +0.065], p = 1.0 | not supported |
+| H2 | MuSiQue | v2 vs Vanilla RAG | Wrong answers | −0.155 [−0.225, −0.090], p < 0.001 | −0.140 [−0.215, −0.070], p = 0.003 | **supported** |
+| H3 | MuSiQue | v2 vs Vanilla RAG | Accuracy (margin −0.05) | CI lower bound −0.035 | −0.050 | not supported |
+| H4 | MuSiQue | v2 vs Reranker top-3 | Accuracy | +0.045 [−0.005, +0.095], p = 0.24 | +0.020 [−0.035, +0.075], p = 0.59 | not supported |
+| H5 | MuSiQue | v2 vs Reranker top-3 | Evidence F1 | −0.062 [−0.097, −0.028], p = 0.002 | — | not supported |
+| H5 | MuSiQue | v2 vs BM25 top-3 | Evidence F1 | +0.042 [+0.015, +0.067], p = 0.015 | — | |
+| H6 | MuSiQue | v2 + fallback vs Vanilla RAG | Accuracy | +0.045 [0.000, +0.090], p = 0.24 | +0.070 [+0.025, +0.115], p = 0.026 | not supported |
+
+**HotpotQA: every hypothesis supported, including H2, which was uncertain for Gemma 3.**
+- **Evidence.** v2 reached evidence F1 0.719, against 0.630 for the reranker, 0.593 for BM25 top-3 and 0.340 for Vanilla RAG. It kept every supporting passage for 86.3% of questions, against 59.0% and 50.4% for the top-3 filters.
+- **Accuracy.** v2 was the most accurate single-call method for both models:
+  - Llama 3.2: 0.554, against 0.507 for Vanilla RAG and 0.441 for the reranker;
+  - Gemma 3: 0.470, against 0.411 and 0.370.
+- **Wrong answers.** They fell from 0.454 to 0.371 (Llama 3.2) and from 0.480 to 0.373 (Gemma 3). Abstention rose by 0.036 and 0.049 (exploratory; Holm p = 0.004 and 0.003).
+- **The fallback.** It added a second call on 7.4% (Llama 3.2) and 15.7% (Gemma 3) of questions. It raised accuracy to 0.574 and 0.503, +0.020 and +0.033 over v2 (exploratory; Holm p = 0.003 and 0.002). It still gave fewer wrong answers than Vanilla RAG (0.400 and 0.417).
+- **Study 5 replicated.** Study 5's non-significant accuracy gains (+0.065 and +0.055 at n = 200) replicated at n = 700 with similar sizes (+0.047 and +0.059). The H4 gain over the reranker repeated study 5's exploratory result (+0.105 and +0.095).
+
+**MuSiQue: no accuracy gain, but far fewer wrong answers.**
+- **Evidence.** v2 kept every supporting paragraph for 40.0% of questions, against 20.5% for the reranker and 8.0% for BM25 top-3. Its F1 (0.447) was below the reranker's (0.509), because it kept 6.3 of 20 paragraphs where the reranker kept 3.
+- **Accuracy.** Accuracy was low for every method (0.12–0.23), and v2 did not differ from Vanilla RAG (+0.015 and +0.010).
+- **Wrong answers.** v2 cut them sharply, from 0.595 to 0.440 (Llama 3.2) and from 0.500 to 0.360 (Gemma 3). The models abstained instead: abstention was 0.395 and 0.470, against 0.255 and 0.340. This was H2, predicted *not* to be supported. The prediction was wrong.
+- **Non-inferiority (H3).** It failed for Gemma 3 by the narrowest margin: the CI lower bound was exactly −0.050, and the rule required a value above −0.05.
+- **The fallback.** It raised accuracy to 0.195 and 0.230, significantly above Vanilla RAG for Gemma 3 only. It also brought wrong answers back to Vanilla RAG's level (0.600 and 0.525).
+- **The pilot overestimated v2's harm.** In the 60-question pilot, v2 had been 0.133 less accurate than Vanilla RAG for Llama 3.2. In the study it was 0.015 more accurate. Vanilla RAG's own accuracy differed between the two samples (0.267 in the pilot, 0.150 in the study), so the pilot's estimate was mostly sampling noise.
+
+**Cost.**
+- **Selection:** v2 selected in 2.7 ms (HotpotQA) and 6.7 ms (MuSiQue) per question, against 0.15 s and 0.30 s for the reranker.
+- **Prompt length:** v2's prompts were 34–35% of Vanilla RAG's on HotpotQA (487–488 vs 1,402–1,429 tokens), and 36–37% on MuSiQue (898–911 vs 2,464–2,542).
+- **Generation time:**
+  - HotpotQA: 2.6 s (Llama 3.2) and 4.1 s (Gemma 3), against 10.0 s and 12.2 s for Vanilla RAG;
+  - MuSiQue: 6.0 s and 7.6 s, against 19.9 s and 21.5 s.
+- **The fallback's cost** includes its second call: 3.3 s and 5.9 s on HotpotQA, and 13.3 s and 17.2 s on MuSiQue.
+
+### 5.9 What each step of CAS v2 contributes (exploratory ablation)
+
+Each step of v2 was switched off in turn on the study 5 and study 6 data (`evaluation/run_v2_ablation.py`). This is a selection-level analysis with no model calls, chosen after the studies were analysed. The full-v2 selections it recomputes match the cached ones exactly.
+
+**Table 6. Ablation of CAS v2** (selection level; exploratory).
+
+| Data | Variant | Evidence F1 | All supporting passages kept | Passages kept | Copy attack: poison in prompt | Copy attack: true passage kept |
+|---|---|---|---|---|---|---|
+| HotpotQA (study 6, 700) | CAS v2 | 0.719 | 86.3% | 3.41 | | |
+| | without title links | 0.627 | 42.3% | 2.61 | | |
+| | without quarantine | 0.723 | 87.7% | 3.47 | | |
+| | trust threshold only | 0.631 | 42.9% | 2.65 | | |
+| MuSiQue (study 6, 200) | CAS v2 | 0.447 | 40.0% | 6.30 | | |
+| | without title links | 0.408 | 17.0% | 5.09 | | |
+| | without quarantine | 0.442 | 40.0% | 6.43 | | |
+| | trust threshold only | 0.403 | 17.0% | 5.18 | | |
+| Copy attack, no metadata (study 5, 150) | CAS v2 | | | | 0.7% | 0% |
+| | without title links | | | | 0% | 0% |
+| | without quarantine | | | | 100% | 96.7% |
+| | trust threshold only | | | | 100% | 22.0% |
+
+- **The title links supply the evidence recall.** Without them, full evidence falls by about half on both datasets (86.3% → 42.3% and 40.0% → 17.0%).
+- **The quarantine supplies the copy defence.** Without it, poison reaches the prompt for every copy-attack question. On clean data it costs little (86.3% vs 87.7% full evidence on HotpotQA).
+- **The two interact under attack.** The links pull in poisoned copies that keep the original's title (2.93 poison passages per question without the quarantine, against 1.42 for the trust threshold alone). The quarantine removes them. The steps are complementary, not redundant.
+
 ## 6. Discussion
 
-The results raise four questions:
+The results raise six questions:
 - Why did better evidence not give better answers (Sections 6.1–6.2)?
 - Why does CAS not stop poisoning (Section 6.3)?
 - Why do conflict notes not change answers (Section 6.4)?
 - What does the conflict graph cost (Section 6.5)?
 - Did fixing the diagnosed causes work (Section 6.9)?
+- Where does the fixed method work, and where does it stop (Section 6.10)?
 
-Sections 6.1, 6.2, 6.4 and 6.5 use exploratory analyses of the cached study 3 outputs, chosen after the results were known (`evaluation/run_discussion_analyses.py`, output `results/discussion_analyses.json`). They were not pre-registered. Section 6.9 likewise uses a post hoc analysis of study 5's selections (`evaluation/run_study5_mechanism.py`, output `results/study5_mechanism.json`). These analyses help explain the confirmatory results but do not replace them, and each would need its own confirmatory test.
+Sections 6.1, 6.2, 6.4 and 6.5 use exploratory analyses of the cached study 3 outputs, chosen after the results were known (`evaluation/run_discussion_analyses.py`, output `results/discussion_analyses.json`). They were not pre-registered. Section 6.9 likewise uses a post hoc analysis of study 5's selections (`evaluation/run_study5_mechanism.py`, output `results/study5_mechanism.json`), and Section 6.10 interprets study 6 with the exploratory ablation of Section 5.9. These analyses help explain the confirmatory results but do not replace them, and each would need its own confirmatory test.
 
 ### 6.1 Why better evidence did not give better answers
 
 In study 3, CAS doubled evidence F1 relative to Vanilla RAG, yet answered less accurately. This is not specific to CAS. Every filter, including BM25 top-3 and the reranker, was less accurate than Vanilla RAG for both models (Section 5.4).
 
-**Filtering helps when it keeps the evidence, and hurts when it drops it.** We split the 500 questions by whether a filter kept every supporting passage. Within each group, we compared the filter with Vanilla RAG on the same questions (Table 4).
+**Filtering helps when it keeps the evidence, and hurts when it drops it.** We split the 500 questions by whether a filter kept every supporting passage. Within each group, we compared the filter with Vanilla RAG on the same questions (Table 7).
 - **When a filter kept every supporting passage,** it was *more* accurate than Vanilla RAG in all ten filter–model combinations (+0.039 to +0.062). The 95% CI excluded zero in eight of them. After Holm correction over the 20 stratified tests, only one remained significant: BM25 top-3 with Llama 3.2 (Holm p = 0.044).
 - **When a filter dropped a supporting passage,** it was much less accurate (−0.129 to −0.258; all Holm p ≤ 0.003).
 - **Most of CAS's losses were in the second group.** Take the questions that Vanilla RAG answered correctly and CAS did not. CAS had dropped a supporting passage on 48 of 61 of them (Llama 3.2) and on 58 of 70 (Gemma 3).
 
-**Table 4. Accuracy by whether the filter kept every supporting passage** (study 3; exploratory; each filter is paired with Vanilla RAG on the same questions).
+**Table 7. Accuracy by whether the filter kept every supporting passage** (study 3; exploratory; each filter is paired with Vanilla RAG on the same questions).
 
 | Model | Filter | Supporting passages | n | Filter accuracy | Vanilla RAG accuracy | Difference [95% CI] |
 |---|---|---|---|---|---|---|
@@ -580,9 +744,9 @@ In study 3, CAS doubled evidence F1 relative to Vanilla RAG, yet answered less a
 
 ### 6.2 CAS fails safe: fewer wrong answers, more abstentions
 
-Accuracy counts an abstention and a wrong answer the same way. Table 5 separates them.
+Accuracy counts an abstention and a wrong answer the same way. Table 8 separates them.
 
-**Table 5. Answer outcomes on the 500 clean questions of study 3** (share of questions; exploratory).
+**Table 8. Answer outcomes on the 500 clean questions of study 3** (share of questions; exploratory).
 
 | Method | Llama 3.2 correct | Llama 3.2 wrong | Llama 3.2 abstained | Gemma 3 correct | Gemma 3 wrong | Gemma 3 abstained |
 |---|---|---|---|---|---|---|
@@ -686,7 +850,7 @@ Three observations point the same way:
    - Evidence F1 doubled while accuracy fell (Section 6.1).
    - Silent exposure fell in every Monte Carlo setting, while adoption did not significantly fall (Section 6.3).
    - Pre-generation methods should be judged on answers. At the selection level, the share of questions with every supporting passage kept tells more than F1.
-2. **Report correct, wrong and abstained answers separately.** Accuracy alone hides the trade shown in Table 5.
+2. **Report correct, wrong and abstained answers separately.** Accuracy alone hides the trade shown in Table 8.
 3. **Report end-to-end latency, including verification.** Generation time alone made CAS-NLI look about 3.5 times faster than Vanilla RAG. End to end, it was 2.2–2.6 times slower.
 4. **Fix the analysis before the data exist.**
    - Pre-registration made the negative results interpretable, because no endpoint could be chosen after the fact.
@@ -756,6 +920,40 @@ Study 5 tested four of the recommendations together, on questions that no earlie
   - It has no answer to diverse poison that is not a copy.
   - Against such poison, source metadata remained the only effective tool in our studies. Under the written attack, the source filter left 11.3% and 14.0% adoption, against 30.7% and 33.3% for Vanilla RAG. This comparison is descriptive, not a pre-registered test. It is valid because Vanilla RAG ignores metadata and both conditions use the same passages, so Vanilla RAG's condition A results also stand for condition B.
 
+### 6.10 What study 6 adds: where the method works, and where it stops
+
+**1. On HotpotQA, the evidence-recall diagnosis is now confirmed at the answer level.**
+- Section 6.1 estimated, from study 3, that a filter would need to keep every supporting passage for about 74–80% of questions to match Vanilla RAG's accuracy.
+- v2 kept them for 86.3% in study 6, and it was significantly *more* accurate than Vanilla RAG.
+- The reranker kept them for 59.0%, and it was less accurate than Vanilla RAG.
+- The ablation (Section 5.9) attributes most of the recall to the title links.
+- So the lever that the diagnosis identified is the one that moved the answers.
+
+**2. v2 dominates Vanilla RAG on both datasets, though only partly significantly.**
+- In point estimates, v2 gave more correct answers *and* fewer wrong answers than Vanilla RAG, for both models on both datasets (Section 5.8).
+- It therefore scores higher under any cost of a wrong answer: +1 for correct, 0 for an abstention, −*c* for wrong, for any *c* ≥ 0. This is unlike CAS v1 in study 3, which beat Vanilla RAG only when *c* > 0.44–0.76 (Section 6.2).
+- Among the questions it answered, v2 was right more often than Vanilla RAG in all four cases. These figures are computed from the shares in Section 5.8:
+  - HotpotQA: 0.599 vs 0.527 (Llama 3.2) and 0.558 vs 0.462 (Gemma 3);
+  - MuSiQue: 0.273 vs 0.201 and 0.321 vs 0.242.
+- On MuSiQue, only the reduction in wrong answers is statistically supported. The accuracy differences are not.
+
+**3. On MuSiQue, the lever does not reach far enough.**
+- v2 kept the full evidence chain for 40.0% of questions, far below the level at which filtering pays off in accuracy.
+- The later hops of a MuSiQue question are linked to it through an intermediate answer, not through shared words or a named title.
+- What v2 does on MuSiQue is what CAS v1 did on HotpotQA (Section 6.2): when the evidence is incomplete, the model abstains instead of guessing.
+- Two cheap remedies did not close this gap in development (Section 4.8). It probably needs a retriever that follows bridge entities, such as one trained for multi-hop retrieval or one that decomposes the question. We did not test either.
+
+**4. The fallback is a dial, not a free gain.**
+- On HotpotQA, asking again after an abstention added accuracy (+0.020 and +0.033 over v2) and kept wrong answers below Vanilla RAG's.
+- On MuSiQue, it recovered more accuracy, but it also brought wrong answers back to Vanilla RAG's level. When v2's abstentions were asked again with the wider pool, only 7.6% (Llama 3.2) and 12.8% (Gemma 3) became correct answers, while 40.5% and 35.1% became wrong ones (computed from the shares in Section 5.8).
+- So v2 alone suits settings where a wrong answer is costly, and v2 + fallback suits settings where coverage matters more.
+
+**5. A small pilot misled the predictions, and pre-registration made that visible.**
+- The 60-question pilot made v2 look clearly harmful on MuSiQue for Llama 3.2 (−0.133). We therefore predicted that H2 would fail.
+- On 200 questions, v2 was level in accuracy and significantly reduced wrong answers.
+- Because the prediction was written down, the error shows. Readers can see that our expectations, not the data, were wrong.
+- Pilot estimates at n = 60 should inform the plan's direction, not its predictions of effect size.
+
 ## 7. Threats to Validity
 
 **Internal validity.**
@@ -766,23 +964,26 @@ Study 5 tested four of the recommendations together, on questions that no earlie
   - H5 therefore tests whether v2 generalises to new questions, not to a new attack.
   - The written attack is the only out-of-family test, and the one test where v2's gain turned out to be incidental.
 - **The study 5 mechanism analysis (Section 6.9) is post hoc.**
+- **v2's settings were chosen on HotpotQA data** (studies 1–3). Study 6's HotpotQA result is therefore a replication on fresh questions from the same distribution. MuSiQue is the out-of-distribution test, and there v2 did not raise accuracy.
+- **The abstention fallback was chosen after the study 6 pilot**, on development data: study 5's clean questions and the MuSiQue pilot. Study 6 is its only test so far.
 - **The Ollama runtime changed between studies.** It moved from 0.40.12 to 0.40.13 between study 2 and study 3 (Section 4.3), with the same model weights. Comparisons within a study are unaffected, because every method in a study ran on the same version. Comparisons of absolute accuracy across studies could be affected.
 
 **Construct validity.**
-- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 5: a correct paraphrase that does not contain the gold string counts as wrong.
+- Accuracy and adoption are string-match metrics. Human validation is in progress (**[HV]**). The same applies to the "wrong" category in Table 8: a correct paraphrase that does not contain the gold string counts as wrong.
 - Silent exposure (study 4) is a selection-level proxy. E4 suggests that, for small models, a conflict note does not change adoption, so the proxy may overstate the value of marking.
 - **The written attack (study 5) uses one attacker model and one prompt.**
   - The prompt adds two sentences to PoisonedRAG's.
   - 17% of the sampled questions were skipped because the attacker failed, so the attacked set is conditional on the attacker's success.
   - An attacker that diversifies its texts would remove v2's incidental gain (Section 6.9).
   - The attacker, Llama 3.1 8B, belongs to the same model family as one answering model, Llama 3.2 3B.
+- **On MuSiQue, accuracy was low for every method (0.12–0.23).** The answer-level comparisons there are close to a floor, and they may not carry over to models that reason better over long contexts.
 
 **External validity.**
 - All generators are 3–8B open models run on CPU. Larger models may use conflict notes differently.
 - The poisoning studies use HotpotQA only.
 - The provenance scores are synthetic, because no benchmark we could access carries real source-reliability labels.
 - Self-RAG [10] and CRAG [11] were not re-implemented.
-- v2's link rule uses HotpotQA's passage titles. A production retriever may not supply titles in the same form.
+- v2's link rule uses the passage titles that HotpotQA and MuSiQue provide. Both are built from Wikipedia. A production retriever may not supply titles in the same form.
 - In study 5, CAS v1 was not run under the written attack or with metadata, to bound CPU time.
 
 **Statistical conclusion validity.**
@@ -790,41 +991,42 @@ Study 5 tested four of the recommendations together, on questions that no earlie
 - The confirmatory families are Holm-corrected.
 - The Monte Carlo study reports question-level CIs only. Its run count reduces simulation noise, not sampling error.
 - Study 5's clean set is small (n = 200). Its accuracy differences have 95% CIs about ±0.05 wide, so differences of 0.055–0.065 did not survive Holm correction over 20 tests. The plan anticipated this for Gemma 3 (H3, H9).
-- The analyses in Sections 6.1, 6.2, 6.4, 6.5 and 6.9 were chosen after the results were known. Their tests are Holm-corrected within each analysis, but the set of analyses was not fixed in advance. The groups in Table 4 are defined by each method's own selection, so they are not randomly assigned.
+- Study 6's MuSiQue sample is small (n = 200). There, H3 failed for Gemma 3 with a CI lower bound exactly at the −0.05 margin, so a slightly different sample could have reversed this decision.
+- The analyses in Sections 5.9, 6.1, 6.2, 6.4, 6.5, 6.9 and 6.10 were chosen after the results were known. Their tests are Holm-corrected within each analysis, but the set of analyses was not fixed in advance. The groups in Table 7 are defined by each method's own selection, so they are not randomly assigned.
 
 **Pre-registration.**
 - The plans are hash-stamped in the outputs but were not deposited in a public registry.
-- Git history independently confirms that the plan came first only for studies 2 and 3, and partly for study 5.
+- Git history independently confirms that the plan came first for studies 2, 3 and 6, and partly for study 5. For study 6, the runner itself refused to start until the plan was committed.
   - For studies 1 and 4, the plan first appears in the same commit as the benchmark or the outputs.
   - For study 5, git confirms a first version of the plan before any data. It confirms the final version before the benchmark and every answer, but not before the first attacker outputs (Section 4.5).
 - Future studies should be registered publicly before data generation.
 
 ## 8. Conclusion
 
-Conflict-aware pre-generation verification makes two claims: it selects better evidence, and it protects generation from conflicting or poisoned passages. Our evaluation partly supports the first claim. It also shows precisely why the second fails with current components.
+We asked whether conflict-aware verification before generation helps retrieval-augmented generation. We answered it in six pre-registered studies, with the analysis fixed before the data existed.
 
-**Clean retrieval.** Conflict-preserving CAS selected significantly more precise evidence than Vanilla RAG and cut prompts to about 28% of their length. Conflict preservation also outperformed contradiction penalties.
+**The original design did not work, for four measurable reasons.**
+- Conflict-preserving CAS selected more precise evidence than Vanilla RAG and cut prompts to about 28% of their length. But it did not improve answers, either in the exploratory comparison or at n = 500 (study 3).
+- In poisoning studies 1 and 2, it did not reduce poison adoption (differences −0.055 to +0.030, all Holm p = 1.0). A plain source filter did.
+- A Monte Carlo study of more than three million selections, and the exploratory analyses, traced these results to four causes. They are listed in the table below.
 
-**At scale.** In a pre-registered replication on 500 clean questions, CAS selected significantly better evidence than Vanilla RAG and BM25, but not better than a cross-encoder reranker. It did not improve answer accuracy.
+**A redesign built from those reasons works where the diagnosis applies.** CAS v2 changes one thing per cause and needs no NLI model.
 
-**Why, and what it does instead.** Exploratory analyses explain the gap. Filtering helped when it kept every supporting passage and hurt when it dropped one, and CAS dropped one for nearly half of the questions. CAS also gave significantly fewer wrong answers than Vanilla RAG (−0.086 and −0.090), mostly by abstaining when its selection did not contain the answer. Where a wrong answer costs more than no answer, that trade may favour CAS. This needs a confirmatory test.
-
-**Poisoning.** In pre-registered poisoning studies 1 and 2, CAS did not significantly reduce poison adoption relative to Vanilla RAG (differences −0.055 to +0.030, all Holm p = 1.0). When source metadata were available, a plain source filter performed significantly better.
-
-**Causes.** A pre-registered Monte Carlo study of more than three million selection runs traced the poisoning result to three measurable causes. The exploratory analyses added a fourth. Each points to a concrete fix, and study 5 tested the fixes on fresh questions:
-
-| Cause | Fix in CAS v2 | Study 5 result (pre-registered) |
+| Cause (studies 1–4) | Fix in CAS v2 | Pre-registered result (studies 5–6) |
 |---|---|---|
-| The agreement signal rewards poisoned near-duplicates | No agreement term; edited copies are quarantined | Copy attack stopped (0% adoption, against 27–34% for Vanilla RAG), but the true passage was removed too; accuracy 0.073 |
-| Provenance, entered as a soft weight, cannot outweigh relevance | Provenance as a gate | Equal to a plain source filter; no gain over it |
-| The NLI detector catches fewer than 10% of the conflicts that matter, at 20–35 s per question | No NLI graph | Selection in 3 ms; v2 faster than Vanilla RAG end to end |
-| Dropping a supporting passage costs more than keeping a distractor | Keep passages linked by title | Every supporting passage kept for 91% of questions (v1: 48.5%); accuracy +0.135 over v1, non-inferior to Vanilla RAG, superiority not established |
+| Dropping a supporting passage costs more than keeping a distractor | Keep passages linked by title | All supporting passages kept for 86–91% of HotpotQA questions (v1: 48.5%). Accuracy above Vanilla RAG (+0.047, +0.059) and the reranker (+0.100, +0.113) at n = 700 |
+| The NLI detector catches fewer than 10% of conflicts, at 20–35 s per question | No NLI graph | Selection in 3–7 ms. 2.8–3.8 times faster than Vanilla RAG end to end, with prompts about a third as long |
+| The agreement signal rewards poisoned near-duplicates | No agreement term; edited copies quarantined | Copy attack blocked (0% adoption, against 27–34% for Vanilla RAG), but by abstaining: the true passage is quarantined too |
+| Provenance, as a soft weight, cannot outweigh relevance | Provenance as a gate | Equal to a plain source filter; no gain over it |
 
-**What remains open.** The redesign fixed what the diagnosis covered: evidence recall, cost and copy-based poisoning. It did not supply what the diagnosis said was missing.
-- **A way to tell the original from the copy.** Without one, v2 defends by abstaining rather than by answering correctly.
-- **A defence against diverse, non-copy poison.** v2's gain against the LLM-written attack came only from the attacker repeating itself. Where metadata exist, a source filter does as well as v2.
+**Across both datasets, v2 gave fewer wrong answers than Vanilla RAG** (−0.083 to −0.155, all Holm p ≤ 0.003). In point estimates, it also gave more correct ones. An abstention fallback adds accuracy on HotpotQA (+0.067 and +0.091 over Vanilla RAG), at some cost in wrong answers.
 
-A conflict-aware verifier that does better than a source filter will need a detector, or provenance signals, that current components do not provide.
+**The method has clear limits, and each was tested.**
+- On MuSiQue's 2–4-hop questions, v2 kept the full evidence chain for only 40% of questions and did not raise accuracy.
+- It cannot tell an original passage from its edited copy, so it protects against copies by abstaining.
+- It has no defence against varied poison that is not a copy.
+
+Closing these gaps will need retrieval that follows bridge entities across hops, and provenance signals that current benchmarks do not carry. Every plan, cached model output and per-question result is released, so each claim above can be checked.
 
 ## Data and Code Availability
 
@@ -844,15 +1046,16 @@ All code, pre-registrations, benchmarks, cached NLI and LLM outputs, per-questio
 
 | Manuscript figure | Content | Repository file |
 |---|---|---|
-| Fig. 1 | CAS pipeline | **[to be drawn]** |
+| Fig. 1 | CAS v1 and CAS v2 pipelines | `fig00_pipeline` |
 | Fig. 2 | Clean evidence selection; paired differences | `fig01_precision_recall_tradeoff`, `fig02_paired_differences` |
 | Fig. 3 | LLM answer quality and cost | `fig08_llm_answer_quality`, `fig10_llm_cost_tradeoff` |
 | Fig. 4 | Study 1 | `fig12_poison_study1` |
 | Fig. 5 | Study 2 | `fig13_poison_study2` |
 | Fig. 6 | Study 3 | `fig16_clean500` |
-| Fig. 7 | Detector accuracy vs false alarms vs cost | `fig14_detector_tradeoff` |
-| Fig. 8 | Monte Carlo study | `fig15_montecarlo` |
+| Fig. 7 | Monte Carlo study | `fig15_montecarlo` |
+| Fig. 8 | Detector accuracy vs false alarms vs cost | `fig14_detector_tradeoff` |
 | Fig. 9 | Study 5: CAS v2 on fresh questions | `fig17_study5` |
+| Fig. 10 | Study 6: CAS v2 on 700 HotpotQA and 200 MuSiQue questions | `fig18_study6` |
 
 ## References
 

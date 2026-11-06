@@ -1,6 +1,6 @@
 # Journal figures: CAS pre-generation verification
 
-Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all seventeen figures and `tables.md`, then checks the plotted values against the results files and exits with an error if any differ (last run: **PASS, 17 figures**).
+Every number in this folder is measured. The figures are drawn from the files in `evaluation/results/` listed in the mapping table below, which the evaluation scripts produce by running the CAS code in `python/` on the datasets in `data/`. Nothing is typed in by hand. `make_all.py` rebuilds all nineteen figures and `tables.md`, then checks the plotted values against the results files and exits with an error if any differ (last run: **PASS, 19 figures**).
 
 ## Reproduce
 
@@ -19,14 +19,15 @@ py evaluation/run_study5.py            # study 5: 200 clean + 150 x 2 attacks, 2
 py evaluation/run_study5_mechanism.py  # exploratory: which CAS v2 step removed what (no LLM)
 py evaluation/dev_study6.py            # study 6 pilot: CAS v2 on 200 held-out MuSiQue questions (answers for 60)
 py evaluation/dev_study6_variants.py   # study 6 development: hop expansion, cross-encoder chain, abstention fallback
-py evaluation/run_study6.py            # study 6: 700 HotpotQA + 200 MuSiQue, 2 LLMs; ~12 h on CPU; waits for the
+py evaluation/run_study6.py            # study 6: 700 HotpotQA + 200 MuSiQue, 2 LLMs; ~10.5 h on CPU; waits for the
                                        # plan to be committed and stops if Ollama is not 0.40.13
+py evaluation/run_v2_ablation.py       # exploratory: CAS v2 with each step switched off (selection level, no LLM)
 py journal_figures/make_all.py          # figNN_*.png (600 dpi) + .pdf + data/figNN_*.csv + tables.md
 ```
 
 Environment:
 - Software: Python 3.14.6, PyTorch 2.15.0 (CPU), Sentence-Transformers 6.2.0, Transformers 5.21.0, numpy 2.5.1, pandas 3.0.3, matplotlib 3.11.0.
-- Ollama: 0.40.12 for the exploratory answers and studies 1–2 (2026-10-29/30); 0.40.13 for studies 3 and 5 (from 2026-11-03, after an automatic update). The version is not stored per response; this comes from Ollama's server logs. Model IDs (unchanged throughout): llama3.2 `a80c4f17acd5`, gemma3 `a2af6cc3eb7f`, llama3.1:8b `46e0c10c039e`.
+- Ollama: 0.40.12 for the exploratory answers and studies 1–2 (2026-10-29/30); 0.40.13 for studies 3, 5 and 6 (from 2026-11-03, after an automatic update). The version is not stored per response; this comes from Ollama's server logs. Model IDs (unchanged throughout): llama3.2 `a80c4f17acd5`, gemma3 `a2af6cc3eb7f`, llama3.1:8b `46e0c10c039e`.
 - Hardware: Intel CPU, 15 GB RAM, **no GPU**. Llama 3.1 8B ran at about 48 prompt tokens/s and 9 generated tokens/s.
 - Statistics: seed 42; 2,000 bootstrap resamples; 10,000 sign-flip permutations; Holm correction within each family of tests.
 
@@ -68,6 +69,7 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 
    No pre-registered decision changed. The as-run files are archived in `evaluation/results/as_run_2026-11-03/`. Details and the impact on every test are in `evaluation/DEVIATIONS.md`.
 7. **CAS v2 and study 5 (2026-11-04).** A redesign that addresses the four measured causes of CAS's failures, tested in a fifth pre-registered study on fresh questions (`evaluation/PREREGISTRATION_study5.md`; Fig. 17). Studies 1–4 and their figures are unchanged.
+8. **Study 6 (2026-11-05).** A powered, pre-registered test of the frozen CAS v2 on 700 fresh HotpotQA and 200 MuSiQue questions, with an abstention-fallback arm (Fig. 18). Fig. 0 draws the two pipelines.
 
 ## Figure → data mapping
 
@@ -89,7 +91,9 @@ The only tuned quantity is the NLI contradiction threshold θ, used by the two �
 | 14 | `fig14_detector_tradeoff.py` | `data/fig14_*.csv` | `detector_probe.json` (from `evaluation/run_detector_probe.py`) |
 | 15 | `fig15_montecarlo.py` | `data/fig15_*.csv` | `montecarlo_summary.json`, `montecarlo_e1/e2/e3.csv` (from `evaluation/run_montecarlo.py`) |
 | 16 | `fig16_clean500.py` | `data/fig16_*.csv` | `clean500_summary.json` (from `evaluation/run_clean500.py`) |
+| 0 | `fig00_pipeline.py` | `data/fig00_*.csv` (the boxes) | schematic of `evaluation/run_evaluation.py` and `evaluation/cas_v2.py` |
 | 17 | `fig17_study5.py` | `data/fig17_*.csv` | `study5_summary.json` → `descriptive` (from `evaluation/run_study5.py`) |
+| 18 | `fig18_study6.py` | `data/fig18_*.csv` | `study6_summary.json` → `descriptive` (from `evaluation/run_study6.py`) |
 
 Every table cell is in `tables.md` (Tables 1–10).
 
@@ -319,6 +323,23 @@ Every table cell is in `tables.md` (Tables 1–10).
     - Where all three texts reached the prompt (117 questions), adoption was close to Vanilla RAG's: 22.2% vs 25.6%, and 26.5% vs 28.2%.
   - **H8 not supported:** with noisy metadata, CAS v2 matches the source filter (10.7% vs 11.3%, 12.7% vs 14.0%).
 
+**Fig. 18. Pre-registered study 6: CAS v2 on 700 HotpotQA and 200 MuSiQue questions** (`evaluation/PREREGISTRATION_study6.md`, SHA-256 `0f1fc82b…`, committed in `a5cc6153` before the samples were drawn; `evaluation/run_study6.py`).
+- **Setup.**
+  - Clean retrieval; v2 frozen as in study 5.
+  - Models: Llama 3.2 3B (filled markers) and Gemma 3 4B (open markers). Error bars are 95% bootstrap CIs.
+  - Holm correction within a primary family (8 tests) and a secondary family (12 tests).
+- **(a, b) HotpotQA: every hypothesis supported.**
+  - Evidence F1: 0.719 for v2, against 0.630 for the reranker and 0.593 for BM25 top-3. Every supporting passage kept for 86.3% of questions.
+  - Accuracy: v2 0.554 and 0.470, against 0.507 and 0.411 for Vanilla RAG (+0.047, Holm p = 0.021; +0.059, Holm p = 0.005) and 0.441 and 0.370 for the reranker.
+  - Wrong answers: −0.083 and −0.107.
+  - v2 + fallback: 0.574 and 0.503.
+- **(c, d) MuSiQue: no accuracy gain, fewer wrong answers.**
+  - Evidence: every supporting paragraph kept for 40.0% of questions; F1 below the reranker's (0.447 vs 0.509).
+  - Accuracy: no difference from Vanilla RAG (+0.015, +0.010).
+  - Wrong answers fell from 0.595 to 0.440 and from 0.500 to 0.360 (Holm p < 0.001 and 0.003). This hypothesis was predicted *not* to be supported.
+
+**Fig. 0 (manuscript Fig. 1). The CAS v1 and CAS v2 pipelines** (schematic, `fig00_pipeline.py`). Each v2 step is labelled with the measured cause of v1's failures that it addresses (C1–C4). The dashed arrow is the abstention fallback.
+
 ## Summary of evidence
 
 | Claim | Supported? |
@@ -348,6 +369,10 @@ Every table cell is in `tables.md` (Tables 1–10).
 | CAS v2 answers better than Vanilla RAG (study 5, H9), or gives fewer wrong answers (H3) | **Not supported**: higher accuracy (+0.065, +0.055) and fewer wrong answers (−0.095, −0.080), but significant after Holm only for Llama's wrong answers (Fig. 17b) |
 | CAS v2 stops the copy attack without metadata (study 5, H5) | **Supported**: 0% adoption against 27–39%. But the true passage is removed too, and accuracy falls to 0.073 (Fig. 17c) |
 | CAS v2 beats a plain source filter when metadata exist (study 5, H6, H8) | **Not supported**: no difference under either attack (Fig. 17c–d) |
+| CAS v2 is more accurate than Vanilla RAG and the reranker on fresh HotpotQA questions (study 6, H1, H4) | **Supported** at n = 700: +0.047 and +0.059 over Vanilla RAG, +0.113 and +0.100 over the reranker (Fig. 18b) |
+| CAS v2 gives fewer wrong answers than Vanilla RAG (study 6, H2) | **Supported on both datasets**: −0.083 and −0.107 (HotpotQA), −0.155 and −0.140 (MuSiQue) (Fig. 18b, d) |
+| CAS v2 is more accurate than Vanilla RAG on multi-hop MuSiQue (study 6, H1) | **Not supported**: +0.015 and +0.010; only 40% of questions keep the full evidence chain (Fig. 18c, d) |
+| An abstention fallback adds accuracy (study 6, H6) | **HotpotQA: supported** (+0.067, +0.091 over Vanilla RAG). **MuSiQue: not supported** (significant for Gemma only), and wrong answers return to Vanilla RAG's level |
 | CAS v2 resists an LLM-written attack without metadata (study 5, H7) | **Supported as pre-registered (−0.093), against our prediction.** Post hoc, the gain is limited to the 22% of questions where the attacker's texts were near-copies of each other (Fig. 17d) |
 
 ## Limitations

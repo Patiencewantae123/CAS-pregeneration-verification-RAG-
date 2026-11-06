@@ -52,7 +52,7 @@ Every result in `paper/manuscript.md` comes from the scripts in `evaluation/`; e
 | Sentence-Transformers | 6.2.0 |
 | Transformers | 5.21.0 |
 | numpy / pandas / pyarrow / matplotlib | 2.5.1 / 3.0.3 / 24.0.0 / 3.11.0 |
-| Ollama | 0.40.12 for the exploratory answers and studies 1–2; 0.40.13 for studies 3 and 5 (an automatic update on 2026-11-03, between studies 2 and 3) |
+| Ollama | 0.40.12 for the exploratory answers and studies 1–2; 0.40.13 for studies 3, 5 and 6 (an automatic update on 2026-11-03, between studies 2 and 3) |
 
 ```bash
 pip install -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
