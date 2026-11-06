@@ -7,7 +7,7 @@ in them is typed by hand.
   C  study 5 poisoning: adoption and accuracy under the copy and written attacks (n = 150)
   D  cost per question: selection time, prompt tokens, generation time (studies 5 and 6)
 
-Markers: † = significant in the pre-registered test against Vanilla RAG (Holm p < 0.05); bold = best in the column.
+Numbered as in the manuscript (Tables 2-5). Markers: † = significant in the pre-registered test against Vanilla RAG (Holm p < 0.05); bold = best in the column.
 
 Usage:  py evaluation/make_paper_tables.py
 Output: paper/main_tables.md
@@ -69,7 +69,7 @@ for ds, label in (("hotpotqa", "HotpotQA"), ("musique", "MuSiQue")):
             header.append(f"{label} {mlabel} {'acc.' if metric == 'accuracy' else 'wrong'} {arrow}")
             vals = [d6[(ds, model, m, metric)] for m in methods]
             cols.append(cells(vals, best, [sig6(ds, model, m, metric) for m in methods]))
-out.append("**TABLE_MAIN_A. Main results: answers on clean retrieval (study 6, pre-registered; HotpotQA n = 700, "
+out.append("**Table 2. Main results: answers on clean retrieval (study 6, pre-registered; HotpotQA n = 700, "
            "MuSiQue n = 200).** Share of questions answered correctly (acc.) and wrongly; the rest are abstentions. "
            "† significant against Vanilla RAG in the pre-registered test (Holm p < 0.05); bold = best in the column.\n")
 out.append(table(header, methods, cols))
@@ -86,7 +86,7 @@ for metric, label in (("f1", "Evidence F1 ↑"), ("full_evidence", "All supporti
     header.append(label)
     vals = [d5[("-", "-", "-", m, metric)] for m in methods]
     cols.append(cells(vals, "max" if metric == "f1" else "max", [False] * len(methods)))
-out.append("\n\n**TABLE_MAIN_B. Clean retrieval with every baseline (study 5, pre-registered; HotpotQA n = 200).** "
+out.append("\n\n**Table 3. Clean retrieval with every baseline (study 5, pre-registered; HotpotQA n = 200).** "
            "Bold = best in the column; for the full-evidence share, best among the filters, because Vanilla RAG keeps "
            "every passage by construction. † significant against Vanilla RAG in the pre-registered test "
            "(Holm p < 0.05).\n")
@@ -112,8 +112,8 @@ for attack, cond, ms in (("copy", "A", ["Vanilla RAG", "CAS v1", "CAS v2"]), ("c
 lines = ["| " + " | ".join(header) + " |", "|" + "---|" * len(header)]
 for j, (s, m) in enumerate(rows):
     lines.append("| " + " | ".join([s, m] + [c[j] for c in cols]) + " |")
-out.append("\n\n**TABLE_MAIN_C. Poisoning (study 5, pre-registered; n = 150 per setting).** Adoption: the fake answer "
-           "was given. Pre-registered decisions are in Table 2.\n")
+out.append("\n\n**Table 4. Poisoning (study 5, pre-registered; n = 150 per setting).** Adoption: the fake answer "
+           "was given. Pre-registered decisions are in Table 6.\n")
 out.append("\n".join(lines))
 
 # D. Cost per question
@@ -137,7 +137,7 @@ for ds, label in (("hotpotqa", "HotpotQA, study 6"), ("musique", "MuSiQue, study
         tok = " / ".join(f"{d6[(ds, mo, m, 'prompt_tokens')]:.0f}" for mo, _ in MODELS)
         gen = " / ".join(f"{d6[(ds, mo, m, 'wall_s')]:.1f}" for mo, _ in MODELS)
         lines.append(f"| {m} | {label} | {fmt_s(sel)} | {tok} | {gen} |")
-out.append("\n\n**TABLE_MAIN_D. Cost per question** (CPU only; means). Selection is the filter's own time; generation "
+out.append("\n\n**Table 5. Cost per question** (CPU only; means). Selection is the filter's own time; generation "
            "is the LLM call. For CAS v2 + fallback, prompt tokens and generation time include the second call when the "
            "model abstained.\n")
 out.append("\n".join(lines))

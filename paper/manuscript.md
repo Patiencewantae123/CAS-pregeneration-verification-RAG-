@@ -422,7 +422,7 @@ Tables 2–5 collect the main comparisons, with numbers generated from the resul
 **On HotpotQA, CAS v2 was the most accurate single-call method, and on both datasets it gave the fewest wrong answers** (Table 2).
 - **HotpotQA (700 fresh questions).** v2 answered correctly 0.554 of the time with Llama 3.2 and 0.470 with Gemma 3, against 0.507 and 0.411 for Vanilla RAG and 0.441 and 0.370 for the reranker.
 - **With the abstention fallback,** accuracy rose to 0.574 and 0.503.
-- **MuSiQue.** No method exceeded 0.23 accuracy. v2 matched Vanilla RAG in accuracy and cut wrong answers from 0.595 to 0.440 (Llama 3.2) and from 0.500 to 0.360 (Gemma 3).
+- **MuSiQue.** No method exceeded 0.23 accuracy. v2's accuracy did not differ significantly from Vanilla RAG's (0.165 vs 0.150 and 0.170 vs 0.160). Non-inferiority held for Llama 3.2 but not for Gemma 3, whose CI lower bound fell exactly on the −0.05 margin. v2 cut wrong answers from 0.595 to 0.440 (Llama 3.2) and from 0.500 to 0.360 (Gemma 3).
 
 **Study 5 compares every baseline, including the original design** (Table 3).
 - v2 was the most accurate method for both models.

@@ -1,4 +1,4 @@
-**TABLE_MAIN_A. Main results: answers on clean retrieval (study 6, pre-registered; HotpotQA n = 700, MuSiQue n = 200).** Share of questions answered correctly (acc.) and wrongly; the rest are abstentions. † significant against Vanilla RAG in the pre-registered test (Holm p < 0.05); bold = best in the column.
+**Table 2. Main results: answers on clean retrieval (study 6, pre-registered; HotpotQA n = 700, MuSiQue n = 200).** Share of questions answered correctly (acc.) and wrongly; the rest are abstentions. † significant against Vanilla RAG in the pre-registered test (Holm p < 0.05); bold = best in the column.
 
 | Method | HotpotQA Llama 3.2 acc. ↑ | HotpotQA Llama 3.2 wrong ↓ | HotpotQA Gemma 3 acc. ↑ | HotpotQA Gemma 3 wrong ↓ | MuSiQue Llama 3.2 acc. ↑ | MuSiQue Llama 3.2 wrong ↓ | MuSiQue Gemma 3 acc. ↑ | MuSiQue Gemma 3 wrong ↓ |
 |---|---|---|---|---|---|---|---|---|
@@ -8,7 +8,7 @@
 | CAS v2 + fallback | **0.574†** | 0.400 | **0.503†** | 0.417 | **0.195** | 0.600 | **0.230†** | 0.525 |
 
 
-**TABLE_MAIN_B. Clean retrieval with every baseline (study 5, pre-registered; HotpotQA n = 200).** Bold = best in the column; for the full-evidence share, best among the filters, because Vanilla RAG keeps every passage by construction. † significant against Vanilla RAG in the pre-registered test (Holm p < 0.05).
+**Table 3. Clean retrieval with every baseline (study 5, pre-registered; HotpotQA n = 200).** Bold = best in the column; for the full-evidence share, best among the filters, because Vanilla RAG keeps every passage by construction. † significant against Vanilla RAG in the pre-registered test (Holm p < 0.05).
 
 | Method | Llama 3.2 acc. ↑ | Llama 3.2 wrong ↓ | Gemma 3 acc. ↑ | Gemma 3 wrong ↓ | Evidence F1 ↑ | All supporting kept ↑ |
 |---|---|---|---|---|---|---|
@@ -19,7 +19,7 @@
 | CAS v2 | **0.550** | **0.405†** | **0.450** | 0.440 | **0.744** | **0.910** |
 
 
-**TABLE_MAIN_C. Poisoning (study 5, pre-registered; n = 150 per setting).** Adoption: the fake answer was given. Pre-registered decisions are in Table 2.
+**Table 4. Poisoning (study 5, pre-registered; n = 150 per setting).** Adoption: the fake answer was given. Pre-registered decisions are in Table 6.
 
 | Setting | Method | Llama 3.2 adoption ↓ | Llama 3.2 acc. ↑ | Gemma 3 adoption ↓ | Gemma 3 acc. ↑ |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@
 |  | CAS v2 | 0.107 | 0.240 | 0.127 | 0.273 |
 
 
-**TABLE_MAIN_D. Cost per question** (CPU only; means). Selection is the filter's own time; generation is the LLM call. For CAS v2 + fallback, prompt tokens and generation time include the second call when the model abstained.
+**Table 5. Cost per question** (CPU only; means). Selection is the filter's own time; generation is the LLM call. For CAS v2 + fallback, prompt tokens and generation time include the second call when the model abstained.
 
 | Method | Data | Selection (s) | Prompt tokens (Llama 3.2 / Gemma 3) | Generation (s) (Llama 3.2 / Gemma 3) |
 |---|---|---|---|---|
