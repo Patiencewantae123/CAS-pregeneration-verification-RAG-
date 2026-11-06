@@ -2,6 +2,10 @@
 
 Reviewers will ask whether string matching measures answer quality. This folder checks that against human judgement.
 
+**The sample** (`make_sheet.py`): 150 responses from the studies behind the paper's confirmatory results. It includes 40 from study 6 HotpotQA, 20 from study 6 MuSiQue and 20 from study 5 clean retrieval, each stratified into automatic correct, wrong and abstain. It also includes 40 from study 5's attacks and 30 from study 2's, each half with and half without automatic poison adoption. Stratifying gives every label enough cases. κ therefore describes this stratified sample, not the raw rates in the studies. The sheet hides the study, the method and the automatic score.
+
+**Wrong answers** are not labelled directly. `score_agreement.py` derives them from your two labels (neither correct nor abstaining) and checks them against the automatic "wrong" category, which the net score in the paper depends on.
+
 ## How to label (about 2 hours)
 
 1. Open `annotation_sheet.csv` in Excel. **Do not open `annotation_key.csv`**: it holds the automatic scores, and the labelling must be blind.

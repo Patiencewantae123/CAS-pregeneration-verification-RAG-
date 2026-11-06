@@ -15,6 +15,7 @@ import pandas as pd
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LABELS = [("correct (1/0)", "auto_accuracy"), ("abstains (1/0)", "auto_abstain"),
+          ("wrong (derived: neither correct nor abstaining)", "auto_wrong"),
           ("gives_fake_answer (1/0, poison rows only)", "auto_adoption")]
 
 
@@ -28,6 +29,8 @@ def main():
     sheet = pd.read_csv(os.path.join(HERE, "annotation_sheet.csv"), encoding="utf-8-sig")
     key = pd.read_csv(os.path.join(HERE, "annotation_key.csv"))
     df = sheet.merge(key, on="row")
+    c, a = (pd.to_numeric(df[k], errors="coerce") for k in ("correct (1/0)", "abstains (1/0)"))
+    df["wrong (derived: neither correct nor abstaining)"] = (1 - c) * (1 - a)   # blank when either label is blank
     rng = np.random.default_rng(42)
     out = {}
     for human, auto in LABELS:

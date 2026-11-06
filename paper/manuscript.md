@@ -1,6 +1,6 @@
 # From Diagnosis to Confirmation: Lightweight Conflict-Aware Evidence Selection for Retrieval-Augmented Generation in Six Pre-Registered Studies
 
-*Draft v0.3, 2026-11-06. Placeholders in **[brackets]** must be filled from result files that do not yet exist. No placeholder may be filled by hand: each names the file and field it comes from.*
+*Draft v0.4, 2026-11-06. Placeholders in **[brackets]** must be filled from result files that do not yet exist. No placeholder may be filled by hand: each names the file and field it comes from.*
 
 ---
 
@@ -14,7 +14,7 @@
 
 ## Abstract
 
-Retrieval-augmented generation (RAG) passes irrelevant, contradictory and poisoned passages to the language model. Conflict-aware verification filters them before generation, but has rarely been tested in a way that allows a negative answer. We evaluated a conflict-aware synthesis framework (CAS) in six pre-registered studies with hash-stamped analysis plans, using 3–4B open models on CPU. Studies 1–4 (900 questions and 3.06 million simulated selections) found that the original design, which detects conflicts with a natural-language-inference (NLI) model, neither improved accuracy nor resisted poisoning. They traced this to four measurable causes: poisoned near-duplicates counted as agreement; provenance was too weak a weight; the NLI detector caught under 10% of conflicts at 20–35 s per question; and dropping a supporting passage cost more than keeping a distractor. We built CAS v2 from this diagnosis. It combines a provenance gate, an edited-copy quarantine, an agreement-free trust score and title-linked evidence expansion, without NLI. On 700 fresh HotpotQA questions (study 6), v2 was more accurate than Vanilla RAG (+0.047 and +0.059 for two models) and than a cross-encoder reranker (+0.100 and +0.113). It gave fewer wrong answers (−0.083 and −0.107) and ran 3–4 times faster than Vanilla RAG. An abstention fallback raised the gain over Vanilla RAG to +0.067 and +0.091 (all Holm-corrected p ≤ 0.021). On 200 MuSiQue questions, v2 cut wrong answers (−0.155 and −0.140) but did not improve accuracy. In study 5, v2 blocked copy-based poisoning completely, but by abstaining, and it matched a source filter rather than beating it.
+Retrieval-augmented generation (RAG) passes irrelevant, contradictory and poisoned passages to the language model. Conflict-aware verification filters them before generation, but has rarely been tested in a way that allows a negative answer. We evaluated a conflict-aware synthesis framework (CAS) in six pre-registered studies with hash-stamped analysis plans, using 3–4B open models on CPU. Studies 1–4 (900 questions and 3.06 million simulated selections) found that the original design, which detects conflicts with a natural-language-inference (NLI) model, neither improved accuracy nor resisted poisoning. They traced this to four measurable causes: poisoned near-duplicates counted as agreement; provenance was too weak a weight; the NLI detector caught under 10% of conflicts at 20–35 s per question; and dropping a supporting passage cost more than keeping a distractor. We built CAS v2 from this diagnosis. It combines a provenance gate, an edited-copy quarantine, an agreement-free trust score and title-linked evidence expansion, without NLI. On 700 fresh HotpotQA questions (study 6), v2 was more accurate than Vanilla RAG (+0.047 and +0.059 for two models) and than a cross-encoder reranker (+0.113 and +0.100). It gave fewer wrong answers (−0.083 and −0.107) and ran 2.9–3.8 times faster than Vanilla RAG. An abstention fallback raised the gain over Vanilla RAG to +0.067 and +0.091 (all Holm-corrected p ≤ 0.021). On 200 MuSiQue questions, v2 cut wrong answers (−0.155 and −0.140) but did not improve accuracy. In study 5, v2 blocked copy-based poisoning completely, but by abstaining, and it matched a source filter rather than beating it.
 
 **Keywords:** retrieval-augmented generation; evidence selection; knowledge conflicts; corpus poisoning; abstention; pre-registration.
 
@@ -48,7 +48,7 @@ This paper reports such a test, and then uses what it found. We make five contri
 3. **Confirmation of CAS v2 in two pre-registered studies on fresh questions.**
    - Study 5 (350 HotpotQA questions) covers clean retrieval, the copy attack, and an attack written by a separate LLM.
    - Study 6 (700 HotpotQA and 200 MuSiQue questions) was powered from study 5's variance. Its runner would not start until the analysis plan had been committed to git.
-   - On HotpotQA, v2 was more accurate than Vanilla RAG and a cross-encoder reranker, gave fewer wrong answers, and ran 3–4 times faster than Vanilla RAG.
+   - On HotpotQA, v2 was more accurate than Vanilla RAG and a cross-encoder reranker, gave fewer wrong answers, and ran 2.9–3.8 times faster than Vanilla RAG.
 4. **The limits of the method, stated in advance and confirmed.**
    - On MuSiQue's 2–4-hop questions, v2 cut wrong answers but did not raise accuracy.
    - Against copy attacks, it protects by abstaining.
@@ -267,7 +267,7 @@ The substitute rules were amended once (Amendment 1), before any method ran.
 - **Prompt tokens and latency.**
 - **Monte Carlo endpoints (study 4):** silent poison exposure (poison in the prompt with no conflict note), any exposure, and answer passage retained.
 
-The automatic accuracy, abstention and adoption labels are being validated against blind human labels on 150 stratified responses, with Cohen's κ [38] reported. **[HV: κ and 95% CI per label from `evaluation/human_eval/agreement.json`.]**
+The automatic accuracy, abstention, wrong-answer and adoption labels are being validated against blind human labels on 150 responses from studies 2, 5 and 6, stratified by study and by automatic outcome (`evaluation/human_eval/`). Cohen's κ [38] is reported for each label. **[HV: κ and 95% CI per label from `evaluation/human_eval/agreement.json`.]**
 
 ### 4.5 Statistical analysis
 
@@ -1233,12 +1233,18 @@ We asked whether conflict-aware verification before generation helps retrieval-a
 
 | Cause (studies 1–4) | Fix in CAS v2 | Pre-registered result (studies 5–6) |
 |---|---|---|
-| Dropping a supporting passage costs more than keeping a distractor | Keep passages linked by title | All supporting passages kept for 86–91% of HotpotQA questions (v1: 48.5%). Accuracy above Vanilla RAG (+0.047, +0.059) and the reranker (+0.100, +0.113) at n = 700 |
+| Dropping a supporting passage costs more than keeping a distractor | Keep passages linked by title | All supporting passages kept for 86–91% of HotpotQA questions (v1: 48.5%). Accuracy above Vanilla RAG (+0.047, +0.059) and the reranker (+0.113, +0.100) at n = 700 |
 | The NLI detector catches fewer than 10% of conflicts, at 20–35 s per question | No NLI graph | Selection in 3–7 ms. 2.8–3.8 times faster than Vanilla RAG end to end, with prompts about a third as long |
 | The agreement signal rewards poisoned near-duplicates | No agreement term; edited copies quarantined | Copy attack blocked (0% adoption, against 27–34% for Vanilla RAG), but by abstaining: the true passage is quarantined too |
 | Provenance, as a soft weight, cannot outweigh relevance | Provenance as a gate | Equal to a plain source filter; no gain over it |
 
 **Across both datasets, v2 gave fewer wrong answers than Vanilla RAG** (−0.083 to −0.155, all Holm p ≤ 0.003). In point estimates, it also gave more correct ones. An abstention fallback adds accuracy on HotpotQA (+0.067 and +0.091 over Vanilla RAG), at some cost in wrong answers.
+
+**Exploratory analyses support the scoring and qualify the mechanism** (Section 5.10).
+- Exact match and token F1 moved with accuracy on HotpotQA (+0.046 to +0.050).
+- Scoring a correct answer +1, an abstention 0 and a wrong answer −1, v2 beat Vanilla RAG on both datasets with both models (+0.130 to +0.170).
+- On HotpotQA, most of the gain came from reading: with the answer in both prompts, v2 was more accurate by +0.086 and +0.112.
+- v2's abstentions were not aimed at the questions that Vanilla RAG got wrong. They followed missing evidence. v2 therefore fails safe only in the sense that it declines when its filter has removed what it needs.
 
 **The method has clear limits, and each was tested.**
 - On MuSiQue's 2–4-hop questions, v2 kept the full evidence chain for only 40% of questions and did not raise accuracy.
